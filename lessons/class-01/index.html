@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Class 1: From decision to evidence - Data Analytics</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../stylesheets/readability.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Class 1: From decision to evidence";
+        var mkdocs_page_input_path = "lessons/class-01.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Data Analytics
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Getting Started</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../..#course-at-a-glance">Course at a glance</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../..#where-to-start">Where to start</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../..#how-we-will-practise">How we will practise</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Course</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../course/roadmap/">Learning Roadmap</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#stage-1-foundations-with-retail-data">Stage 1: Foundations with retail data</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#stage-2-one-department-at-a-time">Stage 2: One department at a time</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#stage-3-bring-it-together">Stage 3: Bring it together</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#practice-time">Practice time</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#how-you-will-be-assessed">How you will be assessed</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#extra-practice-topics">Extra practice topics</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../course/setup/">Setup and Practice</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/setup/#what-you-need">What you need</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/setup/#install-tableau-desktop-public-edition">Install Tableau Desktop Public Edition</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/setup/#keep-your-data-safe">Keep your data safe</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/setup/#if-something-does-not-work">If something does not work</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/setup/#optional-python-path">Optional Python path</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/setup/#keep-an-evidence-log">Keep an evidence log</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../course/workflow/">Analytical Workflow</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/workflow/#the-seven-steps">The seven steps</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../course/workflow/#1-business-question">1. Business question</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../course/workflow/#2-data-understanding">2. Data understanding</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../course/workflow/#3-preparation">3. Preparation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../course/workflow/#4-analysis">4. Analysis</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../course/workflow/#5-validation">5. Validation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../course/workflow/#6-visualization">6. Visualization</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../course/workflow/#7-recommendation">7. Recommendation</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/workflow/#a-worked-example">A worked example</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/workflow/#when-a-result-looks-wrong">When a result looks wrong</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/workflow/#association-is-not-causation">Association is not causation</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../cases/">Business Cases</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../cases/#the-five-core-cases">The five core cases</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../cases/#retail">Retail</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../cases/#finance">Finance</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../cases/#operations">Operations</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../cases/#marketing">Marketing</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../cases/#hr">HR</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../cases/#what-every-case-includes">What every case includes</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../cases/#combining-evidence-across-departments">Combining evidence across departments</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../cases/#additional-practice-choices">Additional practice choices</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../lesson-template/">Lesson Template</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../lesson-template/#1-the-business-decision">1. The business decision</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../lesson-template/#2-what-you-will-demonstrate">2. What you will demonstrate</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../lesson-template/#3-before-class">3. Before class</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../lesson-template/#4-understand-the-data">4. Understand the data</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../lesson-template/#5-agree-the-measures">5. Agree the measures</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../lesson-template/#6-watch-a-worked-example">6. Watch a worked example</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../lesson-template/#7-try-it-with-guidance">7. Try it with guidance</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../lesson-template/#8-work-independently">8. Work independently</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../lesson-template/#9-debug-a-result">9. Debug a result</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../lesson-template/#10-make-a-recommendation">10. Make a recommendation</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../lesson-template/#11-optional-python-connection">11. Optional Python connection</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../lesson-template/#12-submit-and-reflect">12. Submit and reflect</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Data Analytics</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Class 1: From decision to evidence</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="class-1-from-decision-to-evidence">Class 1: From decision to evidence<a class="headerlink" href="#class-1-from-decision-to-evidence" title="Permanent link">&para;</a></h1>
+<p class="lead">
+Turn a vague business request into a clear question, open your first dataset in Tableau, and build a first chart you can explain.
+</p>
+
+<div class="admonition warning">
+<p class="admonition-title">Draft lesson</p>
+<p>The Tableau steps on this page have not yet been rehearsed on the course version of Tableau. Menu names may differ slightly on your computer. Your facilitator will confirm them in class.</p>
+</div>
+<hr />
+<h2 id="the-business-decision">The business decision<a class="headerlink" href="#the-business-decision" title="Permanent link">&para;</a></h2>
+<p>The head of a retail business says:</p>
+<blockquote>
+<p><em>"Sales feel uneven across our customer groups. I need to know where to look first."</em></p>
+</blockquote>
+<p>This is not yet a question you can answer with data. Today you will turn it into one, and then take a first look at the evidence.</p>
+<div class="admonition note">
+<p class="admonition-title">About the data</p>
+<p>We use a <strong>fictitious</strong> retail sample published by Tableau (the "Superstore" sample), prepared for this course. It is not a real company. Sales and Profit are in the file's own monetary units; the currency is not stated, so we never label it as dollars, rupees or anything else.</p>
+</div>
+<hr />
+<h2 id="what-you-will-be-able-to-do">What you will be able to do<a class="headerlink" href="#what-you-will-be-able-to-do" title="Permanent link">&para;</a></h2>
+<p>By the end of this class you will be able to:</p>
+<ol>
+<li>Write a business question that names a decision, a population and a time period.</li>
+<li>Connect Tableau to a CSV file and recognise dimensions and measures.</li>
+<li>Build a simple bar chart and add a filter.</li>
+<li>Explain the difference between <strong>one row</strong> and <strong>one order</strong> in this file.</li>
+<li>Save your workbook on your computer and reopen it.</li>
+</ol>
+<p><strong>Evidence you keep:</strong> your written question, a saved first chart and a one-sentence explanation of what a row means.</p>
+<hr />
+<h2 id="before-class">Before class<a class="headerlink" href="#before-class" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Install <strong>Tableau Desktop Public Edition</strong> (see <a href="../../course/setup/">Setup and practice</a>).</li>
+<li>Complete the smoke test: open a CSV, create a sum, save, close and reopen.</li>
+<li>Get the course file <code>order_lines.csv</code> (release <code>superstore-retail-v1</code>) from your facilitator. Save it in a folder you can find again, for example <code>Documents/DataAnalytics/data</code>.</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">If Tableau will not install or open</p>
+<p>Tell your facilitator before class. You can follow the demonstration, pair with a classmate and still write your question and notes. You will build your own chart later.</p>
+</div>
+<hr />
+<h2 id="part-1-from-request-to-question">Part 1: From request to question<a class="headerlink" href="#part-1-from-request-to-question" title="Permanent link">&para;</a></h2>
+<p>A good analytical question answers four things:</p>
+<table>
+<thead>
+<tr>
+<th>Part</th>
+<th>Ask yourself</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Decision</strong></td>
+<td>What will someone do differently?</td>
+<td>Choose one customer segment to investigate next month</td>
+</tr>
+<tr>
+<td><strong>Population</strong></td>
+<td>Which records count?</td>
+<td>All order lines in the course file</td>
+</tr>
+<tr>
+<td><strong>Period</strong></td>
+<td>Which dates?</td>
+<td>Orders placed in 2023, 2024 and 2025</td>
+</tr>
+<tr>
+<td><strong>Measure</strong></td>
+<td>What will we compare?</td>
+<td>Sales by customer segment</td>
+</tr>
+</tbody>
+</table>
+<p>Putting it together:</p>
+<blockquote>
+<p><em>"Which customer segment had the highest Sales for orders placed in 2023–2025, so we can choose one segment to investigate next month?"</em></p>
+</blockquote>
+<div class="admonition hint">
+<p class="admonition-title">Your turn (5 minutes)</p>
+<p>Rewrite the head's request as your own question. Use the four parts in the table. Keep it to one sentence.</p>
+</div>
+<hr />
+<h2 id="part-2-watch-the-demonstration">Part 2: Watch the demonstration<a class="headerlink" href="#part-2-watch-the-demonstration" title="Permanent link">&para;</a></h2>
+<p>Your facilitator will connect to the file and build a first chart while you watch. Before each step, <strong>predict</strong> what you think will happen.</p>
+<p>Things to notice:</p>
+<ul>
+<li>How Tableau reads each column (text, number or date).</li>
+<li>Which fields appear as <strong>dimensions</strong> (things you group by) and which as <strong>measures</strong> (numbers you add up).</li>
+<li>What happens to a number when you drag it into the view.</li>
+</ul>
+<hr />
+<h2 id="part-3-guided-practice">Part 3: Guided practice<a class="headerlink" href="#part-3-guided-practice" title="Permanent link">&para;</a></h2>
+<p>Follow along step by step.</p>
+<h3 id="connect-to-the-file">Connect to the file<a class="headerlink" href="#connect-to-the-file" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Open Tableau Desktop Public Edition.</li>
+<li>In the <strong>Connect</strong> pane on the left, under <strong>To a File</strong>, choose <strong>Text file</strong>.</li>
+<li>Find and open <code>order_lines.csv</code>.</li>
+<li>Tableau opens the <strong>Data Source</strong> page with a preview of the rows.</li>
+</ol>
+<h3 id="check-the-column-types">Check the column types<a class="headerlink" href="#check-the-column-types" title="Permanent link">&para;</a></h3>
+<p>Look at the small icon above each column in the preview:</p>
+<table>
+<thead>
+<tr>
+<th>Icon</th>
+<th>Meaning</th>
+<th>Examples in this file</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Abc</strong></td>
+<td>Text</td>
+<td>order_id, segment, region</td>
+</tr>
+<tr>
+<td><strong>#</strong></td>
+<td>Number</td>
+<td>sales, profit, quantity</td>
+</tr>
+<tr>
+<td><strong>Calendar</strong></td>
+<td>Date</td>
+<td>order_date, ship_date</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Check the IDs</p>
+<p><code>order_id</code> and <code>row_id</code> are identifiers, not amounts. Adding them up means nothing. If an ID shows as a number, note it in your log.</p>
+</div>
+<p>Tableau may tidy column names for display, for example showing <code>order_id</code> as <strong>Order Id</strong>. It is the same field.</p>
+<h3 id="build-a-first-chart">Build a first chart<a class="headerlink" href="#build-a-first-chart" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Click the <strong>Sheet 1</strong> tab at the bottom.</li>
+<li>In the <strong>Data</strong> pane, find <strong>Segment</strong> and drag it to <strong>Rows</strong>.</li>
+<li>Find <strong>Sales</strong> and drag it to <strong>Columns</strong>.</li>
+<li>You should see one bar per segment. Tableau shows this as <strong>SUM(Sales)</strong>.</li>
+</ol>
+<h3 id="add-a-filter">Add a filter<a class="headerlink" href="#add-a-filter" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Drag <strong>Region</strong> to the <strong>Filters</strong> card.</li>
+<li>Tick one region and click <strong>OK</strong>.</li>
+<li>Watch how the bars change. Then clear the filter so all regions are included again.</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Write it down</p>
+<p>Every time you filter, record it. A chart without its filters written down is easy to misread later.</p>
+</div>
+<h3 id="save-and-reopen">Save and reopen<a class="headerlink" href="#save-and-reopen" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Choose <strong>File → Save As</strong> and save the workbook in your course folder, for example <code>class01_first_view</code>.</li>
+<li>Close Tableau, open it again and open your saved workbook.</li>
+<li>Check that the chart and your filter settings are still there.</li>
+</ol>
+<hr />
+<h2 id="part-4-rows-versus-orders">Part 4: Rows versus orders<a class="headerlink" href="#part-4-rows-versus-orders" title="Permanent link">&para;</a></h2>
+<p>Open the Data Source page again and look at a few rows that share the same <code>order_id</code>.</p>
+<ul>
+<li>One <strong>row</strong> in this file is one <strong>order line</strong>: one product within an order.</li>
+<li>One <strong>order</strong> can have several lines.</li>
+<li>So the number of rows is <strong>not</strong> the number of orders.</li>
+</ul>
+<div class="admonition hint">
+<p class="admonition-title">Quick check</p>
+<p>In the Data pane, Tableau lists a field named after the file with <strong>(Count)</strong> at the end. Drag it to the view. Is that counting rows or orders? Write your answer in one sentence.</p>
+</div>
+<p>You will measure orders properly in Class 2.</p>
+<hr />
+<h2 id="part-5-independent-work">Part 5: Independent work<a class="headerlink" href="#part-5-independent-work" title="Permanent link">&para;</a></h2>
+<p>On a new sheet, build one more simple view on your own:</p>
+<ol>
+<li>Choose a different grouping: <strong>Region</strong> or <strong>Category</strong>.</li>
+<li>Show <strong>Sales</strong> for each group.</li>
+<li>Add a title that says what the chart shows and for which period.</li>
+<li>Write one sentence describing what the chart shows. Do not explain <em>why</em> yet.</li>
+</ol>
+<hr />
+<h2 id="part-6-challenge">Part 6: Challenge<a class="headerlink" href="#part-6-challenge" title="Permanent link">&para;</a></h2>
+<p>A colleague says:</p>
+<blockquote>
+<p><em>"The biggest bar is the best segment, so we should invest there."</em></p>
+</blockquote>
+<p>In two or three sentences, explain why a bigger Sales bar alone does not tell us where to invest. What else would you want to see?</p>
+<hr />
+<h2 id="exit-ticket">Exit ticket<a class="headerlink" href="#exit-ticket" title="Permanent link">&para;</a></h2>
+<p>Before you leave, write:</p>
+<ol>
+<li>Your one-sentence business question.</li>
+<li>What one row in <code>order_lines.csv</code> represents.</li>
+<li>One thing you are still unsure about.</li>
+</ol>
+<hr />
+<h2 id="after-class-about-1-hour">After class (about 1 hour)<a class="headerlink" href="#after-class-about-1-hour" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Fix anything that did not work during setup.</li>
+<li>Read the <a href="../../course/workflow/">Analytical workflow</a> page.</li>
+<li>Start your <strong>evidence log</strong> (see <a href="../../course/setup/">Setup and practice</a>) with today's question, file name and filters.</li>
+</ul>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Copyright &copy; 2026 - Aayush Raj Regmi</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Class 2: Can we trust the sales table? - Data Analytics</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../stylesheets/readability.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Class 2: Can we trust the sales table?";
+        var mkdocs_page_input_path = "lessons/class-02.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Data Analytics
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Getting Started</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../..#course-at-a-glance">Course at a glance</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../..#where-to-start">Where to start</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../..#how-we-will-practise">How we will practise</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Course</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../course/roadmap/">Learning Roadmap</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#stage-1-foundations-with-retail-data">Stage 1: Foundations with retail data</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#stage-2-one-department-at-a-time">Stage 2: One department at a time</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#stage-3-bring-it-together">Stage 3: Bring it together</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#practice-time">Practice time</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#how-you-will-be-assessed">How you will be assessed</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#extra-practice-topics">Extra practice topics</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../course/setup/">Setup and Practice</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/setup/#what-you-need">What you need</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/setup/#install-tableau-desktop-public-edition">Install Tableau Desktop Public Edition</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/setup/#keep-your-data-safe">Keep your data safe</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/setup/#if-something-does-not-work">If something does not work</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/setup/#optional-python-path">Optional Python path</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/setup/#keep-an-evidence-log">Keep an evidence log</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../course/workflow/">Analytical Workflow</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/workflow/#the-seven-steps">The seven steps</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../course/workflow/#1-business-question">1. Business question</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../course/workflow/#2-data-understanding">2. Data understanding</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../course/workflow/#3-preparation">3. Preparation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../course/workflow/#4-analysis">4. Analysis</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../course/workflow/#5-validation">5. Validation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../course/workflow/#6-visualization">6. Visualization</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../course/workflow/#7-recommendation">7. Recommendation</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/workflow/#a-worked-example">A worked example</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/workflow/#when-a-result-looks-wrong">When a result looks wrong</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/workflow/#association-is-not-causation">Association is not causation</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../cases/">Business Cases</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../cases/#the-five-core-cases">The five core cases</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../cases/#retail">Retail</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../cases/#finance">Finance</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../cases/#operations">Operations</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../cases/#marketing">Marketing</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../cases/#hr">HR</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../cases/#what-every-case-includes">What every case includes</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../cases/#combining-evidence-across-departments">Combining evidence across departments</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../cases/#additional-practice-choices">Additional practice choices</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../lesson-template/">Lesson Template</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../lesson-template/#1-the-business-decision">1. The business decision</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../lesson-template/#2-what-you-will-demonstrate">2. What you will demonstrate</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../lesson-template/#3-before-class">3. Before class</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../lesson-template/#4-understand-the-data">4. Understand the data</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../lesson-template/#5-agree-the-measures">5. Agree the measures</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../lesson-template/#6-watch-a-worked-example">6. Watch a worked example</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../lesson-template/#7-try-it-with-guidance">7. Try it with guidance</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../lesson-template/#8-work-independently">8. Work independently</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../lesson-template/#9-debug-a-result">9. Debug a result</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../lesson-template/#10-make-a-recommendation">10. Make a recommendation</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../lesson-template/#11-optional-python-connection">11. Optional Python connection</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../lesson-template/#12-submit-and-reflect">12. Submit and reflect</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Data Analytics</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Class 2: Can we trust the sales table?</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="class-2-can-we-trust-the-sales-table">Class 2: Can we trust the sales table?<a class="headerlink" href="#class-2-can-we-trust-the-sales-table" title="Permanent link">&para;</a></h1>
+<p class="lead">
+Before comparing anything, find out exactly what the retail file contains: what a row is, which columns can be added up, and how to count orders correctly.
+</p>
+
+<div class="admonition warning">
+<p class="admonition-title">Draft lesson</p>
+<p>The Tableau steps on this page have not yet been rehearsed on the course version of Tableau. Menu names may differ slightly on your computer.</p>
+</div>
+<hr />
+<h2 id="the-business-decision">The business decision<a class="headerlink" href="#the-business-decision" title="Permanent link">&para;</a></h2>
+<p>The retail head now asks:</p>
+<blockquote>
+<p><em>"Before you show me any chart, can I trust these numbers? How many orders did we actually have?"</em></p>
+</blockquote>
+<p>A wrong count at this stage spoils every later chart. Today is about building trust in the data.</p>
+<hr />
+<h2 id="what-you-will-be-able-to-do">What you will be able to do<a class="headerlink" href="#what-you-will-be-able-to-do" title="Permanent link">&para;</a></h2>
+<p>By the end of this class you will be able to:</p>
+<ol>
+<li>State the <strong>grain</strong> of the file: what one row represents.</li>
+<li>Tell which columns are identifiers, categories, dates or amounts.</li>
+<li>Count <strong>orders</strong> correctly with a distinct count.</li>
+<li>Explain what the returns flag does and does not tell you.</li>
+<li>Check a small slice of data by hand.</li>
+<li>Record what you changed in a short <strong>preparation log</strong>.</li>
+</ol>
+<p><strong>Evidence you keep:</strong> a grain statement, a short quality checklist, a preparation log and one checked order.</p>
+<hr />
+<h2 id="before-class">Before class<a class="headerlink" href="#before-class" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Bring your saved Class 1 workbook and your evidence log.</li>
+<li>Keep the original <code>order_lines.csv</code> untouched. If you ever need to experiment, work on a copy.</li>
+</ul>
+<hr />
+<h2 id="part-1-meet-the-data-dictionary">Part 1: Meet the data dictionary<a class="headerlink" href="#part-1-meet-the-data-dictionary" title="Permanent link">&para;</a></h2>
+<p>Every column has a job. Knowing that job tells you how to use it.</p>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>What it is</th>
+<th>Can you add it up?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>row_id</code></td>
+<td>Unique number for each order line</td>
+<td>No, it is an identifier</td>
+</tr>
+<tr>
+<td><code>order_id</code></td>
+<td>Order identifier; repeats across that order's lines</td>
+<td>No, count it <strong>distinctly</strong></td>
+</tr>
+<tr>
+<td><code>order_date</code>, <code>ship_date</code></td>
+<td>Calendar dates</td>
+<td>No</td>
+</tr>
+<tr>
+<td><code>order_month</code></td>
+<td>First day of the order's month, for monthly grouping</td>
+<td>No</td>
+</tr>
+<tr>
+<td><code>ship_mode</code></td>
+<td>Shipping service chosen</td>
+<td>No</td>
+</tr>
+<tr>
+<td><code>customer_id</code></td>
+<td>Fictitious customer identifier</td>
+<td>No</td>
+</tr>
+<tr>
+<td><code>segment</code></td>
+<td>Customer group: Consumer, Corporate or Home Office</td>
+<td>No, use it to group</td>
+</tr>
+<tr>
+<td><code>country_region</code>, <code>region</code></td>
+<td>Location labels</td>
+<td>No, use them to group</td>
+</tr>
+<tr>
+<td><code>category</code>, <code>sub_category</code></td>
+<td>Product groups</td>
+<td>No, use them to group</td>
+</tr>
+<tr>
+<td><code>product_id</code>, <code>product_name</code></td>
+<td>Product identifier and name</td>
+<td>No</td>
+</tr>
+<tr>
+<td><code>sales</code></td>
+<td>Sales reported for the line, in the file's own monetary units</td>
+<td><strong>Yes</strong></td>
+</tr>
+<tr>
+<td><code>quantity</code></td>
+<td>Number of items on the line</td>
+<td><strong>Yes</strong>, but it counts items, not orders</td>
+</tr>
+<tr>
+<td><code>profit</code></td>
+<td>Profit reported for the line (can be negative)</td>
+<td><strong>Yes</strong></td>
+</tr>
+<tr>
+<td><code>discount</code></td>
+<td>Discount value as given in the source</td>
+<td>No, its exact definition is not documented</td>
+</tr>
+<tr>
+<td><code>returned_order_flag</code></td>
+<td>1 if the order appears on the source's returns list, otherwise 0</td>
+<td>Not on line rows (see Part 4)</td>
+</tr>
+<tr>
+<td><code>order_to_ship_days</code></td>
+<td>Days between order date and ship date</td>
+<td>No, not without care</td>
+</tr>
+<tr>
+<td><code>customer_analysis_eligible</code>, <code>customer_order_conflict</code></td>
+<td>Flags for a small data issue with customer IDs</td>
+<td>Used only for customer analysis later</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Scope of this file</p>
+<p>The file contains orders placed from <strong>1 January 2023 to 31 December 2025</strong>. A few orders placed late in 2025 shipped in early 2026; they are kept because the order date is what defines the period.</p>
+</div>
+<hr />
+<h2 id="part-2-find-the-grain">Part 2: Find the grain<a class="headerlink" href="#part-2-find-the-grain" title="Permanent link">&para;</a></h2>
+<p><strong>Grain</strong> means: what does one row represent?</p>
+<ol>
+<li>Open your workbook and go to the <strong>Data Source</strong> page.</li>
+<li>Sort or scan the preview by <code>order_id</code>.</li>
+<li>Find an order that appears on <strong>more than one row</strong>.</li>
+<li>Compare those rows. What is the same? What is different?</li>
+</ol>
+<div class="admonition hint">
+<p class="admonition-title">Write your grain statement</p>
+<p>Complete this sentence in your log: <em>"One row in order_lines.csv represents one <strong><em>_</em>_ , identified by </strong>____ ."</em></p>
+</div>
+<hr />
+<h2 id="part-3-count-orders-correctly">Part 3: Count orders correctly<a class="headerlink" href="#part-3-count-orders-correctly" title="Permanent link">&para;</a></h2>
+<h3 id="demonstration">Demonstration<a class="headerlink" href="#demonstration" title="Permanent link">&para;</a></h3>
+<p>Your facilitator will show two numbers side by side:</p>
+<ul>
+<li>the number of <strong>rows</strong> (the field ending in <strong>(Count)</strong>)</li>
+<li>the number of <strong>distinct orders</strong></li>
+</ul>
+<p>Predict before you see them: will the two numbers be equal, or which will be larger?</p>
+<h3 id="guided-practice">Guided practice<a class="headerlink" href="#guided-practice" title="Permanent link">&para;</a></h3>
+<ol>
+<li>On a new sheet, drag the <strong>(Count)</strong> field to the view. This counts rows.</li>
+<li>Drag <strong>Order Id</strong> into the view as well. Right-click it and choose <strong>Measure → Count (Distinct)</strong>. This counts orders.</li>
+<li>Put both numbers in a small table and label them clearly.</li>
+<li>Write one sentence explaining why they differ.</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">A reusable calculation</p>
+<p>You can also create a calculated field named <strong>Orders</strong> with the formula:</p>
+<div class="highlight"><pre><span></span><code>COUNTD([Order Id])
+</code></pre></div>
+<p>Use this whenever a chart needs a number of orders.</p>
+</div>
+<hr />
+<h2 id="part-4-what-the-returns-flag-means">Part 4: What the returns flag means<a class="headerlink" href="#part-4-what-the-returns-flag-means" title="Permanent link">&para;</a></h2>
+<p><code>returned_order_flag</code> is <code>1</code> when an order appears on the source's <strong>returns list</strong>.</p>
+<p>Be careful with what it does <strong>not</strong> tell you:</p>
+<ul>
+<li>It has <strong>no</strong> return date, quantity or refund amount.</li>
+<li>A <code>0</code> means <strong>not on the list</strong>. It does not prove the order was never returned.</li>
+<li>The flag repeats on <strong>every line</strong> of a listed order.</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">A common mistake</p>
+<p>Adding up <code>returned_order_flag</code> across lines counts <strong>lines</strong> of returned orders, not returned <strong>orders</strong>. To count returned orders, count distinct <code>order_id</code> values where the flag is 1.</p>
+</div>
+<hr />
+<h2 id="part-5-check-one-order-by-hand">Part 5: Check one order by hand<a class="headerlink" href="#part-5-check-one-order-by-hand" title="Permanent link">&para;</a></h2>
+<p>Pick one order with several lines.</p>
+<ol>
+<li>Filter the view to that single <code>order_id</code>.</li>
+<li>Show each line's <code>sales</code> and <code>profit</code> in a table.</li>
+<li>Add up the lines yourself on paper or in a spreadsheet.</li>
+<li>Compare with Tableau's total for that order. Do they match?</li>
+</ol>
+<p>Record the order ID, your hand total and Tableau's total in your log.</p>
+<hr />
+<h2 id="part-6-keep-a-preparation-log">Part 6: Keep a preparation log<a class="headerlink" href="#part-6-keep-a-preparation-log" title="Permanent link">&para;</a></h2>
+<p>Write down every change you make to how the data is read or shaped, even small ones.</p>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>What I changed</th>
+<th>Why</th>
+<th>How I checked it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>example</em></td>
+<td>Created calculated field <strong>Orders</strong> = <code>COUNTD([Order Id])</code></td>
+<td>Rows are order lines, not orders</td>
+<td>Compared with the row count; checked one order by hand</td>
+</tr>
+</tbody>
+</table>
+<p>The original file is never edited. Every change lives in Tableau or in your log.</p>
+<hr />
+<h2 id="part-7-independent-work">Part 7: Independent work<a class="headerlink" href="#part-7-independent-work" title="Permanent link">&para;</a></h2>
+<p>For each <strong>Segment</strong>, build a small table showing:</p>
+<ol>
+<li>the number of rows,</li>
+<li>the number of distinct orders,</li>
+<li>total <code>sales</code>.</li>
+</ol>
+<p>Then answer in your log:</p>
+<ul>
+<li>Do the segment order counts add up to the overall order count? Why might that be true for Segment?</li>
+<li>Try the same with <strong>Category</strong>. Do category order counts add up to the overall total? Why not?</li>
+</ul>
+<div class="admonition hint">
+<p class="admonition-title">Think about it</p>
+<p>Can one order contain products from more than one category? Can one order belong to more than one segment?</p>
+</div>
+<hr />
+<h2 id="part-8-debugging-challenge">Part 8: Debugging challenge<a class="headerlink" href="#part-8-debugging-challenge" title="Permanent link">&para;</a></h2>
+<p>A colleague sends this summary:</p>
+<blockquote>
+<p><em>"We had [row count] orders, and [sum of returned_order_flag] of them were returned."</em></p>
+</blockquote>
+<ol>
+<li>Which two mistakes are in this sentence?</li>
+<li>What should each number be counting instead?</li>
+<li>How would you check your corrected numbers?</li>
+</ol>
+<p>Write your corrected sentence. You do not need to share the numbers with anyone yet.</p>
+<hr />
+<h2 id="exit-ticket">Exit ticket<a class="headerlink" href="#exit-ticket" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Your grain statement.</li>
+<li>Why rows and orders differ in this file.</li>
+<li>One thing the returns flag cannot tell you.</li>
+</ol>
+<hr />
+<h2 id="after-class-about-15-hours">After class (about 1.5 hours)<a class="headerlink" href="#after-class-about-15-hours" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Finish the Segment and Category tables from Part 7.</li>
+<li>Complete your preparation log and one hand-checked order.</li>
+<li>Bring your workbook to Class 3, where we compare segments using Sales, Profit and average order value.</li>
+</ul>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Copyright &copy; 2026 - Aayush Raj Regmi</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

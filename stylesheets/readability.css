@@ -1,0 +1,79 @@
+/* Spacious reading layout for the Read the Docs theme. */
+
+.rst-content {
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+/* Comfortable line length; the theme default is a little wide and tight. */
+.wy-nav-content {
+  max-width: 820px;
+  padding: 2.4em 3em;
+}
+
+.rst-content h1 {
+  margin-bottom: 0.6em;
+}
+
+.rst-content h2 {
+  margin-top: 2.2em;
+  padding-top: 0.5em;
+}
+
+.rst-content h3 {
+  margin-top: 1.8em;
+}
+
+.rst-content p,
+.rst-content ul,
+.rst-content ol {
+  margin-bottom: 1.1em;
+}
+
+.rst-content li {
+  margin-bottom: 0.45em;
+}
+
+/* Section breaks written as --- in Markdown. */
+.rst-content hr {
+  margin: 2.2em 0;
+  border-top: 1px solid #e1e4e5;
+}
+
+/* Short opening summary under each page title. */
+.rst-content .lead {
+  font-size: 1.15em;
+  line-height: 1.7;
+  color: #555;
+}
+
+/* Let tables wrap and breathe instead of scrolling sideways. */
+.rst-content table.docutils td,
+.rst-content table.docutils th,
+.rst-content table td,
+.rst-content table th {
+  white-space: normal;
+  padding: 10px 14px;
+  vertical-align: top;
+  line-height: 1.6;
+}
+
+.wy-table-responsive table td,
+.wy-table-responsive table th {
+  white-space: normal;
+}
+
+.rst-content .admonition {
+  margin: 1.6em 0;
+  line-height: 1.65;
+}
+
+.rst-content .admonition p:last-child {
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .wy-nav-content {
+    padding: 1.4em 1.2em;
+  }
+}

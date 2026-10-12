@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Business Cases - Data Analytics</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Business Cases";
+        var mkdocs_page_input_path = "cases/index.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Data Analytics
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Getting Started</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Course</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../course/roadmap/">Learning Roadmap</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../course/setup/">Setup and Practice</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../course/workflow/">Analytical Workflow</a>
+                  </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Business Cases</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#additional-practice-choices">Additional practice choices</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../lessons/lesson-template/">Lesson Template</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Data Analytics</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Business Cases</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="business-case-previews">Business case previews</h1>
+<p>These are proposed case themes, not released assignments. We will combine suitable <a href="https://public.tableau.com/app/learn/sample-data">Tableau sample datasets</a> with the existing synthetic-data strategy. <strong>Meridian Commerce</strong> remains a proposed fictional simulation; NPR/calendar2025 conventions apply only to that simulation. Other datasets retain their own context, units and dates. Individual files have not yet been released for class.</p>
+<table>
+<thead>
+<tr>
+<th>Domain</th>
+<th>Stakeholder decision</th>
+<th>Analytical focus</th>
+<th>Mistake to investigate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Retail/e-commerce</td>
+<td>Where should sales and margin improvement efforts focus?</td>
+<td>Grain, distinct orders, AOV, margin, discounts, customers, trends and returns.</td>
+<td>Treating order lines as orders.</td>
+</tr>
+<tr>
+<td>Finance</td>
+<td>Which departments need a spending review?</td>
+<td>Budget vs actual, periods, reconciliation and cost favorability.</td>
+<td>Repeating a monthly budget for every transaction.</td>
+</tr>
+<tr>
+<td>Operations</td>
+<td>Where should delivery reliability improve?</td>
+<td>Promise dates, overdue open shipments, distributions, median and mean.</td>
+<td>Dropping undelivered shipments from service measurement.</td>
+</tr>
+<tr>
+<td>Marketing</td>
+<td>Which campaigns need closer evaluation before budget moves?</td>
+<td>Weighted funnel rates, cost per conversion, ROAS and attribution limits.</td>
+<td>Averaging percentages with different denominators.</td>
+</tr>
+<tr>
+<td>HR</td>
+<td>How is the workforce changing, and which comparisons are fair?</td>
+<td>Historical headcount, turnover, cohorts, tenure and recruitment timelines.</td>
+<td>Dividing past exits by current headcount.</td>
+</tr>
+</tbody>
+</table>
+<p>Each released case will include a stakeholder brief, dataset dictionary, explicit metrics, guided example, independent exercises, a debugging task, a recommendation challenge, validation checkpoints and an optional pandas connection. Instructor answers will be supplied separately.</p>
+<p>Across departments, explain differences in grain, period and units before combining evidence. Marketing-attributed revenue is a view of retail revenue, not an additional source of company revenue. A recommendation should consider trade-offs rather than add incompatible KPIs together.</p>
+<h2 id="additional-practice-choices">Additional practice choices</h2>
+<p>We will also draw on sports, technology, government and other catalog topics. Proposed choices include World Cup match comparisons, mobile operating-system trends, start-up funding, public construction spending, and home-sales trends. Science, education and entertainment offer further options. These are transfer exercises for the same analytical process, with source-specific definitions and checks. They fit existing practice or optional extensions; the five core cases remain the portfolio foundation.</p>
+<p>Catalog listing alone does not establish the row grain, supported calculations or redistribution terms. Each lesson will provide the exact reviewed file and dictionary or direct-source instructions before you use it.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../course/workflow/" class="btn btn-neutral float-left" title="Analytical Workflow"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../lessons/lesson-template/" class="btn btn-neutral float-right" title="Lesson Template">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Copyright &copy; 2026 - Aayush Raj Regmi</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../course/workflow/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../lessons/lesson-template/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

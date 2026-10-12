@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>How Statistics Can Mislead - Data Analytics</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../stylesheets/readability.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "How Statistics Can Mislead";
+        var mkdocs_page_input_path = "foundations/misleading-statistics.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Data Analytics
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Getting Started</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../..#course-at-a-glance">Course at a glance</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../..#where-to-start">Where to start</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../..#how-we-will-practise">How we will practise</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Foundations</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../">Why Data Analytics Matters</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../#what-is-data-analytics">What is data analytics?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../#real-stories-where-data-changed-the-outcome">Real stories where data changed the outcome</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../#a-map-that-changed-how-we-think-about-disease-london-1854">A map that changed how we think about disease (London, 1854)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../#a-chart-that-reformed-hospitals-1850s">A chart that reformed hospitals (1850s)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../#winning-on-a-small-budget-baseball-2002">Winning on a small budget (baseball, 2002)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../#preparing-for-a-hurricane-retail-2004">Preparing for a hurricane (retail, 2004)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../#when-big-data-got-it-wrong-public-health-20082015">When big data got it wrong (public health, 2008–2015)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../#where-you-meet-analytics-every-day">Where you meet analytics every day</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../#why-presentation-is-part-of-analysis">Why presentation is part of analysis</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../#what-comes-next">What comes next</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../statistics-are-not-enough/">Statistics Are Not Enough</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../statistics-are-not-enough/#anscombes-quartet">Anscombe's quartet</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../statistics-are-not-enough/#the-datasaurus-dozen">The Datasaurus Dozen</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../statistics-are-not-enough/#what-this-means-at-work">What this means at work</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../statistics-are-not-enough/#try-it-yourself">Try it yourself</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">How Statistics Can Mislead</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#1-correlation-is-not-causation">1. Correlation is not causation</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#2-simpsons-paradox-the-total-can-reverse-the-parts">2. Simpson's paradox: the total can reverse the parts</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#3-misleading-axes">3. Misleading axes</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#4-cherry-picked-time-windows">4. Cherry-picked time windows</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#5-which-average">5. Which average?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#6-percentages-without-the-base">6. Percentages without the base</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#7-survivorship-bias">7. Survivorship bias</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#a-checklist-for-any-number-you-are-shown">A checklist for any number you are shown</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#try-it-yourself">Try it yourself</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../types-of-analysis/">Types of Analysis</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../types-of-analysis/#univariate-analysis-one-variable-at-a-time">Univariate analysis: one variable at a time</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../types-of-analysis/#bivariate-analysis-two-variables-together">Bivariate analysis: two variables together</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../types-of-analysis/#multivariate-analysis-three-or-more-variables">Multivariate analysis: three or more variables</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../types-of-analysis/#choosing-a-chart-quick-guide">Choosing a chart: quick guide</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../types-of-analysis/#try-it-yourself">Try it yourself</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../visual-design/">Designing Clear Visuals</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../visual-design/#the-data-ink-ratio">The data-ink ratio</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../visual-design/#pre-attentive-attributes-what-the-eye-sees-first">Pre-attentive attributes: what the eye sees first</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../visual-design/#gestalt-principles-how-we-group-things">Gestalt principles: how we group things</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../visual-design/#colour-with-purpose">Colour with purpose</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../visual-design/#a-clean-chart-checklist">A clean-chart checklist</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../visual-design/#try-it-yourself">Try it yourself</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../storytelling/">Storytelling with Data</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../storytelling/#the-challenger-disaster-right-data-wrong-presentation">The Challenger disaster: right data, wrong presentation</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../storytelling/#what-did-the-data-show">What did the data show?</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../storytelling/#what-makes-a-data-story">What makes a data story</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../storytelling/#start-with-the-big-idea">Start with the "big idea"</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../storytelling/#a-simple-process">A simple process</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../storytelling/#exploratory-versus-explanatory">Exploratory versus explanatory</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../storytelling/#try-it-yourself">Try it yourself</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Course</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../course/roadmap/">Learning Roadmap</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#stage-0-foundations">Stage 0: Foundations</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#stage-1-tableau-and-retail-data">Stage 1: Tableau and retail data</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#stage-2-one-department-at-a-time">Stage 2: One department at a time</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#stage-3-bring-it-together">Stage 3: Bring it together</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#how-you-will-be-assessed">How you will be assessed</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#extra-practice-topics">Extra practice topics</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../course/setup/">Setup and Practice</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/setup/#what-you-need">What you need</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/setup/#install-tableau-desktop-public-edition">Install Tableau Desktop Public Edition</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/setup/#keep-your-data-safe">Keep your data safe</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/setup/#if-something-does-not-work">If something does not work</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/setup/#optional-python-path">Optional Python path</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/setup/#keep-an-evidence-log">Keep an evidence log</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../course/workflow/">Analytical Workflow</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/workflow/#the-seven-steps">The seven steps</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../course/workflow/#1-business-question">1. Business question</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../course/workflow/#2-data-understanding">2. Data understanding</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../course/workflow/#3-preparation">3. Preparation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../course/workflow/#4-analysis">4. Analysis</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../course/workflow/#5-validation">5. Validation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../course/workflow/#6-visualization">6. Visualization</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../course/workflow/#7-recommendation">7. Recommendation</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/workflow/#a-worked-example">A worked example</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/workflow/#when-a-result-looks-wrong">When a result looks wrong</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/workflow/#association-is-not-causation">Association is not causation</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../cases/">Business Cases</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../cases/#the-five-core-cases">The five core cases</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../cases/#retail">Retail</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../cases/#finance">Finance</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../cases/#operations">Operations</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../cases/#marketing">Marketing</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../cases/#hr">HR</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../cases/#what-every-case-includes">What every case includes</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../cases/#combining-evidence-across-departments">Combining evidence across departments</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../cases/#additional-practice-choices">Additional practice choices</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lessons</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lessons/class-01/">Lesson 1: From Decision to Evidence</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#before-you-start">Before you start</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#part-1-from-request-to-question">Part 1: From request to question</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#part-2-watch-the-demonstration">Part 2: Watch the demonstration</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#part-3-guided-practice">Part 3: Guided practice</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-01/#connect-to-the-file">Connect to the file</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-01/#check-the-column-types">Check the column types</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-01/#build-a-first-chart">Build a first chart</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-01/#add-a-filter">Add a filter</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-01/#save-and-reopen">Save and reopen</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#part-4-rows-versus-orders">Part 4: Rows versus orders</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#part-5-independent-work">Part 5: Independent work</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#part-6-challenge">Part 6: Challenge</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#after-the-lesson">After the lesson</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lessons/class-02/">Lesson 2: Can We Trust the Sales Table?</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#before-you-start">Before you start</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#part-1-meet-the-data-dictionary">Part 1: Meet the data dictionary</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#part-2-find-the-grain">Part 2: Find the grain</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#part-3-count-orders-correctly">Part 3: Count orders correctly</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-02/#demonstration">Demonstration</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-02/#guided-practice">Guided practice</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#part-4-what-the-returns-flag-means">Part 4: What the returns flag means</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#part-5-check-one-order-by-hand">Part 5: Check one order by hand</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#part-6-keep-a-preparation-log">Part 6: Keep a preparation log</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#part-7-independent-work">Part 7: Independent work</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#part-8-debugging-challenge">Part 8: Debugging challenge</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#after-the-lesson">After the lesson</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../lessons/lesson-template/">Lesson Template</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#1-the-business-decision">1. The business decision</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#2-what-you-will-demonstrate">2. What you will demonstrate</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#3-before-you-start">3. Before you start</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#4-understand-the-data">4. Understand the data</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#5-agree-the-measures">5. Agree the measures</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#6-watch-a-worked-example">6. Watch a worked example</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#7-try-it-with-guidance">7. Try it with guidance</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#8-work-independently">8. Work independently</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#9-debug-a-result">9. Debug a result</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#10-make-a-recommendation">10. Make a recommendation</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#11-optional-python-connection">11. Optional Python connection</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#12-submit-and-reflect">12. Submit and reflect</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Data Analytics</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Foundations</li>
+      <li class="breadcrumb-item active">How Statistics Can Mislead</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="how-statistics-can-mislead">How statistics can mislead<a class="headerlink" href="#how-statistics-can-mislead" title="Permanent link">&para;</a></h1>
+<p class="lead">
+Numbers feel objective, but the same data can support very different stories depending on how it is summarised, compared and drawn. Learn the common traps so you never fall into them, and can spot them in other people's work.
+</p>
+
+<p>In 1954, Darrell Huff wrote a short, famous book called <em>How to Lie with Statistics</em>. Its point was not to teach lying. It was to show readers how easily numbers mislead, often by accident. The traps below are the ones you will meet most often at work.</p>
+<hr />
+<h2 id="1-correlation-is-not-causation">1. Correlation is not causation<a class="headerlink" href="#1-correlation-is-not-causation" title="Permanent link">&para;</a></h2>
+<p>Two things that move together are <strong>correlated</strong>. That does not mean one <strong>causes</strong> the other.</p>
+<p>A classic example: in many cities, <strong>ice cream sales</strong> and <strong>crime</strong> both rise in summer and fall in winter. Plot one against the other and you see a strong relationship. Does ice cream cause crime? Of course not. Both are plausibly driven by a third factor, <strong>warm weather</strong>, when more people are outside.</p>
+<p><img alt="Left: a scatter plot showing ice cream sales and a crime index rising together, correlation 0.96. Right: both lines, plus temperature, rising and falling together across 36 months." src="../../assets/foundations/ice-cream-crime.svg" /></p>
+<p><em>The chart uses synthetic data made up for illustration.</em></p>
+<p>The hidden third factor is called a <strong>confounder</strong>. Whenever you see two things moving together, ask:</p>
+<ol>
+<li>Could a third factor be driving both?</li>
+<li>Could the cause run the other way?</li>
+<li>Could it be coincidence, especially if I searched through many variables?</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Spurious correlations</p>
+<p>If you compare enough unrelated series, some will match by pure chance. Tyler Vigen's <em>Spurious Correlations</em> project collects amusing examples, such as films featuring a particular actor tracking the number of swimming-pool drownings in the same years.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">At work</p>
+<p><em>"Customers who used our app spent 30% more."</em> Perhaps the app made them spend more. Or perhaps the customers who already spent the most were the ones who bothered to download the app. Only a fair comparison or a test can tell you which.</p>
+</div>
+<hr />
+<h2 id="2-simpsons-paradox-the-total-can-reverse-the-parts">2. Simpson's paradox: the total can reverse the parts<a class="headerlink" href="#2-simpsons-paradox-the-total-can-reverse-the-parts" title="Permanent link">&para;</a></h2>
+<p>In 1973, the University of California, Berkeley, looked at graduate admissions. Overall, <strong>44% of men</strong> but only <strong>35% of women</strong> were admitted. It looked like clear bias against women.</p>
+<p>But when the figures were split by department, the picture changed. The chart and table show the six largest departments; the overall row covers all departments.</p>
+<p><img alt="Grouped bar chart. Overall, men 44 percent and women 35 percent admitted. In the six largest departments, women's admission rates were higher in four and slightly lower in two." src="../../assets/foundations/simpsons-berkeley.svg" /></p>
+<table>
+<thead>
+<tr>
+<th>Department</th>
+<th>Men admitted</th>
+<th>Women admitted</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>62%</td>
+<td>82%</td>
+</tr>
+<tr>
+<td>B</td>
+<td>63%</td>
+<td>68%</td>
+</tr>
+<tr>
+<td>C</td>
+<td>37%</td>
+<td>34%</td>
+</tr>
+<tr>
+<td>D</td>
+<td>33%</td>
+<td>35%</td>
+</tr>
+<tr>
+<td>E</td>
+<td>28%</td>
+<td>24%</td>
+</tr>
+<tr>
+<td>F</td>
+<td>6%</td>
+<td>7%</td>
+</tr>
+<tr>
+<td><strong>All departments (overall)</strong></td>
+<td><strong>44%</strong></td>
+<td><strong>35%</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>What happened?</strong> Women applied mostly to departments that were very competitive for <em>everyone</em> (C to F). Men applied mostly to departments that admitted many applicants (A and B). The overall rate mixed together very different groups.</p>
+<div class="admonition tip">
+<p class="admonition-title">The lesson</p>
+<p>Before comparing two overall rates, check whether the groups being compared have a different <strong>mix</strong> underneath. A total can tell the opposite story to every one of its parts.</p>
+</div>
+<hr />
+<h2 id="3-misleading-axes">3. Misleading axes<a class="headerlink" href="#3-misleading-axes" title="Permanent link">&para;</a></h2>
+<p>The same two numbers can look dramatically different depending on where the axis starts.</p>
+<p><img alt="Two bar charts of the same numbers, 96 percent and 98 percent. With the axis starting at 95, product B looks three times bigger. With the axis starting at zero, the bars look almost the same." src="../../assets/foundations/truncated-axis.svg" /></p>
+<p><em>Synthetic data for illustration.</em></p>
+<ul>
+<li><strong>Bar charts</strong> should start at zero, because we judge bars by their length.</li>
+<li><strong>Line charts</strong> may start elsewhere, because we judge lines by their slope, but label the axis clearly.</li>
+<li>Watch for <strong>two different y-axes</strong> on one chart. They let the author make any two lines appear to move together.</li>
+</ul>
+<hr />
+<h2 id="4-cherry-picked-time-windows">4. Cherry-picked time windows<a class="headerlink" href="#4-cherry-picked-time-windows" title="Permanent link">&para;</a></h2>
+<p>Choose the start and end dates carefully and almost any trend can be made to look like growth or decline.</p>
+<ul>
+<li><em>"Sales up 40% since March!"</em> (March was the worst month in five years.)</li>
+<li><em>"Complaints halved this quarter!"</em> (Last quarter included a one-off system outage.)</li>
+</ul>
+<p><img alt="Left: a line chart of March to May 2025 rising steeply, up 43 percent. Right: the full monthly history from 2021 to 2025, where those three months are a brief rebound from an unusually bad March inside a five-year decline." src="../../assets/foundations/cherry-picking.svg" /></p>
+<p><em>Synthetic data for illustration.</em> The left chart is true, but the right chart shows the real story: March was an unusual low, and sales have been falling for five years.</p>
+<div class="admonition tip">
+<p class="admonition-title">Ask</p>
+<p>Why does the chart start and end <em>there</em>? What does the longer history look like?</p>
+</div>
+<hr />
+<h2 id="5-which-average">5. Which average?<a class="headerlink" href="#5-which-average" title="Permanent link">&para;</a></h2>
+<p>The word "average" can mean different things:</p>
+<ul>
+<li>The <strong>mean</strong> adds everything up and divides by the count.</li>
+<li>The <strong>median</strong> is the middle value when everything is sorted.</li>
+</ul>
+<p>If a few values are extremely large, the mean is pulled upward. Imagine nine employees earning 40,000 and one director earning 1,000,000. The <strong>mean</strong> salary is 136,000; the <strong>median</strong> is 40,000. Both are "the average salary", but only one describes a typical employee.</p>
+<p><img alt="Horizontal bars for ten salaries: nine employees at 40,000 and one director at 1,000,000. A solid line marks the median at 40,000 and a dashed line marks the mean at 136,000, well above every employee except the director." src="../../assets/foundations/mean-median.svg" /></p>
+<p><em>Synthetic data for illustration.</em></p>
+<div class="admonition tip">
+<p class="admonition-title">Which to use</p>
+<p>Use the <strong>median</strong> for things with a few very large values, such as salaries, house prices or delivery delays. Report both when the difference matters.</p>
+</div>
+<hr />
+<h2 id="6-percentages-without-the-base">6. Percentages without the base<a class="headerlink" href="#6-percentages-without-the-base" title="Permanent link">&para;</a></h2>
+<p><em>"Complaints rose 200%!"</em> sounds alarming. From 1 to 3, it is not. From 10,000 to 30,000, it is a crisis.</p>
+<p><img alt="Two bar charts that look identical, both titled complaints up 200 percent. The left goes from 1 to 3 complaints at a small branch; the right goes from 10,000 to 30,000 complaints across the whole company." src="../../assets/foundations/base-rates.svg" /></p>
+<p><em>Synthetic data for illustration.</em> Notice that the two charts look exactly the same. Only the axis numbers reveal how different the situations are.</p>
+<ul>
+<li>Always ask for the <strong>count</strong> behind a percentage.</li>
+<li>Be wary of averaging percentages from groups of very different sizes. You will meet this trap in the marketing case.</li>
+</ul>
+<hr />
+<h2 id="7-survivorship-bias">7. Survivorship bias<a class="headerlink" href="#7-survivorship-bias" title="Permanent link">&para;</a></h2>
+<p>As the story is usually told, during the Second World War analysts studied bombers returning from missions and mapped where they had been hit. The obvious idea was to add armour where the bullet holes were.</p>
+<p>The statistician <strong>Abraham Wald</strong> pointed out the flaw: these were the planes that <strong>survived</strong>. Planes hit in other places, such as the engines, never came back to be counted. The armour belonged where the returning planes had <strong>no</strong> holes.</p>
+<p><img alt="Left: outline of a four-engine bomber with orange dots for bullet holes spread across the wings, body and tail, but none on the engines or cockpit. Right: the same outline with the engines and cockpit circled, marking where planes that did not return were probably hit." src="../../assets/foundations/survivorship.svg" /></p>
+<p><em>Simplified illustration, not real wartime data.</em></p>
+<div class="admonition warning">
+<p class="admonition-title">At work</p>
+<p>Surveying only current customers about why they like you tells you nothing about why others left. Studying only successful projects hides the reasons projects fail.</p>
+</div>
+<hr />
+<h2 id="a-checklist-for-any-number-you-are-shown">A checklist for any number you are shown<a class="headerlink" href="#a-checklist-for-any-number-you-are-shown" title="Permanent link">&para;</a></h2>
+<p>Before you trust a figure, ask:</p>
+<ol>
+<li><strong>Compared to what?</strong> A number without a comparison means little.</li>
+<li><strong>Who or what is included?</strong> Which records, which dates, which filters?</li>
+<li><strong>What is the denominator?</strong> Out of how many?</li>
+<li><strong>Could something else explain it?</strong> A confounder, a different mix, chance?</li>
+<li><strong>How is it drawn?</strong> Where does the axis start? Is the time window fair?</li>
+</ol>
+<hr />
+<h2 id="try-it-yourself">Try it yourself<a class="headerlink" href="#try-it-yourself" title="Permanent link">&para;</a></h2>
+<div class="admonition hint">
+<p class="admonition-title">Exercise 1: name the confounder</p>
+<p>For each claim, suggest a third factor that could explain the link:</p>
+<ol>
+<li>Towns with more fire engines have more fire damage.</li>
+<li>Employees who attend more training get promoted more often.</li>
+<li>Stores with more staff have more customer complaints.</li>
+</ol>
+</div>
+<div class="admonition hint">
+<p class="admonition-title">Exercise 2: fix the chart</p>
+<p>Find a chart in a news article or a company report. Check where its axis starts, which time period it covers and whether the counts behind its percentages are shown. Rewrite its headline so it is fair.</p>
+</div>
+<div class="admonition hint">
+<p class="admonition-title">Exercise 3: spot the paradox</p>
+<p>A sales manager says: <em>"Team A's overall conversion rate is lower than Team B's, so Team A is weaker."</em> What extra breakdown would you ask for before agreeing?</p>
+</div>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../statistics-are-not-enough/" class="btn btn-neutral float-left" title="Statistics Are Not Enough"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../types-of-analysis/" class="btn btn-neutral float-right" title="Types of Analysis">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Copyright &copy; 2026 - Aayush Raj Regmi</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../statistics-are-not-enough/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../types-of-analysis/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

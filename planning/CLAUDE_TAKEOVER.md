@@ -31,7 +31,7 @@ Recommendations remain recommendations: optional-first Python, 19 hours essentia
 
 | Artifact | State and purpose |
 |---|---|
-| `docs/` and `mkdocs.yml` | Six learner preview/template pages; Read the Docs theme. Only docs/ enters the site. |
+| `docs/` and `mkdocs.yml` | Six learner preview/template pages; Read the Docs theme with readability stylesheet (DEC-034, DEC-036). Only docs/ enters the site. |
 | `planning/` | Curriculum, five case designs, assessment, synthetic pilot, source evidence, decisions and backlog. |
 | `data/metadata/catalog-audit-2026-10-12/` | Four-file acquisition manifest and schema/quality profiles. |
 | `data/metadata/superstore/retail-v1/` | Reviewed D01 local-development specification. Seven frozen input hashes are authoritative. |

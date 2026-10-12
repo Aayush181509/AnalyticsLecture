@@ -1,82 +1,124 @@
 # Lesson template
 
-**Template status:** this page shows the structure of future lessons. It is not a ready-to-teach lesson, a dataset download or a set of verified answers. Replace bracketed prompts when the lesson and its resources are ready.
+<p class="lead">
+The structure every lesson in this course will follow. Each section below shows what that part of a lesson will contain.
+</p>
 
-## The business decision
+!!! note "Template only"
 
-[Name the stakeholder, the decision they face, the business constraints and the evidence they need. Label fictional organizations and synthetic data.]
+    This page is not a ready-to-teach lesson, a dataset download or a set of verified answers. Text in [square brackets] is replaced when a lesson and its resources are ready.
 
-## What you will demonstrate
+---
+
+## 1. The business decision
+
+[Name the stakeholder, the decision they face, the business constraints and the evidence they need. Label fictional organisations and synthetic data clearly.]
+
+---
+
+## 2. What you will demonstrate
 
 By the end, you will be able to:
 
-- [Explain the data's row meaning and population.]
-- [Prepare and calculate the specified measures in Tableau.]
-- [Validate a result and explain a common error.]
-- [Present a recommendation supported by evidence and a limitation.]
+- [Explain what a row means and which records are in scope.]
+- [Prepare the data and calculate the specified measures in Tableau.]
+- [Check a result and explain a common error.]
+- [Present a recommendation supported by evidence and one limitation.]
 
-Evidence: [Specify the workbook/export, validation notes and short business recommendation. State the assessed minimum and distinguish optional extensions.]
+**Evidence to submit:** [the workbook or export, validation notes and a short business recommendation. State the minimum required and mark optional extensions.]
 
-## Before class
+---
 
-[State required prior skills, estimated preparation time, tested Tableau setup, approved synthetic/public dataset release and an access-recovery route. Python starts optional.]
+## 3. Before you start
 
-Only use data approved for this lesson in Tableau Public. Published workbooks and their data are public; hiding a profile does not make data private. Do not upload workplace or personal data. [State whether publishing is required and provide the tested submission route.]
+[Required prior skills, the tested Tableau setup, the approved dataset release and what to do if access fails. Python is optional.]
 
-## Understand the data
+!!! warning "Data safety"
 
-[Link to the learner-safe dataset and dictionary only when available. Identify release/version, provenance, rights and any prepared transformations.]
+    Only use data approved for this lesson in Tableau Public. Published workbooks and their data are public, and hiding a profile item does not make it private. Never upload workplace or personal data.
 
-| Item | Definition to fill in |
+    [State whether publishing is required and give the tested submission route.]
+
+---
+
+## 4. Understand the data
+
+[Link to the learner dataset and dictionary only when available. Give the release/version, where it came from, usage rights and any preparation already done.]
+
+| Item | What to fill in |
 | --- | --- |
-| Row meaning and key | [One row represents…; unique key…] |
-| Population and date scope | [Eligible records, exclusions, inclusive dates and reporting cutoff] |
-| Units and dimensions | [Currency, units, order-level versus line-level attributes] |
-| Missing and incomplete records | [What is excluded, retained as unknown or flagged; never silently treat missing amounts as zero] |
-| Relationships | [Join/relationship keys, cardinality and duplication checks, when relevant] |
+| Row meaning and key | [One row represents…; the unique key is…] |
+| Population and dates | [Included records, exclusions, inclusive dates and reporting cutoff] |
+| Units and dimensions | [Currency or units; order-level versus line-level fields] |
+| Missing or incomplete records | [Excluded, kept as unknown or flagged. Never quietly treat a missing amount as zero.] |
+| Relationships | [Join keys, how many rows match, and duplication checks, when relevant] |
 
-## Agree the measures
+---
 
-| Business measure | Numerator | Denominator | Filters and dates | Missing/zero behavior | Units |
+## 5. Agree the measures
+
+| Measure | Numerator | Denominator | Filters and dates | Missing or zero values | Units |
 | --- | --- | --- | --- | --- | --- |
-| [Measure] | [Included amounts/events] | [Eligible population or not applicable] | [Scope] | [Explicit rule] | [Source currency, %, days, etc.] |
+| [Measure] | [What is added up] | [Eligible population, or not applicable] | [Scope] | [Explicit rule] | [Currency, %, days…] |
 
-[Explain why these definitions answer the question. State whether amounts include refunds, taxes or other costs. Distinguish overall weighted rates from means of subgroup rates, and explain non-additive distinct counts where relevant.]
+[Explain why these definitions answer the question. Say whether amounts include refunds, taxes or other costs. Point out where an overall weighted rate differs from an average of rates, and where distinct counts do not add up.]
 
-## Watch a worked example
+---
 
-[Provide a verified demonstration from the released dataset: question → understanding → preparation → analysis → validation → visualization → recommendation. Explain the reasoning behind each step and include a pause for a prediction. Mark illustrative examples as illustrative.]
+## 6. Watch a worked example
 
-Checkpoint: [What should learners inspect to confirm scope and method, without relying only on the appearance of the chart?]
+[A checked demonstration on the released dataset, following question → understanding → preparation → analysis → validation → visualization → recommendation. Explain the reasoning at each step and pause for a prediction. Mark illustrative examples as illustrative.]
 
-## Try it with guidance
+!!! hint "Checkpoint"
 
-[State a bounded Tableau task, prompts, expected artifact and a validation checkpoint. Provide a recovery step and accessible table alternative for essential visuals.]
+    [What should you look at to confirm the scope and method, rather than trusting how the chart looks?]
 
-## Work independently
+---
 
-[Give a related business question with less scaffolding. Specify the common minimum, estimated time and evidence to submit.]
+## 7. Try it with guidance
 
-Validate your result: [List grain, duplication, scope, arithmetic, denominator and reconciliation checks appropriate to this dataset. Ask learners to record actual results.]
+[A bounded Tableau task with prompts, the expected result and a checkpoint. Include a recovery step and an accessible table alternative for key visuals.]
 
-## Debug a result
+---
 
-[Present one intentional mistake without its correction. Ask what business meaning changed, how to diagnose it, how to fix it and how to verify the correction.]
+## 8. Work independently
 
-If you get stuck: [Provide a hint or checkpoint route that supports reasoning without giving away the assessed answer.]
+[A related business question with less support. Give the minimum expected and the evidence to submit.]
 
-## Make a recommendation
+!!! tip "Check your result"
 
-[Ask for a short stakeholder briefing with a decision, quantitative evidence, scope, limitation and a next check. Require learners to distinguish observed association from a causal claim.]
+    [List the grain, duplication, scope, arithmetic, denominator and reconciliation checks for this dataset. Record your actual results.]
 
-## Optional Python connection
+---
 
-[Map the analysis to pandas concepts, using the same dataset and metric contract. Provide a tested companion only after release. This extension is not needed for the essential Tableau submission.]
+## 9. Debug a result
 
-## Submit and reflect
+[Present one deliberate mistake without its correction. Ask what business meaning changed, how to diagnose it, how to fix it and how to confirm the fix.]
 
-[List the tested submission route, artifact names, expected practice time and assessment criteria. Include a catch-up route for learners whose access failed.]
+!!! tip "If you get stuck"
 
-Exit ticket: [One concept check, one validation observation and one remaining uncertainty.]
+    [A hint or checkpoint that supports your reasoning without giving away the assessed answer.]
 
-[Offer a learner-safe recap and further practice when ready. Instructor answers and internal planning are maintained separately and are not linked from learner lessons.]
+---
+
+## 10. Make a recommendation
+
+[A short stakeholder briefing with a decision, numerical evidence, scope, one limitation and a next check. Separate what the data shows from any claim about cause.]
+
+---
+
+## 11. Optional Python connection
+
+[How the same analysis looks in pandas, using the same dataset and metric definitions. Provided only after it is tested. Not needed for the essential Tableau submission.]
+
+---
+
+## 12. Submit and reflect
+
+[The tested submission route, file names and assessment criteria. Include a catch-up route for anyone whose access failed.]
+
+!!! note "Exit ticket"
+
+    [One concept check, one validation observation and one remaining uncertainty.]
+
+[A short recap and further practice when ready. Instructor answers and internal planning are kept separately and are not linked from lessons.]

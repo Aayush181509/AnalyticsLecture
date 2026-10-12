@@ -1,24 +1,57 @@
 # Data Analytics
 
+<p class="lead">
+Learn to turn a business question into a recommendation you can defend, using Tableau and real analytical habits.
+</p>
+
 **Welcome!** I'm Aayush, your facilitator for this training programme.
 
-Develop the practical skills to turn a business question into a defensible recommendation. We will use Tableau to explore and explain data from retail/e-commerce, finance, operations, marketing, and HR. We will combine synthetic teaching cases with suitable Tableau sample datasets, with additional practice in sports, technology, government and other topics. Python and pandas companions will connect the same ideas to code, starting as optional extensions.
+We will use Tableau to explore and explain data from five areas of a business: retail and e-commerce, finance, operations, marketing and HR. Along the way you will also practise on sports, technology, government and other datasets.
+
+!!! note "This site is still being built"
+
+    Right now you will find the course foundation and the proposed roadmap. Full lessons, datasets, workbooks and Python companions are on their way.
+
+    The business cases and the lesson template are previews. They are not ready-to-run assignments yet.
+
+---
 
 ## Course at a glance
 
-- Twelve two-hour live classes across several weeks, plus independent practice.
-- Basic spreadsheet familiarity; no Python or Tableau experience assumed.
-- Tableau Public using synthetic/public datasets.
-- A practical portfolio and an executive briefing grounded in validated evidence.
+- **Live, hands-on classes.** Demonstrations, guided practice and independent work, plus practice between sessions.
+- **Spreadsheet basics are enough.** No Python or Tableau experience is assumed. We start from the beginning.
+- **Tableau Public.** You will work with synthetic and public datasets only, never private workplace data.
+- **Portfolio and briefing.** You finish with a practical portfolio and an executive briefing grounded in checked evidence.
 
-**Development status:** this site currently contains the course foundation and proposed learning roadmap. Full lessons, datasets, workbooks and Python companions are still being developed. Case descriptions and the lesson template are previews, not ready-to-run assignments.
+---
 
-Begin with the [learning roadmap](course/roadmap.md), [setup guidance](course/setup.md), and [analytical workflow](course/workflow.md). Browse the [five business cases](cases/index.md) to see where those skills will be applied.
+## Where to start
+
+Work through these pages in order:
+
+1. **[Foundations](foundations/index.md)**: why data analytics and clear presentation matter, with real examples.
+2. **[Learning roadmap](course/roadmap.md)**: what each stage of the course covers.
+3. **[Setup and practice](course/setup.md)**: what you need installed and how to keep notes.
+4. **[Analytical workflow](course/workflow.md)**: the seven steps we use in every analysis.
+5. **[Business cases](cases/index.md)**: the five business problems you will solve.
+6. **[Lessons 1–4](lessons/class-01.md)**: draft hands-on Tableau lessons.
+
+---
 
 ## How we will practise
 
-Watch a demonstration, follow guided practice, solve an independent problem, debug a mistake, and recommend an action. At every stage, check the row meaning, metric definition and evidence before trusting a chart.
+Every topic follows the same rhythm:
 
-Python is optional initially; the essential Tableau tasks do not require writing code. Instructor solutions will be distributed separately after practice.
+1. **Watch** a short demonstration.
+2. **Follow** a guided exercise together.
+3. **Solve** a related problem on your own.
+4. **Debug** a deliberate mistake.
+5. **Recommend** an action to a stakeholder.
+
+!!! tip "One habit to build from day one"
+
+    Before you trust a chart, check three things: what each row means, how the metric is defined, and what evidence supports the number.
+
+Python is optional at first. Every essential Tableau task can be done without writing code. Instructor solutions are shared separately after each practice round.
 
 [Connect with Aayush on LinkedIn](https://www.linkedin.com/in/aayush-regmi-6631ab1b5/)

@@ -1,33 +1,94 @@
 # Learning roadmap
 
-This is the proposed sequence for the confirmed twelve-class format. Lesson instructions and data will be released after validation. The recommended essential route totals about 19 hours of practice: 60–90 minutes most weeks and two hours in project weeks. Optional deeper practice increases this to about 25 hours. These estimates need a pilot; dates and workload will be confirmed separately.
+<p class="lead">
+The course moves from why analytics matters, through careful work on one retail dataset, to one business department at a time, and finally to an executive recommendation that brings the evidence together.
+</p>
 
-| Class | Business question and practical focus | Evidence you will produce |
+!!! note "This is a proposed sequence"
+
+    Lesson instructions and data are released only after they have been checked.
+
+---
+
+## Stage 0: Foundations
+
+You learn why analysis and clear presentation matter before touching any software.
+
+| Topic | Key ideas | You will produce |
 |---|---|---|
-| 1 | What makes a business question answerable? Tableau orientation and first chart. | Question, population and first evidence view. |
-| 2 | What does a retail row represent? Types, keys and preparation. | Grain statement and quality checklist. |
-| 3 | Which retail segment deserves investigation? Distinct orders, reported Sales/Profit, AOV and source-reported profit ratio. | Validated KPI worksheet and debug explanation. |
-| 4 | How do trends and returns change the retail decision? Monthly growth, mature cohorts and dashboard design. | Retail dashboard and recommendation. |
-| 5 | Where is spending above plan? Finance budget versus actual. | Reconciled variance view. |
-| 6 | Where do deliveries miss their promise? Operations service measurement. | Due-shipment service view with pending records. |
-| 7 | Which campaigns warrant more investigation? Marketing weighted rates and attribution. | Campaign comparison with denominator notes. |
-| 8 | How is the workforce changing? HR historical populations and cohorts. | Synthetic workforce snapshot and fair comparison. |
-| 9 | Which departmental findings agree or conflict? Evidence synthesis. | Five-domain evidence register and briefing proposal. |
-| 10 | What decision should executives make? Project construction. | Draft briefing and traceable evidence. |
-| 11 | Does the recommendation survive scrutiny? Peer critique and revision. | Validation log and revised briefing. |
-| 12 | What action and follow-up measure should leaders approve? | Executive briefing and portfolio reflection. |
+| [Why data analytics matters](../foundations/index.md) | Real stories, the four levels of analytics, why presentation is part of analysis | A workplace decision that data could have improved |
+| [Statistics are not enough](../foundations/statistics-are-not-enough.md) | Anscombe's quartet, the Datasaurus Dozen | Two situations with the same average but different decisions |
+| [How statistics can mislead](../foundations/misleading-statistics.md) | Correlation vs causation, Simpson's paradox, misleading axes, survivorship bias | A fair rewrite of a misleading headline |
+| [Types of analysis](../foundations/types-of-analysis.md) | Univariate, bivariate and multivariate questions and charts | One question of each type about your own work |
+| [Designing clear visuals](../foundations/visual-design.md) | Data-ink ratio, pre-attentive attributes, Gestalt principles, colour | A decluttered version of a real chart |
+| [Storytelling with data](../foundations/storytelling.md) | The Challenger disaster, the big idea, situation–complication–resolution | A one-sentence big idea and a three-slide story plan |
 
-## What you should be able to demonstrate
+---
 
-1. Translate a stakeholder concern into a question with a population, period and decision.
-2. Identify grain, keys, data types, units and missing records; document preparation.
-3. Define and calculate metrics using the right aggregation and denominator.
-4. Validate results with reconciliation, small manual checks and alternative explanations.
-5. Build readable Tableau views and dashboards with meaningful comparisons.
+## Stage 1: Tableau and retail data
+
+You learn Tableau and the core habits of careful analysis using one retail dataset.
+
+| Lesson | Business question | You will produce |
+|---|---|---|
+| **[1](../lessons/class-01.md)** | What makes a business question answerable? Tableau orientation and your first chart. | A question, its population and a first evidence view. |
+| **[2](../lessons/class-02.md)** | What does a retail row represent? Data types, keys and preparation. | A grain statement and a quality checklist. |
+| **[3](../lessons/class-03.md)** | Which retail segment deserves a closer look? Distinct orders, Sales, Profit, average order value and profit ratio. | A checked KPI worksheet and a short debugging explanation. |
+| **[4](../lessons/class-04.md)** | How do trends and returns change the decision? Monthly growth and dashboard design. | A retail dashboard and a recommendation. |
+
+---
+
+## Stage 2: One department at a time
+
+Each lesson is a new business area. Support is gradually reduced so you work more independently.
+
+| Lesson | Business question | You will produce |
+|---|---|---|
+| **5** | **Finance:** where is spending above plan? | A reconciled budget-versus-actual view. |
+| **6** | **Operations:** where do deliveries miss their promise? | A service view that includes still-pending shipments. |
+| **7** | **Marketing:** which campaigns need a closer look? | A campaign comparison with notes on denominators. |
+| **8** | **HR:** how is the workforce changing? | A synthetic workforce snapshot and a fair comparison. |
+
+---
+
+## Stage 3: Bring it together
+
+You combine evidence from several departments into one executive recommendation.
+
+| Lesson | Business question | You will produce |
+|---|---|---|
+| **9** | Which departmental findings agree or conflict? | A five-domain evidence register and a briefing proposal. |
+| **10** | What decision should executives make? | A draft briefing with traceable evidence. |
+| **11** | Does the recommendation survive scrutiny? | A validation log and a revised briefing. |
+| **12** | What action and follow-up measure should leaders approve? | The final executive briefing and a portfolio reflection. |
+
+---
+
+## What you will be able to do
+
+By the end of the course you should be able to:
+
+1. Turn a stakeholder's concern into a clear question with a population, a period and a decision.
+2. Identify what a row means, the keys, data types, units and missing records, and document your preparation.
+3. Calculate metrics with the right aggregation and the right denominator.
+4. Check results with reconciliations, small manual checks and alternative explanations.
+5. Build readable Tableau views and dashboards that make the important comparison obvious.
 6. Recommend an action while explaining limitations, trade-offs and how success will be measured.
 
-Your portfolio will include evidence from all five domains. The proposed final briefing combines at least three domains; the exact submission schedule and presentation format will be shared before assessment starts. Feedback will reward correct reasoning and validation as well as clear visuals.
+---
 
-## Broader data practice
+## How you will be assessed
 
-Alongside the five business domains, selected [Tableau catalog datasets](https://public.tableau.com/app/learn/sample-data) will offer sports, technology, government and other practice choices. These use the same question-to-recommendation workflow and fit existing practice or optional extensions. Each source retains its real dates, units and context. The required five-domain portfolio and twelve-class schedule remain the course baseline.
+Your **portfolio** includes evidence from all five business areas.
+
+Your **final briefing** combines findings from at least three of them. The submission details and presentation format will be shared before assessment begins.
+
+Feedback rewards correct reasoning and careful checking, not only attractive charts.
+
+---
+
+## Extra practice topics
+
+Alongside the five business areas, selected datasets from the [Tableau sample-data catalog](https://public.tableau.com/app/learn/sample-data) give you choices in sports, technology, government and more.
+
+These use the same question-to-recommendation workflow. Each dataset keeps its own real dates, units and context.

@@ -1,21 +1,100 @@
 # Business case previews
 
-These are proposed case themes, not released assignments. We will combine suitable [Tableau sample datasets](https://public.tableau.com/app/learn/sample-data) with the existing synthetic-data strategy. **Meridian Commerce** remains a proposed fictional simulation; NPR/calendar2025 conventions apply only to that simulation. Other datasets retain their own context, units and dates. Individual files have not yet been released for class.
+<p class="lead">
+Five business problems, one for each department. Each case teaches a core skill and a common mistake to catch.
+</p>
 
-| Domain | Stakeholder decision | Analytical focus | Mistake to investigate |
-|---|---|---|---|
-| Retail/e-commerce | Which segment deserves a closer investigation? | Grain, distinct orders, AOV, reported Sales/Profit, ratios, discounts, customers, trends and return-list limits. | Treating order lines as orders. |
-| Finance | Which departments need a spending review? | Budget vs actual, periods, reconciliation and cost favorability. | Repeating a monthly budget for every transaction. |
-| Operations | Where should delivery reliability improve? | Promise dates, overdue open shipments, distributions, median and mean. | Dropping undelivered shipments from service measurement. |
-| Marketing | Which campaigns need closer evaluation before budget moves? | Weighted funnel rates, cost per conversion, ROAS and attribution limits. | Averaging percentages with different denominators. |
-| HR | How is the workforce changing, and which comparisons are fair? | Historical headcount, turnover, cohorts, tenure and recruitment timelines. | Dividing past exits by current headcount. |
+!!! note "Previews, not assignments yet"
 
-Each released case will include a stakeholder brief, dataset dictionary, explicit metrics, guided example, independent exercises, a debugging task, a recommendation challenge, validation checkpoints and an optional pandas connection. Instructor answers will be supplied separately.
+    These are proposed case themes. Individual files have not been released yet.
 
-Across departments, explain differences in grain, period and units before combining evidence. Within the connected synthetic case, marketing-attributed revenue is a view of the same retail revenue and must not be counted twice. Separate catalog sources do not describe that fictional company. A recommendation should consider trade-offs rather than add incompatible KPIs together.
+    We combine selected [Tableau sample datasets](https://public.tableau.com/app/learn/sample-data) with synthetic (made-up) teaching data. **Meridian Commerce** is a proposed fictional company used only for the synthetic cases. Real datasets keep their own context, units and dates.
+
+---
+
+## The five core cases
+
+### Retail
+
+**Decision:** Which customer segment deserves a closer investigation?
+
+**You will practise:** what a row means, distinct orders, average order value, Sales and Profit, ratios, discounts, customers, trends and the limits of a returns list.
+
+**Mistake to catch:** treating order lines as orders.
+
+### Finance
+
+**Decision:** Which departments need a spending review?
+
+**You will practise:** budget versus actual, time periods, reconciliation and whether a cost difference is favourable.
+
+**Mistake to catch:** repeating a monthly budget on every transaction row.
+
+### Operations
+
+**Decision:** Where should delivery reliability improve?
+
+**You will practise:** promised dates, overdue open shipments, distributions, median and mean.
+
+**Mistake to catch:** dropping undelivered shipments from the service measure.
+
+### Marketing
+
+**Decision:** Which campaigns need closer evaluation before budget moves?
+
+**You will practise:** weighted funnel rates, cost per conversion, return on ad spend and the limits of attribution.
+
+**Mistake to catch:** averaging percentages that have different denominators.
+
+### HR
+
+**Decision:** How is the workforce changing, and which comparisons are fair?
+
+**You will practise:** historical headcount, turnover, cohorts, tenure and recruitment timelines. All employee records are synthetic.
+
+**Mistake to catch:** dividing past exits by the current headcount.
+
+---
+
+## What every case includes
+
+- **Stakeholder brief**: the decision and why it matters
+- **Data dictionary**: what each field means
+- **Metric definitions**: exact formulas and scope
+- **Worked example**: a guided walk-through
+- **Exercises**: guided and independent practice
+- **Debugging task**: find and fix a mistake
+- **Recommendation challenge**: advise the stakeholder
+- **Validation checkpoints**: confirm your numbers
+
+
+Each case also has an optional pandas connection. Instructor answers are supplied separately.
+
+---
+
+## Combining evidence across departments
+
+Before combining findings, explain any differences in grain, period and units.
+
+- Within the synthetic company, marketing-attributed revenue is a view of the **same** retail revenue. Do not count it twice.
+- Separate catalog datasets do **not** describe that fictional company.
+- A good recommendation weighs trade-offs. It does not add incompatible KPIs together.
+
+---
 
 ## Additional practice choices
 
-We will also draw on sports, technology, government and other catalog topics. Proposed choices include World Cup match comparisons, mobile operating-system data quality, start-up funding, construction spending, and home-sales trends. Science, education and entertainment offer further options. These are transfer exercises for the same analytical process, with source-specific definitions and checks. They fit existing practice or optional extensions; the five core cases remain the portfolio foundation.
+You will also be able to practise on topics beyond the five departments:
 
-Catalog listing alone does not establish the row grain, supported calculations or redistribution terms. Each lesson will provide the exact reviewed file and dictionary or direct-source instructions before you use it.
+| Topic | Example dataset |
+|---|---|
+| Sports | World Cup match results |
+| Technology | Mobile operating-system usage (a data-quality exercise), start-up funding |
+| Government | US construction spending, US home sales |
+| Other | Science, education and entertainment datasets |
+
+These are transfer exercises: the same process, with source-specific definitions and checks. They fit into your existing practice time or optional extensions. The five core cases remain the foundation of your portfolio.
+
+!!! note "Every dataset is reviewed first"
+
+    A dataset appearing in a catalog does not tell us what each row means, which calculations it supports or whether it can be shared. Each lesson will give you the exact reviewed file and dictionary, or instructions to download it from the source, before you use it.

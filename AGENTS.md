@@ -23,7 +23,7 @@ Read `planning/PROJECT_CONTEXT.md`, `planning/STATUS.md`, `planning/TASKS.md`, a
 
 - Only `docs/` is learner-facing MkDocs source. Keep planning in `planning/`, notes/answers in `instructor/`, datasets in `data/`, and companions in `notebooks/`.
 - Never link learner pages to instructor answers or internal planning. Publish only reviewed synthetic/public data; Tableau Public publication is public. Public profile hiding is not a privacy control.
-- Keep infrastructure small. Retain the established Read the Docs theme unless an explicit need justifies changing it.
+- Keep infrastructure small. The learner site keeps the Read the Docs theme (user preference, DEC-036) plus `docs/stylesheets/readability.css` for spacious, easy-to-follow pages (DEC-034). Write learner pages with a short lead, short paragraphs, numbered steps, tables or `###` subsections for comparisons, and admonitions (note, tip, hint, warning) for status, safety and tips; avoid dense prose blocks.
 
 ## Verification and handoff
 

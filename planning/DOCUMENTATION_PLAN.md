@@ -2,7 +2,7 @@
 
 ## Current foundation navigation
 
-`mkdocs.yml` builds only docs/ and retains the existing Read the Docs theme. Current pages: home; course roadmap/setup/workflow; business-case preview; reusable learner lesson template. These pages are foundation material, clearly labeled where provisional. No empty lesson pages imply completed production.
+`mkdocs.yml` builds only docs/ with the Read the Docs theme (user preference, DEC-036) plus `docs/stylesheets/readability.css`: 820px content width, 16px/1.75 body text, spaced headings, section rules, wrapping padded tables and roomier admonitions (DEC-034). Current pages: home; course roadmap/setup/workflow; business-case preview; reusable learner lesson template. These pages are foundation material, clearly labeled where provisional. No empty lesson pages imply completed production.
 
 Internal planning and instructor answers are physically outside docs/. Hiding an answer from nav would not remove it from a MkDocs build. No solution or internal-state links belong in learner pages. Likewise, avoid source-repository links that inadvertently expose private answer keys if the repository is later made public.
 
@@ -21,7 +21,7 @@ Add actual pages/navigation only after their dependency tasks pass. Source candi
 
 Dataset dictionaries originate in data contracts; learner copies must match a frozen release. Raw data is never overwritten. Review synthetic/public downloadable CSVs and notebook outputs before deliberately copying to a learner assets directory. Copying an entire data/instructor/planning tree into docs/ is prohibited by shared instructions.
 
-Use normal Markdown tables and fenced code. The retained pymdownx extensions support highlighted code; built-in admonition supports notes. Keep styling and plugins small. Manual visual QA is still required when detailed lessons, tables and screenshots are added.
+Learner page style (DEC-034): open with a one-sentence `<p class="lead">` summary; separate sections with `---`; keep paragraphs to two or three sentences; use numbered steps for procedures, tables or `###` subsections for comparisons, bold-led bullet lists for overviews, and admonitions styled by the theme: `note` (status), `warning` (safety), `tip`/`hint` (help, checkpoints). Avoid Material-only syntax (content tabs, grid cards, icons). Enabled extensions: admonition, details, attr_list, md_in_html, tables, toc permalinks, highlight/superfences. No extra plugins. Manual visual QA is still required when detailed lessons, tables and screenshots are added.
 
 ## Verification
 

@@ -7,8 +7,12 @@ site/
 *.swp
 .vscode
 
+graphify-out/
 # Course-local environments and Python caches
 .venv/
 .venv-data/
 __pycache__/
 .ipynb_checkpoints/
+
+# CrunchBase export: provider terms of service apply; kept local only.
+data/raw/startup-venture-funding/

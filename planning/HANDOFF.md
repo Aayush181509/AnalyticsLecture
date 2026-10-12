@@ -4,6 +4,22 @@ Updated 2026-10-12. **Foundation, four-source audit, first retail development co
 
 The user requests Claude takeover next. Read [AGENTS.md](../AGENTS.md) → [PROJECT_CONTEXT.md](PROJECT_CONTEXT.md) → [STATUS.md](STATUS.md) → [TASKS.md](TASKS.md), then the concrete [CLAUDE_TAKEOVER.md](CLAUDE_TAKEOVER.md). The takeover brief contains exact artifacts, hashes, commands, constraints and a suggested first prompt; shared authority stays in AGENTS.md.
 
+## Claude session update — 2026-10-12
+
+Learner site keeps the Read the Docs theme (user preference after a brief Material trial, DEC-036) plus `docs/stylesheets/readability.css`; all six pages were restructured for readability (DEC-034, DOC01). Write every new learner page in that style: lead sentence, `---` breaks, short paragraphs, numbered steps, tables or `###` subsections, note/tip/hint/warning admonitions. No Material-only syntax. User approved the rendered result. Preview with `/tmp/kings-data-docs-venv/bin/python -m mkdocs serve` (reinstall from requirements.txt if the venv is gone). D03 Tableau checks remain open because this session had no desktop-app control (DEC-035).
+
+## Lessons 3–4 drafts — 2026-10-12
+
+Draft Lessons 1–4 now cover the whole retail stage. All four need one Tableau rehearsal with the user at the keyboard, using the checklists in `instructor/sessions/*/teaching-notes.md`; that rehearsal also closes D03. After that: D02R synthetic refund/cost supplement, then the finance case (D04 data contract, L04 lesson).
+
+## Foundations and content-first framing — 2026-10-12
+
+New `docs/foundations/` module (DEC-038) precedes the Tableau lessons; regenerate its figures with `scripts/make_foundation_figures.py` (deps in requirements-figures.txt). Learner pages must not frame the course by session count or hour budgets (DEC-039); lessons are "Lesson N".
+
+## Class 1–2 drafts — 2026-10-12
+
+Draft L01 pages exist: `docs/lessons/class-01.md`, `docs/lessons/class-02.md`; private notes and rehearsal checklist in `instructor/sessions/class-01-02/teaching-notes.md`. Next: rehearse them in the installed Tableau with the user at the keyboard (also closes D03 whole-scope checks), fix menu names, remove the "Draft lesson" banner only after rehearsal, then L02 Class 3 from PILOT_LESSON.md using Segment and source metrics.
+
 ## Resume here
 
 Complete D03's actual local Tableau comparisons using `data/prepared/superstore/retail-v1/order_lines.csv` and the private numerical references. CSV SHA-256: `434ba08abf665b617294b188e38c0d0b8a86d0b3386d41eff8a42c15bc708de2`. It contains 6,815 lines/3,388 orders/22 fields/36 months. D02's typed comparison covered 149,930 values; repeat bytes and mtimes were unchanged, and an independent reviewer accepted preparation.

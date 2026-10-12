@@ -1,0 +1,14 @@
+site/
+.env
+.DS*_Store
+*.log
+*.tmp
+*.bak
+*.swp
+.vscode
+
+# Course-local environments and Python caches
+.venv/
+.venv-data/
+__pycache__/
+.ipynb_checkpoints/

@@ -1,0 +1,101 @@
+{
+  "catalog_url": "https://public.tableau.com/app/learn/sample-data",
+  "audit_date": "2026-10-12",
+  "purpose": "Local course source audit; not learner publication",
+  "sources": [
+    {
+      "source_id": "eu-superstore",
+      "title": "EU Superstore Sales",
+      "catalog_url": "https://public.tableau.com/app/learn/sample-data",
+      "download_url": "https://public.tableau.com/app/sample-data/sample_-_superstore.xls",
+      "source_version": "2026-10-12",
+      "path": "data/raw/eu-superstore/2026-10-12/sample_-_superstore.xls",
+      "status": "downloaded",
+      "publication_approved": false,
+      "rights_status": "see planning/SOURCE_RIGHTS.md",
+      "retrieved_at_utc": "2026-10-12T11:19:24.813704+00:00",
+      "response": [
+        "200",
+        "application/vnd.ms-excel",
+        "https://public.tableau.com/app/sample-data/sample_-_superstore.xls"
+      ],
+      "bytes": 3422208,
+      "sha256": "5045ed4fec49cae2cc0dfc5ab0d204ba09efa767fe00c996822499e8cc42fbbd",
+      "provider": "Tableau",
+      "upstream_url": "https://public.tableau.com/app/learn/sample-data",
+      "data_character": "fictitious sample; catalog EU label differs from file geography",
+      "rights_checked_date": "2026-10-12"
+    },
+    {
+      "source_id": "world-cup-results",
+      "title": "FIFA World Cup Match Results",
+      "catalog_url": "https://public.tableau.com/app/learn/sample-data",
+      "download_url": "https://public.tableau.com/app/sample-data/world_cup_results.xlsx",
+      "source_version": "2026-10-12",
+      "path": "data/raw/world-cup-results/2026-10-12/world_cup_results.xlsx",
+      "status": "downloaded",
+      "publication_approved": false,
+      "rights_status": "see planning/SOURCE_RIGHTS.md",
+      "retrieved_at_utc": "2026-10-12T11:19:26.019554+00:00",
+      "response": [
+        "200",
+        "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+        "https://public.tableau.com/app/sample-data/world_cup_results.xlsx"
+      ],
+      "bytes": 193600,
+      "sha256": "dbad641c16c914c14fef0c95bf6f918fa5d2746671e4dc269b6a1ec3e2a3cc45",
+      "provider": "Sports Viz Sundays 2018 on data.world; mirrored by Tableau",
+      "upstream_url": "https://data.world/sportsvizsunday/sports-viz-sundays-2018/workspace/file?filename=World+Cup+Results.xlsx",
+      "data_character": "historical match compilation; source values not independently verified",
+      "rights_checked_date": "2026-10-12"
+    },
+    {
+      "source_id": "mobile-os-usage",
+      "title": "Mobile OS Usage",
+      "catalog_url": "https://public.tableau.com/app/learn/sample-data",
+      "download_url": "https://public.tableau.com/app/sample-data/mobile_os_usage.csv",
+      "source_version": "2026-10-12",
+      "path": "data/raw/mobile-os-usage/2026-10-12/mobile_os_usage.csv",
+      "status": "downloaded",
+      "publication_approved": false,
+      "rights_status": "see planning/SOURCE_RIGHTS.md",
+      "retrieved_at_utc": "2026-10-12T11:19:26.526026+00:00",
+      "response": [
+        "200",
+        "text/csv",
+        "https://public.tableau.com/app/sample-data/mobile_os_usage.csv"
+      ],
+      "bytes": 28814,
+      "sha256": "0db44110e84a31c06491af89a30949cd8ced1c42fac56488cb04ca4f9e449995",
+      "provider": "Statcounter Global Stats; mirrored by Tableau",
+      "upstream_url": "https://gs.statcounter.com/#mobile_os-ww-monthly-200812-201412",
+      "data_character": "usage statistics; file dates incomplete, exact historical scope unresolved",
+      "rights_checked_date": "2026-10-12"
+    },
+    {
+      "source_id": "us-construction",
+      "title": "US Construction Spending",
+      "catalog_url": "https://public.tableau.com/app/learn/sample-data",
+      "download_url": "https://public.tableau.com/app/sample-data/enigma-us.gov_.census.eits_.vip-97d8678900cbb89fee543a41aa21ab9a_2_0.csv",
+      "source_version": "2026-10-12",
+      "path": "data/raw/us-construction/2026-10-12/enigma-us.gov_.census.eits_.vip-97d8678900cbb89fee543a41aa21ab9a_2_0.csv",
+      "status": "downloaded",
+      "publication_approved": false,
+      "rights_status": "see planning/SOURCE_RIGHTS.md",
+      "retrieved_at_utc": "2026-10-12T11:19:28.447466+00:00",
+      "response": [
+        "200",
+        "text/csv",
+        "https://public.tableau.com/app/sample-data/enigma-us.gov_.census.eits_.vip-97d8678900cbb89fee543a41aa21ab9a_2_0.csv"
+      ],
+      "bytes": 6414502,
+      "sha256": "6cf9ad9f20c8eeb2c5b33d9cc29b8c648579a52ff50a24d3f6f5f1ba332b8b34",
+      "provider": "US Census / Department of Commerce via Enigma; mirrored by Tableau",
+      "upstream_url": null,
+      "upstream_status": "Exact original Enigma dataset/version unresolved; see source-rights record",
+      "provider_reference_url": "https://www.census.gov/construction/c30/historical_data.html",
+      "data_character": "historical economic statistics; exact mirror vintage unresolved",
+      "rights_checked_date": "2026-10-12"
+    }
+  ]
+}

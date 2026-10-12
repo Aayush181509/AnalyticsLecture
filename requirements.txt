@@ -1,0 +1,3 @@
+# MkDocs foundation only. Python companions have a separate future environment.
+mkdocs>=1.6,<2
+pymdown-extensions>=10,<11

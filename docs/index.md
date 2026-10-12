@@ -1,57 +1,24 @@
 # Data Analytics
 
-**Welcome!** I'm Aayush, your Facilitator for this training programme.
+**Welcome!** I'm Aayush, your facilitator for this training programme.
 
-This course is designed specifically for **Professionals** who want to harness the power of Data Analytics to automate, analyse, and visualise financial data — with zero prior coding experience required.
+Develop the practical skills to turn a business question into a defensible recommendation. We will use Tableau to explore and explain data from retail/e-commerce, finance, operations, marketing, and HR. We will combine synthetic teaching cases with suitable Tableau sample datasets, with additional practice in sports, technology, government and other topics. Python and pandas companions will connect the same ideas to code, starting as optional extensions.
 
----
+## Course at a glance
 
-## What You Will Learn
+- Twelve two-hour live classes across several weeks, plus independent practice.
+- Basic spreadsheet familiarity; no Python or Tableau experience assumed.
+- Tableau Public using synthetic/public datasets.
+- A practical portfolio and an executive briefing grounded in validated evidence.
 
-| Module | Topic | Key Skills |
-|--------|-------|------------|
-| 01 | **Tableau Basics** | Variables, data types, loops, functions, tax calculator |
+**Development status:** this site currently contains the course foundation and proposed learning roadmap. Full lessons, datasets, workbooks and Python companions are still being developed. Case descriptions and the lesson template are previews, not ready-to-run assignments.
 
+Begin with the [learning roadmap](course/roadmap.md), [setup guidance](course/setup.md), and [analytical workflow](course/workflow.md). Browse the [five business cases](cases/index.md) to see where those skills will be applied.
 
----
+## How we will practise
 
-## Who Is This For?
+Watch a demonstration, follow guided practice, solve an independent problem, debug a mistake, and recommend an action. At every stage, check the row meaning, metric definition and evidence before trusting a chart.
 
-- CA graduates and finance professionals
-- Absolute beginners — **no coding background needed**
-- Anyone looking to automate repetitive financial tasks
+Python is optional initially; the essential Tableau tasks do not require writing code. Instructor solutions will be distributed separately after practice.
 
----
-
-## How to Use This Course
-
-!!! tip "Getting Started"
-    Work through the modules **in order** — each one builds on the previous.
-    Every module includes:
-
-    - Clear explanations with finance-focused examples
-    - Runnable code cells you can experiment with
-    - Mini exercises after each section
-    - Full solutions at the end
-
-!!! note "Tools Required"
-    - Python 3.8 or above
-    - Jupyter Notebook or JupyterLab
-    - Libraries: `numpy`, `pandas`, `matplotlib`, `seaborn`
-
-    Install everything at once:
-    ```bash
-    pip install numpy pandas matplotlib seaborn jupyterlab
-    ```
-
----
-
-## Connect With Me
-
-I'd love to stay connected beyond this session — whether you have questions, want to discuss ideas, or just expand your professional network.
-
-[🔗 Connect on LinkedIn](https://www.linkedin.com/in/aayush-regmi-6631ab1b5/)
-
----
-
-*Python for CA Professionals — ICAN Training Programme*
+[Connect with Aayush on LinkedIn](https://www.linkedin.com/in/aayush-regmi-6631ab1b5/)

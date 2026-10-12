@@ -1,0 +1,63 @@
+# Decisions and rationale
+
+Dates use Asia/Kathmandu. “Confirmed” records user instruction; “working design” is a reversible recommendation, not user approval. No dates below imply a class calendar.
+
+| ID | Date | Status | Decision / rationale |
+|---|---|---|---|
+| DEC-001 | 2026-10-12 | Confirmed | Complete planning and workspace foundation first; full lessons/data/workbooks/notebooks enter the backlog. Prevents presenting untested material as classroom-ready. |
+| DEC-002 | 2026-10-12 | Confirmed | Twelve two-hour live classes plus practice; basic spreadsheets only, no Python/Tableau assumed; Tableau Public synthetic/public data; practical portfolio and executive briefing. User answered the four initial questions. |
+| DEC-003 | 2026-10-12 | Confirmed | All five domains and the end-to-end analytical process are required; MkDocs is the documentation system; bounded agents authorized. |
+| DEC-004 | 2026-10-12 | Integration choice | Preserve Makefile and existing generated site. Archive original tracked home exactly in LEGACY_HOME.md before adapting it; retain Read the Docs theme and copyright. Existing home described a different finance/Python course. |
+| DEC-005 | 2026-10-12 | Integration choice | Build from docs/ only; instructor answers/planning stay outside. Simplify unused Material-style theme settings, add navigation and a learner-safe template. Strict check builds to /tmp to preserve site/. |
+| DEC-006 | 2026-10-12 | Working design | Recommend fictional Meridian Commerce, NPR, calendar 2025 and cutoff 2025-12-31. Connected examples support synthesis; creator can change these before data freeze. Synthetic-first avoids needing external sources for release 1; no dataset adopted and no license invented. |
+| DEC-007 | 2026-10-12 | Working design | Recommend S1–S4 foundations/retail, S5–S8 departmental cases, S9–S12 synthesis/build/critique/briefing; optional-first Python and an essential noncoding validation route. Each domain contributes independent evidence. |
+| DEC-008 | 2026-10-12 | Working design | Pilot is S3 channel metrics before refunds. Distinct orders, discounted sales, AOV and ratio-of-sums margin share a clear population. Monthly growth and explicit cohort/event-time returns move to S4. Do not ambiguously label pilot sales as refund-adjusted net sales. |
+| DEC-009 | 2026-10-12 | Working design | Portfolio covers five domains; briefing integrates at least three and screens relevance of the other two. Recommended rubric totals 100%; it does not establish grades, pass thresholds or team policy. |
+| DEC-010 | 2026-10-12 | Working design | Essential practice budget19h plus24h live = 43h; optional expanded practice about 25h. Reduce duplicate reporting and reuse class artifacts. Workload is a planning estimate awaiting novice rehearsal. |
+| DEC-011 | 2026-10-12 | Working design | Reference authoring path is Desktop Public Edition with local saving/submission; publication optional. Official Tableau documentation checked for local saving/public access; actual course app/version/device workflow awaits smoke test. |
+| DEC-012 | 2026-10-12 | Analytical review repair | Aggregate finance before combining; totals compare known-budget scope and disclose unknown budgets. Keep pending-due shipments in service denominator. Use historical HR populations with explicit exit boundaries; weighted marketing rates and cumulative retail refund/cost limits. |
+| DEC-013 | 2026-10-12 | Analytical review repair | Marketing uses synthetically assigned single-campaign attribution, not a last-click claim: schemas have no click/touchpoint history. Credit/revenue consistency can be checked without claiming an unavailable attribution audit or causal lift. |
+| DEC-014 | 2026-10-12 | Verification choice | Install documentation dependencies in a temporary isolated environment after restricted network install failed; approved retry succeeded. Strict MkDocs and local docs checks pass. Browser visual review is unverified: iab unavailable and Chrome file URLs blocked by browser policy; no workaround attempted. |
+
+## Dataset-direction update — 2026-10-12
+
+| ID | Date | Status | Decision / rationale |
+|---|---|---|---|
+| DEC-015 | 2026-10-12 | Confirmed | User directs existing data strategy **plus** Tableau Public sample datasets, with sports, technology, government and other suitable subjects. This supersedes the synthetic-first sourcing default in DEC-006; it does not remove the five core cases or synthetic employee requirement. |
+| DEC-016 | 2026-10-12 | Working design | Use a small reviewed catalog shortlist alongside controlled simulation/supplement cases. Preserve native context/dates/currency and distinguish listing verification from file/schema/rights verification. No individual file is adopted yet. |
+| DEC-017 | 2026-10-12 | Working design | Add transfer choices within existing practice/optional extensions; keep twelve classes, five-domain portfolio and essential workload baseline. Meridian remains an optional connected simulation, not a label for external files. |
+| DEC-018 | 2026-10-12 | Integration observation | Existing documentation dependency file is now requirements.txt. Adapt README/current state references to the file present; preserve its contents. No dependency change is needed for this sourcing update. |
+
+## Four-file source audit — 2026-10-12
+
+| ID | Date | Status | Decision / rationale |
+|---|---|---|---|
+| DEC-019 | 2026-10-12 | Observed / integration choice | Preserve four catalog-observed downloads under exact versioned paths, record hashes/HTTP responses and reproducible offline profiles. Acquisition/inspection is local; publication remains false. Keep numerical controls in instructor/, schemas/quality metadata in data/metadata/. |
+| DEC-020 | 2026-10-12 | Working design from actual-file evidence | Recommend a Superstore source-backed retail variant using Row ID, Order ID and Segment; reported Sales and Profit/Sales labels with source monetary units pending definition review. Catalog EU label differs from US/Canada file dated 2023–2026. Provisionally use 2023–2025; flag two inconsistent order/customer mappings. Keep synthetic refund/cost variant separate. |
+| DEC-021 | 2026-10-12 | Working design from actual-file evidence | Sports preparation should remove 16 exact duplicate matches and reconstruct appearances; 836 matches reconcile to 20 tournament counts/goals internally. Exclude mixed-format attendance and score-only advancement inference. Mobile OS long-trend use deferred: 1,772 missing dates; quality exercise or 104 dated Dec 2008–Mar 2009 rows only after contract review. No inferred dates. |
+| DEC-022 | 2026-10-12 | Working design from actual-file evidence | Government beginner series selects US, XXXX, T, et_idx=0, is_adj=0: 177 monthly observations in million US dollars. Do not combine annual rates, percentage/error blocks, overlapping totals or incomplete 2016 annual comparisons. Missing val is not zero; observed reconciliation tolerance 1 million dollars for specified published total partitions. |
+| DEC-023 | 2026-10-12 | Release evidence / remaining uncertainty | Statcounter provider CC BY-SA 3.0 and qualified Census public-use policy recorded; exact mirror/provenance conditions remain. Tableau supports Superstore learning downloads; no standalone bundling grant found. World Cup dataset license unresolved. Choose permitted source-linked or synthetic delivery while contracts progress; no source-derived public upload or redistribution approved. |
+| DEC-024 | 2026-10-12 | Preservation observation | A separate six-source fetch script, duplicate raw layout, Start-up Venture Funding and US Home Sales appeared in the workspace during this work. Preserve them unchanged; this audit executes only its four-path manifest, not the separate fetch script. Do not imply those additional sources are inspected. |
+
+## First retail development freeze — 2026-10-12
+
+| ID | Date | Status | Decision / rationale |
+|---|---|---|---|
+| DEC-025 | 2026-10-12 | Reviewed internal development choice | Freeze `superstore-retail-v1` for local preparation after independent analytical review: 2023–2025 Order Date, all scoped lines, Row ID key, Segment, reported Sales/Profit and source monetary units. Neutral labels resolve the teaching arithmetic contract without inventing currency/accounting facts. This is not user confirmation of a real business context or public release. |
+| DEC-026 | 2026-10-12 | Reviewed analytical policy | Detect customer conflicts on all raw Orders; retain flags/all lines in main KPIs; exclude whole conflicted orders consistently for customer analysis. Returns flag means listed/not listed, not proof of return/no-return or a time-based rate. Category AOV uses selected-line Sales per participating order; dispatch summaries weight orders, not repeated lines. |
+| DEC-027 | 2026-10-12 | Reviewed precision and temporal policy | Preserve source numeric representations without row rounding; reference Decimal sums and separate exact-value/engine/display tolerances. Use calendar comparators and verified coverage: a covered group month without lines differs from an unavailable period; zero prior gives unavailable growth. Private synthetic fixtures and a read-only checker encode the edge cases; independent manual checks passed. |
+| DEC-028 | 2026-10-12 | Integration choice | First retail roadmap/assessment now uses Segment and source-reported metrics. Preserve detailed Meridian/channel/gross-profit pilot as a labeled synthetic reference. Contract/dictionary/settings/preparation specification and review evidence are versioned/hash-recorded; D02 prepares source data next. Remaining five-domain/transfer/synthetic contracts freeze during their own production tasks. No data or Tableau release is implied. |
+
+## Still open after the retail freeze
+
+Class size/format/cadence and presentation capacity; device/accessibility survey; practice capacity; simulation story/currency/date adoption; rights/license selection; submission platform/deadlines; individual/team and grading/remediation policies. First retail local-development labels/scope are fixed in its contract; stronger accounting/currency claims remain unsupported. See PROJECT_CONTEXT.md and TASKS for resolution order.
+
+## Retail preparation and Claude takeover — 2026-10-12
+
+| ID | Date | Status | Decision / rationale |
+|---|---|---|---|
+| DEC-029 | 2026-10-12 | Confirmed | User requests Claude takeover after this development step. Create a concrete planning/CLAUDE_TAKEOVER.md and link it from the concise CLAUDE entry and shared handoff; AGENTS remains the single instruction authority. |
+| DEC-030 | 2026-10-12 | Implemented / independently reviewed | Accept D02's source projection for local development: exact frozen scope/schema, staged typed comparison and immutable CSV/manifest/report/private exceptions. Repeat bytes/mtimes unchanged; original and frozen seven inputs preserved. No source-derived learner/public permission inferred. |
+| DEC-031 | 2026-10-12 | Verified numerical slice | Independent pandas source read versus saved CSV/Decimal validates149,930typed values and source/hand/group/calendar controls. Version-bound private references remain instructor-only; repeating ratios use precision60 with numerators/denominators retained. D03 remains IN PROGRESS until actual Tableau comparisons pass. |
+| DEC-032 | 2026-10-12 | Observed / verification boundary | Native Tableau Public imported exact CSV and showed22fields/6,815rows; worksheet navigation encountered app-control errors. Record import only, no installed-version/KPI/filter/grand-total/zero-case/local-save claim or public upload. Claude resumes this concrete gap first. |
+| DEC-033 | 2026-10-12 | Confirmed / Git checkpoint | User requests committing changes made for the course. Create one local checkpoint of course artifacts and necessary dependency/configuration files; exclude unrelated pre-existing Makefile, separate fetch script, duplicate/extra source layouts and graphify output. No push/deploy/publication implied; production gates stay open. |

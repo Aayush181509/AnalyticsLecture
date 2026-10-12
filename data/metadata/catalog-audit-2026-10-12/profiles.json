@@ -1,0 +1,1053 @@
+{
+  "environment": {
+    "python": "3.12.14",
+    "pandas": "2.2.3",
+    "openpyxl": "3.1.5",
+    "xlrd": "2.0.2"
+  },
+  "sources": [
+    {
+      "source_id": "eu-superstore",
+      "path": "data/raw/eu-superstore/2026-10-12/sample_-_superstore.xls",
+      "sha256": "5045ed4fec49cae2cc0dfc5ab0d204ba09efa767fe00c996822499e8cc42fbbd",
+      "tables": {
+        "Orders": {
+          "rows": 10194,
+          "columns": 21,
+          "exact_duplicate_rows": 0,
+          "fields": [
+            {
+              "name": "Row ID",
+              "inferred_type": "int64",
+              "missing": 0,
+              "distinct_nonmissing": 10194
+            },
+            {
+              "name": "Order ID",
+              "inferred_type": "object",
+              "missing": 0,
+              "distinct_nonmissing": 5111
+            },
+            {
+              "name": "Order Date",
+              "inferred_type": "datetime64[ns]",
+              "missing": 0,
+              "distinct_nonmissing": 1242
+            },
+            {
+              "name": "Ship Date",
+              "inferred_type": "datetime64[ns]",
+              "missing": 0,
+              "distinct_nonmissing": 1338
+            },
+            {
+              "name": "Ship Mode",
+              "inferred_type": "object",
+              "missing": 0,
+              "distinct_nonmissing": 4
+            },
+            {
+              "name": "Customer ID",
+              "inferred_type": "object",
+              "missing": 0,
+              "distinct_nonmissing": 804
+            },
+            {
+              "name": "Customer Name",
+              "inferred_type": "object",
+              "missing": 0,
+              "distinct_nonmissing": 800
+            },
+            {
+              "name": "Segment",
+              "inferred_type": "object",
+              "missing": 0,
+              "distinct_nonmissing": 3
+            },
+            {
+              "name": "Country/Region",
+              "inferred_type": "object",
+              "missing": 0,
+              "distinct_nonmissing": 2
+            },
+            {
+              "name": "City",
+              "inferred_type": "object",
+              "missing": 0,
+              "distinct_nonmissing": 542
+            },
+            {
+              "name": "State/Province",
+              "inferred_type": "object",
+              "missing": 0,
+              "distinct_nonmissing": 59
+            },
+            {
+              "name": "Postal Code",
+              "inferred_type": "object",
+              "missing": 0,
+              "distinct_nonmissing": 654
+            },
+            {
+              "name": "Region",
+              "inferred_type": "object",
+              "missing": 0,
+              "distinct_nonmissing": 4
+            },
+            {
+              "name": "Product ID",
+              "inferred_type": "object",
+              "missing": 0,
+              "distinct_nonmissing": 1862
+            },
+            {
+              "name": "Category",
+              "inferred_type": "object",
+              "missing": 0,
+              "distinct_nonmissing": 3
+            },
+            {
+              "name": "Sub-Category",
+              "inferred_type": "object",
+              "missing": 0,
+              "distinct_nonmissing": 17
+            },
+            {
+              "name": "Product Name",
+              "inferred_type": "object",
+              "missing": 0,
+              "distinct_nonmissing": 1849
+            },
+            {
+              "name": "Sales",
+              "inferred_type": "float64",
+              "missing": 0,
+              "distinct_nonmissing": 6161
+            },
+            {
+              "name": "Quantity",
+              "inferred_type": "int64",
+              "missing": 0,
+              "distinct_nonmissing": 14
+            },
+            {
+              "name": "Discount",
+              "inferred_type": "float64",
+              "missing": 0,
+              "distinct_nonmissing": 12
+            },
+            {
+              "name": "Profit",
+              "inferred_type": "float64",
+              "missing": 0,
+              "distinct_nonmissing": 7597
+            }
+          ]
+        },
+        "People": {
+          "rows": 4,
+          "columns": 2,
+          "exact_duplicate_rows": 0,
+          "fields": [
+            {
+              "name": "Regional Manager",
+              "inferred_type": "object",
+              "missing": 0,
+              "distinct_nonmissing": 4
+            },
+            {
+              "name": "Region",
+              "inferred_type": "object",
+              "missing": 0,
+              "distinct_nonmissing": 4
+            }
+          ]
+        },
+        "Returns": {
+          "rows": 296,
+          "columns": 2,
+          "exact_duplicate_rows": 0,
+          "fields": [
+            {
+              "name": "Order ID",
+              "inferred_type": "object",
+              "missing": 0,
+              "distinct_nonmissing": 296
+            },
+            {
+              "name": "Returned",
+              "inferred_type": "object",
+              "missing": 0,
+              "distinct_nonmissing": 1
+            }
+          ]
+        }
+      },
+      "quality": {
+        "grain": "source order line; key Row ID",
+        "distinct_orders": 5111,
+        "duplicate_order_product_pairs": 11,
+        "countries_rows": {
+          "United States": 9994,
+          "Canada": 200
+        },
+        "order_dates": {
+          "min": "2023-01-03",
+          "max": "2026-12-30",
+          "missing_or_invalid": 0,
+          "distinct": 1242
+        },
+        "ship_dates": {
+          "min": "2023-01-07",
+          "max": "2027-01-05",
+          "missing_or_invalid": 0,
+          "distinct": 1338
+        },
+        "order_customer_conflicts": [
+          "CA-2025-121465",
+          "CA-2026-130494"
+        ],
+        "returned_values": [
+          "Yes"
+        ],
+        "ranges": {
+          "Sales": {
+            "min": 0.44399999999999995,
+            "max": 22638.48
+          },
+          "Profit": {
+            "min": -6599.978000000001,
+            "max": 8399.975999999999
+          },
+          "Discount": {
+            "min": 0.0,
+            "max": 0.8
+          },
+          "Quantity": {
+            "min": 1.0,
+            "max": 14.0
+          }
+        },
+        "order_attribute_conflicts": {
+          "Order Date": 0,
+          "Ship Date": 0,
+          "Ship Mode": 0,
+          "Segment": 0,
+          "Country/Region": 0,
+          "Region": 0
+        }
+      }
+    },
+    {
+      "source_id": "world-cup-results",
+      "path": "data/raw/world-cup-results/2026-10-12/world_cup_results.xlsx",
+      "sha256": "dbad641c16c914c14fef0c95bf6f918fa5d2746671e4dc269b6a1ec3e2a3cc45",
+      "tables": {
+        "WorldCupMatches": {
+          "rows": 852,
+          "columns": 12,
+          "exact_duplicate_rows": 16,
+          "fields": [
+            {
+              "name": "Year",
+              "inferred_type": "int64",
+              "missing": 0,
+              "distinct_nonmissing": 20
+            },
+            {
+              "name": "Date",
+              "inferred_type": "datetime64[ns]",
+              "missing": 0,
+              "distinct_nonmissing": 330
+            },
+            {
+              "name": "Time",
+              "inferred_type": "object",
+              "missing": 0,
+              "distinct_nonmissing": 37
+            },
+            {
+              "name": "Round",
+              "inferred_type": "object",
+              "missing": 0,
+              "distinct_nonmissing": 23
+            },
+            {
+              "name": "Stadium",
+              "inferred_type": "object",
+              "missing": 0,
+              "distinct_nonmissing": 181
+            },
+            {
+              "name": "City",
+              "inferred_type": "object",
+              "missing": 0,
+              "distinct_nonmissing": 151
+            },
+            {
+              "name": "Country",
+              "inferred_type": "object",
+              "missing": 0,
+              "distinct_nonmissing": 15
+            },
+            {
+              "name": "HomeTeam",
+              "inferred_type": "object",
+              "missing": 0,
+              "distinct_nonmissing": 78
+            },
+            {
+              "name": "HomeGoals",
+              "inferred_type": "int64",
+              "missing": 0,
+              "distinct_nonmissing": 11
+            },
+            {
+              "name": "AwayGoals",
+              "inferred_type": "int64",
+              "missing": 0,
+              "distinct_nonmissing": 7
+            },
+            {
+              "name": "AwayTeam",
+              "inferred_type": "object",
+              "missing": 0,
+              "distinct_nonmissing": 83
+            },
+            {
+              "name": "Observation",
+              "inferred_type": "object",
+              "missing": 0,
+              "distinct_nonmissing": 43
+            }
+          ]
+        },
+        "World Cup - Tableau format": {
+          "rows": 1704,
+          "columns": 13,
+          "exact_duplicate_rows": 0,
+          "fields": [
+            {
+              "name": "Year",
+              "inferred_type": "int64",
+              "missing": 0,
+              "distinct_nonmissing": 20
+            },
+            {
+              "name": "Game #",
+              "inferred_type": "int64",
+              "missing": 0,
+              "distinct_nonmissing": 852
+            },
+            {
+              "name": "Date",
+              "inferred_type": "datetime64[ns]",
+              "missing": 0,
+              "distinct_nonmissing": 330
+            },
+            {
+              "name": "Time",
+              "inferred_type": "object",
+              "missing": 0,
+              "distinct_nonmissing": 37
+            },
+            {
+              "name": "Round",
+              "inferred_type": "object",
+              "missing": 0,
+              "distinct_nonmissing": 23
+            },
+            {
+              "name": "Stadium",
+              "inferred_type": "object",
+              "missing": 0,
+              "distinct_nonmissing": 181
+            },
+            {
+              "name": "City",
+              "inferred_type": "object",
+              "missing": 0,
+              "distinct_nonmissing": 151
+            },
+            {
+              "name": "Country",
+              "inferred_type": "object",
+              "missing": 0,
+              "distinct_nonmissing": 15
+            },
+            {
+              "name": "Team",
+              "inferred_type": "object",
+              "missing": 0,
+              "distinct_nonmissing": 83
+            },
+            {
+              "name": "Team G",
+              "inferred_type": "int64",
+              "missing": 0,
+              "distinct_nonmissing": 11
+            },
+            {
+              "name": "Opponent",
+              "inferred_type": "object",
+              "missing": 0,
+              "distinct_nonmissing": 83
+            },
+            {
+              "name": "Opponent G",
+              "inferred_type": "int64",
+              "missing": 0,
+              "distinct_nonmissing": 11
+            },
+            {
+              "name": "Observation",
+              "inferred_type": "object",
+              "missing": 0,
+              "distinct_nonmissing": 43
+            }
+          ]
+        },
+        "WorldCups": {
+          "rows": 20,
+          "columns": 10,
+          "exact_duplicate_rows": 0,
+          "fields": [
+            {
+              "name": "Year",
+              "inferred_type": "int64",
+              "missing": 0,
+              "distinct_nonmissing": 20
+            },
+            {
+              "name": "Country",
+              "inferred_type": "object",
+              "missing": 0,
+              "distinct_nonmissing": 15
+            },
+            {
+              "name": "Winner",
+              "inferred_type": "object",
+              "missing": 0,
+              "distinct_nonmissing": 9
+            },
+            {
+              "name": "Runners-Up",
+              "inferred_type": "object",
+              "missing": 0,
+              "distinct_nonmissing": 10
+            },
+            {
+              "name": "Third",
+              "inferred_type": "object",
+              "missing": 0,
+              "distinct_nonmissing": 14
+            },
+            {
+              "name": "Fourth",
+              "inferred_type": "object",
+              "missing": 0,
+              "distinct_nonmissing": 16
+            },
+            {
+              "name": "GoalsScored",
+              "inferred_type": "int64",
+              "missing": 0,
+              "distinct_nonmissing": 17
+            },
+            {
+              "name": "QualifiedTeams",
+              "inferred_type": "int64",
+              "missing": 0,
+              "distinct_nonmissing": 5
+            },
+            {
+              "name": "MatchesPlayed",
+              "inferred_type": "int64",
+              "missing": 0,
+              "distinct_nonmissing": 9
+            },
+            {
+              "name": "Attendance",
+              "inferred_type": "object",
+              "missing": 0,
+              "distinct_nonmissing": 20
+            }
+          ]
+        }
+      },
+      "quality": {
+        "grain": "match in WorldCupMatches; team appearance in Tableau-format sheet",
+        "match_dates": {
+          "min": "1930-07-13",
+          "max": "2014-07-13",
+          "missing_or_invalid": 0,
+          "distinct": 330
+        },
+        "raw_matches_by_year": {
+          "1930": 18,
+          "1934": 17,
+          "1938": 18,
+          "1950": 22,
+          "1954": 26,
+          "1958": 35,
+          "1962": 32,
+          "1966": 32,
+          "1970": 32,
+          "1974": 38,
+          "1978": 38,
+          "1982": 52,
+          "1986": 52,
+          "1990": 52,
+          "1994": 52,
+          "1998": 64,
+          "2002": 64,
+          "2006": 64,
+          "2010": 64,
+          "2014": 80
+        },
+        "deduplicated_matches": 836,
+        "duplicate_match_keys_raw": 16,
+        "appearance_game_ids": 852,
+        "duplicate_game_team_keys": 0,
+        "blank_observation_after_trim": 787,
+        "goals_missing": 0,
+        "attendance_storage_types": {
+          "str": 14,
+          "float": 5,
+          "int": 1
+        },
+        "goal_reconciliation_exceptions": []
+      }
+    },
+    {
+      "source_id": "mobile-os-usage",
+      "path": "data/raw/mobile-os-usage/2026-10-12/mobile_os_usage.csv",
+      "sha256": "0db44110e84a31c06491af89a30949cd8ced1c42fac56488cb04ca4f9e449995",
+      "tables": {
+        "CSV": {
+          "rows": 1898,
+          "columns": 3,
+          "exact_duplicate_rows": 898,
+          "fields": [
+            {
+              "name": "Date",
+              "inferred_type": "object",
+              "missing": 1772,
+              "distinct_nonmissing": 5
+            },
+            {
+              "name": "Mobile Operating System",
+              "inferred_type": "object",
+              "missing": 0,
+              "distinct_nonmissing": 26
+            },
+            {
+              "name": "Percent of Usage",
+              "inferred_type": "float64",
+              "missing": 0,
+              "distinct_nonmissing": 560
+            }
+          ]
+        }
+      },
+      "quality": {
+        "grain": "OS-period share where Date is present; undated records unresolved",
+        "dates": {
+          "min": "2008-12-01",
+          "max": "2009-04-01",
+          "missing_or_invalid": 1772,
+          "distinct": 5
+        },
+        "dated_rows": 126,
+        "os_categories": [
+          "Android",
+          "BlackBerry OS",
+          "Brew",
+          "LG",
+          "Linux",
+          "Maemo 5",
+          "MeeGo",
+          "Motorola",
+          "Nintendo",
+          "Nintendo 3DS",
+          "Nokia Unknown",
+          "Other",
+          "Playstation",
+          "Samsung",
+          "Series 40",
+          "Sony Ericsson",
+          "SymbianOS",
+          "Unknown",
+          "Win7",
+          "WinCE",
+          "WinVista",
+          "WinXP",
+          "Windows Phone",
+          "bada",
+          "iOS",
+          "webOS"
+        ],
+        "dated_periods": {
+          "2008-12-01": {
+            "rows": 26,
+            "sum_percentage_points": 100.0
+          },
+          "2009-01-01": {
+            "rows": 26,
+            "sum_percentage_points": 100.0
+          },
+          "2009-02-01": {
+            "rows": 26,
+            "sum_percentage_points": 100.01
+          },
+          "2009-03-01": {
+            "rows": 26,
+            "sum_percentage_points": 99.99
+          },
+          "2009-04-01": {
+            "rows": 22,
+            "sum_percentage_points": 99.17
+          }
+        },
+        "share_min": 0.0,
+        "share_max": 59.9,
+        "eligible_four_month_rows": 104
+      }
+    },
+    {
+      "source_id": "us-construction",
+      "path": "data/raw/us-construction/2026-10-12/enigma-us.gov_.census.eits_.vip-97d8678900cbb89fee543a41aa21ab9a_2_0.csv",
+      "sha256": "6cf9ad9f20c8eeb2c5b33d9cc29b8c648579a52ff50a24d3f6f5f1ba332b8b34",
+      "tables": {
+        "CSV": {
+          "rows": 50208,
+          "columns": 20,
+          "exact_duplicate_rows": 0,
+          "fields": [
+            {
+              "name": "per_idx",
+              "inferred_type": "int64",
+              "missing": 0,
+              "distinct_nonmissing": 177
+            },
+            {
+              "name": "per_name",
+              "inferred_type": "object",
+              "missing": 0,
+              "distinct_nonmissing": 177
+            },
+            {
+              "name": "cat_idx",
+              "inferred_type": "int64",
+              "missing": 0,
+              "distinct_nonmissing": 38
+            },
+            {
+              "name": "cat_code",
+              "inferred_type": "object",
+              "missing": 0,
+              "distinct_nonmissing": 38
+            },
+            {
+              "name": "cat_desc",
+              "inferred_type": "object",
+              "missing": 0,
+              "distinct_nonmissing": 38
+            },
+            {
+              "name": "cat_indent",
+              "inferred_type": "int64",
+              "missing": 0,
+              "distinct_nonmissing": 2
+            },
+            {
+              "name": "dt_idx",
+              "inferred_type": "int64",
+              "missing": 0,
+              "distinct_nonmissing": 7
+            },
+            {
+              "name": "dt_code",
+              "inferred_type": "object",
+              "missing": 24768,
+              "distinct_nonmissing": 6
+            },
+            {
+              "name": "dt_desc",
+              "inferred_type": "object",
+              "missing": 24768,
+              "distinct_nonmissing": 6
+            },
+            {
+              "name": "dt_unit",
+              "inferred_type": "object",
+              "missing": 24768,
+              "distinct_nonmissing": 2
+            },
+            {
+              "name": "et_idx",
+              "inferred_type": "int64",
+              "missing": 0,
+              "distinct_nonmissing": 7
+            },
+            {
+              "name": "et_code",
+              "inferred_type": "object",
+              "missing": 25440,
+              "distinct_nonmissing": 6
+            },
+            {
+              "name": "et_desc",
+              "inferred_type": "object",
+              "missing": 25440,
+              "distinct_nonmissing": 6
+            },
+            {
+              "name": "et_unit",
+              "inferred_type": "object",
+              "missing": 25440,
+              "distinct_nonmissing": 1
+            },
+            {
+              "name": "geo_idx",
+              "inferred_type": "int64",
+              "missing": 0,
+              "distinct_nonmissing": 1
+            },
+            {
+              "name": "geo_code",
+              "inferred_type": "object",
+              "missing": 0,
+              "distinct_nonmissing": 1
+            },
+            {
+              "name": "geo_desc",
+              "inferred_type": "object",
+              "missing": 0,
+              "distinct_nonmissing": 1
+            },
+            {
+              "name": "is_adj",
+              "inferred_type": "int64",
+              "missing": 0,
+              "distinct_nonmissing": 2
+            },
+            {
+              "name": "val",
+              "inferred_type": "float64",
+              "missing": 33216,
+              "distinct_nonmissing": 12667
+            },
+            {
+              "name": "serialid",
+              "inferred_type": "int64",
+              "missing": 0,
+              "distinct_nonmissing": 50208
+            }
+          ]
+        }
+      },
+      "quality": {
+        "grain": "period-category-data type-error type-geography-adjustment record",
+        "candidate_key": [
+          "per_idx",
+          "cat_idx",
+          "dt_idx",
+          "et_idx",
+          "geo_idx",
+          "is_adj"
+        ],
+        "dates": {
+          "min": "2002-01-01",
+          "max": "2016-09-01",
+          "missing_or_invalid": 0,
+          "distinct": 177
+        },
+        "missing_values": 33216,
+        "category_codes": [
+          "00XX",
+          "01XX",
+          "02XX",
+          "03XX",
+          "04XX",
+          "05XX",
+          "06XX",
+          "07XX",
+          "08XX",
+          "09XX",
+          "10XX",
+          "11XX",
+          "12XX",
+          "13XX",
+          "14XX",
+          "15XX",
+          "20IX",
+          "A00XX",
+          "A01XX",
+          "A02XX",
+          "A03XX",
+          "A04XX",
+          "A05XX",
+          "A06XX",
+          "A07XX",
+          "A08XX",
+          "A09XX",
+          "A10XX",
+          "A11XX",
+          "A12XX",
+          "A13XX",
+          "A14XX",
+          "A15XX",
+          "A20IX",
+          "ANRXX",
+          "AXXXX",
+          "NRXX",
+          "XXXX"
+        ],
+        "data_types": [
+          {
+            "dt_idx": 1,
+            "dt_code": "T",
+            "dt_desc": "Total Construction",
+            "dt_unit": "MLN$"
+          },
+          {
+            "dt_idx": 2,
+            "dt_code": "V",
+            "dt_desc": "Total Private Construction",
+            "dt_unit": "MLN$"
+          },
+          {
+            "dt_idx": 3,
+            "dt_code": "P",
+            "dt_desc": "Total Public Construction",
+            "dt_unit": "MLN$"
+          },
+          {
+            "dt_idx": 4,
+            "dt_code": "MPCT",
+            "dt_desc": "Monthly Percent Change for Total Construction",
+            "dt_unit": "PCT"
+          },
+          {
+            "dt_idx": 5,
+            "dt_code": "MPCV",
+            "dt_desc": "Monthly Percent Change for Private Construction",
+            "dt_unit": "PCT"
+          },
+          {
+            "dt_idx": 6,
+            "dt_code": "MPCP",
+            "dt_desc": "Monthly Percent Change for Public Construction",
+            "dt_unit": "PCT"
+          },
+          {
+            "dt_idx": 0,
+            "dt_code": "<missing>",
+            "dt_desc": "<missing>",
+            "dt_unit": "<missing>"
+          }
+        ],
+        "error_types": [
+          {
+            "et_idx": 0,
+            "et_code": "<missing>",
+            "et_desc": "<missing>",
+            "et_unit": "<missing>"
+          },
+          {
+            "et_idx": 1,
+            "et_code": "E_T",
+            "et_desc": "Relative Standard Error for Total Construction",
+            "et_unit": "PCT"
+          },
+          {
+            "et_idx": 2,
+            "et_code": "E_V",
+            "et_desc": "Relative Standard Error for Total Private Construction",
+            "et_unit": "PCT"
+          },
+          {
+            "et_idx": 3,
+            "et_code": "E_P",
+            "et_desc": "Relative Standard Error for Total Public Construction",
+            "et_unit": "PCT"
+          },
+          {
+            "et_idx": 4,
+            "et_code": "E_MPCT",
+            "et_desc": "Relative Standard Error for MPC Total Construction",
+            "et_unit": "PCT"
+          },
+          {
+            "et_idx": 5,
+            "et_code": "E_MPCV",
+            "et_desc": "Relative Standard Error for MPC Total Private Construction",
+            "et_unit": "PCT"
+          },
+          {
+            "et_idx": 6,
+            "et_code": "E_MPCP",
+            "et_desc": "Relative Standard Error for MPC Total Public Construction",
+            "et_unit": "PCT"
+          }
+        ],
+        "geographies": [
+          {
+            "geo_code": "US",
+            "geo_desc": "U.S. Total"
+          }
+        ],
+        "value_blocks": [
+          {
+            "is_adj": 0,
+            "dt_code": "P",
+            "et_code": "<missing>",
+            "dt_unit": "MLN$",
+            "size": 2655,
+            "sum": 2655
+          },
+          {
+            "is_adj": 0,
+            "dt_code": "T",
+            "et_code": "<missing>",
+            "dt_unit": "MLN$",
+            "size": 3363,
+            "sum": 3363
+          },
+          {
+            "is_adj": 0,
+            "dt_code": "V",
+            "et_code": "<missing>",
+            "dt_unit": "MLN$",
+            "size": 2478,
+            "sum": 2478
+          },
+          {
+            "is_adj": 0,
+            "dt_code": "<missing>",
+            "et_code": "E_MPCP",
+            "dt_unit": "<missing>",
+            "size": 2580,
+            "sum": 0
+          },
+          {
+            "is_adj": 0,
+            "dt_code": "<missing>",
+            "et_code": "E_MPCT",
+            "dt_unit": "<missing>",
+            "size": 3268,
+            "sum": 0
+          },
+          {
+            "is_adj": 0,
+            "dt_code": "<missing>",
+            "et_code": "E_MPCV",
+            "dt_unit": "<missing>",
+            "size": 2408,
+            "sum": 0
+          },
+          {
+            "is_adj": 0,
+            "dt_code": "<missing>",
+            "et_code": "E_P",
+            "dt_unit": "<missing>",
+            "size": 2580,
+            "sum": 0
+          },
+          {
+            "is_adj": 0,
+            "dt_code": "<missing>",
+            "et_code": "E_T",
+            "dt_unit": "<missing>",
+            "size": 3268,
+            "sum": 0
+          },
+          {
+            "is_adj": 0,
+            "dt_code": "<missing>",
+            "et_code": "E_V",
+            "dt_unit": "<missing>",
+            "size": 2408,
+            "sum": 0
+          },
+          {
+            "is_adj": 1,
+            "dt_code": "MPCP",
+            "et_code": "<missing>",
+            "dt_unit": "PCT",
+            "size": 2640,
+            "sum": 0
+          },
+          {
+            "is_adj": 1,
+            "dt_code": "MPCT",
+            "et_code": "<missing>",
+            "dt_unit": "PCT",
+            "size": 3344,
+            "sum": 0
+          },
+          {
+            "is_adj": 1,
+            "dt_code": "MPCV",
+            "et_code": "<missing>",
+            "dt_unit": "PCT",
+            "size": 2464,
+            "sum": 0
+          },
+          {
+            "is_adj": 1,
+            "dt_code": "P",
+            "et_code": "<missing>",
+            "dt_unit": "MLN$",
+            "size": 2655,
+            "sum": 2655
+          },
+          {
+            "is_adj": 1,
+            "dt_code": "T",
+            "et_code": "<missing>",
+            "dt_unit": "MLN$",
+            "size": 3363,
+            "sum": 3363
+          },
+          {
+            "is_adj": 1,
+            "dt_code": "V",
+            "et_code": "<missing>",
+            "dt_unit": "MLN$",
+            "size": 2478,
+            "sum": 2478
+          },
+          {
+            "is_adj": 1,
+            "dt_code": "<missing>",
+            "et_code": "E_P",
+            "dt_unit": "<missing>",
+            "size": 2580,
+            "sum": 0
+          },
+          {
+            "is_adj": 1,
+            "dt_code": "<missing>",
+            "et_code": "E_T",
+            "dt_unit": "<missing>",
+            "size": 3268,
+            "sum": 0
+          },
+          {
+            "is_adj": 1,
+            "dt_code": "<missing>",
+            "et_code": "E_V",
+            "dt_unit": "<missing>",
+            "size": 2408,
+            "sum": 0
+          }
+        ],
+        "beginner_monthly_total_rows": 177,
+        "max_abs_total_minus_private_public_million_dollars": 1.0,
+        "max_abs_total_minus_residential_nonresidential_million_dollars": 1.0
+      }
+    }
+  ]
+}

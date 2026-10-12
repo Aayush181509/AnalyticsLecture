@@ -1,36 +1,22 @@
 site_name: Data Analytics
-site_description: Data Analytics Training
+site_description: Practical Data Analytics for Working Professionals
 
+docs_dir: docs
+site_dir: site
 nav:
   - Getting Started: index.md
-
+  - Course:
+      - Learning Roadmap: course/roadmap.md
+      - Setup and Practice: course/setup.md
+      - Analytical Workflow: course/workflow.md
+  - Business Cases: cases/index.md
+  - Lesson Template: lessons/lesson-template.md
 
 theme:
-  # name: material
   name: readthedocs
-  features:
-    - header.autohide
-    - announce.dismiss
-    - navigation.footer
-  code:
-    highlighting: true
-    light: default
-    dark: material
-  palette:
-    - scheme: slate
-      primary: indigo
-      accent: indigo
-      toggle:
-        icon: material/weather-sunny
-        name: Switch to light mode
-    - scheme: default
-      primary: indigo
-      accent: indigo
-      toggle:
-        icon: material/weather-night
-        name: Switch to dark mode
 
 markdown_extensions:
+  - admonition
   - pymdownx.highlight
   - pymdownx.superfences
 extra:

@@ -1,0 +1,37 @@
+{
+  "contract_id": "superstore-retail-v1",
+  "frozen_on": "2026-10-12",
+  "scope": "local development only; no prepared dataset, teaching release or publication permission",
+  "review": "planning/RETAIL_CONTRACT_REVIEW.md",
+  "source_sha256": "5045ed4fec49cae2cc0dfc5ab0d204ba09efa767fe00c996822499e8cc42fbbd",
+  "files": [
+    {
+      "path": "data/metadata/superstore/retail-v1/dictionary.md",
+      "sha256": "965a048ec2f7930e640c2287d0e03ea6e4b78b911e42d469654bf3b961f9ca25"
+    },
+    {
+      "path": "data/metadata/superstore/retail-v1/metric_contract.md",
+      "sha256": "b67179ef758ec39e3b47ccc4d7f344f01d5169dcbf4453a14499bf69778cb079"
+    },
+    {
+      "path": "data/metadata/superstore/retail-v1/contract.json",
+      "sha256": "b8e55c530e5628eb618e5e4989e0f74f9ab9ac9b8d678b8395c6847fadb1aca3"
+    },
+    {
+      "path": "data/metadata/superstore/retail-v1/preparation_spec.md",
+      "sha256": "ed704314bb7fd1b70a90f816f4f6628d2f0e24f45ba11a4467ad3cc8fd98151e"
+    },
+    {
+      "path": "instructor/source-audit/retail-contract-fixtures.json",
+      "sha256": "d6a4d4a2f1978b56ac0c47d3c8b35d9fe7cc1a5390eb499642f8bb3a5ff6aa58"
+    },
+    {
+      "path": "scripts/check_retail_contract.py",
+      "sha256": "b69fb0518cfaebdc44f6e6441dc9e5e22872655e2eda4addac318088dbf06c1a"
+    },
+    {
+      "path": "planning/RETAIL_CONTRACT_REVIEW.md",
+      "sha256": "d023a02b2b883f9f7933f5e4523588c570f68059cf0c136e1819f0595d10cc45"
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+# Offline source audit, preparation and validation; separate from learner prerequisites.
+pandas>=2.2,<3
+openpyxl>=3.1,<4
+xlrd==2.0.2

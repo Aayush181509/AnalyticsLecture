@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Lesson 3: Which Segment Deserves a Closer Look? - Data Analytics</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../stylesheets/readability.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Lesson 3: Which Segment Deserves a Closer Look?";
+        var mkdocs_page_input_path = "lessons/class-03.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Data Analytics
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Getting Started</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../..#course-at-a-glance">Course at a glance</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../..#where-to-start">Where to start</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../..#how-we-will-practise">How we will practise</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Foundations</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../foundations/">Why Data Analytics Matters</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/#what-is-data-analytics">What is data analytics?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/#real-stories-where-data-changed-the-outcome">Real stories where data changed the outcome</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../foundations/#a-map-that-changed-how-we-think-about-disease-london-1854">A map that changed how we think about disease (London, 1854)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../foundations/#a-chart-that-reformed-hospitals-1850s">A chart that reformed hospitals (1850s)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../foundations/#winning-on-a-small-budget-baseball-2002">Winning on a small budget (baseball, 2002)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../foundations/#preparing-for-a-hurricane-retail-2004">Preparing for a hurricane (retail, 2004)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../foundations/#when-big-data-got-it-wrong-public-health-20082015">When big data got it wrong (public health, 2008–2015)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/#where-you-meet-analytics-every-day">Where you meet analytics every day</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/#why-presentation-is-part-of-analysis">Why presentation is part of analysis</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/#what-comes-next">What comes next</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../foundations/statistics-are-not-enough/">Statistics Are Not Enough</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/statistics-are-not-enough/#anscombes-quartet">Anscombe's quartet</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/statistics-are-not-enough/#the-datasaurus-dozen">The Datasaurus Dozen</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/statistics-are-not-enough/#what-this-means-at-work">What this means at work</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/statistics-are-not-enough/#try-it-yourself">Try it yourself</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../foundations/misleading-statistics/">How Statistics Can Mislead</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/misleading-statistics/#1-correlation-is-not-causation">1. Correlation is not causation</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/misleading-statistics/#2-simpsons-paradox-the-total-can-reverse-the-parts">2. Simpson's paradox: the total can reverse the parts</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/misleading-statistics/#3-misleading-axes">3. Misleading axes</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/misleading-statistics/#4-cherry-picked-time-windows">4. Cherry-picked time windows</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/misleading-statistics/#5-which-average">5. Which average?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/misleading-statistics/#6-percentages-without-the-base">6. Percentages without the base</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/misleading-statistics/#7-survivorship-bias">7. Survivorship bias</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/misleading-statistics/#a-checklist-for-any-number-you-are-shown">A checklist for any number you are shown</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/misleading-statistics/#try-it-yourself">Try it yourself</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../foundations/types-of-analysis/">Types of Analysis</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/types-of-analysis/#univariate-analysis-one-variable-at-a-time">Univariate analysis: one variable at a time</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/types-of-analysis/#bivariate-analysis-two-variables-together">Bivariate analysis: two variables together</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/types-of-analysis/#multivariate-analysis-three-or-more-variables">Multivariate analysis: three or more variables</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/types-of-analysis/#choosing-a-chart-quick-guide">Choosing a chart: quick guide</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/types-of-analysis/#try-it-yourself">Try it yourself</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../foundations/visual-design/">Designing Clear Visuals</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/visual-design/#the-data-ink-ratio">The data-ink ratio</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/visual-design/#pre-attentive-attributes-what-the-eye-sees-first">Pre-attentive attributes: what the eye sees first</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/visual-design/#gestalt-principles-how-we-group-things">Gestalt principles: how we group things</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/visual-design/#colour-with-purpose">Colour with purpose</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/visual-design/#a-clean-chart-checklist">A clean-chart checklist</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/visual-design/#try-it-yourself">Try it yourself</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../foundations/storytelling/">Storytelling with Data</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/storytelling/#the-challenger-disaster-right-data-wrong-presentation">The Challenger disaster: right data, wrong presentation</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../foundations/storytelling/#what-did-the-data-show">What did the data show?</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/storytelling/#what-makes-a-data-story">What makes a data story</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../foundations/storytelling/#start-with-the-big-idea">Start with the "big idea"</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/storytelling/#a-simple-process">A simple process</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/storytelling/#exploratory-versus-explanatory">Exploratory versus explanatory</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/storytelling/#try-it-yourself">Try it yourself</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Course</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../course/roadmap/">Learning Roadmap</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#stage-0-foundations">Stage 0: Foundations</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#stage-1-tableau-and-retail-data">Stage 1: Tableau and retail data</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#stage-2-one-department-at-a-time">Stage 2: One department at a time</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#stage-3-bring-it-together">Stage 3: Bring it together</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#how-you-will-be-assessed">How you will be assessed</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#extra-practice-topics">Extra practice topics</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../course/setup/">Setup and Practice</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/setup/#what-you-need">What you need</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/setup/#install-tableau-desktop-public-edition">Install Tableau Desktop Public Edition</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/setup/#keep-your-data-safe">Keep your data safe</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/setup/#if-something-does-not-work">If something does not work</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/setup/#optional-python-path">Optional Python path</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/setup/#keep-an-evidence-log">Keep an evidence log</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../course/workflow/">Analytical Workflow</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/workflow/#the-seven-steps">The seven steps</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../course/workflow/#1-business-question">1. Business question</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../course/workflow/#2-data-understanding">2. Data understanding</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../course/workflow/#3-preparation">3. Preparation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../course/workflow/#4-analysis">4. Analysis</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../course/workflow/#5-validation">5. Validation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../course/workflow/#6-visualization">6. Visualization</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../course/workflow/#7-recommendation">7. Recommendation</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/workflow/#a-worked-example">A worked example</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/workflow/#when-a-result-looks-wrong">When a result looks wrong</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/workflow/#association-is-not-causation">Association is not causation</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../cases/">Business Cases</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../cases/#the-five-core-cases">The five core cases</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../cases/#retail">Retail</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../cases/#finance">Finance</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../cases/#operations">Operations</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../cases/#marketing">Marketing</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../cases/#hr">HR</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../cases/#what-every-case-includes">What every case includes</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../cases/#combining-evidence-across-departments">Combining evidence across departments</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../cases/#additional-practice-choices">Additional practice choices</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Lessons</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../class-01/">Lesson 1: From Decision to Evidence</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../class-01/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../class-01/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../class-01/#before-you-start">Before you start</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../class-01/#part-1-from-request-to-question">Part 1: From request to question</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../class-01/#part-2-watch-the-demonstration">Part 2: Watch the demonstration</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../class-01/#part-3-guided-practice">Part 3: Guided practice</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../class-01/#connect-to-the-file">Connect to the file</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../class-01/#check-the-column-types">Check the column types</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../class-01/#build-a-first-chart">Build a first chart</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../class-01/#add-a-filter">Add a filter</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../class-01/#save-and-reopen">Save and reopen</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../class-01/#part-4-rows-versus-orders">Part 4: Rows versus orders</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../class-01/#part-5-independent-work">Part 5: Independent work</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../class-01/#part-6-challenge">Part 6: Challenge</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../class-01/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../class-01/#after-the-lesson">After the lesson</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class-02/">Lesson 2: Can We Trust the Sales Table?</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../class-02/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../class-02/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../class-02/#before-you-start">Before you start</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../class-02/#part-1-meet-the-data-dictionary">Part 1: Meet the data dictionary</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../class-02/#part-2-find-the-grain">Part 2: Find the grain</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../class-02/#part-3-count-orders-correctly">Part 3: Count orders correctly</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../class-02/#demonstration">Demonstration</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../class-02/#guided-practice">Guided practice</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../class-02/#part-4-what-the-returns-flag-means">Part 4: What the returns flag means</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../class-02/#part-5-check-one-order-by-hand">Part 5: Check one order by hand</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../class-02/#part-6-keep-a-preparation-log">Part 6: Keep a preparation log</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../class-02/#part-7-independent-work">Part 7: Independent work</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../class-02/#part-8-debugging-challenge">Part 8: Debugging challenge</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../class-02/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../class-02/#after-the-lesson">After the lesson</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Lesson 3: Which Segment Deserves a Closer Look?</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#before-you-start">Before you start</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#part-1-agree-the-measures">Part 1: Agree the measures</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#part-2-watch-the-demonstration">Part 2: Watch the demonstration</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#part-3-guided-practice-build-the-calculations">Part 3: Guided practice — build the calculations</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#part-4-guided-practice-the-segment-table">Part 4: Guided practice — the segment table</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#check-that-it-reconciles">Check that it reconciles</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#part-5-independent-work">Part 5: Independent work</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#a-filter-by-region">A. Filter by region</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#b-look-at-a-category">B. Look at a category</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#part-6-debugging-challenge">Part 6: Debugging challenge</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#part-7-make-a-recommendation">Part 7: Make a recommendation</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#validation-checklist">Validation checklist</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#after-the-lesson">After the lesson</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class-04/">Lesson 4: Trends, Returns and a Decision Dashboard</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../class-04/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../class-04/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../class-04/#before-you-start">Before you start</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../class-04/#part-1-the-monthly-trend">Part 1: The monthly trend</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../class-04/#part-2-two-kinds-of-growth">Part 2: Two kinds of growth</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../class-04/#month-on-month-growth">Month-on-month growth</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../class-04/#year-on-year-growth">Year-on-year growth</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../class-04/#which-one-is-fair">Which one is fair?</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../class-04/#part-3-the-returns-list">Part 3: The returns list</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../class-04/#part-4-guided-practice-build-the-dashboard">Part 4: Guided practice — build the dashboard</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../class-04/#design-checks">Design checks</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../class-04/#part-5-independent-work">Part 5: Independent work</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../class-04/#part-6-debugging-challenge">Part 6: Debugging challenge</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../class-04/#part-7-recommend-a-test">Part 7: Recommend a test</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../class-04/#validation-checklist">Validation checklist</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../class-04/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../class-04/#after-the-lesson">After the lesson</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../lesson-template/">Lesson Template</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../lesson-template/#1-the-business-decision">1. The business decision</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../lesson-template/#2-what-you-will-demonstrate">2. What you will demonstrate</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../lesson-template/#3-before-you-start">3. Before you start</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../lesson-template/#4-understand-the-data">4. Understand the data</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../lesson-template/#5-agree-the-measures">5. Agree the measures</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../lesson-template/#6-watch-a-worked-example">6. Watch a worked example</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../lesson-template/#7-try-it-with-guidance">7. Try it with guidance</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../lesson-template/#8-work-independently">8. Work independently</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../lesson-template/#9-debug-a-result">9. Debug a result</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../lesson-template/#10-make-a-recommendation">10. Make a recommendation</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../lesson-template/#11-optional-python-connection">11. Optional Python connection</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../lesson-template/#12-submit-and-reflect">12. Submit and reflect</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Data Analytics</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Lessons</li>
+      <li class="breadcrumb-item active">Lesson 3: Which Segment Deserves a Closer Look?</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="lesson-3-which-segment-deserves-a-closer-look">Lesson 3: Which segment deserves a closer look?<a class="headerlink" href="#lesson-3-which-segment-deserves-a-closer-look" title="Permanent link">&para;</a></h1>
+<p class="lead">
+Compare the three customer segments using five measures, calculate each one correctly, check that the numbers add up, and make a careful recommendation.
+</p>
+
+<div class="admonition warning">
+<p class="admonition-title">Draft lesson</p>
+<p>The Tableau steps on this page have not yet been rehearsed on the course version of Tableau. Menu names may differ slightly on your computer.</p>
+</div>
+<hr />
+<h2 id="the-business-decision">The business decision<a class="headerlink" href="#the-business-decision" title="Permanent link">&para;</a></h2>
+<p>The retail head has one analyst free next month and asks:</p>
+<blockquote>
+<p><em>"Which customer segment should we investigate first, and what should we check before we change any promotions?"</em></p>
+</blockquote>
+<p>A big Sales total alone is not enough to decide. A segment can sell a lot and still earn little profit, or have many small orders. Today you build a fair comparison.</p>
+<hr />
+<h2 id="what-you-will-be-able-to-do">What you will be able to do<a class="headerlink" href="#what-you-will-be-able-to-do" title="Permanent link">&para;</a></h2>
+<p>By the end of this lesson you will be able to:</p>
+<ol>
+<li>Define five measures precisely: Sales, Orders, Average order value, Profit and Profit ratio.</li>
+<li>Build them in Tableau as calculated fields.</li>
+<li>Calculate ratios <strong>from totals</strong>, not by averaging other ratios.</li>
+<li>Check that segment results reconcile with the overall total.</li>
+<li>Explain how a filter changes every measure.</li>
+<li>Write a short, evidence-based recommendation with one limitation.</li>
+</ol>
+<p><strong>Evidence you keep:</strong> a segment KPI table, your metric definitions, a validation checklist and a five-sentence recommendation.</p>
+<hr />
+<h2 id="before-you-start">Before you start<a class="headerlink" href="#before-you-start" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Open your workbook from <a href="../class-02/">Lesson 2</a>, with the <strong>Orders</strong> calculated field.</li>
+<li>Have your grain statement and evidence log ready.</li>
+<li>Re-read the <a href="../../foundations/misleading-statistics/">averages and percentages traps</a> in Foundations.</li>
+</ul>
+<hr />
+<h2 id="part-1-agree-the-measures">Part 1: Agree the measures<a class="headerlink" href="#part-1-agree-the-measures" title="Permanent link">&para;</a></h2>
+<p>Every measure uses the <strong>same rows</strong>: all order lines in the file, unless you deliberately apply a filter.</p>
+<table>
+<thead>
+<tr>
+<th>Measure</th>
+<th>What it means</th>
+<th>How to calculate it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Sales</strong></td>
+<td>Total reported Sales</td>
+<td>Add up <code>sales</code></td>
+</tr>
+<tr>
+<td><strong>Orders</strong></td>
+<td>Number of different orders</td>
+<td>Count distinct <code>order_id</code></td>
+</tr>
+<tr>
+<td><strong>Average order value (AOV)</strong></td>
+<td>Typical Sales per order</td>
+<td>Sales ÷ Orders</td>
+</tr>
+<tr>
+<td><strong>Profit</strong></td>
+<td>Total reported Profit (can be negative)</td>
+<td>Add up <code>profit</code></td>
+</tr>
+<tr>
+<td><strong>Profit ratio</strong></td>
+<td>Profit earned per unit of Sales</td>
+<td>Profit ÷ Sales</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">About the money</p>
+<p>Sales and Profit are in the file's own monetary units. The currency is not stated, so do not add a currency symbol. The source does not explain exactly how Profit is calculated, so call it <strong>profit ratio</strong>, not "gross margin".</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Totals first, then divide</p>
+<p>AOV and Profit ratio must be calculated from the <strong>totals</strong> for whatever you are looking at. Never average the ratios of individual rows or of segments. You will see why in Part 6.</p>
+</div>
+<hr />
+<h2 id="part-2-watch-the-demonstration">Part 2: Watch the demonstration<a class="headerlink" href="#part-2-watch-the-demonstration" title="Permanent link">&para;</a></h2>
+<p>Your facilitator builds the five measures for the whole file and shows them as a small table.</p>
+<p>Before each number appears, <strong>predict</strong>:</p>
+<ul>
+<li>Will AOV be larger or smaller than Sales divided by the number of <strong>rows</strong>? Why?</li>
+<li>Can Profit ratio be negative? When?</li>
+</ul>
+<hr />
+<h2 id="part-3-guided-practice-build-the-calculations">Part 3: Guided practice — build the calculations<a class="headerlink" href="#part-3-guided-practice-build-the-calculations" title="Permanent link">&para;</a></h2>
+<p>Create each calculated field (<strong>Analysis → Create Calculated Field</strong>). Type the name and formula exactly.</p>
+<p><strong>Sales</strong></p>
+<div class="highlight"><pre><span></span><code>SUM([Sales])
+</code></pre></div>
+<p><strong>Orders</strong> (from Lesson 2)</p>
+<div class="highlight"><pre><span></span><code>COUNTD([Order Id])
+</code></pre></div>
+<p><strong>AOV</strong></p>
+<div class="highlight"><pre><span></span><code>IF COUNTD([Order Id]) &gt; 0 THEN SUM([Sales]) / COUNTD([Order Id]) END
+</code></pre></div>
+<p><strong>Profit</strong></p>
+<div class="highlight"><pre><span></span><code>SUM([Profit])
+</code></pre></div>
+<p><strong>Profit ratio</strong></p>
+<div class="highlight"><pre><span></span><code>IF SUM([Sales]) &lt;&gt; 0 THEN SUM([Profit]) / SUM([Sales]) END
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Why the IF?</p>
+<p>If a filter leaves no orders or no Sales, dividing would be undefined. The <code>IF</code> makes Tableau show a blank instead of an error or a misleading zero. A blank here means <em>"not available"</em>, never 0%.</p>
+</div>
+<p>Format the results:</p>
+<ul>
+<li><strong>Sales, Profit and AOV:</strong> number with two decimal places, no currency symbol.</li>
+<li><strong>Profit ratio:</strong> percentage with one decimal place.</li>
+</ul>
+<hr />
+<h2 id="part-4-guided-practice-the-segment-table">Part 4: Guided practice — the segment table<a class="headerlink" href="#part-4-guided-practice-the-segment-table" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Start a new sheet.</li>
+<li>Drag <strong>Segment</strong> to <strong>Rows</strong>.</li>
+<li>Drag <strong>Measure Names</strong> to <strong>Columns</strong> and <strong>Measure Values</strong> to the table area. Keep only your five measures.</li>
+<li>Turn on totals: <strong>Analysis → Totals → Show Column Grand Totals</strong>.</li>
+<li>Give the sheet a clear title, for example <em>"Segment comparison, orders placed 2023–2025 (source monetary units)"</em>.</li>
+</ol>
+<h3 id="check-that-it-reconciles">Check that it reconciles<a class="headerlink" href="#check-that-it-reconciles" title="Permanent link">&para;</a></h3>
+<p>Tick each check in your evidence log:</p>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled/> The three segment <strong>Sales</strong> add up to the grand total.</li>
+<li class="task-list-item"><input type="checkbox" disabled/> The three segment <strong>Profit</strong> values add up to the grand total.</li>
+<li class="task-list-item"><input type="checkbox" disabled/> The three segment <strong>Orders</strong> add up to the grand total. (They should, because every order belongs to exactly one segment.)</li>
+<li class="task-list-item"><input type="checkbox" disabled/> The grand total <strong>AOV</strong> equals total Sales ÷ total Orders. It is <strong>not</strong> the average of the three segment AOVs.</li>
+<li class="task-list-item"><input type="checkbox" disabled/> The grand total <strong>Profit ratio</strong> equals total Profit ÷ total Sales. It is <strong>not</strong> the average of the three segment ratios.</li>
+</ul>
+<div class="admonition hint">
+<p class="admonition-title">If a total looks wrong</p>
+<p>Check that every measure uses the same filters, and that the grand total is recalculated, not summed. Right-click the measure and check which aggregation the total uses.</p>
+</div>
+<hr />
+<h2 id="part-5-independent-work">Part 5: Independent work<a class="headerlink" href="#part-5-independent-work" title="Permanent link">&para;</a></h2>
+<h3 id="a-filter-by-region">A. Filter by region<a class="headerlink" href="#a-filter-by-region" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Duplicate your segment sheet.</li>
+<li>Add <strong>Region</strong> to <strong>Filters</strong> and choose one region.</li>
+<li>Record all five measures for each segment in that region.</li>
+<li>Write two sentences: does the ranking of segments change inside this region?</li>
+</ol>
+<h3 id="b-look-at-a-category">B. Look at a category<a class="headerlink" href="#b-look-at-a-category" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Duplicate the sheet again and filter to one <strong>Category</strong>.</li>
+<li>Notice that AOV now means <em>"Sales of this category's lines per order that contains this category"</em>, not full basket value. Rename the column to say so.</li>
+<li>Remove the filter and put <strong>Category</strong> on Rows instead of Segment. Do the category <strong>Orders</strong> add up to the overall total? Explain why not, in one sentence.</li>
+</ol>
+<hr />
+<h2 id="part-6-debugging-challenge">Part 6: Debugging challenge<a class="headerlink" href="#part-6-debugging-challenge" title="Permanent link">&para;</a></h2>
+<p>A colleague sends you this summary:</p>
+<blockquote>
+<p><em>"Our overall profit ratio is the average of the three segment ratios. And our average order value is total Sales divided by the number of rows."</em></p>
+</blockquote>
+<ol>
+<li>Calculate the colleague's two numbers from your own table.</li>
+<li>Compare them with your correct grand totals.</li>
+<li>Explain each mistake in one sentence.</li>
+<li>Which segment has the most influence on the correct overall profit ratio, and why?</li>
+</ol>
+<div class="admonition hint">
+<p class="admonition-title">Think about weights</p>
+<p>A segment with much more Sales should pull the overall ratio more strongly than a small segment. Does a simple average of the three ratios allow that?</p>
+</div>
+<hr />
+<h2 id="part-7-make-a-recommendation">Part 7: Make a recommendation<a class="headerlink" href="#part-7-make-a-recommendation" title="Permanent link">&para;</a></h2>
+<p>Write <strong>five sentences</strong> to the retail head:</p>
+<ol>
+<li><strong>Recommendation:</strong> which segment to investigate first.</li>
+<li><strong>Evidence 1:</strong> one measure, with its value and how it compares.</li>
+<li><strong>Evidence 2:</strong> a second, different measure.</li>
+<li><strong>Limitation:</strong> one thing this data cannot tell you. For example, it shows which segment <em>looks</em> different; it does not show <em>why</em>, and it does not prove a discount or promotion caused anything.</li>
+<li><strong>Next check:</strong> one specific piece of evidence to request before changing promotions.</li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">Association, not cause</p>
+<p>If a segment with more discounts has a lower profit ratio, that is a pattern worth investigating. It is not proof that the discounts caused it. Other differences between segments, such as product mix, could explain it.</p>
+</div>
+<hr />
+<h2 id="validation-checklist">Validation checklist<a class="headerlink" href="#validation-checklist" title="Permanent link">&para;</a></h2>
+<p>Before submitting, confirm:</p>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled/> Every measure uses the same filters and date scope.</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Orders are counted distinctly, not as rows.</li>
+<li class="task-list-item"><input type="checkbox" disabled/> AOV and Profit ratio are calculated from totals.</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Segment Sales, Profit and Orders reconcile with the grand totals.</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Money is labelled "source monetary units", with no currency symbol.</li>
+<li class="task-list-item"><input type="checkbox" disabled/> The recommendation names a limitation and a next check.</li>
+</ul>
+<hr />
+<h2 id="exit-ticket">Exit ticket<a class="headerlink" href="#exit-ticket" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Why is the average of three segment ratios not the overall ratio?</li>
+<li>What does a blank AOV or Profit ratio mean?</li>
+<li>One question you would want answered before acting on your recommendation.</li>
+</ol>
+<hr />
+<h2 id="after-the-lesson">After the lesson<a class="headerlink" href="#after-the-lesson" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Finish the region and category work from Part 5.</li>
+<li>Correct the colleague's summary in Part 6 and add it to your evidence log.</li>
+<li>Keep your workbook for <a href="../class-04/">Lesson 4</a>, where we look at monthly trends and the returns list, and build a dashboard.</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../class-02/" class="btn btn-neutral float-left" title="Lesson 2: Can We Trust the Sales Table?"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../class-04/" class="btn btn-neutral float-right" title="Lesson 4: Trends, Returns and a Decision Dashboard">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Copyright &copy; 2026 - Aayush Raj Regmi</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../class-02/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../class-04/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

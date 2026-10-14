@@ -1,0 +1,2795 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Session 10 lecture: Finance: budget accountability - Data Analytics</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../stylesheets/readability.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Session 10 lecture: Finance: budget accountability";
+        var mkdocs_page_input_path = "lectures/10_finance_budget_lecture.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Data Analytics
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Getting Started</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../..#course-at-a-glance">Course at a glance</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../..#where-to-start">Where to start</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../..#how-we-will-practise">How we will practise</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Foundations</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../foundations/">Why Data Analytics Matters</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/#what-is-data-analytics">What is data analytics?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/#real-stories-where-data-changed-the-outcome">Real stories where data changed the outcome</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../foundations/#a-map-that-changed-how-we-think-about-disease-london-1854">A map that changed how we think about disease (London, 1854)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../foundations/#a-chart-that-reformed-hospitals-1850s">A chart that reformed hospitals (1850s)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../foundations/#winning-on-a-small-budget-baseball-2002">Winning on a small budget (baseball, 2002)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../foundations/#preparing-for-a-hurricane-retail-2004">Preparing for a hurricane (retail, 2004)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../foundations/#when-big-data-got-it-wrong-public-health-20082015">When big data got it wrong (public health, 2008–2015)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/#where-you-meet-analytics-every-day">Where you meet analytics every day</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/#why-presentation-is-part-of-analysis">Why presentation is part of analysis</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/#what-comes-next">What comes next</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../foundations/statistics-are-not-enough/">Statistics Are Not Enough</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/statistics-are-not-enough/#anscombes-quartet">Anscombe's quartet</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/statistics-are-not-enough/#the-datasaurus-dozen">The Datasaurus Dozen</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/statistics-are-not-enough/#what-this-means-at-work">What this means at work</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/statistics-are-not-enough/#try-it-yourself">Try it yourself</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../foundations/misleading-statistics/">How Statistics Can Mislead</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/misleading-statistics/#1-correlation-is-not-causation">1. Correlation is not causation</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/misleading-statistics/#2-simpsons-paradox-the-total-can-reverse-the-parts">2. Simpson's paradox: the total can reverse the parts</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/misleading-statistics/#3-misleading-axes">3. Misleading axes</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/misleading-statistics/#4-cherry-picked-time-windows">4. Cherry-picked time windows</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/misleading-statistics/#5-which-average">5. Which average?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/misleading-statistics/#6-percentages-without-the-base">6. Percentages without the base</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/misleading-statistics/#7-survivorship-bias">7. Survivorship bias</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/misleading-statistics/#a-checklist-for-any-number-you-are-shown">A checklist for any number you are shown</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/misleading-statistics/#try-it-yourself">Try it yourself</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../foundations/types-of-analysis/">Types of Analysis</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/types-of-analysis/#univariate-analysis-one-variable-at-a-time">Univariate analysis: one variable at a time</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/types-of-analysis/#bivariate-analysis-two-variables-together">Bivariate analysis: two variables together</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/types-of-analysis/#multivariate-analysis-three-or-more-variables">Multivariate analysis: three or more variables</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/types-of-analysis/#choosing-a-chart-quick-guide">Choosing a chart: quick guide</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/types-of-analysis/#try-it-yourself">Try it yourself</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../foundations/visual-design/">Designing Clear Visuals</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/visual-design/#the-data-ink-ratio">The data-ink ratio</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/visual-design/#pre-attentive-attributes-what-the-eye-sees-first">Pre-attentive attributes: what the eye sees first</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/visual-design/#gestalt-principles-how-we-group-things">Gestalt principles: how we group things</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/visual-design/#colour-with-purpose">Colour with purpose</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/visual-design/#a-clean-chart-checklist">A clean-chart checklist</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/visual-design/#try-it-yourself">Try it yourself</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../foundations/storytelling/">Storytelling with Data</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/storytelling/#the-challenger-disaster-right-data-wrong-presentation">The Challenger disaster: right data, wrong presentation</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../foundations/storytelling/#what-did-the-data-show">What did the data show?</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/storytelling/#what-makes-a-data-story">What makes a data story</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../foundations/storytelling/#start-with-the-big-idea">Start with the "big idea"</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/storytelling/#a-simple-process">A simple process</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/storytelling/#exploratory-versus-explanatory">Exploratory versus explanatory</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/storytelling/#try-it-yourself">Try it yourself</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Course</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../course/roadmap/">Learning Roadmap</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#how-each-session-works">How each session works</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#part-a-thinking-with-data">Part A: Thinking with data</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#part-b-describing-and-measuring">Part B: Describing and measuring</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#part-c-relationships-change-and-uncertainty">Part C: Relationships, change and uncertainty</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#part-d-business-cases">Part D: Business cases</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#part-e-communicating-and-bringing-it-together">Part E: Communicating and bringing it together</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#part-f-tableau">Part F: Tableau</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#how-you-will-be-assessed">How you will be assessed</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#extra-practice-topics">Extra practice topics</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../course/setup/">Setup and Practice</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/setup/#what-you-need">What you need</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/setup/#open-a-lesson-in-google-colab">Open a lesson in Google Colab</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/setup/#keep-your-data-safe">Keep your data safe</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/setup/#if-something-does-not-work">If something does not work</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/setup/#tableau-later">Tableau (later)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/setup/#keep-an-evidence-log">Keep an evidence log</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../course/workflow/">Analytical Workflow</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/workflow/#the-seven-steps">The seven steps</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../course/workflow/#1-business-question">1. Business question</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../course/workflow/#2-data-understanding">2. Data understanding</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../course/workflow/#3-preparation">3. Preparation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../course/workflow/#4-analysis">4. Analysis</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../course/workflow/#5-validation">5. Validation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../course/workflow/#6-visualization">6. Visualization</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../course/workflow/#7-recommendation">7. Recommendation</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/workflow/#a-worked-example">A worked example</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/workflow/#when-a-result-looks-wrong">When a result looks wrong</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/workflow/#association-is-not-causation">Association is not causation</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../cases/">Business Cases</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../cases/#the-five-core-cases">The five core cases</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../cases/#retail">Retail</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../cases/#finance">Finance</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../cases/#operations">Operations</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../cases/#marketing">Marketing</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../cases/#hr">HR</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../cases/#what-every-case-includes">What every case includes</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../cases/#combining-evidence-across-departments">Combining evidence across departments</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../cases/#additional-practice-choices">Additional practice choices</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Python Sessions</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" >Session 1: Why Data Analytics Matters</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../01_why_data_analytics_lecture/">Lecture</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lecture/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lecture/#part-1-what-is-data-analytics">Part 1: What is data analytics?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lecture/#part-2-real-stories-where-data-changed-the-outcome">Part 2: Real stories where data changed the outcome</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lecture/#part-3-from-question-to-recommendation">Part 3: From question to recommendation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lecture/#part-4-always-plot-your-data-anscombes-quartet">Part 4: Always plot your data — Anscombe's quartet</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lecture/#part-5-the-datasaurus-dozen">Part 5: The Datasaurus Dozen</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lecture/#part-6-a-preview-of-how-numbers-mislead">Part 6: A preview of how numbers mislead</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lecture/#summary">Summary</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lecture/#quiz">Quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lecture/#in-the-lab">In the Lab</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../01_why_data_analytics_lab/">Lab</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lab/#how-this-lab-works">How this lab works</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lab/#part-a-guided-practice-core">Part A: Guided practice (Core)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lab/#part-b-independent-tasks">Part B: Independent tasks</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lab/#part-c-challenge-the-datasaurus-dozen">Part C: Challenge — the Datasaurus Dozen</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lab/#quick-reference">Quick reference</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lab/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lab/#evidence-to-keep">Evidence to keep</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Session 2: Data, Grain and the DataFrame</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../02_data_and_grain_lecture/">Lecture</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lecture/#recap-quiz">Recap quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lecture/#what-you-will-be-able-to-explain">What you will be able to explain</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lecture/#part-1-levels-of-measurement">Part 1: Levels of measurement</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lecture/#part-2-tidy-data">Part 2: Tidy data</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lecture/#part-3-grain-and-keys">Part 3: Grain and keys</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lecture/#part-4-data-dictionaries">Part 4: Data dictionaries</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lecture/#part-5-data-quality-dimensions">Part 5: Data-quality dimensions</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lecture/#part-6-worked-case-the-superstore-order-lines">Part 6: Worked case — the Superstore order lines</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lecture/#summary">Summary</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lecture/#quiz">Quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lecture/#lab-briefing">Lab briefing</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../02_data_and_grain_lab/">Lab</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lab/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lab/#how-this-lab-works">How this lab works</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lab/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lab/#guided-practice">Guided practice</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lab/#independent-tasks">Independent tasks</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lab/#challenge">Challenge</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lab/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lab/#evidence-to-keep">Evidence to keep</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lab/#after-the-lab">After the lab</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Session 3: Cleaning and Preparing Data</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../03_cleaning_and_preparing_lecture/">Lecture</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lecture/#recap-quiz">Recap quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lecture/#what-you-will-be-able-to-explain">What you will be able to explain</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lecture/#part-1-raw-data-and-the-cleaning-log">Part 1: Raw data and the cleaning log</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lecture/#part-2-missing-data">Part 2: Missing data</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lecture/#part-3-duplicates">Part 3: Duplicates</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lecture/#part-4-outliers">Part 4: Outliers</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lecture/#part-5-text-numbers-dates-and-encodings">Part 5: Text, numbers, dates and encodings</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lecture/#part-6-joins-and-cardinality">Part 6: Joins and cardinality</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lecture/#part-7-reshaping">Part 7: Reshaping</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lecture/#part-8-worked-case-world-cup-attendance">Part 8: Worked case — World Cup attendance</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lecture/#summary">Summary</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lecture/#quiz">Quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lecture/#lab-briefing">Lab briefing</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../03_cleaning_and_preparing_lab/">Lab</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lab/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lab/#how-this-lab-works">How this lab works</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lab/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lab/#guided-practice">Guided practice</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lab/#independent-tasks">Independent tasks</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lab/#challenge">Challenge</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lab/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lab/#evidence-to-keep">Evidence to keep</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lab/#after-the-lab">After the lab</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Session 4: Descriptive Statistics and Distributions</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../04_descriptive_statistics_lecture/">Lecture</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lecture/#recap-quiz">Recap quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lecture/#what-you-will-be-able-to-explain">What you will be able to explain</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lecture/#part-1-the-centre-mean-median-and-mode">Part 1: The centre — mean, median and mode</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lecture/#part-2-spread-how-different-are-the-values">Part 2: Spread — how different are the values?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lecture/#part-3-shape-skew-and-long-tails">Part 3: Shape — skew and long tails</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lecture/#part-4-three-pictures-of-one-distribution">Part 4: Three pictures of one distribution</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lecture/#part-5-z-scores-and-the-normal-curve-as-a-reference">Part 5: z-scores and the normal curve as a reference</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lecture/#part-6-unusual-values-flag-do-not-delete">Part 6: Unusual values — flag, do not delete</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lecture/#part-7-worked-case-superstore-orders">Part 7: Worked case — Superstore orders</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lecture/#summary">Summary</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lecture/#quiz">Quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lecture/#lab-briefing">Lab briefing</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../04_descriptive_statistics_lab/">Lab</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lab/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lab/#how-this-lab-works">How this lab works</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lab/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lab/#guided-practice">Guided practice</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lab/#independent-tasks">Independent tasks</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lab/#challenge">Challenge</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lab/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lab/#evidence-to-keep">Evidence to keep</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lab/#after-the-lab">After the lab</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Session 5: Metrics and KPIs</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../05_metrics_and_kpis_lecture/">Lecture</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lecture/#recap-quiz">Recap quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lecture/#what-you-will-be-able-to-explain">What you will be able to explain</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lecture/#part-1-what-makes-a-good-metric">Part 1: What makes a good metric?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lecture/#part-2-metric-contracts">Part 2: Metric contracts</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lecture/#part-3-ratio-of-sums-versus-mean-of-ratios">Part 3: Ratio of sums versus mean of ratios</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lecture/#part-4-weighted-rates-in-practice">Part 4: Weighted rates in practice</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lecture/#part-5-distinct-counts-do-not-add-up">Part 5: Distinct counts do not add up</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lecture/#part-6-simpsons-paradox">Part 6: Simpson's paradox</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lecture/#part-7-goodharts-law">Part 7: Goodhart's law</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lecture/#part-8-worked-case-a-segment-kpi-table-that-reconciles">Part 8: Worked case — a segment KPI table that reconciles</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lecture/#summary">Summary</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lecture/#quiz">Quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lecture/#lab-briefing">Lab briefing</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../05_metrics_and_kpis_lab/">Lab</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lab/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lab/#how-this-lab-works">How this lab works</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lab/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lab/#guided-practice">Guided practice</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lab/#independent-tasks">Independent tasks</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lab/#challenge">Challenge</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lab/#validation-checklist">Validation checklist</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lab/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lab/#evidence-to-keep">Evidence to keep</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lab/#after-the-lab">After the lab</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Session 6: Visualisation Principles</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../06_visualisation_principles_lecture/">Lecture</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lecture/#recap-quiz">Recap quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lecture/#what-you-will-be-able-to-explain">What you will be able to explain</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lecture/#part-1-choose-the-chart-from-the-task">Part 1: Choose the chart from the task</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lecture/#part-2-how-accurately-we-read-encodings">Part 2: How accurately we read encodings</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lecture/#part-3-pre-attentive-attributes">Part 3: Pre-attentive attributes</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lecture/#part-4-data-ink-and-decluttering">Part 4: Data-ink and decluttering</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lecture/#part-5-gestalt-what-belongs-together">Part 5: Gestalt: what belongs together</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lecture/#part-6-colour-with-a-job">Part 6: Colour with a job</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lecture/#part-7-honest-axes">Part 7: Honest axes</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lecture/#part-8-message-titles-and-annotation">Part 8: Message titles and annotation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lecture/#part-9-small-multiples">Part 9: Small multiples</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lecture/#summary">Summary</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lecture/#quiz">Quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lecture/#in-the-lab">In the Lab</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../06_visualisation_principles_lab/">Lab</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lab/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lab/#how-this-lab-works">How this lab works</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lab/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Session 7: Time Series and Trends</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../07_trends_and_growth_lecture/">Lecture</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lecture/#recap-quiz">Recap quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lecture/#what-you-will-be-able-to-explain">What you will be able to explain</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lecture/#part-1-the-three-components-of-a-series">Part 1: The three components of a series</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lecture/#part-2-month-on-month-versus-year-on-year">Part 2: Month-on-month versus year-on-year</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lecture/#part-3-rolling-averages-trailing-and-centred">Part 3: Rolling averages, trailing and centred</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lecture/#part-4-index-numbers-base-100">Part 4: Index numbers (base = 100)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lecture/#part-5-seasonally-adjusted-series">Part 5: Seasonally adjusted series</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lecture/#part-6-incomplete-and-missing-periods">Part 6: Incomplete and missing periods</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lecture/#part-7-growth-after-filtering-the-trap">Part 7: Growth after filtering, the trap</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lecture/#part-8-worked-case-superstore-monthly-sales">Part 8: Worked case — Superstore monthly Sales</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lecture/#summary">Summary</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lecture/#quiz">Quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lecture/#lab-briefing">Lab briefing</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../07_trends_and_growth_lab/">Lab</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lab/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lab/#how-this-lab-works">How this lab works</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lab/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lab/#before-you-start">Before you start</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lab/#guided-practice">Guided practice</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lab/#independent-tasks">Independent tasks</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lab/#challenge">Challenge</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lab/#validation-checklist">Validation checklist</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lab/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lab/#evidence-to-keep">Evidence to keep</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lab/#after-the-lab">After the lab</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Session 8: Correlation and Regression</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../08_correlation_and_regression_lecture/">Lecture</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../08_correlation_and_regression_lecture/#recap-quiz">Recap quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../08_correlation_and_regression_lecture/#what-you-will-be-able-to-explain">What you will be able to explain</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../08_correlation_and_regression_lecture/#part-1-scatter-plots">Part 1: Scatter plots</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../08_correlation_and_regression_lecture/#part-2-covariance-and-correlation">Part 2: Covariance and correlation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../08_correlation_and_regression_lecture/#part-3-spearman-correlation">Part 3: Spearman correlation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../08_correlation_and_regression_lecture/#part-4-correlation-is-not-causation">Part 4: Correlation is not causation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../08_correlation_and_regression_lecture/#part-5-simple-linear-regression">Part 5: Simple linear regression</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../08_correlation_and_regression_lecture/#part-6-outliers-and-leverage">Part 6: Outliers and leverage</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../08_correlation_and_regression_lecture/#part-7-the-danger-of-extrapolation">Part 7: The danger of extrapolation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../08_correlation_and_regression_lecture/#part-8-worked-case-advertising-spend-and-revenue">Part 8: Worked case — advertising spend and revenue</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../08_correlation_and_regression_lecture/#summary">Summary</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../08_correlation_and_regression_lecture/#quiz">Quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../08_correlation_and_regression_lecture/#lab-briefing">Lab briefing</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../08_correlation_and_regression_lab/">Lab</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../08_correlation_and_regression_lab/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../08_correlation_and_regression_lab/#how-this-lab-works">How this lab works</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../08_correlation_and_regression_lab/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../08_correlation_and_regression_lab/#before-you-start">Before you start</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../08_correlation_and_regression_lab/#guided-practice">Guided practice</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../08_correlation_and_regression_lab/#independent-tasks">Independent tasks</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../08_correlation_and_regression_lab/#challenge">Challenge</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../08_correlation_and_regression_lab/#validation-checklist">Validation checklist</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../08_correlation_and_regression_lab/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../08_correlation_and_regression_lab/#evidence-to-keep">Evidence to keep</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../08_correlation_and_regression_lab/#after-the-lab">After the lab</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Session 9: Sampling, Uncertainty and Experiments</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../09_sampling_and_experiments_lecture/">Lecture</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../09_sampling_and_experiments_lecture/#recap-quiz">Recap quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../09_sampling_and_experiments_lecture/#what-you-will-be-able-to-explain">What you will be able to explain</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../09_sampling_and_experiments_lecture/#part-1-population-sample-and-sampling-error">Part 1: Population, sample and sampling error</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../09_sampling_and_experiments_lecture/#part-2-the-sampling-distribution-by-simulation">Part 2: The sampling distribution, by simulation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../09_sampling_and_experiments_lecture/#part-3-standard-error-and-why-it-shrinks-with-n">Part 3: Standard error, and why it shrinks with √n</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../09_sampling_and_experiments_lecture/#part-4-confidence-intervals-bootstrap-first">Part 4: Confidence intervals, bootstrap first</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../09_sampling_and_experiments_lecture/#part-5-what-95-confidence-means">Part 5: What "95% confidence" means</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../09_sampling_and_experiments_lecture/#part-6-experiments-and-why-we-randomise">Part 6: Experiments and why we randomise</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../09_sampling_and_experiments_lecture/#part-7-conversion-rate-and-lift">Part 7: Conversion rate and lift</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../09_sampling_and_experiments_lecture/#part-8-a-confidence-interval-for-the-lift">Part 8: A confidence interval for the lift</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../09_sampling_and_experiments_lecture/#part-9-a-p-value-by-shuffling-permutation-test">Part 9: A p-value by shuffling (permutation test)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../09_sampling_and_experiments_lecture/#part-10-reading-a-p-value-and-practical-versus-statistical-significance">Part 10: Reading a p-value, and practical versus statistical significance</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../09_sampling_and_experiments_lecture/#part-11-peeking-and-multiple-comparisons">Part 11: Peeking and multiple comparisons</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../09_sampling_and_experiments_lecture/#part-12-worked-case-the-checkout-page-result-for-a-manager">Part 12: Worked case — the checkout-page result for a manager</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../09_sampling_and_experiments_lecture/#summary">Summary</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../09_sampling_and_experiments_lecture/#quiz">Quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../09_sampling_and_experiments_lecture/#lab-briefing">Lab briefing</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../09_sampling_and_experiments_lab/">Lab</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../09_sampling_and_experiments_lab/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../09_sampling_and_experiments_lab/#how-this-lab-works">How this lab works</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../09_sampling_and_experiments_lab/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../09_sampling_and_experiments_lab/#before-you-start">Before you start</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../09_sampling_and_experiments_lab/#guided-practice">Guided practice</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../09_sampling_and_experiments_lab/#independent-tasks">Independent tasks</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../09_sampling_and_experiments_lab/#challenge">Challenge</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../09_sampling_and_experiments_lab/#validation-checklist">Validation checklist</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../09_sampling_and_experiments_lab/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../09_sampling_and_experiments_lab/#evidence-to-keep">Evidence to keep</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Tableau (Coming Later)</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lessons/class-01/">Tableau Lesson 1 (draft)</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#before-you-start">Before you start</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#part-1-from-request-to-question">Part 1: From request to question</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#part-2-watch-the-demonstration">Part 2: Watch the demonstration</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#part-3-guided-practice">Part 3: Guided practice</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-01/#connect-to-the-file">Connect to the file</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-01/#check-the-column-types">Check the column types</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-01/#build-a-first-chart">Build a first chart</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-01/#add-a-filter">Add a filter</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-01/#save-and-reopen">Save and reopen</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#part-4-rows-versus-orders">Part 4: Rows versus orders</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#part-5-independent-work">Part 5: Independent work</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#part-6-challenge">Part 6: Challenge</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#after-the-lesson">After the lesson</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lessons/class-02/">Tableau Lesson 2 (draft)</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#before-you-start">Before you start</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#part-1-meet-the-data-dictionary">Part 1: Meet the data dictionary</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#part-2-find-the-grain">Part 2: Find the grain</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#part-3-count-orders-correctly">Part 3: Count orders correctly</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-02/#demonstration">Demonstration</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-02/#guided-practice">Guided practice</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#part-4-what-the-returns-flag-means">Part 4: What the returns flag means</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#part-5-check-one-order-by-hand">Part 5: Check one order by hand</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#part-6-keep-a-preparation-log">Part 6: Keep a preparation log</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#part-7-independent-work">Part 7: Independent work</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#part-8-debugging-challenge">Part 8: Debugging challenge</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#after-the-lesson">After the lesson</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lessons/class-03/">Tableau Lesson 3 (draft)</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#before-you-start">Before you start</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#part-1-agree-the-measures">Part 1: Agree the measures</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#part-2-watch-the-demonstration">Part 2: Watch the demonstration</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#part-3-guided-practice-build-the-calculations">Part 3: Guided practice — build the calculations</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#part-4-guided-practice-the-segment-table">Part 4: Guided practice — the segment table</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-03/#check-that-it-reconciles">Check that it reconciles</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#part-5-independent-work">Part 5: Independent work</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-03/#a-filter-by-region">A. Filter by region</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-03/#b-look-at-a-category">B. Look at a category</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#part-6-debugging-challenge">Part 6: Debugging challenge</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#part-7-make-a-recommendation">Part 7: Make a recommendation</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#validation-checklist">Validation checklist</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#after-the-lesson">After the lesson</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lessons/class-04/">Tableau Lesson 4 (draft)</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#before-you-start">Before you start</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#part-1-the-monthly-trend">Part 1: The monthly trend</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#part-2-two-kinds-of-growth">Part 2: Two kinds of growth</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-04/#month-on-month-growth">Month-on-month growth</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-04/#year-on-year-growth">Year-on-year growth</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-04/#which-one-is-fair">Which one is fair?</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#part-3-the-returns-list">Part 3: The returns list</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#part-4-guided-practice-build-the-dashboard">Part 4: Guided practice — build the dashboard</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-04/#design-checks">Design checks</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#part-5-independent-work">Part 5: Independent work</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#part-6-debugging-challenge">Part 6: Debugging challenge</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#part-7-recommend-a-test">Part 7: Recommend a test</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#validation-checklist">Validation checklist</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#after-the-lesson">After the lesson</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../lessons/lesson-template/">Lesson Template</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#1-the-business-decision">1. The business decision</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#2-what-you-will-demonstrate">2. What you will demonstrate</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#3-before-you-start">3. Before you start</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#4-understand-the-data">4. Understand the data</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#5-agree-the-measures">5. Agree the measures</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#6-watch-a-worked-example">6. Watch a worked example</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#7-try-it-with-guidance">7. Try it with guidance</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#8-work-independently">8. Work independently</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#9-debug-a-result">9. Debug a result</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#10-make-a-recommendation">10. Make a recommendation</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#11-connection-to-the-other-tool">11. Connection to the other tool</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#12-submit-and-reflect">12. Submit and reflect</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Data Analytics</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Session 10 lecture: Finance: budget accountability</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="session-10-lecture-finance-budget-accountability">Session 10 lecture: Finance: budget accountability<a class="headerlink" href="#session-10-lecture-finance-budget-accountability" title="Permanent link">&para;</a></h1>
+<p class="lead">
+Every month a finance partner compares what each department spent with what it was allowed to spend, and picks a handful of lines to question. This lecture shows how to build that comparison so the totals are right, the signs are read correctly, and the lines you flag are the ones that really deserve attention.
+</p>
+
+<p><a href="https://colab.research.google.com/github/Aayush181509/AnalyticsLecture/blob/main/notebooks/10_finance_budget_lecture.ipynb"><img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg" /></a></p>
+<p>Open this notebook in Google Colab with the button above, then run each cell from top to bottom with <strong>Shift + Enter</strong>. Save your own copy with <strong>File → Save a copy in Drive</strong>.</p>
+<hr />
+<h2 id="recap-quiz">Recap quiz<a class="headerlink" href="#recap-quiz" title="Permanent link">&para;</a></h2>
+<p>Before we start, answer these questions on the <a href="../09_sampling_and_experiments_lecture/">Session 9 lecture</a>. Write short answers; we discuss them together.</p>
+<ol>
+<li>From a random sample of 200 orders, the average order value is 450 with a 95% confidence interval from 400 to 500. Write one sentence for a manager that reports this correctly.</li>
+<li>You make your sample four times bigger. What happens to the standard error?</li>
+<li>An A/B test shows a lift of +0.4 percentage points with a 95% interval from −0.1 to +0.9. Can you say the new version is better? Can you say it makes no difference?</li>
+<li>A test gives p = 0.03. Say in plain words what that means, and give one common misreading.</li>
+<li>Why does checking a test every day and stopping on the first day p drops below 0.05 produce too many false winners?</li>
+</ol>
+<hr />
+<h2 id="what-you-will-be-able-to-explain">What you will be able to explain<a class="headerlink" href="#what-you-will-be-able-to-explain" title="Permanent link">&para;</a></h2>
+<ol>
+<li>The <strong>grain</strong> of expense postings and of budget cells, and why they cannot be joined directly.</li>
+<li>How signs work in an expense ledger: <strong>expenses are positive</strong>, <strong>credits and reversals are negative</strong>.</li>
+<li>Why you <strong>aggregate first, then combine</strong>, and how an <strong>outer join with an indicator</strong> keeps every cell visible.</li>
+<li>The difference between an <strong>unknown budget</strong>, a <strong>budget with no spending</strong> and an <strong>approved zero budget</strong>.</li>
+<li><strong>Variance = actual − budget</strong>, and why, for expenses, a <strong>positive variance is unfavourable</strong>.</li>
+<li>When a <strong>variance %</strong> exists, and why you never <strong>average percentages</strong> to get a total.</li>
+<li>How to judge <strong>materiality</strong> using both the amount and the percentage.</li>
+<li>Why a favourable month may only be a <strong>credit, reversal or timing</strong> effect.</li>
+<li>Which <strong>reconciliation checks</strong> prove that your comparison table adds up.</li>
+</ol>
+<p>This lecture builds on the grain ideas from <a href="../02_data_and_grain_lecture/">Session 2</a> and the rate rules from <a href="../05_metrics_and_kpis_lecture/">Session 5</a>. In the <strong>Lab</strong> you build the full comparison yourself, debug a colleague's broken version and choose what the finance partner should review.</p>
+<blockquote>
+<p><strong>How to use the questions in this notebook</strong></p>
+<p><strong>Predict, then reveal</strong> boxes ask you to guess before running the next cell. Write your guess down first. <strong>Check your understanding</strong> boxes are short questions to answer in your own words.</p>
+</blockquote>
+<p>Run the two cells below first: the finance data setup, then the cell that loads the two tables.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Finance data setup (synthetic). Run this cell first.</span>
+<span class="c1"># Downloads the course&#39;s synthetic finance data from GitHub and checks it is the exact version this course uses.</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">hashlib</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">io</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">urllib.request</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+
+<span class="n">FINANCE_URL</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/Aayush181509/AnalyticsLecture/main/data/synthetic/finance-v1/&quot;</span>
+<span class="n">FINANCE_SHA256</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;finance_actuals.csv&quot;</span><span class="p">:</span> <span class="s2">&quot;3aeb2773990f86c21a1536b8854d7290794315e8bc872420c2e5df77151ac7fd&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;finance_budget.csv&quot;</span><span class="p">:</span> <span class="s2">&quot;238dbec8e7e80a61068c12c48280ff4f9de91198879ee295366774f530efad60&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+<span class="n">FINANCE_DIR</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;COURSE_FINANCE_DIR&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">load_finance</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Load one finance-v1 file: &#39;finance_actuals.csv&#39; or &#39;finance_budget.csv&#39;.&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">FINANCE_DIR</span><span class="p">:</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">FINANCE_DIR</span><span class="p">,</span> <span class="n">name</span><span class="p">),</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">FINANCE_URL</span> <span class="o">+</span> <span class="n">name</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">sha256</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span> <span class="o">!=</span> <span class="n">FINANCE_SHA256</span><span class="p">[</span><span class="n">name</span><span class="p">]:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;WARNING: this file differs from the course version. Ask your facilitator.&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">io</span><span class="o">.</span><span class="n">BytesIO</span><span class="p">(</span><span class="n">data</span><span class="p">),</span> <span class="n">parse_dates</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;month&quot;</span><span class="p">],</span> <span class="n">keep_default_na</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                       <span class="n">na_values</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;amount&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;&quot;</span><span class="p">],</span> <span class="s2">&quot;budget&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;&quot;</span><span class="p">]})</span>
+
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Finance setup complete.&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Finance setup complete.
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+
+<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s2">&quot;display.float_format&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="si">{:,.2f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="o">.</span><span class="n">update</span><span class="p">({</span>
+    <span class="s2">&quot;figure.figsize&quot;</span><span class="p">:</span> <span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span>
+    <span class="s2">&quot;axes.spines.top&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="s2">&quot;axes.spines.right&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="s2">&quot;axes.grid&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s2">&quot;axes.axisbelow&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s2">&quot;grid.color&quot;</span><span class="p">:</span> <span class="s2">&quot;#e6e5e1&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;axes.prop_cycle&quot;</span><span class="p">:</span> <span class="n">plt</span><span class="o">.</span><span class="n">cycler</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;#2a78d6&quot;</span><span class="p">,</span> <span class="s2">&quot;#eb6834&quot;</span><span class="p">,</span> <span class="s2">&quot;#1baf7a&quot;</span><span class="p">]),</span>
+    <span class="s2">&quot;axes.titleweight&quot;</span><span class="p">:</span> <span class="s2">&quot;bold&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;axes.titlelocation&quot;</span><span class="p">:</span> <span class="s2">&quot;left&quot;</span><span class="p">,</span>
+<span class="p">})</span>
+
+<span class="c1"># Colour-blind-safe pair used for every variance chart in this session.</span>
+<span class="c1"># Blue = favourable (under budget), orange = unfavourable (over budget). Always add a legend too.</span>
+<span class="n">FAVOURABLE</span><span class="p">,</span> <span class="n">UNFAVOURABLE</span> <span class="o">=</span> <span class="s2">&quot;#2a78d6&quot;</span><span class="p">,</span> <span class="s2">&quot;#eb6834&quot;</span>
+
+<span class="n">actuals</span> <span class="o">=</span> <span class="n">load_finance</span><span class="p">(</span><span class="s2">&quot;finance_actuals.csv&quot;</span><span class="p">)</span>
+<span class="n">budget</span> <span class="o">=</span> <span class="n">load_finance</span><span class="p">(</span><span class="s2">&quot;finance_budget.csv&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Postings:&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">actuals</span><span class="p">),</span> <span class="s2">&quot;| budget cells:&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">budget</span><span class="p">))</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Postings: 1378 | budget cells: 432
+</code></pre></div>
+<hr />
+<h2 id="part-1-the-business-decision">Part 1: The business decision<a class="headerlink" href="#part-1-the-business-decision" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><em>Finance partner: "Every month I can review about a dozen budget lines with department heads. Which department and account lines should I put on the list, and why? I don't want to waste anyone's time on noise, and I don't want to miss a real problem."</em></p>
+</blockquote>
+<p>The decision is a <strong>short, defensible review list</strong>. To get there we need a comparison of <strong>actual</strong> spending with <strong>budget</strong> for every month, department and account, that we can trust to add up.</p>
+<blockquote>
+<p><strong>About the data</strong></p>
+<p><code>finance_actuals.csv</code> and <code>finance_budget.csv</code> are <strong>synthetic</strong> teaching data generated by the course: a fictional company's monthly <strong>management expense</strong> view for calendar 2025. No real company, person or supplier is described. Amounts are in neutral <strong>currency units</strong>. This is not a financial statement: there is no revenue, no balance sheet and no audit claim.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Table</th>
+<th>One row is</th>
+<th>Key</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>finance_actuals.csv</code></td>
+<td>One <strong>expense posting</strong> (an invoice, salary run, credit or reversal)</td>
+<td><code>posting_id</code></td>
+</tr>
+<tr>
+<td><code>finance_budget.csv</code></td>
+<td>One <strong>approved monthly budget cell</strong></td>
+<td>(<code>month</code>, <code>department_id</code>, <code>account_id</code>)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="part-2-grain-keys-and-signs">Part 2: Grain, keys and signs<a class="headerlink" href="#part-2-grain-keys-and-signs" title="Permanent link">&para;</a></h2>
+<p>Before combining two tables, check what one row means in each and whether the keys really are unique. We also keep the department and account <strong>names</strong> next to their codes; the check below confirms each code has exactly one name, so the names can travel with the keys.</p>
+<div class="highlight"><pre><span></span><code><span class="n">KEY</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;month&quot;</span><span class="p">,</span> <span class="s2">&quot;department_id&quot;</span><span class="p">,</span> <span class="s2">&quot;department&quot;</span><span class="p">,</span> <span class="s2">&quot;account_id&quot;</span><span class="p">,</span> <span class="s2">&quot;account&quot;</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;posting_id unique:&quot;</span><span class="p">,</span> <span class="n">actuals</span><span class="p">[</span><span class="s2">&quot;posting_id&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">is_unique</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Most budget rows for one (month, department, account):&quot;</span><span class="p">,</span> <span class="n">budget</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">KEY</span><span class="p">)</span><span class="o">.</span><span class="n">size</span><span class="p">()</span><span class="o">.</span><span class="n">max</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Names per department code:&quot;</span><span class="p">,</span> <span class="n">actuals</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;department_id&quot;</span><span class="p">)[</span><span class="s2">&quot;department&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span><span class="o">.</span><span class="n">max</span><span class="p">(),</span>
+      <span class="s2">&quot;| names per account code:&quot;</span><span class="p">,</span> <span class="n">actuals</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;account_id&quot;</span><span class="p">)[</span><span class="s2">&quot;account&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span><span class="o">.</span><span class="n">max</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Months:&quot;</span><span class="p">,</span> <span class="n">actuals</span><span class="p">[</span><span class="s2">&quot;month&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()</span><span class="o">.</span><span class="n">date</span><span class="p">(),</span> <span class="s2">&quot;to&quot;</span><span class="p">,</span> <span class="n">actuals</span><span class="p">[</span><span class="s2">&quot;month&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span><span class="o">.</span><span class="n">date</span><span class="p">())</span>
+<span class="n">actuals</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>posting_id unique: True
+Most budget rows for one (month, department, account): 1
+Names per department code: 1 | names per account code: 1
+Months: 2025-01-01 to 2025-12-01
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>posting_id</th>
+      <th>posting_date</th>
+      <th>month</th>
+      <th>department_id</th>
+      <th>department</th>
+      <th>account_id</th>
+      <th>account</th>
+      <th>amount</th>
+      <th>posting_type</th>
+      <th>reference_posting_id</th>
+      <th>description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>P25-00001</td>
+      <td>2025-01-01</td>
+      <td>2025-01-01</td>
+      <td>D02</td>
+      <td>Marketing</td>
+      <td>A200</td>
+      <td>Travel</td>
+      <td>534.24</td>
+      <td>expense</td>
+      <td></td>
+      <td>Travel - Marketing</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>P25-00002</td>
+      <td>2025-01-01</td>
+      <td>2025-01-01</td>
+      <td>D06</td>
+      <td>Finance and Admin</td>
+      <td>A300</td>
+      <td>Software subscriptions</td>
+      <td>254.84</td>
+      <td>expense</td>
+      <td></td>
+      <td>Software subscriptions - Finance and Admin</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>P25-00003</td>
+      <td>2025-01-02</td>
+      <td>2025-01-01</td>
+      <td>D03</td>
+      <td>Operations</td>
+      <td>A400</td>
+      <td>Facilities</td>
+      <td>9,148.20</td>
+      <td>expense</td>
+      <td></td>
+      <td>Facilities - Operations</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>P25-00004</td>
+      <td>2025-01-02</td>
+      <td>2025-01-01</td>
+      <td>D05</td>
+      <td>People</td>
+      <td>A300</td>
+      <td>Software subscriptions</td>
+      <td>1,350.20</td>
+      <td>expense</td>
+      <td></td>
+      <td>Software subscriptions - People</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>P25-00005</td>
+      <td>2025-01-02</td>
+      <td>2025-01-01</td>
+      <td>D05</td>
+      <td>People</td>
+      <td>A600</td>
+      <td>Training</td>
+      <td>2,036.12</td>
+      <td>expense</td>
+      <td></td>
+      <td>Training - People</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p>Many postings fall into the same month, department and account. The budget has <strong>one</strong> row for each of those cells. So the two tables have <strong>different grains</strong>: postings are fine-grained, budgets are coarse.</p>
+<h3 id="signs">Signs<a class="headerlink" href="#signs" title="Permanent link">&para;</a></h3>
+<p>In this ledger a <strong>positive</strong> amount is an expense. A <strong>negative</strong> amount is a <strong>credit</strong> (for example a supplier refunds an overcharge) or a <strong>reversal</strong> (an earlier posting is cancelled). Let us see how many of each there are.</p>
+<div class="highlight"><pre><span></span><code><span class="n">actuals</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;posting_type&quot;</span><span class="p">)[</span><span class="s2">&quot;amount&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">agg</span><span class="p">(</span><span class="n">postings</span><span class="o">=</span><span class="s2">&quot;count&quot;</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="s2">&quot;sum&quot;</span><span class="p">,</span> <span class="n">smallest</span><span class="o">=</span><span class="s2">&quot;min&quot;</span><span class="p">,</span> <span class="n">largest</span><span class="o">=</span><span class="s2">&quot;max&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>postings</th>
+      <th>total</th>
+      <th>smallest</th>
+      <th>largest</th>
+    </tr>
+    <tr>
+      <th>posting_type</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>credit</th>
+      <td>1</td>
+      <td>-2,000.00</td>
+      <td>-2,000.00</td>
+      <td>-2,000.00</td>
+    </tr>
+    <tr>
+      <th>expense</th>
+      <td>1376</td>
+      <td>6,250,301.60</td>
+      <td>34.48</td>
+      <td>110,814.44</td>
+    </tr>
+    <tr>
+      <th>reversal</th>
+      <td>1</td>
+      <td>-6,500.00</td>
+      <td>-6,500.00</td>
+      <td>-6,500.00</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="highlight"><pre><span></span><code><span class="n">actuals</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">actuals</span><span class="p">[</span><span class="s2">&quot;amount&quot;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="p">[</span><span class="s2">&quot;posting_id&quot;</span><span class="p">,</span> <span class="s2">&quot;posting_date&quot;</span><span class="p">,</span> <span class="s2">&quot;department&quot;</span><span class="p">,</span> <span class="s2">&quot;account&quot;</span><span class="p">,</span> <span class="s2">&quot;amount&quot;</span><span class="p">,</span> <span class="s2">&quot;posting_type&quot;</span><span class="p">,</span>
+             <span class="s2">&quot;reference_posting_id&quot;</span><span class="p">,</span> <span class="s2">&quot;description&quot;</span><span class="p">]]</span>
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>posting_id</th>
+      <th>posting_date</th>
+      <th>department</th>
+      <th>account</th>
+      <th>amount</th>
+      <th>posting_type</th>
+      <th>reference_posting_id</th>
+      <th>description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>610</th>
+      <td>P25-00611</td>
+      <td>2025-06-09</td>
+      <td>Sales</td>
+      <td>Travel</td>
+      <td>-6,500.00</td>
+      <td>reversal</td>
+      <td>P25-00553</td>
+      <td>Reversal of duplicated May conference invoice</td>
+    </tr>
+    <tr>
+      <th>1118</th>
+      <td>P25-01119</td>
+      <td>2025-10-21</td>
+      <td>People</td>
+      <td>Professional services</td>
+      <td>-2,000.00</td>
+      <td>credit</td>
+      <td></td>
+      <td>Supplier credit note for overcharge</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p>Only a couple of rows are negative, but they matter: they lower the month's actual spending. A reversal also names the posting it cancels in <code>reference_posting_id</code>. Keep both rows in mind; we return to them in Part 8.</p>
+<blockquote>
+<p><strong>Check your understanding 1</strong></p>
+<p>Why is "actual = sum of the <code>amount</code> column" correct here, while "actual = sum of the positive amounts" would be wrong? What would the second version do to a month with a large supplier credit?</p>
+</blockquote>
+<hr />
+<h2 id="part-3-the-join-trap">Part 3: The join trap<a class="headerlink" href="#part-3-the-join-trap" title="Permanent link">&para;</a></h2>
+<p>The quickest way to put actuals next to budgets is to join the posting table straight onto the budget table. Let us try it on <strong>one</strong> budget cell: Sales travel in May.</p>
+<blockquote>
+<p><strong>Predict, then reveal</strong></p>
+<p>There is one budget cell for Sales travel in May, and several postings. After joining postings to budget, then adding up the <code>budget</code> column, will you get the May budget, or something else?</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="n">is_cell</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">df</span><span class="p">:</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;month&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;2025-05-01&quot;</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;department&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Sales&quot;</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;account&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Travel&quot;</span><span class="p">)</span>
+<span class="n">one_budget</span> <span class="o">=</span> <span class="n">budget</span><span class="p">[</span><span class="n">is_cell</span><span class="p">(</span><span class="n">budget</span><span class="p">)]</span>
+<span class="n">its_postings</span> <span class="o">=</span> <span class="n">actuals</span><span class="p">[</span><span class="n">is_cell</span><span class="p">(</span><span class="n">actuals</span><span class="p">)]</span>
+
+<span class="n">joined</span> <span class="o">=</span> <span class="n">its_postings</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">one_budget</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="n">KEY</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Budget cells:&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">one_budget</span><span class="p">),</span> <span class="s2">&quot;| postings:&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">its_postings</span><span class="p">),</span> <span class="s2">&quot;| rows after the join:&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">joined</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;True May budget:            </span><span class="si">{</span><span class="n">one_budget</span><span class="p">[</span><span class="s1">&#39;budget&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="si">:</span><span class="s2">,.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&#39;Budget&#39; after the join:    </span><span class="si">{</span><span class="n">joined</span><span class="p">[</span><span class="s1">&#39;budget&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="si">:</span><span class="s2">,.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">joined</span><span class="p">[[</span><span class="s2">&quot;posting_id&quot;</span><span class="p">,</span> <span class="s2">&quot;amount&quot;</span><span class="p">,</span> <span class="s2">&quot;budget&quot;</span><span class="p">]]</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Budget cells: 1 | postings: 6 | rows after the join: 6
+True May budget:            12,000.00
+&#39;Budget&#39; after the join:    72,000.00
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>posting_id</th>
+      <th>amount</th>
+      <th>budget</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>P25-00484</td>
+      <td>2,123.44</td>
+      <td>12,000.00</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>P25-00487</td>
+      <td>1,492.03</td>
+      <td>12,000.00</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>P25-00501</td>
+      <td>6,818.31</td>
+      <td>12,000.00</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>P25-00538</td>
+      <td>952.07</td>
+      <td>12,000.00</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>P25-00552</td>
+      <td>6,500.00</td>
+      <td>12,000.00</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>P25-00553</td>
+      <td>6,500.00</td>
+      <td>12,000.00</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p>The join copies the budget onto <strong>every</strong> posting, so adding up the budget column counts it once per posting. Nothing errors and nothing warns you. Now the whole year:</p>
+<div class="highlight"><pre><span></span><code><span class="n">naive</span> <span class="o">=</span> <span class="n">actuals</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">budget</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="n">KEY</span><span class="p">)</span>                                   <span class="c1"># postings joined straight to budgets</span>
+<span class="n">matched_cells</span> <span class="o">=</span> <span class="n">budget</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">actuals</span><span class="p">[</span><span class="n">KEY</span><span class="p">]</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">(),</span> <span class="n">on</span><span class="o">=</span><span class="n">KEY</span><span class="p">)</span>    <span class="c1"># the same cells, each counted once</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Budget after the naive join:            </span><span class="si">{</span><span class="n">naive</span><span class="p">[</span><span class="s1">&#39;budget&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="si">:</span><span class="s2">,.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Budget of the same cells, counted once: </span><span class="si">{</span><span class="n">matched_cells</span><span class="p">[</span><span class="s1">&#39;budget&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="si">:</span><span class="s2">,.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Inflation factor: </span><span class="si">{</span><span class="n">naive</span><span class="p">[</span><span class="s1">&#39;budget&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">matched_cells</span><span class="p">[</span><span class="s1">&#39;budget&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">x&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Budget after the naive join:            14,771,900.00
+Budget of the same cells, counted once: 6,126,500.00
+Inflation factor: 2.41x
+</code></pre></div>
+<p>Read the output above. On this version of the data the naive join reports a budget several times too large, so every department looks massively <strong>under</strong> budget. Notice also that the naive join silently drops anything that does not match on both sides.</p>
+<blockquote>
+<p><strong>The rule: aggregate first, then combine</strong></p>
+<p>Bring both tables to the <strong>same grain</strong> before joining. Here that means adding up postings to one row per (month, department, account), then joining one-to-one to the budget cells.</p>
+</blockquote>
+<hr />
+<h2 id="part-4-aggregate-first-then-an-outer-join-with-an-indicator">Part 4: Aggregate first, then an outer join with an indicator<a class="headerlink" href="#part-4-aggregate-first-then-an-outer-join-with-an-indicator" title="Permanent link">&para;</a></h2>
+<p>Step 1: add up the postings to the budget's grain. We also count the postings in each cell.</p>
+<div class="highlight"><pre><span></span><code><span class="n">actual_cells</span> <span class="o">=</span> <span class="n">actuals</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">KEY</span><span class="p">,</span> <span class="n">as_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">(</span><span class="n">actual</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;amount&quot;</span><span class="p">,</span> <span class="s2">&quot;sum&quot;</span><span class="p">),</span>
+                                                        <span class="n">postings</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;posting_id&quot;</span><span class="p">,</span> <span class="s2">&quot;count&quot;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Posting rows:&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">actuals</span><span class="p">),</span> <span class="s2">&quot;-&gt; actual cells:&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">actual_cells</span><span class="p">))</span>
+<span class="n">actual_cells</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Posting rows: 1378 -&gt; actual cells: 431
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>month</th>
+      <th>department_id</th>
+      <th>department</th>
+      <th>account_id</th>
+      <th>account</th>
+      <th>actual</th>
+      <th>postings</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2025-01-01</td>
+      <td>D01</td>
+      <td>Sales</td>
+      <td>A100</td>
+      <td>Salaries and wages</td>
+      <td>85,470.10</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2025-01-01</td>
+      <td>D01</td>
+      <td>Sales</td>
+      <td>A200</td>
+      <td>Travel</td>
+      <td>6,843.41</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2025-01-01</td>
+      <td>D01</td>
+      <td>Sales</td>
+      <td>A300</td>
+      <td>Software subscriptions</td>
+      <td>3,767.03</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2025-01-01</td>
+      <td>D01</td>
+      <td>Sales</td>
+      <td>A400</td>
+      <td>Facilities</td>
+      <td>5,512.62</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2025-01-01</td>
+      <td>D01</td>
+      <td>Sales</td>
+      <td>A500</td>
+      <td>Professional services</td>
+      <td>2,071.17</td>
+      <td>3</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p>Step 2: join to the budget with three safety features:</p>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>how="outer"</code></td>
+<td>Keeps cells that appear on <strong>either</strong> side, not only on both</td>
+</tr>
+<tr>
+<td><code>indicator=True</code></td>
+<td>Adds a column <code>_merge</code> saying where each row came from</td>
+</tr>
+<tr>
+<td><code>validate="one_to_one"</code></td>
+<td>Stops with an error if either side has duplicate keys</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code><span class="n">var</span> <span class="o">=</span> <span class="n">actual_cells</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">budget</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="n">KEY</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s2">&quot;outer&quot;</span><span class="p">,</span> <span class="n">indicator</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">validate</span><span class="o">=</span><span class="s2">&quot;one_to_one&quot;</span><span class="p">)</span>
+<span class="n">var</span><span class="p">[</span><span class="s2">&quot;match&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">var</span><span class="p">[</span><span class="s2">&quot;_merge&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span><span class="o">.</span><span class="n">map</span><span class="p">({</span><span class="s2">&quot;both&quot;</span><span class="p">:</span> <span class="s2">&quot;actual and budget&quot;</span><span class="p">,</span>
+                                              <span class="s2">&quot;left_only&quot;</span><span class="p">:</span> <span class="s2">&quot;actual only&quot;</span><span class="p">,</span>
+                                              <span class="s2">&quot;right_only&quot;</span><span class="p">:</span> <span class="s2">&quot;budget only&quot;</span><span class="p">})</span>
+<span class="n">var</span> <span class="o">=</span> <span class="n">var</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="s2">&quot;_merge&quot;</span><span class="p">)</span>
+<span class="n">var</span><span class="p">[</span><span class="s2">&quot;match&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>match
+actual and budget    425
+budget only            7
+actual only            6
+Name: count, dtype: int64
+</code></pre></div>
+<p>Most cells have both an actual and a budget. The two small groups are the interesting ones, and an inner join would have hidden both of them.</p>
+<hr />
+<h2 id="part-5-unknown-missing-and-zero-are-different">Part 5: Unknown, missing and zero are different<a class="headerlink" href="#part-5-unknown-missing-and-zero-are-different" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Situation</th>
+<th>What it means</th>
+<th>Actual</th>
+<th>Budget</th>
+<th>Variance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Actual only</strong></td>
+<td>Money was spent, but no budget cell exists</td>
+<td>the sum of postings</td>
+<td><strong>unknown</strong> (not zero)</td>
+<td>unknown</td>
+</tr>
+<tr>
+<td><strong>Budget only</strong></td>
+<td>A budget was approved, nobody posted anything</td>
+<td>0, once we accept the postings are complete</td>
+<td>the budget</td>
+<td>0 − budget</td>
+</tr>
+<tr>
+<td><strong>Approved zero budget</strong></td>
+<td>The budget is explicitly 0</td>
+<td>the sum of postings</td>
+<td>0</td>
+<td>the actual; <strong>no %</strong></td>
+</tr>
+</tbody>
+</table>
+<p>An unknown budget must never be filled with 0: that would turn "we don't know" into "this was not allowed", and the cell would look like a large overspend. A budget-only cell, on the other hand, really does have actual spending of 0, as long as finance confirms all postings for the month are in.</p>
+<div class="highlight"><pre><span></span><code><span class="n">var</span><span class="p">[</span><span class="s2">&quot;postings&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">var</span><span class="p">[</span><span class="s2">&quot;postings&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+<span class="n">var</span><span class="p">[</span><span class="s2">&quot;actual&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">var</span><span class="p">[</span><span class="s2">&quot;actual&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>            <span class="c1"># budget-only cells: no postings, actual = 0</span>
+
+<span class="n">var</span><span class="p">[</span><span class="s2">&quot;budget_status&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">select</span><span class="p">(</span>
+    <span class="p">[</span><span class="n">var</span><span class="p">[</span><span class="s2">&quot;budget&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">isna</span><span class="p">(),</span> <span class="n">var</span><span class="p">[</span><span class="s2">&quot;budget&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;unknown budget&quot;</span><span class="p">,</span> <span class="s2">&quot;approved zero budget&quot;</span><span class="p">],</span>
+    <span class="n">default</span><span class="o">=</span><span class="s2">&quot;positive budget&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">var</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="n">var</span><span class="p">[</span><span class="s2">&quot;match&quot;</span><span class="p">]</span> <span class="o">!=</span> <span class="s2">&quot;actual and budget&quot;</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">var</span><span class="p">[</span><span class="s2">&quot;budget_status&quot;</span><span class="p">]</span> <span class="o">!=</span> <span class="s2">&quot;positive budget&quot;</span><span class="p">),</span>
+        <span class="n">KEY</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="s2">&quot;department&quot;</span><span class="p">,</span> <span class="s2">&quot;account&quot;</span><span class="p">,</span> <span class="s2">&quot;postings&quot;</span><span class="p">,</span> <span class="s2">&quot;actual&quot;</span><span class="p">,</span> <span class="s2">&quot;budget&quot;</span><span class="p">,</span> <span class="s2">&quot;match&quot;</span><span class="p">,</span> <span class="s2">&quot;budget_status&quot;</span><span class="p">]]</span>
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>month</th>
+      <th>department</th>
+      <th>account</th>
+      <th>postings</th>
+      <th>actual</th>
+      <th>budget</th>
+      <th>match</th>
+      <th>budget_status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>35</th>
+      <td>2025-01-01</td>
+      <td>Finance and Admin</td>
+      <td>Training</td>
+      <td>0</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>budget only</td>
+      <td>approved zero budget</td>
+    </tr>
+    <tr>
+      <th>71</th>
+      <td>2025-02-01</td>
+      <td>Finance and Admin</td>
+      <td>Training</td>
+      <td>5</td>
+      <td>1,850.00</td>
+      <td>0.00</td>
+      <td>actual and budget</td>
+      <td>approved zero budget</td>
+    </tr>
+    <tr>
+      <th>107</th>
+      <td>2025-03-01</td>
+      <td>Finance and Admin</td>
+      <td>Training</td>
+      <td>0</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>budget only</td>
+      <td>approved zero budget</td>
+    </tr>
+    <tr>
+      <th>240</th>
+      <td>2025-07-01</td>
+      <td>Technology</td>
+      <td>Cloud hosting</td>
+      <td>2</td>
+      <td>2,383.57</td>
+      <td>NaN</td>
+      <td>actual only</td>
+      <td>unknown budget</td>
+    </tr>
+    <tr>
+      <th>264</th>
+      <td>2025-08-01</td>
+      <td>Marketing</td>
+      <td>Training</td>
+      <td>0</td>
+      <td>0.00</td>
+      <td>1,300.00</td>
+      <td>budget only</td>
+      <td>positive budget</td>
+    </tr>
+    <tr>
+      <th>277</th>
+      <td>2025-08-01</td>
+      <td>Technology</td>
+      <td>Cloud hosting</td>
+      <td>2</td>
+      <td>4,911.66</td>
+      <td>NaN</td>
+      <td>actual only</td>
+      <td>unknown budget</td>
+    </tr>
+    <tr>
+      <th>301</th>
+      <td>2025-09-01</td>
+      <td>Marketing</td>
+      <td>Training</td>
+      <td>0</td>
+      <td>0.00</td>
+      <td>1,300.00</td>
+      <td>budget only</td>
+      <td>positive budget</td>
+    </tr>
+    <tr>
+      <th>314</th>
+      <td>2025-09-01</td>
+      <td>Technology</td>
+      <td>Cloud hosting</td>
+      <td>2</td>
+      <td>3,531.16</td>
+      <td>NaN</td>
+      <td>actual only</td>
+      <td>unknown budget</td>
+    </tr>
+    <tr>
+      <th>338</th>
+      <td>2025-10-01</td>
+      <td>Marketing</td>
+      <td>Training</td>
+      <td>0</td>
+      <td>0.00</td>
+      <td>1,300.00</td>
+      <td>budget only</td>
+      <td>positive budget</td>
+    </tr>
+    <tr>
+      <th>351</th>
+      <td>2025-10-01</td>
+      <td>Technology</td>
+      <td>Cloud hosting</td>
+      <td>2</td>
+      <td>8,911.91</td>
+      <td>NaN</td>
+      <td>actual only</td>
+      <td>unknown budget</td>
+    </tr>
+    <tr>
+      <th>375</th>
+      <td>2025-11-01</td>
+      <td>Marketing</td>
+      <td>Training</td>
+      <td>0</td>
+      <td>0.00</td>
+      <td>1,300.00</td>
+      <td>budget only</td>
+      <td>positive budget</td>
+    </tr>
+    <tr>
+      <th>388</th>
+      <td>2025-11-01</td>
+      <td>Technology</td>
+      <td>Cloud hosting</td>
+      <td>2</td>
+      <td>4,266.88</td>
+      <td>NaN</td>
+      <td>actual only</td>
+      <td>unknown budget</td>
+    </tr>
+    <tr>
+      <th>412</th>
+      <td>2025-12-01</td>
+      <td>Marketing</td>
+      <td>Training</td>
+      <td>0</td>
+      <td>0.00</td>
+      <td>1,300.00</td>
+      <td>budget only</td>
+      <td>positive budget</td>
+    </tr>
+    <tr>
+      <th>425</th>
+      <td>2025-12-01</td>
+      <td>Technology</td>
+      <td>Cloud hosting</td>
+      <td>1</td>
+      <td>9,372.99</td>
+      <td>NaN</td>
+      <td>actual only</td>
+      <td>unknown budget</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p>Read the table above. You should find three kinds of special cell: one account that has spending but <strong>no budget at all</strong> for part of the year, a line with budgets but <strong>no postings</strong> for several months, and a line with <strong>approved zero budgets</strong>, one of which has spending against it.</p>
+<blockquote>
+<p><strong>Check your understanding 2</strong></p>
+<p>For each kind of special cell, write one question you would ask the department head. (Example for the unknown budget: was this cost budgeted under a different account?)</p>
+</blockquote>
+<hr />
+<h2 id="part-6-variance-and-favourability">Part 6: Variance and favourability<a class="headerlink" href="#part-6-variance-and-favourability" title="Permanent link">&para;</a></h2>
+<p><em>variance = actual − budget</em></p>
+<p>For an <strong>expense</strong>, spending more than budget is bad news for the company, so:</p>
+<table>
+<thead>
+<tr>
+<th>Variance</th>
+<th>Meaning for an expense</th>
+<th>Word to use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>positive</td>
+<td>spent <strong>more</strong> than budget</td>
+<td><strong>unfavourable</strong> (overspend)</td>
+</tr>
+<tr>
+<td>negative</td>
+<td>spent <strong>less</strong> than budget</td>
+<td><strong>favourable</strong> (underspend)</td>
+</tr>
+<tr>
+<td>unknown</td>
+<td>budget unknown</td>
+<td>not assessed</td>
+</tr>
+</tbody>
+</table>
+<p>(For <strong>revenue</strong> the rule flips: earning more than budget is favourable. Never reuse an expense colour rule on a revenue chart.)</p>
+<p><em>variance % = variance ÷ budget</em>, <strong>only when the budget is above zero</strong>. With a zero budget the division is undefined; we label the cell "unbudgeted spend against zero" instead of inventing a percentage.</p>
+<div class="highlight"><pre><span></span><code><span class="n">var</span><span class="p">[</span><span class="s2">&quot;variance&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">var</span><span class="p">[</span><span class="s2">&quot;actual&quot;</span><span class="p">]</span> <span class="o">-</span> <span class="n">var</span><span class="p">[</span><span class="s2">&quot;budget&quot;</span><span class="p">]</span>                     <span class="c1"># NaN when the budget is unknown</span>
+<span class="n">var</span><span class="p">[</span><span class="s2">&quot;variance_pct&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">var</span><span class="p">[</span><span class="s2">&quot;budget&quot;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">,</span> <span class="n">var</span><span class="p">[</span><span class="s2">&quot;variance&quot;</span><span class="p">]</span> <span class="o">/</span> <span class="n">var</span><span class="p">[</span><span class="s2">&quot;budget&quot;</span><span class="p">],</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
+<span class="n">var</span><span class="p">[</span><span class="s2">&quot;direction&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">select</span><span class="p">(</span>
+    <span class="p">[</span><span class="n">var</span><span class="p">[</span><span class="s2">&quot;budget&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">isna</span><span class="p">(),</span> <span class="n">var</span><span class="p">[</span><span class="s2">&quot;variance&quot;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">,</span> <span class="n">var</span><span class="p">[</span><span class="s2">&quot;variance&quot;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;not assessed (budget unknown)&quot;</span><span class="p">,</span> <span class="s2">&quot;unfavourable&quot;</span><span class="p">,</span> <span class="s2">&quot;favourable&quot;</span><span class="p">],</span>
+    <span class="n">default</span><span class="o">=</span><span class="s2">&quot;on budget&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">var</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="n">var</span><span class="p">[</span><span class="s2">&quot;budget&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">var</span><span class="p">[</span><span class="s2">&quot;actual&quot;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">),</span> <span class="s2">&quot;direction&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;unbudgeted spend against zero&quot;</span>
+
+<span class="n">var</span><span class="p">[</span><span class="s2">&quot;direction&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>direction
+unfavourable                     232
+favourable                       197
+not assessed (budget unknown)      6
+on budget                          2
+unbudgeted spend against zero      1
+Name: count, dtype: int64
+</code></pre></div>
+<blockquote>
+<p><strong>Predict, then reveal</strong></p>
+<p>Look again at the joined May Sales travel row. Is its variance favourable or unfavourable? Is its variance % small, medium or large?</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="n">may</span> <span class="o">=</span> <span class="n">var</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">is_cell</span><span class="p">(</span><span class="n">var</span><span class="p">),</span> <span class="p">[</span><span class="s2">&quot;month&quot;</span><span class="p">,</span> <span class="s2">&quot;department&quot;</span><span class="p">,</span> <span class="s2">&quot;account&quot;</span><span class="p">,</span> <span class="s2">&quot;actual&quot;</span><span class="p">,</span> <span class="s2">&quot;budget&quot;</span><span class="p">,</span> <span class="s2">&quot;variance&quot;</span><span class="p">,</span> <span class="s2">&quot;variance_pct&quot;</span><span class="p">,</span> <span class="s2">&quot;direction&quot;</span><span class="p">]]</span>
+<span class="n">may</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">variance_pct</span><span class="o">=</span><span class="n">may</span><span class="p">[</span><span class="s2">&quot;variance_pct&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{:+.0%}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">))</span>
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>month</th>
+      <th>department</th>
+      <th>account</th>
+      <th>actual</th>
+      <th>budget</th>
+      <th>variance</th>
+      <th>variance_pct</th>
+      <th>direction</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>145</th>
+      <td>2025-05-01</td>
+      <td>Sales</td>
+      <td>Travel</td>
+      <td>24,385.85</td>
+      <td>12,000.00</td>
+      <td>12,385.85</td>
+      <td>+103%</td>
+      <td>unfavourable</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<blockquote>
+<p><strong>Check your understanding 3</strong></p>
+<p>A colleague colours every negative variance red "because negative numbers are bad". On an expense report, what will that chart tell the reader, and why is it wrong?</p>
+</blockquote>
+<hr />
+<h2 id="part-7-reconciliation-checks">Part 7: Reconciliation checks<a class="headerlink" href="#part-7-reconciliation-checks" title="Permanent link">&para;</a></h2>
+<p>A comparison table is only useful if it still adds up to its sources. Run these checks <strong>every time</strong> you build one, and keep the output as evidence.</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">reconcile</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="n">label</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Compare a variance table with the two source tables and print PASS or FAIL for each check.&quot;&quot;&quot;</span>
+    <span class="n">all_keys</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">actuals</span><span class="p">[</span><span class="n">KEY</span><span class="p">],</span> <span class="n">budget</span><span class="p">[</span><span class="n">KEY</span><span class="p">]])</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">()</span>
+    <span class="n">checks</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">(</span><span class="s2">&quot;One row per (month, department, account)&quot;</span><span class="p">,</span> <span class="ow">not</span> <span class="n">table</span><span class="o">.</span><span class="n">duplicated</span><span class="p">(</span><span class="n">KEY</span><span class="p">)</span><span class="o">.</span><span class="n">any</span><span class="p">()),</span>
+        <span class="p">(</span><span class="s2">&quot;Every key from either source is present&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">table</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">all_keys</span><span class="p">)),</span>
+        <span class="p">(</span><span class="s2">&quot;Actual total = signed posting total&quot;</span><span class="p">,</span> <span class="nb">abs</span><span class="p">(</span><span class="n">table</span><span class="p">[</span><span class="s2">&quot;actual&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">-</span> <span class="n">actuals</span><span class="p">[</span><span class="s2">&quot;amount&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span> <span class="o">&lt;</span> <span class="mf">0.005</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;Budget total = total of unique budget cells&quot;</span><span class="p">,</span> <span class="nb">abs</span><span class="p">(</span><span class="n">table</span><span class="p">[</span><span class="s2">&quot;budget&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">-</span> <span class="n">budget</span><span class="p">[</span><span class="s2">&quot;budget&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span> <span class="o">&lt;</span> <span class="mf">0.005</span><span class="p">),</span>
+    <span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Reconciliation: </span><span class="si">{</span><span class="n">label</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  actual </span><span class="si">{</span><span class="n">table</span><span class="p">[</span><span class="s1">&#39;actual&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="si">:</span><span class="s2">,.2f</span><span class="si">}</span><span class="s2"> vs postings </span><span class="si">{</span><span class="n">actuals</span><span class="p">[</span><span class="s1">&#39;amount&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="si">:</span><span class="s2">,.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  budget </span><span class="si">{</span><span class="n">table</span><span class="p">[</span><span class="s1">&#39;budget&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="si">:</span><span class="s2">,.2f</span><span class="si">}</span><span class="s2"> vs budget cells </span><span class="si">{</span><span class="n">budget</span><span class="p">[</span><span class="s1">&#39;budget&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="si">:</span><span class="s2">,.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">ok</span> <span class="ow">in</span> <span class="n">checks</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  </span><span class="si">{</span><span class="s1">&#39;PASS&#39;</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">ok</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="s1">&#39;FAIL&#39;</span><span class="si">}</span><span class="s2">  </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+
+<span class="n">reconcile</span><span class="p">(</span><span class="n">var</span><span class="p">,</span> <span class="s2">&quot;aggregate first, then outer join&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Reconciliation: aggregate first, then outer join
+  actual 6,241,801.60 vs postings 6,241,801.60
+  budget 6,133,000.00 vs budget cells 6,133,000.00
+  PASS  One row per (month, department, account)
+  PASS  Every key from either source is present
+  PASS  Actual total = signed posting total
+  PASS  Budget total = total of unique budget cells
+</code></pre></div>
+<p>All four checks pass. Notice that <code>.sum()</code> skips the unknown budgets, so the budget total is the total of the cells that <strong>exist</strong>. Unknown is not added as zero; it is simply not there.</p>
+<blockquote>
+<p><strong>Check your understanding 4</strong></p>
+<p>Which of the four checks would have caught the naive join from Part 3? Which would catch an inner join?</p>
+</blockquote>
+<hr />
+<h2 id="part-8-materiality-using-amount-and-percentage">Part 8: Materiality, using amount <strong>and</strong> percentage<a class="headerlink" href="#part-8-materiality-using-amount-and-percentage" title="Permanent link">&para;</a></h2>
+<p>Neither number alone tells you what matters:</p>
+<ul>
+<li>A <strong>large amount</strong> can be a <strong>small %</strong> of a very large budget (salaries).</li>
+<li>A <strong>large %</strong> can be a <strong>tiny amount</strong> on a small budget.</li>
+</ul>
+<p>A common review rule uses both. The thresholds are <strong>business choices</strong> agreed with finance, not statistics. Here: flag a cell if the variance is at least 5,000 currency units either way, <strong>or</strong> at least 25% of budget <strong>and</strong> at least 1,000 currency units.</p>
+<div class="highlight"><pre><span></span><code><span class="n">AMOUNT_LIMIT</span> <span class="o">=</span> <span class="mi">5000</span>
+<span class="n">PCT_LIMIT</span> <span class="o">=</span> <span class="mf">0.25</span>
+<span class="n">MIN_AMOUNT_FOR_PCT</span> <span class="o">=</span> <span class="mi">1000</span>
+
+<span class="n">big_amount</span> <span class="o">=</span> <span class="n">var</span><span class="p">[</span><span class="s2">&quot;variance&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">abs</span><span class="p">()</span> <span class="o">&gt;=</span> <span class="n">AMOUNT_LIMIT</span>
+<span class="n">big_pct</span> <span class="o">=</span> <span class="p">(</span><span class="n">var</span><span class="p">[</span><span class="s2">&quot;variance_pct&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">abs</span><span class="p">()</span> <span class="o">&gt;=</span> <span class="n">PCT_LIMIT</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">var</span><span class="p">[</span><span class="s2">&quot;variance&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">abs</span><span class="p">()</span> <span class="o">&gt;=</span> <span class="n">MIN_AMOUNT_FOR_PCT</span><span class="p">)</span>
+<span class="n">var</span><span class="p">[</span><span class="s2">&quot;review_flag&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">select</span><span class="p">([</span><span class="n">big_amount</span> <span class="o">&amp;</span> <span class="n">big_pct</span><span class="p">,</span> <span class="n">big_amount</span><span class="p">,</span> <span class="n">big_pct</span><span class="p">],</span>
+                               <span class="p">[</span><span class="s2">&quot;amount and %&quot;</span><span class="p">,</span> <span class="s2">&quot;amount&quot;</span><span class="p">,</span> <span class="s2">&quot;%&quot;</span><span class="p">],</span> <span class="n">default</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+
+<span class="n">flagged</span> <span class="o">=</span> <span class="n">var</span><span class="p">[</span><span class="n">var</span><span class="p">[</span><span class="s2">&quot;review_flag&quot;</span><span class="p">]</span> <span class="o">!=</span> <span class="s2">&quot;&quot;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Cells flagged:&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">flagged</span><span class="p">),</span> <span class="s2">&quot;of&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">var</span><span class="p">))</span>
+
+<span class="n">known</span> <span class="o">=</span> <span class="n">var</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;variance_pct&quot;</span><span class="p">])</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">known</span><span class="p">[</span><span class="s2">&quot;variance_pct&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">100</span><span class="p">,</span> <span class="n">known</span><span class="p">[</span><span class="s2">&quot;variance&quot;</span><span class="p">],</span> <span class="n">s</span><span class="o">=</span><span class="mi">14</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#b8b6b0&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Not flagged&quot;</span><span class="p">)</span>
+<span class="c1"># Purple, green and black here mark review flags, not favourability (blue and orange are kept for that).</span>
+<span class="k">for</span> <span class="n">flag</span><span class="p">,</span> <span class="n">colour</span><span class="p">,</span> <span class="n">marker</span> <span class="ow">in</span> <span class="p">[(</span><span class="s2">&quot;amount&quot;</span><span class="p">,</span> <span class="s2">&quot;#7a5195&quot;</span><span class="p">,</span> <span class="s2">&quot;o&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;%&quot;</span><span class="p">,</span> <span class="s2">&quot;#1baf7a&quot;</span><span class="p">,</span> <span class="s2">&quot;s&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;amount and %&quot;</span><span class="p">,</span> <span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="s2">&quot;D&quot;</span><span class="p">)]:</span>
+    <span class="n">part</span> <span class="o">=</span> <span class="n">known</span><span class="p">[</span><span class="n">known</span><span class="p">[</span><span class="s2">&quot;review_flag&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">flag</span><span class="p">]</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">part</span><span class="p">[</span><span class="s2">&quot;variance_pct&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">100</span><span class="p">,</span> <span class="n">part</span><span class="p">[</span><span class="s2">&quot;variance&quot;</span><span class="p">],</span> <span class="n">s</span><span class="o">=</span><span class="mi">36</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">colour</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="n">marker</span><span class="p">,</span>
+               <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;Flagged: </span><span class="si">{</span><span class="n">flag</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.8</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.8</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Monthly cells: variance in currency units against variance %&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Variance </span><span class="si">% o</span><span class="s2">f budget (right = over budget)&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Variance (currency units)&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Cells flagged: 17 of 438
+</code></pre></div>
+<p><img alt="png" src="../10_finance_budget_lecture_files/10_finance_budget_lecture_25_1.png" /></p>
+<p>Read the chart above. Salary cells sit high or low on the vertical axis but close to zero %; small training or travel cells can sit far to the right with modest amounts. Each flagged group needs a different follow-up question.</p>
+<blockquote>
+<p><strong>Check your understanding 5</strong></p>
+<p>Name one cell that the amount rule flags but the % rule does not, and one the other way round (use the chart, then the table in the next cell). Why would a finance partner want to see both?</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="n">ranked</span> <span class="o">=</span> <span class="n">flagged</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s2">&quot;variance&quot;</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="nb">abs</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)[</span>
+    <span class="p">[</span><span class="s2">&quot;month&quot;</span><span class="p">,</span> <span class="s2">&quot;department&quot;</span><span class="p">,</span> <span class="s2">&quot;account&quot;</span><span class="p">,</span> <span class="s2">&quot;actual&quot;</span><span class="p">,</span> <span class="s2">&quot;budget&quot;</span><span class="p">,</span> <span class="s2">&quot;variance&quot;</span><span class="p">,</span> <span class="s2">&quot;variance_pct&quot;</span><span class="p">,</span> <span class="s2">&quot;review_flag&quot;</span><span class="p">]]</span>
+<span class="n">ranked</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">variance_pct</span><span class="o">=</span><span class="n">ranked</span><span class="p">[</span><span class="s2">&quot;variance_pct&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{:+.0%}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">))</span>
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>month</th>
+      <th>department</th>
+      <th>account</th>
+      <th>actual</th>
+      <th>budget</th>
+      <th>variance</th>
+      <th>variance_pct</th>
+      <th>review_flag</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>145</th>
+      <td>2025-05-01</td>
+      <td>Sales</td>
+      <td>Travel</td>
+      <td>24,385.85</td>
+      <td>12,000.00</td>
+      <td>12,385.85</td>
+      <td>+103%</td>
+      <td>amount and %</td>
+    </tr>
+    <tr>
+      <th>120</th>
+      <td>2025-04-01</td>
+      <td>Operations</td>
+      <td>Salaries and wages</td>
+      <td>133,955.61</td>
+      <td>124,000.00</td>
+      <td>9,955.61</td>
+      <td>+8%</td>
+      <td>amount</td>
+    </tr>
+    <tr>
+      <th>320</th>
+      <td>2025-09-01</td>
+      <td>People</td>
+      <td>Training</td>
+      <td>12,300.00</td>
+      <td>4,100.00</td>
+      <td>8,200.00</td>
+      <td>+200%</td>
+      <td>amount and %</td>
+    </tr>
+    <tr>
+      <th>181</th>
+      <td>2025-06-01</td>
+      <td>Sales</td>
+      <td>Travel</td>
+      <td>2,274.94</td>
+      <td>9,200.00</td>
+      <td>-6,925.06</td>
+      <td>-75%</td>
+      <td>amount and %</td>
+    </tr>
+    <tr>
+      <th>84</th>
+      <td>2025-03-01</td>
+      <td>Operations</td>
+      <td>Salaries and wages</td>
+      <td>130,080.34</td>
+      <td>124,000.00</td>
+      <td>6,080.34</td>
+      <td>+5%</td>
+      <td>amount</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>2025-01-01</td>
+      <td>Operations</td>
+      <td>Salaries and wages</td>
+      <td>129,805.69</td>
+      <td>124,000.00</td>
+      <td>5,805.69</td>
+      <td>+5%</td>
+      <td>amount</td>
+    </tr>
+    <tr>
+      <th>271</th>
+      <td>2025-08-01</td>
+      <td>Technology</td>
+      <td>Salaries and wages</td>
+      <td>65,634.86</td>
+      <td>71,000.00</td>
+      <td>-5,365.14</td>
+      <td>-8%</td>
+      <td>amount</td>
+    </tr>
+    <tr>
+      <th>200</th>
+      <td>2025-06-01</td>
+      <td>Technology</td>
+      <td>Software subscriptions</td>
+      <td>19,752.36</td>
+      <td>15,400.00</td>
+      <td>4,352.36</td>
+      <td>+28%</td>
+      <td>%</td>
+    </tr>
+    <tr>
+      <th>421</th>
+      <td>2025-12-01</td>
+      <td>Technology</td>
+      <td>Software subscriptions</td>
+      <td>19,367.46</td>
+      <td>15,400.00</td>
+      <td>3,967.46</td>
+      <td>+26%</td>
+      <td>%</td>
+    </tr>
+    <tr>
+      <th>164</th>
+      <td>2025-05-01</td>
+      <td>Technology</td>
+      <td>Software subscriptions</td>
+      <td>19,326.58</td>
+      <td>15,400.00</td>
+      <td>3,926.58</td>
+      <td>+25%</td>
+      <td>%</td>
+    </tr>
+    <tr>
+      <th>128</th>
+      <td>2025-04-01</td>
+      <td>Technology</td>
+      <td>Software subscriptions</td>
+      <td>19,284.96</td>
+      <td>15,400.00</td>
+      <td>3,884.96</td>
+      <td>+25%</td>
+      <td>%</td>
+    </tr>
+    <tr>
+      <th>356</th>
+      <td>2025-10-01</td>
+      <td>People</td>
+      <td>Professional services</td>
+      <td>1,221.66</td>
+      <td>3,100.00</td>
+      <td>-1,878.34</td>
+      <td>-61%</td>
+      <td>%</td>
+    </tr>
+    <tr>
+      <th>301</th>
+      <td>2025-09-01</td>
+      <td>Marketing</td>
+      <td>Training</td>
+      <td>0.00</td>
+      <td>1,300.00</td>
+      <td>-1,300.00</td>
+      <td>-100%</td>
+      <td>%</td>
+    </tr>
+    <tr>
+      <th>338</th>
+      <td>2025-10-01</td>
+      <td>Marketing</td>
+      <td>Training</td>
+      <td>0.00</td>
+      <td>1,300.00</td>
+      <td>-1,300.00</td>
+      <td>-100%</td>
+      <td>%</td>
+    </tr>
+    <tr>
+      <th>375</th>
+      <td>2025-11-01</td>
+      <td>Marketing</td>
+      <td>Training</td>
+      <td>0.00</td>
+      <td>1,300.00</td>
+      <td>-1,300.00</td>
+      <td>-100%</td>
+      <td>%</td>
+    </tr>
+    <tr>
+      <th>412</th>
+      <td>2025-12-01</td>
+      <td>Marketing</td>
+      <td>Training</td>
+      <td>0.00</td>
+      <td>1,300.00</td>
+      <td>-1,300.00</td>
+      <td>-100%</td>
+      <td>%</td>
+    </tr>
+    <tr>
+      <th>264</th>
+      <td>2025-08-01</td>
+      <td>Marketing</td>
+      <td>Training</td>
+      <td>0.00</td>
+      <td>1,300.00</td>
+      <td>-1,300.00</td>
+      <td>-100%</td>
+      <td>%</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<hr />
+<h2 id="part-9-never-average-percentages">Part 9: Never average percentages<a class="headerlink" href="#part-9-never-average-percentages" title="Permanent link">&para;</a></h2>
+<p>What is the company's overall variance %? Three colleagues give three answers.</p>
+<blockquote>
+<p><strong>Predict, then reveal</strong></p>
+<p>Will "the average of all the cells' variance %" be close to the variance % computed from total actual and total budget?</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="n">comparable</span> <span class="o">=</span> <span class="n">var</span><span class="p">[</span><span class="n">var</span><span class="p">[</span><span class="s2">&quot;budget_status&quot;</span><span class="p">]</span> <span class="o">!=</span> <span class="s2">&quot;unknown budget&quot;</span><span class="p">]</span>      <span class="c1"># cells with a known budget (including zero)</span>
+<span class="n">unknown</span> <span class="o">=</span> <span class="n">var</span><span class="p">[</span><span class="n">var</span><span class="p">[</span><span class="s2">&quot;budget_status&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;unknown budget&quot;</span><span class="p">]</span>
+
+<span class="n">total_actual</span> <span class="o">=</span> <span class="n">comparable</span><span class="p">[</span><span class="s2">&quot;actual&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">total_budget</span> <span class="o">=</span> <span class="n">comparable</span><span class="p">[</span><span class="s2">&quot;budget&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">monthly</span> <span class="o">=</span> <span class="n">comparable</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;month&quot;</span><span class="p">)[[</span><span class="s2">&quot;actual&quot;</span><span class="p">,</span> <span class="s2">&quot;budget&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Comparable scope: actual </span><span class="si">{</span><span class="n">total_actual</span><span class="si">:</span><span class="s2">,.2f</span><span class="si">}</span><span class="s2"> | budget </span><span class="si">{</span><span class="n">total_budget</span><span class="si">:</span><span class="s2">,.2f</span><span class="si">}</span><span class="s2"> | &quot;</span>
+      <span class="sa">f</span><span class="s2">&quot;variance </span><span class="si">{</span><span class="n">total_actual</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">total_budget</span><span class="si">:</span><span class="s2">+,.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  Variance % from totals (correct):      </span><span class="si">{</span><span class="p">(</span><span class="n">total_actual</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">total_budget</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">total_budget</span><span class="si">:</span><span class="s2">+.1%</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  Average of the 12 monthly %:           </span><span class="si">{</span><span class="p">((</span><span class="n">monthly</span><span class="p">[</span><span class="s1">&#39;actual&#39;</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">monthly</span><span class="p">[</span><span class="s1">&#39;budget&#39;</span><span class="p">])</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">monthly</span><span class="p">[</span><span class="s1">&#39;budget&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="si">:</span><span class="s2">+.1%</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  Average of every cell&#39;s %:             </span><span class="si">{</span><span class="n">comparable</span><span class="p">[</span><span class="s1">&#39;variance_pct&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="si">:</span><span class="s2">+.1%</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Reported separately, actuals with unknown budget: </span><span class="si">{</span><span class="n">unknown</span><span class="p">[</span><span class="s1">&#39;actual&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="si">:</span><span class="s2">,.2f</span><span class="si">}</span><span class="s2"> &quot;</span>
+      <span class="sa">f</span><span class="s2">&quot;(</span><span class="si">{</span><span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">unknown</span><span class="p">[</span><span class="s1">&#39;account&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()))</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">unknown</span><span class="p">)</span><span class="si">}</span><span class="s2"> cells)&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Comparable scope: actual 6,208,423.43 | budget 6,133,000.00 | variance +75,423.43
+  Variance % from totals (correct):      +1.2%
+  Average of the 12 monthly %:           +1.2%
+  Average of every cell&#39;s %:             -0.2%
+Reported separately, actuals with unknown budget: 33,378.17 (Cloud hosting, 6 cells)
+</code></pre></div>
+<p>Averaging cell percentages gives a tiny training budget the same weight as a large salary budget, so a few small cells drag the "average" far from the truth. Averaging monthly percentages is closer only because months have similar budgets; it is still the wrong method.</p>
+<blockquote>
+<p><strong>Rules for a total variance %</strong></p>
+<ol>
+<li>Add up actual and budget over the <strong>comparable scope</strong> (cells with a known budget).</li>
+<li>Compute the % from those totals.</li>
+<li>Report the <strong>unknown-budget actuals separately</strong>, with their amount. Never treat their budget as zero, and never leave them out silently.</li>
+</ol>
+</blockquote>
+<hr />
+<h2 id="part-10-credits-reversals-and-timing">Part 10: Credits, reversals and timing<a class="headerlink" href="#part-10-credits-reversals-and-timing" title="Permanent link">&para;</a></h2>
+<p>Look at Sales travel month by month.</p>
+<blockquote>
+<p><strong>Predict, then reveal</strong></p>
+<p>May was flagged as a large overspend. Would you call Sales into a meeting about travel discipline? What might June show?</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="n">sales_travel</span> <span class="o">=</span> <span class="n">var</span><span class="p">[(</span><span class="n">var</span><span class="p">[</span><span class="s2">&quot;department&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Sales&quot;</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">var</span><span class="p">[</span><span class="s2">&quot;account&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Travel&quot;</span><span class="p">)]</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">&quot;month&quot;</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">sales_travel</span><span class="p">[[</span><span class="s2">&quot;postings&quot;</span><span class="p">,</span> <span class="s2">&quot;actual&quot;</span><span class="p">,</span> <span class="s2">&quot;budget&quot;</span><span class="p">,</span> <span class="s2">&quot;variance&quot;</span><span class="p">,</span> <span class="s2">&quot;direction&quot;</span><span class="p">]])</span>
+
+<span class="n">may_june</span> <span class="o">=</span> <span class="n">sales_travel</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s2">&quot;2025-05-01&quot;</span><span class="p">:</span><span class="s2">&quot;2025-06-01&quot;</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;actual&quot;</span><span class="p">,</span> <span class="s2">&quot;budget&quot;</span><span class="p">,</span> <span class="s2">&quot;variance&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;May + June together: actual </span><span class="si">{</span><span class="n">may_june</span><span class="p">[</span><span class="s1">&#39;actual&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">,.2f</span><span class="si">}</span><span class="s2"> | budget </span><span class="si">{</span><span class="n">may_june</span><span class="p">[</span><span class="s1">&#39;budget&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">,.2f</span><span class="si">}</span><span class="s2"> | &quot;</span>
+      <span class="sa">f</span><span class="s2">&quot;variance </span><span class="si">{</span><span class="n">may_june</span><span class="p">[</span><span class="s1">&#39;variance&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">+,.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>postings</th>
+      <th>actual</th>
+      <th>budget</th>
+      <th>variance</th>
+      <th>direction</th>
+    </tr>
+    <tr>
+      <th>month</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2025-01-01</th>
+      <td>6</td>
+      <td>6,843.41</td>
+      <td>6,400.00</td>
+      <td>443.41</td>
+      <td>unfavourable</td>
+    </tr>
+    <tr>
+      <th>2025-02-01</th>
+      <td>3</td>
+      <td>6,959.24</td>
+      <td>7,400.00</td>
+      <td>-440.76</td>
+      <td>favourable</td>
+    </tr>
+    <tr>
+      <th>2025-03-01</th>
+      <td>2</td>
+      <td>10,684.76</td>
+      <td>10,100.00</td>
+      <td>584.76</td>
+      <td>unfavourable</td>
+    </tr>
+    <tr>
+      <th>2025-04-01</th>
+      <td>1</td>
+      <td>10,213.47</td>
+      <td>11,000.00</td>
+      <td>-786.53</td>
+      <td>favourable</td>
+    </tr>
+    <tr>
+      <th>2025-05-01</th>
+      <td>6</td>
+      <td>24,385.85</td>
+      <td>12,000.00</td>
+      <td>12,385.85</td>
+      <td>unfavourable</td>
+    </tr>
+    <tr>
+      <th>2025-06-01</th>
+      <td>4</td>
+      <td>2,274.94</td>
+      <td>9,200.00</td>
+      <td>-6,925.06</td>
+      <td>favourable</td>
+    </tr>
+    <tr>
+      <th>2025-07-01</th>
+      <td>5</td>
+      <td>5,557.23</td>
+      <td>5,500.00</td>
+      <td>57.23</td>
+      <td>unfavourable</td>
+    </tr>
+    <tr>
+      <th>2025-08-01</th>
+      <td>3</td>
+      <td>5,668.55</td>
+      <td>5,500.00</td>
+      <td>168.55</td>
+      <td>unfavourable</td>
+    </tr>
+    <tr>
+      <th>2025-09-01</th>
+      <td>5</td>
+      <td>11,940.45</td>
+      <td>11,000.00</td>
+      <td>940.45</td>
+      <td>unfavourable</td>
+    </tr>
+    <tr>
+      <th>2025-10-01</th>
+      <td>6</td>
+      <td>11,117.40</td>
+      <td>12,000.00</td>
+      <td>-882.60</td>
+      <td>favourable</td>
+    </tr>
+    <tr>
+      <th>2025-11-01</th>
+      <td>3</td>
+      <td>10,931.57</td>
+      <td>10,100.00</td>
+      <td>831.57</td>
+      <td>unfavourable</td>
+    </tr>
+    <tr>
+      <th>2025-12-01</th>
+      <td>1</td>
+      <td>9,909.63</td>
+      <td>10,100.00</td>
+      <td>-190.37</td>
+      <td>favourable</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="highlight"><pre><span></span><code>May + June together: actual 26,660.79 | budget 21,200.00 | variance +5,460.79
+</code></pre></div>
+<p>May looks badly over budget and June looks well under. Taken together, most of the swing disappears. The postings explain why:</p>
+<div class="highlight"><pre><span></span><code><span class="n">same_content</span> <span class="o">=</span> <span class="p">[</span><span class="n">c</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">actuals</span><span class="o">.</span><span class="n">columns</span> <span class="k">if</span> <span class="n">c</span> <span class="o">!=</span> <span class="s2">&quot;posting_id&quot;</span><span class="p">]</span>
+<span class="n">duplicates</span> <span class="o">=</span> <span class="n">actuals</span><span class="p">[</span><span class="n">actuals</span><span class="o">.</span><span class="n">duplicated</span><span class="p">(</span><span class="n">same_content</span><span class="p">,</span> <span class="n">keep</span><span class="o">=</span><span class="kc">False</span><span class="p">)]</span>
+<span class="n">reversal</span> <span class="o">=</span> <span class="n">actuals</span><span class="p">[</span><span class="n">actuals</span><span class="p">[</span><span class="s2">&quot;posting_type&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;reversal&quot;</span><span class="p">]</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">duplicates</span><span class="p">,</span> <span class="n">reversal</span><span class="p">])[[</span><span class="s2">&quot;posting_id&quot;</span><span class="p">,</span> <span class="s2">&quot;posting_date&quot;</span><span class="p">,</span> <span class="s2">&quot;month&quot;</span><span class="p">,</span> <span class="s2">&quot;department&quot;</span><span class="p">,</span> <span class="s2">&quot;account&quot;</span><span class="p">,</span>
+                                   <span class="s2">&quot;amount&quot;</span><span class="p">,</span> <span class="s2">&quot;posting_type&quot;</span><span class="p">,</span> <span class="s2">&quot;reference_posting_id&quot;</span><span class="p">,</span> <span class="s2">&quot;description&quot;</span><span class="p">]]</span>
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>posting_id</th>
+      <th>posting_date</th>
+      <th>month</th>
+      <th>department</th>
+      <th>account</th>
+      <th>amount</th>
+      <th>posting_type</th>
+      <th>reference_posting_id</th>
+      <th>description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>551</th>
+      <td>P25-00552</td>
+      <td>2025-05-28</td>
+      <td>2025-05-01</td>
+      <td>Sales</td>
+      <td>Travel</td>
+      <td>6,500.00</td>
+      <td>expense</td>
+      <td></td>
+      <td>Conference travel invoice</td>
+    </tr>
+    <tr>
+      <th>552</th>
+      <td>P25-00553</td>
+      <td>2025-05-28</td>
+      <td>2025-05-01</td>
+      <td>Sales</td>
+      <td>Travel</td>
+      <td>6,500.00</td>
+      <td>expense</td>
+      <td></td>
+      <td>Conference travel invoice</td>
+    </tr>
+    <tr>
+      <th>610</th>
+      <td>P25-00611</td>
+      <td>2025-06-09</td>
+      <td>2025-06-01</td>
+      <td>Sales</td>
+      <td>Travel</td>
+      <td>-6,500.00</td>
+      <td>reversal</td>
+      <td>P25-00553</td>
+      <td>Reversal of duplicated May conference invoice</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p>One conference invoice was posted <strong>twice</strong> in May (two rows identical apart from their <code>posting_id</code>), and the second copy was <strong>reversed</strong> in June. So May's "overspend" and June's "saving" are the <strong>same booking error</strong>, not two months of behaviour.</p>
+<p>The supplier credit we saw in Part 2 works the same way: it lowers that month's actual and makes the line look favourable, but it corrects an earlier overcharge. It is not evidence that the department <strong>operated</strong> more cheaply.</p>
+<blockquote>
+<p><strong>Check your understanding 6</strong></p>
+<p>A department head says: "We were under budget in June, so we managed travel well." Using the output above, write a two-sentence reply.</p>
+</blockquote>
+<hr />
+<h2 id="part-11-worked-case-the-annual-department-account-view">Part 11: Worked case — the annual department × account view<a class="headerlink" href="#part-11-worked-case-the-annual-department-account-view" title="Permanent link">&para;</a></h2>
+<p>We now build the view the finance partner asked for: for each department and account, the year's actual, budget, variance and variance %, using <strong>comparable cells only</strong>, sorted by the size of the variance. Then a chart with colours that are safe for colour-blind readers <strong>and</strong> labelled, so nobody has to guess what blue or orange mean.</p>
+<div class="highlight"><pre><span></span><code><span class="n">view</span> <span class="o">=</span> <span class="n">comparable</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;department&quot;</span><span class="p">,</span> <span class="s2">&quot;account&quot;</span><span class="p">])[[</span><span class="s2">&quot;actual&quot;</span><span class="p">,</span> <span class="s2">&quot;budget&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">view</span><span class="p">[</span><span class="s2">&quot;variance&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">view</span><span class="p">[</span><span class="s2">&quot;actual&quot;</span><span class="p">]</span> <span class="o">-</span> <span class="n">view</span><span class="p">[</span><span class="s2">&quot;budget&quot;</span><span class="p">]</span>
+<span class="n">view</span><span class="p">[</span><span class="s2">&quot;variance_pct&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">view</span><span class="p">[</span><span class="s2">&quot;budget&quot;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">,</span> <span class="n">view</span><span class="p">[</span><span class="s2">&quot;variance&quot;</span><span class="p">]</span> <span class="o">/</span> <span class="n">view</span><span class="p">[</span><span class="s2">&quot;budget&quot;</span><span class="p">],</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
+<span class="n">view</span> <span class="o">=</span> <span class="n">view</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s2">&quot;variance&quot;</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="nb">abs</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Department x account lines: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">view</span><span class="p">)</span><span class="si">}</span><span class="s2"> | actual </span><span class="si">{</span><span class="n">view</span><span class="p">[</span><span class="s1">&#39;actual&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="si">:</span><span class="s2">,.2f</span><span class="si">}</span><span class="s2"> &quot;</span>
+      <span class="sa">f</span><span class="s2">&quot;| budget </span><span class="si">{</span><span class="n">view</span><span class="p">[</span><span class="s1">&#39;budget&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="si">:</span><span class="s2">,.2f</span><span class="si">}</span><span class="s2">  (should equal the comparable totals in Part 9)&quot;</span><span class="p">)</span>
+<span class="n">view</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">variance_pct</span><span class="o">=</span><span class="n">view</span><span class="p">[</span><span class="s2">&quot;variance_pct&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{:+.1%}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">))</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Department x account lines: 36 | actual 6,208,423.43 | budget 6,133,000.00  (should equal the comparable totals in Part 9)
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th></th>
+      <th>actual</th>
+      <th>budget</th>
+      <th>variance</th>
+      <th>variance_pct</th>
+    </tr>
+    <tr>
+      <th>department</th>
+      <th>account</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Operations</th>
+      <th>Salaries and wages</th>
+      <td>1,528,096.20</td>
+      <td>1,488,000.00</td>
+      <td>40,096.20</td>
+      <td>+2.7%</td>
+    </tr>
+    <tr>
+      <th>Technology</th>
+      <th>Software subscriptions</th>
+      <td>215,898.99</td>
+      <td>184,800.00</td>
+      <td>31,098.99</td>
+      <td>+16.8%</td>
+    </tr>
+    <tr>
+      <th>Sales</th>
+      <th>Salaries and wages</th>
+      <td>1,006,341.26</td>
+      <td>984,000.00</td>
+      <td>22,341.26</td>
+      <td>+2.3%</td>
+    </tr>
+    <tr>
+      <th>Marketing</th>
+      <th>Salaries and wages</th>
+      <td>480,164.76</td>
+      <td>492,000.00</td>
+      <td>-11,835.24</td>
+      <td>-2.4%</td>
+    </tr>
+    <tr>
+      <th>Technology</th>
+      <th>Salaries and wages</th>
+      <td>842,062.76</td>
+      <td>852,000.00</td>
+      <td>-9,937.24</td>
+      <td>-1.2%</td>
+    </tr>
+    <tr>
+      <th>People</th>
+      <th>Training</th>
+      <td>57,876.64</td>
+      <td>49,200.00</td>
+      <td>8,676.64</td>
+      <td>+17.6%</td>
+    </tr>
+    <tr>
+      <th>Finance and Admin</th>
+      <th>Salaries and wages</th>
+      <td>363,578.20</td>
+      <td>372,000.00</td>
+      <td>-8,421.80</td>
+      <td>-2.3%</td>
+    </tr>
+    <tr>
+      <th>Marketing</th>
+      <th>Training</th>
+      <td>9,044.44</td>
+      <td>15,600.00</td>
+      <td>-6,555.56</td>
+      <td>-42.0%</td>
+    </tr>
+    <tr>
+      <th>Sales</th>
+      <th>Travel</th>
+      <td>116,486.50</td>
+      <td>110,300.00</td>
+      <td>6,186.50</td>
+      <td>+5.6%</td>
+    </tr>
+    <tr>
+      <th>Operations</th>
+      <th>Facilities</th>
+      <td>251,183.64</td>
+      <td>246,000.00</td>
+      <td>5,183.64</td>
+      <td>+2.1%</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="highlight"><pre><span></span><code><span class="n">top</span> <span class="o">=</span> <span class="n">view</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span><span class="o">.</span><span class="n">iloc</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>                   <span class="c1"># largest at the top of the chart</span>
+<span class="n">labels</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">d</span><span class="si">}</span><span class="s2"> | </span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">d</span><span class="p">,</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">top</span><span class="o">.</span><span class="n">index</span><span class="p">]</span>
+<span class="n">colours</span> <span class="o">=</span> <span class="p">[</span><span class="n">UNFAVOURABLE</span> <span class="k">if</span> <span class="n">v</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="n">FAVOURABLE</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">top</span><span class="p">[</span><span class="s2">&quot;variance&quot;</span><span class="p">]]</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mf">5.5</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">barh</span><span class="p">(</span><span class="n">labels</span><span class="p">,</span> <span class="n">top</span><span class="p">[</span><span class="s2">&quot;variance&quot;</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="n">colours</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.8</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">y</span><span class="p">,</span> <span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">p</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">top</span><span class="p">[</span><span class="s2">&quot;variance&quot;</span><span class="p">],</span> <span class="n">top</span><span class="p">[</span><span class="s2">&quot;variance_pct&quot;</span><span class="p">])):</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot; </span><span class="si">{</span><span class="n">v</span><span class="si">:</span><span class="s2">+,.0f</span><span class="si">}</span><span class="s2"> (</span><span class="si">{</span><span class="n">p</span><span class="si">:</span><span class="s2">+.0%</span><span class="si">}</span><span class="s2">) &quot;</span> <span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s2">&quot;center&quot;</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s2">&quot;left&quot;</span> <span class="k">if</span> <span class="n">v</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="s2">&quot;right&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Largest annual expense variances, 2025 (comparable budget cells)&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Variance = actual − budget (currency units)&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">handles</span><span class="o">=</span><span class="p">[</span><span class="n">plt</span><span class="o">.</span><span class="n">Rectangle</span><span class="p">((</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">UNFAVOURABLE</span><span class="p">),</span>
+                   <span class="n">plt</span><span class="o">.</span><span class="n">Rectangle</span><span class="p">((</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">FAVOURABLE</span><span class="p">)],</span>
+          <span class="n">labels</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Over budget (unfavourable)&quot;</span><span class="p">,</span> <span class="s2">&quot;Under budget (favourable)&quot;</span><span class="p">],</span> <span class="n">loc</span><span class="o">=</span><span class="s2">&quot;lower right&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">margins</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mf">0.25</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+<p><img alt="png" src="../10_finance_budget_lecture_files/10_finance_budget_lecture_36_0.png" /></p>
+<div class="highlight"><pre><span></span><code><span class="n">unknown_total</span> <span class="o">=</span> <span class="n">unknown</span><span class="p">[</span><span class="s2">&quot;actual&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">top_line</span> <span class="o">=</span> <span class="n">view</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span>
+    <span class="sa">f</span><span class="s2">&quot;In 2025, comparable expenses were </span><span class="si">{</span><span class="n">total_actual</span><span class="si">:</span><span class="s2">,.0f</span><span class="si">}</span><span class="s2"> against a budget of </span><span class="si">{</span><span class="n">total_budget</span><span class="si">:</span><span class="s2">,.0f</span><span class="si">}</span><span class="s2">, &quot;</span>
+    <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="p">(</span><span class="n">total_actual</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">total_budget</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">total_budget</span><span class="si">:</span><span class="s2">+.1%</span><span class="si">}</span><span class="s2"> overall. &quot;</span>
+    <span class="sa">f</span><span class="s2">&quot;The largest line variance is </span><span class="si">{</span><span class="n">top_line</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">top_line</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="si">}</span><span class="s2"> at </span><span class="si">{</span><span class="n">view</span><span class="p">[</span><span class="s1">&#39;variance&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">:</span><span class="s2">+,.0f</span><span class="si">}</span><span class="s2"> &quot;</span>
+    <span class="sa">f</span><span class="s2">&quot;(</span><span class="si">{</span><span class="n">view</span><span class="p">[</span><span class="s1">&#39;variance_pct&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">:</span><span class="s2">+.1%</span><span class="si">}</span><span class="s2">). &quot;</span>
+    <span class="sa">f</span><span class="s2">&quot;A further </span><span class="si">{</span><span class="n">unknown_total</span><span class="si">:</span><span class="s2">,.0f</span><span class="si">}</span><span class="s2"> of </span><span class="si">{</span><span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">unknown</span><span class="p">[</span><span class="s1">&#39;account&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">())</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="si">}</span><span class="s2"> spending had no budget &quot;</span>
+    <span class="sa">f</span><span class="s2">&quot;and is reported separately.&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>In 2025, comparable expenses were 6,208,423 against a budget of 6,133,000, +1.2% overall. The largest line variance is Operations salaries and wages at +40,096 (+2.7%). A further 33,378 of cloud hosting spending had no budget and is reported separately.
+</code></pre></div>
+<p>The printed summary follows the rules of this lecture: totals recomputed from comparable cells, signed variances with the word "over" or "under", the unknown-budget spending named and sized, not hidden. The annual view still hides <strong>timing</strong>: a line can be close to budget for the year while one month was badly wrong, or the reverse. That is why the lab works with both the monthly and the annual views.</p>
+<blockquote>
+<p><strong>Check your understanding 7</strong></p>
+<p>Pick one line from the chart. Is it a candidate for the review list? What extra information (monthly pattern, number of postings, credits) would you look at before deciding?</p>
+</blockquote>
+<hr />
+<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Question</th>
+<th>Method</th>
+<th>Trap to avoid</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>What is one row?</td>
+<td>Check keys: <code>posting_id</code>; (month, department, account)</td>
+<td>Assuming two tables share a grain</td>
+</tr>
+<tr>
+<td>How do I combine actuals and budgets?</td>
+<td>Aggregate postings first, then outer join with <code>indicator</code> and <code>validate</code></td>
+<td>Joining postings to budgets (budget inflation); inner joins (lost cells)</td>
+</tr>
+<tr>
+<td>What if a budget is missing?</td>
+<td>Label it <strong>unknown</strong>; report its actuals separately</td>
+<td>Filling unknown budgets with 0</td>
+</tr>
+<tr>
+<td>Is a variance good or bad?</td>
+<td>Expense: positive = unfavourable</td>
+<td>Colouring every negative number red</td>
+</tr>
+<tr>
+<td>When does a % exist?</td>
+<td>Only when budget &gt; 0</td>
+<td>Dividing by zero budgets; 100% for budget-only lines without comment</td>
+</tr>
+<tr>
+<td>What is the total %?</td>
+<td>Recompute from totals of the comparable scope</td>
+<td>Averaging cell or monthly percentages</td>
+</tr>
+<tr>
+<td>What is material?</td>
+<td>Amount <strong>and</strong> %, with agreed thresholds</td>
+<td>Looking at only one of them</td>
+</tr>
+<tr>
+<td>Is a saving real?</td>
+<td>Inspect credits, reversals and duplicates; combine adjacent months</td>
+<td>Praising a reversal as good management</td>
+</tr>
+<tr>
+<td>Does the table add up?</td>
+<td>Reconcile actual and budget totals, keys and uniqueness</td>
+<td>Trusting a table that never errored</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="quiz">Quiz<a class="headerlink" href="#quiz" title="Permanent link">&para;</a></h2>
+<p>Answer these at the start of the next lecture, which opens the <strong>operations case</strong>: are orders delivered on time, and which carrier should we worry about? You do not need any operations knowledge; use common sense. Write short answers.</p>
+<ol>
+<li>A warehouse promised delivery within 3 days. 470 of 500 delivered orders arrived within 3 days. What is the on-time rate?</li>
+<li>Another 40 orders were shipped but have not arrived yet, and 10 of them are already past their promised date. Should they count in the on-time rate? What happens to the rate if you simply leave them out?</li>
+<li>Carrier A was on time for 49 of 50 shipments; carrier B for 4,700 of 5,000. Which result do you trust more, and why?</li>
+<li>Average delay is 1 day, but some customers wait two weeks. Which other number would you report to show the bad experiences?</li>
+<li>To combine two warehouses' on-time rates into one company rate, should you average the two rates or do something else?</li>
+<li>A dashboard shows on-time delivery improving after the team stopped recording orders that were cancelled for being late. What went wrong?</li>
+</ol>
+<hr />
+<h2 id="lab-briefing">Lab briefing<a class="headerlink" href="#lab-briefing" title="Permanent link">&para;</a></h2>
+<p>In the <strong>Lab</strong> you:</p>
+<ol>
+<li>Load the postings and budgets, and check keys and signs.</li>
+<li>Aggregate postings, outer-join to budgets with an indicator, and reconcile.</li>
+<li>Build a monthly variance table and find the top exceptions by amount and by %.</li>
+<li>Find the actual-only, budget-only and zero-budget cells.</li>
+<li>Solve the Sales travel May/June story from the postings.</li>
+<li>Draw a labelled, colour-blind-safe variance chart.</li>
+<li>Challenge: debug a colleague's three mistakes with before/after reconciliation, then choose three review priorities.</li>
+</ol>
+<p>Open the <a href="../10_finance_budget_lab/">Session 10 lab</a>.</p>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Copyright &copy; 2026 - Aayush Raj Regmi</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

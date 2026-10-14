@@ -1,0 +1,2473 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Session 12 lecture: Marketing: campaign evaluation - Data Analytics</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../stylesheets/readability.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Session 12 lecture: Marketing: campaign evaluation";
+        var mkdocs_page_input_path = "lectures/12_marketing_campaigns_lecture.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Data Analytics
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Getting Started</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../..#course-at-a-glance">Course at a glance</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../..#where-to-start">Where to start</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../..#how-we-will-practise">How we will practise</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Foundations</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../foundations/">Why Data Analytics Matters</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/#what-is-data-analytics">What is data analytics?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/#real-stories-where-data-changed-the-outcome">Real stories where data changed the outcome</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../foundations/#a-map-that-changed-how-we-think-about-disease-london-1854">A map that changed how we think about disease (London, 1854)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../foundations/#a-chart-that-reformed-hospitals-1850s">A chart that reformed hospitals (1850s)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../foundations/#winning-on-a-small-budget-baseball-2002">Winning on a small budget (baseball, 2002)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../foundations/#preparing-for-a-hurricane-retail-2004">Preparing for a hurricane (retail, 2004)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../foundations/#when-big-data-got-it-wrong-public-health-20082015">When big data got it wrong (public health, 2008–2015)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/#where-you-meet-analytics-every-day">Where you meet analytics every day</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/#why-presentation-is-part-of-analysis">Why presentation is part of analysis</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/#what-comes-next">What comes next</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../foundations/statistics-are-not-enough/">Statistics Are Not Enough</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/statistics-are-not-enough/#anscombes-quartet">Anscombe's quartet</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/statistics-are-not-enough/#the-datasaurus-dozen">The Datasaurus Dozen</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/statistics-are-not-enough/#what-this-means-at-work">What this means at work</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/statistics-are-not-enough/#try-it-yourself">Try it yourself</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../foundations/misleading-statistics/">How Statistics Can Mislead</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/misleading-statistics/#1-correlation-is-not-causation">1. Correlation is not causation</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/misleading-statistics/#2-simpsons-paradox-the-total-can-reverse-the-parts">2. Simpson's paradox: the total can reverse the parts</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/misleading-statistics/#3-misleading-axes">3. Misleading axes</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/misleading-statistics/#4-cherry-picked-time-windows">4. Cherry-picked time windows</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/misleading-statistics/#5-which-average">5. Which average?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/misleading-statistics/#6-percentages-without-the-base">6. Percentages without the base</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/misleading-statistics/#7-survivorship-bias">7. Survivorship bias</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/misleading-statistics/#a-checklist-for-any-number-you-are-shown">A checklist for any number you are shown</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/misleading-statistics/#try-it-yourself">Try it yourself</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../foundations/types-of-analysis/">Types of Analysis</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/types-of-analysis/#univariate-analysis-one-variable-at-a-time">Univariate analysis: one variable at a time</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/types-of-analysis/#bivariate-analysis-two-variables-together">Bivariate analysis: two variables together</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/types-of-analysis/#multivariate-analysis-three-or-more-variables">Multivariate analysis: three or more variables</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/types-of-analysis/#choosing-a-chart-quick-guide">Choosing a chart: quick guide</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/types-of-analysis/#try-it-yourself">Try it yourself</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../foundations/visual-design/">Designing Clear Visuals</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/visual-design/#the-data-ink-ratio">The data-ink ratio</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/visual-design/#pre-attentive-attributes-what-the-eye-sees-first">Pre-attentive attributes: what the eye sees first</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/visual-design/#gestalt-principles-how-we-group-things">Gestalt principles: how we group things</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/visual-design/#colour-with-purpose">Colour with purpose</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/visual-design/#a-clean-chart-checklist">A clean-chart checklist</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/visual-design/#try-it-yourself">Try it yourself</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../foundations/storytelling/">Storytelling with Data</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/storytelling/#the-challenger-disaster-right-data-wrong-presentation">The Challenger disaster: right data, wrong presentation</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../foundations/storytelling/#what-did-the-data-show">What did the data show?</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/storytelling/#what-makes-a-data-story">What makes a data story</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../foundations/storytelling/#start-with-the-big-idea">Start with the "big idea"</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/storytelling/#a-simple-process">A simple process</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/storytelling/#exploratory-versus-explanatory">Exploratory versus explanatory</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/storytelling/#try-it-yourself">Try it yourself</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Course</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../course/roadmap/">Learning Roadmap</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#how-each-session-works">How each session works</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#part-a-thinking-with-data">Part A: Thinking with data</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#part-b-describing-and-measuring">Part B: Describing and measuring</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#part-c-relationships-change-and-uncertainty">Part C: Relationships, change and uncertainty</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#part-d-business-cases">Part D: Business cases</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#part-e-communicating-and-bringing-it-together">Part E: Communicating and bringing it together</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#part-f-tableau">Part F: Tableau</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#how-you-will-be-assessed">How you will be assessed</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#extra-practice-topics">Extra practice topics</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../course/setup/">Setup and Practice</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/setup/#what-you-need">What you need</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/setup/#open-a-lesson-in-google-colab">Open a lesson in Google Colab</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/setup/#keep-your-data-safe">Keep your data safe</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/setup/#if-something-does-not-work">If something does not work</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/setup/#tableau-later">Tableau (later)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/setup/#keep-an-evidence-log">Keep an evidence log</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../course/workflow/">Analytical Workflow</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/workflow/#the-seven-steps">The seven steps</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../course/workflow/#1-business-question">1. Business question</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../course/workflow/#2-data-understanding">2. Data understanding</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../course/workflow/#3-preparation">3. Preparation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../course/workflow/#4-analysis">4. Analysis</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../course/workflow/#5-validation">5. Validation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../course/workflow/#6-visualization">6. Visualization</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../course/workflow/#7-recommendation">7. Recommendation</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/workflow/#a-worked-example">A worked example</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/workflow/#when-a-result-looks-wrong">When a result looks wrong</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/workflow/#association-is-not-causation">Association is not causation</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../cases/">Business Cases</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../cases/#the-five-core-cases">The five core cases</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../cases/#retail">Retail</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../cases/#finance">Finance</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../cases/#operations">Operations</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../cases/#marketing">Marketing</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../cases/#hr">HR</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../cases/#what-every-case-includes">What every case includes</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../cases/#combining-evidence-across-departments">Combining evidence across departments</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../cases/#additional-practice-choices">Additional practice choices</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Python Sessions</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" >Session 1: Why Data Analytics Matters</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../01_why_data_analytics_lecture/">Lecture</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lecture/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lecture/#part-1-what-is-data-analytics">Part 1: What is data analytics?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lecture/#part-2-real-stories-where-data-changed-the-outcome">Part 2: Real stories where data changed the outcome</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lecture/#part-3-from-question-to-recommendation">Part 3: From question to recommendation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lecture/#part-4-always-plot-your-data-anscombes-quartet">Part 4: Always plot your data — Anscombe's quartet</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lecture/#part-5-the-datasaurus-dozen">Part 5: The Datasaurus Dozen</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lecture/#part-6-a-preview-of-how-numbers-mislead">Part 6: A preview of how numbers mislead</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lecture/#summary">Summary</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lecture/#quiz">Quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lecture/#in-the-lab">In the Lab</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../01_why_data_analytics_lab/">Lab</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lab/#how-this-lab-works">How this lab works</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lab/#part-a-guided-practice-core">Part A: Guided practice (Core)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lab/#part-b-independent-tasks">Part B: Independent tasks</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lab/#part-c-challenge-the-datasaurus-dozen">Part C: Challenge — the Datasaurus Dozen</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lab/#quick-reference">Quick reference</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lab/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lab/#evidence-to-keep">Evidence to keep</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Session 2: Data, Grain and the DataFrame</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../02_data_and_grain_lecture/">Lecture</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lecture/#recap-quiz">Recap quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lecture/#what-you-will-be-able-to-explain">What you will be able to explain</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lecture/#part-1-levels-of-measurement">Part 1: Levels of measurement</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lecture/#part-2-tidy-data">Part 2: Tidy data</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lecture/#part-3-grain-and-keys">Part 3: Grain and keys</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lecture/#part-4-data-dictionaries">Part 4: Data dictionaries</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lecture/#part-5-data-quality-dimensions">Part 5: Data-quality dimensions</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lecture/#part-6-worked-case-the-superstore-order-lines">Part 6: Worked case — the Superstore order lines</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lecture/#summary">Summary</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lecture/#quiz">Quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lecture/#lab-briefing">Lab briefing</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../02_data_and_grain_lab/">Lab</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lab/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lab/#how-this-lab-works">How this lab works</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lab/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lab/#guided-practice">Guided practice</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lab/#independent-tasks">Independent tasks</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lab/#challenge">Challenge</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lab/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lab/#evidence-to-keep">Evidence to keep</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lab/#after-the-lab">After the lab</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Session 3: Cleaning and Preparing Data</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../03_cleaning_and_preparing_lecture/">Lecture</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lecture/#recap-quiz">Recap quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lecture/#what-you-will-be-able-to-explain">What you will be able to explain</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lecture/#part-1-raw-data-and-the-cleaning-log">Part 1: Raw data and the cleaning log</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lecture/#part-2-missing-data">Part 2: Missing data</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lecture/#part-3-duplicates">Part 3: Duplicates</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lecture/#part-4-outliers">Part 4: Outliers</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lecture/#part-5-text-numbers-dates-and-encodings">Part 5: Text, numbers, dates and encodings</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lecture/#part-6-joins-and-cardinality">Part 6: Joins and cardinality</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lecture/#part-7-reshaping">Part 7: Reshaping</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lecture/#part-8-worked-case-world-cup-attendance">Part 8: Worked case — World Cup attendance</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lecture/#summary">Summary</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lecture/#quiz">Quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lecture/#lab-briefing">Lab briefing</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../03_cleaning_and_preparing_lab/">Lab</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lab/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lab/#how-this-lab-works">How this lab works</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lab/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lab/#guided-practice">Guided practice</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lab/#independent-tasks">Independent tasks</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lab/#challenge">Challenge</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lab/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lab/#evidence-to-keep">Evidence to keep</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lab/#after-the-lab">After the lab</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Session 4: Descriptive Statistics and Distributions</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../04_descriptive_statistics_lecture/">Lecture</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lecture/#recap-quiz">Recap quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lecture/#what-you-will-be-able-to-explain">What you will be able to explain</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lecture/#part-1-the-centre-mean-median-and-mode">Part 1: The centre — mean, median and mode</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lecture/#part-2-spread-how-different-are-the-values">Part 2: Spread — how different are the values?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lecture/#part-3-shape-skew-and-long-tails">Part 3: Shape — skew and long tails</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lecture/#part-4-three-pictures-of-one-distribution">Part 4: Three pictures of one distribution</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lecture/#part-5-z-scores-and-the-normal-curve-as-a-reference">Part 5: z-scores and the normal curve as a reference</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lecture/#part-6-unusual-values-flag-do-not-delete">Part 6: Unusual values — flag, do not delete</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lecture/#part-7-worked-case-superstore-orders">Part 7: Worked case — Superstore orders</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lecture/#summary">Summary</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lecture/#quiz">Quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lecture/#lab-briefing">Lab briefing</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../04_descriptive_statistics_lab/">Lab</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lab/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lab/#how-this-lab-works">How this lab works</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lab/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lab/#guided-practice">Guided practice</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lab/#independent-tasks">Independent tasks</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lab/#challenge">Challenge</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lab/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lab/#evidence-to-keep">Evidence to keep</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lab/#after-the-lab">After the lab</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Session 5: Metrics and KPIs</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../05_metrics_and_kpis_lecture/">Lecture</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lecture/#recap-quiz">Recap quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lecture/#what-you-will-be-able-to-explain">What you will be able to explain</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lecture/#part-1-what-makes-a-good-metric">Part 1: What makes a good metric?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lecture/#part-2-metric-contracts">Part 2: Metric contracts</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lecture/#part-3-ratio-of-sums-versus-mean-of-ratios">Part 3: Ratio of sums versus mean of ratios</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lecture/#part-4-weighted-rates-in-practice">Part 4: Weighted rates in practice</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lecture/#part-5-distinct-counts-do-not-add-up">Part 5: Distinct counts do not add up</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lecture/#part-6-simpsons-paradox">Part 6: Simpson's paradox</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lecture/#part-7-goodharts-law">Part 7: Goodhart's law</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lecture/#part-8-worked-case-a-segment-kpi-table-that-reconciles">Part 8: Worked case — a segment KPI table that reconciles</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lecture/#summary">Summary</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lecture/#quiz">Quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lecture/#lab-briefing">Lab briefing</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../05_metrics_and_kpis_lab/">Lab</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lab/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lab/#how-this-lab-works">How this lab works</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lab/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lab/#guided-practice">Guided practice</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lab/#independent-tasks">Independent tasks</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lab/#challenge">Challenge</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lab/#validation-checklist">Validation checklist</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lab/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lab/#evidence-to-keep">Evidence to keep</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lab/#after-the-lab">After the lab</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Session 6: Visualisation Principles</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../06_visualisation_principles_lecture/">Lecture</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lecture/#recap-quiz">Recap quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lecture/#what-you-will-be-able-to-explain">What you will be able to explain</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lecture/#part-1-choose-the-chart-from-the-task">Part 1: Choose the chart from the task</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lecture/#part-2-how-accurately-we-read-encodings">Part 2: How accurately we read encodings</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lecture/#part-3-pre-attentive-attributes">Part 3: Pre-attentive attributes</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lecture/#part-4-data-ink-and-decluttering">Part 4: Data-ink and decluttering</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lecture/#part-5-gestalt-what-belongs-together">Part 5: Gestalt: what belongs together</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lecture/#part-6-colour-with-a-job">Part 6: Colour with a job</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lecture/#part-7-honest-axes">Part 7: Honest axes</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lecture/#part-8-message-titles-and-annotation">Part 8: Message titles and annotation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lecture/#part-9-small-multiples">Part 9: Small multiples</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lecture/#summary">Summary</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lecture/#quiz">Quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lecture/#in-the-lab">In the Lab</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../06_visualisation_principles_lab/">Lab</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lab/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lab/#how-this-lab-works">How this lab works</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lab/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Session 7: Time Series and Trends</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../07_trends_and_growth_lecture/">Lecture</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lecture/#recap-quiz">Recap quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lecture/#what-you-will-be-able-to-explain">What you will be able to explain</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lecture/#part-1-the-three-components-of-a-series">Part 1: The three components of a series</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lecture/#part-2-month-on-month-versus-year-on-year">Part 2: Month-on-month versus year-on-year</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lecture/#part-3-rolling-averages-trailing-and-centred">Part 3: Rolling averages, trailing and centred</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lecture/#part-4-index-numbers-base-100">Part 4: Index numbers (base = 100)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lecture/#part-5-seasonally-adjusted-series">Part 5: Seasonally adjusted series</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lecture/#part-6-incomplete-and-missing-periods">Part 6: Incomplete and missing periods</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lecture/#part-7-growth-after-filtering-the-trap">Part 7: Growth after filtering, the trap</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lecture/#part-8-worked-case-superstore-monthly-sales">Part 8: Worked case — Superstore monthly Sales</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lecture/#summary">Summary</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lecture/#quiz">Quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lecture/#lab-briefing">Lab briefing</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../07_trends_and_growth_lab/">Lab</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lab/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lab/#how-this-lab-works">How this lab works</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lab/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lab/#before-you-start">Before you start</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lab/#guided-practice">Guided practice</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lab/#independent-tasks">Independent tasks</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lab/#challenge">Challenge</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lab/#validation-checklist">Validation checklist</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lab/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lab/#evidence-to-keep">Evidence to keep</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lab/#after-the-lab">After the lab</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Session 8: Correlation and Regression</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../08_correlation_and_regression_lecture/">Lecture</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../08_correlation_and_regression_lecture/#recap-quiz">Recap quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../08_correlation_and_regression_lecture/#what-you-will-be-able-to-explain">What you will be able to explain</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../08_correlation_and_regression_lecture/#part-1-scatter-plots">Part 1: Scatter plots</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../08_correlation_and_regression_lecture/#part-2-covariance-and-correlation">Part 2: Covariance and correlation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../08_correlation_and_regression_lecture/#part-3-spearman-correlation">Part 3: Spearman correlation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../08_correlation_and_regression_lecture/#part-4-correlation-is-not-causation">Part 4: Correlation is not causation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../08_correlation_and_regression_lecture/#part-5-simple-linear-regression">Part 5: Simple linear regression</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../08_correlation_and_regression_lecture/#part-6-outliers-and-leverage">Part 6: Outliers and leverage</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../08_correlation_and_regression_lecture/#part-7-the-danger-of-extrapolation">Part 7: The danger of extrapolation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../08_correlation_and_regression_lecture/#part-8-worked-case-advertising-spend-and-revenue">Part 8: Worked case — advertising spend and revenue</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../08_correlation_and_regression_lecture/#summary">Summary</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../08_correlation_and_regression_lecture/#quiz">Quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../08_correlation_and_regression_lecture/#lab-briefing">Lab briefing</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../08_correlation_and_regression_lab/">Lab</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../08_correlation_and_regression_lab/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../08_correlation_and_regression_lab/#how-this-lab-works">How this lab works</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../08_correlation_and_regression_lab/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../08_correlation_and_regression_lab/#before-you-start">Before you start</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../08_correlation_and_regression_lab/#guided-practice">Guided practice</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../08_correlation_and_regression_lab/#independent-tasks">Independent tasks</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../08_correlation_and_regression_lab/#challenge">Challenge</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../08_correlation_and_regression_lab/#validation-checklist">Validation checklist</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../08_correlation_and_regression_lab/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../08_correlation_and_regression_lab/#evidence-to-keep">Evidence to keep</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../08_correlation_and_regression_lab/#after-the-lab">After the lab</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Session 9: Sampling, Uncertainty and Experiments</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../09_sampling_and_experiments_lecture/">Lecture</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../09_sampling_and_experiments_lecture/#recap-quiz">Recap quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../09_sampling_and_experiments_lecture/#what-you-will-be-able-to-explain">What you will be able to explain</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../09_sampling_and_experiments_lecture/#part-1-population-sample-and-sampling-error">Part 1: Population, sample and sampling error</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../09_sampling_and_experiments_lecture/#part-2-the-sampling-distribution-by-simulation">Part 2: The sampling distribution, by simulation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../09_sampling_and_experiments_lecture/#part-3-standard-error-and-why-it-shrinks-with-n">Part 3: Standard error, and why it shrinks with √n</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../09_sampling_and_experiments_lecture/#part-4-confidence-intervals-bootstrap-first">Part 4: Confidence intervals, bootstrap first</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../09_sampling_and_experiments_lecture/#part-5-what-95-confidence-means">Part 5: What "95% confidence" means</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../09_sampling_and_experiments_lecture/#part-6-experiments-and-why-we-randomise">Part 6: Experiments and why we randomise</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../09_sampling_and_experiments_lecture/#part-7-conversion-rate-and-lift">Part 7: Conversion rate and lift</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../09_sampling_and_experiments_lecture/#part-8-a-confidence-interval-for-the-lift">Part 8: A confidence interval for the lift</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../09_sampling_and_experiments_lecture/#part-9-a-p-value-by-shuffling-permutation-test">Part 9: A p-value by shuffling (permutation test)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../09_sampling_and_experiments_lecture/#part-10-reading-a-p-value-and-practical-versus-statistical-significance">Part 10: Reading a p-value, and practical versus statistical significance</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../09_sampling_and_experiments_lecture/#part-11-peeking-and-multiple-comparisons">Part 11: Peeking and multiple comparisons</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../09_sampling_and_experiments_lecture/#part-12-worked-case-the-checkout-page-result-for-a-manager">Part 12: Worked case — the checkout-page result for a manager</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../09_sampling_and_experiments_lecture/#summary">Summary</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../09_sampling_and_experiments_lecture/#quiz">Quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../09_sampling_and_experiments_lecture/#lab-briefing">Lab briefing</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../09_sampling_and_experiments_lab/">Lab</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../09_sampling_and_experiments_lab/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../09_sampling_and_experiments_lab/#how-this-lab-works">How this lab works</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../09_sampling_and_experiments_lab/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../09_sampling_and_experiments_lab/#before-you-start">Before you start</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../09_sampling_and_experiments_lab/#guided-practice">Guided practice</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../09_sampling_and_experiments_lab/#independent-tasks">Independent tasks</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../09_sampling_and_experiments_lab/#challenge">Challenge</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../09_sampling_and_experiments_lab/#validation-checklist">Validation checklist</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../09_sampling_and_experiments_lab/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../09_sampling_and_experiments_lab/#evidence-to-keep">Evidence to keep</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Tableau (Coming Later)</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lessons/class-01/">Tableau Lesson 1 (draft)</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#before-you-start">Before you start</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#part-1-from-request-to-question">Part 1: From request to question</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#part-2-watch-the-demonstration">Part 2: Watch the demonstration</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#part-3-guided-practice">Part 3: Guided practice</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-01/#connect-to-the-file">Connect to the file</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-01/#check-the-column-types">Check the column types</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-01/#build-a-first-chart">Build a first chart</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-01/#add-a-filter">Add a filter</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-01/#save-and-reopen">Save and reopen</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#part-4-rows-versus-orders">Part 4: Rows versus orders</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#part-5-independent-work">Part 5: Independent work</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#part-6-challenge">Part 6: Challenge</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#after-the-lesson">After the lesson</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lessons/class-02/">Tableau Lesson 2 (draft)</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#before-you-start">Before you start</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#part-1-meet-the-data-dictionary">Part 1: Meet the data dictionary</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#part-2-find-the-grain">Part 2: Find the grain</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#part-3-count-orders-correctly">Part 3: Count orders correctly</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-02/#demonstration">Demonstration</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-02/#guided-practice">Guided practice</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#part-4-what-the-returns-flag-means">Part 4: What the returns flag means</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#part-5-check-one-order-by-hand">Part 5: Check one order by hand</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#part-6-keep-a-preparation-log">Part 6: Keep a preparation log</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#part-7-independent-work">Part 7: Independent work</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#part-8-debugging-challenge">Part 8: Debugging challenge</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#after-the-lesson">After the lesson</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lessons/class-03/">Tableau Lesson 3 (draft)</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#before-you-start">Before you start</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#part-1-agree-the-measures">Part 1: Agree the measures</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#part-2-watch-the-demonstration">Part 2: Watch the demonstration</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#part-3-guided-practice-build-the-calculations">Part 3: Guided practice — build the calculations</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#part-4-guided-practice-the-segment-table">Part 4: Guided practice — the segment table</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-03/#check-that-it-reconciles">Check that it reconciles</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#part-5-independent-work">Part 5: Independent work</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-03/#a-filter-by-region">A. Filter by region</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-03/#b-look-at-a-category">B. Look at a category</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#part-6-debugging-challenge">Part 6: Debugging challenge</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#part-7-make-a-recommendation">Part 7: Make a recommendation</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#validation-checklist">Validation checklist</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#after-the-lesson">After the lesson</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lessons/class-04/">Tableau Lesson 4 (draft)</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#before-you-start">Before you start</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#part-1-the-monthly-trend">Part 1: The monthly trend</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#part-2-two-kinds-of-growth">Part 2: Two kinds of growth</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-04/#month-on-month-growth">Month-on-month growth</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-04/#year-on-year-growth">Year-on-year growth</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-04/#which-one-is-fair">Which one is fair?</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#part-3-the-returns-list">Part 3: The returns list</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#part-4-guided-practice-build-the-dashboard">Part 4: Guided practice — build the dashboard</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-04/#design-checks">Design checks</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#part-5-independent-work">Part 5: Independent work</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#part-6-debugging-challenge">Part 6: Debugging challenge</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#part-7-recommend-a-test">Part 7: Recommend a test</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#validation-checklist">Validation checklist</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#after-the-lesson">After the lesson</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../lessons/lesson-template/">Lesson Template</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#1-the-business-decision">1. The business decision</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#2-what-you-will-demonstrate">2. What you will demonstrate</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#3-before-you-start">3. Before you start</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#4-understand-the-data">4. Understand the data</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#5-agree-the-measures">5. Agree the measures</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#6-watch-a-worked-example">6. Watch a worked example</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#7-try-it-with-guidance">7. Try it with guidance</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#8-work-independently">8. Work independently</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#9-debug-a-result">9. Debug a result</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#10-make-a-recommendation">10. Make a recommendation</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#11-connection-to-the-other-tool">11. Connection to the other tool</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#12-submit-and-reflect">12. Submit and reflect</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Data Analytics</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Session 12 lecture: Marketing: campaign evaluation</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="session-12-lecture-marketing-campaign-evaluation">Session 12 lecture: Marketing: campaign evaluation<a class="headerlink" href="#session-12-lecture-marketing-campaign-evaluation" title="Permanent link">&para;</a></h1>
+<p class="lead">
+Marketing dashboards are full of rates: click-through, conversion, cost per acquisition, return on ad spend. This lecture shows how to calculate them so they add up, how a small campaign can make a whole channel look better than it is, and why "this campaign earned the most revenue per unit of spend" is not the same as "give it more money".
+</p>
+
+<p><a href="https://colab.research.google.com/github/Aayush181509/AnalyticsLecture/blob/main/notebooks/12_marketing_campaigns_lecture.ipynb"><img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg" /></a></p>
+<p>Open this notebook in Google Colab with the button above, then run each cell from top to bottom with <strong>Shift + Enter</strong>. Save your own copy with <strong>File → Save a copy in Drive</strong>.</p>
+<hr />
+<h2 id="recap-quiz">Recap quiz<a class="headerlink" href="#recap-quiz" title="Permanent link">&para;</a></h2>
+<p>Before we start, answer these questions on the <a href="../11_operations_service_lecture/">Session 11 lecture</a>. Write short answers; we discuss them together.</p>
+<ol>
+<li>To measure on-time delivery for last month, which shipments belong in the denominator: the ones <strong>delivered</strong> last month, or the ones <strong>due</strong> last month? Why does it matter?</li>
+<li>Some shipments that were due last month have still not arrived. A colleague drops them because "they have no delivery date yet". What happens to the on-time rate, and why is that misleading?</li>
+<li>Lead times are skewed: most shipments take a few days, a few take weeks. Which would you report as the "typical" lead time, the mean or the median? What extra number would you add?</li>
+<li>Two carriers have on-time rates of 95% and 90%. What else must you know before you call the first one better?</li>
+</ol>
+<hr />
+<h2 id="what-you-will-be-able-to-explain">What you will be able to explain<a class="headerlink" href="#what-you-will-be-able-to-explain" title="Permanent link">&para;</a></h2>
+<ol>
+<li>The <strong>decision</strong> a campaign review supports, and why its answer is usually "test this", not "move all the money".</li>
+<li>The <strong>marketing funnel</strong> (impressions → clicks → sessions → conversions) and the <strong>grain</strong> of a campaign-day table.</li>
+<li>Five funnel rates, <strong>CTR, conversion rate, CPC, CPA and ROAS</strong>, each calculated as a <strong>ratio of sums</strong>.</li>
+<li>What to do when a denominator is <strong>zero</strong>, and which rows are <strong>review cases</strong>.</li>
+<li>Why the <strong>mean of campaign rates</strong> can rank channels in the wrong order, while the <strong>weighted rate</strong> does not.</li>
+<li>What <strong>attributed</strong> revenue can and cannot tell you, and why <strong>ROAS</strong> is neither profit nor proof that the spend caused the sales.</li>
+<li>How to turn a promising comparison into a <strong>controlled test</strong> of a budget change.</li>
+</ol>
+<p>This lecture builds on <a href="../05_metrics_and_kpis_lecture/">Metrics and KPIs</a> (weighted rates), <a href="../08_correlation_and_regression_lecture/">Correlation and regression</a> (confounding) and <a href="../09_sampling_and_experiments_lecture/">Sampling, uncertainty and experiments</a> (A/B tests). In the <strong>Lab</strong> you build the campaign scorecard yourself and write a test proposal.</p>
+<blockquote>
+<p><strong>How to use the questions in this notebook</strong></p>
+<p><strong>Predict, then reveal</strong> boxes ask you to guess before running the next cell. Write your guess down first. <strong>Check your understanding</strong> boxes are short questions to answer in your own words.</p>
+</blockquote>
+<p>Run the setup cells first: one loads the synthetic marketing data, the next sets the chart style, and the third defines three small helper functions we use all session.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Marketing data setup (synthetic). Run this cell first.</span>
+<span class="c1"># Downloads the course&#39;s synthetic marketing data from GitHub and checks it is the exact version this course uses.</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">hashlib</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">io</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">urllib.request</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+
+<span class="n">MARKETING_URL</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/Aayush181509/AnalyticsLecture/main/data/synthetic/marketing-v1/&quot;</span>
+<span class="n">MARKETING_SHA256</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;marketing_daily.csv&quot;</span><span class="p">:</span> <span class="s2">&quot;1cbfc8e1c91ae72d18364b2d13bdf6db513c4aec28c339ef8b91f87a60dc0a07&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;ab_test.csv&quot;</span><span class="p">:</span> <span class="s2">&quot;41a3662997111b66d7ab1eb899f4b32e26bd64c66284ce881db6b8a7300ad47f&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+<span class="n">MARKETING_DIR</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;COURSE_MARKETING_DIR&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">load_marketing</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Load one marketing-v1 file: &#39;marketing_daily.csv&#39; or &#39;ab_test.csv&#39;.&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">MARKETING_DIR</span><span class="p">:</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">MARKETING_DIR</span><span class="p">,</span> <span class="n">name</span><span class="p">),</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">MARKETING_URL</span> <span class="o">+</span> <span class="n">name</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">sha256</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span> <span class="o">!=</span> <span class="n">MARKETING_SHA256</span><span class="p">[</span><span class="n">name</span><span class="p">]:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;WARNING: this file differs from the course version. Ask your facilitator.&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">io</span><span class="o">.</span><span class="n">BytesIO</span><span class="p">(</span><span class="n">data</span><span class="p">),</span> <span class="n">parse_dates</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;date&quot;</span><span class="p">])</span>
+
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Marketing setup complete.&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Marketing setup complete.
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+
+<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s2">&quot;display.float_format&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="si">{:,.2f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="o">.</span><span class="n">update</span><span class="p">({</span>
+    <span class="s2">&quot;figure.figsize&quot;</span><span class="p">:</span> <span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span>
+    <span class="s2">&quot;axes.spines.top&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="s2">&quot;axes.spines.right&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="s2">&quot;axes.grid&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s2">&quot;axes.axisbelow&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s2">&quot;grid.color&quot;</span><span class="p">:</span> <span class="s2">&quot;#e6e5e1&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;axes.prop_cycle&quot;</span><span class="p">:</span> <span class="n">plt</span><span class="o">.</span><span class="n">cycler</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;#2a78d6&quot;</span><span class="p">,</span> <span class="s2">&quot;#eb6834&quot;</span><span class="p">,</span> <span class="s2">&quot;#1baf7a&quot;</span><span class="p">]),</span>
+    <span class="s2">&quot;axes.titleweight&quot;</span><span class="p">:</span> <span class="s2">&quot;bold&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;axes.titlelocation&quot;</span><span class="p">:</span> <span class="s2">&quot;left&quot;</span><span class="p">,</span>
+<span class="p">})</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Plot style ready.&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Plot style ready.
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">COUNTS</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;spend&quot;</span><span class="p">,</span> <span class="s2">&quot;impressions&quot;</span><span class="p">,</span> <span class="s2">&quot;clicks&quot;</span><span class="p">,</span> <span class="s2">&quot;sessions&quot;</span><span class="p">,</span> <span class="s2">&quot;conversions&quot;</span><span class="p">,</span> <span class="s2">&quot;attributed_revenue&quot;</span><span class="p">]</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">safe_div</span><span class="p">(</span><span class="n">numerator</span><span class="p">,</span> <span class="n">denominator</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;numerator / denominator, left blank (NaN) wherever the denominator is 0.&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">numerator</span> <span class="o">/</span> <span class="n">denominator</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">denominator</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">add_rates</span><span class="p">(</span><span class="n">totals</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Add the five funnel rates to a table of SUMMED counts (ratios of sums).&quot;&quot;&quot;</span>
+    <span class="n">t</span> <span class="o">=</span> <span class="n">totals</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="n">t</span><span class="p">[</span><span class="s2">&quot;CTR&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">safe_div</span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="s2">&quot;clicks&quot;</span><span class="p">],</span> <span class="n">t</span><span class="p">[</span><span class="s2">&quot;impressions&quot;</span><span class="p">])</span>
+    <span class="n">t</span><span class="p">[</span><span class="s2">&quot;conv_rate&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">safe_div</span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="s2">&quot;conversions&quot;</span><span class="p">],</span> <span class="n">t</span><span class="p">[</span><span class="s2">&quot;sessions&quot;</span><span class="p">])</span>
+    <span class="n">t</span><span class="p">[</span><span class="s2">&quot;CPC&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">safe_div</span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="s2">&quot;spend&quot;</span><span class="p">],</span> <span class="n">t</span><span class="p">[</span><span class="s2">&quot;clicks&quot;</span><span class="p">])</span>
+    <span class="n">t</span><span class="p">[</span><span class="s2">&quot;CPA&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">safe_div</span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="s2">&quot;spend&quot;</span><span class="p">],</span> <span class="n">t</span><span class="p">[</span><span class="s2">&quot;conversions&quot;</span><span class="p">])</span>
+    <span class="n">t</span><span class="p">[</span><span class="s2">&quot;ROAS&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">safe_div</span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="s2">&quot;attributed_revenue&quot;</span><span class="p">],</span> <span class="n">t</span><span class="p">[</span><span class="s2">&quot;spend&quot;</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">t</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">show</span><span class="p">(</span><span class="n">table</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Format a totals table for reading. Blank rates show as &#39;n/a&#39; (not available).&quot;&quot;&quot;</span>
+    <span class="n">out</span> <span class="o">=</span> <span class="n">table</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">out</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">col</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;CTR&quot;</span><span class="p">,</span> <span class="s2">&quot;conv_rate&quot;</span><span class="p">,</span> <span class="s2">&quot;share of spend&quot;</span><span class="p">,</span> <span class="s2">&quot;share of conversions&quot;</span><span class="p">):</span>
+            <span class="n">out</span><span class="p">[</span><span class="n">col</span><span class="p">]</span> <span class="o">=</span> <span class="n">out</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">v</span><span class="p">:</span> <span class="s2">&quot;n/a&quot;</span> <span class="k">if</span> <span class="n">pd</span><span class="o">.</span><span class="n">isna</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="k">else</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">v</span><span class="si">:</span><span class="s2">.2%</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">col</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;spend&quot;</span><span class="p">,</span> <span class="s2">&quot;attributed_revenue&quot;</span><span class="p">,</span> <span class="s2">&quot;CPC&quot;</span><span class="p">,</span> <span class="s2">&quot;CPA&quot;</span><span class="p">,</span> <span class="s2">&quot;ROAS&quot;</span><span class="p">):</span>
+            <span class="n">out</span><span class="p">[</span><span class="n">col</span><span class="p">]</span> <span class="o">=</span> <span class="n">out</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">v</span><span class="p">:</span> <span class="s2">&quot;n/a&quot;</span> <span class="k">if</span> <span class="n">pd</span><span class="o">.</span><span class="n">isna</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="k">else</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">v</span><span class="si">:</span><span class="s2">,.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">pd</span><span class="o">.</span><span class="n">api</span><span class="o">.</span><span class="n">types</span><span class="o">.</span><span class="n">is_numeric_dtype</span><span class="p">(</span><span class="n">out</span><span class="p">[</span><span class="n">col</span><span class="p">]):</span>
+            <span class="n">out</span><span class="p">[</span><span class="n">col</span><span class="p">]</span> <span class="o">=</span> <span class="n">out</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">v</span><span class="p">:</span> <span class="s2">&quot;n/a&quot;</span> <span class="k">if</span> <span class="n">pd</span><span class="o">.</span><span class="n">isna</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="k">else</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">v</span><span class="si">:</span><span class="s2">,.0f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">out</span>
+
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Helpers ready: safe_div, add_rates, show.&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Helpers ready: safe_div, add_rates, show.
+</code></pre></div>
+<hr />
+<h2 id="part-1-the-decision">Part 1: The decision<a class="headerlink" href="#part-1-the-decision" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><em>Marketing lead: "Next quarter's budget is fixed. I want to move some money towards the campaigns that work best, but I can only defend a change I can measure. Which campaigns deserve a </em><em>controlled budget change</em><em>, and how would we know if it worked?"</em></p>
+</blockquote>
+<p>Notice what the lead is <strong>not</strong> asking. She does not want a ranking to copy into next quarter's plan. She wants a short list of candidates and a way to test them. That shapes the whole analysis:</p>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>Question for this case</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Question</strong></td>
+<td>Which campaigns are efficient <strong>and</strong> big enough to matter?</td>
+</tr>
+<tr>
+<td><strong>Understanding</strong></td>
+<td>What does one row mean? What does "conversion" and "revenue" mean here?</td>
+</tr>
+<tr>
+<td><strong>Preparation</strong></td>
+<td>Are the keys unique? Do the funnel counts make sense? Where are the zero denominators?</td>
+</tr>
+<tr>
+<td><strong>Analysis</strong></td>
+<td>Funnel rates as ratios of sums, by campaign and channel, with volumes</td>
+</tr>
+<tr>
+<td><strong>Validation</strong></td>
+<td>Do campaign totals add up to the company total? Do rankings survive weighting?</td>
+</tr>
+<tr>
+<td><strong>Recommendation</strong></td>
+<td>Which change to <strong>test</strong>, how, for how long, and what would count as success</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>About the data</strong></p>
+<p><code>marketing_daily.csv</code> is <strong>synthetic</strong> teaching data generated by the course. It describes no real company, brand, person or advertising platform. Money is in neutral <strong>currency units</strong>. The same file was used in Session 8.</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="n">daily</span> <span class="o">=</span> <span class="n">load_marketing</span><span class="p">(</span><span class="s2">&quot;marketing_daily.csv&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Rows:&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">daily</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Dates:&quot;</span><span class="p">,</span> <span class="n">daily</span><span class="p">[</span><span class="s2">&quot;date&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()</span><span class="o">.</span><span class="n">date</span><span class="p">(),</span> <span class="s2">&quot;to&quot;</span><span class="p">,</span> <span class="n">daily</span><span class="p">[</span><span class="s2">&quot;date&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span><span class="o">.</span><span class="n">date</span><span class="p">())</span>
+<span class="n">daily</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Rows: 2555
+Dates: 2025-01-01 to 2025-12-31
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>date</th>
+      <th>campaign_id</th>
+      <th>campaign_name</th>
+      <th>channel</th>
+      <th>spend</th>
+      <th>impressions</th>
+      <th>clicks</th>
+      <th>sessions</th>
+      <th>conversions</th>
+      <th>attributed_revenue</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2025-01-01</td>
+      <td>DISP-01</td>
+      <td>Display - partner sites</td>
+      <td>Display</td>
+      <td>575.20</td>
+      <td>175974</td>
+      <td>633</td>
+      <td>449</td>
+      <td>2</td>
+      <td>150.53</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2025-01-01</td>
+      <td>EML-01</td>
+      <td>Email - newsletter</td>
+      <td>Email</td>
+      <td>45.78</td>
+      <td>74237</td>
+      <td>563</td>
+      <td>536</td>
+      <td>16</td>
+      <td>1,403.35</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2025-01-01</td>
+      <td>SOC-01</td>
+      <td>Social - broad audience</td>
+      <td>Social</td>
+      <td>998.65</td>
+      <td>135199</td>
+      <td>1651</td>
+      <td>1301</td>
+      <td>12</td>
+      <td>946.74</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2025-01-01</td>
+      <td>SOC-02</td>
+      <td>Social - past visitors</td>
+      <td>Social</td>
+      <td>60.57</td>
+      <td>6692</td>
+      <td>136</td>
+      <td>117</td>
+      <td>8</td>
+      <td>982.79</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2025-01-01</td>
+      <td>SRCH-01</td>
+      <td>Search - product terms</td>
+      <td>Search</td>
+      <td>881.76</td>
+      <td>40050</td>
+      <td>1764</td>
+      <td>1643</td>
+      <td>52</td>
+      <td>7,017.99</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="highlight"><pre><span></span><code><span class="n">daily</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;channel&quot;</span><span class="p">,</span> <span class="s2">&quot;campaign_id&quot;</span><span class="p">,</span> <span class="s2">&quot;campaign_name&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">size</span><span class="p">()</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="s2">&quot;days&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">to_frame</span><span class="p">()</span>
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th></th>
+      <th></th>
+      <th>days</th>
+    </tr>
+    <tr>
+      <th>channel</th>
+      <th>campaign_id</th>
+      <th>campaign_name</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Display</th>
+      <th>DISP-01</th>
+      <th>Display - partner sites</th>
+      <td>365</td>
+    </tr>
+    <tr>
+      <th>Email</th>
+      <th>EML-01</th>
+      <th>Email - newsletter</th>
+      <td>365</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">Search</th>
+      <th>SRCH-01</th>
+      <th>Search - product terms</th>
+      <td>365</td>
+    </tr>
+    <tr>
+      <th>SRCH-02</th>
+      <th>Search - category terms</th>
+      <td>365</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">Social</th>
+      <th>SOC-01</th>
+      <th>Social - broad audience</th>
+      <td>365</td>
+    </tr>
+    <tr>
+      <th>SOC-02</th>
+      <th>Social - past visitors</th>
+      <td>365</td>
+    </tr>
+    <tr>
+      <th>Video</th>
+      <th>VID-01</th>
+      <th>Video - pre-roll</th>
+      <td>365</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<hr />
+<h2 id="part-2-the-funnel-and-the-grain">Part 2: The funnel and the grain<a class="headerlink" href="#part-2-the-funnel-and-the-grain" title="Permanent link">&para;</a></h2>
+<p>Every paid campaign pushes people down the same <strong>funnel</strong>. Each stage is a count, and each count can only be as large as the one before it.</p>
+<table>
+<thead>
+<tr>
+<th>Stage</th>
+<th>Column</th>
+<th>One unit is…</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Media cost</td>
+<td><code>spend</code></td>
+<td>currency units paid to show the ads that day</td>
+</tr>
+<tr>
+<td>Shown</td>
+<td><code>impressions</code></td>
+<td>one time an ad or email was shown</td>
+</tr>
+<tr>
+<td>Clicked</td>
+<td><code>clicks</code></td>
+<td>one click on it</td>
+</tr>
+<tr>
+<td>Visited</td>
+<td><code>sessions</code></td>
+<td>one website visit that started from a click</td>
+</tr>
+<tr>
+<td>Bought</td>
+<td><code>conversions</code></td>
+<td>one session that ended in a purchase (one order per purchasing session)</td>
+</tr>
+<tr>
+<td>Value</td>
+<td><code>attributed_revenue</code></td>
+<td>the value of those orders, <strong>before returns</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Grain:</strong> one row per <strong>calendar day × campaign</strong>. The key is (<code>date</code>, <code>campaign_id</code>). A row is <strong>not</strong> a person: one shopper who clicks on three days is counted on three rows, and nothing in the table links them.</p>
+<blockquote>
+<p><strong>Predict, then reveal</strong></p>
+<p>If every campaign has a row for every day of 2025, how many rows should there be? Check your answer against the "Rows" line in Part 1, then run the checks below.</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="n">key_unique</span> <span class="o">=</span> <span class="ow">not</span> <span class="n">daily</span><span class="o">.</span><span class="n">duplicated</span><span class="p">([</span><span class="s2">&quot;date&quot;</span><span class="p">,</span> <span class="s2">&quot;campaign_id&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">any</span><span class="p">()</span>
+<span class="n">expected_rows</span> <span class="o">=</span> <span class="n">daily</span><span class="p">[</span><span class="s2">&quot;date&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span> <span class="o">*</span> <span class="n">daily</span><span class="p">[</span><span class="s2">&quot;campaign_id&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span>
+<span class="n">funnel_ok</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="p">(</span><span class="n">daily</span><span class="p">[</span><span class="s2">&quot;impressions&quot;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">daily</span><span class="p">[</span><span class="s2">&quot;clicks&quot;</span><span class="p">])</span>
+    <span class="o">&amp;</span> <span class="p">(</span><span class="n">daily</span><span class="p">[</span><span class="s2">&quot;clicks&quot;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">daily</span><span class="p">[</span><span class="s2">&quot;sessions&quot;</span><span class="p">])</span>
+    <span class="o">&amp;</span> <span class="p">(</span><span class="n">daily</span><span class="p">[</span><span class="s2">&quot;sessions&quot;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">daily</span><span class="p">[</span><span class="s2">&quot;conversions&quot;</span><span class="p">])</span>
+    <span class="o">&amp;</span> <span class="p">(</span><span class="n">daily</span><span class="p">[</span><span class="s2">&quot;conversions&quot;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">)</span>
+<span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Key (date, campaign_id) unique:&quot;</span><span class="p">,</span> <span class="n">key_unique</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Rows:&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">daily</span><span class="p">),</span> <span class="s2">&quot;| days x campaigns:&quot;</span><span class="p">,</span> <span class="n">expected_rows</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Rows breaking the funnel order:&quot;</span><span class="p">,</span> <span class="p">(</span><span class="o">~</span><span class="n">funnel_ok</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Rows with negative spend or revenue:&quot;</span><span class="p">,</span> <span class="p">((</span><span class="n">daily</span><span class="p">[</span><span class="s2">&quot;spend&quot;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">daily</span><span class="p">[</span><span class="s2">&quot;attributed_revenue&quot;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">))</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Key (date, campaign_id) unique: True
+Rows: 2555 | days x campaigns: 2555
+Rows breaking the funnel order: 0
+Rows with negative spend or revenue: 0
+</code></pre></div>
+<p>All four checks pass in the output above, so we can trust the structure. If a row had more sessions than clicks, you would stop and ask why (a tracking change? a join that duplicated rows?) before computing a single rate.</p>
+<p>The funnel narrows sharply at each stage. A log scale lets you see every stage on one chart:</p>
+<div class="highlight"><pre><span></span><code><span class="n">stages</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;impressions&quot;</span><span class="p">,</span> <span class="s2">&quot;clicks&quot;</span><span class="p">,</span> <span class="s2">&quot;sessions&quot;</span><span class="p">,</span> <span class="s2">&quot;conversions&quot;</span><span class="p">]</span>
+<span class="n">company</span> <span class="o">=</span> <span class="n">daily</span><span class="p">[</span><span class="n">stages</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+
+<span class="n">ax</span> <span class="o">=</span> <span class="n">company</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">barh</span><span class="p">(</span><span class="n">logx</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#2a78d6&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">invert_yaxis</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;2025 company funnel: each stage is a fraction of the one before&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Count for the year (log scale)&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">company</span><span class="p">):</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot; </span><span class="si">{</span><span class="n">value</span><span class="si">:</span><span class="s2">,.0f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s2">&quot;center&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">9</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+<p><img alt="png" src="../12_marketing_campaigns_lecture_files/12_marketing_campaigns_lecture_10_0.png" /></p>
+<hr />
+<h2 id="part-3-funnel-rates-are-ratios-of-sums">Part 3: Funnel rates are ratios of sums<a class="headerlink" href="#part-3-funnel-rates-are-ratios-of-sums" title="Permanent link">&para;</a></h2>
+<p>Each rate divides one funnel count by another. The rule from Session 5 applies everywhere: <strong>add up the numerator, add up the denominator, then divide</strong>. Never add up or average rates.</p>
+<table>
+<thead>
+<tr>
+<th>Rate</th>
+<th>Formula</th>
+<th>Read it as</th>
+<th>Better when</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>CTR</strong> (click-through rate)</td>
+<td>clicks ÷ impressions</td>
+<td>share of showings that got a click</td>
+<td>higher</td>
+</tr>
+<tr>
+<td><strong>Conversion rate</strong></td>
+<td>conversions ÷ sessions</td>
+<td>share of visits that bought</td>
+<td>higher</td>
+</tr>
+<tr>
+<td><strong>CPC</strong> (cost per click)</td>
+<td>spend ÷ clicks</td>
+<td>currency units paid per click</td>
+<td>lower</td>
+</tr>
+<tr>
+<td><strong>CPA</strong> (cost per acquisition)</td>
+<td>spend ÷ conversions</td>
+<td>currency units paid per purchase</td>
+<td>lower</td>
+</tr>
+<tr>
+<td><strong>ROAS</strong> (return on ad spend)</td>
+<td>attributed revenue ÷ spend</td>
+<td>revenue credited per unit of spend</td>
+<td>higher</td>
+</tr>
+</tbody>
+</table>
+<p>The helper <code>add_rates()</code> from the setup cell does exactly this to any table of <strong>summed</strong> counts. Here it is on the company total for the year:</p>
+<div class="highlight"><pre><span></span><code><span class="n">company_total</span> <span class="o">=</span> <span class="n">add_rates</span><span class="p">(</span><span class="n">daily</span><span class="p">[</span><span class="n">COUNTS</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">to_frame</span><span class="p">(</span><span class="s2">&quot;All campaigns&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>
+<span class="n">show</span><span class="p">(</span><span class="n">company_total</span><span class="p">)</span>
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>spend</th>
+      <th>impressions</th>
+      <th>clicks</th>
+      <th>sessions</th>
+      <th>conversions</th>
+      <th>attributed_revenue</th>
+      <th>CTR</th>
+      <th>conv_rate</th>
+      <th>CPC</th>
+      <th>CPA</th>
+      <th>ROAS</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>All campaigns</th>
+      <td>1,469,925.58</td>
+      <td>194,079,506</td>
+      <td>2,590,124</td>
+      <td>2,219,202</td>
+      <td>55,839</td>
+      <td>6,049,101.43</td>
+      <td>1.33%</td>
+      <td>2.52%</td>
+      <td>0.57</td>
+      <td>26.32</td>
+      <td>4.12</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p>Read the table above as sentences: "of every 100 times an ad was shown, about this many got a click"; "each purchase cost this many currency units of media". Two rates combine counts the other rates do not: CPA and ROAS both depend on <strong>spend</strong>, so a campaign that costs almost nothing can look spectacular on them.</p>
+<blockquote>
+<p><strong>Check your understanding 1</strong></p>
+<p>A campaign had 200,000 impressions, 2,000 clicks, 1,600 sessions, 40 conversions, spend of 1,000 and attributed revenue of 3,200. Work out its CTR, conversion rate, CPC, CPA and ROAS by hand.</p>
+</blockquote>
+<hr />
+<h2 id="part-4-zero-denominators-and-review-cases">Part 4: Zero denominators and review cases<a class="headerlink" href="#part-4-zero-denominators-and-review-cases" title="Permanent link">&para;</a></h2>
+<p>Some days a campaign was paused: nothing was shown and nothing was spent. On those days CPC, CPA and ROAS have a <strong>zero denominator</strong>.</p>
+<blockquote>
+<p><strong>Predict, then reveal</strong></p>
+<p>What does pandas give for 500 ÷ 0? And for 0 ÷ 0? Will it raise an error?</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="n">demo</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">&quot;revenue&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">500.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">500.0</span><span class="p">],</span> <span class="s2">&quot;spend&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">100.0</span><span class="p">]})</span>
+<span class="n">demo</span><span class="p">[</span><span class="s2">&quot;plain division&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">demo</span><span class="p">[</span><span class="s2">&quot;revenue&quot;</span><span class="p">]</span> <span class="o">/</span> <span class="n">demo</span><span class="p">[</span><span class="s2">&quot;spend&quot;</span><span class="p">]</span>
+<span class="n">demo</span><span class="p">[</span><span class="s2">&quot;safe_div&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">safe_div</span><span class="p">(</span><span class="n">demo</span><span class="p">[</span><span class="s2">&quot;revenue&quot;</span><span class="p">],</span> <span class="n">demo</span><span class="p">[</span><span class="s2">&quot;spend&quot;</span><span class="p">])</span>
+<span class="n">demo</span>
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>revenue</th>
+      <th>spend</th>
+      <th>plain division</th>
+      <th>safe_div</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>500.00</td>
+      <td>0.00</td>
+      <td>inf</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>500.00</td>
+      <td>100.00</td>
+      <td>5.00</td>
+      <td>5.00</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p>Plain division gives <code>inf</code> (infinity) or <code>NaN</code> <strong>without any error</strong>. An <code>inf</code> that slips into an average or a chart wrecks it silently, and a zero typed in instead of a blank would rank a paused campaign as "free". The course rule:</p>
+<blockquote>
+<p><strong>A zero denominator gives "not available" (a blank), never 0 and never infinity.</strong> <code>safe_div()</code> does this.</p>
+</blockquote>
+<p>Now count the rows where each denominator is zero:</p>
+<div class="highlight"><pre><span></span><code><span class="n">zero_cases</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">({</span>
+    <span class="s2">&quot;spend = 0 (ROAS, CPC, CPA not available)&quot;</span><span class="p">:</span> <span class="p">(</span><span class="n">daily</span><span class="p">[</span><span class="s2">&quot;spend&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span>
+    <span class="s2">&quot;clicks = 0 (CPC not available)&quot;</span><span class="p">:</span> <span class="p">(</span><span class="n">daily</span><span class="p">[</span><span class="s2">&quot;clicks&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span>
+    <span class="s2">&quot;conversions = 0 (CPA not available)&quot;</span><span class="p">:</span> <span class="p">(</span><span class="n">daily</span><span class="p">[</span><span class="s2">&quot;conversions&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span>
+    <span class="s2">&quot;spend = 0 but conversions &gt; 0 (review cases)&quot;</span><span class="p">:</span> <span class="p">((</span><span class="n">daily</span><span class="p">[</span><span class="s2">&quot;spend&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">daily</span><span class="p">[</span><span class="s2">&quot;conversions&quot;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">))</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span>
+<span class="p">},</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;rows&quot;</span><span class="p">)</span>
+<span class="n">zero_cases</span><span class="o">.</span><span class="n">to_frame</span><span class="p">()</span>
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>rows</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>spend = 0 (ROAS, CPC, CPA not available)</th>
+      <td>39</td>
+    </tr>
+    <tr>
+      <th>clicks = 0 (CPC not available)</th>
+      <td>27</td>
+    </tr>
+    <tr>
+      <th>conversions = 0 (CPA not available)</th>
+      <td>112</td>
+    </tr>
+    <tr>
+      <th>spend = 0 but conversions &gt; 0 (review cases)</th>
+      <td>12</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="highlight"><pre><span></span><code><span class="n">review</span> <span class="o">=</span> <span class="n">daily</span><span class="p">[(</span><span class="n">daily</span><span class="p">[</span><span class="s2">&quot;spend&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">daily</span><span class="p">[</span><span class="s2">&quot;conversions&quot;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Campaigns with review cases:&quot;</span><span class="p">,</span> <span class="n">review</span><span class="p">[</span><span class="s2">&quot;campaign_id&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">())</span>
+<span class="n">review</span><span class="p">[[</span><span class="s2">&quot;date&quot;</span><span class="p">,</span> <span class="s2">&quot;campaign_id&quot;</span><span class="p">,</span> <span class="s2">&quot;spend&quot;</span><span class="p">,</span> <span class="s2">&quot;impressions&quot;</span><span class="p">,</span> <span class="s2">&quot;sessions&quot;</span><span class="p">,</span> <span class="s2">&quot;conversions&quot;</span><span class="p">,</span> <span class="s2">&quot;attributed_revenue&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Campaigns with review cases: [&#39;EML-01&#39;]
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>date</th>
+      <th>campaign_id</th>
+      <th>spend</th>
+      <th>impressions</th>
+      <th>sessions</th>
+      <th>conversions</th>
+      <th>attributed_revenue</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>666</th>
+      <td>2025-04-06</td>
+      <td>EML-01</td>
+      <td>0.00</td>
+      <td>66810</td>
+      <td>452</td>
+      <td>6</td>
+      <td>466.08</td>
+    </tr>
+    <tr>
+      <th>883</th>
+      <td>2025-05-07</td>
+      <td>EML-01</td>
+      <td>0.00</td>
+      <td>66658</td>
+      <td>477</td>
+      <td>7</td>
+      <td>601.93</td>
+    </tr>
+    <tr>
+      <th>932</th>
+      <td>2025-05-14</td>
+      <td>EML-01</td>
+      <td>0.00</td>
+      <td>66808</td>
+      <td>538</td>
+      <td>10</td>
+      <td>920.63</td>
+    </tr>
+    <tr>
+      <th>1023</th>
+      <td>2025-05-27</td>
+      <td>EML-01</td>
+      <td>0.00</td>
+      <td>66610</td>
+      <td>524</td>
+      <td>8</td>
+      <td>767.31</td>
+    </tr>
+    <tr>
+      <th>1128</th>
+      <td>2025-06-11</td>
+      <td>EML-01</td>
+      <td>0.00</td>
+      <td>66789</td>
+      <td>526</td>
+      <td>15</td>
+      <td>1,355.61</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p>The <strong>review cases</strong> above are days with sales but no media cost. They all belong to the Email campaign: free-send days, when a newsletter went out without any paid cost. They are real activity, so they stay in the campaign totals, but no daily ROAS exists for them. <strong>Report them; do not compute ROAS for them; do not delete them.</strong></p>
+<p>Most <code>conversions = 0</code> days come from small or weak campaigns. Their CPA is not available for that day; over a whole month or year the campaign usually has some conversions, so its total CPA exists.</p>
+<blockquote>
+<p><strong>Check your understanding 2</strong></p>
+<p>A dashboard shows CPA = 0 for a campaign that had spend but no conversions last week, and ranks it "most efficient". What went wrong, and what should the cell show?</p>
+</blockquote>
+<hr />
+<h2 id="part-5-the-campaign-scorecard">Part 5: The campaign scorecard<a class="headerlink" href="#part-5-the-campaign-scorecard" title="Permanent link">&para;</a></h2>
+<p>Now the totals for each campaign. <code>groupby</code> adds up the counts first; <code>add_rates</code> divides the sums.</p>
+<div class="highlight"><pre><span></span><code><span class="n">by_campaign</span> <span class="o">=</span> <span class="n">add_rates</span><span class="p">(</span><span class="n">daily</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;channel&quot;</span><span class="p">,</span> <span class="s2">&quot;campaign_id&quot;</span><span class="p">])[</span><span class="n">COUNTS</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+<span class="n">show</span><span class="p">(</span><span class="n">by_campaign</span><span class="p">[[</span><span class="s2">&quot;spend&quot;</span><span class="p">,</span> <span class="s2">&quot;sessions&quot;</span><span class="p">,</span> <span class="s2">&quot;conversions&quot;</span><span class="p">,</span> <span class="s2">&quot;attributed_revenue&quot;</span><span class="p">,</span> <span class="s2">&quot;conv_rate&quot;</span><span class="p">,</span> <span class="s2">&quot;CPA&quot;</span><span class="p">,</span> <span class="s2">&quot;ROAS&quot;</span><span class="p">]])</span>
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th></th>
+      <th>spend</th>
+      <th>sessions</th>
+      <th>conversions</th>
+      <th>attributed_revenue</th>
+      <th>conv_rate</th>
+      <th>CPA</th>
+      <th>ROAS</th>
+    </tr>
+    <tr>
+      <th>channel</th>
+      <th>campaign_id</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Display</th>
+      <th>DISP-01</th>
+      <td>207,555.98</td>
+      <td>179,711</td>
+      <td>1,518</td>
+      <td>132,218.98</td>
+      <td>0.84%</td>
+      <td>136.73</td>
+      <td>0.64</td>
+    </tr>
+    <tr>
+      <th>Email</th>
+      <th>EML-01</th>
+      <td>15,426.37</td>
+      <td>201,704</td>
+      <td>4,378</td>
+      <td>451,164.11</td>
+      <td>2.17%</td>
+      <td>3.52</td>
+      <td>29.25</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">Search</th>
+      <th>SRCH-01</th>
+      <td>362,654.08</td>
+      <td>679,463</td>
+      <td>24,629</td>
+      <td>2,897,731.90</td>
+      <td>3.62%</td>
+      <td>14.72</td>
+      <td>7.99</td>
+    </tr>
+    <tr>
+      <th>SRCH-02</th>
+      <td>256,844.20</td>
+      <td>487,457</td>
+      <td>15,308</td>
+      <td>1,589,252.73</td>
+      <td>3.14%</td>
+      <td>16.78</td>
+      <td>6.19</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">Social</th>
+      <th>SOC-01</th>
+      <td>433,453.56</td>
+      <td>556,007</td>
+      <td>6,408</td>
+      <td>595,049.96</td>
+      <td>1.15%</td>
+      <td>67.64</td>
+      <td>1.37</td>
+    </tr>
+    <tr>
+      <th>SOC-02</th>
+      <td>24,001.47</td>
+      <td>45,313</td>
+      <td>2,850</td>
+      <td>315,601.00</td>
+      <td>6.29%</td>
+      <td>8.42</td>
+      <td>13.15</td>
+    </tr>
+    <tr>
+      <th>Video</th>
+      <th>VID-01</th>
+      <td>169,989.92</td>
+      <td>69,547</td>
+      <td>748</td>
+      <td>68,082.75</td>
+      <td>1.08%</td>
+      <td>227.26</td>
+      <td>0.40</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p>Before reading the scorecard, check that it <strong>reconciles</strong>: the campaign totals must add up to the company total from Part 3.</p>
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;spend&quot;</span><span class="p">,</span> <span class="s2">&quot;conversions&quot;</span><span class="p">,</span> <span class="s2">&quot;attributed_revenue&quot;</span><span class="p">]:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">col</span><span class="si">:</span><span class="s2">20s</span><span class="si">}</span><span class="s2"> campaigns add up to company total: </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">isclose</span><span class="p">(</span><span class="n">by_campaign</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span><span class="w"> </span><span class="n">company_total</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>spend                campaigns add up to company total: True
+conversions          campaigns add up to company total: True
+attributed_revenue   campaigns add up to company total: True
+</code></pre></div>
+<p>Now look at the Email row in the scorecard. Its ROAS is far above every other campaign's.</p>
+<blockquote>
+<p><strong>Predict, then reveal</strong></p>
+<p>Is Email really many times better at turning money into revenue? Look at its <strong>spend</strong> column compared with the others before you answer.</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="n">share</span> <span class="o">=</span> <span class="n">by_campaign</span><span class="p">[[</span><span class="s2">&quot;spend&quot;</span><span class="p">,</span> <span class="s2">&quot;conversions&quot;</span><span class="p">]]</span> <span class="o">/</span> <span class="n">by_campaign</span><span class="p">[[</span><span class="s2">&quot;spend&quot;</span><span class="p">,</span> <span class="s2">&quot;conversions&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">share</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;share of spend&quot;</span><span class="p">,</span> <span class="s2">&quot;share of conversions&quot;</span><span class="p">]</span>
+<span class="n">show</span><span class="p">(</span><span class="n">share</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">by_campaign</span><span class="p">[[</span><span class="s2">&quot;ROAS&quot;</span><span class="p">]]))</span>
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th></th>
+      <th>share of spend</th>
+      <th>share of conversions</th>
+      <th>ROAS</th>
+    </tr>
+    <tr>
+      <th>channel</th>
+      <th>campaign_id</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Display</th>
+      <th>DISP-01</th>
+      <td>14.12%</td>
+      <td>2.72%</td>
+      <td>0.64</td>
+    </tr>
+    <tr>
+      <th>Email</th>
+      <th>EML-01</th>
+      <td>1.05%</td>
+      <td>7.84%</td>
+      <td>29.25</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">Search</th>
+      <th>SRCH-01</th>
+      <td>24.67%</td>
+      <td>44.11%</td>
+      <td>7.99</td>
+    </tr>
+    <tr>
+      <th>SRCH-02</th>
+      <td>17.47%</td>
+      <td>27.41%</td>
+      <td>6.19</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">Social</th>
+      <th>SOC-01</th>
+      <td>29.49%</td>
+      <td>11.48%</td>
+      <td>1.37</td>
+    </tr>
+    <tr>
+      <th>SOC-02</th>
+      <td>1.63%</td>
+      <td>5.10%</td>
+      <td>13.15</td>
+    </tr>
+    <tr>
+      <th>Video</th>
+      <th>VID-01</th>
+      <td>11.56%</td>
+      <td>1.34%</td>
+      <td>0.40</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p>Email takes a tiny share of the spend but a sizeable share of the conversions. Its "spend" covers only a small sending cost; it does not include the cost of building the mailing list, writing the emails or the discounts they offer, and its free-send days add revenue with no spend at all. A ratio with a <strong>tiny denominator</strong> looks extreme. ROAS for Email is not comparable with ROAS for paid media; say so instead of ranking it first.</p>
+<blockquote>
+<p><strong>Check your understanding 3</strong></p>
+<p>Email's ROAS is the highest by far. Give two reasons why "move the Search budget into Email" would not work.</p>
+</blockquote>
+<hr />
+<h2 id="part-6-weighted-rate-versus-the-mean-of-campaign-rates">Part 6: Weighted rate versus the mean of campaign rates<a class="headerlink" href="#part-6-weighted-rate-versus-the-mean-of-campaign-rates" title="Permanent link">&para;</a></h2>
+<p>The marketing lead asks for conversion rate <strong>by channel</strong>. Two channels, Search and Social, have two campaigns each. There are two ways to get a channel's rate:</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>How</th>
+<th>Problem</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Mean of campaign rates</strong></td>
+<td>compute each campaign's rate, then average them</td>
+<td>gives a tiny campaign the same vote as a huge one</td>
+</tr>
+<tr>
+<td><strong>Weighted rate (ratio of sums)</strong></td>
+<td>add the channel's conversions and sessions, then divide</td>
+<td>none: it is the channel's actual rate</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Predict, then reveal</strong></p>
+<p>Look back at the scorecard in Part 5. Social has one big campaign with a low conversion rate (SOC-01, a broad audience) and one small campaign with a very high rate (SOC-02, past visitors). On the <strong>mean of campaign rates</strong>, will Social beat Search? On the <strong>weighted rate</strong>?</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="n">campaign_rate</span> <span class="o">=</span> <span class="n">by_campaign</span><span class="p">[</span><span class="s2">&quot;conv_rate&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;channel&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">channel</span> <span class="o">=</span> <span class="n">add_rates</span><span class="p">(</span><span class="n">daily</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;channel&quot;</span><span class="p">)[</span><span class="n">COUNTS</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+
+<span class="n">compare</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s2">&quot;campaigns&quot;</span><span class="p">:</span> <span class="n">by_campaign</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;channel&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">size</span><span class="p">(),</span>
+    <span class="s2">&quot;sessions&quot;</span><span class="p">:</span> <span class="n">channel</span><span class="p">[</span><span class="s2">&quot;sessions&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;mean of campaign rates&quot;</span><span class="p">:</span> <span class="n">campaign_rate</span><span class="p">,</span>
+    <span class="s2">&quot;weighted rate (sum ÷ sum)&quot;</span><span class="p">:</span> <span class="n">channel</span><span class="p">[</span><span class="s2">&quot;conv_rate&quot;</span><span class="p">],</span>
+<span class="p">})</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s2">&quot;weighted rate (sum ÷ sum)&quot;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">compare</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">sessions</span><span class="o">=</span><span class="n">compare</span><span class="p">[</span><span class="s2">&quot;sessions&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{:,.0f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">),</span>
+               <span class="o">**</span><span class="p">{</span><span class="n">c</span><span class="p">:</span> <span class="n">compare</span><span class="p">[</span><span class="n">c</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{:.2%}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">)</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;mean of campaign rates&quot;</span><span class="p">,</span> <span class="s2">&quot;weighted rate (sum ÷ sum)&quot;</span><span class="p">]})</span>
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>campaigns</th>
+      <th>sessions</th>
+      <th>mean of campaign rates</th>
+      <th>weighted rate (sum ÷ sum)</th>
+    </tr>
+    <tr>
+      <th>channel</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Search</th>
+      <td>2</td>
+      <td>1,166,920</td>
+      <td>3.38%</td>
+      <td>3.42%</td>
+    </tr>
+    <tr>
+      <th>Email</th>
+      <td>1</td>
+      <td>201,704</td>
+      <td>2.17%</td>
+      <td>2.17%</td>
+    </tr>
+    <tr>
+      <th>Social</th>
+      <td>2</td>
+      <td>601,320</td>
+      <td>3.72%</td>
+      <td>1.54%</td>
+    </tr>
+    <tr>
+      <th>Video</th>
+      <td>1</td>
+      <td>69,547</td>
+      <td>1.08%</td>
+      <td>1.08%</td>
+    </tr>
+    <tr>
+      <th>Display</th>
+      <td>1</td>
+      <td>179,711</td>
+      <td>0.84%</td>
+      <td>0.84%</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p>Read the table above. For channels with a single campaign, the two methods agree. For <strong>Social</strong> they do not: the mean of campaign rates lifts Social above Search, while the weighted rate puts it well below. The chart shows why.</p>
+<div class="highlight"><pre><span></span><code><span class="n">social_search</span> <span class="o">=</span> <span class="n">by_campaign</span><span class="o">.</span><span class="n">loc</span><span class="p">[[</span><span class="s2">&quot;Search&quot;</span><span class="p">,</span> <span class="s2">&quot;Social&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+<span class="n">colors</span> <span class="o">=</span> <span class="n">social_search</span><span class="p">[</span><span class="s2">&quot;channel&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">({</span><span class="s2">&quot;Search&quot;</span><span class="p">:</span> <span class="s2">&quot;#2a78d6&quot;</span><span class="p">,</span> <span class="s2">&quot;Social&quot;</span><span class="p">:</span> <span class="s2">&quot;#eb6834&quot;</span><span class="p">})</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">social_search</span><span class="p">[</span><span class="s2">&quot;sessions&quot;</span><span class="p">],</span> <span class="n">social_search</span><span class="p">[</span><span class="s2">&quot;conv_rate&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">100</span><span class="p">,</span>
+           <span class="n">s</span><span class="o">=</span><span class="n">social_search</span><span class="p">[</span><span class="s2">&quot;sessions&quot;</span><span class="p">]</span> <span class="o">/</span> <span class="mi">1500</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">colors</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">social_search</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s2">&quot;campaign_id&quot;</span><span class="p">],</span> <span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s2">&quot;sessions&quot;</span><span class="p">],</span> <span class="n">row</span><span class="p">[</span><span class="s2">&quot;conv_rate&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">100</span><span class="p">),</span>
+                <span class="n">textcoords</span><span class="o">=</span><span class="s2">&quot;offset points&quot;</span><span class="p">,</span> <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">9</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">color</span> <span class="ow">in</span> <span class="p">[(</span><span class="s2">&quot;Search&quot;</span><span class="p">,</span> <span class="s2">&quot;#2a78d6&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;Social&quot;</span><span class="p">,</span> <span class="s2">&quot;#eb6834&quot;</span><span class="p">)]:</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">channel</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">name</span><span class="p">,</span> <span class="s2">&quot;conv_rate&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">100</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">,</span>
+               <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2"> weighted rate&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;The high Social rate comes from a small campaign&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Sessions in 2025 (bubble size = sessions)&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Conversion rate (%)&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+<p><img alt="png" src="../12_marketing_campaigns_lecture_files/12_marketing_campaigns_lecture_27_0.png" /></p>
+<p>SOC-02 sits high on the chart but far to the left: it has very few sessions. The mean of rates treats SOC-02 and SOC-01 as equals, so the small campaign's high rate drags the "Social" figure up. The weighted rate gives each <strong>session</strong> one vote, so SOC-01's large volume dominates, as it does in the real business.</p>
+<blockquote>
+<p><strong>The rule</strong></p>
+<p>To combine rates across campaigns, days, regions or anything else, <strong>add the numerators and the denominators, then divide</strong>. A mean of rates answers a different question ("what does a typical campaign look like?"), which is rarely what a manager means by "the channel's rate".</p>
+</blockquote>
+<p>There is a second lesson in SOC-02's name: it targets <strong>past visitors</strong>, people who already know the shop. Such campaigns usually convert well because their audience was already likely to buy. That leads to the next part.</p>
+<blockquote>
+<p><strong>Check your understanding 4</strong></p>
+<p>A regional manager averages the conversion rates of her ten stores' websites and reports it as "the region's conversion rate". When would that number be close to the true regional rate, and when would it be far off?</p>
+</blockquote>
+<hr />
+<h2 id="part-7-attribution-and-what-roas-does-not-tell-you">Part 7: Attribution, and what ROAS does not tell you<a class="headerlink" href="#part-7-attribution-and-what-roas-does-not-tell-you" title="Permanent link">&para;</a></h2>
+<p><code>attributed_revenue</code> is revenue <strong>credited</strong> to a campaign. In this data the rule is simple: each purchase belongs to exactly <strong>one</strong> campaign, on the same day. Real attribution is messier, and the simple rule hides questions the table cannot answer.</p>
+<table>
+<thead>
+<tr>
+<th>The table <strong>can</strong> tell you</th>
+<th>The table <strong>cannot</strong> tell you</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>How much revenue was credited to each campaign</td>
+<td>Whether the buyer saw other campaigns first (there is no touchpoint history)</td>
+</tr>
+<tr>
+<td>Cost per credited purchase (CPA)</td>
+<td>Whether the buyer would have bought anyway, without the ad</td>
+</tr>
+<tr>
+<td>Revenue credited per unit of spend (ROAS)</td>
+<td>Sales from people who came on their own (there is no organic traffic)</td>
+</tr>
+<tr>
+<td>Trends in these numbers over time</td>
+<td>Whether last-click or any multi-touch rule would credit the same campaign</td>
+</tr>
+</tbody>
+</table>
+<p>So this table <strong>cannot prove</strong> a last-click or multi-touch claim, and it cannot measure <strong>incrementality</strong>: the sales that happened <strong>because of</strong> the campaign and would not have happened without it.</p>
+<h3 id="roas-is-not-profit">ROAS is not profit<a class="headerlink" href="#roas-is-not-profit" title="Permanent link">&para;</a></h3>
+<p>ROAS divides revenue by <strong>media</strong> spend only. It ignores:</p>
+<ol>
+<li><strong>Product cost</strong>: a ROAS of 3 means little if the products cost 80% of their price to make or buy.</li>
+<li><strong>Returns</strong>: attributed revenue is counted <strong>before</strong> returns.</li>
+<li><strong>Other costs</strong>: agency fees, creative production, discounts and staff time.</li>
+</ol>
+<h3 id="roas-is-not-causal-lift">ROAS is not causal lift<a class="headerlink" href="#roas-is-not-causal-lift" title="Permanent link">&para;</a></h3>
+<p>A high ROAS says "a lot of revenue was <strong>credited</strong> here", not "the spend <strong>caused</strong> this revenue". A campaign aimed at past visitors can show a high ROAS while adding few extra sales, because many of those people were going to buy anyway.</p>
+<blockquote>
+<p><strong>Predict, then reveal</strong></p>
+<p>In a previous session we saw that spend and revenue both rise late in the year. If you compared ROAS in the busiest months with ROAS earlier in the year, could you tell how much of the change came from the budget and how much from the season?</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="n">weekly</span> <span class="o">=</span> <span class="n">daily</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">&quot;date&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="s2">&quot;W-SUN&quot;</span><span class="p">)[[</span><span class="s2">&quot;spend&quot;</span><span class="p">,</span> <span class="s2">&quot;conversions&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>   <span class="c1"># weeks ending on Sunday</span>
+<span class="n">weekly</span> <span class="o">=</span> <span class="n">weekly</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s2">&quot;2025-01-12&quot;</span><span class="p">:</span><span class="s2">&quot;2025-12-28&quot;</span><span class="p">]</span>          <span class="c1"># complete Monday-to-Sunday weeks only</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax1</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">weekly</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">weekly</span><span class="p">[</span><span class="s2">&quot;spend&quot;</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#2a78d6&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Spend&quot;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Weekly spend (currency units)&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#2a78d6&quot;</span><span class="p">)</span>
+<span class="n">ax2</span> <span class="o">=</span> <span class="n">ax1</span><span class="o">.</span><span class="n">twinx</span><span class="p">()</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">weekly</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">weekly</span><span class="p">[</span><span class="s2">&quot;conversions&quot;</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#eb6834&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Conversions&quot;</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Weekly conversions&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#eb6834&quot;</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Spend and conversions rise together at the end of the year&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+<p><img alt="png" src="../12_marketing_campaigns_lecture_files/12_marketing_campaigns_lecture_29_0.png" /></p>
+<p>Both lines climb in the last months of the year. Budgets went up <strong>and</strong> shoppers were in a buying mood at the same time, so a before/after comparison would give the budget credit for the season. This is the <strong>confounding</strong> you met in Session 8: season drives both spend and sales.</p>
+<blockquote>
+<p><strong>Check your understanding 5</strong></p>
+<p>A colleague says: "SOC-02's ROAS is many times SOC-01's, so every unit we move from SOC-01 to SOC-02 earns that many times more." Name two separate reasons this may be false.</p>
+</blockquote>
+<hr />
+<h2 id="part-8-from-comparison-to-experiment">Part 8: From comparison to experiment<a class="headerlink" href="#part-8-from-comparison-to-experiment" title="Permanent link">&para;</a></h2>
+<p>Everything so far is an <strong>observational comparison</strong>: we looked at what happened. It can point to candidates, but it cannot say what <strong>more</strong> (or less) money would do. For that, Session 9's tool is the right one: a <strong>controlled test</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Design</th>
+<th>How it works for a budget change</th>
+<th>Watch out for</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Holdout</strong></td>
+<td>Randomly keep a share of the target audience from seeing the campaign; compare their purchases with those who see it</td>
+<td>Needs a platform that can hold people out; small effects need big groups</td>
+</tr>
+<tr>
+<td><strong>Geo split</strong></td>
+<td>Randomly pick some regions to get the extra budget and some to stay as they are; compare sales, not attributed revenue</td>
+<td>Regions differ; pick matched pairs and compare <strong>change</strong> from before</td>
+</tr>
+<tr>
+<td><strong>Time switching</strong></td>
+<td>Alternate the budget on and off week by week</td>
+<td>Seasons and holidays; carry-over from earlier weeks</td>
+</tr>
+</tbody>
+</table>
+<p>A test proposal answers six questions <strong>before</strong> it starts:</p>
+<ol>
+<li><strong>Change:</strong> what exactly changes (for example "raise campaign X's daily budget by a fifth")?</li>
+<li><strong>Design:</strong> who or which regions get the change, chosen at random?</li>
+<li><strong>Primary metric:</strong> one number decided in advance, ideally <strong>total</strong> conversions or revenue in the test group, not attributed revenue.</li>
+<li><strong>Guardrails:</strong> numbers that must not get worse (CPA, return rate, unsubscribes, complaints).</li>
+<li><strong>Duration:</strong> long enough for enough conversions and at least whole weeks; avoid big holidays unless they are the point.</li>
+<li><strong>Decision rule:</strong> what result leads to "scale up", "keep as is" or "stop", including the uncertainty interval from Session 9.</li>
+</ol>
+<blockquote>
+<p><strong>Check your understanding 6</strong></p>
+<p>Why should the primary metric be <strong>total</strong> conversions in the test regions rather than revenue <strong>attributed</strong> to the campaign?</p>
+</blockquote>
+<hr />
+<h2 id="part-9-worked-case-a-scorecard-the-lead-can-use">Part 9: Worked case — a scorecard the lead can use<a class="headerlink" href="#part-9-worked-case-a-scorecard-the-lead-can-use" title="Permanent link">&para;</a></h2>
+<p>We combine everything into one scorecard. It keeps <strong>volumes next to rates</strong>, keeps blanks as "n/a", flags Email as not comparable, and sorts by conversions so the campaigns that move the business are at the top.</p>
+<div class="highlight"><pre><span></span><code><span class="n">scorecard</span> <span class="o">=</span> <span class="n">by_campaign</span><span class="p">[[</span><span class="s2">&quot;spend&quot;</span><span class="p">,</span> <span class="s2">&quot;conversions&quot;</span><span class="p">,</span> <span class="s2">&quot;attributed_revenue&quot;</span><span class="p">,</span> <span class="s2">&quot;conv_rate&quot;</span><span class="p">,</span> <span class="s2">&quot;CPA&quot;</span><span class="p">,</span> <span class="s2">&quot;ROAS&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">scorecard</span><span class="p">[</span><span class="s2">&quot;share of conversions&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">scorecard</span><span class="p">[</span><span class="s2">&quot;conversions&quot;</span><span class="p">]</span> <span class="o">/</span> <span class="n">scorecard</span><span class="p">[</span><span class="s2">&quot;conversions&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">scorecard</span><span class="p">[</span><span class="s2">&quot;note&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+<span class="n">scorecard</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">scorecard</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">get_level_values</span><span class="p">(</span><span class="s2">&quot;channel&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;Email&quot;</span><span class="p">,</span> <span class="s2">&quot;note&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;near-zero media cost: ROAS not comparable&quot;</span>
+<span class="n">scorecard</span> <span class="o">=</span> <span class="n">scorecard</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s2">&quot;conversions&quot;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">show</span><span class="p">(</span><span class="n">scorecard</span><span class="p">)</span>
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th></th>
+      <th>spend</th>
+      <th>conversions</th>
+      <th>attributed_revenue</th>
+      <th>conv_rate</th>
+      <th>CPA</th>
+      <th>ROAS</th>
+      <th>share of conversions</th>
+      <th>note</th>
+    </tr>
+    <tr>
+      <th>channel</th>
+      <th>campaign_id</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="2" valign="top">Search</th>
+      <th>SRCH-01</th>
+      <td>362,654.08</td>
+      <td>24,629</td>
+      <td>2,897,731.90</td>
+      <td>3.62%</td>
+      <td>14.72</td>
+      <td>7.99</td>
+      <td>44.11%</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>SRCH-02</th>
+      <td>256,844.20</td>
+      <td>15,308</td>
+      <td>1,589,252.73</td>
+      <td>3.14%</td>
+      <td>16.78</td>
+      <td>6.19</td>
+      <td>27.41%</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>Social</th>
+      <th>SOC-01</th>
+      <td>433,453.56</td>
+      <td>6,408</td>
+      <td>595,049.96</td>
+      <td>1.15%</td>
+      <td>67.64</td>
+      <td>1.37</td>
+      <td>11.48%</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>Email</th>
+      <th>EML-01</th>
+      <td>15,426.37</td>
+      <td>4,378</td>
+      <td>451,164.11</td>
+      <td>2.17%</td>
+      <td>3.52</td>
+      <td>29.25</td>
+      <td>7.84%</td>
+      <td>near-zero media cost: ROAS not comparable</td>
+    </tr>
+    <tr>
+      <th>Social</th>
+      <th>SOC-02</th>
+      <td>24,001.47</td>
+      <td>2,850</td>
+      <td>315,601.00</td>
+      <td>6.29%</td>
+      <td>8.42</td>
+      <td>13.15</td>
+      <td>5.10%</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>Display</th>
+      <th>DISP-01</th>
+      <td>207,555.98</td>
+      <td>1,518</td>
+      <td>132,218.98</td>
+      <td>0.84%</td>
+      <td>136.73</td>
+      <td>0.64</td>
+      <td>2.72%</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>Video</th>
+      <th>VID-01</th>
+      <td>169,989.92</td>
+      <td>748</td>
+      <td>68,082.75</td>
+      <td>1.08%</td>
+      <td>227.26</td>
+      <td>0.40</td>
+      <td>1.34%</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="highlight"><pre><span></span><code><span class="n">paid</span> <span class="o">=</span> <span class="n">scorecard</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s2">&quot;Email&quot;</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="s2">&quot;channel&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mf">4.5</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">paid</span><span class="p">[</span><span class="s2">&quot;spend&quot;</span><span class="p">],</span> <span class="n">paid</span><span class="p">[</span><span class="s2">&quot;ROAS&quot;</span><span class="p">],</span> <span class="n">s</span><span class="o">=</span><span class="n">paid</span><span class="p">[</span><span class="s2">&quot;conversions&quot;</span><span class="p">]</span> <span class="o">/</span> <span class="mi">40</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.6</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#2a78d6&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">paid</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s2">&quot;campaign_id&quot;</span><span class="p">],</span> <span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s2">&quot;spend&quot;</span><span class="p">],</span> <span class="n">row</span><span class="p">[</span><span class="s2">&quot;ROAS&quot;</span><span class="p">]),</span>
+                <span class="n">textcoords</span><span class="o">=</span><span class="s2">&quot;offset points&quot;</span><span class="p">,</span> <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">9</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;:&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">ax</span><span class="o">.</span><span class="n">get_xlim</span><span class="p">()[</span><span class="mi">1</span><span class="p">],</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;ROAS = 1 (revenue equals media cost) &quot;</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s2">&quot;right&quot;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s2">&quot;bottom&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Paid campaigns: attributed ROAS against spend (bubble = conversions)&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Spend in 2025 (currency units)&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Attributed ROAS&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+<p><img alt="png" src="../12_marketing_campaigns_lecture_files/12_marketing_campaigns_lecture_32_0.png" /></p>
+<p>How to read the chart: campaigns at the top right are <strong>efficient and large</strong>; at the top left, <strong>efficient but small</strong>; at the bottom right, <strong>large but expensive</strong>. The dotted line marks where credited revenue only just equals media cost. Remember it is <strong>not</strong> a profit line: product cost and returns are missing.</p>
+<p>A recommendation built from this scorecard, in the form the lead asked for:</p>
+<blockquote>
+<ol>
+<li><strong>What the data show:</strong> name the campaigns that combine high volume with a low CPA, and the large campaigns whose ROAS is close to or below 1, using the numbers in the scorecard.</li>
+<li><strong>What they do not show:</strong> attributed revenue is not incremental; Email and past-visitor campaigns may get credit for buyers who would have bought anyway; ROAS is before product cost and returns.</li>
+<li><strong>What to do:</strong> test one bounded budget change on one candidate (design, primary metric, guardrails, duration and decision rule), rather than reallocating the whole budget.</li>
+</ol>
+</blockquote>
+<hr />
+<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Question</th>
+<th>Tool</th>
+<th>Trap to avoid</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Can I trust the table?</td>
+<td>Key, completeness and funnel-order checks</td>
+<td>Computing rates before checking the grain</td>
+</tr>
+<tr>
+<td>What is the rate for a campaign, channel or year?</td>
+<td>Ratio of sums (<code>add_rates</code>)</td>
+<td>Averaging or adding rates</td>
+</tr>
+<tr>
+<td>What if the denominator is zero?</td>
+<td><code>safe_div</code>: blank, "not available"</td>
+<td>Showing 0 or infinity; deleting review cases</td>
+</tr>
+<tr>
+<td>Which channel converts best?</td>
+<td>Weighted rate with volumes shown</td>
+<td>Mean of campaign rates (the SOC-02 effect)</td>
+</tr>
+<tr>
+<td>Which campaign is most efficient?</td>
+<td>CPA and ROAS <strong>with</strong> spend and conversions</td>
+<td>Ranking a tiny-cost campaign (Email) first</td>
+</tr>
+<tr>
+<td>Did the spend cause the sales?</td>
+<td>A controlled test (holdout, geo split)</td>
+<td>Treating attributed revenue or ROAS as incremental</td>
+</tr>
+<tr>
+<td>Is it profitable?</td>
+<td>Needs product cost, returns, other costs</td>
+<td>Reading ROAS as profit</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="quiz">Quiz<a class="headerlink" href="#quiz" title="Permanent link">&para;</a></h2>
+<p>Answer these at the start of the next lecture, which opens the <strong>HR case</strong>: headcount and staff turnover. You do not need any HR knowledge; use common sense. Write short answers.</p>
+<ol>
+<li>A team had 40 people on 1 January and 44 on 31 December. Does that mean only 4 people joined during the year? Explain.</li>
+<li><strong>Headcount</strong> can be counted on one day, or averaged over a period. Why might the two differ for a shop that hires many seasonal staff?</li>
+<li>6 people left a team during the year. Is the turnover rate 6 ÷ (headcount today)? What would be a fairer denominator, and why?</li>
+<li>A department of 5 people lost 2 people; a department of 200 lost 30. Which has the higher turnover rate, and which number would you trust more?</li>
+<li>Why might an HR report hide numbers for groups with only two or three people?</li>
+</ol>
+<hr />
+<h2 id="lab-briefing">Lab briefing<a class="headerlink" href="#lab-briefing" title="Permanent link">&para;</a></h2>
+<p>In the <strong>Lab</strong> you:</p>
+<ol>
+<li>Load the campaign table and check its key, completeness and funnel order.</li>
+<li>Build campaign and channel totals with ratios of sums, and reconcile them to the company total.</li>
+<li>Find the zero-denominator rows and the Email review cases.</li>
+<li>Compare the mean of campaign rates with the weighted rate by channel and explain the difference.</li>
+<li>Build a CPA and ROAS scorecard with volumes; Stretch: a monthly trend and a spend-band view.</li>
+<li>Challenge: debug three broken ROAS analyses, then write a controlled test proposal.</li>
+</ol>
+<p>Open the <a href="../12_marketing_campaigns_lab/">Session 12 lab</a>.</p>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Copyright &copy; 2026 - Aayush Raj Regmi</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

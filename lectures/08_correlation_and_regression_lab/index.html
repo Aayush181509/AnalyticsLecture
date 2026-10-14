@@ -1,0 +1,2148 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Lab - Data Analytics</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../stylesheets/readability.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Lab";
+        var mkdocs_page_input_path = "lectures/08_correlation_and_regression_lab.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Data Analytics
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Getting Started</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../..#course-at-a-glance">Course at a glance</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../..#where-to-start">Where to start</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../..#how-we-will-practise">How we will practise</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Foundations</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../foundations/">Why Data Analytics Matters</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/#what-is-data-analytics">What is data analytics?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/#real-stories-where-data-changed-the-outcome">Real stories where data changed the outcome</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../foundations/#a-map-that-changed-how-we-think-about-disease-london-1854">A map that changed how we think about disease (London, 1854)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../foundations/#a-chart-that-reformed-hospitals-1850s">A chart that reformed hospitals (1850s)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../foundations/#winning-on-a-small-budget-baseball-2002">Winning on a small budget (baseball, 2002)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../foundations/#preparing-for-a-hurricane-retail-2004">Preparing for a hurricane (retail, 2004)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../foundations/#when-big-data-got-it-wrong-public-health-20082015">When big data got it wrong (public health, 2008–2015)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/#where-you-meet-analytics-every-day">Where you meet analytics every day</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/#why-presentation-is-part-of-analysis">Why presentation is part of analysis</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/#what-comes-next">What comes next</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../foundations/statistics-are-not-enough/">Statistics Are Not Enough</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/statistics-are-not-enough/#anscombes-quartet">Anscombe's quartet</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/statistics-are-not-enough/#the-datasaurus-dozen">The Datasaurus Dozen</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/statistics-are-not-enough/#what-this-means-at-work">What this means at work</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/statistics-are-not-enough/#try-it-yourself">Try it yourself</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../foundations/misleading-statistics/">How Statistics Can Mislead</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/misleading-statistics/#1-correlation-is-not-causation">1. Correlation is not causation</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/misleading-statistics/#2-simpsons-paradox-the-total-can-reverse-the-parts">2. Simpson's paradox: the total can reverse the parts</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/misleading-statistics/#3-misleading-axes">3. Misleading axes</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/misleading-statistics/#4-cherry-picked-time-windows">4. Cherry-picked time windows</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/misleading-statistics/#5-which-average">5. Which average?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/misleading-statistics/#6-percentages-without-the-base">6. Percentages without the base</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/misleading-statistics/#7-survivorship-bias">7. Survivorship bias</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/misleading-statistics/#a-checklist-for-any-number-you-are-shown">A checklist for any number you are shown</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/misleading-statistics/#try-it-yourself">Try it yourself</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../foundations/types-of-analysis/">Types of Analysis</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/types-of-analysis/#univariate-analysis-one-variable-at-a-time">Univariate analysis: one variable at a time</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/types-of-analysis/#bivariate-analysis-two-variables-together">Bivariate analysis: two variables together</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/types-of-analysis/#multivariate-analysis-three-or-more-variables">Multivariate analysis: three or more variables</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/types-of-analysis/#choosing-a-chart-quick-guide">Choosing a chart: quick guide</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/types-of-analysis/#try-it-yourself">Try it yourself</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../foundations/visual-design/">Designing Clear Visuals</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/visual-design/#the-data-ink-ratio">The data-ink ratio</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/visual-design/#pre-attentive-attributes-what-the-eye-sees-first">Pre-attentive attributes: what the eye sees first</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/visual-design/#gestalt-principles-how-we-group-things">Gestalt principles: how we group things</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/visual-design/#colour-with-purpose">Colour with purpose</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/visual-design/#a-clean-chart-checklist">A clean-chart checklist</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/visual-design/#try-it-yourself">Try it yourself</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../foundations/storytelling/">Storytelling with Data</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/storytelling/#the-challenger-disaster-right-data-wrong-presentation">The Challenger disaster: right data, wrong presentation</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../foundations/storytelling/#what-did-the-data-show">What did the data show?</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/storytelling/#what-makes-a-data-story">What makes a data story</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../foundations/storytelling/#start-with-the-big-idea">Start with the "big idea"</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/storytelling/#a-simple-process">A simple process</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/storytelling/#exploratory-versus-explanatory">Exploratory versus explanatory</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/storytelling/#try-it-yourself">Try it yourself</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Course</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../course/roadmap/">Learning Roadmap</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#how-each-session-works">How each session works</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#part-a-thinking-with-data">Part A: Thinking with data</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#part-b-describing-and-measuring">Part B: Describing and measuring</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#part-c-relationships-change-and-uncertainty">Part C: Relationships, change and uncertainty</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#part-d-business-cases">Part D: Business cases</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#part-e-communicating-and-bringing-it-together">Part E: Communicating and bringing it together</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#part-f-tableau">Part F: Tableau</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#how-you-will-be-assessed">How you will be assessed</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#extra-practice-topics">Extra practice topics</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../course/setup/">Setup and Practice</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/setup/#what-you-need">What you need</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/setup/#open-a-lesson-in-google-colab">Open a lesson in Google Colab</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/setup/#keep-your-data-safe">Keep your data safe</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/setup/#if-something-does-not-work">If something does not work</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/setup/#tableau-later">Tableau (later)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/setup/#keep-an-evidence-log">Keep an evidence log</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../course/workflow/">Analytical Workflow</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/workflow/#the-seven-steps">The seven steps</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../course/workflow/#1-business-question">1. Business question</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../course/workflow/#2-data-understanding">2. Data understanding</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../course/workflow/#3-preparation">3. Preparation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../course/workflow/#4-analysis">4. Analysis</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../course/workflow/#5-validation">5. Validation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../course/workflow/#6-visualization">6. Visualization</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../course/workflow/#7-recommendation">7. Recommendation</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/workflow/#a-worked-example">A worked example</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/workflow/#when-a-result-looks-wrong">When a result looks wrong</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/workflow/#association-is-not-causation">Association is not causation</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../cases/">Business Cases</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../cases/#the-five-core-cases">The five core cases</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../cases/#retail">Retail</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../cases/#finance">Finance</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../cases/#operations">Operations</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../cases/#marketing">Marketing</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../cases/#hr">HR</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../cases/#what-every-case-includes">What every case includes</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../cases/#combining-evidence-across-departments">Combining evidence across departments</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../cases/#additional-practice-choices">Additional practice choices</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Python Sessions</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" >Session 1: Why Data Analytics Matters</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../01_why_data_analytics_lecture/">Lecture</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lecture/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lecture/#part-1-what-is-data-analytics">Part 1: What is data analytics?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lecture/#part-2-real-stories-where-data-changed-the-outcome">Part 2: Real stories where data changed the outcome</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lecture/#part-3-from-question-to-recommendation">Part 3: From question to recommendation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lecture/#part-4-always-plot-your-data-anscombes-quartet">Part 4: Always plot your data — Anscombe's quartet</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lecture/#part-5-the-datasaurus-dozen">Part 5: The Datasaurus Dozen</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lecture/#part-6-a-preview-of-how-numbers-mislead">Part 6: A preview of how numbers mislead</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lecture/#summary">Summary</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lecture/#quiz">Quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lecture/#in-the-lab">In the Lab</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../01_why_data_analytics_lab/">Lab</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lab/#how-this-lab-works">How this lab works</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lab/#part-a-guided-practice-core">Part A: Guided practice (Core)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lab/#part-b-independent-tasks">Part B: Independent tasks</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lab/#part-c-challenge-the-datasaurus-dozen">Part C: Challenge — the Datasaurus Dozen</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lab/#quick-reference">Quick reference</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lab/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lab/#evidence-to-keep">Evidence to keep</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Session 2: Data, Grain and the DataFrame</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../02_data_and_grain_lecture/">Lecture</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lecture/#recap-quiz">Recap quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lecture/#what-you-will-be-able-to-explain">What you will be able to explain</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lecture/#part-1-levels-of-measurement">Part 1: Levels of measurement</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lecture/#part-2-tidy-data">Part 2: Tidy data</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lecture/#part-3-grain-and-keys">Part 3: Grain and keys</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lecture/#part-4-data-dictionaries">Part 4: Data dictionaries</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lecture/#part-5-data-quality-dimensions">Part 5: Data-quality dimensions</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lecture/#part-6-worked-case-the-superstore-order-lines">Part 6: Worked case — the Superstore order lines</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lecture/#summary">Summary</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lecture/#quiz">Quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lecture/#lab-briefing">Lab briefing</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../02_data_and_grain_lab/">Lab</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lab/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lab/#how-this-lab-works">How this lab works</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lab/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lab/#guided-practice">Guided practice</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lab/#independent-tasks">Independent tasks</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lab/#challenge">Challenge</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lab/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lab/#evidence-to-keep">Evidence to keep</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lab/#after-the-lab">After the lab</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Session 3: Cleaning and Preparing Data</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../03_cleaning_and_preparing_lecture/">Lecture</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lecture/#recap-quiz">Recap quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lecture/#what-you-will-be-able-to-explain">What you will be able to explain</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lecture/#part-1-raw-data-and-the-cleaning-log">Part 1: Raw data and the cleaning log</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lecture/#part-2-missing-data">Part 2: Missing data</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lecture/#part-3-duplicates">Part 3: Duplicates</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lecture/#part-4-outliers">Part 4: Outliers</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lecture/#part-5-text-numbers-dates-and-encodings">Part 5: Text, numbers, dates and encodings</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lecture/#part-6-joins-and-cardinality">Part 6: Joins and cardinality</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lecture/#part-7-reshaping">Part 7: Reshaping</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lecture/#part-8-worked-case-world-cup-attendance">Part 8: Worked case — World Cup attendance</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lecture/#summary">Summary</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lecture/#quiz">Quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lecture/#lab-briefing">Lab briefing</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../03_cleaning_and_preparing_lab/">Lab</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lab/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lab/#how-this-lab-works">How this lab works</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lab/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lab/#guided-practice">Guided practice</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lab/#independent-tasks">Independent tasks</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lab/#challenge">Challenge</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lab/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lab/#evidence-to-keep">Evidence to keep</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lab/#after-the-lab">After the lab</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Session 4: Descriptive Statistics and Distributions</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../04_descriptive_statistics_lecture/">Lecture</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lecture/#recap-quiz">Recap quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lecture/#what-you-will-be-able-to-explain">What you will be able to explain</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lecture/#part-1-the-centre-mean-median-and-mode">Part 1: The centre — mean, median and mode</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lecture/#part-2-spread-how-different-are-the-values">Part 2: Spread — how different are the values?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lecture/#part-3-shape-skew-and-long-tails">Part 3: Shape — skew and long tails</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lecture/#part-4-three-pictures-of-one-distribution">Part 4: Three pictures of one distribution</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lecture/#part-5-z-scores-and-the-normal-curve-as-a-reference">Part 5: z-scores and the normal curve as a reference</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lecture/#part-6-unusual-values-flag-do-not-delete">Part 6: Unusual values — flag, do not delete</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lecture/#part-7-worked-case-superstore-orders">Part 7: Worked case — Superstore orders</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lecture/#summary">Summary</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lecture/#quiz">Quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lecture/#lab-briefing">Lab briefing</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../04_descriptive_statistics_lab/">Lab</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lab/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lab/#how-this-lab-works">How this lab works</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lab/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lab/#guided-practice">Guided practice</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lab/#independent-tasks">Independent tasks</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lab/#challenge">Challenge</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lab/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lab/#evidence-to-keep">Evidence to keep</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lab/#after-the-lab">After the lab</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Session 5: Metrics and KPIs</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../05_metrics_and_kpis_lecture/">Lecture</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lecture/#recap-quiz">Recap quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lecture/#what-you-will-be-able-to-explain">What you will be able to explain</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lecture/#part-1-what-makes-a-good-metric">Part 1: What makes a good metric?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lecture/#part-2-metric-contracts">Part 2: Metric contracts</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lecture/#part-3-ratio-of-sums-versus-mean-of-ratios">Part 3: Ratio of sums versus mean of ratios</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lecture/#part-4-weighted-rates-in-practice">Part 4: Weighted rates in practice</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lecture/#part-5-distinct-counts-do-not-add-up">Part 5: Distinct counts do not add up</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lecture/#part-6-simpsons-paradox">Part 6: Simpson's paradox</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lecture/#part-7-goodharts-law">Part 7: Goodhart's law</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lecture/#part-8-worked-case-a-segment-kpi-table-that-reconciles">Part 8: Worked case — a segment KPI table that reconciles</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lecture/#summary">Summary</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lecture/#quiz">Quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lecture/#lab-briefing">Lab briefing</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../05_metrics_and_kpis_lab/">Lab</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lab/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lab/#how-this-lab-works">How this lab works</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lab/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lab/#guided-practice">Guided practice</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lab/#independent-tasks">Independent tasks</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lab/#challenge">Challenge</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lab/#validation-checklist">Validation checklist</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lab/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lab/#evidence-to-keep">Evidence to keep</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lab/#after-the-lab">After the lab</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Session 6: Visualisation Principles</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../06_visualisation_principles_lecture/">Lecture</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lecture/#recap-quiz">Recap quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lecture/#what-you-will-be-able-to-explain">What you will be able to explain</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lecture/#part-1-choose-the-chart-from-the-task">Part 1: Choose the chart from the task</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lecture/#part-2-how-accurately-we-read-encodings">Part 2: How accurately we read encodings</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lecture/#part-3-pre-attentive-attributes">Part 3: Pre-attentive attributes</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lecture/#part-4-data-ink-and-decluttering">Part 4: Data-ink and decluttering</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lecture/#part-5-gestalt-what-belongs-together">Part 5: Gestalt: what belongs together</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lecture/#part-6-colour-with-a-job">Part 6: Colour with a job</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lecture/#part-7-honest-axes">Part 7: Honest axes</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lecture/#part-8-message-titles-and-annotation">Part 8: Message titles and annotation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lecture/#part-9-small-multiples">Part 9: Small multiples</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lecture/#summary">Summary</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lecture/#quiz">Quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lecture/#in-the-lab">In the Lab</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../06_visualisation_principles_lab/">Lab</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lab/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lab/#how-this-lab-works">How this lab works</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lab/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Session 7: Time Series and Trends</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../07_trends_and_growth_lecture/">Lecture</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lecture/#recap-quiz">Recap quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lecture/#what-you-will-be-able-to-explain">What you will be able to explain</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lecture/#part-1-the-three-components-of-a-series">Part 1: The three components of a series</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lecture/#part-2-month-on-month-versus-year-on-year">Part 2: Month-on-month versus year-on-year</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lecture/#part-3-rolling-averages-trailing-and-centred">Part 3: Rolling averages, trailing and centred</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lecture/#part-4-index-numbers-base-100">Part 4: Index numbers (base = 100)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lecture/#part-5-seasonally-adjusted-series">Part 5: Seasonally adjusted series</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lecture/#part-6-incomplete-and-missing-periods">Part 6: Incomplete and missing periods</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lecture/#part-7-growth-after-filtering-the-trap">Part 7: Growth after filtering, the trap</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lecture/#part-8-worked-case-superstore-monthly-sales">Part 8: Worked case — Superstore monthly Sales</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lecture/#summary">Summary</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lecture/#quiz">Quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lecture/#lab-briefing">Lab briefing</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../07_trends_and_growth_lab/">Lab</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lab/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lab/#how-this-lab-works">How this lab works</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lab/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lab/#before-you-start">Before you start</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lab/#guided-practice">Guided practice</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lab/#independent-tasks">Independent tasks</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lab/#challenge">Challenge</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lab/#validation-checklist">Validation checklist</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lab/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lab/#evidence-to-keep">Evidence to keep</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lab/#after-the-lab">After the lab</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >Session 8: Correlation and Regression</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../08_correlation_and_regression_lecture/">Lecture</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../08_correlation_and_regression_lecture/#recap-quiz">Recap quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../08_correlation_and_regression_lecture/#what-you-will-be-able-to-explain">What you will be able to explain</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../08_correlation_and_regression_lecture/#part-1-scatter-plots">Part 1: Scatter plots</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../08_correlation_and_regression_lecture/#part-2-covariance-and-correlation">Part 2: Covariance and correlation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../08_correlation_and_regression_lecture/#part-3-spearman-correlation">Part 3: Spearman correlation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../08_correlation_and_regression_lecture/#part-4-correlation-is-not-causation">Part 4: Correlation is not causation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../08_correlation_and_regression_lecture/#part-5-simple-linear-regression">Part 5: Simple linear regression</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../08_correlation_and_regression_lecture/#part-6-outliers-and-leverage">Part 6: Outliers and leverage</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../08_correlation_and_regression_lecture/#part-7-the-danger-of-extrapolation">Part 7: The danger of extrapolation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../08_correlation_and_regression_lecture/#part-8-worked-case-advertising-spend-and-revenue">Part 8: Worked case — advertising spend and revenue</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../08_correlation_and_regression_lecture/#summary">Summary</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../08_correlation_and_regression_lecture/#quiz">Quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../08_correlation_and_regression_lecture/#lab-briefing">Lab briefing</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Lab</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#how-this-lab-works">How this lab works</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#before-you-start">Before you start</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#guided-practice">Guided practice</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#independent-tasks">Independent tasks</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#challenge">Challenge</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#validation-checklist">Validation checklist</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#evidence-to-keep">Evidence to keep</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#after-the-lab">After the lab</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Session 9: Sampling, Uncertainty and Experiments</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../09_sampling_and_experiments_lecture/">Lecture</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../09_sampling_and_experiments_lecture/#recap-quiz">Recap quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../09_sampling_and_experiments_lecture/#what-you-will-be-able-to-explain">What you will be able to explain</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../09_sampling_and_experiments_lecture/#part-1-population-sample-and-sampling-error">Part 1: Population, sample and sampling error</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../09_sampling_and_experiments_lecture/#part-2-the-sampling-distribution-by-simulation">Part 2: The sampling distribution, by simulation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../09_sampling_and_experiments_lecture/#part-3-standard-error-and-why-it-shrinks-with-n">Part 3: Standard error, and why it shrinks with √n</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../09_sampling_and_experiments_lecture/#part-4-confidence-intervals-bootstrap-first">Part 4: Confidence intervals, bootstrap first</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../09_sampling_and_experiments_lecture/#part-5-what-95-confidence-means">Part 5: What "95% confidence" means</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../09_sampling_and_experiments_lecture/#part-6-experiments-and-why-we-randomise">Part 6: Experiments and why we randomise</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../09_sampling_and_experiments_lecture/#part-7-conversion-rate-and-lift">Part 7: Conversion rate and lift</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../09_sampling_and_experiments_lecture/#part-8-a-confidence-interval-for-the-lift">Part 8: A confidence interval for the lift</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../09_sampling_and_experiments_lecture/#part-9-a-p-value-by-shuffling-permutation-test">Part 9: A p-value by shuffling (permutation test)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../09_sampling_and_experiments_lecture/#part-10-reading-a-p-value-and-practical-versus-statistical-significance">Part 10: Reading a p-value, and practical versus statistical significance</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../09_sampling_and_experiments_lecture/#part-11-peeking-and-multiple-comparisons">Part 11: Peeking and multiple comparisons</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../09_sampling_and_experiments_lecture/#part-12-worked-case-the-checkout-page-result-for-a-manager">Part 12: Worked case — the checkout-page result for a manager</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../09_sampling_and_experiments_lecture/#summary">Summary</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../09_sampling_and_experiments_lecture/#quiz">Quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../09_sampling_and_experiments_lecture/#lab-briefing">Lab briefing</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../09_sampling_and_experiments_lab/">Lab</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../09_sampling_and_experiments_lab/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../09_sampling_and_experiments_lab/#how-this-lab-works">How this lab works</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../09_sampling_and_experiments_lab/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../09_sampling_and_experiments_lab/#before-you-start">Before you start</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../09_sampling_and_experiments_lab/#guided-practice">Guided practice</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../09_sampling_and_experiments_lab/#independent-tasks">Independent tasks</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../09_sampling_and_experiments_lab/#challenge">Challenge</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../09_sampling_and_experiments_lab/#validation-checklist">Validation checklist</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../09_sampling_and_experiments_lab/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../09_sampling_and_experiments_lab/#evidence-to-keep">Evidence to keep</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Tableau (Coming Later)</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lessons/class-01/">Tableau Lesson 1 (draft)</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#before-you-start">Before you start</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#part-1-from-request-to-question">Part 1: From request to question</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#part-2-watch-the-demonstration">Part 2: Watch the demonstration</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#part-3-guided-practice">Part 3: Guided practice</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-01/#connect-to-the-file">Connect to the file</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-01/#check-the-column-types">Check the column types</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-01/#build-a-first-chart">Build a first chart</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-01/#add-a-filter">Add a filter</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-01/#save-and-reopen">Save and reopen</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#part-4-rows-versus-orders">Part 4: Rows versus orders</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#part-5-independent-work">Part 5: Independent work</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#part-6-challenge">Part 6: Challenge</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#after-the-lesson">After the lesson</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lessons/class-02/">Tableau Lesson 2 (draft)</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#before-you-start">Before you start</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#part-1-meet-the-data-dictionary">Part 1: Meet the data dictionary</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#part-2-find-the-grain">Part 2: Find the grain</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#part-3-count-orders-correctly">Part 3: Count orders correctly</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-02/#demonstration">Demonstration</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-02/#guided-practice">Guided practice</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#part-4-what-the-returns-flag-means">Part 4: What the returns flag means</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#part-5-check-one-order-by-hand">Part 5: Check one order by hand</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#part-6-keep-a-preparation-log">Part 6: Keep a preparation log</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#part-7-independent-work">Part 7: Independent work</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#part-8-debugging-challenge">Part 8: Debugging challenge</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#after-the-lesson">After the lesson</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lessons/class-03/">Tableau Lesson 3 (draft)</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#before-you-start">Before you start</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#part-1-agree-the-measures">Part 1: Agree the measures</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#part-2-watch-the-demonstration">Part 2: Watch the demonstration</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#part-3-guided-practice-build-the-calculations">Part 3: Guided practice — build the calculations</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#part-4-guided-practice-the-segment-table">Part 4: Guided practice — the segment table</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-03/#check-that-it-reconciles">Check that it reconciles</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#part-5-independent-work">Part 5: Independent work</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-03/#a-filter-by-region">A. Filter by region</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-03/#b-look-at-a-category">B. Look at a category</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#part-6-debugging-challenge">Part 6: Debugging challenge</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#part-7-make-a-recommendation">Part 7: Make a recommendation</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#validation-checklist">Validation checklist</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#after-the-lesson">After the lesson</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lessons/class-04/">Tableau Lesson 4 (draft)</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#before-you-start">Before you start</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#part-1-the-monthly-trend">Part 1: The monthly trend</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#part-2-two-kinds-of-growth">Part 2: Two kinds of growth</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-04/#month-on-month-growth">Month-on-month growth</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-04/#year-on-year-growth">Year-on-year growth</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-04/#which-one-is-fair">Which one is fair?</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#part-3-the-returns-list">Part 3: The returns list</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#part-4-guided-practice-build-the-dashboard">Part 4: Guided practice — build the dashboard</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-04/#design-checks">Design checks</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#part-5-independent-work">Part 5: Independent work</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#part-6-debugging-challenge">Part 6: Debugging challenge</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#part-7-recommend-a-test">Part 7: Recommend a test</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#validation-checklist">Validation checklist</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#after-the-lesson">After the lesson</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../lessons/lesson-template/">Lesson Template</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#1-the-business-decision">1. The business decision</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#2-what-you-will-demonstrate">2. What you will demonstrate</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#3-before-you-start">3. Before you start</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#4-understand-the-data">4. Understand the data</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#5-agree-the-measures">5. Agree the measures</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#6-watch-a-worked-example">6. Watch a worked example</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#7-try-it-with-guidance">7. Try it with guidance</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#8-work-independently">8. Work independently</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#9-debug-a-result">9. Debug a result</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#10-make-a-recommendation">10. Make a recommendation</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#11-connection-to-the-other-tool">11. Connection to the other tool</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#12-submit-and-reflect">12. Submit and reflect</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Data Analytics</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Python Sessions</li>
+          <li class="breadcrumb-item">Session 8: Correlation and Regression</li>
+      <li class="breadcrumb-item active">Lab</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="session-8-lab-discount-profit-and-advertising-spend">Session 8 lab: Discount, profit and advertising spend<a class="headerlink" href="#session-8-lab-discount-profit-and-advertising-spend" title="Permanent link">&para;</a></h1>
+<p class="lead">
+Measure how discounts relate to profit in the retail orders, fit and interpret a regression of advertising spend against revenue, read its residuals, and learn to say clearly what a slope can and cannot promise.
+</p>
+
+<p><a href="https://colab.research.google.com/github/Aayush181509/AnalyticsLecture/blob/main/notebooks/08_correlation_and_regression_lab.ipynb"><img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg" /></a></p>
+<p>Open this notebook in Google Colab with the button above, then run each cell from top to bottom with <strong>Shift + Enter</strong>. Save your own copy with <strong>File → Save a copy in Drive</strong>.</p>
+<hr />
+<h2 id="the-business-decision">The business decision<a class="headerlink" href="#the-business-decision" title="Permanent link">&para;</a></h2>
+<p>Two managers have questions:</p>
+<blockquote>
+<p><em>Commercial lead: "Do our discounts eat into profit? How strongly?"</em></p>
+<p><em>Marketing lead: "If one unit of search advertising brings in several units of revenue, why don't we double the budget?"</em></p>
+</blockquote>
+<p>Both questions are about <strong>two measures moving together</strong>. Your job is to measure the relationship honestly, and to say what it does <strong>not</strong> prove.</p>
+<blockquote>
+<p><strong>About the data</strong></p>
+<p><strong>Superstore</strong> is a sample published by Tableau about a <strong>fictitious</strong> company. Sales and Profit are in the file's own <strong>source monetary units</strong>; the currency is not stated.</p>
+<p><strong>marketing_daily.csv</strong> is <strong>synthetic</strong>: generated for this course, describing no real company, brand or platform. One row per day of 2025 × paid campaign. Amounts are in neutral <strong>currency units</strong>.</p>
+</blockquote>
+<hr />
+<h2 id="how-this-lab-works">How this lab works<a class="headerlink" href="#how-this-lab-works" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Part</th>
+<th>What you do</th>
+<th>Tasks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Guided practice</strong></td>
+<td>Follow along step by step, everyone together</td>
+<td>G1–G5</td>
+</tr>
+<tr>
+<td><strong>Independent tasks</strong></td>
+<td>Same skills, new questions, on your own or in pairs</td>
+<td>I1–I5</td>
+</tr>
+<tr>
+<td><strong>Challenge</strong></td>
+<td>Harder reasoning and debugging</td>
+<td>C1–C2</td>
+</tr>
+</tbody>
+</table>
+<p>Each task has a level:</p>
+<ul>
+<li><strong>Core</strong>: everyone completes it; it is enough for your portfolio.</li>
+<li><strong>Stretch</strong>: for when you finish the core tasks early.</li>
+<li><strong>Challenge</strong>: optional, harder reasoning.</li>
+</ul>
+<hr />
+<h2 id="what-you-will-be-able-to-do">What you will be able to do<a class="headerlink" href="#what-you-will-be-able-to-do" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Draw a scatter plot and compute Pearson and Spearman correlation.</li>
+<li>Aggregate to the right level <strong>before</strong> computing a ratio, and explain why the level changes the picture.</li>
+<li>Fit a straight line with <code>np.polyfit</code>, and state its slope, R² and the range of the data in business language.</li>
+<li>Read a residual plot and spot a missing factor.</li>
+<li>Flag predictions that are extrapolations.</li>
+<li>Explain why a regression slope from past data is an association, not the effect of spending more.</li>
+</ol>
+<p><strong>Evidence you keep:</strong> an <strong>interpreted regression with one stated limitation</strong> (I1–I3), plus your line-versus-order explanation (G4).</p>
+<hr />
+<h2 id="before-you-start">Before you start<a class="headerlink" href="#before-you-start" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Read the <a href="../08_correlation_and_regression_lecture/">Session 8 lecture</a>.</li>
+<li>Re-read <a href="../../foundations/misleading-statistics/">correlation is not causation</a>.</li>
+<li>Remember from the Session 5 lab: <strong>profit ratio = total Profit ÷ total Sales</strong>, a ratio of sums.</li>
+</ul>
+<hr />
+<h2 id="guided-practice">Guided practice<a class="headerlink" href="#guided-practice" title="Permanent link">&para;</a></h2>
+<h3 id="g1-core-discount-and-profit-ratio-line-by-line">G1 (Core): Discount and profit ratio, line by line<a class="headerlink" href="#g1-core-discount-and-profit-ratio-line-by-line" title="Permanent link">&para;</a></h3>
+<p>Run the two setup cells, then load the order lines.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Course data setup. Run this cell first; you do not need to understand it yet.</span>
+<span class="c1"># It downloads the Superstore sample from Tableau&#39;s website, checks it is the</span>
+<span class="c1"># exact version this course was written for, and prepares the order-lines table.</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">hashlib</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">urllib.request</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+
+<span class="n">SOURCE_URL</span> <span class="o">=</span> <span class="s2">&quot;https://public.tableau.com/app/sample-data/sample_-_superstore.xls&quot;</span>
+<span class="n">EXPECTED_SHA256</span> <span class="o">=</span> <span class="s2">&quot;5045ed4fec49cae2cc0dfc5ab0d204ba09efa767fe00c996822499e8cc42fbbd&quot;</span>
+<span class="n">SOURCE_FILE</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;COURSE_XLS_PATH&quot;</span><span class="p">,</span> <span class="s2">&quot;sample_-_superstore.xls&quot;</span><span class="p">)</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="kn">import</span><span class="w"> </span><span class="nn">xlrd</span>  <span class="c1"># noqa: F401  (needed to read .xls files)</span>
+<span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+    <span class="kn">import</span><span class="w"> </span><span class="nn">subprocess</span>
+    <span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+
+    <span class="n">subprocess</span><span class="o">.</span><span class="n">check_call</span><span class="p">([</span><span class="n">sys</span><span class="o">.</span><span class="n">executable</span><span class="p">,</span> <span class="s2">&quot;-m&quot;</span><span class="p">,</span> <span class="s2">&quot;pip&quot;</span><span class="p">,</span> <span class="s2">&quot;install&quot;</span><span class="p">,</span> <span class="s2">&quot;-q&quot;</span><span class="p">,</span> <span class="s2">&quot;xlrd&quot;</span><span class="p">])</span>
+
+<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">SOURCE_FILE</span><span class="p">):</span>
+    <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlretrieve</span><span class="p">(</span><span class="n">SOURCE_URL</span><span class="p">,</span> <span class="n">SOURCE_FILE</span><span class="p">)</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">SOURCE_FILE</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">digest</span> <span class="o">=</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">sha256</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">())</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span>
+<span class="k">if</span> <span class="n">digest</span> <span class="o">!=</span> <span class="n">EXPECTED_SHA256</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;WARNING: Tableau has changed this sample file since the course was written.&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Your numbers will differ from the lesson. Ask your facilitator for the course copy.&quot;</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">load_orders</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Return one row per order line, orders placed 2023-01-01 to 2025-12-31.&quot;&quot;&quot;</span>
+    <span class="n">raw</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">SOURCE_FILE</span><span class="p">,</span> <span class="n">sheet_name</span><span class="o">=</span><span class="s2">&quot;Orders&quot;</span><span class="p">)</span>
+    <span class="n">returns</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">SOURCE_FILE</span><span class="p">,</span> <span class="n">sheet_name</span><span class="o">=</span><span class="s2">&quot;Returns&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Orders with more than one Customer ID (a known data issue), found before filtering.</span>
+    <span class="n">ids_per_order</span> <span class="o">=</span> <span class="n">raw</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;Order ID&quot;</span><span class="p">)[</span><span class="s2">&quot;Customer ID&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span>
+    <span class="n">conflict_orders</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">ids_per_order</span><span class="p">[</span><span class="n">ids_per_order</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+
+    <span class="n">in_scope</span> <span class="o">=</span> <span class="p">(</span><span class="n">raw</span><span class="p">[</span><span class="s2">&quot;Order Date&quot;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="s2">&quot;2023-01-01&quot;</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">raw</span><span class="p">[</span><span class="s2">&quot;Order Date&quot;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="s2">&quot;2026-01-01&quot;</span><span class="p">)</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">raw</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">in_scope</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+    <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;Row ID&quot;</span><span class="p">:</span> <span class="s2">&quot;row_id&quot;</span><span class="p">,</span> <span class="s2">&quot;Order ID&quot;</span><span class="p">:</span> <span class="s2">&quot;order_id&quot;</span><span class="p">,</span> <span class="s2">&quot;Order Date&quot;</span><span class="p">:</span> <span class="s2">&quot;order_date&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Ship Date&quot;</span><span class="p">:</span> <span class="s2">&quot;ship_date&quot;</span><span class="p">,</span> <span class="s2">&quot;Ship Mode&quot;</span><span class="p">:</span> <span class="s2">&quot;ship_mode&quot;</span><span class="p">,</span> <span class="s2">&quot;Customer ID&quot;</span><span class="p">:</span> <span class="s2">&quot;customer_id&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Segment&quot;</span><span class="p">:</span> <span class="s2">&quot;segment&quot;</span><span class="p">,</span> <span class="s2">&quot;Country/Region&quot;</span><span class="p">:</span> <span class="s2">&quot;country_region&quot;</span><span class="p">,</span> <span class="s2">&quot;Region&quot;</span><span class="p">:</span> <span class="s2">&quot;region&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Category&quot;</span><span class="p">:</span> <span class="s2">&quot;category&quot;</span><span class="p">,</span> <span class="s2">&quot;Sub-Category&quot;</span><span class="p">:</span> <span class="s2">&quot;sub_category&quot;</span><span class="p">,</span> <span class="s2">&quot;Product ID&quot;</span><span class="p">:</span> <span class="s2">&quot;product_id&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Product Name&quot;</span><span class="p">:</span> <span class="s2">&quot;product_name&quot;</span><span class="p">,</span> <span class="s2">&quot;Sales&quot;</span><span class="p">:</span> <span class="s2">&quot;sales&quot;</span><span class="p">,</span> <span class="s2">&quot;Quantity&quot;</span><span class="p">:</span> <span class="s2">&quot;quantity&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Discount&quot;</span><span class="p">:</span> <span class="s2">&quot;discount&quot;</span><span class="p">,</span> <span class="s2">&quot;Profit&quot;</span><span class="p">:</span> <span class="s2">&quot;profit&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+    <span class="n">df</span><span class="p">[</span><span class="s2">&quot;returned_order_flag&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;order_id&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">returns</span><span class="p">[</span><span class="s2">&quot;Order ID&quot;</span><span class="p">]))</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+    <span class="n">df</span><span class="p">[</span><span class="s2">&quot;customer_order_conflict&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;order_id&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">conflict_orders</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+    <span class="n">df</span><span class="p">[</span><span class="s2">&quot;customer_analysis_eligible&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;customer_order_conflict&quot;</span><span class="p">]</span>
+    <span class="n">df</span><span class="p">[</span><span class="s2">&quot;order_to_ship_days&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;ship_date&quot;</span><span class="p">]</span> <span class="o">-</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;order_date&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">days</span>
+    <span class="n">df</span><span class="p">[</span><span class="s2">&quot;order_month&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;order_date&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">to_period</span><span class="p">(</span><span class="s2">&quot;M&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">to_timestamp</span><span class="p">()</span>
+
+    <span class="n">columns</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="s2">&quot;row_id&quot;</span><span class="p">,</span> <span class="s2">&quot;order_id&quot;</span><span class="p">,</span> <span class="s2">&quot;order_date&quot;</span><span class="p">,</span> <span class="s2">&quot;ship_date&quot;</span><span class="p">,</span> <span class="s2">&quot;ship_mode&quot;</span><span class="p">,</span> <span class="s2">&quot;customer_id&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;segment&quot;</span><span class="p">,</span> <span class="s2">&quot;country_region&quot;</span><span class="p">,</span> <span class="s2">&quot;region&quot;</span><span class="p">,</span> <span class="s2">&quot;category&quot;</span><span class="p">,</span> <span class="s2">&quot;sub_category&quot;</span><span class="p">,</span> <span class="s2">&quot;product_id&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;product_name&quot;</span><span class="p">,</span> <span class="s2">&quot;sales&quot;</span><span class="p">,</span> <span class="s2">&quot;quantity&quot;</span><span class="p">,</span> <span class="s2">&quot;discount&quot;</span><span class="p">,</span> <span class="s2">&quot;profit&quot;</span><span class="p">,</span> <span class="s2">&quot;returned_order_flag&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;customer_analysis_eligible&quot;</span><span class="p">,</span> <span class="s2">&quot;customer_order_conflict&quot;</span><span class="p">,</span> <span class="s2">&quot;order_to_ship_days&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;order_month&quot;</span><span class="p">,</span>
+    <span class="p">]</span>
+    <span class="k">return</span> <span class="n">df</span><span class="p">[</span><span class="n">columns</span><span class="p">]</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s2">&quot;row_id&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+
+<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s2">&quot;display.float_format&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="si">{:,.2f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="o">.</span><span class="n">update</span><span class="p">({</span>
+    <span class="s2">&quot;figure.figsize&quot;</span><span class="p">:</span> <span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span>
+    <span class="s2">&quot;axes.spines.top&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="s2">&quot;axes.spines.right&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="s2">&quot;axes.grid&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s2">&quot;axes.axisbelow&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s2">&quot;grid.color&quot;</span><span class="p">:</span> <span class="s2">&quot;#e6e5e1&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;axes.prop_cycle&quot;</span><span class="p">:</span> <span class="n">plt</span><span class="o">.</span><span class="n">cycler</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;#2a78d6&quot;</span><span class="p">,</span> <span class="s2">&quot;#eb6834&quot;</span><span class="p">,</span> <span class="s2">&quot;#1baf7a&quot;</span><span class="p">]),</span>
+    <span class="s2">&quot;axes.titleweight&quot;</span><span class="p">:</span> <span class="s2">&quot;bold&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;axes.titlelocation&quot;</span><span class="p">:</span> <span class="s2">&quot;left&quot;</span><span class="p">,</span>
+<span class="p">})</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Setup complete.&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Setup complete.
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># Marketing data setup (synthetic). Run this cell first.</span>
+<span class="c1"># Downloads the course&#39;s synthetic marketing data from GitHub and checks it is the exact version this course uses.</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">hashlib</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">io</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">urllib.request</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+
+<span class="n">MARKETING_URL</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/Aayush181509/AnalyticsLecture/main/data/synthetic/marketing-v1/&quot;</span>
+<span class="n">MARKETING_SHA256</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;marketing_daily.csv&quot;</span><span class="p">:</span> <span class="s2">&quot;1cbfc8e1c91ae72d18364b2d13bdf6db513c4aec28c339ef8b91f87a60dc0a07&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;ab_test.csv&quot;</span><span class="p">:</span> <span class="s2">&quot;41a3662997111b66d7ab1eb899f4b32e26bd64c66284ce881db6b8a7300ad47f&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+<span class="n">MARKETING_DIR</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;COURSE_MARKETING_DIR&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">load_marketing</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Load one marketing-v1 file: &#39;marketing_daily.csv&#39; or &#39;ab_test.csv&#39;.&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">MARKETING_DIR</span><span class="p">:</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">MARKETING_DIR</span><span class="p">,</span> <span class="n">name</span><span class="p">),</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">MARKETING_URL</span> <span class="o">+</span> <span class="n">name</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">sha256</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span> <span class="o">!=</span> <span class="n">MARKETING_SHA256</span><span class="p">[</span><span class="n">name</span><span class="p">]:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;WARNING: this file differs from the course version. Ask your facilitator.&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">io</span><span class="o">.</span><span class="n">BytesIO</span><span class="p">(</span><span class="n">data</span><span class="p">),</span> <span class="n">parse_dates</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;date&quot;</span><span class="p">])</span>
+
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Marketing setup complete.&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Marketing setup complete.
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">load_orders</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Rows (order lines):&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Different orders:  &quot;</span><span class="p">,</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;order_id&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Lines with Sales of 0 or less:&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;sales&quot;</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Rows (order lines): 6815
+Different orders:   3388
+Lines with Sales of 0 or less: 0
+</code></pre></div>
+<p>Each line has a <code>discount</code> (a share of the list price: 0.2 means 20% off) and its own Sales and Profit. A line's <strong>profit ratio</strong> is its Profit ÷ its Sales. Because no line has zero Sales, every line has a ratio.</p>
+<div class="highlight"><pre><span></span><code><span class="n">df</span><span class="p">[</span><span class="s2">&quot;line_profit_ratio&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;profit&quot;</span><span class="p">]</span> <span class="o">/</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;sales&quot;</span><span class="p">]</span>
+
+<span class="n">ax</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s2">&quot;discount&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;line_profit_ratio&quot;</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.15</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.8</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Order lines: higher discounts, lower profit ratios&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Discount on the line (share of list price)&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Line profit ratio (Profit ÷ Sales)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Different discount values:&quot;</span><span class="p">,</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;discount&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Pearson r: &quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;discount&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">corr</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;line_profit_ratio&quot;</span><span class="p">]),</span> <span class="mi">3</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Spearman:  &quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;discount&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">rank</span><span class="p">()</span><span class="o">.</span><span class="n">corr</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;line_profit_ratio&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">rank</span><span class="p">()),</span> <span class="mi">3</span><span class="p">))</span>
+</code></pre></div>
+<p><img alt="png" src="../08_correlation_and_regression_lab_files/08_correlation_and_regression_lab_5_0.png" /></p>
+<div class="highlight"><pre><span></span><code>Different discount values: 12
+Pearson r:  -0.865
+Spearman:   -0.65
+</code></pre></div>
+<blockquote>
+<p><strong>What do you notice?</strong></p>
+<ol>
+<li>Why do the dots form vertical <strong>stripes</strong>? (Look at the number of different discount values.)</li>
+<li>Many dots sit on top of each other. Which discount values hold most of the lines?</li>
+<li>Is the relationship positive or negative? Strong or weak?</li>
+</ol>
+</blockquote>
+<h3 id="g2-core-profit-ratio-by-discount-level">G2 (Core): Profit ratio by discount level<a class="headerlink" href="#g2-core-profit-ratio-by-discount-level" title="Permanent link">&para;</a></h3>
+<p>Because discount takes only a few values, a table can summarise the scatter. For each discount level we add up Sales and Profit and <strong>then</strong> divide: a ratio of sums, never an average of line ratios.</p>
+<div class="highlight"><pre><span></span><code><span class="n">by_discount</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;discount&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">(</span><span class="n">lines</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;row_id&quot;</span><span class="p">,</span> <span class="s2">&quot;count&quot;</span><span class="p">),</span> <span class="n">sales</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;sales&quot;</span><span class="p">,</span> <span class="s2">&quot;sum&quot;</span><span class="p">),</span> <span class="n">profit</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;profit&quot;</span><span class="p">,</span> <span class="s2">&quot;sum&quot;</span><span class="p">))</span>
+<span class="n">by_discount</span><span class="p">[</span><span class="s2">&quot;profit_ratio&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">by_discount</span><span class="p">[</span><span class="s2">&quot;profit&quot;</span><span class="p">]</span> <span class="o">/</span> <span class="n">by_discount</span><span class="p">[</span><span class="s2">&quot;sales&quot;</span><span class="p">]</span>
+
+<span class="n">ax</span> <span class="o">=</span> <span class="n">by_discount</span><span class="p">[</span><span class="s2">&quot;profit_ratio&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;#2a78d6&quot;</span> <span class="k">if</span> <span class="n">v</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="k">else</span> <span class="s2">&quot;#eb6834&quot;</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">by_discount</span><span class="p">[</span><span class="s2">&quot;profit_ratio&quot;</span><span class="p">]])</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.8</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Profit ratio turns negative at higher discount levels&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Discount on the line (share of list price)&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Profit ratio (total Profit ÷ total Sales)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="n">by_discount</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</code></pre></div>
+<p><img alt="png" src="../08_correlation_and_regression_lab_files/08_correlation_and_regression_lab_7_0.png" /></p>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>lines</th>
+      <th>sales</th>
+      <th>profit</th>
+      <th>profit_ratio</th>
+    </tr>
+    <tr>
+      <th>discount</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0.00</th>
+      <td>3296</td>
+      <td>748,350.61</td>
+      <td>220,093.62</td>
+      <td>0.29</td>
+    </tr>
+    <tr>
+      <th>0.10</th>
+      <td>67</td>
+      <td>35,773.77</td>
+      <td>5,796.92</td>
+      <td>0.16</td>
+    </tr>
+    <tr>
+      <th>0.15</th>
+      <td>36</td>
+      <td>18,795.73</td>
+      <td>881.46</td>
+      <td>0.05</td>
+    </tr>
+    <tr>
+      <th>0.20</th>
+      <td>2464</td>
+      <td>521,404.86</td>
+      <td>57,800.06</td>
+      <td>0.11</td>
+    </tr>
+    <tr>
+      <th>0.30</th>
+      <td>161</td>
+      <td>72,640.59</td>
+      <td>-6,593.19</td>
+      <td>-0.09</td>
+    </tr>
+    <tr>
+      <th>0.32</th>
+      <td>16</td>
+      <td>10,776.35</td>
+      <td>-1,898.91</td>
+      <td>-0.18</td>
+    </tr>
+    <tr>
+      <th>0.40</th>
+      <td>138</td>
+      <td>82,397.71</td>
+      <td>-15,253.23</td>
+      <td>-0.18</td>
+    </tr>
+    <tr>
+      <th>0.45</th>
+      <td>7</td>
+      <td>2,975.36</td>
+      <td>-1,264.67</td>
+      <td>-0.42</td>
+    </tr>
+    <tr>
+      <th>0.50</th>
+      <td>47</td>
+      <td>45,117.10</td>
+      <td>-13,642.04</td>
+      <td>-0.30</td>
+    </tr>
+    <tr>
+      <th>0.60</th>
+      <td>107</td>
+      <td>4,953.99</td>
+      <td>-4,143.39</td>
+      <td>-0.84</td>
+    </tr>
+    <tr>
+      <th>0.70</th>
+      <td>283</td>
+      <td>28,646.77</td>
+      <td>-28,111.59</td>
+      <td>-0.98</td>
+    </tr>
+    <tr>
+      <th>0.80</th>
+      <td>193</td>
+      <td>9,134.01</td>
+      <td>-17,294.58</td>
+      <td>-1.89</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p>Read the table above. Look at the <strong>lines</strong> column too: a level with few lines gives a less reliable ratio.</p>
+<h3 id="g3-core-aggregate-to-orders-first">G3 (Core): Aggregate to orders first<a class="headerlink" href="#g3-core-aggregate-to-orders-first" title="Permanent link">&para;</a></h3>
+<p>A manager thinks in <strong>orders</strong>, not lines. An order can mix discounted and full-price lines. To get one point per order:</p>
+<ol>
+<li>Add up each order's Sales and Profit.</li>
+<li>Order profit ratio = order Profit ÷ order Sales (a ratio of sums).</li>
+<li>Order discount = Sales-weighted average of its lines' discounts: <em>sum of (discount × Sales) ÷ sum of Sales</em>. A big discounted line counts more than a small one.</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="n">df</span><span class="p">[</span><span class="s2">&quot;discount_x_sales&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;discount&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;sales&quot;</span><span class="p">]</span>
+<span class="n">orders</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;order_id&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">(</span>
+    <span class="n">lines</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;row_id&quot;</span><span class="p">,</span> <span class="s2">&quot;count&quot;</span><span class="p">),</span>
+    <span class="n">sales</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;sales&quot;</span><span class="p">,</span> <span class="s2">&quot;sum&quot;</span><span class="p">),</span>
+    <span class="n">profit</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;profit&quot;</span><span class="p">,</span> <span class="s2">&quot;sum&quot;</span><span class="p">),</span>
+    <span class="n">discount_x_sales</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;discount_x_sales&quot;</span><span class="p">,</span> <span class="s2">&quot;sum&quot;</span><span class="p">),</span>
+<span class="p">)</span>
+<span class="n">orders</span><span class="p">[</span><span class="s2">&quot;order_discount&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">orders</span><span class="p">[</span><span class="s2">&quot;discount_x_sales&quot;</span><span class="p">]</span> <span class="o">/</span> <span class="n">orders</span><span class="p">[</span><span class="s2">&quot;sales&quot;</span><span class="p">]</span>
+<span class="n">orders</span><span class="p">[</span><span class="s2">&quot;order_profit_ratio&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">orders</span><span class="p">[</span><span class="s2">&quot;profit&quot;</span><span class="p">]</span> <span class="o">/</span> <span class="n">orders</span><span class="p">[</span><span class="s2">&quot;sales&quot;</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Orders:&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">orders</span><span class="p">),</span> <span class="s2">&quot;| orders with more than one line:&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">orders</span><span class="p">[</span><span class="s2">&quot;lines&quot;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+
+<span class="n">ax</span> <span class="o">=</span> <span class="n">orders</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s2">&quot;order_discount&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;order_profit_ratio&quot;</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.25</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#eb6834&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.8</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Orders: the same direction, fewer stripes&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Order discount (Sales-weighted, share of list price)&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Order profit ratio (Profit ÷ Sales)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Orders: 3388 | orders with more than one line: 1691
+</code></pre></div>
+<p><img alt="png" src="../08_correlation_and_regression_lab_files/08_correlation_and_regression_lab_9_1.png" /></p>
+<h3 id="g4-core-why-do-the-two-pictures-differ">G4 (Core): Why do the two pictures differ?<a class="headerlink" href="#g4-core-why-do-the-two-pictures-differ" title="Permanent link">&para;</a></h3>
+<p>Put the two levels side by side.</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">describe_level</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="n">slope</span><span class="p">,</span> <span class="n">intercept</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">polyfit</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">{</span>
+        <span class="s2">&quot;points&quot;</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">),</span>
+        <span class="s2">&quot;Pearson r&quot;</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">corr</span><span class="p">(</span><span class="n">y</span><span class="p">),</span>
+        <span class="s2">&quot;Spearman&quot;</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">rank</span><span class="p">()</span><span class="o">.</span><span class="n">corr</span><span class="p">(</span><span class="n">y</span><span class="o">.</span><span class="n">rank</span><span class="p">()),</span>
+        <span class="s2">&quot;slope&quot;</span><span class="p">:</span> <span class="n">slope</span><span class="p">,</span>
+        <span class="s2">&quot;mean of ratios&quot;</span><span class="p">:</span> <span class="n">y</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span>
+    <span class="p">}</span>
+
+
+<span class="n">levels</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s2">&quot;line level&quot;</span><span class="p">:</span> <span class="n">describe_level</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;discount&quot;</span><span class="p">],</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;line_profit_ratio&quot;</span><span class="p">]),</span>
+    <span class="s2">&quot;order level&quot;</span><span class="p">:</span> <span class="n">describe_level</span><span class="p">(</span><span class="n">orders</span><span class="p">[</span><span class="s2">&quot;order_discount&quot;</span><span class="p">],</span> <span class="n">orders</span><span class="p">[</span><span class="s2">&quot;order_profit_ratio&quot;</span><span class="p">]),</span>
+<span class="p">})</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">astype</span><span class="p">({</span><span class="s2">&quot;points&quot;</span><span class="p">:</span> <span class="nb">int</span><span class="p">})</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Profit ratio of all Sales (total Profit ÷ total Sales):&quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;profit&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">/</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;sales&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span> <span class="mi">3</span><span class="p">))</span>
+<span class="k">with</span> <span class="n">pd</span><span class="o">.</span><span class="n">option_context</span><span class="p">(</span><span class="s2">&quot;display.float_format&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="si">{:,.3f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">):</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">levels</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Profit ratio of all Sales (total Profit ÷ total Sales): 0.124
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>points</th>
+      <th>Pearson r</th>
+      <th>Spearman</th>
+      <th>slope</th>
+      <th>mean of ratios</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>line level</th>
+      <td>6815</td>
+      <td>-0.865</td>
+      <td>-0.650</td>
+      <td>-1.923</td>
+      <td>0.125</td>
+    </tr>
+    <tr>
+      <th>order level</th>
+      <td>3388</td>
+      <td>-0.863</td>
+      <td>-0.696</td>
+      <td>-1.855</td>
+      <td>0.116</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p>Read the output above and discuss in pairs:</p>
+<ol>
+<li><strong>Number of points.</strong> An order with five lines is five dots at line level and one dot at order level. Which orders count more in the line picture?</li>
+<li><strong>Mixing.</strong> At order level, a discounted line and a full-price line are blended into one point. What happens to the stripes, and to the most extreme negative ratios?</li>
+<li><strong>Averages.</strong> Compare the two "mean of ratios" values with the profit ratio of all Sales printed above. Which number should a report use as <em>the</em> profit ratio? Why can an average of ratios not be trusted, even when it happens to land close?</li>
+<li><strong>The question.</strong> "Do discounted <strong>products</strong> lose money?" is a line question. "Do <strong>orders</strong> with deeper discounts lose money?" is an order question. Which did the commercial lead ask?</li>
+</ol>
+<blockquote>
+<p><strong>Rule</strong></p>
+<p>Decide the level of the question first, aggregate to that level, <strong>then</strong> compute ratios and correlations. State the level in every chart title and sentence.</p>
+</blockquote>
+<h3 id="g5-core-fit-and-interpret-a-line-at-order-level">G5 (Core): Fit and interpret a line at order level<a class="headerlink" href="#g5-core-fit-and-interpret-a-line-at-order-level" title="Permanent link">&para;</a></h3>
+<p>A slope per one whole unit of discount (100 percentage points) is hard to picture, so we also state it per 10 points.</p>
+<div class="highlight"><pre><span></span><code><span class="n">slope</span><span class="p">,</span> <span class="n">intercept</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">polyfit</span><span class="p">(</span><span class="n">orders</span><span class="p">[</span><span class="s2">&quot;order_discount&quot;</span><span class="p">],</span> <span class="n">orders</span><span class="p">[</span><span class="s2">&quot;order_profit_ratio&quot;</span><span class="p">],</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">orders</span><span class="p">[</span><span class="s2">&quot;predicted&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">intercept</span> <span class="o">+</span> <span class="n">slope</span> <span class="o">*</span> <span class="n">orders</span><span class="p">[</span><span class="s2">&quot;order_discount&quot;</span><span class="p">]</span>
+<span class="n">orders</span><span class="p">[</span><span class="s2">&quot;residual&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">orders</span><span class="p">[</span><span class="s2">&quot;order_profit_ratio&quot;</span><span class="p">]</span> <span class="o">-</span> <span class="n">orders</span><span class="p">[</span><span class="s2">&quot;predicted&quot;</span><span class="p">]</span>
+<span class="n">r_squared</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="p">(</span><span class="n">orders</span><span class="p">[</span><span class="s2">&quot;residual&quot;</span><span class="p">]</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">/</span> <span class="p">((</span><span class="n">orders</span><span class="p">[</span><span class="s2">&quot;order_profit_ratio&quot;</span><span class="p">]</span> <span class="o">-</span> <span class="n">orders</span><span class="p">[</span><span class="s2">&quot;order_profit_ratio&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Slope: </span><span class="si">{</span><span class="n">slope</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2"> profit ratio per 1.0 of discount &quot;</span>
+      <span class="sa">f</span><span class="s2">&quot;= </span><span class="si">{</span><span class="n">slope</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">0.1</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">100</span><span class="si">:</span><span class="s2">+.1f</span><span class="si">}</span><span class="s2"> percentage points of profit ratio per 10 points of discount&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Intercept: </span><span class="si">{</span><span class="n">intercept</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2"> (predicted profit ratio for an order with no discount)&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;R²: </span><span class="si">{</span><span class="n">r_squared</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Order discounts observed:&quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">orders</span><span class="p">[</span><span class="s2">&quot;order_discount&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="mi">2</span><span class="p">),</span> <span class="s2">&quot;to&quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">orders</span><span class="p">[</span><span class="s2">&quot;order_discount&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">(),</span> <span class="mi">2</span><span class="p">))</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="p">(</span><span class="n">ax1</span><span class="p">,</span> <span class="n">ax2</span><span class="p">)</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="mf">3.8</span><span class="p">))</span>
+<span class="n">xs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">orders</span><span class="p">[</span><span class="s2">&quot;order_discount&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">(),</span> <span class="mi">50</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">orders</span><span class="p">[</span><span class="s2">&quot;order_discount&quot;</span><span class="p">],</span> <span class="n">orders</span><span class="p">[</span><span class="s2">&quot;order_profit_ratio&quot;</span><span class="p">],</span> <span class="n">s</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.25</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#eb6834&quot;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="n">intercept</span> <span class="o">+</span> <span class="n">slope</span> <span class="o">*</span> <span class="n">xs</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Least-squares line, order level&quot;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Order discount (share of list price)&quot;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Order profit ratio&quot;</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">orders</span><span class="p">[</span><span class="s2">&quot;order_discount&quot;</span><span class="p">],</span> <span class="n">orders</span><span class="p">[</span><span class="s2">&quot;residual&quot;</span><span class="p">],</span> <span class="n">s</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.25</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#1baf7a&quot;</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.8</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Residuals: is a straight line the right shape?&quot;</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Order discount (share of list price)&quot;</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Residual (profit ratio)&quot;</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Slope: -1.855 profit ratio per 1.0 of discount = -18.6 percentage points of profit ratio per 10 points of discount
+Intercept: 0.403 (predicted profit ratio for an order with no discount)
+R²: 0.745
+Order discounts observed: 0.0 to 0.8
+</code></pre></div>
+<p><img alt="png" src="../08_correlation_and_regression_lab_files/08_correlation_and_regression_lab_13_1.png" /></p>
+<p>Here the intercept means something: an order with no discount is inside the data.</p>
+<blockquote>
+<p><strong>Write it down</strong></p>
+<p>Complete in your evidence log: <em>"Across all orders placed 2023–2025, each extra 10 points of order discount was </em><em>associated with</em><em> a profit ratio about ___ percentage points lower (R² = <strong><em>). The residual plot shows </em></strong>."</em></p>
+<p>Then add <strong>one limitation</strong>. Ideas: discounts are not given at random (some product groups are discounted far more often, so product mix may be a confounder, see I5); the residuals show the line does not fit equally well everywhere; the data is a fictitious sample.</p>
+</blockquote>
+<hr />
+<h2 id="independent-tasks">Independent tasks<a class="headerlink" href="#independent-tasks" title="Permanent link">&para;</a></h2>
+<h3 id="i1-core-one-campaign-fit-and-interpret-a-line">I1 (Core): One campaign — fit and interpret a line<a class="headerlink" href="#i1-core-one-campaign-fit-and-interpret-a-line" title="Permanent link">&para;</a></h3>
+<p>Load the advertising data. Days with zero spend cannot show what spend buys, so we keep only days with spend above zero.</p>
+<div class="highlight"><pre><span></span><code><span class="n">mkt</span> <span class="o">=</span> <span class="n">load_marketing</span><span class="p">(</span><span class="s2">&quot;marketing_daily.csv&quot;</span><span class="p">)</span>
+<span class="n">paid</span> <span class="o">=</span> <span class="n">mkt</span><span class="p">[</span><span class="n">mkt</span><span class="p">[</span><span class="s2">&quot;spend&quot;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Rows:&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">mkt</span><span class="p">),</span> <span class="s2">&quot;| rows with spend &gt; 0:&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">paid</span><span class="p">))</span>
+<span class="n">paid</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;channel&quot;</span><span class="p">,</span> <span class="s2">&quot;campaign_id&quot;</span><span class="p">])[</span><span class="s2">&quot;date&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">()</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="s2">&quot;paid days&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Rows: 2555 | rows with spend &gt; 0: 2516
+
+
+
+
+
+channel  campaign_id
+Display  DISP-01        362
+Email    EML-01         353
+Search   SRCH-01        360
+         SRCH-02        359
+Social   SOC-01         360
+         SOC-02         359
+Video    VID-01         363
+Name: paid days, dtype: int64
+</code></pre></div>
+<p>The cell below fits daily attributed revenue against daily spend for <strong>one campaign</strong> and <strong>one period</strong>. We start with January–September, before the holiday season.</p>
+<blockquote>
+<p><strong>Your turn:</strong> change the code in the next cell and run it again.</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="c1"># 1. Run the cell for SRCH-01, January to September. Write the slope as one sentence.</span>
+<span class="c1"># 2. Change campaign to another one (for example &quot;SOC-01&quot; or &quot;DISP-01&quot;) and compare.</span>
+<span class="c1"># 3. Later (I2) you will change last_month to 12 and run this cell again.</span>
+<span class="n">campaign</span> <span class="o">=</span> <span class="s2">&quot;SRCH-01&quot;</span>
+<span class="n">first_month</span><span class="p">,</span> <span class="n">last_month</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">9</span>
+
+<span class="n">one</span> <span class="o">=</span> <span class="n">paid</span><span class="p">[(</span><span class="n">paid</span><span class="p">[</span><span class="s2">&quot;campaign_id&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">campaign</span><span class="p">)</span>
+           <span class="o">&amp;</span> <span class="p">(</span><span class="n">paid</span><span class="p">[</span><span class="s2">&quot;date&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">month</span> <span class="o">&gt;=</span> <span class="n">first_month</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">paid</span><span class="p">[</span><span class="s2">&quot;date&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">month</span> <span class="o">&lt;=</span> <span class="n">last_month</span><span class="p">)]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">slope</span><span class="p">,</span> <span class="n">intercept</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">polyfit</span><span class="p">(</span><span class="n">one</span><span class="p">[</span><span class="s2">&quot;spend&quot;</span><span class="p">],</span> <span class="n">one</span><span class="p">[</span><span class="s2">&quot;attributed_revenue&quot;</span><span class="p">],</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">one</span><span class="p">[</span><span class="s2">&quot;predicted&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">intercept</span> <span class="o">+</span> <span class="n">slope</span> <span class="o">*</span> <span class="n">one</span><span class="p">[</span><span class="s2">&quot;spend&quot;</span><span class="p">]</span>
+<span class="n">one</span><span class="p">[</span><span class="s2">&quot;residual&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">one</span><span class="p">[</span><span class="s2">&quot;attributed_revenue&quot;</span><span class="p">]</span> <span class="o">-</span> <span class="n">one</span><span class="p">[</span><span class="s2">&quot;predicted&quot;</span><span class="p">]</span>
+<span class="n">ss_res</span> <span class="o">=</span> <span class="p">(</span><span class="n">one</span><span class="p">[</span><span class="s2">&quot;residual&quot;</span><span class="p">]</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">ss_tot</span> <span class="o">=</span> <span class="p">((</span><span class="n">one</span><span class="p">[</span><span class="s2">&quot;attributed_revenue&quot;</span><span class="p">]</span> <span class="o">-</span> <span class="n">one</span><span class="p">[</span><span class="s2">&quot;attributed_revenue&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">spend_min</span><span class="p">,</span> <span class="n">spend_max</span> <span class="o">=</span> <span class="n">one</span><span class="p">[</span><span class="s2">&quot;spend&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="n">one</span><span class="p">[</span><span class="s2">&quot;spend&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">campaign</span><span class="si">}</span><span class="s2">, months </span><span class="si">{</span><span class="n">first_month</span><span class="si">}</span><span class="s2">–</span><span class="si">{</span><span class="n">last_month</span><span class="si">}</span><span class="s2"> of 2025, </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">one</span><span class="p">)</span><span class="si">}</span><span class="s2"> paid days&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Slope:      </span><span class="si">{</span><span class="n">slope</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> revenue units per unit of spend&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Intercept:  </span><span class="si">{</span><span class="n">intercept</span><span class="si">:</span><span class="s2">.0f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Pearson r:  </span><span class="si">{</span><span class="n">one</span><span class="p">[</span><span class="s1">&#39;spend&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">corr</span><span class="p">(</span><span class="n">one</span><span class="p">[</span><span class="s1">&#39;attributed_revenue&#39;</span><span class="p">])</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;R²:         </span><span class="si">{</span><span class="mi">1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">ss_res</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">ss_tot</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Daily spend observed: </span><span class="si">{</span><span class="n">spend_min</span><span class="si">:</span><span class="s2">,.0f</span><span class="si">}</span><span class="s2"> to </span><span class="si">{</span><span class="n">spend_max</span><span class="si">:</span><span class="s2">,.0f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;ROAS (total revenue ÷ total spend): </span><span class="si">{</span><span class="n">one</span><span class="p">[</span><span class="s1">&#39;attributed_revenue&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">one</span><span class="p">[</span><span class="s1">&#39;spend&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">xs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">spend_min</span><span class="p">,</span> <span class="n">spend_max</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">one</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s2">&quot;spend&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;attributed_revenue&quot;</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="n">intercept</span> <span class="o">+</span> <span class="n">slope</span> <span class="o">*</span> <span class="n">xs</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#eb6834&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">campaign</span><span class="si">}</span><span class="s2">: daily spend and attributed revenue, months </span><span class="si">{</span><span class="n">first_month</span><span class="si">}</span><span class="s2">–</span><span class="si">{</span><span class="n">last_month</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Daily spend (currency units)&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Attributed revenue (currency units)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>SRCH-01, months 1–9 of 2025, 270 paid days
+Slope:      5.62 revenue units per unit of spend
+Intercept:  1098
+Pearson r:  0.623
+R²:         0.388
+Daily spend observed: 458 to 1,584
+ROAS (total revenue ÷ total spend): 6.83
+</code></pre></div>
+<p><img alt="png" src="../08_correlation_and_regression_lab_files/08_correlation_and_regression_lab_18_1.png" /></p>
+<blockquote>
+<p><strong>Write it down</strong></p>
+<p><em>"For [campaign], [months] 2025, each extra unit of daily spend was </em><em>associated with</em><em> about ___ more units of attributed revenue (R² = <strong><em>, daily spend between ___ and </em></strong>)."</em></p>
+<p>The slope and the ROAS are different numbers. In one sentence each, say what they measure.</p>
+</blockquote>
+<h3 id="i2-core-read-the-residuals">I2 (Core): Read the residuals<a class="headerlink" href="#i2-core-read-the-residuals" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>Your turn:</strong> change the code in the next cell and run it again.</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="c1"># 1. Run the cell. Is there a pattern in either panel?</span>
+<span class="c1"># 2. Go back to I1, change last_month to 12, run I1 and then this cell again.</span>
+<span class="c1">#    What happens to the slope? Where are October–December in the right-hand panel?</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.dates</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">mdates</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="p">(</span><span class="n">ax1</span><span class="p">,</span> <span class="n">ax2</span><span class="p">)</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="mf">3.8</span><span class="p">),</span> <span class="n">sharey</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">late</span> <span class="o">=</span> <span class="n">one</span><span class="p">[</span><span class="s2">&quot;date&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">month</span> <span class="o">&gt;=</span> <span class="mi">10</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">one</span><span class="p">[</span><span class="s2">&quot;spend&quot;</span><span class="p">][</span><span class="o">~</span><span class="n">late</span><span class="p">],</span> <span class="n">one</span><span class="p">[</span><span class="s2">&quot;residual&quot;</span><span class="p">][</span><span class="o">~</span><span class="n">late</span><span class="p">],</span> <span class="n">s</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Jan–Sep&quot;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">one</span><span class="p">[</span><span class="s2">&quot;spend&quot;</span><span class="p">][</span><span class="n">late</span><span class="p">],</span> <span class="n">one</span><span class="p">[</span><span class="s2">&quot;residual&quot;</span><span class="p">][</span><span class="n">late</span><span class="p">],</span> <span class="n">s</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#eb6834&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Oct–Dec&quot;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.8</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Residuals against spend&quot;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Daily spend (currency units)&quot;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Residual (currency units)&quot;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">one</span><span class="p">[</span><span class="s2">&quot;date&quot;</span><span class="p">],</span> <span class="n">one</span><span class="p">[</span><span class="s2">&quot;residual&quot;</span><span class="p">],</span> <span class="n">s</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#1baf7a&quot;</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.8</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Residuals over time&quot;</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Date (2025)&quot;</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_major_formatter</span><span class="p">(</span><span class="n">mdates</span><span class="o">.</span><span class="n">DateFormatter</span><span class="p">(</span><span class="s2">&quot;%b&quot;</span><span class="p">))</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Average residual by month:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">one</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">one</span><span class="p">[</span><span class="s2">&quot;date&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">month</span><span class="p">)[</span><span class="s2">&quot;residual&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">to_string</span><span class="p">())</span>
+</code></pre></div>
+<p><img alt="png" src="../08_correlation_and_regression_lab_files/08_correlation_and_regression_lab_21_0.png" /></p>
+<div class="highlight"><pre><span></span><code>Average residual by month:
+date
+1    284.00
+2    422.00
+3    256.00
+4     -4.00
+5     25.00
+6   -205.00
+7   -856.00
+8   -117.00
+9    209.00
+</code></pre></div>
+<blockquote>
+<p><strong>What a pattern over time means</strong></p>
+<p>If residuals are mostly positive in some months and negative in others, something that changes with the calendar (season, promotions, budget changes) affects revenue <strong>and</strong> is not in the line. If that same factor also moved spend, the slope is confounded.</p>
+</blockquote>
+<h3 id="i3-core-predict-and-flag-extrapolation">I3 (Core): Predict, and flag extrapolation<a class="headerlink" href="#i3-core-predict-and-flag-extrapolation" title="Permanent link">&para;</a></h3>
+<p>Use the I1 line to predict revenue for a few daily budgets. The function flags any budget outside the observed range.</p>
+<blockquote>
+<p><strong>Your turn:</strong> change the code in the next cell and run it again.</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="c1"># 1. Run the cell. Which predictions can you defend?</span>
+<span class="c1"># 2. Change the budgets: try the average daily spend, and double the highest spend.</span>
+<span class="n">budgets</span> <span class="o">=</span> <span class="p">[</span><span class="mi">800</span><span class="p">,</span> <span class="mi">1500</span><span class="p">,</span> <span class="mi">3000</span><span class="p">]</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">predict</span><span class="p">(</span><span class="n">spend_value</span><span class="p">):</span>
+    <span class="n">inside</span> <span class="o">=</span> <span class="n">spend_min</span> <span class="o">&lt;=</span> <span class="n">spend_value</span> <span class="o">&lt;=</span> <span class="n">spend_max</span>
+    <span class="n">note</span> <span class="o">=</span> <span class="s2">&quot;inside the observed range&quot;</span> <span class="k">if</span> <span class="n">inside</span> <span class="k">else</span> <span class="s2">&quot;EXTRAPOLATION: outside the observed range&quot;</span>
+    <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">({</span><span class="s2">&quot;predicted revenue&quot;</span><span class="p">:</span> <span class="n">intercept</span> <span class="o">+</span> <span class="n">slope</span> <span class="o">*</span> <span class="n">spend_value</span><span class="p">,</span> <span class="s2">&quot;note&quot;</span><span class="p">:</span> <span class="n">note</span><span class="p">})</span>
+
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">campaign</span><span class="si">}</span><span class="s2">: observed daily spend </span><span class="si">{</span><span class="n">spend_min</span><span class="si">:</span><span class="s2">,.0f</span><span class="si">}</span><span class="s2"> to </span><span class="si">{</span><span class="n">spend_max</span><span class="si">:</span><span class="s2">,.0f</span><span class="si">}</span><span class="s2">; average </span><span class="si">{</span><span class="n">one</span><span class="p">[</span><span class="s1">&#39;spend&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="si">:</span><span class="s2">,.0f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="n">b</span><span class="p">:</span> <span class="n">predict</span><span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="n">budgets</span><span class="p">})</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">rename_axis</span><span class="p">(</span><span class="s2">&quot;daily budget&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>SRCH-01: observed daily spend 458 to 1,584; average 908
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>predicted revenue</th>
+      <th>note</th>
+    </tr>
+    <tr>
+      <th>daily budget</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>800</th>
+      <td>5,597.58</td>
+      <td>inside the observed range</td>
+    </tr>
+    <tr>
+      <th>1500</th>
+      <td>9,534.52</td>
+      <td>inside the observed range</td>
+    </tr>
+    <tr>
+      <th>3000</th>
+      <td>17,970.82</td>
+      <td>EXTRAPOLATION: outside the observed range</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p>Finish your <strong>evidence</strong>: your I1 sentence, plus one prediction <strong>inside</strong> the range, plus <strong>one stated limitation</strong>. For example: the slope is an association, not the effect of extra spend; it only holds for daily spend between the minimum and maximum you observed; the data are synthetic; attributed revenue may include customers who would have bought anyway.</p>
+<h3 id="i4-stretch-compare-campaigns-and-see-what-pooling-hides">I4 (Stretch): Compare campaigns, and see what pooling hides<a class="headerlink" href="#i4-stretch-compare-campaigns-and-see-what-pooling-hides" title="Permanent link">&para;</a></h3>
+<p>The same fit for every campaign, January–September, plus one line through all campaigns pooled together.</p>
+<blockquote>
+<p><strong>Your turn:</strong> change the code in the next cell and run it again.</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="c1"># 1. Run the cell. Rank the campaigns by slope. Is the ranking the same as by ROAS?</span>
+<span class="c1"># 2. Why is the pooled slope so different from the Search campaigns&#39; slopes?</span>
+<span class="c1"># 3. Email&#39;s ROAS looks huge. Look at its spend range: why should you be careful ranking it first?</span>
+<span class="c1">#    Then change last_month to 12 and compare.</span>
+<span class="n">last_month</span> <span class="o">=</span> <span class="mi">9</span>
+<span class="n">period</span> <span class="o">=</span> <span class="n">paid</span><span class="p">[</span><span class="n">paid</span><span class="p">[</span><span class="s2">&quot;date&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">month</span> <span class="o">&lt;=</span> <span class="n">last_month</span><span class="p">]</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">fit_row</span><span class="p">(</span><span class="n">d</span><span class="p">):</span>
+    <span class="n">s</span><span class="p">,</span> <span class="n">i</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">polyfit</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="s2">&quot;spend&quot;</span><span class="p">],</span> <span class="n">d</span><span class="p">[</span><span class="s2">&quot;attributed_revenue&quot;</span><span class="p">],</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">({</span>
+        <span class="s2">&quot;days&quot;</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">d</span><span class="p">),</span>
+        <span class="s2">&quot;min spend&quot;</span><span class="p">:</span> <span class="n">d</span><span class="p">[</span><span class="s2">&quot;spend&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span>
+        <span class="s2">&quot;max spend&quot;</span><span class="p">:</span> <span class="n">d</span><span class="p">[</span><span class="s2">&quot;spend&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">(),</span>
+        <span class="s2">&quot;slope&quot;</span><span class="p">:</span> <span class="n">s</span><span class="p">,</span>
+        <span class="s2">&quot;R²&quot;</span><span class="p">:</span> <span class="n">d</span><span class="p">[</span><span class="s2">&quot;spend&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">corr</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="s2">&quot;attributed_revenue&quot;</span><span class="p">])</span> <span class="o">**</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="s2">&quot;ROAS&quot;</span><span class="p">:</span> <span class="n">d</span><span class="p">[</span><span class="s2">&quot;attributed_revenue&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">/</span> <span class="n">d</span><span class="p">[</span><span class="s2">&quot;spend&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span>
+    <span class="p">})</span>
+
+
+<span class="n">table</span> <span class="o">=</span> <span class="n">period</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;campaign_id&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">fit_row</span><span class="p">,</span> <span class="n">include_groups</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">table</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s2">&quot;All campaigns pooled&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">fit_row</span><span class="p">(</span><span class="n">period</span><span class="p">)</span>
+<span class="n">table</span><span class="o">.</span><span class="n">astype</span><span class="p">({</span><span class="s2">&quot;days&quot;</span><span class="p">:</span> <span class="nb">int</span><span class="p">})</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>days</th>
+      <th>min spend</th>
+      <th>max spend</th>
+      <th>slope</th>
+      <th>R²</th>
+      <th>ROAS</th>
+    </tr>
+    <tr>
+      <th>campaign_id</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>DISP-01</th>
+      <td>271</td>
+      <td>315.98</td>
+      <td>775.99</td>
+      <td>0.34</td>
+      <td>0.03</td>
+      <td>0.53</td>
+    </tr>
+    <tr>
+      <th>EML-01</th>
+      <td>264</td>
+      <td>25.69</td>
+      <td>61.80</td>
+      <td>23.15</td>
+      <td>0.14</td>
+      <td>24.81</td>
+    </tr>
+    <tr>
+      <th>SOC-01</th>
+      <td>271</td>
+      <td>658.42</td>
+      <td>1,938.59</td>
+      <td>0.97</td>
+      <td>0.16</td>
+      <td>1.18</td>
+    </tr>
+    <tr>
+      <th>SOC-02</th>
+      <td>269</td>
+      <td>35.18</td>
+      <td>104.87</td>
+      <td>9.91</td>
+      <td>0.11</td>
+      <td>10.95</td>
+    </tr>
+    <tr>
+      <th>SRCH-01</th>
+      <td>270</td>
+      <td>458.03</td>
+      <td>1,584.39</td>
+      <td>5.62</td>
+      <td>0.39</td>
+      <td>6.83</td>
+    </tr>
+    <tr>
+      <th>SRCH-02</th>
+      <td>269</td>
+      <td>333.13</td>
+      <td>1,070.76</td>
+      <td>4.60</td>
+      <td>0.33</td>
+      <td>5.30</td>
+    </tr>
+    <tr>
+      <th>VID-01</th>
+      <td>271</td>
+      <td>248.93</td>
+      <td>681.08</td>
+      <td>0.45</td>
+      <td>0.07</td>
+      <td>0.32</td>
+    </tr>
+    <tr>
+      <th>All campaigns pooled</th>
+      <td>1885</td>
+      <td>25.69</td>
+      <td>1,938.59</td>
+      <td>2.80</td>
+      <td>0.25</td>
+      <td>3.49</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h3 id="i5-stretch-is-discount-standing-in-for-product-type">I5 (Stretch): Is discount standing in for product type?<a class="headerlink" href="#i5-stretch-is-discount-standing-in-for-product-type" title="Permanent link">&para;</a></h3>
+<p>Discounts are not handed out at random. If some product groups are discounted more <strong>and</strong> have low profit ratios for other reasons, product type is a confounder. Compare the discount–profit relationship <strong>within</strong> each group.</p>
+<blockquote>
+<p><strong>Your turn:</strong> change the code in the next cell and run it again.</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="c1"># 1. Run the cell. Do the groups differ in how often they are discounted?</span>
+<span class="c1"># 2. Is the correlation still negative within each group?</span>
+<span class="c1"># 3. Change group to &quot;sub_category&quot;. Which sub-categories are discounted most?</span>
+<span class="n">group</span> <span class="o">=</span> <span class="s2">&quot;category&quot;</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">group_row</span><span class="p">(</span><span class="n">d</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">({</span>
+        <span class="s2">&quot;lines&quot;</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">d</span><span class="p">),</span>
+        <span class="s2">&quot;share of lines discounted&quot;</span><span class="p">:</span> <span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="s2">&quot;discount&quot;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span>
+        <span class="s2">&quot;profit ratio&quot;</span><span class="p">:</span> <span class="n">d</span><span class="p">[</span><span class="s2">&quot;profit&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">/</span> <span class="n">d</span><span class="p">[</span><span class="s2">&quot;sales&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span>
+        <span class="s2">&quot;Pearson r (line level)&quot;</span><span class="p">:</span> <span class="n">d</span><span class="p">[</span><span class="s2">&quot;discount&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">corr</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="s2">&quot;line_profit_ratio&quot;</span><span class="p">]),</span>
+    <span class="p">})</span>
+
+
+<span class="n">within</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">group</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">group_row</span><span class="p">,</span> <span class="n">include_groups</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">({</span><span class="s2">&quot;lines&quot;</span><span class="p">:</span> <span class="nb">int</span><span class="p">})</span>
+<span class="n">within</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s2">&quot;share of lines discounted&quot;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>lines</th>
+      <th>share of lines discounted</th>
+      <th>profit ratio</th>
+      <th>Pearson r (line level)</th>
+    </tr>
+    <tr>
+      <th>category</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Furniture</th>
+      <td>1488</td>
+      <td>0.60</td>
+      <td>0.03</td>
+      <td>-0.89</td>
+    </tr>
+    <tr>
+      <th>Technology</th>
+      <td>1234</td>
+      <td>0.55</td>
+      <td>0.17</td>
+      <td>-0.76</td>
+    </tr>
+    <tr>
+      <th>Office Supplies</th>
+      <td>4093</td>
+      <td>0.48</td>
+      <td>0.18</td>
+      <td>-0.88</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p>Write two sentences: one on whether the negative relationship survives <strong>within</strong> groups, one on why that still does not prove that cutting discounts would raise profit.</p>
+<hr />
+<h2 id="challenge">Challenge<a class="headerlink" href="#challenge" title="Permanent link">&para;</a></h2>
+<h3 id="c1-challenge-anscombes-quartet">C1 (Challenge): Anscombe's quartet<a class="headerlink" href="#c1-challenge-anscombes-quartet" title="Permanent link">&para;</a></h3>
+<p>In 1973 the statistician Francis Anscombe published four small datasets to show why you must always <strong>plot</strong> your data. Here they are, typed in.</p>
+<div class="highlight"><pre><span></span><code><span class="n">anscombe</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s2">&quot;x1&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span>
+    <span class="s2">&quot;y1&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">8.04</span><span class="p">,</span> <span class="mf">6.95</span><span class="p">,</span> <span class="mf">7.58</span><span class="p">,</span> <span class="mf">8.81</span><span class="p">,</span> <span class="mf">8.33</span><span class="p">,</span> <span class="mf">9.96</span><span class="p">,</span> <span class="mf">7.24</span><span class="p">,</span> <span class="mf">4.26</span><span class="p">,</span> <span class="mf">10.84</span><span class="p">,</span> <span class="mf">4.82</span><span class="p">,</span> <span class="mf">5.68</span><span class="p">],</span>
+    <span class="s2">&quot;x2&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span>
+    <span class="s2">&quot;y2&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">9.14</span><span class="p">,</span> <span class="mf">8.14</span><span class="p">,</span> <span class="mf">8.74</span><span class="p">,</span> <span class="mf">8.77</span><span class="p">,</span> <span class="mf">9.26</span><span class="p">,</span> <span class="mf">8.10</span><span class="p">,</span> <span class="mf">6.13</span><span class="p">,</span> <span class="mf">3.10</span><span class="p">,</span> <span class="mf">9.13</span><span class="p">,</span> <span class="mf">7.26</span><span class="p">,</span> <span class="mf">4.74</span><span class="p">],</span>
+    <span class="s2">&quot;x3&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span>
+    <span class="s2">&quot;y3&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">7.46</span><span class="p">,</span> <span class="mf">6.77</span><span class="p">,</span> <span class="mf">12.74</span><span class="p">,</span> <span class="mf">7.11</span><span class="p">,</span> <span class="mf">7.81</span><span class="p">,</span> <span class="mf">8.84</span><span class="p">,</span> <span class="mf">6.08</span><span class="p">,</span> <span class="mf">5.39</span><span class="p">,</span> <span class="mf">8.15</span><span class="p">,</span> <span class="mf">6.42</span><span class="p">,</span> <span class="mf">5.73</span><span class="p">],</span>
+    <span class="s2">&quot;x4&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span>
+    <span class="s2">&quot;y4&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">6.58</span><span class="p">,</span> <span class="mf">5.76</span><span class="p">,</span> <span class="mf">7.71</span><span class="p">,</span> <span class="mf">8.84</span><span class="p">,</span> <span class="mf">8.47</span><span class="p">,</span> <span class="mf">7.04</span><span class="p">,</span> <span class="mf">5.25</span><span class="p">,</span> <span class="mf">12.50</span><span class="p">,</span> <span class="mf">5.56</span><span class="p">,</span> <span class="mf">7.91</span><span class="p">,</span> <span class="mf">6.89</span><span class="p">],</span>
+<span class="p">})</span>
+
+<span class="n">stats</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="s2">&quot;1234&quot;</span><span class="p">:</span>
+    <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">anscombe</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;x</span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">],</span> <span class="n">anscombe</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;y</span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">]</span>
+    <span class="n">s</span><span class="p">,</span> <span class="n">i</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">polyfit</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">stats</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;Set </span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;mean x&quot;</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span> <span class="s2">&quot;mean y&quot;</span><span class="p">:</span> <span class="n">y</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span> <span class="s2">&quot;slope&quot;</span><span class="p">:</span> <span class="n">s</span><span class="p">,</span> <span class="s2">&quot;intercept&quot;</span><span class="p">:</span> <span class="n">i</span><span class="p">,</span>
+                         <span class="s2">&quot;r&quot;</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">corr</span><span class="p">(</span><span class="n">y</span><span class="p">),</span> <span class="s2">&quot;R²&quot;</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">corr</span><span class="p">(</span><span class="n">y</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">}</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">stats</span><span class="p">)</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>mean x</th>
+      <th>mean y</th>
+      <th>slope</th>
+      <th>intercept</th>
+      <th>r</th>
+      <th>R²</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Set 1</th>
+      <td>9.00</td>
+      <td>7.50</td>
+      <td>0.50</td>
+      <td>3.00</td>
+      <td>0.82</td>
+      <td>0.67</td>
+    </tr>
+    <tr>
+      <th>Set 2</th>
+      <td>9.00</td>
+      <td>7.50</td>
+      <td>0.50</td>
+      <td>3.00</td>
+      <td>0.82</td>
+      <td>0.67</td>
+    </tr>
+    <tr>
+      <th>Set 3</th>
+      <td>9.00</td>
+      <td>7.50</td>
+      <td>0.50</td>
+      <td>3.00</td>
+      <td>0.82</td>
+      <td>0.67</td>
+    </tr>
+    <tr>
+      <th>Set 4</th>
+      <td>9.00</td>
+      <td>7.50</td>
+      <td>0.50</td>
+      <td>3.00</td>
+      <td>0.82</td>
+      <td>0.67</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<blockquote>
+<p><strong>Predict, then reveal</strong></p>
+<p>The four sets share the same means, the same line and the same R². Do you expect the four scatter plots to look alike? Now run the next cell.</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">13</span><span class="p">,</span> <span class="mf">5.5</span><span class="p">),</span> <span class="n">sharex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">xs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">col</span><span class="p">,</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="s2">&quot;1234&quot;</span><span class="p">):</span>
+    <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">anscombe</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;x</span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">],</span> <span class="n">anscombe</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;y</span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">]</span>
+    <span class="n">s</span><span class="p">,</span> <span class="n">i</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">polyfit</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="n">i</span> <span class="o">+</span> <span class="n">s</span> <span class="o">*</span> <span class="n">xs</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#eb6834&quot;</span><span class="p">)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Set </span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">11</span><span class="p">)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">-</span> <span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="n">s</span> <span class="o">*</span> <span class="n">x</span><span class="p">),</span> <span class="n">s</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#1baf7a&quot;</span><span class="p">)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.8</span><span class="p">)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;y&quot;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Residual&quot;</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s2">&quot;Same line, same R²: four different stories&quot;</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s2">&quot;bold&quot;</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mf">0.02</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s2">&quot;left&quot;</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+<p><img alt="png" src="../08_correlation_and_regression_lab_files/08_correlation_and_regression_lab_34_0.png" /></p>
+<p>For each set, write one sentence: is a straight line a fair summary? If not, what is wrong (a curve, one outlier, one high-leverage point)? Which residual plot tells you most clearly?</p>
+<h3 id="c2-challenge-double-the-budget">C2 (Challenge): "Double the budget"<a class="headerlink" href="#c2-challenge-double-the-budget" title="Permanent link">&para;</a></h3>
+<p>A colleague posts:</p>
+<blockquote>
+<p><em>"I ran a regression on SRCH-01 for the whole of 2025. Every extra 1 unit of spend brings in more than ten units of revenue. Let's double the current daily budget: that's free money."</em></p>
+</blockquote>
+<p>Reproduce the colleague's number, then look at what they did not check.</p>
+<blockquote>
+<p><strong>Your turn:</strong> change the code in the next cell and run it again.</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="c1"># The colleague&#39;s analysis, plus some checks they did not make.</span>
+<span class="c1"># 1. Find at least three problems with the claim. Use the lecture&#39;s Part 7 and Part 8.</span>
+<span class="c1"># 2. Rewrite the colleague&#39;s message so it is accurate and states one limitation.</span>
+<span class="n">search</span> <span class="o">=</span> <span class="n">paid</span><span class="p">[</span><span class="n">paid</span><span class="p">[</span><span class="s2">&quot;campaign_id&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;SRCH-01&quot;</span><span class="p">]</span>
+<span class="n">full_slope</span><span class="p">,</span> <span class="n">full_intercept</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">polyfit</span><span class="p">(</span><span class="n">search</span><span class="p">[</span><span class="s2">&quot;spend&quot;</span><span class="p">],</span> <span class="n">search</span><span class="p">[</span><span class="s2">&quot;attributed_revenue&quot;</span><span class="p">],</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">jan_sep</span> <span class="o">=</span> <span class="n">search</span><span class="p">[</span><span class="n">search</span><span class="p">[</span><span class="s2">&quot;date&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">month</span> <span class="o">&lt;=</span> <span class="mi">9</span><span class="p">]</span>
+<span class="n">js_slope</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">polyfit</span><span class="p">(</span><span class="n">jan_sep</span><span class="p">[</span><span class="s2">&quot;spend&quot;</span><span class="p">],</span> <span class="n">jan_sep</span><span class="p">[</span><span class="s2">&quot;attributed_revenue&quot;</span><span class="p">],</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Colleague&#39;s slope, all of 2025:           </span><span class="si">{</span><span class="n">full_slope</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Same campaign, January–September:         </span><span class="si">{</span><span class="n">js_slope</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">current</span> <span class="o">=</span> <span class="n">search</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">search</span><span class="p">[</span><span class="s2">&quot;date&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">month</span> <span class="o">==</span> <span class="mi">12</span><span class="p">,</span> <span class="s2">&quot;spend&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Current daily budget (December average): </span><span class="si">{</span><span class="n">current</span><span class="si">:</span><span class="s2">,.0f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Doubled current daily budget:            </span><span class="si">{</span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">current</span><span class="si">:</span><span class="s2">,.0f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Highest daily spend ever seen:            </span><span class="si">{</span><span class="n">search</span><span class="p">[</span><span class="s1">&#39;spend&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span><span class="si">:</span><span class="s2">,.0f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Average daily spend by quarter:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">search</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">search</span><span class="p">[</span><span class="s2">&quot;date&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">quarter</span><span class="p">)[</span><span class="s2">&quot;spend&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">to_string</span><span class="p">())</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Colleague&#39;s slope, all of 2025:           13.31
+Same campaign, January–September:         5.62
+Current daily budget (December average): 1,475
+Doubled current daily budget:            2,951
+Highest daily spend ever seen:            2,150
+Average daily spend by quarter:
+date
+1     926.00
+2     885.00
+3     913.00
+4   1,306.00
+</code></pre></div>
+<blockquote>
+<p><strong>Hint</strong></p>
+<p>Think about <strong>what else</strong> changed in the months with the highest spend, whether the doubled budget was <strong>ever observed</strong>, and whether "brings in" is a claim the data can support.</p>
+</blockquote>
+<hr />
+<h2 id="validation-checklist">Validation checklist<a class="headerlink" href="#validation-checklist" title="Permanent link">&para;</a></h2>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled/> Every scatter plot has a title, labelled axes and units.</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Profit ratios are ratios of sums at the level of the question (line, discount level, order).</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Order-level discount is weighted by Sales, and the level is stated in the sentence.</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Days with zero spend were excluded from the regressions, and you said so.</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Every slope is written with "associated with", its units, the period and the observed x-range.</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Every regression has a residual plot, and you described any pattern.</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Any prediction outside the observed range is labelled as extrapolation.</li>
+<li class="task-list-item"><input type="checkbox" disabled/> No sentence claims that discounts or spend <strong>cause</strong> the change.</li>
+</ul>
+<hr />
+<h2 id="exit-ticket">Exit ticket<a class="headerlink" href="#exit-ticket" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Why did the line-level and order-level discount pictures look different?</li>
+<li>What does the slope of your I1 regression mean in one sentence, with units?</li>
+<li>What did the residual plot tell you that the R² did not?</li>
+<li>Why is "double the budget" an extrapolation?</li>
+<li>Name one confounder for spend and revenue, and one for discount and profit ratio.</li>
+</ol>
+<hr />
+<h2 id="evidence-to-keep">Evidence to keep<a class="headerlink" href="#evidence-to-keep" title="Permanent link">&para;</a></h2>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled/> Line-level and order-level scatter plots with your explanation of the difference (G1–G4)</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Order-level slope sentence with one limitation (G5)</li>
+<li class="task-list-item"><input type="checkbox" disabled/> <strong>Interpreted regression with one stated limitation</strong>: I1 sentence, residual plot, one in-range prediction (I1–I3)</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Campaign comparison and what pooling hides (I4, if attempted)</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Anscombe notes and the corrected "double the budget" message (C1, C2, if attempted)</li>
+</ul>
+<p>Record in your evidence log the data versions, the period and campaign you used, and which days you excluded.</p>
+<hr />
+<h2 id="after-the-lab">After the lab<a class="headerlink" href="#after-the-lab" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Previous: <a href="../08_correlation_and_regression_lecture/">Session 8 lecture</a>.</li>
+<li>Next: <a href="../09_sampling_and_experiments_lecture/">Session 9 lecture: Sampling, uncertainty and experiments</a>.</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../08_correlation_and_regression_lecture/" class="btn btn-neutral float-left" title="Lecture"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../09_sampling_and_experiments_lecture/" class="btn btn-neutral float-right" title="Lecture">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Copyright &copy; 2026 - Aayush Raj Regmi</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../08_correlation_and_regression_lecture/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../09_sampling_and_experiments_lecture/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

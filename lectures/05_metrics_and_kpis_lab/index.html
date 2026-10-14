@@ -1,0 +1,2240 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Lab - Data Analytics</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../stylesheets/readability.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Lab";
+        var mkdocs_page_input_path = "lectures/05_metrics_and_kpis_lab.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Data Analytics
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Getting Started</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../..#course-at-a-glance">Course at a glance</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../..#where-to-start">Where to start</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../..#how-we-will-practise">How we will practise</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Foundations</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../foundations/">Why Data Analytics Matters</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/#what-is-data-analytics">What is data analytics?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/#real-stories-where-data-changed-the-outcome">Real stories where data changed the outcome</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../foundations/#a-map-that-changed-how-we-think-about-disease-london-1854">A map that changed how we think about disease (London, 1854)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../foundations/#a-chart-that-reformed-hospitals-1850s">A chart that reformed hospitals (1850s)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../foundations/#winning-on-a-small-budget-baseball-2002">Winning on a small budget (baseball, 2002)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../foundations/#preparing-for-a-hurricane-retail-2004">Preparing for a hurricane (retail, 2004)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../foundations/#when-big-data-got-it-wrong-public-health-20082015">When big data got it wrong (public health, 2008–2015)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/#where-you-meet-analytics-every-day">Where you meet analytics every day</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/#why-presentation-is-part-of-analysis">Why presentation is part of analysis</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/#what-comes-next">What comes next</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../foundations/statistics-are-not-enough/">Statistics Are Not Enough</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/statistics-are-not-enough/#anscombes-quartet">Anscombe's quartet</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/statistics-are-not-enough/#the-datasaurus-dozen">The Datasaurus Dozen</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/statistics-are-not-enough/#what-this-means-at-work">What this means at work</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/statistics-are-not-enough/#try-it-yourself">Try it yourself</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../foundations/misleading-statistics/">How Statistics Can Mislead</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/misleading-statistics/#1-correlation-is-not-causation">1. Correlation is not causation</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/misleading-statistics/#2-simpsons-paradox-the-total-can-reverse-the-parts">2. Simpson's paradox: the total can reverse the parts</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/misleading-statistics/#3-misleading-axes">3. Misleading axes</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/misleading-statistics/#4-cherry-picked-time-windows">4. Cherry-picked time windows</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/misleading-statistics/#5-which-average">5. Which average?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/misleading-statistics/#6-percentages-without-the-base">6. Percentages without the base</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/misleading-statistics/#7-survivorship-bias">7. Survivorship bias</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/misleading-statistics/#a-checklist-for-any-number-you-are-shown">A checklist for any number you are shown</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/misleading-statistics/#try-it-yourself">Try it yourself</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../foundations/types-of-analysis/">Types of Analysis</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/types-of-analysis/#univariate-analysis-one-variable-at-a-time">Univariate analysis: one variable at a time</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/types-of-analysis/#bivariate-analysis-two-variables-together">Bivariate analysis: two variables together</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/types-of-analysis/#multivariate-analysis-three-or-more-variables">Multivariate analysis: three or more variables</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/types-of-analysis/#choosing-a-chart-quick-guide">Choosing a chart: quick guide</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/types-of-analysis/#try-it-yourself">Try it yourself</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../foundations/visual-design/">Designing Clear Visuals</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/visual-design/#the-data-ink-ratio">The data-ink ratio</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/visual-design/#pre-attentive-attributes-what-the-eye-sees-first">Pre-attentive attributes: what the eye sees first</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/visual-design/#gestalt-principles-how-we-group-things">Gestalt principles: how we group things</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/visual-design/#colour-with-purpose">Colour with purpose</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/visual-design/#a-clean-chart-checklist">A clean-chart checklist</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/visual-design/#try-it-yourself">Try it yourself</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../foundations/storytelling/">Storytelling with Data</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/storytelling/#the-challenger-disaster-right-data-wrong-presentation">The Challenger disaster: right data, wrong presentation</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../foundations/storytelling/#what-did-the-data-show">What did the data show?</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/storytelling/#what-makes-a-data-story">What makes a data story</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../foundations/storytelling/#start-with-the-big-idea">Start with the "big idea"</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/storytelling/#a-simple-process">A simple process</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/storytelling/#exploratory-versus-explanatory">Exploratory versus explanatory</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/storytelling/#try-it-yourself">Try it yourself</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Course</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../course/roadmap/">Learning Roadmap</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#how-each-session-works">How each session works</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#part-a-thinking-with-data">Part A: Thinking with data</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#part-b-describing-and-measuring">Part B: Describing and measuring</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#part-c-relationships-change-and-uncertainty">Part C: Relationships, change and uncertainty</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#part-d-business-cases">Part D: Business cases</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#part-e-communicating-and-bringing-it-together">Part E: Communicating and bringing it together</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#part-f-tableau">Part F: Tableau</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#how-you-will-be-assessed">How you will be assessed</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#extra-practice-topics">Extra practice topics</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../course/setup/">Setup and Practice</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/setup/#what-you-need">What you need</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/setup/#open-a-lesson-in-google-colab">Open a lesson in Google Colab</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/setup/#keep-your-data-safe">Keep your data safe</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/setup/#if-something-does-not-work">If something does not work</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/setup/#tableau-later">Tableau (later)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/setup/#keep-an-evidence-log">Keep an evidence log</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../course/workflow/">Analytical Workflow</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/workflow/#the-seven-steps">The seven steps</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../course/workflow/#1-business-question">1. Business question</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../course/workflow/#2-data-understanding">2. Data understanding</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../course/workflow/#3-preparation">3. Preparation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../course/workflow/#4-analysis">4. Analysis</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../course/workflow/#5-validation">5. Validation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../course/workflow/#6-visualization">6. Visualization</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../course/workflow/#7-recommendation">7. Recommendation</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/workflow/#a-worked-example">A worked example</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/workflow/#when-a-result-looks-wrong">When a result looks wrong</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/workflow/#association-is-not-causation">Association is not causation</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../cases/">Business Cases</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../cases/#the-five-core-cases">The five core cases</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../cases/#retail">Retail</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../cases/#finance">Finance</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../cases/#operations">Operations</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../cases/#marketing">Marketing</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../cases/#hr">HR</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../cases/#what-every-case-includes">What every case includes</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../cases/#combining-evidence-across-departments">Combining evidence across departments</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../cases/#additional-practice-choices">Additional practice choices</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Python Sessions</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" >Session 1: Why Data Analytics Matters</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../01_why_data_analytics_lecture/">Lecture</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lecture/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lecture/#part-1-what-is-data-analytics">Part 1: What is data analytics?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lecture/#part-2-real-stories-where-data-changed-the-outcome">Part 2: Real stories where data changed the outcome</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lecture/#part-3-from-question-to-recommendation">Part 3: From question to recommendation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lecture/#part-4-always-plot-your-data-anscombes-quartet">Part 4: Always plot your data — Anscombe's quartet</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lecture/#part-5-the-datasaurus-dozen">Part 5: The Datasaurus Dozen</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lecture/#part-6-a-preview-of-how-numbers-mislead">Part 6: A preview of how numbers mislead</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lecture/#summary">Summary</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lecture/#quiz">Quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lecture/#in-the-lab">In the Lab</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../01_why_data_analytics_lab/">Lab</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lab/#how-this-lab-works">How this lab works</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lab/#part-a-guided-practice-core">Part A: Guided practice (Core)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lab/#part-b-independent-tasks">Part B: Independent tasks</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lab/#part-c-challenge-the-datasaurus-dozen">Part C: Challenge — the Datasaurus Dozen</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lab/#quick-reference">Quick reference</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lab/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lab/#evidence-to-keep">Evidence to keep</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Session 2: Data, Grain and the DataFrame</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../02_data_and_grain_lecture/">Lecture</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lecture/#recap-quiz">Recap quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lecture/#what-you-will-be-able-to-explain">What you will be able to explain</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lecture/#part-1-levels-of-measurement">Part 1: Levels of measurement</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lecture/#part-2-tidy-data">Part 2: Tidy data</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lecture/#part-3-grain-and-keys">Part 3: Grain and keys</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lecture/#part-4-data-dictionaries">Part 4: Data dictionaries</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lecture/#part-5-data-quality-dimensions">Part 5: Data-quality dimensions</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lecture/#part-6-worked-case-the-superstore-order-lines">Part 6: Worked case — the Superstore order lines</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lecture/#summary">Summary</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lecture/#quiz">Quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lecture/#lab-briefing">Lab briefing</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../02_data_and_grain_lab/">Lab</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lab/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lab/#how-this-lab-works">How this lab works</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lab/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lab/#guided-practice">Guided practice</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lab/#independent-tasks">Independent tasks</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lab/#challenge">Challenge</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lab/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lab/#evidence-to-keep">Evidence to keep</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lab/#after-the-lab">After the lab</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Session 3: Cleaning and Preparing Data</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../03_cleaning_and_preparing_lecture/">Lecture</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lecture/#recap-quiz">Recap quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lecture/#what-you-will-be-able-to-explain">What you will be able to explain</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lecture/#part-1-raw-data-and-the-cleaning-log">Part 1: Raw data and the cleaning log</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lecture/#part-2-missing-data">Part 2: Missing data</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lecture/#part-3-duplicates">Part 3: Duplicates</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lecture/#part-4-outliers">Part 4: Outliers</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lecture/#part-5-text-numbers-dates-and-encodings">Part 5: Text, numbers, dates and encodings</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lecture/#part-6-joins-and-cardinality">Part 6: Joins and cardinality</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lecture/#part-7-reshaping">Part 7: Reshaping</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lecture/#part-8-worked-case-world-cup-attendance">Part 8: Worked case — World Cup attendance</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lecture/#summary">Summary</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lecture/#quiz">Quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lecture/#lab-briefing">Lab briefing</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../03_cleaning_and_preparing_lab/">Lab</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lab/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lab/#how-this-lab-works">How this lab works</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lab/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lab/#guided-practice">Guided practice</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lab/#independent-tasks">Independent tasks</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lab/#challenge">Challenge</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lab/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lab/#evidence-to-keep">Evidence to keep</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lab/#after-the-lab">After the lab</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Session 4: Descriptive Statistics and Distributions</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../04_descriptive_statistics_lecture/">Lecture</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lecture/#recap-quiz">Recap quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lecture/#what-you-will-be-able-to-explain">What you will be able to explain</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lecture/#part-1-the-centre-mean-median-and-mode">Part 1: The centre — mean, median and mode</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lecture/#part-2-spread-how-different-are-the-values">Part 2: Spread — how different are the values?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lecture/#part-3-shape-skew-and-long-tails">Part 3: Shape — skew and long tails</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lecture/#part-4-three-pictures-of-one-distribution">Part 4: Three pictures of one distribution</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lecture/#part-5-z-scores-and-the-normal-curve-as-a-reference">Part 5: z-scores and the normal curve as a reference</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lecture/#part-6-unusual-values-flag-do-not-delete">Part 6: Unusual values — flag, do not delete</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lecture/#part-7-worked-case-superstore-orders">Part 7: Worked case — Superstore orders</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lecture/#summary">Summary</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lecture/#quiz">Quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lecture/#lab-briefing">Lab briefing</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../04_descriptive_statistics_lab/">Lab</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lab/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lab/#how-this-lab-works">How this lab works</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lab/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lab/#guided-practice">Guided practice</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lab/#independent-tasks">Independent tasks</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lab/#challenge">Challenge</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lab/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lab/#evidence-to-keep">Evidence to keep</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lab/#after-the-lab">After the lab</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >Session 5: Metrics and KPIs</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../05_metrics_and_kpis_lecture/">Lecture</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lecture/#recap-quiz">Recap quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lecture/#what-you-will-be-able-to-explain">What you will be able to explain</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lecture/#part-1-what-makes-a-good-metric">Part 1: What makes a good metric?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lecture/#part-2-metric-contracts">Part 2: Metric contracts</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lecture/#part-3-ratio-of-sums-versus-mean-of-ratios">Part 3: Ratio of sums versus mean of ratios</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lecture/#part-4-weighted-rates-in-practice">Part 4: Weighted rates in practice</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lecture/#part-5-distinct-counts-do-not-add-up">Part 5: Distinct counts do not add up</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lecture/#part-6-simpsons-paradox">Part 6: Simpson's paradox</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lecture/#part-7-goodharts-law">Part 7: Goodhart's law</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lecture/#part-8-worked-case-a-segment-kpi-table-that-reconciles">Part 8: Worked case — a segment KPI table that reconciles</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lecture/#summary">Summary</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lecture/#quiz">Quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lecture/#lab-briefing">Lab briefing</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Lab</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#how-this-lab-works">How this lab works</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#guided-practice">Guided practice</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#independent-tasks">Independent tasks</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#challenge">Challenge</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#validation-checklist">Validation checklist</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#evidence-to-keep">Evidence to keep</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#after-the-lab">After the lab</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Session 6: Visualisation Principles</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../06_visualisation_principles_lecture/">Lecture</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lecture/#recap-quiz">Recap quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lecture/#what-you-will-be-able-to-explain">What you will be able to explain</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lecture/#part-1-choose-the-chart-from-the-task">Part 1: Choose the chart from the task</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lecture/#part-2-how-accurately-we-read-encodings">Part 2: How accurately we read encodings</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lecture/#part-3-pre-attentive-attributes">Part 3: Pre-attentive attributes</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lecture/#part-4-data-ink-and-decluttering">Part 4: Data-ink and decluttering</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lecture/#part-5-gestalt-what-belongs-together">Part 5: Gestalt: what belongs together</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lecture/#part-6-colour-with-a-job">Part 6: Colour with a job</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lecture/#part-7-honest-axes">Part 7: Honest axes</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lecture/#part-8-message-titles-and-annotation">Part 8: Message titles and annotation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lecture/#part-9-small-multiples">Part 9: Small multiples</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lecture/#summary">Summary</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lecture/#quiz">Quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lecture/#in-the-lab">In the Lab</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../06_visualisation_principles_lab/">Lab</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lab/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lab/#how-this-lab-works">How this lab works</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lab/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Session 7: Time Series and Trends</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../07_trends_and_growth_lecture/">Lecture</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lecture/#recap-quiz">Recap quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lecture/#what-you-will-be-able-to-explain">What you will be able to explain</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lecture/#part-1-the-three-components-of-a-series">Part 1: The three components of a series</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lecture/#part-2-month-on-month-versus-year-on-year">Part 2: Month-on-month versus year-on-year</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lecture/#part-3-rolling-averages-trailing-and-centred">Part 3: Rolling averages, trailing and centred</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lecture/#part-4-index-numbers-base-100">Part 4: Index numbers (base = 100)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lecture/#part-5-seasonally-adjusted-series">Part 5: Seasonally adjusted series</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lecture/#part-6-incomplete-and-missing-periods">Part 6: Incomplete and missing periods</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lecture/#part-7-growth-after-filtering-the-trap">Part 7: Growth after filtering, the trap</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lecture/#part-8-worked-case-superstore-monthly-sales">Part 8: Worked case — Superstore monthly Sales</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lecture/#summary">Summary</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lecture/#quiz">Quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lecture/#lab-briefing">Lab briefing</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../07_trends_and_growth_lab/">Lab</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lab/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lab/#how-this-lab-works">How this lab works</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lab/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lab/#before-you-start">Before you start</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lab/#guided-practice">Guided practice</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lab/#independent-tasks">Independent tasks</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lab/#challenge">Challenge</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lab/#validation-checklist">Validation checklist</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lab/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lab/#evidence-to-keep">Evidence to keep</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lab/#after-the-lab">After the lab</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Tableau (Coming Later)</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lessons/class-01/">Tableau Lesson 1 (draft)</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#before-you-start">Before you start</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#part-1-from-request-to-question">Part 1: From request to question</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#part-2-watch-the-demonstration">Part 2: Watch the demonstration</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#part-3-guided-practice">Part 3: Guided practice</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-01/#connect-to-the-file">Connect to the file</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-01/#check-the-column-types">Check the column types</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-01/#build-a-first-chart">Build a first chart</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-01/#add-a-filter">Add a filter</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-01/#save-and-reopen">Save and reopen</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#part-4-rows-versus-orders">Part 4: Rows versus orders</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#part-5-independent-work">Part 5: Independent work</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#part-6-challenge">Part 6: Challenge</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#after-the-lesson">After the lesson</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lessons/class-02/">Tableau Lesson 2 (draft)</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#before-you-start">Before you start</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#part-1-meet-the-data-dictionary">Part 1: Meet the data dictionary</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#part-2-find-the-grain">Part 2: Find the grain</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#part-3-count-orders-correctly">Part 3: Count orders correctly</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-02/#demonstration">Demonstration</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-02/#guided-practice">Guided practice</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#part-4-what-the-returns-flag-means">Part 4: What the returns flag means</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#part-5-check-one-order-by-hand">Part 5: Check one order by hand</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#part-6-keep-a-preparation-log">Part 6: Keep a preparation log</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#part-7-independent-work">Part 7: Independent work</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#part-8-debugging-challenge">Part 8: Debugging challenge</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#after-the-lesson">After the lesson</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lessons/class-03/">Tableau Lesson 3 (draft)</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#before-you-start">Before you start</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#part-1-agree-the-measures">Part 1: Agree the measures</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#part-2-watch-the-demonstration">Part 2: Watch the demonstration</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#part-3-guided-practice-build-the-calculations">Part 3: Guided practice — build the calculations</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#part-4-guided-practice-the-segment-table">Part 4: Guided practice — the segment table</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-03/#check-that-it-reconciles">Check that it reconciles</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#part-5-independent-work">Part 5: Independent work</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-03/#a-filter-by-region">A. Filter by region</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-03/#b-look-at-a-category">B. Look at a category</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#part-6-debugging-challenge">Part 6: Debugging challenge</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#part-7-make-a-recommendation">Part 7: Make a recommendation</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#validation-checklist">Validation checklist</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#after-the-lesson">After the lesson</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lessons/class-04/">Tableau Lesson 4 (draft)</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#before-you-start">Before you start</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#part-1-the-monthly-trend">Part 1: The monthly trend</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#part-2-two-kinds-of-growth">Part 2: Two kinds of growth</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-04/#month-on-month-growth">Month-on-month growth</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-04/#year-on-year-growth">Year-on-year growth</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-04/#which-one-is-fair">Which one is fair?</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#part-3-the-returns-list">Part 3: The returns list</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#part-4-guided-practice-build-the-dashboard">Part 4: Guided practice — build the dashboard</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-04/#design-checks">Design checks</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#part-5-independent-work">Part 5: Independent work</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#part-6-debugging-challenge">Part 6: Debugging challenge</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#part-7-recommend-a-test">Part 7: Recommend a test</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#validation-checklist">Validation checklist</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#after-the-lesson">After the lesson</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../lessons/lesson-template/">Lesson Template</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#1-the-business-decision">1. The business decision</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#2-what-you-will-demonstrate">2. What you will demonstrate</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#3-before-you-start">3. Before you start</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#4-understand-the-data">4. Understand the data</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#5-agree-the-measures">5. Agree the measures</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#6-watch-a-worked-example">6. Watch a worked example</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#7-try-it-with-guidance">7. Try it with guidance</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#8-work-independently">8. Work independently</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#9-debug-a-result">9. Debug a result</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#10-make-a-recommendation">10. Make a recommendation</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#11-connection-to-the-other-tool">11. Connection to the other tool</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#12-submit-and-reflect">12. Submit and reflect</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Data Analytics</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Python Sessions</li>
+          <li class="breadcrumb-item">Session 5: Metrics and KPIs</li>
+      <li class="breadcrumb-item active">Lab</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="session-5-lab-which-segment-deserves-a-closer-look">Session 5 lab: Which segment deserves a closer look?<a class="headerlink" href="#session-5-lab-which-segment-deserves-a-closer-look" title="Permanent link">&para;</a></h1>
+<p class="lead">
+Compare the three customer segments using five measures, calculate each one correctly, check that the numbers add up, write a metric contract, and make a careful recommendation.
+</p>
+
+<p><a href="https://colab.research.google.com/github/Aayush181509/AnalyticsLecture/blob/main/notebooks/05_metrics_and_kpis_lab.ipynb"><img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg" /></a></p>
+<p>Open this notebook in Google Colab with the button above, then run each cell from top to bottom with <strong>Shift + Enter</strong>. Save your own copy with <strong>File → Save a copy in Drive</strong>.</p>
+<hr />
+<h2 id="the-business-decision">The business decision<a class="headerlink" href="#the-business-decision" title="Permanent link">&para;</a></h2>
+<p>The retail head has one analyst free next month and asks:</p>
+<blockquote>
+<p><em>"Which customer segment should we investigate first, and what should we check before we change any promotions?"</em></p>
+</blockquote>
+<p>A big Sales total alone is not enough to decide. A segment can sell a lot and still earn little profit, or have many small orders. In this lab you build a fair comparison.</p>
+<blockquote>
+<p><strong>About the data</strong></p>
+<p>The Superstore sample describes a <strong>fictitious</strong> company. Sales and Profit are in <strong>source monetary units</strong>: the currency is not stated, so never add a currency symbol. The source does not explain how Profit is calculated, so we say <strong>profit ratio</strong>, never "margin".</p>
+<p>The <strong>Berkeley admissions</strong> counts are the published figures for the six largest departments in 1973 (Bickel, Hammel and O'Connell, 1975, <em>Science</em>).</p>
+</blockquote>
+<hr />
+<h2 id="how-this-lab-works">How this lab works<a class="headerlink" href="#how-this-lab-works" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Part</th>
+<th>What you do</th>
+<th>Tasks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Guided practice</strong></td>
+<td>Follow along step by step, everyone together</td>
+<td>G1–G5</td>
+</tr>
+<tr>
+<td><strong>Independent tasks</strong></td>
+<td>Same skills, new questions, on your own or in pairs</td>
+<td>I1–I7</td>
+</tr>
+<tr>
+<td><strong>Challenge</strong></td>
+<td>Harder reasoning and debugging</td>
+<td>C1–C2</td>
+</tr>
+</tbody>
+</table>
+<p>Each task has a level:</p>
+<ul>
+<li><strong>Core</strong>: everyone completes it; it is enough for your portfolio.</li>
+<li><strong>Stretch</strong>: for when you finish the core tasks early.</li>
+<li><strong>Challenge</strong>: optional, harder reasoning.</li>
+</ul>
+<hr />
+<h2 id="what-you-will-be-able-to-do">What you will be able to do<a class="headerlink" href="#what-you-will-be-able-to-do" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Define five measures precisely: Sales, Orders, Average order value, Profit and Profit ratio.</li>
+<li>Calculate them in pandas, for the whole table and for each segment.</li>
+<li>Calculate ratios <strong>from totals</strong>, not by averaging other ratios.</li>
+<li>Check that segment results reconcile with the overall total.</li>
+<li>Explain how a filter changes every measure.</li>
+<li>Write a metric contract and explain Simpson's paradox with real data.</li>
+<li>Write a short, evidence-based recommendation with one limitation.</li>
+</ol>
+<p><strong>Evidence you keep:</strong> a segment KPI table, a metric contract, a validation checklist, a Berkeley explanation and a five-sentence recommendation.</p>
+<p>Before you start, read the <a href="../05_metrics_and_kpis_lecture/">Session 5 lecture</a> and have your grain statement from the <a href="../02_data_and_grain_lab/">Session 2 lab</a> ready.</p>
+<hr />
+<h2 id="guided-practice">Guided practice<a class="headerlink" href="#guided-practice" title="Permanent link">&para;</a></h2>
+<h3 id="g1-core-agree-the-measures">G1 (Core): Agree the measures<a class="headerlink" href="#g1-core-agree-the-measures" title="Permanent link">&para;</a></h3>
+<p>Every measure uses the <strong>same rows</strong>: all order lines in the table, unless you deliberately apply a filter.</p>
+<table>
+<thead>
+<tr>
+<th>Measure</th>
+<th>What it means</th>
+<th>pandas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Sales</strong></td>
+<td>Total reported Sales</td>
+<td><code>df["sales"].sum()</code></td>
+</tr>
+<tr>
+<td><strong>Orders</strong></td>
+<td>Number of different orders</td>
+<td><code>df["order_id"].nunique()</code></td>
+</tr>
+<tr>
+<td><strong>AOV</strong> (average order value)</td>
+<td>Sales per order</td>
+<td>Sales ÷ Orders</td>
+</tr>
+<tr>
+<td><strong>Profit</strong></td>
+<td>Total reported Profit (can be negative)</td>
+<td><code>df["profit"].sum()</code></td>
+</tr>
+<tr>
+<td><strong>Profit ratio</strong></td>
+<td>Profit per unit of Sales</td>
+<td>Profit ÷ Sales</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Totals first, then divide</strong></p>
+<p>AOV and Profit ratio are always calculated from the <strong>totals</strong> of whatever you are looking at. Never average the ratios of individual rows or of segments. You will see why in C1.</p>
+<p><strong>When there is nothing to divide by</strong></p>
+<p>If a filter leaves no orders or no Sales, the ratio is <strong>not available</strong>. pandas shows this as <code>NaN</code> ("not a number"). Read it as <em>"not available"</em>, never as 0%.</p>
+</blockquote>
+<h4 id="predict-first">Predict first<a class="headerlink" href="#predict-first" title="Permanent link">&para;</a></h4>
+<p>Before you run the next cells, write down your answers:</p>
+<ol>
+<li>Will AOV be larger or smaller than Sales divided by the number of <strong>rows</strong>? Why?</li>
+<li>Can Profit ratio be negative? When?</li>
+</ol>
+<p>Run the setup cell, then load the table.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Course data setup. Run this cell first; you do not need to understand it yet.</span>
+<span class="c1"># It downloads the Superstore sample from Tableau&#39;s website, checks it is the</span>
+<span class="c1"># exact version this course was written for, and prepares the order-lines table.</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">hashlib</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">urllib.request</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+
+<span class="n">SOURCE_URL</span> <span class="o">=</span> <span class="s2">&quot;https://public.tableau.com/app/sample-data/sample_-_superstore.xls&quot;</span>
+<span class="n">EXPECTED_SHA256</span> <span class="o">=</span> <span class="s2">&quot;5045ed4fec49cae2cc0dfc5ab0d204ba09efa767fe00c996822499e8cc42fbbd&quot;</span>
+<span class="n">SOURCE_FILE</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;COURSE_XLS_PATH&quot;</span><span class="p">,</span> <span class="s2">&quot;sample_-_superstore.xls&quot;</span><span class="p">)</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="kn">import</span><span class="w"> </span><span class="nn">xlrd</span>  <span class="c1"># noqa: F401  (needed to read .xls files)</span>
+<span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+    <span class="kn">import</span><span class="w"> </span><span class="nn">subprocess</span>
+    <span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+
+    <span class="n">subprocess</span><span class="o">.</span><span class="n">check_call</span><span class="p">([</span><span class="n">sys</span><span class="o">.</span><span class="n">executable</span><span class="p">,</span> <span class="s2">&quot;-m&quot;</span><span class="p">,</span> <span class="s2">&quot;pip&quot;</span><span class="p">,</span> <span class="s2">&quot;install&quot;</span><span class="p">,</span> <span class="s2">&quot;-q&quot;</span><span class="p">,</span> <span class="s2">&quot;xlrd&quot;</span><span class="p">])</span>
+
+<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">SOURCE_FILE</span><span class="p">):</span>
+    <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlretrieve</span><span class="p">(</span><span class="n">SOURCE_URL</span><span class="p">,</span> <span class="n">SOURCE_FILE</span><span class="p">)</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">SOURCE_FILE</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">digest</span> <span class="o">=</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">sha256</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">())</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span>
+<span class="k">if</span> <span class="n">digest</span> <span class="o">!=</span> <span class="n">EXPECTED_SHA256</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;WARNING: Tableau has changed this sample file since the course was written.&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Your numbers will differ from the lesson. Ask your facilitator for the course copy.&quot;</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">load_orders</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Return one row per order line, orders placed 2023-01-01 to 2025-12-31.&quot;&quot;&quot;</span>
+    <span class="n">raw</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">SOURCE_FILE</span><span class="p">,</span> <span class="n">sheet_name</span><span class="o">=</span><span class="s2">&quot;Orders&quot;</span><span class="p">)</span>
+    <span class="n">returns</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">SOURCE_FILE</span><span class="p">,</span> <span class="n">sheet_name</span><span class="o">=</span><span class="s2">&quot;Returns&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Orders with more than one Customer ID (a known data issue), found before filtering.</span>
+    <span class="n">ids_per_order</span> <span class="o">=</span> <span class="n">raw</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;Order ID&quot;</span><span class="p">)[</span><span class="s2">&quot;Customer ID&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span>
+    <span class="n">conflict_orders</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">ids_per_order</span><span class="p">[</span><span class="n">ids_per_order</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+
+    <span class="n">in_scope</span> <span class="o">=</span> <span class="p">(</span><span class="n">raw</span><span class="p">[</span><span class="s2">&quot;Order Date&quot;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="s2">&quot;2023-01-01&quot;</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">raw</span><span class="p">[</span><span class="s2">&quot;Order Date&quot;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="s2">&quot;2026-01-01&quot;</span><span class="p">)</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">raw</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">in_scope</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+    <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;Row ID&quot;</span><span class="p">:</span> <span class="s2">&quot;row_id&quot;</span><span class="p">,</span> <span class="s2">&quot;Order ID&quot;</span><span class="p">:</span> <span class="s2">&quot;order_id&quot;</span><span class="p">,</span> <span class="s2">&quot;Order Date&quot;</span><span class="p">:</span> <span class="s2">&quot;order_date&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Ship Date&quot;</span><span class="p">:</span> <span class="s2">&quot;ship_date&quot;</span><span class="p">,</span> <span class="s2">&quot;Ship Mode&quot;</span><span class="p">:</span> <span class="s2">&quot;ship_mode&quot;</span><span class="p">,</span> <span class="s2">&quot;Customer ID&quot;</span><span class="p">:</span> <span class="s2">&quot;customer_id&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Segment&quot;</span><span class="p">:</span> <span class="s2">&quot;segment&quot;</span><span class="p">,</span> <span class="s2">&quot;Country/Region&quot;</span><span class="p">:</span> <span class="s2">&quot;country_region&quot;</span><span class="p">,</span> <span class="s2">&quot;Region&quot;</span><span class="p">:</span> <span class="s2">&quot;region&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Category&quot;</span><span class="p">:</span> <span class="s2">&quot;category&quot;</span><span class="p">,</span> <span class="s2">&quot;Sub-Category&quot;</span><span class="p">:</span> <span class="s2">&quot;sub_category&quot;</span><span class="p">,</span> <span class="s2">&quot;Product ID&quot;</span><span class="p">:</span> <span class="s2">&quot;product_id&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Product Name&quot;</span><span class="p">:</span> <span class="s2">&quot;product_name&quot;</span><span class="p">,</span> <span class="s2">&quot;Sales&quot;</span><span class="p">:</span> <span class="s2">&quot;sales&quot;</span><span class="p">,</span> <span class="s2">&quot;Quantity&quot;</span><span class="p">:</span> <span class="s2">&quot;quantity&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Discount&quot;</span><span class="p">:</span> <span class="s2">&quot;discount&quot;</span><span class="p">,</span> <span class="s2">&quot;Profit&quot;</span><span class="p">:</span> <span class="s2">&quot;profit&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+    <span class="n">df</span><span class="p">[</span><span class="s2">&quot;returned_order_flag&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;order_id&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">returns</span><span class="p">[</span><span class="s2">&quot;Order ID&quot;</span><span class="p">]))</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+    <span class="n">df</span><span class="p">[</span><span class="s2">&quot;customer_order_conflict&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;order_id&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">conflict_orders</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+    <span class="n">df</span><span class="p">[</span><span class="s2">&quot;customer_analysis_eligible&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;customer_order_conflict&quot;</span><span class="p">]</span>
+    <span class="n">df</span><span class="p">[</span><span class="s2">&quot;order_to_ship_days&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;ship_date&quot;</span><span class="p">]</span> <span class="o">-</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;order_date&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">days</span>
+    <span class="n">df</span><span class="p">[</span><span class="s2">&quot;order_month&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;order_date&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">to_period</span><span class="p">(</span><span class="s2">&quot;M&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">to_timestamp</span><span class="p">()</span>
+
+    <span class="n">columns</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="s2">&quot;row_id&quot;</span><span class="p">,</span> <span class="s2">&quot;order_id&quot;</span><span class="p">,</span> <span class="s2">&quot;order_date&quot;</span><span class="p">,</span> <span class="s2">&quot;ship_date&quot;</span><span class="p">,</span> <span class="s2">&quot;ship_mode&quot;</span><span class="p">,</span> <span class="s2">&quot;customer_id&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;segment&quot;</span><span class="p">,</span> <span class="s2">&quot;country_region&quot;</span><span class="p">,</span> <span class="s2">&quot;region&quot;</span><span class="p">,</span> <span class="s2">&quot;category&quot;</span><span class="p">,</span> <span class="s2">&quot;sub_category&quot;</span><span class="p">,</span> <span class="s2">&quot;product_id&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;product_name&quot;</span><span class="p">,</span> <span class="s2">&quot;sales&quot;</span><span class="p">,</span> <span class="s2">&quot;quantity&quot;</span><span class="p">,</span> <span class="s2">&quot;discount&quot;</span><span class="p">,</span> <span class="s2">&quot;profit&quot;</span><span class="p">,</span> <span class="s2">&quot;returned_order_flag&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;customer_analysis_eligible&quot;</span><span class="p">,</span> <span class="s2">&quot;customer_order_conflict&quot;</span><span class="p">,</span> <span class="s2">&quot;order_to_ship_days&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;order_month&quot;</span><span class="p">,</span>
+    <span class="p">]</span>
+    <span class="k">return</span> <span class="n">df</span><span class="p">[</span><span class="n">columns</span><span class="p">]</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s2">&quot;row_id&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+
+<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s2">&quot;display.float_format&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="si">{:,.2f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="o">.</span><span class="n">update</span><span class="p">({</span>
+    <span class="s2">&quot;figure.figsize&quot;</span><span class="p">:</span> <span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span>
+    <span class="s2">&quot;axes.spines.top&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="s2">&quot;axes.spines.right&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="s2">&quot;axes.grid&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s2">&quot;axes.axisbelow&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s2">&quot;grid.color&quot;</span><span class="p">:</span> <span class="s2">&quot;#e6e5e1&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;axes.prop_cycle&quot;</span><span class="p">:</span> <span class="n">plt</span><span class="o">.</span><span class="n">cycler</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;#2a78d6&quot;</span><span class="p">,</span> <span class="s2">&quot;#eb6834&quot;</span><span class="p">,</span> <span class="s2">&quot;#1baf7a&quot;</span><span class="p">]),</span>
+    <span class="s2">&quot;axes.titleweight&quot;</span><span class="p">:</span> <span class="s2">&quot;bold&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;axes.titlelocation&quot;</span><span class="p">:</span> <span class="s2">&quot;left&quot;</span><span class="p">,</span>
+<span class="p">})</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Setup complete.&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Setup complete.
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">df</span> <span class="o">=</span> <span class="n">load_orders</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Order lines (rows):&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">))</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Order lines (rows): 6815
+</code></pre></div>
+<h3 id="g2-core-the-five-measures-for-the-whole-table">G2 (Core): The five measures for the whole table<a class="headerlink" href="#g2-core-the-five-measures-for-the-whole-table" title="Permanent link">&para;</a></h3>
+<p>Read each line: it matches one row of the table in G1.</p>
+<div class="highlight"><pre><span></span><code><span class="n">total_sales</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;sales&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">total_orders</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;order_id&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span>
+<span class="n">total_profit</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;profit&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+
+<span class="n">aov</span> <span class="o">=</span> <span class="n">total_sales</span> <span class="o">/</span> <span class="n">total_orders</span>
+<span class="n">profit_ratio</span> <span class="o">=</span> <span class="n">total_profit</span> <span class="o">/</span> <span class="n">total_sales</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Sales:           &quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">total_sales</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Orders:          &quot;</span><span class="p">,</span> <span class="n">total_orders</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;AOV:             &quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">aov</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Profit:          &quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">total_profit</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Profit ratio (%):&quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">profit_ratio</span> <span class="o">*</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Sales:            1580966.82
+Orders:           3388
+AOV:              466.64
+Profit:           196370.47
+Profit ratio (%): 12.4
+</code></pre></div>
+<p><code>round(x, 2)</code> keeps two decimal places, just for display. We multiply the profit ratio by 100 to show it as a percentage.</p>
+<blockquote>
+<p><strong>Check your predictions</strong></p>
+<p>Compare the number of rows with the number of orders above. Does that change your answer to prediction 1?</p>
+</blockquote>
+<hr />
+<h3 id="g3-core-the-segment-kpi-table">G3 (Core): The segment KPI table<a class="headerlink" href="#g3-core-the-segment-kpi-table" title="Permanent link">&para;</a></h3>
+<h4 id="step-1-totals-for-each-segment">Step 1: totals for each segment<a class="headerlink" href="#step-1-totals-for-each-segment" title="Permanent link">&para;</a></h4>
+<p>In the Session 1 lab you used <code>groupby</code> with one sum. <code>.agg</code> lets you calculate several totals at once. Each line inside reads as <strong>new column name = (column to use, how to summarise it)</strong>.</p>
+<div class="highlight"><pre><span></span><code><span class="n">segment_kpis</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;segment&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">(</span>
+    <span class="n">sales</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;sales&quot;</span><span class="p">,</span> <span class="s2">&quot;sum&quot;</span><span class="p">),</span>
+    <span class="n">orders</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;order_id&quot;</span><span class="p">,</span> <span class="s2">&quot;nunique&quot;</span><span class="p">),</span>
+    <span class="n">profit</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;profit&quot;</span><span class="p">,</span> <span class="s2">&quot;sum&quot;</span><span class="p">),</span>
+<span class="p">)</span>
+<span class="n">segment_kpis</span>
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>sales</th>
+      <th>orders</th>
+      <th>profit</th>
+    </tr>
+    <tr>
+      <th>segment</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Consumer</th>
+      <td>835,747.86</td>
+      <td>1738</td>
+      <td>90,101.17</td>
+    </tr>
+    <tr>
+      <th>Corporate</th>
+      <td>467,562.02</td>
+      <td>1044</td>
+      <td>65,842.38</td>
+    </tr>
+    <tr>
+      <th>Home Office</th>
+      <td>277,656.95</td>
+      <td>606</td>
+      <td>40,426.92</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h4 id="step-2-the-two-ratios-from-each-segments-totals">Step 2: the two ratios, from each segment's totals<a class="headerlink" href="#step-2-the-two-ratios-from-each-segments-totals" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="n">segment_kpis</span><span class="p">[</span><span class="s2">&quot;aov&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">segment_kpis</span><span class="p">[</span><span class="s2">&quot;sales&quot;</span><span class="p">]</span> <span class="o">/</span> <span class="n">segment_kpis</span><span class="p">[</span><span class="s2">&quot;orders&quot;</span><span class="p">]</span>
+<span class="n">segment_kpis</span><span class="p">[</span><span class="s2">&quot;profit_ratio_pct&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">segment_kpis</span><span class="p">[</span><span class="s2">&quot;profit&quot;</span><span class="p">]</span> <span class="o">/</span> <span class="n">segment_kpis</span><span class="p">[</span><span class="s2">&quot;sales&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">100</span>
+<span class="n">segment_kpis</span>
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>sales</th>
+      <th>orders</th>
+      <th>profit</th>
+      <th>aov</th>
+      <th>profit_ratio_pct</th>
+    </tr>
+    <tr>
+      <th>segment</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Consumer</th>
+      <td>835,747.86</td>
+      <td>1738</td>
+      <td>90,101.17</td>
+      <td>480.87</td>
+      <td>10.78</td>
+    </tr>
+    <tr>
+      <th>Corporate</th>
+      <td>467,562.02</td>
+      <td>1044</td>
+      <td>65,842.38</td>
+      <td>447.86</td>
+      <td>14.08</td>
+    </tr>
+    <tr>
+      <th>Home Office</th>
+      <td>277,656.95</td>
+      <td>606</td>
+      <td>40,426.92</td>
+      <td>458.18</td>
+      <td>14.56</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h4 id="step-3-add-an-overall-row">Step 3: add an overall row<a class="headerlink" href="#step-3-add-an-overall-row" title="Permanent link">&para;</a></h4>
+<p>The overall row uses the totals from G2. Its AOV and profit ratio are <strong>recalculated from totals</strong>, not added up or averaged from the rows above.</p>
+<div class="highlight"><pre><span></span><code><span class="n">segment_kpis</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s2">&quot;All&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">total_sales</span><span class="p">,</span> <span class="n">total_orders</span><span class="p">,</span> <span class="n">total_profit</span><span class="p">,</span> <span class="n">aov</span><span class="p">,</span> <span class="n">profit_ratio</span> <span class="o">*</span> <span class="mi">100</span><span class="p">]</span>
+<span class="n">segment_kpis</span><span class="p">[</span><span class="s2">&quot;orders&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">segment_kpis</span><span class="p">[</span><span class="s2">&quot;orders&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+<span class="n">segment_kpis</span> <span class="o">=</span> <span class="n">segment_kpis</span><span class="p">[[</span><span class="s2">&quot;sales&quot;</span><span class="p">,</span> <span class="s2">&quot;orders&quot;</span><span class="p">,</span> <span class="s2">&quot;aov&quot;</span><span class="p">,</span> <span class="s2">&quot;profit&quot;</span><span class="p">,</span> <span class="s2">&quot;profit_ratio_pct&quot;</span><span class="p">]]</span>
+<span class="n">segment_kpis</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>sales</th>
+      <th>orders</th>
+      <th>aov</th>
+      <th>profit</th>
+      <th>profit_ratio_pct</th>
+    </tr>
+    <tr>
+      <th>segment</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Consumer</th>
+      <td>835,747.86</td>
+      <td>1738</td>
+      <td>480.87</td>
+      <td>90,101.17</td>
+      <td>10.78</td>
+    </tr>
+    <tr>
+      <th>Corporate</th>
+      <td>467,562.02</td>
+      <td>1044</td>
+      <td>447.86</td>
+      <td>65,842.38</td>
+      <td>14.08</td>
+    </tr>
+    <tr>
+      <th>Home Office</th>
+      <td>277,656.95</td>
+      <td>606</td>
+      <td>458.18</td>
+      <td>40,426.92</td>
+      <td>14.56</td>
+    </tr>
+    <tr>
+      <th>All</th>
+      <td>1,580,966.82</td>
+      <td>3388</td>
+      <td>466.64</td>
+      <td>196,370.47</td>
+      <td>12.42</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p>The second line keeps <code>orders</code> as whole numbers. The third line puts the columns in the same order as the table in G1.</p>
+<p>Give the table a clear title in your evidence log, for example <em>"Segment comparison, orders placed 2023–2025 (source monetary units)"</em>.</p>
+<h4 id="a-picture-of-the-profit-ratio">A picture of the profit ratio<a class="headerlink" href="#a-picture-of-the-profit-ratio" title="Permanent link">&para;</a></h4>
+<p>The dashed line is the overall profit ratio from the <strong>All</strong> row.</p>
+<div class="highlight"><pre><span></span><code><span class="n">by_segment</span> <span class="o">=</span> <span class="n">segment_kpis</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s2">&quot;All&quot;</span><span class="p">)</span>
+
+<span class="n">by_segment</span><span class="p">[</span><span class="s2">&quot;profit_ratio_pct&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sort_values</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+    <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;barh&quot;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Profit ratio by segment, orders placed 2023–2025&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Segment&quot;</span>
+<span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">profit_ratio</span> <span class="o">*</span> <span class="mi">100</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#444444&quot;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;All segments&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Profit ratio (</span><span class="si">% o</span><span class="s2">f Sales)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+<p><img alt="png" src="../05_metrics_and_kpis_lab_files/05_metrics_and_kpis_lab_12_0.png" /></p>
+<blockquote>
+<p><strong>Read the chart</strong></p>
+<p>Which segment is above the line and which is below? Now look back at the Sales column. Is the segment with the most Sales also the one with the highest profit ratio?</p>
+</blockquote>
+<hr />
+<h3 id="g4-core-check-that-it-reconciles">G4 (Core): Check that it reconciles<a class="headerlink" href="#g4-core-check-that-it-reconciles" title="Permanent link">&para;</a></h3>
+<p>A table you cannot reconcile is a table you cannot trust. <code>by_segment</code> is the table without the <strong>All</strong> row.</p>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Sales:  segments add up to&quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">by_segment</span><span class="p">[</span><span class="s2">&quot;sales&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span> <span class="mi">2</span><span class="p">),</span> <span class="s2">&quot;| overall&quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">total_sales</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Profit: segments add up to&quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">by_segment</span><span class="p">[</span><span class="s2">&quot;profit&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span> <span class="mi">2</span><span class="p">),</span> <span class="s2">&quot;| overall&quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">total_profit</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Orders: segments add up to&quot;</span><span class="p">,</span> <span class="n">by_segment</span><span class="p">[</span><span class="s2">&quot;orders&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span> <span class="s2">&quot;| overall&quot;</span><span class="p">,</span> <span class="n">total_orders</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Sales:  segments add up to 1580966.82 | overall 1580966.82
+Profit: segments add up to 196370.47 | overall 196370.47
+Orders: segments add up to 3388 | overall 3388
+</code></pre></div>
+<p>Orders can only add up if every order belongs to <strong>exactly one</strong> segment. Check it: count the different segments inside each order and look at the largest count.</p>
+<div class="highlight"><pre><span></span><code><span class="n">segments_per_order</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;order_id&quot;</span><span class="p">)[</span><span class="s2">&quot;segment&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Largest number of segments in one order:&quot;</span><span class="p">,</span> <span class="n">segments_per_order</span><span class="o">.</span><span class="n">max</span><span class="p">())</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Largest number of segments in one order: 1
+</code></pre></div>
+<p>Tick each check in your evidence log:</p>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled/> The segment <strong>Sales</strong> add up to the overall total.</li>
+<li class="task-list-item"><input type="checkbox" disabled/> The segment <strong>Profit</strong> values add up to the overall total.</li>
+<li class="task-list-item"><input type="checkbox" disabled/> The segment <strong>Orders</strong> add up to the overall total, because each order sits in one segment.</li>
+<li class="task-list-item"><input type="checkbox" disabled/> The overall <strong>AOV</strong> is total Sales ÷ total Orders, <strong>not</strong> the average of the segment AOVs.</li>
+<li class="task-list-item"><input type="checkbox" disabled/> The overall <strong>profit ratio</strong> is total Profit ÷ total Sales, <strong>not</strong> the average of the segment ratios.</li>
+</ul>
+<blockquote>
+<p><strong>If a total looks wrong</strong></p>
+<p>Check that every measure used the same rows (the same filters), and that the <strong>All</strong> row was recalculated from totals rather than added up.</p>
+</blockquote>
+<hr />
+<h3 id="g5-core-package-the-steps-as-a-function">G5 (Core): Package the steps as a function<a class="headerlink" href="#g5-core-package-the-steps-as-a-function" title="Permanent link">&para;</a></h3>
+<p>Building the table step by step takes several cells. To repeat it quickly on filtered data, we package the same steps as a <strong>function</strong>: a named recipe you can reuse. You do not need to write functions yet; just read it and see that each line matches a step above.</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">kpi_table</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">by</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Five measures for each group in the column `by`, plus an &#39;All&#39; row from totals.&quot;&quot;&quot;</span>
+    <span class="n">table</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">by</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">(</span>
+        <span class="n">sales</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;sales&quot;</span><span class="p">,</span> <span class="s2">&quot;sum&quot;</span><span class="p">),</span>
+        <span class="n">orders</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;order_id&quot;</span><span class="p">,</span> <span class="s2">&quot;nunique&quot;</span><span class="p">),</span>
+        <span class="n">profit</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;profit&quot;</span><span class="p">,</span> <span class="s2">&quot;sum&quot;</span><span class="p">),</span>
+    <span class="p">)</span>
+    <span class="n">table</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s2">&quot;All&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;sales&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;order_id&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">(),</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;profit&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()]</span>
+    <span class="n">table</span><span class="p">[</span><span class="s2">&quot;orders&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">table</span><span class="p">[</span><span class="s2">&quot;orders&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+    <span class="n">table</span><span class="p">[</span><span class="s2">&quot;aov&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">table</span><span class="p">[</span><span class="s2">&quot;sales&quot;</span><span class="p">]</span> <span class="o">/</span> <span class="n">table</span><span class="p">[</span><span class="s2">&quot;orders&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">float</span><span class="p">(</span><span class="s2">&quot;nan&quot;</span><span class="p">))</span>
+    <span class="n">table</span><span class="p">[</span><span class="s2">&quot;profit_ratio_pct&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">table</span><span class="p">[</span><span class="s2">&quot;profit&quot;</span><span class="p">]</span> <span class="o">/</span> <span class="n">table</span><span class="p">[</span><span class="s2">&quot;sales&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">float</span><span class="p">(</span><span class="s2">&quot;nan&quot;</span><span class="p">))</span> <span class="o">*</span> <span class="mi">100</span>
+    <span class="k">return</span> <span class="n">table</span><span class="p">[[</span><span class="s2">&quot;sales&quot;</span><span class="p">,</span> <span class="s2">&quot;orders&quot;</span><span class="p">,</span> <span class="s2">&quot;aov&quot;</span><span class="p">,</span> <span class="s2">&quot;profit&quot;</span><span class="p">,</span> <span class="s2">&quot;profit_ratio_pct&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+
+
+<span class="n">kpi_table</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="s2">&quot;segment&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>sales</th>
+      <th>orders</th>
+      <th>aov</th>
+      <th>profit</th>
+      <th>profit_ratio_pct</th>
+    </tr>
+    <tr>
+      <th>segment</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Consumer</th>
+      <td>835,747.86</td>
+      <td>1738</td>
+      <td>480.87</td>
+      <td>90,101.17</td>
+      <td>10.78</td>
+    </tr>
+    <tr>
+      <th>Corporate</th>
+      <td>467,562.02</td>
+      <td>1044</td>
+      <td>447.86</td>
+      <td>65,842.38</td>
+      <td>14.08</td>
+    </tr>
+    <tr>
+      <th>Home Office</th>
+      <td>277,656.95</td>
+      <td>606</td>
+      <td>458.18</td>
+      <td>40,426.92</td>
+      <td>14.56</td>
+    </tr>
+    <tr>
+      <th>All</th>
+      <td>1,580,966.82</td>
+      <td>3388</td>
+      <td>466.64</td>
+      <td>196,370.47</td>
+      <td>12.42</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p>It gives the same table as G3. The <code>.replace(0, float("nan"))</code> parts make a zero denominator show <code>NaN</code> (<em>not available</em>) instead of a misleading number.</p>
+<hr />
+<h2 id="independent-tasks">Independent tasks<a class="headerlink" href="#independent-tasks" title="Permanent link">&para;</a></h2>
+<h3 id="i1-core-filter-by-region">I1 (Core): Filter by region<a class="headerlink" href="#i1-core-filter-by-region" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Run the cell below for the West region.</li>
+<li>Change <code>"West"</code> to <code>"East"</code>, <code>"Central"</code> or <code>"South"</code> and run it again.</li>
+<li>Record all five measures for each segment in your chosen region.</li>
+<li>Write two sentences: does the ranking of segments by profit ratio change inside this region?</li>
+</ol>
+<blockquote>
+<p><strong>Your turn:</strong> change the code in the next cell and run it again.</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="n">selected</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;region&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;West&quot;</span><span class="p">]</span>
+<span class="n">kpi_table</span><span class="p">(</span><span class="n">selected</span><span class="p">,</span> <span class="s2">&quot;segment&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>sales</th>
+      <th>orders</th>
+      <th>aov</th>
+      <th>profit</th>
+      <th>profit_ratio_pct</th>
+    </tr>
+    <tr>
+      <th>segment</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Consumer</th>
+      <td>256,522.36</td>
+      <td>562</td>
+      <td>456.45</td>
+      <td>36,016.12</td>
+      <td>14.04</td>
+    </tr>
+    <tr>
+      <th>Corporate</th>
+      <td>140,280.49</td>
+      <td>324</td>
+      <td>432.96</td>
+      <td>18,655.27</td>
+      <td>13.30</td>
+    </tr>
+    <tr>
+      <th>Home Office</th>
+      <td>84,769.72</td>
+      <td>203</td>
+      <td>417.58</td>
+      <td>10,702.62</td>
+      <td>12.63</td>
+    </tr>
+    <tr>
+      <th>All</th>
+      <td>481,572.58</td>
+      <td>1089</td>
+      <td>442.22</td>
+      <td>65,374.01</td>
+      <td>13.58</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<blockquote>
+<p><strong>A filter changes every measure</strong></p>
+<p>The filter removes rows <strong>before</strong> anything is added up. So Sales, Orders, Profit and both ratios all describe the filtered rows only, including the <strong>All</strong> row.</p>
+</blockquote>
+<hr />
+<h3 id="i2-core-write-a-metric-contract">I2 (Core): Write a metric contract<a class="headerlink" href="#i2-core-write-a-metric-contract" title="Permanent link">&para;</a></h3>
+<p>A metric contract removes every choice an analyst could make differently (see Part 2 of the lecture). The cell below holds a contract for <strong>Profit ratio</strong> with three fields left for you to complete.</p>
+<ol>
+<li>Replace each <code>"???"</code> with your own wording.</li>
+<li>Run the cell to see the contract as a table.</li>
+<li>Run the next cell: it calculates the measure <strong>only from the contract's choices</strong> and compares it with your KPI table. They must match.</li>
+</ol>
+<blockquote>
+<p><strong>Your turn:</strong> change the code in the next cell and run it again.</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="n">profit_ratio_contract</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Profit ratio&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;purpose&quot;</span><span class="p">:</span> <span class="s2">&quot;Compare how much profit each segment keeps per unit of Sales&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;grain&quot;</span><span class="p">:</span> <span class="s2">&quot;One order line&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;numerator&quot;</span><span class="p">:</span> <span class="s2">&quot;Sum of profit&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;denominator&quot;</span><span class="p">:</span> <span class="s2">&quot;???&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;scope&quot;</span><span class="p">:</span> <span class="s2">&quot;???&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;zero_rule&quot;</span><span class="p">:</span> <span class="s2">&quot;???&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;unit&quot;</span><span class="p">:</span> <span class="s2">&quot;Percent of Sales, 1 decimal&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;owner&quot;</span><span class="p">:</span> <span class="s2">&quot;Retail analytics lead&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">profit_ratio_contract</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;definition&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">to_frame</span><span class="p">()</span>
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>definition</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>name</th>
+      <td>Profit ratio</td>
+    </tr>
+    <tr>
+      <th>purpose</th>
+      <td>Compare how much profit each segment keeps per...</td>
+    </tr>
+    <tr>
+      <th>grain</th>
+      <td>One order line</td>
+    </tr>
+    <tr>
+      <th>numerator</th>
+      <td>Sum of profit</td>
+    </tr>
+    <tr>
+      <th>denominator</th>
+      <td>???</td>
+    </tr>
+    <tr>
+      <th>scope</th>
+      <td>???</td>
+    </tr>
+    <tr>
+      <th>zero_rule</th>
+      <td>???</td>
+    </tr>
+    <tr>
+      <th>unit</th>
+      <td>Percent of Sales, 1 decimal</td>
+    </tr>
+    <tr>
+      <th>owner</th>
+      <td>Retail analytics lead</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Calculate the profit ratio for each segment exactly as the contract says, then compare.</span>
+<span class="n">from_contract</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;segment&quot;</span><span class="p">)[</span><span class="s2">&quot;profit&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">/</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;segment&quot;</span><span class="p">)[</span><span class="s2">&quot;sales&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">*</span> <span class="mi">100</span>
+<span class="n">comparison</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s2">&quot;from contract&quot;</span><span class="p">:</span> <span class="n">from_contract</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span>
+    <span class="s2">&quot;from KPI table&quot;</span><span class="p">:</span> <span class="n">by_segment</span><span class="p">[</span><span class="s2">&quot;profit_ratio_pct&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span>
+<span class="p">})</span>
+<span class="n">comparison</span><span class="p">[</span><span class="s2">&quot;match&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">comparison</span><span class="p">[</span><span class="s2">&quot;from contract&quot;</span><span class="p">]</span> <span class="o">-</span> <span class="n">comparison</span><span class="p">[</span><span class="s2">&quot;from KPI table&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">abs</span><span class="p">()</span> <span class="o">&lt;</span> <span class="mf">0.01</span>
+<span class="n">comparison</span>
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>from contract</th>
+      <th>from KPI table</th>
+      <th>match</th>
+    </tr>
+    <tr>
+      <th>segment</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Consumer</th>
+      <td>10.78</td>
+      <td>10.78</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>Corporate</th>
+      <td>14.08</td>
+      <td>14.08</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>Home Office</th>
+      <td>14.56</td>
+      <td>14.56</td>
+      <td>True</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<ol>
+<li>Now write a second contract, for <strong>Orders</strong> or <strong>AOV</strong>, in your evidence log. Pay special attention to the denominator and to what happens when a filter leaves no rows.</li>
+</ol>
+<blockquote>
+<p><strong>A contract is a promise</strong></p>
+<p>If anyone reports "profit ratio" with a different denominator or scope, the contract shows the difference immediately. That is the point: disagreements become visible instead of hidden in code.</p>
+</blockquote>
+<hr />
+<h3 id="i3-core-berkeley-admissions-and-simpsons-paradox">I3 (Core): Berkeley admissions and Simpson's paradox<a class="headerlink" href="#i3-core-berkeley-admissions-and-simpsons-paradox" title="Permanent link">&para;</a></h3>
+<p>The six largest departments at UC Berkeley in 1973, with the number of applicants and the number admitted.</p>
+<ol>
+<li>Run the first cell to calculate the admission rate of men and women in each department.</li>
+<li>Run the second cell to calculate the combined rate for the six departments.</li>
+<li>Write two sentences: in how many departments is the women's rate higher, and which group has the higher combined rate?</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="n">berkeley</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s2">&quot;department&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="s2">&quot;B&quot;</span><span class="p">,</span> <span class="s2">&quot;C&quot;</span><span class="p">,</span> <span class="s2">&quot;D&quot;</span><span class="p">,</span> <span class="s2">&quot;E&quot;</span><span class="p">,</span> <span class="s2">&quot;F&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;men_applied&quot;</span><span class="p">:</span>     <span class="p">[</span><span class="mi">825</span><span class="p">,</span> <span class="mi">560</span><span class="p">,</span> <span class="mi">325</span><span class="p">,</span> <span class="mi">417</span><span class="p">,</span> <span class="mi">191</span><span class="p">,</span> <span class="mi">373</span><span class="p">],</span>
+    <span class="s2">&quot;men_admitted&quot;</span><span class="p">:</span>    <span class="p">[</span><span class="mi">512</span><span class="p">,</span> <span class="mi">353</span><span class="p">,</span> <span class="mi">120</span><span class="p">,</span> <span class="mi">138</span><span class="p">,</span>  <span class="mi">53</span><span class="p">,</span>  <span class="mi">22</span><span class="p">],</span>
+    <span class="s2">&quot;women_applied&quot;</span><span class="p">:</span>   <span class="p">[</span><span class="mi">108</span><span class="p">,</span>  <span class="mi">25</span><span class="p">,</span> <span class="mi">593</span><span class="p">,</span> <span class="mi">375</span><span class="p">,</span> <span class="mi">393</span><span class="p">,</span> <span class="mi">341</span><span class="p">],</span>
+    <span class="s2">&quot;women_admitted&quot;</span><span class="p">:</span>  <span class="p">[</span> <span class="mi">89</span><span class="p">,</span>  <span class="mi">17</span><span class="p">,</span> <span class="mi">202</span><span class="p">,</span> <span class="mi">131</span><span class="p">,</span>  <span class="mi">94</span><span class="p">,</span>  <span class="mi">24</span><span class="p">],</span>
+<span class="p">})</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">&quot;department&quot;</span><span class="p">)</span>
+
+<span class="n">berkeley</span><span class="p">[</span><span class="s2">&quot;men_rate&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">berkeley</span><span class="p">[</span><span class="s2">&quot;men_admitted&quot;</span><span class="p">]</span> <span class="o">/</span> <span class="n">berkeley</span><span class="p">[</span><span class="s2">&quot;men_applied&quot;</span><span class="p">]</span>
+<span class="n">berkeley</span><span class="p">[</span><span class="s2">&quot;women_rate&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">berkeley</span><span class="p">[</span><span class="s2">&quot;women_admitted&quot;</span><span class="p">]</span> <span class="o">/</span> <span class="n">berkeley</span><span class="p">[</span><span class="s2">&quot;women_applied&quot;</span><span class="p">]</span>
+<span class="n">berkeley</span><span class="p">[[</span><span class="s2">&quot;men_rate&quot;</span><span class="p">,</span> <span class="s2">&quot;women_rate&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>men_rate</th>
+      <th>women_rate</th>
+    </tr>
+    <tr>
+      <th>department</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>A</th>
+      <td>0.62</td>
+      <td>0.82</td>
+    </tr>
+    <tr>
+      <th>B</th>
+      <td>0.63</td>
+      <td>0.68</td>
+    </tr>
+    <tr>
+      <th>C</th>
+      <td>0.37</td>
+      <td>0.34</td>
+    </tr>
+    <tr>
+      <th>D</th>
+      <td>0.33</td>
+      <td>0.35</td>
+    </tr>
+    <tr>
+      <th>E</th>
+      <td>0.28</td>
+      <td>0.24</td>
+    </tr>
+    <tr>
+      <th>F</th>
+      <td>0.06</td>
+      <td>0.07</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="highlight"><pre><span></span><code><span class="n">men_overall</span> <span class="o">=</span> <span class="n">berkeley</span><span class="p">[</span><span class="s2">&quot;men_admitted&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">/</span> <span class="n">berkeley</span><span class="p">[</span><span class="s2">&quot;men_applied&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">women_overall</span> <span class="o">=</span> <span class="n">berkeley</span><span class="p">[</span><span class="s2">&quot;women_admitted&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">/</span> <span class="n">berkeley</span><span class="p">[</span><span class="s2">&quot;women_applied&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Six departments combined, men:  &quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">men_overall</span><span class="si">:</span><span class="s2">.1%</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Six departments combined, women:&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">women_overall</span><span class="si">:</span><span class="s2">.1%</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Departments where women&#39;s rate is higher:&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">berkeley</span><span class="p">[</span><span class="s2">&quot;women_rate&quot;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">berkeley</span><span class="p">[</span><span class="s2">&quot;men_rate&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Six departments combined, men:   44.5%
+Six departments combined, women: 30.4%
+Departments where women&#39;s rate is higher: 4
+</code></pre></div>
+<ol>
+<li>Now find the reason. The cell below shows where each group applied. Change <code>"men_applied"</code> to <code>"women_applied"</code> and compare the two.</li>
+<li>Explain the reversal in three sentences for a non-technical reader. Use the words <em>mix</em> and <em>weighted</em>.</li>
+</ol>
+<blockquote>
+<p><strong>Your turn:</strong> change the code in the next cell and run it again.</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="c1"># Share of the group&#39;s applications that went to each department.</span>
+<span class="c1"># Change &quot;men_applied&quot; to &quot;women_applied&quot; and run again.</span>
+<span class="n">group</span> <span class="o">=</span> <span class="s2">&quot;men_applied&quot;</span>
+<span class="n">share</span> <span class="o">=</span> <span class="n">berkeley</span><span class="p">[</span><span class="n">group</span><span class="p">]</span> <span class="o">/</span> <span class="n">berkeley</span><span class="p">[</span><span class="n">group</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="c1"># Departments stay in the same order (A at the top) so the two charts are easy to compare.</span>
+<span class="n">share</span><span class="o">.</span><span class="n">sort_index</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s2">&quot;barh&quot;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;Where applications went: </span><span class="si">{</span><span class="n">group</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Share of the group&#39;s applications&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Department&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+<p><img alt="png" src="../05_metrics_and_kpis_lab_files/05_metrics_and_kpis_lab_34_0.png" /></p>
+<blockquote>
+<p><strong>Careful wording</strong></p>
+<p>The department view shows that the combined gap is explained by <strong>where</strong> people applied. It does not, by itself, prove there was no bias: why the groups applied to different departments is a separate question.</p>
+</blockquote>
+<hr />
+<h3 id="i4-core-make-a-recommendation">I4 (Core): Make a recommendation<a class="headerlink" href="#i4-core-make-a-recommendation" title="Permanent link">&para;</a></h3>
+<p>Write <strong>five sentences</strong> to the retail head:</p>
+<ol>
+<li><strong>Recommendation:</strong> which segment to investigate first.</li>
+<li><strong>Evidence 1:</strong> one measure, with its value from your table and how it compares with the <strong>All</strong> row.</li>
+<li><strong>Evidence 2:</strong> a second, different measure.</li>
+<li><strong>Limitation:</strong> one thing this data cannot tell you. For example, it shows which segment <em>looks</em> different; it does not show <em>why</em>.</li>
+<li><strong>Next check:</strong> one specific piece of evidence to request before changing promotions.</li>
+</ol>
+<p>Copy the numbers from <strong>the outputs above</strong>; do not retype them from memory.</p>
+<blockquote>
+<p><strong>Association, not cause</strong></p>
+<p>If a segment with more discounts has a lower profit ratio, that is a pattern worth investigating. It is not proof that the discounts caused it. Other differences between segments, such as product mix, could explain it.</p>
+</blockquote>
+<hr />
+<h3 id="i5-stretch-look-inside-one-category">I5 (Stretch): Look inside one category<a class="headerlink" href="#i5-stretch-look-inside-one-category" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Run the cell below, which keeps only Furniture lines.</li>
+<li>Change <code>"Furniture"</code> to <code>"Office Supplies"</code> or <code>"Technology"</code>.</li>
+<li>Here AOV no longer means full basket value. It means <em>"Sales of this category's lines per order that contains this category"</em>. Change the second <code>"aov"</code> in the <code>rename</code> line to a name that says so, for example <code>"category_sales_per_order"</code>.</li>
+</ol>
+<blockquote>
+<p><strong>Your turn:</strong> change the code in the next cell and run it again.</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="n">selected</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;category&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Furniture&quot;</span><span class="p">]</span>
+<span class="n">category_view</span> <span class="o">=</span> <span class="n">kpi_table</span><span class="p">(</span><span class="n">selected</span><span class="p">,</span> <span class="s2">&quot;segment&quot;</span><span class="p">)</span>
+<span class="n">category_view</span> <span class="o">=</span> <span class="n">category_view</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;aov&quot;</span><span class="p">:</span> <span class="s2">&quot;aov&quot;</span><span class="p">})</span>
+<span class="n">category_view</span>
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>sales</th>
+      <th>orders</th>
+      <th>aov</th>
+      <th>profit</th>
+      <th>profit_ratio_pct</th>
+    </tr>
+    <tr>
+      <th>segment</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Consumer</th>
+      <td>283,170.14</td>
+      <td>635</td>
+      <td>445.94</td>
+      <td>5,364.12</td>
+      <td>1.89</td>
+    </tr>
+    <tr>
+      <th>Corporate</th>
+      <td>169,851.05</td>
+      <td>394</td>
+      <td>431.09</td>
+      <td>6,636.46</td>
+      <td>3.91</td>
+    </tr>
+    <tr>
+      <th>Home Office</th>
+      <td>82,413.65</td>
+      <td>206</td>
+      <td>400.07</td>
+      <td>4,380.18</td>
+      <td>5.31</td>
+    </tr>
+    <tr>
+      <th>All</th>
+      <td>535,434.83</td>
+      <td>1235</td>
+      <td>433.55</td>
+      <td>16,380.76</td>
+      <td>3.06</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<hr />
+<h3 id="i6-stretch-do-category-orders-add-up">I6 (Stretch): Do category orders add up?<a class="headerlink" href="#i6-stretch-do-category-orders-add-up" title="Permanent link">&para;</a></h3>
+<p>Now group by <strong>category</strong> instead of segment, with no filter.</p>
+<ol>
+<li>Run the cell and compare the two printed numbers.</li>
+<li>In one sentence, explain why they are different. <em>Think about an order that contains both a chair and some paper.</em></li>
+</ol>
+<blockquote>
+<p><strong>Your turn:</strong> change the code in the next cell and run it again.</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="n">by_category</span> <span class="o">=</span> <span class="n">kpi_table</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="s2">&quot;category&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Category orders added up:&quot;</span><span class="p">,</span> <span class="n">by_category</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s2">&quot;All&quot;</span><span class="p">)[</span><span class="s2">&quot;orders&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Overall orders:          &quot;</span><span class="p">,</span> <span class="n">by_category</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s2">&quot;All&quot;</span><span class="p">,</span> <span class="s2">&quot;orders&quot;</span><span class="p">])</span>
+<span class="n">by_category</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Category orders added up: 4779
+Overall orders:           3388
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>sales</th>
+      <th>orders</th>
+      <th>aov</th>
+      <th>profit</th>
+      <th>profit_ratio_pct</th>
+    </tr>
+    <tr>
+      <th>category</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Furniture</th>
+      <td>535,434.83</td>
+      <td>1235</td>
+      <td>433.55</td>
+      <td>16,380.76</td>
+      <td>3.06</td>
+    </tr>
+    <tr>
+      <th>Office Supplies</th>
+      <td>478,057.88</td>
+      <td>2516</td>
+      <td>190.01</td>
+      <td>84,280.42</td>
+      <td>17.63</td>
+    </tr>
+    <tr>
+      <th>Technology</th>
+      <td>567,474.11</td>
+      <td>1028</td>
+      <td>552.02</td>
+      <td>95,709.29</td>
+      <td>16.87</td>
+    </tr>
+    <tr>
+      <th>All</th>
+      <td>1,580,966.82</td>
+      <td>3388</td>
+      <td>466.64</td>
+      <td>196,370.47</td>
+      <td>12.42</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<hr />
+<h3 id="i7-stretch-does-the-segment-ranking-hold-inside-every-category">I7 (Stretch): Does the segment ranking hold inside every category?<a class="headerlink" href="#i7-stretch-does-the-segment-ranking-hold-inside-every-category" title="Permanent link">&para;</a></h3>
+<p>Simpson's paradox can hide in any table. Check whether the ranking of segments by profit ratio is the same inside each category as it is overall.</p>
+<ol>
+<li>Run the cell. Each row is a category; each column a segment.</li>
+<li>Compare each row's order with the overall ranking from G3.</li>
+<li>Change <code>"category"</code> to <code>"region"</code> and check again. Write one sentence on what you find.</li>
+</ol>
+<blockquote>
+<p><strong>Your turn:</strong> change the code in the next cell and run it again.</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="n">by</span> <span class="o">=</span> <span class="s2">&quot;category&quot;</span>
+<span class="n">inside</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="n">by</span><span class="p">,</span> <span class="s2">&quot;segment&quot;</span><span class="p">])[[</span><span class="s2">&quot;profit&quot;</span><span class="p">,</span> <span class="s2">&quot;sales&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">inside</span> <span class="o">=</span> <span class="p">(</span><span class="n">inside</span><span class="p">[</span><span class="s2">&quot;profit&quot;</span><span class="p">]</span> <span class="o">/</span> <span class="n">inside</span><span class="p">[</span><span class="s2">&quot;sales&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">100</span><span class="p">)</span><span class="o">.</span><span class="n">unstack</span><span class="p">()</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">inside</span><span class="p">[</span><span class="s2">&quot;highest segment&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">inside</span><span class="o">.</span><span class="n">idxmax</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">inside</span>
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>segment</th>
+      <th>Consumer</th>
+      <th>Corporate</th>
+      <th>Home Office</th>
+      <th>highest segment</th>
+    </tr>
+    <tr>
+      <th>category</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Furniture</th>
+      <td>1.90</td>
+      <td>3.90</td>
+      <td>5.30</td>
+      <td>Home Office</td>
+    </tr>
+    <tr>
+      <th>Office Supplies</th>
+      <td>15.70</td>
+      <td>17.60</td>
+      <td>23.50</td>
+      <td>Home Office</td>
+    </tr>
+    <tr>
+      <th>Technology</th>
+      <td>15.10</td>
+      <td>21.80</td>
+      <td>14.60</td>
+      <td>Corporate</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<hr />
+<h2 id="challenge">Challenge<a class="headerlink" href="#challenge" title="Permanent link">&para;</a></h2>
+<h3 id="c1-challenge-debug-a-colleagues-kpi-summary">C1 (Challenge): Debug a colleague's KPI summary<a class="headerlink" href="#c1-challenge-debug-a-colleagues-kpi-summary" title="Permanent link">&para;</a></h3>
+<p>A colleague sends you this summary:</p>
+<blockquote>
+<p><em>"Our overall profit ratio is the average of the three segment ratios. And our average order value is total Sales divided by the number of rows."</em></p>
+</blockquote>
+<p>Their code is below.</p>
+<ol>
+<li>Run it to calculate the colleague's two numbers.</li>
+<li>Compare them with the <strong>All</strong> row of your segment table in G3.</li>
+<li>Explain each mistake in one sentence.</li>
+<li>Which segment has the most influence on the correct overall profit ratio, and why? Add a line <code>print(by_segment["sales"] / total_sales * 100)</code> to see each segment's share of Sales.</li>
+</ol>
+<blockquote>
+<p><strong>Your turn:</strong> change the code in the next cell and run it again.</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="n">colleague_ratio</span> <span class="o">=</span> <span class="n">by_segment</span><span class="p">[</span><span class="s2">&quot;profit_ratio_pct&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">colleague_aov</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;sales&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Colleague&#39;s overall profit ratio (%):&quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">colleague_ratio</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Colleague&#39;s AOV:                     &quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">colleague_aov</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Colleague&#39;s overall profit ratio (%): 13.1
+Colleague&#39;s AOV:                      231.98
+</code></pre></div>
+<blockquote>
+<p><strong>Think about weights</strong></p>
+<p>A segment with much more Sales should pull the overall ratio more strongly than a small segment. Does a simple average of the three ratios allow that? And what does one <strong>row</strong> represent: an order, or one product line within an order?</p>
+<p><strong>How would you check your fix?</strong></p>
+<p>Multiply each segment's profit ratio by its share of Sales and add the three results. You should get the <strong>All</strong> row's ratio exactly.</p>
+</blockquote>
+<h3 id="c2-challenge-make-the-colleagues-numbers-look-right-honestly">C2 (Challenge): Make the colleague's numbers look right, honestly<a class="headerlink" href="#c2-challenge-make-the-colleagues-numbers-look-right-honestly" title="Permanent link">&para;</a></h3>
+<p>Your colleague now asks: <em>"So when is the average of the segment ratios ever correct?"</em></p>
+<ol>
+<li>In the cell below, change the three <code>sales</code> values so that the simple mean of the ratios equals the ratio of the sums. Keep the profit ratios the same (change <code>profit</code> in proportion).</li>
+<li>Write one sentence stating the general rule.</li>
+</ol>
+<blockquote>
+<p><strong>Your turn:</strong> change the code in the next cell and run it again.</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="n">toy</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s2">&quot;sales&quot;</span><span class="p">:</span>  <span class="p">[</span><span class="mi">600</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="mi">100</span><span class="p">],</span>
+    <span class="s2">&quot;profit&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="mi">60</span><span class="p">,</span>  <span class="mi">45</span><span class="p">,</span>  <span class="mi">20</span><span class="p">],</span>
+<span class="p">},</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Consumer&quot;</span><span class="p">,</span> <span class="s2">&quot;Corporate&quot;</span><span class="p">,</span> <span class="s2">&quot;Home Office&quot;</span><span class="p">])</span>
+<span class="n">toy</span><span class="p">[</span><span class="s2">&quot;ratio&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">toy</span><span class="p">[</span><span class="s2">&quot;profit&quot;</span><span class="p">]</span> <span class="o">/</span> <span class="n">toy</span><span class="p">[</span><span class="s2">&quot;sales&quot;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Simple mean of ratios:&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">toy</span><span class="p">[</span><span class="s1">&#39;ratio&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="si">:</span><span class="s2">.2%</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Ratio of sums:        &quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">toy</span><span class="p">[</span><span class="s1">&#39;profit&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">toy</span><span class="p">[</span><span class="s1">&#39;sales&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="si">:</span><span class="s2">.2%</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">toy</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Simple mean of ratios: 15.00%
+Ratio of sums:         12.50%
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>sales</th>
+      <th>profit</th>
+      <th>ratio</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Consumer</th>
+      <td>600</td>
+      <td>60</td>
+      <td>0.10</td>
+    </tr>
+    <tr>
+      <th>Corporate</th>
+      <td>300</td>
+      <td>45</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <th>Home Office</th>
+      <td>100</td>
+      <td>20</td>
+      <td>0.20</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<hr />
+<h2 id="validation-checklist">Validation checklist<a class="headerlink" href="#validation-checklist" title="Permanent link">&para;</a></h2>
+<p>Before submitting, confirm:</p>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled/> Every measure uses the same filters and date scope.</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Orders are counted with <code>nunique</code>, not as rows.</li>
+<li class="task-list-item"><input type="checkbox" disabled/> AOV and Profit ratio are calculated from totals.</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Segment Sales, Profit and Orders reconcile with the <strong>All</strong> row.</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Money is labelled "source monetary units", with no currency symbol.</li>
+<li class="task-list-item"><input type="checkbox" disabled/> A <code>NaN</code> ratio is described as "not available", not 0%.</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Your metric contract states the denominator, scope and zero rule.</li>
+<li class="task-list-item"><input type="checkbox" disabled/> The recommendation names a limitation and a next check.</li>
+</ul>
+<hr />
+<h2 id="exit-ticket">Exit ticket<a class="headerlink" href="#exit-ticket" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Why is the average of three segment ratios not the overall ratio?</li>
+<li>What does a <code>NaN</code> AOV or profit ratio mean?</li>
+<li>In one sentence, why did the combined Berkeley comparison point the other way from most departments?</li>
+<li>One question you would want answered before acting on your recommendation.</li>
+</ol>
+<hr />
+<h2 id="evidence-to-keep">Evidence to keep<a class="headerlink" href="#evidence-to-keep" title="Permanent link">&para;</a></h2>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled/> Segment KPI table with an <strong>All</strong> row and a clear title (G3)</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Reconciliation checks ticked (G4)</li>
+<li class="task-list-item"><input type="checkbox" disabled/> One region's KPI table with two sentences (I1)</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Two metric contracts: Profit ratio and one more (I2)</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Berkeley explanation in three sentences (I3)</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Five-sentence recommendation (I4)</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Corrected colleague summary (C1, if attempted)</li>
+</ul>
+<hr />
+<h2 id="after-the-lab">After the lab<a class="headerlink" href="#after-the-lab" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Finish any region and category work from I1, I5 and I6.</li>
+<li>Next: the <a href="../06_visualisation_principles_lecture/">Session 6 lecture</a>, on choosing and designing honest charts.</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../05_metrics_and_kpis_lecture/" class="btn btn-neutral float-left" title="Lecture"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../06_visualisation_principles_lecture/" class="btn btn-neutral float-right" title="Lecture">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Copyright &copy; 2026 - Aayush Raj Regmi</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../05_metrics_and_kpis_lecture/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../06_visualisation_principles_lecture/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

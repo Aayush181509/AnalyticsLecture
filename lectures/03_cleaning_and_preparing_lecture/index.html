@@ -1,0 +1,2281 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Lecture - Data Analytics</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../stylesheets/readability.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Lecture";
+        var mkdocs_page_input_path = "lectures/03_cleaning_and_preparing_lecture.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Data Analytics
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Getting Started</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../..#course-at-a-glance">Course at a glance</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../..#where-to-start">Where to start</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../..#how-we-will-practise">How we will practise</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Foundations</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../foundations/">Why Data Analytics Matters</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/#what-is-data-analytics">What is data analytics?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/#real-stories-where-data-changed-the-outcome">Real stories where data changed the outcome</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../foundations/#a-map-that-changed-how-we-think-about-disease-london-1854">A map that changed how we think about disease (London, 1854)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../foundations/#a-chart-that-reformed-hospitals-1850s">A chart that reformed hospitals (1850s)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../foundations/#winning-on-a-small-budget-baseball-2002">Winning on a small budget (baseball, 2002)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../foundations/#preparing-for-a-hurricane-retail-2004">Preparing for a hurricane (retail, 2004)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../foundations/#when-big-data-got-it-wrong-public-health-20082015">When big data got it wrong (public health, 2008–2015)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/#where-you-meet-analytics-every-day">Where you meet analytics every day</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/#why-presentation-is-part-of-analysis">Why presentation is part of analysis</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/#what-comes-next">What comes next</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../foundations/statistics-are-not-enough/">Statistics Are Not Enough</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/statistics-are-not-enough/#anscombes-quartet">Anscombe's quartet</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/statistics-are-not-enough/#the-datasaurus-dozen">The Datasaurus Dozen</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/statistics-are-not-enough/#what-this-means-at-work">What this means at work</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/statistics-are-not-enough/#try-it-yourself">Try it yourself</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../foundations/misleading-statistics/">How Statistics Can Mislead</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/misleading-statistics/#1-correlation-is-not-causation">1. Correlation is not causation</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/misleading-statistics/#2-simpsons-paradox-the-total-can-reverse-the-parts">2. Simpson's paradox: the total can reverse the parts</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/misleading-statistics/#3-misleading-axes">3. Misleading axes</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/misleading-statistics/#4-cherry-picked-time-windows">4. Cherry-picked time windows</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/misleading-statistics/#5-which-average">5. Which average?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/misleading-statistics/#6-percentages-without-the-base">6. Percentages without the base</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/misleading-statistics/#7-survivorship-bias">7. Survivorship bias</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/misleading-statistics/#a-checklist-for-any-number-you-are-shown">A checklist for any number you are shown</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/misleading-statistics/#try-it-yourself">Try it yourself</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../foundations/types-of-analysis/">Types of Analysis</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/types-of-analysis/#univariate-analysis-one-variable-at-a-time">Univariate analysis: one variable at a time</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/types-of-analysis/#bivariate-analysis-two-variables-together">Bivariate analysis: two variables together</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/types-of-analysis/#multivariate-analysis-three-or-more-variables">Multivariate analysis: three or more variables</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/types-of-analysis/#choosing-a-chart-quick-guide">Choosing a chart: quick guide</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/types-of-analysis/#try-it-yourself">Try it yourself</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../foundations/visual-design/">Designing Clear Visuals</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/visual-design/#the-data-ink-ratio">The data-ink ratio</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/visual-design/#pre-attentive-attributes-what-the-eye-sees-first">Pre-attentive attributes: what the eye sees first</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/visual-design/#gestalt-principles-how-we-group-things">Gestalt principles: how we group things</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/visual-design/#colour-with-purpose">Colour with purpose</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/visual-design/#a-clean-chart-checklist">A clean-chart checklist</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/visual-design/#try-it-yourself">Try it yourself</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../foundations/storytelling/">Storytelling with Data</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/storytelling/#the-challenger-disaster-right-data-wrong-presentation">The Challenger disaster: right data, wrong presentation</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../foundations/storytelling/#what-did-the-data-show">What did the data show?</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/storytelling/#what-makes-a-data-story">What makes a data story</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../foundations/storytelling/#start-with-the-big-idea">Start with the "big idea"</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/storytelling/#a-simple-process">A simple process</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/storytelling/#exploratory-versus-explanatory">Exploratory versus explanatory</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/storytelling/#try-it-yourself">Try it yourself</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Course</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../course/roadmap/">Learning Roadmap</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#how-each-session-works">How each session works</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#part-a-thinking-with-data">Part A: Thinking with data</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#part-b-describing-and-measuring">Part B: Describing and measuring</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#part-c-relationships-change-and-uncertainty">Part C: Relationships, change and uncertainty</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#part-d-business-cases">Part D: Business cases</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#part-e-communicating-and-bringing-it-together">Part E: Communicating and bringing it together</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#part-f-tableau">Part F: Tableau</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#how-you-will-be-assessed">How you will be assessed</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#extra-practice-topics">Extra practice topics</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../course/setup/">Setup and Practice</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/setup/#what-you-need">What you need</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/setup/#open-a-lesson-in-google-colab">Open a lesson in Google Colab</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/setup/#keep-your-data-safe">Keep your data safe</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/setup/#if-something-does-not-work">If something does not work</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/setup/#tableau-later">Tableau (later)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/setup/#keep-an-evidence-log">Keep an evidence log</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../course/workflow/">Analytical Workflow</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/workflow/#the-seven-steps">The seven steps</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../course/workflow/#1-business-question">1. Business question</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../course/workflow/#2-data-understanding">2. Data understanding</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../course/workflow/#3-preparation">3. Preparation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../course/workflow/#4-analysis">4. Analysis</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../course/workflow/#5-validation">5. Validation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../course/workflow/#6-visualization">6. Visualization</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../course/workflow/#7-recommendation">7. Recommendation</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/workflow/#a-worked-example">A worked example</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/workflow/#when-a-result-looks-wrong">When a result looks wrong</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/workflow/#association-is-not-causation">Association is not causation</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../cases/">Business Cases</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../cases/#the-five-core-cases">The five core cases</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../cases/#retail">Retail</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../cases/#finance">Finance</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../cases/#operations">Operations</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../cases/#marketing">Marketing</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../cases/#hr">HR</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../cases/#what-every-case-includes">What every case includes</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../cases/#combining-evidence-across-departments">Combining evidence across departments</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../cases/#additional-practice-choices">Additional practice choices</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Python Sessions</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" >Session 1: Why Data Analytics Matters</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../01_why_data_analytics_lecture/">Lecture</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lecture/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lecture/#part-1-what-is-data-analytics">Part 1: What is data analytics?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lecture/#part-2-real-stories-where-data-changed-the-outcome">Part 2: Real stories where data changed the outcome</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lecture/#part-3-from-question-to-recommendation">Part 3: From question to recommendation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lecture/#part-4-always-plot-your-data-anscombes-quartet">Part 4: Always plot your data — Anscombe's quartet</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lecture/#part-5-the-datasaurus-dozen">Part 5: The Datasaurus Dozen</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lecture/#part-6-a-preview-of-how-numbers-mislead">Part 6: A preview of how numbers mislead</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lecture/#summary">Summary</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lecture/#quiz">Quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lecture/#in-the-lab">In the Lab</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../01_why_data_analytics_lab/">Lab</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lab/#how-this-lab-works">How this lab works</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lab/#part-a-guided-practice-core">Part A: Guided practice (Core)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lab/#part-b-independent-tasks">Part B: Independent tasks</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lab/#part-c-challenge-the-datasaurus-dozen">Part C: Challenge — the Datasaurus Dozen</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lab/#quick-reference">Quick reference</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lab/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lab/#evidence-to-keep">Evidence to keep</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Session 2: Data, Grain and the DataFrame</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../02_data_and_grain_lecture/">Lecture</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lecture/#recap-quiz">Recap quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lecture/#what-you-will-be-able-to-explain">What you will be able to explain</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lecture/#part-1-levels-of-measurement">Part 1: Levels of measurement</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lecture/#part-2-tidy-data">Part 2: Tidy data</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lecture/#part-3-grain-and-keys">Part 3: Grain and keys</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lecture/#part-4-data-dictionaries">Part 4: Data dictionaries</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lecture/#part-5-data-quality-dimensions">Part 5: Data-quality dimensions</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lecture/#part-6-worked-case-the-superstore-order-lines">Part 6: Worked case — the Superstore order lines</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lecture/#summary">Summary</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lecture/#quiz">Quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lecture/#lab-briefing">Lab briefing</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../02_data_and_grain_lab/">Lab</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lab/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lab/#how-this-lab-works">How this lab works</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lab/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lab/#guided-practice">Guided practice</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lab/#independent-tasks">Independent tasks</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lab/#challenge">Challenge</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lab/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lab/#evidence-to-keep">Evidence to keep</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lab/#after-the-lab">After the lab</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >Session 3: Cleaning and Preparing Data</a>
+    <ul class="current">
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Lecture</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#recap-quiz">Recap quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#what-you-will-be-able-to-explain">What you will be able to explain</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#part-1-raw-data-and-the-cleaning-log">Part 1: Raw data and the cleaning log</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#part-2-missing-data">Part 2: Missing data</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#part-3-duplicates">Part 3: Duplicates</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#part-4-outliers">Part 4: Outliers</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#part-5-text-numbers-dates-and-encodings">Part 5: Text, numbers, dates and encodings</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#part-6-joins-and-cardinality">Part 6: Joins and cardinality</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#part-7-reshaping">Part 7: Reshaping</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#part-8-worked-case-world-cup-attendance">Part 8: Worked case — World Cup attendance</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#summary">Summary</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#quiz">Quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#lab-briefing">Lab briefing</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../03_cleaning_and_preparing_lab/">Lab</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lab/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lab/#how-this-lab-works">How this lab works</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lab/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lab/#guided-practice">Guided practice</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lab/#independent-tasks">Independent tasks</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lab/#challenge">Challenge</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lab/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lab/#evidence-to-keep">Evidence to keep</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lab/#after-the-lab">After the lab</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Session 4: Descriptive Statistics and Distributions</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../04_descriptive_statistics_lecture/">Lecture</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lecture/#recap-quiz">Recap quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lecture/#what-you-will-be-able-to-explain">What you will be able to explain</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lecture/#part-1-the-centre-mean-median-and-mode">Part 1: The centre — mean, median and mode</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lecture/#part-2-spread-how-different-are-the-values">Part 2: Spread — how different are the values?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lecture/#part-3-shape-skew-and-long-tails">Part 3: Shape — skew and long tails</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lecture/#part-4-three-pictures-of-one-distribution">Part 4: Three pictures of one distribution</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lecture/#part-5-z-scores-and-the-normal-curve-as-a-reference">Part 5: z-scores and the normal curve as a reference</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lecture/#part-6-unusual-values-flag-do-not-delete">Part 6: Unusual values — flag, do not delete</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lecture/#part-7-worked-case-superstore-orders">Part 7: Worked case — Superstore orders</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lecture/#summary">Summary</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lecture/#quiz">Quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lecture/#lab-briefing">Lab briefing</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../04_descriptive_statistics_lab/">Lab</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lab/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lab/#how-this-lab-works">How this lab works</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lab/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lab/#guided-practice">Guided practice</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lab/#independent-tasks">Independent tasks</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lab/#challenge">Challenge</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lab/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lab/#evidence-to-keep">Evidence to keep</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lab/#after-the-lab">After the lab</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Session 5: Metrics and KPIs</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../05_metrics_and_kpis_lecture/">Lecture</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lecture/#recap-quiz">Recap quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lecture/#what-you-will-be-able-to-explain">What you will be able to explain</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lecture/#part-1-what-makes-a-good-metric">Part 1: What makes a good metric?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lecture/#part-2-metric-contracts">Part 2: Metric contracts</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lecture/#part-3-ratio-of-sums-versus-mean-of-ratios">Part 3: Ratio of sums versus mean of ratios</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lecture/#part-4-weighted-rates-in-practice">Part 4: Weighted rates in practice</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lecture/#part-5-distinct-counts-do-not-add-up">Part 5: Distinct counts do not add up</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lecture/#part-6-simpsons-paradox">Part 6: Simpson's paradox</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lecture/#part-7-goodharts-law">Part 7: Goodhart's law</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lecture/#part-8-worked-case-a-segment-kpi-table-that-reconciles">Part 8: Worked case — a segment KPI table that reconciles</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lecture/#summary">Summary</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lecture/#quiz">Quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lecture/#lab-briefing">Lab briefing</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../05_metrics_and_kpis_lab/">Lab</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lab/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lab/#how-this-lab-works">How this lab works</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lab/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lab/#guided-practice">Guided practice</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lab/#independent-tasks">Independent tasks</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lab/#challenge">Challenge</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lab/#validation-checklist">Validation checklist</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lab/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lab/#evidence-to-keep">Evidence to keep</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lab/#after-the-lab">After the lab</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Session 6: Visualisation Principles</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../06_visualisation_principles_lecture/">Lecture</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lecture/#recap-quiz">Recap quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lecture/#what-you-will-be-able-to-explain">What you will be able to explain</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lecture/#part-1-choose-the-chart-from-the-task">Part 1: Choose the chart from the task</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lecture/#part-2-how-accurately-we-read-encodings">Part 2: How accurately we read encodings</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lecture/#part-3-pre-attentive-attributes">Part 3: Pre-attentive attributes</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lecture/#part-4-data-ink-and-decluttering">Part 4: Data-ink and decluttering</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lecture/#part-5-gestalt-what-belongs-together">Part 5: Gestalt: what belongs together</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lecture/#part-6-colour-with-a-job">Part 6: Colour with a job</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lecture/#part-7-honest-axes">Part 7: Honest axes</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lecture/#part-8-message-titles-and-annotation">Part 8: Message titles and annotation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lecture/#part-9-small-multiples">Part 9: Small multiples</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lecture/#summary">Summary</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lecture/#quiz">Quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lecture/#in-the-lab">In the Lab</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../06_visualisation_principles_lab/">Lab</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lab/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lab/#how-this-lab-works">How this lab works</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lab/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Session 7: Time Series and Trends</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../07_trends_and_growth_lecture/">Lecture</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lecture/#recap-quiz">Recap quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lecture/#what-you-will-be-able-to-explain">What you will be able to explain</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lecture/#part-1-the-three-components-of-a-series">Part 1: The three components of a series</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lecture/#part-2-month-on-month-versus-year-on-year">Part 2: Month-on-month versus year-on-year</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lecture/#part-3-rolling-averages-trailing-and-centred">Part 3: Rolling averages, trailing and centred</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lecture/#part-4-index-numbers-base-100">Part 4: Index numbers (base = 100)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lecture/#part-5-seasonally-adjusted-series">Part 5: Seasonally adjusted series</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lecture/#part-6-incomplete-and-missing-periods">Part 6: Incomplete and missing periods</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lecture/#part-7-growth-after-filtering-the-trap">Part 7: Growth after filtering, the trap</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lecture/#part-8-worked-case-superstore-monthly-sales">Part 8: Worked case — Superstore monthly Sales</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lecture/#summary">Summary</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lecture/#quiz">Quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lecture/#lab-briefing">Lab briefing</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../07_trends_and_growth_lab/">Lab</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lab/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lab/#how-this-lab-works">How this lab works</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lab/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lab/#before-you-start">Before you start</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lab/#guided-practice">Guided practice</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lab/#independent-tasks">Independent tasks</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lab/#challenge">Challenge</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lab/#validation-checklist">Validation checklist</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lab/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lab/#evidence-to-keep">Evidence to keep</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lab/#after-the-lab">After the lab</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Tableau (Coming Later)</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lessons/class-01/">Tableau Lesson 1 (draft)</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#before-you-start">Before you start</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#part-1-from-request-to-question">Part 1: From request to question</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#part-2-watch-the-demonstration">Part 2: Watch the demonstration</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#part-3-guided-practice">Part 3: Guided practice</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-01/#connect-to-the-file">Connect to the file</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-01/#check-the-column-types">Check the column types</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-01/#build-a-first-chart">Build a first chart</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-01/#add-a-filter">Add a filter</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-01/#save-and-reopen">Save and reopen</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#part-4-rows-versus-orders">Part 4: Rows versus orders</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#part-5-independent-work">Part 5: Independent work</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#part-6-challenge">Part 6: Challenge</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#after-the-lesson">After the lesson</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lessons/class-02/">Tableau Lesson 2 (draft)</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#before-you-start">Before you start</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#part-1-meet-the-data-dictionary">Part 1: Meet the data dictionary</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#part-2-find-the-grain">Part 2: Find the grain</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#part-3-count-orders-correctly">Part 3: Count orders correctly</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-02/#demonstration">Demonstration</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-02/#guided-practice">Guided practice</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#part-4-what-the-returns-flag-means">Part 4: What the returns flag means</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#part-5-check-one-order-by-hand">Part 5: Check one order by hand</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#part-6-keep-a-preparation-log">Part 6: Keep a preparation log</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#part-7-independent-work">Part 7: Independent work</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#part-8-debugging-challenge">Part 8: Debugging challenge</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#after-the-lesson">After the lesson</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lessons/class-03/">Tableau Lesson 3 (draft)</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#before-you-start">Before you start</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#part-1-agree-the-measures">Part 1: Agree the measures</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#part-2-watch-the-demonstration">Part 2: Watch the demonstration</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#part-3-guided-practice-build-the-calculations">Part 3: Guided practice — build the calculations</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#part-4-guided-practice-the-segment-table">Part 4: Guided practice — the segment table</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-03/#check-that-it-reconciles">Check that it reconciles</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#part-5-independent-work">Part 5: Independent work</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-03/#a-filter-by-region">A. Filter by region</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-03/#b-look-at-a-category">B. Look at a category</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#part-6-debugging-challenge">Part 6: Debugging challenge</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#part-7-make-a-recommendation">Part 7: Make a recommendation</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#validation-checklist">Validation checklist</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#after-the-lesson">After the lesson</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lessons/class-04/">Tableau Lesson 4 (draft)</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#before-you-start">Before you start</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#part-1-the-monthly-trend">Part 1: The monthly trend</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#part-2-two-kinds-of-growth">Part 2: Two kinds of growth</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-04/#month-on-month-growth">Month-on-month growth</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-04/#year-on-year-growth">Year-on-year growth</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-04/#which-one-is-fair">Which one is fair?</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#part-3-the-returns-list">Part 3: The returns list</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#part-4-guided-practice-build-the-dashboard">Part 4: Guided practice — build the dashboard</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-04/#design-checks">Design checks</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#part-5-independent-work">Part 5: Independent work</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#part-6-debugging-challenge">Part 6: Debugging challenge</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#part-7-recommend-a-test">Part 7: Recommend a test</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#validation-checklist">Validation checklist</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#after-the-lesson">After the lesson</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../lessons/lesson-template/">Lesson Template</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#1-the-business-decision">1. The business decision</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#2-what-you-will-demonstrate">2. What you will demonstrate</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#3-before-you-start">3. Before you start</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#4-understand-the-data">4. Understand the data</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#5-agree-the-measures">5. Agree the measures</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#6-watch-a-worked-example">6. Watch a worked example</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#7-try-it-with-guidance">7. Try it with guidance</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#8-work-independently">8. Work independently</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#9-debug-a-result">9. Debug a result</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#10-make-a-recommendation">10. Make a recommendation</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#11-connection-to-the-other-tool">11. Connection to the other tool</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#12-submit-and-reflect">12. Submit and reflect</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Data Analytics</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Python Sessions</li>
+          <li class="breadcrumb-item">Session 3: Cleaning and Preparing Data</li>
+      <li class="breadcrumb-item active">Lecture</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="session-3-lecture-cleaning-and-preparing-data">Session 3 lecture: Cleaning and preparing data<a class="headerlink" href="#session-3-lecture-cleaning-and-preparing-data" title="Permanent link">&para;</a></h1>
+<p class="lead">
+Real data arrives with gaps, repeats, odd values, numbers stored as text and tables that do not quite fit together. Cleaning is not tidying up: every fix is a decision that can change the answer, so you make it deliberately and write it down.
+</p>
+
+<p><a href="https://colab.research.google.com/github/Aayush181509/AnalyticsLecture/blob/main/notebooks/03_cleaning_and_preparing_lecture.ipynb"><img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg" /></a></p>
+<p>Open this notebook in Google Colab with the button above, then run each cell from top to bottom with <strong>Shift + Enter</strong>. Save your own copy with <strong>File → Save a copy in Drive</strong>.</p>
+<hr />
+<h2 id="recap-quiz">Recap quiz<a class="headerlink" href="#recap-quiz" title="Permanent link">&para;</a></h2>
+<p>Start by answering the quiz at the end of the Session 2 lecture, <a href="../02_data_and_grain_lecture/"><code>02_data_and_grain_lecture.md</code></a>. Write your answers down before the discussion.</p>
+<hr />
+<h2 id="what-you-will-be-able-to-explain">What you will be able to explain<a class="headerlink" href="#what-you-will-be-able-to-explain" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Why the raw data is never overwritten, and what a <strong>cleaning log</strong> records.</li>
+<li>Three reasons data goes <strong>missing</strong>, and when to drop, flag or keep a missing value.</li>
+<li>The difference between a <strong>duplicate</strong> and a <strong>legitimate repeat</strong>.</li>
+<li>Why an <strong>outlier</strong> is something to investigate, not something to delete.</li>
+<li>How to turn numbers and dates stored as <strong>text</strong> into real numbers and dates, safely.</li>
+<li><strong>Join types</strong> and <strong>cardinality</strong>, and how a join can silently multiply rows.</li>
+<li>How to <strong>reshape</strong> a table between wide and long.</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Part</th>
+<th>Topic</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Raw data and the cleaning log</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Missing data</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Duplicates</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Outliers</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Text, numbers, dates and encodings</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Joins and cardinality</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Reshaping</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Worked case: World Cup attendance</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>How to use this notebook</strong></p>
+<p>When you see <strong>Predict, then reveal</strong>, write your guess first and only then run the cell. Every demonstration uses a small made-up table, so you can see the whole problem at once. The worked case at the end uses real data.</p>
+</blockquote>
+<p>Run the next cell first. It loads the libraries, sets the chart style and defines <code>fetch</code>, which downloads a file and checks it is exactly the version this lecture was written for.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">hashlib</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">io</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">urllib.request</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">fetch</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">expected_sha256</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Download a file into memory and check its SHA-256 fingerprint.&quot;&quot;&quot;</span>
+    <span class="k">with</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">url</span><span class="p">)</span> <span class="k">as</span> <span class="n">response</span><span class="p">:</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">sha256</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span> <span class="o">!=</span> <span class="n">expected_sha256</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;WARNING: this file has changed since the course was written:&quot;</span><span class="p">,</span> <span class="n">url</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Your numbers may differ from the lecture. Ask your facilitator.&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">data</span>
+
+
+<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s2">&quot;display.float_format&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="si">{:,.2f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="o">.</span><span class="n">update</span><span class="p">({</span>
+    <span class="s2">&quot;figure.figsize&quot;</span><span class="p">:</span> <span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span>
+    <span class="s2">&quot;axes.spines.top&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="s2">&quot;axes.spines.right&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="s2">&quot;axes.grid&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s2">&quot;axes.axisbelow&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s2">&quot;grid.color&quot;</span><span class="p">:</span> <span class="s2">&quot;#e6e5e1&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;axes.prop_cycle&quot;</span><span class="p">:</span> <span class="n">plt</span><span class="o">.</span><span class="n">cycler</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;#2a78d6&quot;</span><span class="p">,</span> <span class="s2">&quot;#eb6834&quot;</span><span class="p">,</span> <span class="s2">&quot;#1baf7a&quot;</span><span class="p">]),</span>
+    <span class="s2">&quot;axes.titleweight&quot;</span><span class="p">:</span> <span class="s2">&quot;bold&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;axes.titlelocation&quot;</span><span class="p">:</span> <span class="s2">&quot;left&quot;</span><span class="p">,</span>
+<span class="p">})</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Setup complete.&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Setup complete.
+</code></pre></div>
+<hr />
+<h2 id="part-1-raw-data-and-the-cleaning-log">Part 1: Raw data and the cleaning log<a class="headerlink" href="#part-1-raw-data-and-the-cleaning-log" title="Permanent link">&para;</a></h2>
+<p>Two rules come before any cleaning technique.</p>
+<ol>
+<li><strong>Never overwrite the raw data.</strong> Read the original file, clean a <strong>copy</strong> in code, and keep the original exactly as it arrived. If a decision turns out wrong, you can rerun from the start.</li>
+<li><strong>Log every change.</strong> A cleaning log records what changed, why, and how many rows or values it affected. A reader who sees your result can then see exactly how you got there.</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>What changed</th>
+<th>Why</th>
+<th>Rows before</th>
+<th>Rows after</th>
+<th>Check</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Removed exact duplicate rows</td>
+<td>Same match loaded twice</td>
+<td>…</td>
+<td>…</td>
+<td>Match count equals the official count</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Converted attendance text to numbers</td>
+<td>Stored with dots as thousands separators</td>
+<td>…</td>
+<td>…</td>
+<td>No values lost; totals plausible</td>
+</tr>
+</tbody>
+</table>
+<p>In pandas, the habit looks like this: <code>clean = raw.copy()</code>, then change <code>clean</code>, and print a row count after every step.</p>
+<blockquote>
+<p><strong>Remember</strong></p>
+<p>Cleaning code is part of the analysis. If you fix something by hand in a spreadsheet, nobody (including you next month) can repeat it.</p>
+</blockquote>
+<hr />
+<h2 id="part-2-missing-data">Part 2: Missing data<a class="headerlink" href="#part-2-missing-data" title="Permanent link">&para;</a></h2>
+<p>A blank cell is not just an empty space: <strong>why</strong> it is empty decides what you can safely do with it. There are three broad reasons.</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Plain meaning</th>
+<th>Example</th>
+<th>Risk if you just ignore the blanks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Missing completely at random</strong> (MCAR)</td>
+<td>Blanks happen by chance, unrelated to anything</td>
+<td>A scanner randomly fails on some parcels</td>
+<td>Fewer rows, but averages stay fair</td>
+</tr>
+<tr>
+<td><strong>Missing at random</strong> (MAR)</td>
+<td>Blanks depend on <strong>another</strong> column you can see</td>
+<td>One warehouse never records delivery times</td>
+<td>Averages lean towards the warehouses that do record</td>
+</tr>
+<tr>
+<td><strong>Missing not at random</strong> (MNAR)</td>
+<td>Blanks depend on the <strong>missing value itself</strong></td>
+<td>Very late deliveries are the ones nobody logs</td>
+<td>Averages are biased, and the data cannot show it</td>
+</tr>
+</tbody>
+</table>
+<p>The made-up example below has 200 deliveries. We know every true delivery time, then hide some of them in two different ways.</p>
+<div class="highlight"><pre><span></span><code><span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">default_rng</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">true_days</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">gamma</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">deliveries</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">&quot;delivery_days&quot;</span><span class="p">:</span> <span class="n">true_days</span><span class="p">})</span>
+
+<span class="c1"># MCAR: hide 25% of values purely at random.</span>
+<span class="n">random_blank</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">random</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mf">0.25</span>
+<span class="n">deliveries</span><span class="p">[</span><span class="s2">&quot;recorded_mcar&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">deliveries</span><span class="p">[</span><span class="s2">&quot;delivery_days&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mask</span><span class="p">(</span><span class="n">random_blank</span><span class="p">)</span>
+
+<span class="c1"># MNAR: the later the delivery, the more likely nobody recorded it.</span>
+<span class="n">late_blank</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">random</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span> <span class="o">&lt;</span> <span class="p">(</span><span class="n">deliveries</span><span class="p">[</span><span class="s2">&quot;delivery_days&quot;</span><span class="p">]</span> <span class="o">/</span> <span class="n">deliveries</span><span class="p">[</span><span class="s2">&quot;delivery_days&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">())</span>
+<span class="n">deliveries</span><span class="p">[</span><span class="s2">&quot;recorded_mnar&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">deliveries</span><span class="p">[</span><span class="s2">&quot;delivery_days&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mask</span><span class="p">(</span><span class="n">late_blank</span><span class="p">)</span>
+
+<span class="n">deliveries</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>delivery_days</th>
+      <th>recorded_mcar</th>
+      <th>recorded_mnar</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>11.40</td>
+      <td>11.40</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>5.10</td>
+      <td>5.10</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3.00</td>
+      <td>3.00</td>
+      <td>3.00</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.80</td>
+      <td>0.80</td>
+      <td>0.80</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2.20</td>
+      <td>2.20</td>
+      <td>2.20</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>4.60</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>3.30</td>
+      <td>3.30</td>
+      <td>3.30</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>1.90</td>
+      <td>NaN</td>
+      <td>1.90</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h3 id="predict-then-reveal">Predict, then reveal<a class="headerlink" href="#predict-then-reveal" title="Permanent link">&para;</a></h3>
+<p>Both recorded columns have some values hidden. pandas skips blanks when it computes a mean. Which recorded mean will be close to the true mean, and which will be too low?</p>
+<div class="highlight"><pre><span></span><code><span class="n">summary</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s2">&quot;values_present&quot;</span><span class="p">:</span> <span class="n">deliveries</span><span class="o">.</span><span class="n">notna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span>
+    <span class="s2">&quot;mean_days&quot;</span><span class="p">:</span> <span class="n">deliveries</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span>
+<span class="p">})</span>
+<span class="n">summary</span>
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>values_present</th>
+      <th>mean_days</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>delivery_days</th>
+      <td>200</td>
+      <td>4.79</td>
+    </tr>
+    <tr>
+      <th>recorded_mcar</th>
+      <td>143</td>
+      <td>4.65</td>
+    </tr>
+    <tr>
+      <th>recorded_mnar</th>
+      <td>132</td>
+      <td>4.00</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p>The randomly hidden column keeps a fair average, because the blanks are a random sample. The second column loses mostly the <strong>late</strong> deliveries, so its average looks better than reality, and nothing in the recorded data warns you.</p>
+<h3 id="drop-flag-or-keep">Drop, flag or keep?<a class="headerlink" href="#drop-flag-or-keep" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Choice</th>
+<th>What you do</th>
+<th>Use it when</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Drop</strong></td>
+<td>Remove rows with the blank</td>
+<td>Blanks are few and plausibly random, <strong>and</strong> you report how many you dropped</td>
+</tr>
+<tr>
+<td><strong>Flag</strong></td>
+<td>Add a column such as <code>delivery_missing = 1</code> and keep the row</td>
+<td>The fact that a value is missing is itself information</td>
+</tr>
+<tr>
+<td><strong>Keep as missing</strong></td>
+<td>Leave <code>NaN</code>, let each calculation skip it, and say so</td>
+<td>Most of the time: it is honest and reversible</td>
+</tr>
+<tr>
+<td><strong>Fill (impute)</strong></td>
+<td>Replace the blank with an estimate</td>
+<td>Only with a stated method and a reason; never silently, never with 0 unless 0 is true</td>
+</tr>
+</tbody>
+</table>
+<p>pandas makes flagging and counting easy:</p>
+<div class="highlight"><pre><span></span><code><span class="n">deliveries</span><span class="p">[</span><span class="s2">&quot;mnar_missing&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">deliveries</span><span class="p">[</span><span class="s2">&quot;recorded_mnar&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Missing values:&quot;</span><span class="p">,</span> <span class="n">deliveries</span><span class="p">[</span><span class="s2">&quot;mnar_missing&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span> <span class="s2">&quot;of&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">deliveries</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Share missing: &quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">deliveries</span><span class="p">[</span><span class="s1">&#39;mnar_missing&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="si">:</span><span class="s2">.0%</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Missing values: 68 of 200
+Share missing:  34%
+</code></pre></div>
+<blockquote>
+<p><strong>Check your understanding 1</strong></p>
+<p>A customer survey asks for household income. The income question is left blank more often by people with very high incomes. Which type of missingness is this? What happens to the average income if you simply drop the blanks, and what would you write in your report?</p>
+<p><strong>A common mistake</strong></p>
+<p>Filling blanks with <code>0</code> (<code>fillna(0)</code>) turns "we do not know" into "it was zero". A missing sales figure is not zero sales, and a missing delivery time is not a same-day delivery.</p>
+</blockquote>
+<hr />
+<h2 id="part-3-duplicates">Part 3: Duplicates<a class="headerlink" href="#part-3-duplicates" title="Permanent link">&para;</a></h2>
+<p>A <strong>duplicate</strong> is the same real-world event recorded more than once: a file loaded twice, a form submitted twice. A <strong>legitimate repeat</strong> is two real events that happen to look alike: a customer who really did buy the same item twice on one day.</p>
+<p>The difference is <strong>not</strong> visible from the values alone. You decide using the grain and the keys from Session 2.</p>
+<div class="highlight"><pre><span></span><code><span class="n">lines</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s2">&quot;line_id&quot;</span><span class="p">:</span>  <span class="p">[</span><span class="mi">101</span><span class="p">,</span> <span class="mi">102</span><span class="p">,</span> <span class="mi">103</span><span class="p">,</span> <span class="mi">103</span><span class="p">,</span> <span class="mi">104</span><span class="p">],</span>
+    <span class="s2">&quot;order_id&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;A1&quot;</span><span class="p">,</span> <span class="s2">&quot;A1&quot;</span><span class="p">,</span> <span class="s2">&quot;A2&quot;</span><span class="p">,</span> <span class="s2">&quot;A2&quot;</span><span class="p">,</span> <span class="s2">&quot;A3&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;product&quot;</span><span class="p">:</span>  <span class="p">[</span><span class="s2">&quot;Pen&quot;</span><span class="p">,</span> <span class="s2">&quot;Pen&quot;</span><span class="p">,</span> <span class="s2">&quot;Desk&quot;</span><span class="p">,</span> <span class="s2">&quot;Desk&quot;</span><span class="p">,</span> <span class="s2">&quot;Lamp&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;quantity&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
+<span class="p">})</span>
+<span class="n">lines</span>
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>line_id</th>
+      <th>order_id</th>
+      <th>product</th>
+      <th>quantity</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>101</td>
+      <td>A1</td>
+      <td>Pen</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>102</td>
+      <td>A1</td>
+      <td>Pen</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>103</td>
+      <td>A2</td>
+      <td>Desk</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>103</td>
+      <td>A2</td>
+      <td>Desk</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>104</td>
+      <td>A3</td>
+      <td>Lamp</td>
+      <td>2</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h3 id="predict-then-reveal_1">Predict, then reveal<a class="headerlink" href="#predict-then-reveal_1" title="Permanent link">&para;</a></h3>
+<p>How many rows does <code>duplicated()</code> mark, and are they all mistakes? Look at <code>line_id</code> and <code>order_id</code> before you run the cell.</p>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Exact duplicate rows:        &quot;</span><span class="p">,</span> <span class="n">lines</span><span class="o">.</span><span class="n">duplicated</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Repeats ignoring line_id:    &quot;</span><span class="p">,</span> <span class="n">lines</span><span class="o">.</span><span class="n">duplicated</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;order_id&quot;</span><span class="p">,</span> <span class="s2">&quot;product&quot;</span><span class="p">,</span> <span class="s2">&quot;quantity&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+<span class="n">lines</span><span class="p">[</span><span class="n">lines</span><span class="o">.</span><span class="n">duplicated</span><span class="p">(</span><span class="n">keep</span><span class="o">=</span><span class="kc">False</span><span class="p">)]</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Exact duplicate rows:         1
+Repeats ignoring line_id:     2
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>line_id</th>
+      <th>order_id</th>
+      <th>product</th>
+      <th>quantity</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2</th>
+      <td>103</td>
+      <td>A2</td>
+      <td>Desk</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>103</td>
+      <td>A2</td>
+      <td>Desk</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<ul>
+<li>Line <strong>103</strong> appears twice with <strong>every</strong> value equal, including its own key. That is a true duplicate: the same line loaded twice. Remove one copy.</li>
+<li>Lines <strong>101</strong> and <strong>102</strong> share the order and product but have <strong>different line IDs</strong>. Two pens on two lines is a legitimate repeat. Removing one would lose a real sale.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Check</th>
+<th>pandas</th>
+<th>What it finds</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Exact duplicate rows</td>
+<td><code>df.duplicated()</code></td>
+<td>Rows equal in every column</td>
+</tr>
+<tr>
+<td>Repeats on chosen columns</td>
+<td><code>df.duplicated(subset=[...])</code></td>
+<td>Rows equal on the columns that define one real event</td>
+</tr>
+<tr>
+<td>Is the key unique?</td>
+<td><code>df["key"].is_unique</code></td>
+<td>Whether the primary key can be trusted</td>
+</tr>
+<tr>
+<td>Show all copies</td>
+<td><code>df[df.duplicated(keep=False)]</code></td>
+<td>Both the first copy and its repeats, to inspect</td>
+</tr>
+<tr>
+<td>Remove exact duplicates</td>
+<td><code>df.drop_duplicates()</code></td>
+<td>Keeps the first copy of each</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Check your understanding 2</strong></p>
+<p>A payments table has two rows with the same customer, amount and date, but different <code>payment_id</code> values. Are they duplicates? What extra information would you look for before deciding?</p>
+</blockquote>
+<hr />
+<h2 id="part-4-outliers">Part 4: Outliers<a class="headerlink" href="#part-4-outliers" title="Permanent link">&para;</a></h2>
+<p>An <strong>outlier</strong> is a value far from the rest. Some are <strong>errors</strong> (a typing slip adds a zero). Some are <strong>real and important</strong> (one huge corporate order). Detecting an outlier is mechanical; deciding what it means is not.</p>
+<p>A common rule flags values more than 1.5 × IQR beyond the quartiles. The <strong>IQR</strong> (interquartile range) is the distance between the 25th and 75th percentiles; you will meet it properly in Session 4.</p>
+<div class="highlight"><pre><span></span><code><span class="n">order_values</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span>
+    <span class="p">[</span><span class="mi">42</span><span class="p">,</span> <span class="mi">55</span><span class="p">,</span> <span class="mi">38</span><span class="p">,</span> <span class="mi">61</span><span class="p">,</span> <span class="mi">47</span><span class="p">,</span> <span class="mi">53</span><span class="p">,</span> <span class="mi">49</span><span class="p">,</span> <span class="mi">58</span><span class="p">,</span> <span class="mi">44</span><span class="p">,</span> <span class="mi">51</span><span class="p">,</span> <span class="mi">4900</span><span class="p">,</span> <span class="mi">1250</span><span class="p">],</span>
+    <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;O</span><span class="si">{</span><span class="n">i</span><span class="si">:</span><span class="s2">02d</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">13</span><span class="p">)],</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;order_value&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">q1</span><span class="p">,</span> <span class="n">q3</span> <span class="o">=</span> <span class="n">order_values</span><span class="o">.</span><span class="n">quantile</span><span class="p">([</span><span class="mf">0.25</span><span class="p">,</span> <span class="mf">0.75</span><span class="p">])</span>
+<span class="n">iqr</span> <span class="o">=</span> <span class="n">q3</span> <span class="o">-</span> <span class="n">q1</span>
+<span class="n">low</span><span class="p">,</span> <span class="n">high</span> <span class="o">=</span> <span class="n">q1</span> <span class="o">-</span> <span class="mf">1.5</span> <span class="o">*</span> <span class="n">iqr</span><span class="p">,</span> <span class="n">q3</span> <span class="o">+</span> <span class="mf">1.5</span> <span class="o">*</span> <span class="n">iqr</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Flag values below </span><span class="si">{</span><span class="n">low</span><span class="si">:</span><span class="s2">,.1f</span><span class="si">}</span><span class="s2"> or above </span><span class="si">{</span><span class="n">high</span><span class="si">:</span><span class="s2">,.1f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">order_values</span><span class="p">[(</span><span class="n">order_values</span> <span class="o">&lt;</span> <span class="n">low</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">order_values</span> <span class="o">&gt;</span> <span class="n">high</span><span class="p">)]</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Flag values below 27.5 or above 77.5
+
+
+
+
+
+O11    4900
+O12    1250
+Name: order_value, dtype: int64
+</code></pre></div>
+<h3 id="predict-then-reveal_2">Predict, then reveal<a class="headerlink" href="#predict-then-reveal_2" title="Permanent link">&para;</a></h3>
+<p>Two orders are flagged. Suppose a check with the sales team shows that <strong>O11</strong> was typed as 4900 instead of 49.00, and <strong>O12</strong> is a genuine bulk order from a school. What happens to the average if you delete both, and what if you fix only the error?</p>
+<div class="highlight"><pre><span></span><code><span class="n">fixed</span> <span class="o">=</span> <span class="n">order_values</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">fixed</span><span class="p">[</span><span class="s2">&quot;O11&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">49.00</span>  <span class="c1"># confirmed typing error, corrected with a logged reason</span>
+
+<span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">({</span>
+    <span class="s2">&quot;Average, raw&quot;</span><span class="p">:</span> <span class="n">order_values</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span>
+    <span class="s2">&quot;Average, both outliers deleted&quot;</span><span class="p">:</span> <span class="n">order_values</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s2">&quot;O11&quot;</span><span class="p">,</span> <span class="s2">&quot;O12&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span>
+    <span class="s2">&quot;Average, error fixed, real order kept&quot;</span><span class="p">:</span> <span class="n">fixed</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span>
+    <span class="s2">&quot;Median, raw&quot;</span><span class="p">:</span> <span class="n">order_values</span><span class="o">.</span><span class="n">median</span><span class="p">(),</span>
+<span class="p">})</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Average, raw                            554.00
+Average, both outliers deleted           49.80
+Average, error fixed, real order kept   149.75
+Median, raw                              52.00
+dtype: float64
+</code></pre></div>
+<p>Deleting both outliers hides a real customer and understates the business. Fixing only the confirmed error gives the honest figure. Notice also that the <strong>median</strong> hardly moves: it resists extreme values, which is why it suits skewed data (Session 4).</p>
+<table>
+<thead>
+<tr>
+<th>Situation</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Confirmed error with a known correct value</td>
+<td>Fix it, log the old and new value and the evidence</td>
+</tr>
+<tr>
+<td>Impossible value (negative age, date in the future) and no correction available</td>
+<td>Set to missing and flag it</td>
+</tr>
+<tr>
+<td>Real but extreme</td>
+<td>Keep it; consider reporting the median too, or showing results with and without it</td>
+</tr>
+<tr>
+<td>Not sure</td>
+<td>Keep it, flag it, and ask the data owner</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Check your understanding 3</strong></p>
+<p>A shipping table has one shipment that took 210 days. Give one explanation that makes it an error and one that makes it real. What would you do before your report goes out?</p>
+</blockquote>
+<hr />
+<h2 id="part-5-text-numbers-dates-and-encodings">Part 5: Text, numbers, dates and encodings<a class="headerlink" href="#part-5-text-numbers-dates-and-encodings" title="Permanent link">&para;</a></h2>
+<p>Files often store numbers and dates as <strong>text</strong>. pandas then cannot add them up, sort them correctly or compare them with dates.</p>
+<h3 id="numbers-with-thousands-separators">Numbers with thousands separators<a class="headerlink" href="#numbers-with-thousands-separators" title="Permanent link">&para;</a></h3>
+<p>Many countries write one million and a half as <strong>1.500.000</strong> and use the comma for decimals. Python reads a dot as a decimal point.</p>
+<div class="highlight"><pre><span></span><code><span class="n">attendance_text</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="s2">&quot;590.549&quot;</span><span class="p">,</span> <span class="s2">&quot;1.045.246&quot;</span><span class="p">,</span> <span class="s2">&quot;363.000&quot;</span><span class="p">,</span> <span class="s2">&quot;819.810&quot;</span><span class="p">],</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;attendance&quot;</span><span class="p">)</span>
+
+<span class="n">naive</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">attendance_text</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="s2">&quot;coerce&quot;</span><span class="p">)</span>
+<span class="n">careful</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">attendance_text</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">regex</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+
+<span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">&quot;text&quot;</span><span class="p">:</span> <span class="n">attendance_text</span><span class="p">,</span> <span class="s2">&quot;naive&quot;</span><span class="p">:</span> <span class="n">naive</span><span class="p">,</span> <span class="s2">&quot;careful&quot;</span><span class="p">:</span> <span class="n">careful</span><span class="p">})</span>
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>text</th>
+      <th>naive</th>
+      <th>careful</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>590.549</td>
+      <td>590.55</td>
+      <td>590549</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1.045.246</td>
+      <td>NaN</td>
+      <td>1045246</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>363.000</td>
+      <td>363.00</td>
+      <td>363000</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>819.810</td>
+      <td>819.81</td>
+      <td>819810</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h3 id="predict-then-reveal-look-at-the-output-above">Predict, then reveal (look at the output above)<a class="headerlink" href="#predict-then-reveal-look-at-the-output-above" title="Permanent link">&para;</a></h3>
+<ul>
+<li>The <strong>naive</strong> conversion reads <code>590.549</code> as five hundred and ninety, and it cannot read <code>1.045.246</code> at all, so <code>errors="coerce"</code> silently turned it into <code>NaN</code>.</li>
+<li>The <strong>careful</strong> version removes the dots first, so every value becomes a whole number.</li>
+</ul>
+<p><code>errors="coerce"</code> is useful, but always count how many values became <code>NaN</code>: each one is a value you just lost.</p>
+<h3 id="dates-written-as-text">Dates written as text<a class="headerlink" href="#dates-written-as-text" title="Permanent link">&para;</a></h3>
+<p><code>03/04/2024</code> is the 3rd of April in most of the world and March 4th in the United States. Tell pandas the format instead of letting it guess.</p>
+<div class="highlight"><pre><span></span><code><span class="n">date_text</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="s2">&quot;03/04/2024&quot;</span><span class="p">,</span> <span class="s2">&quot;15/04/2024&quot;</span><span class="p">,</span> <span class="s2">&quot;28/02/2024&quot;</span><span class="p">])</span>
+
+<span class="n">day_first</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">date_text</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">%d</span><span class="s2">/%m/%Y&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">day_first</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%d</span><span class="s2"> %B %Y&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">tolist</span><span class="p">())</span>
+
+<span class="n">month_first</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">date_text</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;%m/</span><span class="si">%d</span><span class="s2">/%Y&quot;</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="s2">&quot;coerce&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Values that fail as month/day/year:&quot;</span><span class="p">,</span> <span class="n">month_first</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>[&#39;03 April 2024&#39;, &#39;15 April 2024&#39;, &#39;28 February 2024&#39;]
+Values that fail as month/day/year: 2
+</code></pre></div>
+<h3 id="encodings-and-stray-spaces">Encodings and stray spaces<a class="headerlink" href="#encodings-and-stray-spaces" title="Permanent link">&para;</a></h3>
+<p>Text is stored as bytes, and the <strong>encoding</strong> says how to turn bytes into letters. When a file is saved in one encoding and read in another, letters such as <strong>ô</strong> or <strong>é</strong> come out as strange symbols. If the symbol is the Unicode replacement character, the original letter is <strong>lost</strong>: you can only restore it from outside knowledge.</p>
+<p>Invisible spaces cause a quieter problem: <code>"Paris "</code> and <code>"Paris"</code> look identical on screen but count as two different cities.</p>
+<div class="highlight"><pre><span></span><code><span class="n">cities</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="s2">&quot;Paris&quot;</span><span class="p">,</span> <span class="s2">&quot;Paris &quot;</span><span class="p">,</span> <span class="s2">&quot; Lyon&quot;</span><span class="p">,</span> <span class="s2">&quot;Lyon&quot;</span><span class="p">,</span> <span class="s2">&quot;Malm</span><span class="se">\ufffd</span><span class="s2">&quot;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Different values before strip:&quot;</span><span class="p">,</span> <span class="n">cities</span><span class="o">.</span><span class="n">nunique</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Different values after strip: &quot;</span><span class="p">,</span> <span class="n">cities</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">nunique</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Values containing the replacement character:&quot;</span><span class="p">,</span> <span class="n">cities</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\ufffd</span><span class="s2">&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Different values before strip: 5
+Different values after strip:  3
+Values containing the replacement character: 1
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Problem</th>
+<th>Detect</th>
+<th>Fix</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Numbers stored as text</td>
+<td><code>df.dtypes</code> shows <code>object</code></td>
+<td><code>pd.to_numeric</code>, after removing separators; count new <code>NaN</code>s</td>
+</tr>
+<tr>
+<td>Dates stored as text</td>
+<td><code>object</code> type; odd sorting</td>
+<td><code>pd.to_datetime(..., format=...)</code></td>
+</tr>
+<tr>
+<td>Leading or trailing spaces</td>
+<td><code>(s != s.str.strip()).sum()</code></td>
+<td><code>s.str.strip()</code></td>
+</tr>
+<tr>
+<td>Broken characters</td>
+<td><code>s.str.contains("\ufffd")</code></td>
+<td>Flag; correct from a trusted list, never by guessing</td>
+</tr>
+<tr>
+<td>Different spellings of one thing</td>
+<td><code>value_counts()</code></td>
+<td>A documented mapping, e.g. <code>{"IR Iran": "Iran"}</code></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Check your understanding 4</strong></p>
+<p>After <code>pd.to_numeric(..., errors="coerce")</code> a column of 5,000 prices has 37 <code>NaN</code> values that were not there before. What do you do next, and what goes in the cleaning log?</p>
+</blockquote>
+<hr />
+<h2 id="part-6-joins-and-cardinality">Part 6: Joins and cardinality<a class="headerlink" href="#part-6-joins-and-cardinality" title="Permanent link">&para;</a></h2>
+<p>A <strong>join</strong> (<code>merge</code> in pandas) puts columns from two tables side by side by matching a key. Two choices decide the result.</p>
+<p><strong>1. Which rows to keep (<code>how</code>)</strong></p>
+<table>
+<thead>
+<tr>
+<th><code>how=</code></th>
+<th>Keeps</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>"inner"</code></td>
+<td>Only keys found in <strong>both</strong> tables</td>
+</tr>
+<tr>
+<td><code>"left"</code></td>
+<td>Every row of the left table; blanks where the right has no match</td>
+</tr>
+<tr>
+<td><code>"right"</code></td>
+<td>Every row of the right table</td>
+</tr>
+<tr>
+<td><code>"outer"</code></td>
+<td>Every key from either table</td>
+</tr>
+</tbody>
+</table>
+<p><strong>2. Cardinality: how many matches each key has</strong></p>
+<table>
+<thead>
+<tr>
+<th>Cardinality</th>
+<th>Meaning</th>
+<th>Example</th>
+<th>Row count after a left join</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>One-to-one</strong></td>
+<td>Each key once on both sides</td>
+<td>Employee ↔ employee contract</td>
+<td>Unchanged</td>
+</tr>
+<tr>
+<td><strong>Many-to-one</strong></td>
+<td>Many left rows share one right row</td>
+<td>Order lines → region manager</td>
+<td>Unchanged</td>
+</tr>
+<tr>
+<td><strong>One-to-many</strong></td>
+<td>One left row matches many right rows</td>
+<td>Order → its lines</td>
+<td><strong>Grows</strong></td>
+</tr>
+<tr>
+<td><strong>Many-to-many</strong></td>
+<td>Keys repeat on both sides</td>
+<td>Orders by region × campaigns by region</td>
+<td><strong>Multiplies</strong></td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code><span class="n">orders</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s2">&quot;order_id&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;A1&quot;</span><span class="p">,</span> <span class="s2">&quot;A2&quot;</span><span class="p">,</span> <span class="s2">&quot;A3&quot;</span><span class="p">,</span> <span class="s2">&quot;A4&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;region&quot;</span><span class="p">:</span>   <span class="p">[</span><span class="s2">&quot;North&quot;</span><span class="p">,</span> <span class="s2">&quot;North&quot;</span><span class="p">,</span> <span class="s2">&quot;South&quot;</span><span class="p">,</span> <span class="s2">&quot;East&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;sales&quot;</span><span class="p">:</span>    <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">250</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">120</span><span class="p">],</span>
+<span class="p">})</span>
+<span class="n">managers</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s2">&quot;region&quot;</span><span class="p">:</span>  <span class="p">[</span><span class="s2">&quot;North&quot;</span><span class="p">,</span> <span class="s2">&quot;South&quot;</span><span class="p">,</span> <span class="s2">&quot;West&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;manager&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Asha&quot;</span><span class="p">,</span> <span class="s2">&quot;Ben&quot;</span><span class="p">,</span> <span class="s2">&quot;Chen&quot;</span><span class="p">],</span>
+<span class="p">})</span>
+
+<span class="n">joined</span> <span class="o">=</span> <span class="n">orders</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">managers</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s2">&quot;region&quot;</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s2">&quot;left&quot;</span><span class="p">,</span> <span class="n">validate</span><span class="o">=</span><span class="s2">&quot;many_to_one&quot;</span><span class="p">,</span> <span class="n">indicator</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Rows before:&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">orders</span><span class="p">),</span> <span class="s2">&quot;| rows after:&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">joined</span><span class="p">))</span>
+<span class="n">joined</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Rows before: 4 | rows after: 4
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>order_id</th>
+      <th>region</th>
+      <th>sales</th>
+      <th>manager</th>
+      <th>_merge</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>A1</td>
+      <td>North</td>
+      <td>100</td>
+      <td>Asha</td>
+      <td>both</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>A2</td>
+      <td>North</td>
+      <td>250</td>
+      <td>Asha</td>
+      <td>both</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>A3</td>
+      <td>South</td>
+      <td>80</td>
+      <td>Ben</td>
+      <td>both</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>A4</td>
+      <td>East</td>
+      <td>120</td>
+      <td>NaN</td>
+      <td>left_only</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p><code>indicator=True</code> adds a <code>_merge</code> column showing where each row found a match: <strong>East</strong> has no manager (<code>left_only</code>), and the manager for <strong>West</strong> has no orders, so that row does not appear in a left join. <code>validate="many_to_one"</code> makes pandas <strong>check</strong> that each region appears only once in <code>managers</code>.</p>
+<h3 id="predict-then-reveal-the-row-explosion">Predict, then reveal: the row explosion<a class="headerlink" href="#predict-then-reveal-the-row-explosion" title="Permanent link">&para;</a></h3>
+<p>North changed manager during the year, so someone adds a second North row to the managers table. Sales are then totalled from the joined table. What happens to total Sales?</p>
+<div class="highlight"><pre><span></span><code><span class="n">managers_history</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s2">&quot;region&quot;</span><span class="p">:</span>  <span class="p">[</span><span class="s2">&quot;North&quot;</span><span class="p">,</span> <span class="s2">&quot;North&quot;</span><span class="p">,</span> <span class="s2">&quot;South&quot;</span><span class="p">,</span> <span class="s2">&quot;West&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;manager&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Asha&quot;</span><span class="p">,</span> <span class="s2">&quot;Dev&quot;</span><span class="p">,</span> <span class="s2">&quot;Ben&quot;</span><span class="p">,</span> <span class="s2">&quot;Chen&quot;</span><span class="p">],</span>
+<span class="p">})</span>
+
+<span class="n">exploded</span> <span class="o">=</span> <span class="n">orders</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">managers_history</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s2">&quot;region&quot;</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s2">&quot;left&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Rows before:&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">orders</span><span class="p">),</span> <span class="s2">&quot;| rows after:&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">exploded</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Total sales before the join:&quot;</span><span class="p">,</span> <span class="n">orders</span><span class="p">[</span><span class="s2">&quot;sales&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Total sales after the join: &quot;</span><span class="p">,</span> <span class="n">exploded</span><span class="p">[</span><span class="s2">&quot;sales&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Rows before: 4 | rows after: 6
+Total sales before the join: 550
+Total sales after the join:  900
+</code></pre></div>
+<p>Each North order now matches <strong>two</strong> manager rows, so it appears twice and its sales are counted twice. No error appears. This is the most common way joins go wrong.</p>
+<p><code>validate</code> turns the silent mistake into a loud one:</p>
+<div class="highlight"><pre><span></span><code><span class="k">try</span><span class="p">:</span>
+    <span class="n">orders</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">managers_history</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s2">&quot;region&quot;</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s2">&quot;left&quot;</span><span class="p">,</span> <span class="n">validate</span><span class="o">=</span><span class="s2">&quot;many_to_one&quot;</span><span class="p">)</span>
+<span class="k">except</span> <span class="n">pd</span><span class="o">.</span><span class="n">errors</span><span class="o">.</span><span class="n">MergeError</span> <span class="k">as</span> <span class="n">problem</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;MergeError:&quot;</span><span class="p">,</span> <span class="n">problem</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>MergeError: Merge keys are not unique in right dataset; not a many-to-one merge
+</code></pre></div>
+<blockquote>
+<p><strong>Remember: three checks for every join</strong></p>
+<ol>
+<li>Before: is the key unique on the side that should be unique? (<code>df["key"].is_unique</code>)</li>
+<li>During: <code>validate=</code> with the cardinality you expect, and <code>indicator=True</code> to see unmatched rows.</li>
+<li>After: compare row counts and one total (such as Sales) before and after.</li>
+</ol>
+<p><strong>Check your understanding 5</strong></p>
+<p>You left-join 6,000 order lines to a product table on <code>product_id</code> and get 6,240 rows. What does that tell you about the product table? Which <code>validate</code> value would have caught it?</p>
+</blockquote>
+<hr />
+<h2 id="part-7-reshaping">Part 7: Reshaping<a class="headerlink" href="#part-7-reshaping" title="Permanent link">&para;</a></h2>
+<p>The same numbers can be laid out <strong>wide</strong> (one column per month, easy to read) or <strong>long</strong> (one row per item per month, easy to filter, group and chart). Session 2 called the long layout <strong>tidy</strong>.</p>
+<div class="highlight"><pre><span></span><code><span class="n">wide</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s2">&quot;store&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Central&quot;</span><span class="p">,</span> <span class="s2">&quot;Harbour&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;Jan&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">120</span><span class="p">,</span> <span class="mi">95</span><span class="p">],</span>
+    <span class="s2">&quot;Feb&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">130</span><span class="p">,</span> <span class="mi">101</span><span class="p">],</span>
+    <span class="s2">&quot;Mar&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">125</span><span class="p">,</span> <span class="mi">110</span><span class="p">],</span>
+<span class="p">})</span>
+<span class="n">long</span> <span class="o">=</span> <span class="n">wide</span><span class="o">.</span><span class="n">melt</span><span class="p">(</span><span class="n">id_vars</span><span class="o">=</span><span class="s2">&quot;store&quot;</span><span class="p">,</span> <span class="n">var_name</span><span class="o">=</span><span class="s2">&quot;month&quot;</span><span class="p">,</span> <span class="n">value_name</span><span class="o">=</span><span class="s2">&quot;sales&quot;</span><span class="p">)</span>
+<span class="n">long</span>
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>store</th>
+      <th>month</th>
+      <th>sales</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Central</td>
+      <td>Jan</td>
+      <td>120</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Harbour</td>
+      <td>Jan</td>
+      <td>95</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Central</td>
+      <td>Feb</td>
+      <td>130</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Harbour</td>
+      <td>Feb</td>
+      <td>101</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Central</td>
+      <td>Mar</td>
+      <td>125</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Harbour</td>
+      <td>Mar</td>
+      <td>110</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="highlight"><pre><span></span><code><span class="n">back_to_wide</span> <span class="o">=</span> <span class="n">long</span><span class="o">.</span><span class="n">pivot</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="s2">&quot;store&quot;</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="s2">&quot;month&quot;</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="s2">&quot;sales&quot;</span><span class="p">)[[</span><span class="s2">&quot;Jan&quot;</span><span class="p">,</span> <span class="s2">&quot;Feb&quot;</span><span class="p">,</span> <span class="s2">&quot;Mar&quot;</span><span class="p">]]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Same total before and after reshaping:&quot;</span><span class="p">,</span> <span class="n">wide</span><span class="p">[[</span><span class="s2">&quot;Jan&quot;</span><span class="p">,</span> <span class="s2">&quot;Feb&quot;</span><span class="p">,</span> <span class="s2">&quot;Mar&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">==</span> <span class="n">back_to_wide</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+<span class="n">back_to_wide</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Same total before and after reshaping: True
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>month</th>
+      <th>Jan</th>
+      <th>Feb</th>
+      <th>Mar</th>
+    </tr>
+    <tr>
+      <th>store</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Central</th>
+      <td>120</td>
+      <td>130</td>
+      <td>125</td>
+    </tr>
+    <tr>
+      <th>Harbour</th>
+      <td>95</td>
+      <td>101</td>
+      <td>110</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Direction</th>
+<th>Typical use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>melt</code></td>
+<td>wide → long</td>
+<td>Columns that are really values of a variable (months, years, products)</td>
+</tr>
+<tr>
+<td><code>pivot</code></td>
+<td>long → wide</td>
+<td>A readable table for a report</td>
+</tr>
+<tr>
+<td><code>pivot_table</code></td>
+<td>long → wide, with a summary</td>
+<td>When pairs repeat and need adding up</td>
+</tr>
+</tbody>
+</table>
+<p>A quick total before and after reshaping catches lost or duplicated values.</p>
+<blockquote>
+<p><strong>Check your understanding 6</strong></p>
+<p><code>long.pivot(...)</code> raises an error saying the index contains duplicate entries. What does that tell you about the long table, and which function would you use instead?</p>
+</blockquote>
+<hr />
+<h2 id="part-8-worked-case-world-cup-attendance">Part 8: Worked case — World Cup attendance<a class="headerlink" href="#part-8-worked-case-world-cup-attendance" title="Permanent link">&para;</a></h2>
+<p>The <strong>World Cup results</strong> workbook from Tableau's sample-data page has a sheet called <code>WorldCups</code>, with one row per tournament since 1930. We want total attendance per tournament.</p>
+<blockquote>
+<p><strong>About the data</strong></p>
+<p>The workbook was compiled for <em>Sports Viz Sundays 2018</em> and is published in Tableau's sample-data catalog. We download it from that source for learning; we do not redistribute it, and the course does not claim a licence for it.</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="n">WORLD_CUP_URL</span> <span class="o">=</span> <span class="s2">&quot;https://public.tableau.com/app/sample-data/world_cup_results.xlsx&quot;</span>
+<span class="n">WORLD_CUP_SHA256</span> <span class="o">=</span> <span class="s2">&quot;dbad641c16c914c14fef0c95bf6f918fa5d2746671e4dc269b6a1ec3e2a3cc45&quot;</span>
+
+<span class="n">world_cup_bytes</span> <span class="o">=</span> <span class="n">fetch</span><span class="p">(</span><span class="n">WORLD_CUP_URL</span><span class="p">,</span> <span class="n">WORLD_CUP_SHA256</span><span class="p">)</span>
+<span class="n">cups</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">io</span><span class="o">.</span><span class="n">BytesIO</span><span class="p">(</span><span class="n">world_cup_bytes</span><span class="p">),</span> <span class="n">sheet_name</span><span class="o">=</span><span class="s2">&quot;WorldCups&quot;</span><span class="p">)</span>
+<span class="n">cups</span><span class="p">[[</span><span class="s2">&quot;Year&quot;</span><span class="p">,</span> <span class="s2">&quot;Country&quot;</span><span class="p">,</span> <span class="s2">&quot;MatchesPlayed&quot;</span><span class="p">,</span> <span class="s2">&quot;Attendance&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Year</th>
+      <th>Country</th>
+      <th>MatchesPlayed</th>
+      <th>Attendance</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1930</td>
+      <td>Uruguay</td>
+      <td>18</td>
+      <td>590.55</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1934</td>
+      <td>Italy</td>
+      <td>17</td>
+      <td>363</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1938</td>
+      <td>France</td>
+      <td>18</td>
+      <td>375.70</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1950</td>
+      <td>Brazil</td>
+      <td>22</td>
+      <td>1.045.246</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1954</td>
+      <td>Switzerland</td>
+      <td>26</td>
+      <td>768.61</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>1958</td>
+      <td>Sweden</td>
+      <td>35</td>
+      <td>819.81</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>1962</td>
+      <td>Chile</td>
+      <td>32</td>
+      <td>893.17</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>1966</td>
+      <td>England</td>
+      <td>32</td>
+      <td>1.563.135</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h3 id="step-1-profile-the-column">Step 1: Profile the column<a class="headerlink" href="#step-1-profile-the-column" title="Permanent link">&para;</a></h3>
+<p>The <code>Attendance</code> values look like numbers with dots. Check what Python actually stored in each cell.</p>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Column type:&quot;</span><span class="p">,</span> <span class="n">cups</span><span class="p">[</span><span class="s2">&quot;Attendance&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>
+<span class="n">cups</span><span class="p">[</span><span class="s2">&quot;Attendance&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">value</span><span class="p">:</span> <span class="nb">type</span><span class="p">(</span><span class="n">value</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Column type: object
+
+
+
+
+
+Attendance
+str      14
+float     5
+int       1
+Name: count, dtype: int64
+</code></pre></div>
+<p>The column mixes <strong>text</strong> and <strong>numbers</strong>. Excel stored the big values (two dots) as text, but read values with one dot as <strong>decimal numbers</strong>: <code>590.549</code> became five hundred and ninety point five (pandas shows it rounded as <code>590.55</code>), and <code>375.700</code> lost its trailing zeros to become <code>375.7</code>.</p>
+<h3 id="step-2-predict-then-reveal">Step 2: Predict, then reveal<a class="headerlink" href="#step-2-predict-then-reveal" title="Permanent link">&para;</a></h3>
+<p>If you just convert the column with <code>pd.to_numeric</code>, what will the 1930 value be, and how many values will fail?</p>
+<div class="highlight"><pre><span></span><code><span class="n">naive</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">cups</span><span class="p">[</span><span class="s2">&quot;Attendance&quot;</span><span class="p">],</span> <span class="n">errors</span><span class="o">=</span><span class="s2">&quot;coerce&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Values that failed:&quot;</span><span class="p">,</span> <span class="n">naive</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span> <span class="s2">&quot;of&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">cups</span><span class="p">))</span>
+<span class="n">naive</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Values that failed: 14 of 20
+
+
+
+
+
+0   590.55
+1   363.00
+2   375.70
+3      NaN
+Name: Attendance, dtype: float64
+</code></pre></div>
+<h3 id="step-3-a-careful-conversion">Step 3: A careful conversion<a class="headerlink" href="#step-3-a-careful-conversion" title="Permanent link">&para;</a></h3>
+<p>Each kind of cell needs its own rule:</p>
+<ul>
+<li><strong>Text</strong> such as <code>"1.045.246"</code>: remove the dots.</li>
+<li><strong>Numbers</strong> such as <code>590.549</code> or <code>375.7</code>: these were thousands, so multiply by 1,000 and round.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">parse_attendance</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">value</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">))</span>
+    <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">value</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">))</span>
+
+
+<span class="n">cups</span><span class="p">[</span><span class="s2">&quot;attendance&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">cups</span><span class="p">[</span><span class="s2">&quot;Attendance&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">parse_attendance</span><span class="p">)</span>
+<span class="n">cups</span><span class="p">[</span><span class="s2">&quot;attendance_per_match&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">cups</span><span class="p">[</span><span class="s2">&quot;attendance&quot;</span><span class="p">]</span> <span class="o">/</span> <span class="n">cups</span><span class="p">[</span><span class="s2">&quot;MatchesPlayed&quot;</span><span class="p">]</span>
+<span class="n">cups</span><span class="p">[[</span><span class="s2">&quot;Year&quot;</span><span class="p">,</span> <span class="s2">&quot;Attendance&quot;</span><span class="p">,</span> <span class="s2">&quot;attendance&quot;</span><span class="p">,</span> <span class="s2">&quot;attendance_per_match&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Year</th>
+      <th>Attendance</th>
+      <th>attendance</th>
+      <th>attendance_per_match</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1930</td>
+      <td>590.55</td>
+      <td>590549</td>
+      <td>32,808.28</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1934</td>
+      <td>363</td>
+      <td>363000</td>
+      <td>21,352.94</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1938</td>
+      <td>375.70</td>
+      <td>375700</td>
+      <td>20,872.22</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1950</td>
+      <td>1.045.246</td>
+      <td>1045246</td>
+      <td>47,511.18</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1954</td>
+      <td>768.61</td>
+      <td>768607</td>
+      <td>29,561.81</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>1958</td>
+      <td>819.81</td>
+      <td>819810</td>
+      <td>23,423.14</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>1962</td>
+      <td>893.17</td>
+      <td>893172</td>
+      <td>27,911.62</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>1966</td>
+      <td>1.563.135</td>
+      <td>1563135</td>
+      <td>48,847.97</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h3 id="step-4-check-the-result-is-plausible">Step 4: Check the result is plausible<a class="headerlink" href="#step-4-check-the-result-is-plausible" title="Permanent link">&para;</a></h3>
+<p>A conversion can run without errors and still be wrong. Plot attendance <strong>per match</strong>: if any value were off by a factor of 1,000, it would stand out at once.</p>
+<div class="highlight"><pre><span></span><code><span class="n">ax</span> <span class="o">=</span> <span class="n">cups</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s2">&quot;Year&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;attendance_per_match&quot;</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;bar&quot;</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+               <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Average attendance per match, each World Cup 1930–2014&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Spectators per match&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+<p><img alt="png" src="../03_cleaning_and_preparing_lecture_files/03_cleaning_and_preparing_lecture_47_0.png" /></p>
+<blockquote>
+<p><strong>What the worked case shows</strong></p>
+<ul>
+<li>The problem was invisible in the first five rows and only appeared when we profiled the <strong>types</strong>.</li>
+<li>The fix needed a <strong>reason</strong> for each rule (why multiply by 1,000), which belongs in the cleaning log.</li>
+<li>A <strong>plausibility chart</strong> is a cheap final check: no bar is a thousand times too small.</li>
+</ul>
+</blockquote>
+<p>In the lab you clean the match-level sheet of the same workbook, where the problem is duplicated matches rather than text numbers.</p>
+<hr />
+<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Keep the raw file untouched; clean a copy in code and log every change with before and after counts.</li>
+<li>Ask <strong>why</strong> data is missing before you drop or fill anything. Missing is not zero.</li>
+<li>Duplicates are judged against the grain and keys. Identical-looking rows can be real.</li>
+<li>Outliers are investigated, not deleted: fix confirmed errors, keep real extremes.</li>
+<li>Parse text numbers and dates with explicit rules, and count every value that fails.</li>
+<li>Know the cardinality of every join; use <code>validate=</code>, <code>indicator=True</code> and row-count checks.</li>
+<li><code>melt</code> and <code>pivot</code> reshape tables; check totals before and after.</li>
+</ul>
+<hr />
+<h2 id="quiz">Quiz<a class="headerlink" href="#quiz" title="Permanent link">&para;</a></h2>
+<p>Answer these at the start of the next lecture. Write your answers before the discussion.</p>
+<ol>
+<li>Explain the difference between data missing <strong>at random</strong> and <strong>not at random</strong>, with a business example of each.</li>
+<li>Why is <code>fillna(0)</code> usually wrong for a missing sales value?</li>
+<li>Two rows in a table are identical in every column except their ID. Are they duplicates? What decides it?</li>
+<li>Give two different actions you might take for an outlier, and when each is right.</li>
+<li>What does <code>pd.to_numeric(..., errors="coerce")</code> do to a value it cannot parse, and why must you count those values?</li>
+<li>A left join increases the number of rows. What does that tell you about the right-hand table?</li>
+<li>What does <code>validate="many_to_one"</code> check, and what happens if the check fails?</li>
+<li>Name two things a cleaning log should record for every step.</li>
+</ol>
+<hr />
+<h2 id="lab-briefing">Lab briefing<a class="headerlink" href="#lab-briefing" title="Permanent link">&para;</a></h2>
+<p>In the <strong>Lab</strong> you will:</p>
+<ul>
+<li>clean the World Cup <strong>match</strong> results: find duplicated matches, check them against the official tournament totals, and fix text problems;</li>
+<li>diagnose missing dates in a <strong>mobile operating system</strong> usage file and decide which part of it can be trusted;</li>
+<li><strong>join</strong> the three sheets of the Superstore workbook with every check from Part 6;</li>
+<li>debug a colleague's join that inflates sales.</li>
+</ul>
+<p>Bring your evidence log. Continue with the <a href="../03_cleaning_and_preparing_lab/">Session 3 lab</a>.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../02_data_and_grain_lab/" class="btn btn-neutral float-left" title="Lab"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../03_cleaning_and_preparing_lab/" class="btn btn-neutral float-right" title="Lab">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Copyright &copy; 2026 - Aayush Raj Regmi</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../02_data_and_grain_lab/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../03_cleaning_and_preparing_lab/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

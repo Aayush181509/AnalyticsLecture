@@ -1,0 +1,2341 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Lab - Data Analytics</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../stylesheets/readability.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Lab";
+        var mkdocs_page_input_path = "lectures/07_trends_and_growth_lab.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Data Analytics
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Getting Started</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../..#course-at-a-glance">Course at a glance</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../..#where-to-start">Where to start</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../..#how-we-will-practise">How we will practise</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Foundations</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../foundations/">Why Data Analytics Matters</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/#what-is-data-analytics">What is data analytics?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/#real-stories-where-data-changed-the-outcome">Real stories where data changed the outcome</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../foundations/#a-map-that-changed-how-we-think-about-disease-london-1854">A map that changed how we think about disease (London, 1854)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../foundations/#a-chart-that-reformed-hospitals-1850s">A chart that reformed hospitals (1850s)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../foundations/#winning-on-a-small-budget-baseball-2002">Winning on a small budget (baseball, 2002)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../foundations/#preparing-for-a-hurricane-retail-2004">Preparing for a hurricane (retail, 2004)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../foundations/#when-big-data-got-it-wrong-public-health-20082015">When big data got it wrong (public health, 2008–2015)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/#where-you-meet-analytics-every-day">Where you meet analytics every day</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/#why-presentation-is-part-of-analysis">Why presentation is part of analysis</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/#what-comes-next">What comes next</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../foundations/statistics-are-not-enough/">Statistics Are Not Enough</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/statistics-are-not-enough/#anscombes-quartet">Anscombe's quartet</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/statistics-are-not-enough/#the-datasaurus-dozen">The Datasaurus Dozen</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/statistics-are-not-enough/#what-this-means-at-work">What this means at work</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/statistics-are-not-enough/#try-it-yourself">Try it yourself</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../foundations/misleading-statistics/">How Statistics Can Mislead</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/misleading-statistics/#1-correlation-is-not-causation">1. Correlation is not causation</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/misleading-statistics/#2-simpsons-paradox-the-total-can-reverse-the-parts">2. Simpson's paradox: the total can reverse the parts</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/misleading-statistics/#3-misleading-axes">3. Misleading axes</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/misleading-statistics/#4-cherry-picked-time-windows">4. Cherry-picked time windows</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/misleading-statistics/#5-which-average">5. Which average?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/misleading-statistics/#6-percentages-without-the-base">6. Percentages without the base</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/misleading-statistics/#7-survivorship-bias">7. Survivorship bias</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/misleading-statistics/#a-checklist-for-any-number-you-are-shown">A checklist for any number you are shown</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/misleading-statistics/#try-it-yourself">Try it yourself</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../foundations/types-of-analysis/">Types of Analysis</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/types-of-analysis/#univariate-analysis-one-variable-at-a-time">Univariate analysis: one variable at a time</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/types-of-analysis/#bivariate-analysis-two-variables-together">Bivariate analysis: two variables together</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/types-of-analysis/#multivariate-analysis-three-or-more-variables">Multivariate analysis: three or more variables</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/types-of-analysis/#choosing-a-chart-quick-guide">Choosing a chart: quick guide</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/types-of-analysis/#try-it-yourself">Try it yourself</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../foundations/visual-design/">Designing Clear Visuals</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/visual-design/#the-data-ink-ratio">The data-ink ratio</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/visual-design/#pre-attentive-attributes-what-the-eye-sees-first">Pre-attentive attributes: what the eye sees first</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/visual-design/#gestalt-principles-how-we-group-things">Gestalt principles: how we group things</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/visual-design/#colour-with-purpose">Colour with purpose</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/visual-design/#a-clean-chart-checklist">A clean-chart checklist</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/visual-design/#try-it-yourself">Try it yourself</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../foundations/storytelling/">Storytelling with Data</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/storytelling/#the-challenger-disaster-right-data-wrong-presentation">The Challenger disaster: right data, wrong presentation</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../foundations/storytelling/#what-did-the-data-show">What did the data show?</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/storytelling/#what-makes-a-data-story">What makes a data story</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../foundations/storytelling/#start-with-the-big-idea">Start with the "big idea"</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/storytelling/#a-simple-process">A simple process</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/storytelling/#exploratory-versus-explanatory">Exploratory versus explanatory</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/storytelling/#try-it-yourself">Try it yourself</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Course</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../course/roadmap/">Learning Roadmap</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#how-each-session-works">How each session works</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#part-a-thinking-with-data">Part A: Thinking with data</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#part-b-describing-and-measuring">Part B: Describing and measuring</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#part-c-relationships-change-and-uncertainty">Part C: Relationships, change and uncertainty</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#part-d-business-cases">Part D: Business cases</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#part-e-communicating-and-bringing-it-together">Part E: Communicating and bringing it together</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#part-f-tableau">Part F: Tableau</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#how-you-will-be-assessed">How you will be assessed</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#extra-practice-topics">Extra practice topics</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../course/setup/">Setup and Practice</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/setup/#what-you-need">What you need</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/setup/#open-a-lesson-in-google-colab">Open a lesson in Google Colab</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/setup/#keep-your-data-safe">Keep your data safe</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/setup/#if-something-does-not-work">If something does not work</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/setup/#tableau-later">Tableau (later)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/setup/#keep-an-evidence-log">Keep an evidence log</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../course/workflow/">Analytical Workflow</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/workflow/#the-seven-steps">The seven steps</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../course/workflow/#1-business-question">1. Business question</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../course/workflow/#2-data-understanding">2. Data understanding</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../course/workflow/#3-preparation">3. Preparation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../course/workflow/#4-analysis">4. Analysis</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../course/workflow/#5-validation">5. Validation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../course/workflow/#6-visualization">6. Visualization</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../course/workflow/#7-recommendation">7. Recommendation</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/workflow/#a-worked-example">A worked example</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/workflow/#when-a-result-looks-wrong">When a result looks wrong</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/workflow/#association-is-not-causation">Association is not causation</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../cases/">Business Cases</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../cases/#the-five-core-cases">The five core cases</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../cases/#retail">Retail</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../cases/#finance">Finance</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../cases/#operations">Operations</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../cases/#marketing">Marketing</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../cases/#hr">HR</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../cases/#what-every-case-includes">What every case includes</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../cases/#combining-evidence-across-departments">Combining evidence across departments</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../cases/#additional-practice-choices">Additional practice choices</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Python Sessions</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" >Session 1: Why Data Analytics Matters</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../01_why_data_analytics_lecture/">Lecture</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lecture/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lecture/#part-1-what-is-data-analytics">Part 1: What is data analytics?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lecture/#part-2-real-stories-where-data-changed-the-outcome">Part 2: Real stories where data changed the outcome</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lecture/#part-3-from-question-to-recommendation">Part 3: From question to recommendation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lecture/#part-4-always-plot-your-data-anscombes-quartet">Part 4: Always plot your data — Anscombe's quartet</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lecture/#part-5-the-datasaurus-dozen">Part 5: The Datasaurus Dozen</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lecture/#part-6-a-preview-of-how-numbers-mislead">Part 6: A preview of how numbers mislead</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lecture/#summary">Summary</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lecture/#quiz">Quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lecture/#in-the-lab">In the Lab</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../01_why_data_analytics_lab/">Lab</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lab/#how-this-lab-works">How this lab works</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lab/#part-a-guided-practice-core">Part A: Guided practice (Core)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lab/#part-b-independent-tasks">Part B: Independent tasks</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lab/#part-c-challenge-the-datasaurus-dozen">Part C: Challenge — the Datasaurus Dozen</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lab/#quick-reference">Quick reference</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lab/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lab/#evidence-to-keep">Evidence to keep</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Session 2: Data, Grain and the DataFrame</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../02_data_and_grain_lecture/">Lecture</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lecture/#recap-quiz">Recap quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lecture/#what-you-will-be-able-to-explain">What you will be able to explain</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lecture/#part-1-levels-of-measurement">Part 1: Levels of measurement</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lecture/#part-2-tidy-data">Part 2: Tidy data</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lecture/#part-3-grain-and-keys">Part 3: Grain and keys</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lecture/#part-4-data-dictionaries">Part 4: Data dictionaries</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lecture/#part-5-data-quality-dimensions">Part 5: Data-quality dimensions</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lecture/#part-6-worked-case-the-superstore-order-lines">Part 6: Worked case — the Superstore order lines</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lecture/#summary">Summary</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lecture/#quiz">Quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lecture/#lab-briefing">Lab briefing</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../02_data_and_grain_lab/">Lab</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lab/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lab/#how-this-lab-works">How this lab works</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lab/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lab/#guided-practice">Guided practice</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lab/#independent-tasks">Independent tasks</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lab/#challenge">Challenge</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lab/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lab/#evidence-to-keep">Evidence to keep</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lab/#after-the-lab">After the lab</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Session 3: Cleaning and Preparing Data</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../03_cleaning_and_preparing_lecture/">Lecture</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lecture/#recap-quiz">Recap quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lecture/#what-you-will-be-able-to-explain">What you will be able to explain</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lecture/#part-1-raw-data-and-the-cleaning-log">Part 1: Raw data and the cleaning log</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lecture/#part-2-missing-data">Part 2: Missing data</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lecture/#part-3-duplicates">Part 3: Duplicates</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lecture/#part-4-outliers">Part 4: Outliers</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lecture/#part-5-text-numbers-dates-and-encodings">Part 5: Text, numbers, dates and encodings</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lecture/#part-6-joins-and-cardinality">Part 6: Joins and cardinality</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lecture/#part-7-reshaping">Part 7: Reshaping</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lecture/#part-8-worked-case-world-cup-attendance">Part 8: Worked case — World Cup attendance</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lecture/#summary">Summary</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lecture/#quiz">Quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lecture/#lab-briefing">Lab briefing</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../03_cleaning_and_preparing_lab/">Lab</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lab/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lab/#how-this-lab-works">How this lab works</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lab/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lab/#guided-practice">Guided practice</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lab/#independent-tasks">Independent tasks</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lab/#challenge">Challenge</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lab/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lab/#evidence-to-keep">Evidence to keep</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lab/#after-the-lab">After the lab</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Session 4: Descriptive Statistics and Distributions</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../04_descriptive_statistics_lecture/">Lecture</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lecture/#recap-quiz">Recap quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lecture/#what-you-will-be-able-to-explain">What you will be able to explain</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lecture/#part-1-the-centre-mean-median-and-mode">Part 1: The centre — mean, median and mode</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lecture/#part-2-spread-how-different-are-the-values">Part 2: Spread — how different are the values?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lecture/#part-3-shape-skew-and-long-tails">Part 3: Shape — skew and long tails</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lecture/#part-4-three-pictures-of-one-distribution">Part 4: Three pictures of one distribution</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lecture/#part-5-z-scores-and-the-normal-curve-as-a-reference">Part 5: z-scores and the normal curve as a reference</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lecture/#part-6-unusual-values-flag-do-not-delete">Part 6: Unusual values — flag, do not delete</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lecture/#part-7-worked-case-superstore-orders">Part 7: Worked case — Superstore orders</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lecture/#summary">Summary</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lecture/#quiz">Quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lecture/#lab-briefing">Lab briefing</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../04_descriptive_statistics_lab/">Lab</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lab/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lab/#how-this-lab-works">How this lab works</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lab/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lab/#guided-practice">Guided practice</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lab/#independent-tasks">Independent tasks</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lab/#challenge">Challenge</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lab/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lab/#evidence-to-keep">Evidence to keep</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lab/#after-the-lab">After the lab</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Session 5: Metrics and KPIs</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../05_metrics_and_kpis_lecture/">Lecture</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lecture/#recap-quiz">Recap quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lecture/#what-you-will-be-able-to-explain">What you will be able to explain</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lecture/#part-1-what-makes-a-good-metric">Part 1: What makes a good metric?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lecture/#part-2-metric-contracts">Part 2: Metric contracts</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lecture/#part-3-ratio-of-sums-versus-mean-of-ratios">Part 3: Ratio of sums versus mean of ratios</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lecture/#part-4-weighted-rates-in-practice">Part 4: Weighted rates in practice</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lecture/#part-5-distinct-counts-do-not-add-up">Part 5: Distinct counts do not add up</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lecture/#part-6-simpsons-paradox">Part 6: Simpson's paradox</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lecture/#part-7-goodharts-law">Part 7: Goodhart's law</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lecture/#part-8-worked-case-a-segment-kpi-table-that-reconciles">Part 8: Worked case — a segment KPI table that reconciles</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lecture/#summary">Summary</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lecture/#quiz">Quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lecture/#lab-briefing">Lab briefing</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../05_metrics_and_kpis_lab/">Lab</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lab/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lab/#how-this-lab-works">How this lab works</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lab/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lab/#guided-practice">Guided practice</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lab/#independent-tasks">Independent tasks</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lab/#challenge">Challenge</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lab/#validation-checklist">Validation checklist</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lab/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lab/#evidence-to-keep">Evidence to keep</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lab/#after-the-lab">After the lab</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Session 6: Visualisation Principles</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../06_visualisation_principles_lecture/">Lecture</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lecture/#recap-quiz">Recap quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lecture/#what-you-will-be-able-to-explain">What you will be able to explain</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lecture/#part-1-choose-the-chart-from-the-task">Part 1: Choose the chart from the task</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lecture/#part-2-how-accurately-we-read-encodings">Part 2: How accurately we read encodings</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lecture/#part-3-pre-attentive-attributes">Part 3: Pre-attentive attributes</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lecture/#part-4-data-ink-and-decluttering">Part 4: Data-ink and decluttering</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lecture/#part-5-gestalt-what-belongs-together">Part 5: Gestalt: what belongs together</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lecture/#part-6-colour-with-a-job">Part 6: Colour with a job</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lecture/#part-7-honest-axes">Part 7: Honest axes</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lecture/#part-8-message-titles-and-annotation">Part 8: Message titles and annotation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lecture/#part-9-small-multiples">Part 9: Small multiples</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lecture/#summary">Summary</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lecture/#quiz">Quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lecture/#in-the-lab">In the Lab</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../06_visualisation_principles_lab/">Lab</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lab/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lab/#how-this-lab-works">How this lab works</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lab/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >Session 7: Time Series and Trends</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../07_trends_and_growth_lecture/">Lecture</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lecture/#recap-quiz">Recap quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lecture/#what-you-will-be-able-to-explain">What you will be able to explain</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lecture/#part-1-the-three-components-of-a-series">Part 1: The three components of a series</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lecture/#part-2-month-on-month-versus-year-on-year">Part 2: Month-on-month versus year-on-year</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lecture/#part-3-rolling-averages-trailing-and-centred">Part 3: Rolling averages, trailing and centred</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lecture/#part-4-index-numbers-base-100">Part 4: Index numbers (base = 100)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lecture/#part-5-seasonally-adjusted-series">Part 5: Seasonally adjusted series</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lecture/#part-6-incomplete-and-missing-periods">Part 6: Incomplete and missing periods</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lecture/#part-7-growth-after-filtering-the-trap">Part 7: Growth after filtering, the trap</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lecture/#part-8-worked-case-superstore-monthly-sales">Part 8: Worked case — Superstore monthly Sales</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lecture/#summary">Summary</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lecture/#quiz">Quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lecture/#lab-briefing">Lab briefing</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Lab</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#how-this-lab-works">How this lab works</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#before-you-start">Before you start</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#guided-practice">Guided practice</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#independent-tasks">Independent tasks</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#challenge">Challenge</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#validation-checklist">Validation checklist</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#evidence-to-keep">Evidence to keep</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#after-the-lab">After the lab</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Tableau (Coming Later)</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lessons/class-01/">Tableau Lesson 1 (draft)</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#before-you-start">Before you start</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#part-1-from-request-to-question">Part 1: From request to question</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#part-2-watch-the-demonstration">Part 2: Watch the demonstration</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#part-3-guided-practice">Part 3: Guided practice</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-01/#connect-to-the-file">Connect to the file</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-01/#check-the-column-types">Check the column types</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-01/#build-a-first-chart">Build a first chart</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-01/#add-a-filter">Add a filter</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-01/#save-and-reopen">Save and reopen</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#part-4-rows-versus-orders">Part 4: Rows versus orders</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#part-5-independent-work">Part 5: Independent work</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#part-6-challenge">Part 6: Challenge</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#after-the-lesson">After the lesson</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lessons/class-02/">Tableau Lesson 2 (draft)</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#before-you-start">Before you start</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#part-1-meet-the-data-dictionary">Part 1: Meet the data dictionary</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#part-2-find-the-grain">Part 2: Find the grain</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#part-3-count-orders-correctly">Part 3: Count orders correctly</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-02/#demonstration">Demonstration</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-02/#guided-practice">Guided practice</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#part-4-what-the-returns-flag-means">Part 4: What the returns flag means</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#part-5-check-one-order-by-hand">Part 5: Check one order by hand</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#part-6-keep-a-preparation-log">Part 6: Keep a preparation log</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#part-7-independent-work">Part 7: Independent work</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#part-8-debugging-challenge">Part 8: Debugging challenge</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#after-the-lesson">After the lesson</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lessons/class-03/">Tableau Lesson 3 (draft)</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#before-you-start">Before you start</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#part-1-agree-the-measures">Part 1: Agree the measures</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#part-2-watch-the-demonstration">Part 2: Watch the demonstration</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#part-3-guided-practice-build-the-calculations">Part 3: Guided practice — build the calculations</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#part-4-guided-practice-the-segment-table">Part 4: Guided practice — the segment table</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-03/#check-that-it-reconciles">Check that it reconciles</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#part-5-independent-work">Part 5: Independent work</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-03/#a-filter-by-region">A. Filter by region</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-03/#b-look-at-a-category">B. Look at a category</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#part-6-debugging-challenge">Part 6: Debugging challenge</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#part-7-make-a-recommendation">Part 7: Make a recommendation</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#validation-checklist">Validation checklist</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#after-the-lesson">After the lesson</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lessons/class-04/">Tableau Lesson 4 (draft)</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#before-you-start">Before you start</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#part-1-the-monthly-trend">Part 1: The monthly trend</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#part-2-two-kinds-of-growth">Part 2: Two kinds of growth</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-04/#month-on-month-growth">Month-on-month growth</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-04/#year-on-year-growth">Year-on-year growth</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-04/#which-one-is-fair">Which one is fair?</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#part-3-the-returns-list">Part 3: The returns list</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#part-4-guided-practice-build-the-dashboard">Part 4: Guided practice — build the dashboard</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-04/#design-checks">Design checks</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#part-5-independent-work">Part 5: Independent work</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#part-6-debugging-challenge">Part 6: Debugging challenge</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#part-7-recommend-a-test">Part 7: Recommend a test</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#validation-checklist">Validation checklist</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#after-the-lesson">After the lesson</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../lessons/lesson-template/">Lesson Template</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#1-the-business-decision">1. The business decision</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#2-what-you-will-demonstrate">2. What you will demonstrate</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#3-before-you-start">3. Before you start</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#4-understand-the-data">4. Understand the data</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#5-agree-the-measures">5. Agree the measures</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#6-watch-a-worked-example">6. Watch a worked example</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#7-try-it-with-guidance">7. Try it with guidance</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#8-work-independently">8. Work independently</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#9-debug-a-result">9. Debug a result</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#10-make-a-recommendation">10. Make a recommendation</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#11-connection-to-the-other-tool">11. Connection to the other tool</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#12-submit-and-reflect">12. Submit and reflect</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Data Analytics</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Python Sessions</li>
+          <li class="breadcrumb-item">Session 7: Time Series and Trends</li>
+      <li class="breadcrumb-item active">Lab</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="session-7-lab-trends-returns-and-a-decision-dashboard">Session 7 lab: Trends, returns and a decision dashboard<a class="headerlink" href="#session-7-lab-trends-returns-and-a-decision-dashboard" title="Permanent link">&para;</a></h1>
+<p class="lead">
+Add time to your segment comparison, read growth figures without being fooled by the seasons, use the returns list carefully, apply the same ideas to official construction spending, and bring it together in one dashboard with a recommendation.
+</p>
+
+<p><a href="https://colab.research.google.com/github/Aayush181509/AnalyticsLecture/blob/main/notebooks/07_trends_and_growth_lab.ipynb"><img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg" /></a></p>
+<p>Open this notebook in Google Colab with the button above, then run each cell from top to bottom with <strong>Shift + Enter</strong>. Save your own copy with <strong>File → Save a copy in Drive</strong>.</p>
+<hr />
+<h2 id="the-business-decision">The business decision<a class="headerlink" href="#the-business-decision" title="Permanent link">&para;</a></h2>
+<p>The commercial lead asks:</p>
+<blockquote>
+<p><em>"Before we test any change, show me how sales have moved over time, whether returns differ between segments, and which one test you would run first."</em></p>
+</blockquote>
+<p>A single snapshot cannot answer this. A month can look like a crash or a boom simply because of the time of year.</p>
+<blockquote>
+<p><strong>About the data</strong></p>
+<p><strong>Superstore</strong> is a sample published by Tableau about a <strong>fictitious</strong> company. Sales are in the file's own <strong>source monetary units</strong>; the currency is not stated. A pattern over time shows <em>when</em> something happened, not <em>why</em>.</p>
+<p><strong>US construction spending</strong> comes from the <strong>U.S. Census Bureau</strong>'s monthly Construction Spending survey (value of construction put in place), as mirrored in Tableau's sample-data catalog. Values are in <strong>millions of US dollars of each month</strong>, not adjusted for inflation.</p>
+</blockquote>
+<hr />
+<h2 id="how-this-lab-works">How this lab works<a class="headerlink" href="#how-this-lab-works" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Part</th>
+<th>What you do</th>
+<th>Tasks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Guided practice</strong></td>
+<td>Follow along step by step, everyone together</td>
+<td>G1–G6</td>
+</tr>
+<tr>
+<td><strong>Independent tasks</strong></td>
+<td>Same skills, new questions, on your own or in pairs</td>
+<td>I1–I7</td>
+</tr>
+<tr>
+<td><strong>Challenge</strong></td>
+<td>Harder reasoning and debugging</td>
+<td>C1–C2</td>
+</tr>
+</tbody>
+</table>
+<p>Each task has a level:</p>
+<ul>
+<li><strong>Core</strong>: everyone completes it; it is enough for your portfolio.</li>
+<li><strong>Stretch</strong>: for when you finish the core tasks early.</li>
+<li><strong>Challenge</strong>: optional, harder reasoning.</li>
+</ul>
+<hr />
+<h2 id="what-you-will-be-able-to-do">What you will be able to do<a class="headerlink" href="#what-you-will-be-able-to-do" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Build a complete monthly series and recognise seasonal patterns.</li>
+<li>Calculate month-on-month and year-on-year growth, and explain when each is fair.</li>
+<li>Explain why a blank growth value means "no comparison", and why filtering too early creates blanks.</li>
+<li>Measure the share of orders on the returns list, and state what it cannot tell you.</li>
+<li>Select one consistent series from an official statistics file and compare part-years fairly.</li>
+<li>Combine three charts into one dashboard and write a recommendation for a test.</li>
+</ol>
+<p><strong>Evidence you keep:</strong> your dashboard, your growth and returns definitions, your construction-spending chart with its series definition, and a five-sentence recommendation. Together they are your <strong>retail portfolio checkpoint</strong>.</p>
+<hr />
+<h2 id="before-you-start">Before you start<a class="headerlink" href="#before-you-start" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Read the <a href="../07_trends_and_growth_lecture/">Session 7 lecture</a>.</li>
+<li>Have your segment KPI table from the <a href="../05_metrics_and_kpis_lab/">Session 5 lab</a> to hand.</li>
+<li>Re-read <a href="../../foundations/misleading-statistics/">cherry-picked time windows</a> and <a href="../../foundations/storytelling/">storytelling with data</a>.</li>
+</ul>
+<hr />
+<h2 id="guided-practice">Guided practice<a class="headerlink" href="#guided-practice" title="Permanent link">&para;</a></h2>
+<h3 id="g1-core-the-monthly-trend">G1 (Core): The monthly trend<a class="headerlink" href="#g1-core-the-monthly-trend" title="Permanent link">&para;</a></h3>
+<p>Run the setup cell, then load the table.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Course data setup. Run this cell first; you do not need to understand it yet.</span>
+<span class="c1"># It downloads the Superstore sample from Tableau&#39;s website, checks it is the</span>
+<span class="c1"># exact version this course was written for, and prepares the order-lines table.</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">hashlib</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">urllib.request</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+
+<span class="n">SOURCE_URL</span> <span class="o">=</span> <span class="s2">&quot;https://public.tableau.com/app/sample-data/sample_-_superstore.xls&quot;</span>
+<span class="n">EXPECTED_SHA256</span> <span class="o">=</span> <span class="s2">&quot;5045ed4fec49cae2cc0dfc5ab0d204ba09efa767fe00c996822499e8cc42fbbd&quot;</span>
+<span class="n">SOURCE_FILE</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;COURSE_XLS_PATH&quot;</span><span class="p">,</span> <span class="s2">&quot;sample_-_superstore.xls&quot;</span><span class="p">)</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="kn">import</span><span class="w"> </span><span class="nn">xlrd</span>  <span class="c1"># noqa: F401  (needed to read .xls files)</span>
+<span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+    <span class="kn">import</span><span class="w"> </span><span class="nn">subprocess</span>
+    <span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+
+    <span class="n">subprocess</span><span class="o">.</span><span class="n">check_call</span><span class="p">([</span><span class="n">sys</span><span class="o">.</span><span class="n">executable</span><span class="p">,</span> <span class="s2">&quot;-m&quot;</span><span class="p">,</span> <span class="s2">&quot;pip&quot;</span><span class="p">,</span> <span class="s2">&quot;install&quot;</span><span class="p">,</span> <span class="s2">&quot;-q&quot;</span><span class="p">,</span> <span class="s2">&quot;xlrd&quot;</span><span class="p">])</span>
+
+<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">SOURCE_FILE</span><span class="p">):</span>
+    <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlretrieve</span><span class="p">(</span><span class="n">SOURCE_URL</span><span class="p">,</span> <span class="n">SOURCE_FILE</span><span class="p">)</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">SOURCE_FILE</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">digest</span> <span class="o">=</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">sha256</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">())</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span>
+<span class="k">if</span> <span class="n">digest</span> <span class="o">!=</span> <span class="n">EXPECTED_SHA256</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;WARNING: Tableau has changed this sample file since the course was written.&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Your numbers will differ from the lesson. Ask your facilitator for the course copy.&quot;</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">load_orders</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Return one row per order line, orders placed 2023-01-01 to 2025-12-31.&quot;&quot;&quot;</span>
+    <span class="n">raw</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">SOURCE_FILE</span><span class="p">,</span> <span class="n">sheet_name</span><span class="o">=</span><span class="s2">&quot;Orders&quot;</span><span class="p">)</span>
+    <span class="n">returns</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">SOURCE_FILE</span><span class="p">,</span> <span class="n">sheet_name</span><span class="o">=</span><span class="s2">&quot;Returns&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Orders with more than one Customer ID (a known data issue), found before filtering.</span>
+    <span class="n">ids_per_order</span> <span class="o">=</span> <span class="n">raw</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;Order ID&quot;</span><span class="p">)[</span><span class="s2">&quot;Customer ID&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span>
+    <span class="n">conflict_orders</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">ids_per_order</span><span class="p">[</span><span class="n">ids_per_order</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+
+    <span class="n">in_scope</span> <span class="o">=</span> <span class="p">(</span><span class="n">raw</span><span class="p">[</span><span class="s2">&quot;Order Date&quot;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="s2">&quot;2023-01-01&quot;</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">raw</span><span class="p">[</span><span class="s2">&quot;Order Date&quot;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="s2">&quot;2026-01-01&quot;</span><span class="p">)</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">raw</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">in_scope</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+    <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;Row ID&quot;</span><span class="p">:</span> <span class="s2">&quot;row_id&quot;</span><span class="p">,</span> <span class="s2">&quot;Order ID&quot;</span><span class="p">:</span> <span class="s2">&quot;order_id&quot;</span><span class="p">,</span> <span class="s2">&quot;Order Date&quot;</span><span class="p">:</span> <span class="s2">&quot;order_date&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Ship Date&quot;</span><span class="p">:</span> <span class="s2">&quot;ship_date&quot;</span><span class="p">,</span> <span class="s2">&quot;Ship Mode&quot;</span><span class="p">:</span> <span class="s2">&quot;ship_mode&quot;</span><span class="p">,</span> <span class="s2">&quot;Customer ID&quot;</span><span class="p">:</span> <span class="s2">&quot;customer_id&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Segment&quot;</span><span class="p">:</span> <span class="s2">&quot;segment&quot;</span><span class="p">,</span> <span class="s2">&quot;Country/Region&quot;</span><span class="p">:</span> <span class="s2">&quot;country_region&quot;</span><span class="p">,</span> <span class="s2">&quot;Region&quot;</span><span class="p">:</span> <span class="s2">&quot;region&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Category&quot;</span><span class="p">:</span> <span class="s2">&quot;category&quot;</span><span class="p">,</span> <span class="s2">&quot;Sub-Category&quot;</span><span class="p">:</span> <span class="s2">&quot;sub_category&quot;</span><span class="p">,</span> <span class="s2">&quot;Product ID&quot;</span><span class="p">:</span> <span class="s2">&quot;product_id&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Product Name&quot;</span><span class="p">:</span> <span class="s2">&quot;product_name&quot;</span><span class="p">,</span> <span class="s2">&quot;Sales&quot;</span><span class="p">:</span> <span class="s2">&quot;sales&quot;</span><span class="p">,</span> <span class="s2">&quot;Quantity&quot;</span><span class="p">:</span> <span class="s2">&quot;quantity&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Discount&quot;</span><span class="p">:</span> <span class="s2">&quot;discount&quot;</span><span class="p">,</span> <span class="s2">&quot;Profit&quot;</span><span class="p">:</span> <span class="s2">&quot;profit&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+    <span class="n">df</span><span class="p">[</span><span class="s2">&quot;returned_order_flag&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;order_id&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">returns</span><span class="p">[</span><span class="s2">&quot;Order ID&quot;</span><span class="p">]))</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+    <span class="n">df</span><span class="p">[</span><span class="s2">&quot;customer_order_conflict&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;order_id&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">conflict_orders</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+    <span class="n">df</span><span class="p">[</span><span class="s2">&quot;customer_analysis_eligible&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;customer_order_conflict&quot;</span><span class="p">]</span>
+    <span class="n">df</span><span class="p">[</span><span class="s2">&quot;order_to_ship_days&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;ship_date&quot;</span><span class="p">]</span> <span class="o">-</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;order_date&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">days</span>
+    <span class="n">df</span><span class="p">[</span><span class="s2">&quot;order_month&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;order_date&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">to_period</span><span class="p">(</span><span class="s2">&quot;M&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">to_timestamp</span><span class="p">()</span>
+
+    <span class="n">columns</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="s2">&quot;row_id&quot;</span><span class="p">,</span> <span class="s2">&quot;order_id&quot;</span><span class="p">,</span> <span class="s2">&quot;order_date&quot;</span><span class="p">,</span> <span class="s2">&quot;ship_date&quot;</span><span class="p">,</span> <span class="s2">&quot;ship_mode&quot;</span><span class="p">,</span> <span class="s2">&quot;customer_id&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;segment&quot;</span><span class="p">,</span> <span class="s2">&quot;country_region&quot;</span><span class="p">,</span> <span class="s2">&quot;region&quot;</span><span class="p">,</span> <span class="s2">&quot;category&quot;</span><span class="p">,</span> <span class="s2">&quot;sub_category&quot;</span><span class="p">,</span> <span class="s2">&quot;product_id&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;product_name&quot;</span><span class="p">,</span> <span class="s2">&quot;sales&quot;</span><span class="p">,</span> <span class="s2">&quot;quantity&quot;</span><span class="p">,</span> <span class="s2">&quot;discount&quot;</span><span class="p">,</span> <span class="s2">&quot;profit&quot;</span><span class="p">,</span> <span class="s2">&quot;returned_order_flag&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;customer_analysis_eligible&quot;</span><span class="p">,</span> <span class="s2">&quot;customer_order_conflict&quot;</span><span class="p">,</span> <span class="s2">&quot;order_to_ship_days&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;order_month&quot;</span><span class="p">,</span>
+    <span class="p">]</span>
+    <span class="k">return</span> <span class="n">df</span><span class="p">[</span><span class="n">columns</span><span class="p">]</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s2">&quot;row_id&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+
+<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s2">&quot;display.float_format&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="si">{:,.2f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="o">.</span><span class="n">update</span><span class="p">({</span>
+    <span class="s2">&quot;figure.figsize&quot;</span><span class="p">:</span> <span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span>
+    <span class="s2">&quot;axes.spines.top&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="s2">&quot;axes.spines.right&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="s2">&quot;axes.grid&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s2">&quot;axes.axisbelow&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s2">&quot;grid.color&quot;</span><span class="p">:</span> <span class="s2">&quot;#e6e5e1&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;axes.prop_cycle&quot;</span><span class="p">:</span> <span class="n">plt</span><span class="o">.</span><span class="n">cycler</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;#2a78d6&quot;</span><span class="p">,</span> <span class="s2">&quot;#eb6834&quot;</span><span class="p">,</span> <span class="s2">&quot;#1baf7a&quot;</span><span class="p">]),</span>
+    <span class="s2">&quot;axes.titleweight&quot;</span><span class="p">:</span> <span class="s2">&quot;bold&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;axes.titlelocation&quot;</span><span class="p">:</span> <span class="s2">&quot;left&quot;</span><span class="p">,</span>
+<span class="p">})</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Setup complete.&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Setup complete.
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">df</span> <span class="o">=</span> <span class="n">load_orders</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Rows (order lines):&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Different orders:  &quot;</span><span class="p">,</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;order_id&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">())</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Rows (order lines): 6815
+Different orders:   3388
+</code></pre></div>
+<p>Every row has an <code>order_month</code> column: the <strong>first day</strong> of the month the order was placed. Grouping by it gives one Sales total per calendar month.</p>
+<div class="highlight"><pre><span></span><code><span class="n">monthly</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;order_month&quot;</span><span class="p">)[</span><span class="s2">&quot;sales&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">monthly</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>order_month
+2023-01-01   14,518.06
+2023-02-01    4,519.89
+2023-03-01   56,933.91
+2023-04-01   28,295.35
+2023-05-01   26,319.77
+2023-06-01   34,669.48
+Name: sales, dtype: float64
+</code></pre></div>
+<h4 id="check-that-no-month-is-missing">Check that no month is missing<a class="headerlink" href="#check-that-no-month-is-missing" title="Permanent link">&para;</a></h4>
+<p>Growth calculations compare a month with an earlier month. If a month were missing, the "previous" row would silently be the wrong month. So before anything else, build the full list of calendar months and compare.</p>
+<p><code>pd.date_range(..., freq="MS")</code> makes one date per <strong>M</strong>onth <strong>S</strong>tart.</p>
+<div class="highlight"><pre><span></span><code><span class="n">all_months</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">date_range</span><span class="p">(</span><span class="s2">&quot;2023-01-01&quot;</span><span class="p">,</span> <span class="s2">&quot;2025-12-01&quot;</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="s2">&quot;MS&quot;</span><span class="p">)</span>
+<span class="n">missing</span> <span class="o">=</span> <span class="n">all_months</span><span class="o">.</span><span class="n">difference</span><span class="p">(</span><span class="n">monthly</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Months expected:&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">all_months</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Months with Sales:&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">monthly</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Missing months:&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">missing</span><span class="p">))</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Months expected: 36
+Months with Sales: 36
+Missing months: 0
+</code></pre></div>
+<p>Read the output above. If "Missing months" is 0, every calendar month is present and the series is <strong>complete</strong>. We still line the series up against <code>all_months</code> with <code>reindex</code>, so a gap would show as a blank rather than being skipped.</p>
+<div class="highlight"><pre><span></span><code><span class="n">monthly</span> <span class="o">=</span> <span class="n">monthly</span><span class="o">.</span><span class="n">reindex</span><span class="p">(</span><span class="n">all_months</span><span class="p">)</span>
+
+<span class="n">monthly</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Monthly Sales, orders placed 2023–2025&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Order month&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Sales (source monetary units)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+<p><img alt="png" src="../07_trends_and_growth_lab_files/07_trends_and_growth_lab_8_0.png" /></p>
+<h3 id="g2-core-segments-and-seasons">G2 (Core): Segments and seasons<a class="headerlink" href="#g2-core-segments-and-seasons" title="Permanent link">&para;</a></h3>
+<p><code>unstack()</code> turns the segment level into columns, so each segment becomes its own line.</p>
+<div class="highlight"><pre><span></span><code><span class="n">monthly_by_segment</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;order_month&quot;</span><span class="p">,</span> <span class="s2">&quot;segment&quot;</span><span class="p">])[</span><span class="s2">&quot;sales&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">unstack</span><span class="p">()</span>
+
+<span class="n">monthly_by_segment</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Monthly Sales by segment, 2023–2025&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Order month&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Sales (source monetary units)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Segment&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+<p><img alt="png" src="../07_trends_and_growth_lab_files/07_trends_and_growth_lab_10_0.png" /></p>
+<p>Now put the three years on top of each other: one line per year, with the month of the year along the bottom.</p>
+<div class="highlight"><pre><span></span><code><span class="n">by_year</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s2">&quot;year&quot;</span><span class="p">:</span> <span class="n">monthly</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">year</span><span class="p">,</span>
+    <span class="s2">&quot;month&quot;</span><span class="p">:</span> <span class="n">monthly</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">month</span><span class="p">,</span>
+    <span class="s2">&quot;sales&quot;</span><span class="p">:</span> <span class="n">monthly</span><span class="o">.</span><span class="n">values</span><span class="p">,</span>
+<span class="p">})</span>
+<span class="n">seasons</span> <span class="o">=</span> <span class="n">by_year</span><span class="o">.</span><span class="n">pivot</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="s2">&quot;month&quot;</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="s2">&quot;year&quot;</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="s2">&quot;sales&quot;</span><span class="p">)</span>
+
+<span class="n">seasons</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Monthly Sales, one line per year&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Month of the year (1 = January)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Sales (source monetary units)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">13</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Year&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+<p><img alt="png" src="../07_trends_and_growth_lab_files/07_trends_and_growth_lab_12_0.png" /></p>
+<p>A quick text check: the three highest and two lowest months in each year.</p>
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">year</span><span class="p">,</span> <span class="n">sales</span> <span class="ow">in</span> <span class="n">monthly</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">monthly</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">year</span><span class="p">):</span>
+    <span class="n">highest</span> <span class="o">=</span> <span class="s2">&quot;, &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">sales</span><span class="o">.</span><span class="n">nlargest</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%b&quot;</span><span class="p">))</span>
+    <span class="n">lowest</span> <span class="o">=</span> <span class="s2">&quot;, &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">sales</span><span class="o">.</span><span class="n">nsmallest</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%b&quot;</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="s2">&quot;| highest:&quot;</span><span class="p">,</span> <span class="n">highest</span><span class="p">,</span> <span class="s2">&quot;| lowest:&quot;</span><span class="p">,</span> <span class="n">lowest</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>2023 | highest: Sep, Nov, Dec | lowest: Feb, Jan
+2024 | highest: Nov, Dec, Sep | lowest: Feb, Jan
+2025 | highest: Dec, Nov, Sep | lowest: Jan, Feb
+</code></pre></div>
+<blockquote>
+<p><strong>What do you notice?</strong></p>
+<p>Write down three observations from the charts and the output above. Are the same months high every year? Are the same months low? Does the pattern look similar in every segment?</p>
+</blockquote>
+<h3 id="g3-core-two-kinds-of-growth">G3 (Core): Two kinds of growth<a class="headerlink" href="#g3-core-two-kinds-of-growth" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Growth type</th>
+<th>Compares each month with</th>
+<th>pandas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Month-on-month (MoM)</strong></td>
+<td>the previous calendar month</td>
+<td><code>pct_change()</code></td>
+</tr>
+<tr>
+<td><strong>Year-on-year (YoY)</strong></td>
+<td>the same month one year earlier</td>
+<td><code>pct_change(periods=12)</code></td>
+</tr>
+</tbody>
+</table>
+<p>Both use the same formula: <em>(this month − comparison month) ÷ comparison month</em>.</p>
+<blockquote>
+<p><strong>Only on a complete monthly series</strong></p>
+<p><code>pct_change</code> compares each row with the row above it (or 12 rows above). That only means "previous month" or "same month last year" because we checked that all 36 months are present and in order.</p>
+</blockquote>
+<p>To see what is being compared, the table below also keeps the comparison values. <code>shift(1)</code> moves each value down one row; <code>shift(12)</code> moves it down twelve rows.</p>
+<div class="highlight"><pre><span></span><code><span class="n">growth</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">&quot;sales&quot;</span><span class="p">:</span> <span class="n">monthly</span><span class="p">})</span>
+<span class="n">growth</span><span class="p">[</span><span class="s2">&quot;previous_month&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">growth</span><span class="p">[</span><span class="s2">&quot;sales&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">shift</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">growth</span><span class="p">[</span><span class="s2">&quot;mom_growth&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">growth</span><span class="p">[</span><span class="s2">&quot;sales&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">pct_change</span><span class="p">()</span>
+<span class="n">growth</span><span class="p">[</span><span class="s2">&quot;same_month_last_year&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">growth</span><span class="p">[</span><span class="s2">&quot;sales&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">shift</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">growth</span><span class="p">[</span><span class="s2">&quot;yoy_growth&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">growth</span><span class="p">[</span><span class="s2">&quot;sales&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">pct_change</span><span class="p">(</span><span class="n">periods</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+
+<span class="c1"># A comparison month with zero Sales gives no fair growth figure: treat it as blank.</span>
+<span class="n">growth</span><span class="p">[</span><span class="s2">&quot;mom_growth&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">growth</span><span class="p">[</span><span class="s2">&quot;mom_growth&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">growth</span><span class="p">[</span><span class="s2">&quot;previous_month&quot;</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">growth</span><span class="p">[</span><span class="s2">&quot;yoy_growth&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">growth</span><span class="p">[</span><span class="s2">&quot;yoy_growth&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">growth</span><span class="p">[</span><span class="s2">&quot;same_month_last_year&quot;</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span>
+</code></pre></div>
+<p>The full table has 36 rows. To keep it readable we show a few months and format growth as percentages. <code>as_pct</code> writes a blank growth value as the words "no comparison".</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">as_pct</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">pd</span><span class="o">.</span><span class="n">isna</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;no comparison&quot;</span>
+    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">value</span><span class="si">:</span><span class="s2">+.1%</span><span class="si">}</span><span class="s2">&quot;</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">growth_table</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="n">months</span><span class="p">):</span>
+    <span class="n">rows</span> <span class="o">=</span> <span class="n">table</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">months</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+        <span class="s2">&quot;Sales&quot;</span><span class="p">:</span> <span class="n">rows</span><span class="p">[</span><span class="s2">&quot;sales&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{:,.0f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">),</span>
+        <span class="s2">&quot;MoM growth&quot;</span><span class="p">:</span> <span class="n">rows</span><span class="p">[</span><span class="s2">&quot;mom_growth&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">as_pct</span><span class="p">),</span>
+        <span class="s2">&quot;YoY growth&quot;</span><span class="p">:</span> <span class="n">rows</span><span class="p">[</span><span class="s2">&quot;yoy_growth&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">as_pct</span><span class="p">),</span>
+    <span class="p">},</span> <span class="n">index</span><span class="o">=</span><span class="n">rows</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%b %Y&quot;</span><span class="p">))</span>
+
+
+<span class="n">growth_table</span><span class="p">(</span><span class="n">growth</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;2023-01-01&quot;</span><span class="p">,</span> <span class="s2">&quot;2023-02-01&quot;</span><span class="p">,</span> <span class="s2">&quot;2023-03-01&quot;</span><span class="p">,</span>
+                      <span class="s2">&quot;2024-01-01&quot;</span><span class="p">,</span> <span class="s2">&quot;2025-01-01&quot;</span><span class="p">,</span> <span class="s2">&quot;2025-12-01&quot;</span><span class="p">])</span>
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Sales</th>
+      <th>MoM growth</th>
+      <th>YoY growth</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Jan 2023</th>
+      <td>14,518</td>
+      <td>no comparison</td>
+      <td>no comparison</td>
+    </tr>
+    <tr>
+      <th>Feb 2023</th>
+      <td>4,520</td>
+      <td>-68.9%</td>
+      <td>no comparison</td>
+    </tr>
+    <tr>
+      <th>Mar 2023</th>
+      <td>56,934</td>
+      <td>+1159.6%</td>
+      <td>no comparison</td>
+    </tr>
+    <tr>
+      <th>Jan 2024</th>
+      <td>18,462</td>
+      <td>-74.4%</td>
+      <td>+27.2%</td>
+    </tr>
+    <tr>
+      <th>Jan 2025</th>
+      <td>18,830</td>
+      <td>-75.1%</td>
+      <td>+2.0%</td>
+    </tr>
+    <tr>
+      <th>Dec 2025</th>
+      <td>97,502</td>
+      <td>+22.8%</td>
+      <td>+29.1%</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p>Read the output above row by row:</p>
+<ol>
+<li><strong>January 2023</strong> is the first month in the file, so it has no previous month and no month a year earlier.</li>
+<li><strong>Every 2023 month</strong> has no year-earlier month in the file, so its YoY growth is blank.</li>
+<li>Look at <strong>March 2023</strong>. A very large MoM figure often just means the previous month was small, not that something remarkable happened.</li>
+<li>Compare <strong>January 2025</strong> MoM with January 2025 YoY. Do they tell the same story?</li>
+</ol>
+<h4 id="where-are-the-blanks">Where are the blanks?<a class="headerlink" href="#where-are-the-blanks" title="Permanent link">&para;</a></h4>
+<p><code>isna()</code> marks blanks as <code>True</code>; summing counts them. Here we count blanks in each year.</p>
+<div class="highlight"><pre><span></span><code><span class="n">growth</span><span class="p">[[</span><span class="s2">&quot;mom_growth&quot;</span><span class="p">,</span> <span class="s2">&quot;yoy_growth&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">growth</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">year</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>mom_growth</th>
+      <th>yoy_growth</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2023</th>
+      <td>1</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <th>2024</th>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2025</th>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<blockquote>
+<p><strong>Blank is not zero</strong></p>
+<p>A blank (<code>NaN</code>) means <strong>"no comparison available"</strong>. It is not 0% growth, and you must never fill it with 0. A table or chart that shows 0% for January 2023 is wrong.</p>
+</blockquote>
+<h4 id="see-the-difference-on-a-chart">See the difference on a chart<a class="headerlink" href="#see-the-difference-on-a-chart" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="n">fig</span><span class="p">,</span> <span class="p">(</span><span class="n">ax_mom</span><span class="p">,</span> <span class="n">ax_yoy</span><span class="p">)</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span> <span class="n">sharex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">ax_mom</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">growth</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">growth</span><span class="p">[</span><span class="s2">&quot;mom_growth&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">100</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+<span class="n">ax_mom</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Month-on-month growth swings with the seasons&quot;</span><span class="p">)</span>
+<span class="n">ax_mom</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;MoM growth (%)&quot;</span><span class="p">)</span>
+
+<span class="n">ax_yoy</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">growth</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">growth</span><span class="p">[</span><span class="s2">&quot;yoy_growth&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">100</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#eb6834&quot;</span><span class="p">)</span>
+<span class="n">ax_yoy</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Year-on-year growth compares like with like (2023 has no comparison)&quot;</span><span class="p">)</span>
+<span class="n">ax_yoy</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;YoY growth (%)&quot;</span><span class="p">)</span>
+<span class="n">ax_yoy</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Order month&quot;</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+<p><img alt="png" src="../07_trends_and_growth_lab_files/07_trends_and_growth_lab_23_0.png" /></p>
+<h4 id="which-one-is-fair">Which one is fair?<a class="headerlink" href="#which-one-is-fair" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Growth type</th>
+<th>Good for</th>
+<th>Can mislead when</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Month-on-month</td>
+<td>Spotting sudden changes</td>
+<td>The business is seasonal: January after a busy December always looks like a crash</td>
+</tr>
+<tr>
+<td>Year-on-year</td>
+<td>Comparing like with like across seasons</td>
+<td>A one-off event happened in the same month last year</td>
+</tr>
+</tbody>
+</table>
+<h3 id="g4-core-filtering-can-remove-the-comparison">G4 (Core): Filtering can remove the comparison<a class="headerlink" href="#g4-core-filtering-can-remove-the-comparison" title="Permanent link">&para;</a></h3>
+<p>Suppose you only care about 2025. There are two orders of work:</p>
+<ol>
+<li><strong>Filter, then compute:</strong> keep only 2025 rows, then calculate growth.</li>
+<li><strong>Compute, then filter:</strong> calculate growth on all 36 months, then show only 2025.</li>
+</ol>
+<p>Run both and compare January and February 2025.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># 1. Filter first, then compute growth</span>
+<span class="n">only_2025</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;order_date&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">year</span> <span class="o">==</span> <span class="mi">2025</span><span class="p">]</span>
+<span class="n">monthly_2025</span> <span class="o">=</span> <span class="n">only_2025</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;order_month&quot;</span><span class="p">)[</span><span class="s2">&quot;sales&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">filter_first</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s2">&quot;mom_growth&quot;</span><span class="p">:</span> <span class="n">monthly_2025</span><span class="o">.</span><span class="n">pct_change</span><span class="p">(),</span>
+    <span class="s2">&quot;yoy_growth&quot;</span><span class="p">:</span> <span class="n">monthly_2025</span><span class="o">.</span><span class="n">pct_change</span><span class="p">(</span><span class="n">periods</span><span class="o">=</span><span class="mi">12</span><span class="p">),</span>
+<span class="p">})</span>
+
+<span class="c1"># 2. Compute growth on all months first, then keep 2025</span>
+<span class="n">compute_first</span> <span class="o">=</span> <span class="n">growth</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s2">&quot;2025&quot;</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;mom_growth&quot;</span><span class="p">,</span> <span class="s2">&quot;yoy_growth&quot;</span><span class="p">]]</span>
+
+<span class="n">check_months</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;2025-01-01&quot;</span><span class="p">,</span> <span class="s2">&quot;2025-02-01&quot;</span><span class="p">]</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s2">&quot;MoM, filter first&quot;</span><span class="p">:</span> <span class="n">filter_first</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">check_months</span><span class="p">,</span> <span class="s2">&quot;mom_growth&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">as_pct</span><span class="p">),</span>
+    <span class="s2">&quot;MoM, compute first&quot;</span><span class="p">:</span> <span class="n">compute_first</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">check_months</span><span class="p">,</span> <span class="s2">&quot;mom_growth&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">as_pct</span><span class="p">),</span>
+    <span class="s2">&quot;YoY, filter first&quot;</span><span class="p">:</span> <span class="n">filter_first</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">check_months</span><span class="p">,</span> <span class="s2">&quot;yoy_growth&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">as_pct</span><span class="p">),</span>
+    <span class="s2">&quot;YoY, compute first&quot;</span><span class="p">:</span> <span class="n">compute_first</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">check_months</span><span class="p">,</span> <span class="s2">&quot;yoy_growth&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">as_pct</span><span class="p">),</span>
+<span class="p">},</span> <span class="n">index</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">DatetimeIndex</span><span class="p">(</span><span class="n">check_months</span><span class="p">)</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%b %Y&quot;</span><span class="p">))</span>
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>MoM, filter first</th>
+      <th>MoM, compute first</th>
+      <th>YoY, filter first</th>
+      <th>YoY, compute first</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Jan 2025</th>
+      <td>no comparison</td>
+      <td>-75.1%</td>
+      <td>no comparison</td>
+      <td>+2.0%</td>
+    </tr>
+    <tr>
+      <th>Feb 2025</th>
+      <td>+22.0%</td>
+      <td>+22.0%</td>
+      <td>no comparison</td>
+      <td>+92.3%</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p>In the output above, filtering first leaves January 2025 with no row above it, so its MoM growth becomes blank. And because the filtered series holds only 12 months, <strong>every</strong> YoY value becomes blank: December 2024 and all of 2024 were removed before the calculation could see them.</p>
+<blockquote>
+<p><strong>Rule</strong></p>
+<p><strong>Compute growth on the complete monthly series first. Filter or highlight the period you want to show afterwards.</strong> If you must filter first, say clearly that the comparison months were removed.</p>
+</blockquote>
+<p>Filtering by <strong>segment</strong> or <strong>region</strong> is different: it changes <em>which</em> lines count, and it applies equally to both months being compared. That is fine, as long as you build the full 36-month series for that group and state the filter.</p>
+<h3 id="g5-core-the-returns-list">G5 (Core): The returns list<a class="headerlink" href="#g5-core-the-returns-list" title="Permanent link">&para;</a></h3>
+<p>From the Session 2 lab, <code>returned_order_flag</code> is 1 when an order appears on the source's <strong>returns list</strong>. It is an <strong>order-level</strong> flag: every line of a listed order has 1. So we count <strong>distinct orders</strong>, never lines.</p>
+<div class="highlight"><pre><span></span><code><span class="n">returned</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;returned_order_flag&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">]</span>
+
+<span class="n">returns_by_segment</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s2">&quot;orders&quot;</span><span class="p">:</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;segment&quot;</span><span class="p">)[</span><span class="s2">&quot;order_id&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">(),</span>
+    <span class="s2">&quot;orders_on_returns_list&quot;</span><span class="p">:</span> <span class="n">returned</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;segment&quot;</span><span class="p">)[</span><span class="s2">&quot;order_id&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">(),</span>
+<span class="p">})</span>
+<span class="n">returns_by_segment</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s2">&quot;All segments&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">df</span><span class="p">[</span><span class="s2">&quot;order_id&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">(),</span>
+    <span class="n">returned</span><span class="p">[</span><span class="s2">&quot;order_id&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">(),</span>
+<span class="p">]</span>
+<span class="n">returns_by_segment</span><span class="p">[</span><span class="s2">&quot;share_on_list&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">returns_by_segment</span><span class="p">[</span><span class="s2">&quot;orders_on_returns_list&quot;</span><span class="p">]</span> <span class="o">/</span> <span class="n">returns_by_segment</span><span class="p">[</span><span class="s2">&quot;orders&quot;</span><span class="p">]</span>
+<span class="p">)</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{:.1%}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">)</span>
+<span class="n">returns_by_segment</span>
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>orders</th>
+      <th>orders_on_returns_list</th>
+      <th>share_on_list</th>
+    </tr>
+    <tr>
+      <th>segment</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Consumer</th>
+      <td>1738</td>
+      <td>99</td>
+      <td>5.7%</td>
+    </tr>
+    <tr>
+      <th>Corporate</th>
+      <td>1044</td>
+      <td>61</td>
+      <td>5.8%</td>
+    </tr>
+    <tr>
+      <th>Home Office</th>
+      <td>606</td>
+      <td>31</td>
+      <td>5.1%</td>
+    </tr>
+    <tr>
+      <th>All segments</th>
+      <td>3388</td>
+      <td>191</td>
+      <td>5.6%</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p>The <strong>All segments</strong> row is calculated from the whole table, not by adding the segment rows. Check that the segment counts add up to it: if an order appeared in two segments it would be counted twice.</p>
+<blockquote>
+<p><strong>What the returns list cannot tell you</strong></p>
+<ul>
+<li><strong>When</strong> an order was returned, or how many items.</li>
+<li><strong>How much</strong> money was refunded.</li>
+<li>Whether an order <strong>not</strong> on the list was definitely kept.</li>
+</ul>
+<p>So call it <em>"share of orders on the returns list"</em>, not "return rate", and do not subtract anything from Sales because of it.</p>
+</blockquote>
+<h3 id="g6-core-build-the-dashboard">G6 (Core): Build the dashboard<a class="headerlink" href="#g6-core-build-the-dashboard" title="Permanent link">&para;</a></h3>
+<p>In Python, a simple dashboard is <strong>one figure with several charts</strong> (called <em>subplots</em>). <code>plt.subplots(3, 1)</code> creates three charts stacked vertically; each one has its own <code>ax</code> to draw on.</p>
+<p>The code is wrapped in a <strong>function</strong>, <code>draw_dashboard</code>, so you can redraw the whole dashboard for one region later by changing a single line. That is the Python version of one filter that controls every view.</p>
+<p>The function:</p>
+<ol>
+<li>builds a segment KPI table (Sales and share of orders on the returns list);</li>
+<li>builds a complete 36-month Sales series, putting 0 in any month where the selection has no lines;</li>
+<li>computes YoY growth on the full series <strong>before</strong> anything is hidden;</li>
+<li>draws three panels with message titles and a scope note.</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">draw_dashboard</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">scope</span><span class="p">):</span>
+    <span class="c1"># 1. Segment KPIs</span>
+    <span class="n">kpis</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+        <span class="s2">&quot;sales&quot;</span><span class="p">:</span> <span class="n">data</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;segment&quot;</span><span class="p">)[</span><span class="s2">&quot;sales&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span>
+        <span class="s2">&quot;orders&quot;</span><span class="p">:</span> <span class="n">data</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;segment&quot;</span><span class="p">)[</span><span class="s2">&quot;order_id&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">(),</span>
+        <span class="s2">&quot;listed&quot;</span><span class="p">:</span> <span class="n">data</span><span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;returned_order_flag&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;segment&quot;</span><span class="p">)[</span><span class="s2">&quot;order_id&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">(),</span>
+    <span class="p">})</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">({</span><span class="s2">&quot;listed&quot;</span><span class="p">:</span> <span class="nb">int</span><span class="p">})</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s2">&quot;sales&quot;</span><span class="p">)</span>
+    <span class="n">kpis</span><span class="p">[</span><span class="s2">&quot;share_on_list&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">kpis</span><span class="p">[</span><span class="s2">&quot;listed&quot;</span><span class="p">]</span> <span class="o">/</span> <span class="n">kpis</span><span class="p">[</span><span class="s2">&quot;orders&quot;</span><span class="p">]</span>
+
+    <span class="c1"># 2. Complete monthly series (0 where the selection has no lines)</span>
+    <span class="n">trend</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;order_month&quot;</span><span class="p">)[</span><span class="s2">&quot;sales&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">reindex</span><span class="p">(</span><span class="n">all_months</span><span class="p">,</span> <span class="n">fill_value</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+    <span class="c1"># 3. YoY growth on the full series; zero comparison month means no comparison</span>
+    <span class="n">yoy</span> <span class="o">=</span> <span class="n">trend</span><span class="o">.</span><span class="n">pct_change</span><span class="p">(</span><span class="n">periods</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">trend</span><span class="o">.</span><span class="n">shift</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span>
+
+    <span class="n">fig</span><span class="p">,</span> <span class="p">(</span><span class="n">ax1</span><span class="p">,</span> <span class="n">ax2</span><span class="p">,</span> <span class="n">ax3</span><span class="p">)</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">11</span><span class="p">))</span>
+
+    <span class="n">ax1</span><span class="o">.</span><span class="n">barh</span><span class="p">(</span><span class="n">kpis</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">kpis</span><span class="p">[</span><span class="s2">&quot;sales&quot;</span><span class="p">])</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">share</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">kpis</span><span class="p">[</span><span class="s2">&quot;share_on_list&quot;</span><span class="p">]):</span>
+        <span class="n">ax1</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">kpis</span><span class="p">[</span><span class="s2">&quot;sales&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">i</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;  </span><span class="si">{</span><span class="n">share</span><span class="si">:</span><span class="s2">.1%</span><span class="si">}</span><span class="s2"> of orders on returns list&quot;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s2">&quot;center&quot;</span><span class="p">)</span>
+    <span class="n">ax1</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">kpis</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2"> has the most Sales; returns-list shares are close&quot;</span><span class="p">)</span>
+    <span class="n">ax1</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Sales (source monetary units)&quot;</span><span class="p">)</span>
+
+    <span class="n">ax2</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">trend</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">trend</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
+    <span class="n">ax2</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Sales peak towards the end of each year and dip every January–February&quot;</span><span class="p">)</span>
+    <span class="n">ax2</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Order month&quot;</span><span class="p">)</span>
+    <span class="n">ax2</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Sales (source monetary units)&quot;</span><span class="p">)</span>
+
+    <span class="n">ax3</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">yoy</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">yoy</span> <span class="o">*</span> <span class="mi">100</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#1baf7a&quot;</span><span class="p">)</span>
+    <span class="n">ax3</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.8</span><span class="p">)</span>
+    <span class="n">ax3</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Compared with the same month a year earlier (2023 has no comparison)&quot;</span><span class="p">)</span>
+    <span class="n">ax3</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Order month&quot;</span><span class="p">)</span>
+    <span class="n">ax3</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;YoY growth (%)&quot;</span><span class="p">)</span>
+
+    <span class="n">fig</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Retail dashboard: </span><span class="si">{</span><span class="n">scope</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s2">&quot;bold&quot;</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mf">0.02</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s2">&quot;left&quot;</span><span class="p">)</span>
+    <span class="n">fig</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">0.02</span><span class="p">,</span> <span class="mf">0.005</span><span class="p">,</span> <span class="s2">&quot;Scope: orders placed Jan 2023–Dec 2025. Sales in source monetary units. &quot;</span>
+             <span class="s2">&quot;Fictitious sample data. Returns list = membership only, no refund amounts.&quot;</span><span class="p">,</span>
+             <span class="n">fontsize</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#555555&quot;</span><span class="p">)</span>
+    <span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">(</span><span class="n">rect</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.02</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+    <span class="n">kpis</span><span class="p">[</span><span class="s2">&quot;share_on_list&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">kpis</span><span class="p">[</span><span class="s2">&quot;share_on_list&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">100</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">kpis</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;share_on_list&quot;</span><span class="p">:</span> <span class="s2">&quot;share_on_list_%&quot;</span><span class="p">})</span>
+
+
+<span class="n">draw_dashboard</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="s2">&quot;all regions&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p><img alt="png" src="../07_trends_and_growth_lab_files/07_trends_and_growth_lab_32_0.png" /></p>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>sales</th>
+      <th>orders</th>
+      <th>listed</th>
+      <th>share_on_list_%</th>
+    </tr>
+    <tr>
+      <th>segment</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Home Office</th>
+      <td>277,656.95</td>
+      <td>606</td>
+      <td>31</td>
+      <td>5.10</td>
+    </tr>
+    <tr>
+      <th>Corporate</th>
+      <td>467,562.02</td>
+      <td>1044</td>
+      <td>61</td>
+      <td>5.80</td>
+    </tr>
+    <tr>
+      <th>Consumer</th>
+      <td>835,747.86</td>
+      <td>1738</td>
+      <td>99</td>
+      <td>5.70</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p>The table under the chart is the segment KPI table the function returned. The message titles were written after reading these charts on the full data; if you redraw for one region, check that each title is still true and change it if not.</p>
+<h4 id="design-checks">Design checks<a class="headerlink" href="#design-checks" title="Permanent link">&para;</a></h4>
+<p>Use what you learned in <a href="../../foundations/visual-design/">Designing clear visuals</a>:</p>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled/> The most important view is at the top.</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Every chart has a title that states a message and labelled axes with units.</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Colour is used only where it means something.</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Nothing can be understood only by colour; labels or a table are available too.</li>
+<li class="task-list-item"><input type="checkbox" disabled/> The scope note states the period, units and that the data is a fictitious sample.</li>
+</ul>
+<hr />
+<h2 id="independent-tasks">Independent tasks<a class="headerlink" href="#independent-tasks" title="Permanent link">&para;</a></h2>
+<h3 id="i1-core-redraw-the-dashboard-for-one-region">I1 (Core): Redraw the dashboard for one region<a class="headerlink" href="#i1-core-redraw-the-dashboard-for-one-region" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>Your turn:</strong> change the code in the next cell and run it again.</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="c1"># 1. Change &quot;West&quot; to another region: &quot;East&quot;, &quot;Central&quot; or &quot;South&quot;.</span>
+<span class="c1"># 2. Run the cell. Read every title: is each message still true for this region?</span>
+<span class="c1"># 3. If a title is no longer true, write down what it should say instead.</span>
+<span class="n">region</span> <span class="o">=</span> <span class="s2">&quot;West&quot;</span>
+<span class="n">draw_dashboard</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;region&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">region</span><span class="p">],</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">region</span><span class="si">}</span><span class="s2"> region only&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p><img alt="png" src="../07_trends_and_growth_lab_files/07_trends_and_growth_lab_36_0.png" /></p>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>sales</th>
+      <th>orders</th>
+      <th>listed</th>
+      <th>share_on_list_%</th>
+    </tr>
+    <tr>
+      <th>segment</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Home Office</th>
+      <td>84,769.73</td>
+      <td>203</td>
+      <td>18</td>
+      <td>8.90</td>
+    </tr>
+    <tr>
+      <th>Corporate</th>
+      <td>140,280.49</td>
+      <td>324</td>
+      <td>38</td>
+      <td>11.70</td>
+    </tr>
+    <tr>
+      <th>Consumer</th>
+      <td>256,522.36</td>
+      <td>562</td>
+      <td>62</td>
+      <td>11.00</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h3 id="i2-core-official-construction-spending-choose-one-series">I2 (Core): Official construction spending — choose one series<a class="headerlink" href="#i2-core-official-construction-spending-choose-one-series" title="Permanent link">&para;</a></h3>
+<p>Official statistics files often hold <strong>many series in one table</strong>: totals and parts, adjusted and unadjusted, amounts and percentages. Adding everything up would mix incompatible measures. Your first job is to <strong>select exactly one series</strong> and say precisely what it is.</p>
+<p>Run the cell to download the file and check it is the version this course was written for.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># U.S. Census Bureau, Construction Spending (value put in place), as mirrored in</span>
+<span class="c1"># Tableau&#39;s sample-data catalog. The file is read straight into memory; nothing is saved to disk.</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">hashlib</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">io</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">urllib.request</span>
+
+<span class="n">CONS_URL</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;https://public.tableau.com/app/sample-data/&quot;</span>
+            <span class="s2">&quot;enigma-us.gov_.census.eits_.vip-97d8678900cbb89fee543a41aa21ab9a_2_0.csv&quot;</span><span class="p">)</span>
+<span class="n">CONS_SHA256</span> <span class="o">=</span> <span class="s2">&quot;6cf9ad9f20c8eeb2c5b33d9cc29b8c648579a52ff50a24d3f6f5f1ba332b8b34&quot;</span>
+
+<span class="n">cons_bytes</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">CONS_URL</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="k">if</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">sha256</span><span class="p">(</span><span class="n">cons_bytes</span><span class="p">)</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span> <span class="o">!=</span> <span class="n">CONS_SHA256</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;WARNING: this file has changed since the course was written. Tell your facilitator.&quot;</span><span class="p">)</span>
+<span class="n">cons_raw</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">io</span><span class="o">.</span><span class="n">BytesIO</span><span class="p">(</span><span class="n">cons_bytes</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Rows, columns:&quot;</span><span class="p">,</span> <span class="n">cons_raw</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="n">cons_raw</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Rows, columns: (50208, 20)
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>per_idx</th>
+      <th>per_name</th>
+      <th>cat_idx</th>
+      <th>cat_code</th>
+      <th>cat_desc</th>
+      <th>cat_indent</th>
+      <th>dt_idx</th>
+      <th>dt_code</th>
+      <th>dt_desc</th>
+      <th>dt_unit</th>
+      <th>et_idx</th>
+      <th>et_code</th>
+      <th>et_desc</th>
+      <th>et_unit</th>
+      <th>geo_idx</th>
+      <th>geo_code</th>
+      <th>geo_desc</th>
+      <th>is_adj</th>
+      <th>val</th>
+      <th>serialid</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>2002-01-01</td>
+      <td>1</td>
+      <td>XXXX</td>
+      <td>Total Construction</td>
+      <td>0</td>
+      <td>1</td>
+      <td>T</td>
+      <td>Total Construction</td>
+      <td>MLN$</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1</td>
+      <td>US</td>
+      <td>U.S. Total</td>
+      <td>0</td>
+      <td>59,516.00</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>2002-01-01</td>
+      <td>2</td>
+      <td>00XX</td>
+      <td>Residential</td>
+      <td>0</td>
+      <td>1</td>
+      <td>T</td>
+      <td>Total Construction</td>
+      <td>MLN$</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1</td>
+      <td>US</td>
+      <td>U.S. Total</td>
+      <td>0</td>
+      <td>25,972.00</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1</td>
+      <td>2002-01-01</td>
+      <td>3</td>
+      <td>NRXX</td>
+      <td>Nonresidential</td>
+      <td>0</td>
+      <td>1</td>
+      <td>T</td>
+      <td>Total Construction</td>
+      <td>MLN$</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1</td>
+      <td>US</td>
+      <td>U.S. Total</td>
+      <td>0</td>
+      <td>33,545.00</td>
+      <td>3</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p>Each row is <strong>one value of one series in one month</strong>. The columns that pick out a series are:</p>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Meaning</th>
+<th>Value we want</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>cat_code</code></td>
+<td>Category of construction</td>
+<td><code>XXXX</code> = Total construction</td>
+</tr>
+<tr>
+<td><code>dt_code</code></td>
+<td>Data type</td>
+<td><code>T</code> = Total (private + public)</td>
+</tr>
+<tr>
+<td><code>et_idx</code></td>
+<td>Estimate or its error measure</td>
+<td><code>0</code> = the estimate itself</td>
+</tr>
+<tr>
+<td><code>geo_code</code></td>
+<td>Geography</td>
+<td><code>US</code></td>
+</tr>
+<tr>
+<td><code>is_adj</code></td>
+<td>Seasonally adjusted?</td>
+<td><code>0</code> = not adjusted (actual monthly amounts)</td>
+</tr>
+</tbody>
+</table>
+<p>First look at how many different categories and units the file mixes:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Category codes:&quot;</span><span class="p">,</span> <span class="n">cons_raw</span><span class="p">[</span><span class="s2">&quot;cat_code&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Units:&quot;</span><span class="p">,</span> <span class="n">cons_raw</span><span class="p">[</span><span class="s2">&quot;dt_unit&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Rows with no value:&quot;</span><span class="p">,</span> <span class="n">cons_raw</span><span class="p">[</span><span class="s2">&quot;val&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span> <span class="s2">&quot;of&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">cons_raw</span><span class="p">))</span>
+<span class="n">cons_raw</span><span class="p">[</span><span class="n">cons_raw</span><span class="p">[</span><span class="s2">&quot;cat_code&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="s2">&quot;XXXX&quot;</span><span class="p">,</span> <span class="s2">&quot;AXXXX&quot;</span><span class="p">])]</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span>
+    <span class="p">[</span><span class="s2">&quot;cat_code&quot;</span><span class="p">,</span> <span class="s2">&quot;cat_desc&quot;</span><span class="p">,</span> <span class="s2">&quot;is_adj&quot;</span><span class="p">,</span> <span class="s2">&quot;dt_unit&quot;</span><span class="p">])[</span><span class="s2">&quot;val&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Category codes: 38
+Units: [&#39;MLN$&#39; &#39;PCT&#39; nan]
+Rows with no value: 33216 of 50208
+
+
+
+
+
+cat_code  cat_desc                            is_adj  dt_unit
+AXXXX     Annual Rate for Total Construction  1       MLN$       531
+XXXX      Total Construction                  0       MLN$       531
+                                              1       PCT          0
+Name: val, dtype: int64
+</code></pre></div>
+<p>Now apply all five conditions, and check the result before using it: one row per month, one unit, no blanks, no gaps in the calendar.</p>
+<div class="highlight"><pre><span></span><code><span class="n">selected</span> <span class="o">=</span> <span class="n">cons_raw</span><span class="p">[</span>
+    <span class="p">(</span><span class="n">cons_raw</span><span class="p">[</span><span class="s2">&quot;cat_code&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;XXXX&quot;</span><span class="p">)</span>
+    <span class="o">&amp;</span> <span class="p">(</span><span class="n">cons_raw</span><span class="p">[</span><span class="s2">&quot;dt_code&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;T&quot;</span><span class="p">)</span>
+    <span class="o">&amp;</span> <span class="p">(</span><span class="n">cons_raw</span><span class="p">[</span><span class="s2">&quot;et_idx&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="o">&amp;</span> <span class="p">(</span><span class="n">cons_raw</span><span class="p">[</span><span class="s2">&quot;geo_code&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;US&quot;</span><span class="p">)</span>
+    <span class="o">&amp;</span> <span class="p">(</span><span class="n">cons_raw</span><span class="p">[</span><span class="s2">&quot;is_adj&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+<span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">selected</span><span class="p">[</span><span class="s2">&quot;month&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">selected</span><span class="p">[</span><span class="s2">&quot;per_name&quot;</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Rows:&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">selected</span><span class="p">),</span> <span class="s2">&quot;| distinct months:&quot;</span><span class="p">,</span> <span class="n">selected</span><span class="p">[</span><span class="s2">&quot;month&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Units:&quot;</span><span class="p">,</span> <span class="n">selected</span><span class="p">[</span><span class="s2">&quot;dt_unit&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">(),</span> <span class="s2">&quot;| blank values:&quot;</span><span class="p">,</span> <span class="n">selected</span><span class="p">[</span><span class="s2">&quot;val&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+
+<span class="n">spend</span> <span class="o">=</span> <span class="n">selected</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">&quot;month&quot;</span><span class="p">)[</span><span class="s2">&quot;val&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sort_index</span><span class="p">()</span>
+<span class="n">calendar</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">date_range</span><span class="p">(</span><span class="n">spend</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="n">spend</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">max</span><span class="p">(),</span> <span class="n">freq</span><span class="o">=</span><span class="s2">&quot;MS&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;First month:&quot;</span><span class="p">,</span> <span class="n">spend</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">min</span><span class="p">()</span><span class="o">.</span><span class="n">date</span><span class="p">(),</span> <span class="s2">&quot;| last month:&quot;</span><span class="p">,</span> <span class="n">spend</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">max</span><span class="p">()</span><span class="o">.</span><span class="n">date</span><span class="p">(),</span>
+      <span class="s2">&quot;| missing months:&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">calendar</span><span class="o">.</span><span class="n">difference</span><span class="p">(</span><span class="n">spend</span><span class="o">.</span><span class="n">index</span><span class="p">)))</span>
+<span class="n">spend</span> <span class="o">=</span> <span class="n">spend</span><span class="o">.</span><span class="n">reindex</span><span class="p">(</span><span class="n">calendar</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Rows: 177 | distinct months: 177
+Units: [&#39;MLN$&#39;] | blank values: 0
+First month: 2002-01-01 | last month: 2016-09-01 | missing months: 0
+</code></pre></div>
+<blockquote>
+<p><strong>Write your series definition</strong></p>
+<p>Complete this sentence in your evidence log: <em>"US total construction spending (value put in place), all owners, not seasonally adjusted, millions of US dollars, monthly from ___ to ___; U.S. Census Bureau via Tableau's sample-data catalog."</em></p>
+</blockquote>
+<p>Plot the series and a year-overlay. Fifteen years on one chart is a lot of lines, so (as in Session 6) we draw the older years in grey and <strong>highlight</strong> the two most recent.</p>
+<blockquote>
+<p><strong>Your turn:</strong> change the code in the next cell and run it again.</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="c1"># 1. Run the cell and describe the long-run trend in one sentence. When did it turn?</span>
+<span class="c1"># 2. In the overlay, which months are high and which are low every year?</span>
+<span class="c1"># 3. Change the two highlighted years, for example to 2008 and 2009. What changed?</span>
+<span class="n">highlight</span> <span class="o">=</span> <span class="p">{</span><span class="mi">2015</span><span class="p">:</span> <span class="s2">&quot;#2a78d6&quot;</span><span class="p">,</span> <span class="mi">2016</span><span class="p">:</span> <span class="s2">&quot;#eb6834&quot;</span><span class="p">}</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="p">(</span><span class="n">ax1</span><span class="p">,</span> <span class="n">ax2</span><span class="p">)</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="mf">3.8</span><span class="p">))</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">spend</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">spend</span> <span class="o">/</span> <span class="mi">1000</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#2a78d6&quot;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;US construction spending, monthly&quot;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Billions of US dollars (not adjusted)&quot;</span><span class="p">)</span>
+
+<span class="n">table</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">&quot;year&quot;</span><span class="p">:</span> <span class="n">spend</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">year</span><span class="p">,</span> <span class="s2">&quot;month&quot;</span><span class="p">:</span> <span class="n">spend</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">month</span><span class="p">,</span> <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="n">spend</span><span class="o">.</span><span class="n">values</span> <span class="o">/</span> <span class="mi">1000</span><span class="p">})</span>
+<span class="n">by_year</span> <span class="o">=</span> <span class="n">table</span><span class="o">.</span><span class="n">pivot</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="s2">&quot;month&quot;</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="s2">&quot;year&quot;</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="s2">&quot;value&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">year</span> <span class="ow">in</span> <span class="n">by_year</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">year</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">highlight</span><span class="p">:</span>
+        <span class="n">ax2</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">by_year</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">by_year</span><span class="p">[</span><span class="n">year</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#d4d2cc&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">year</span><span class="p">,</span> <span class="n">colour</span> <span class="ow">in</span> <span class="n">highlight</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="n">ax2</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">by_year</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">by_year</span><span class="p">[</span><span class="n">year</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="n">colour</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">2.5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">year</span><span class="p">))</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Same months, every year (grey = other years)&quot;</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Month of the year&quot;</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">13</span><span class="p">))</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+<p><img alt="png" src="../07_trends_and_growth_lab_files/07_trends_and_growth_lab_45_0.png" /></p>
+<blockquote>
+<p><strong>Check the last year</strong></p>
+<p>Look at where the 2016 line stops. How many months of 2016 are in the file? Keep that in mind for the next task.</p>
+</blockquote>
+<h3 id="i3-core-construction-fair-growth-comparisons">I3 (Core): Construction — fair growth comparisons<a class="headerlink" href="#i3-core-construction-fair-growth-comparisons" title="Permanent link">&para;</a></h3>
+<p>Compute YoY growth on the <strong>complete</strong> monthly series, then compare years using only the months every year has.</p>
+<blockquote>
+<p><strong>Your turn:</strong> change the code in the next cell and run it again.</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="c1"># 1. Run the cell. In which years was YoY growth negative for most months?</span>
+<span class="c1"># 2. Read the year-to-date table: which months does it cover, and why not the full year?</span>
+<span class="c1"># 3. Change last_month to 6 (January–June). Does the ranking of 2015 vs 2016 change?</span>
+<span class="n">yoy</span> <span class="o">=</span> <span class="n">spend</span><span class="o">.</span><span class="n">pct_change</span><span class="p">(</span><span class="n">periods</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span> <span class="n">fill_method</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">yoy</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">yoy</span> <span class="o">*</span> <span class="mi">100</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">25</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;#2a78d6&quot;</span> <span class="k">if</span> <span class="n">v</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="k">else</span> <span class="s2">&quot;#eb6834&quot;</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">yoy</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">)])</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.8</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Year-on-year growth of monthly construction spending (2002 has no comparison)&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Month&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;YoY growth (%)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="n">last_month</span> <span class="o">=</span> <span class="mi">9</span>
+<span class="n">ytd</span> <span class="o">=</span> <span class="n">spend</span><span class="p">[</span><span class="n">spend</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">month</span> <span class="o">&lt;=</span> <span class="n">last_month</span><span class="p">]</span>
+<span class="n">ytd_by_year</span> <span class="o">=</span> <span class="n">ytd</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">ytd</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">year</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">(</span><span class="n">months</span><span class="o">=</span><span class="s2">&quot;count&quot;</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="s2">&quot;sum&quot;</span><span class="p">)</span>
+<span class="n">ytd_by_year</span><span class="p">[</span><span class="s2">&quot;YoY&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ytd_by_year</span><span class="p">[</span><span class="s2">&quot;total&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">pct_change</span><span class="p">()</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{:+.1%}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">)</span>
+<span class="n">ytd_by_year</span><span class="p">[</span><span class="s2">&quot;total&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">ytd_by_year</span><span class="p">[</span><span class="s2">&quot;total&quot;</span><span class="p">]</span> <span class="o">/</span> <span class="mi">1000</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">ytd_by_year</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;total&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;Jan–month </span><span class="si">{</span><span class="n">last_month</span><span class="si">}</span><span class="s2"> total ($bn)&quot;</span><span class="p">})</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+</code></pre></div>
+<p><img alt="png" src="../07_trends_and_growth_lab_files/07_trends_and_growth_lab_48_0.png" /></p>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>months</th>
+      <th>Jan–month 9 total ($bn)</th>
+      <th>YoY</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2011</th>
+      <td>9</td>
+      <td>583.80</td>
+      <td>-4.0%</td>
+    </tr>
+    <tr>
+      <th>2012</th>
+      <td>9</td>
+      <td>631.10</td>
+      <td>+8.1%</td>
+    </tr>
+    <tr>
+      <th>2013</th>
+      <td>9</td>
+      <td>666.20</td>
+      <td>+5.6%</td>
+    </tr>
+    <tr>
+      <th>2014</th>
+      <td>9</td>
+      <td>744.30</td>
+      <td>+11.7%</td>
+    </tr>
+    <tr>
+      <th>2015</th>
+      <td>9</td>
+      <td>826.80</td>
+      <td>+11.1%</td>
+    </tr>
+    <tr>
+      <th>2016</th>
+      <td>9</td>
+      <td>863.20</td>
+      <td>+4.4%</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p>Write two sentences: one on the long-run trend, one comparing the latest part-year with the same months a year earlier. Name the months you compared.</p>
+<h3 id="i4-core-recommend-a-test">I4 (Core): Recommend a test<a class="headerlink" href="#i4-core-recommend-a-test" title="Permanent link">&para;</a></h3>
+<p>Write <strong>five sentences</strong> to the commercial lead:</p>
+<ol>
+<li><strong>The test:</strong> one specific change to try, in one segment.</li>
+<li><strong>Evidence:</strong> one measure from the trend or growth views.</li>
+<li><strong>Evidence:</strong> one measure from the segment table, including the returns-list share.</li>
+<li><strong>Limitation:</strong> for example, the trend shows <em>when</em> sales change, not <em>why</em>; the returns list has no refund amounts; the data is a fictitious sample.</li>
+<li><strong>How to measure success:</strong> the measure and comparison you would use to judge the test, such as YoY Sales for the same months, or the same months in a similar group that did not get the change.</li>
+</ol>
+<blockquote>
+<p><strong>Why a test?</strong></p>
+<p>Past data shows patterns, not causes. A segment growing at the same time as something else happened is an <strong>association</strong>, not proof that one caused the other. A small, well-measured test, compared fairly with the same months last year or with an untouched group, is how you find out whether a change actually works.</p>
+</blockquote>
+<h3 id="i5-stretch-one-segment-over-three-years">I5 (Stretch): One segment over three years<a class="headerlink" href="#i5-stretch-one-segment-over-three-years" title="Permanent link">&para;</a></h3>
+<p>This code adds up Sales by quarter for one segment and puts the years side by side, so you compare the <strong>same quarter</strong> across years.</p>
+<blockquote>
+<p><strong>Your turn:</strong> change the code in the next cell and run it again.</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="c1"># 1. Change &quot;Consumer&quot; to &quot;Corporate&quot; or &quot;Home Office&quot;.</span>
+<span class="c1"># 2. For each quarter, is the segment growing, flat or falling across the years?</span>
+<span class="c1"># 3. Describe the segment&#39;s trend in three sentences.</span>
+<span class="n">segment</span> <span class="o">=</span> <span class="s2">&quot;Consumer&quot;</span>
+<span class="n">one_segment</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;segment&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">segment</span><span class="p">]</span>
+<span class="n">quarterly</span> <span class="o">=</span> <span class="n">one_segment</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="n">one_segment</span><span class="p">[</span><span class="s2">&quot;order_date&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">quarter</span><span class="p">,</span>
+                                 <span class="n">one_segment</span><span class="p">[</span><span class="s2">&quot;order_date&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">year</span><span class="p">])[</span><span class="s2">&quot;sales&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">unstack</span><span class="p">()</span>
+<span class="n">quarterly</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;quarter&quot;</span>
+<span class="n">quarterly</span>
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>order_date</th>
+      <th>2023</th>
+      <th>2024</th>
+      <th>2025</th>
+    </tr>
+    <tr>
+      <th>quarter</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>21,964.98</td>
+      <td>40,962.89</td>
+      <td>46,744.16</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>48,942.87</td>
+      <td>56,445.35</td>
+      <td>70,813.86</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>97,130.76</td>
+      <td>79,582.04</td>
+      <td>80,842.86</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>100,661.57</td>
+      <td>90,342.28</td>
+      <td>101,314.24</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h3 id="i6-stretch-growth-for-one-segment">I6 (Stretch): Growth for one segment<a class="headerlink" href="#i6-stretch-growth-for-one-segment" title="Permanent link">&para;</a></h3>
+<p>Change the segment and the months. Remember: build the full series for the segment first, then pick the months to show.</p>
+<blockquote>
+<p><strong>Your turn:</strong> change the code in the next cell and run it again.</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="c1"># 1. Change &quot;Consumer&quot; to another segment.</span>
+<span class="c1"># 2. Change the months in the list to two or three months you want to inspect.</span>
+<span class="c1"># 3. Is the MoM or the YoY figure the fairer one to report for each month? Why?</span>
+<span class="n">segment</span> <span class="o">=</span> <span class="s2">&quot;Consumer&quot;</span>
+<span class="n">seg</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;segment&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">segment</span><span class="p">]</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;order_month&quot;</span><span class="p">)[</span><span class="s2">&quot;sales&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">reindex</span><span class="p">(</span><span class="n">all_months</span><span class="p">,</span> <span class="n">fill_value</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">seg_growth</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">&quot;sales&quot;</span><span class="p">:</span> <span class="n">seg</span><span class="p">})</span>
+<span class="n">seg_growth</span><span class="p">[</span><span class="s2">&quot;mom_growth&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">seg</span><span class="o">.</span><span class="n">pct_change</span><span class="p">()</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">seg</span><span class="o">.</span><span class="n">shift</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">seg_growth</span><span class="p">[</span><span class="s2">&quot;yoy_growth&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">seg</span><span class="o">.</span><span class="n">pct_change</span><span class="p">(</span><span class="n">periods</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">seg</span><span class="o">.</span><span class="n">shift</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">growth_table</span><span class="p">(</span><span class="n">seg_growth</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;2024-12-01&quot;</span><span class="p">,</span> <span class="s2">&quot;2025-01-01&quot;</span><span class="p">,</span> <span class="s2">&quot;2025-06-01&quot;</span><span class="p">])</span>
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Sales</th>
+      <th>MoM growth</th>
+      <th>YoY growth</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Dec 2024</th>
+      <td>40,067</td>
+      <td>+20.9%</td>
+      <td>+5.9%</td>
+    </tr>
+    <tr>
+      <th>Jan 2025</th>
+      <td>6,027</td>
+      <td>-85.0%</td>
+      <td>-57.8%</td>
+    </tr>
+    <tr>
+      <th>Jun 2025</th>
+      <td>24,430</td>
+      <td>-24.2%</td>
+      <td>+90.5%</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h3 id="i7-stretch-adjusted-versus-not-adjusted-and-a-rolling-average">I7 (Stretch): Adjusted versus not adjusted, and a rolling average<a class="headerlink" href="#i7-stretch-adjusted-versus-not-adjusted-and-a-rolling-average" title="Permanent link">&para;</a></h3>
+<p>The file also holds the <strong>seasonally adjusted annual rate</strong> for total construction (<code>cat_code</code> <code>AXXXX</code>, <code>is_adj</code> 1). It is a different measure: adjusted for the seasons <strong>and</strong> scaled up to a full year. Dividing it by 12 puts it on a monthly scale so it can share a chart with the actual amounts. It must never be added to them.</p>
+<blockquote>
+<p><strong>Your turn:</strong> change the code in the next cell and run it again.</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="c1"># 1. Run the cell. Which line shows the turning points most clearly?</span>
+<span class="c1"># 2. Why do the trailing 12-month average and the adjusted line not match exactly in time?</span>
+<span class="c1"># 3. Change window to 3. What happens to the seasonal wiggles?</span>
+<span class="n">saar</span> <span class="o">=</span> <span class="n">cons_raw</span><span class="p">[</span>
+    <span class="p">(</span><span class="n">cons_raw</span><span class="p">[</span><span class="s2">&quot;cat_code&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;AXXXX&quot;</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">cons_raw</span><span class="p">[</span><span class="s2">&quot;dt_code&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;T&quot;</span><span class="p">)</span>
+    <span class="o">&amp;</span> <span class="p">(</span><span class="n">cons_raw</span><span class="p">[</span><span class="s2">&quot;et_idx&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">cons_raw</span><span class="p">[</span><span class="s2">&quot;geo_code&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;US&quot;</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">cons_raw</span><span class="p">[</span><span class="s2">&quot;is_adj&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
+<span class="p">]</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">month</span><span class="o">=</span><span class="k">lambda</span> <span class="n">d</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="s2">&quot;per_name&quot;</span><span class="p">]))</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">&quot;month&quot;</span><span class="p">)[</span><span class="s2">&quot;val&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sort_index</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Adjusted annual-rate rows:&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">saar</span><span class="p">),</span> <span class="s2">&quot;| same months as the actual series:&quot;</span><span class="p">,</span>
+      <span class="n">saar</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">equals</span><span class="p">(</span><span class="n">spend</span><span class="o">.</span><span class="n">index</span><span class="p">))</span>
+
+<span class="n">window</span> <span class="o">=</span> <span class="mi">12</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="p">(</span><span class="n">spend</span> <span class="o">/</span> <span class="mi">1000</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;#b8b6b0&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Actual monthly (not adjusted)&quot;</span><span class="p">)</span>
+<span class="p">(</span><span class="n">saar</span> <span class="o">/</span> <span class="mi">12</span> <span class="o">/</span> <span class="mi">1000</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#eb6834&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Adjusted annual rate ÷ 12&quot;</span><span class="p">)</span>
+<span class="p">(</span><span class="n">spend</span><span class="o">.</span><span class="n">rolling</span><span class="p">(</span><span class="n">window</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span> <span class="o">/</span> <span class="mi">1000</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#2a78d6&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+                                           <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;Trailing </span><span class="si">{</span><span class="n">window</span><span class="si">}</span><span class="s2">-month average of actual&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Three views of the same spending&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Month&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Billions of US dollars per month&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Adjusted annual-rate rows: 177 | same months as the actual series: True
+</code></pre></div>
+<p><img alt="png" src="../07_trends_and_growth_lab_files/07_trends_and_growth_lab_57_1.png" /></p>
+<blockquote>
+<p><strong>Do not mix them</strong></p>
+<p>The actual monthly amounts can be added up within a period. The annual-rate values cannot: each one already describes a whole year. Never add Total to its parts either (for example Total plus Residential).</p>
+</blockquote>
+<hr />
+<h2 id="challenge">Challenge<a class="headerlink" href="#challenge" title="Permanent link">&para;</a></h2>
+<h3 id="c1-challenge-the-75-crash">C1 (Challenge): The "75% crash"<a class="headerlink" href="#c1-challenge-the-75-crash" title="Permanent link">&para;</a></h3>
+<p>A colleague posts this in a team chat:</p>
+<blockquote>
+<p><em>"Disaster! Sales fell about 75% in January 2025. And I filtered the dashboard to 2025 to check, but now January's growth is blank. Something is broken."</em></p>
+</blockquote>
+<p>First, reproduce the colleague's figure, then look at the comparison they did not make.</p>
+<div class="highlight"><pre><span></span><code><span class="n">january</span> <span class="o">=</span> <span class="n">growth</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s2">&quot;2025-01-01&quot;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;January 2025 Sales:            &quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">january</span><span class="p">[</span><span class="s1">&#39;sales&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">,.0f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;December 2024 Sales:           &quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">january</span><span class="p">[</span><span class="s1">&#39;previous_month&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">,.0f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Month-on-month growth:         &quot;</span><span class="p">,</span> <span class="n">as_pct</span><span class="p">(</span><span class="n">january</span><span class="p">[</span><span class="s2">&quot;mom_growth&quot;</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;January 2024 Sales:            &quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">january</span><span class="p">[</span><span class="s1">&#39;same_month_last_year&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">,.0f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Year-on-year growth:           &quot;</span><span class="p">,</span> <span class="n">as_pct</span><span class="p">(</span><span class="n">january</span><span class="p">[</span><span class="s2">&quot;yoy_growth&quot;</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;MoM after filtering to 2025:   &quot;</span><span class="p">,</span> <span class="n">as_pct</span><span class="p">(</span><span class="n">filter_first</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s2">&quot;2025-01-01&quot;</span><span class="p">,</span> <span class="s2">&quot;mom_growth&quot;</span><span class="p">]))</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>January 2025 Sales:             18,830
+December 2024 Sales:            75,533
+Month-on-month growth:          -75.1%
+January 2024 Sales:             18,462
+Year-on-year growth:            +2.0%
+MoM after filtering to 2025:    no comparison
+</code></pre></div>
+<p>Use the output above, and the seasonal chart from Part 1, to answer:</p>
+<ol>
+<li>Is January's fall a real problem or a seasonal pattern? Which growth measure would you show instead, and what does it say?</li>
+<li>Why did January's month-on-month growth become blank after filtering to 2025?</li>
+<li>Rewrite the colleague's message so it is accurate. Mention the comparison month you used.</li>
+</ol>
+<blockquote>
+<p><strong>Hint</strong></p>
+<p>Look at what happened every January in the seasonal chart, not just in 2025. Then go back to Part 3.</p>
+</blockquote>
+<h3 id="c2-challenge-2016-was-the-weakest-year-in-a-decade">C2 (Challenge): "2016 was the weakest year in a decade"<a class="headerlink" href="#c2-challenge-2016-was-the-weakest-year-in-a-decade" title="Permanent link">&para;</a></h3>
+<p>Another colleague adds up construction spending by calendar year and posts:</p>
+<blockquote>
+<p><em>"Construction spending in 2016 was the lowest yearly total since 2012. The boom is over."</em></p>
+<p><strong>Your turn:</strong> change the code in the next cell and run it again.</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="c1"># The colleague&#39;s code. It runs, but the comparison is unfair.</span>
+<span class="c1"># 1. Find what is wrong with the 2016 figure.</span>
+<span class="c1"># 2. Fix the comparison so every year covers the same months.</span>
+<span class="c1"># 3. Rewrite the colleague&#39;s sentence so it is accurate, naming the months compared.</span>
+<span class="n">yearly</span> <span class="o">=</span> <span class="n">spend</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">spend</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">year</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">/</span> <span class="mi">1000</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Yearly totals ($bn), the colleague&#39;s version:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">yearly</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Yearly totals ($bn), the colleague&#39;s version:
+2011     788.30
+2012     850.50
+2013     906.40
+2014   1,005.60
+2015   1,112.40
+2016     863.20
+Name: val, dtype: float64
+</code></pre></div>
+<blockquote>
+<p><strong>Hint</strong></p>
+<p>Count the months behind each total. Then go back to I3.</p>
+</blockquote>
+<hr />
+<h2 id="validation-checklist">Validation checklist<a class="headerlink" href="#validation-checklist" title="Permanent link">&para;</a></h2>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled/> The Superstore monthly series has all 36 months, Jan 2023 to Dec 2025, with no gaps.</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Growth was computed on the complete series <strong>before</strong> filtering to a period.</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Blanks appear only where no comparison exists, and are never shown as 0%.</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Returns are counted as <strong>distinct orders</strong>, not lines, and called "share of orders on the returns list".</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Segment order counts add up to the all-segments total.</li>
+<li class="task-list-item"><input type="checkbox" disabled/> The construction series is exactly one series (category, data type, estimate, geography, adjustment), with one row per month and its units stated.</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Part-years are compared only with the same months of earlier years.</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Every chart has a message title, labelled axes with units, and the dashboard has a scope note.</li>
+</ul>
+<hr />
+<h2 id="exit-ticket">Exit ticket<a class="headerlink" href="#exit-ticket" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Why can month-on-month growth mislead for a seasonal business?</li>
+<li>Why does filtering to one year before computing growth create blanks?</li>
+<li>What is one thing the returns list cannot tell you?</li>
+<li>Why can you not compare the 2016 construction total with the 2015 total directly?</li>
+<li>What would you measure to judge whether your proposed test worked?</li>
+</ol>
+<hr />
+<h2 id="evidence-to-keep">Evidence to keep<a class="headerlink" href="#evidence-to-keep" title="Permanent link">&para;</a></h2>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled/> Monthly trend and seasonal overlay with three observations (G1–G2)</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Growth definitions (MoM, YoY) and the "blank is not zero" rule (G3–G4)</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Returns-list share by segment with its limitations (G5)</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Dashboard image, all regions or one region (G6 or I1)</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Construction series definition, chart and fair part-year comparison (I2–I3)</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Five-sentence test recommendation (I4)</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Corrected colleague messages (C1, C2, if attempted)</li>
+</ul>
+<p>Save your dashboard image (right-click the chart in Colab and save it). Record in your evidence log the data versions, any filters you used, and your growth and returns definitions.</p>
+<hr />
+<h2 id="after-the-lab">After the lab<a class="headerlink" href="#after-the-lab" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Previous: <a href="../07_trends_and_growth_lecture/">Session 7 lecture</a>.</li>
+<li>Next: Session 8, correlation and regression.</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../07_trends_and_growth_lecture/" class="btn btn-neutral float-left" title="Lecture"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../lessons/class-01/" class="btn btn-neutral float-right" title="Tableau Lesson 1 (draft)">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Copyright &copy; 2026 - Aayush Raj Regmi</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../07_trends_and_growth_lecture/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../lessons/class-01/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

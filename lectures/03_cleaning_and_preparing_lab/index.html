@@ -1,0 +1,2415 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Lab - Data Analytics</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../stylesheets/readability.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Lab";
+        var mkdocs_page_input_path = "lectures/03_cleaning_and_preparing_lab.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Data Analytics
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Getting Started</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../..#course-at-a-glance">Course at a glance</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../..#where-to-start">Where to start</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../..#how-we-will-practise">How we will practise</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Foundations</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../foundations/">Why Data Analytics Matters</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/#what-is-data-analytics">What is data analytics?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/#real-stories-where-data-changed-the-outcome">Real stories where data changed the outcome</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../foundations/#a-map-that-changed-how-we-think-about-disease-london-1854">A map that changed how we think about disease (London, 1854)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../foundations/#a-chart-that-reformed-hospitals-1850s">A chart that reformed hospitals (1850s)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../foundations/#winning-on-a-small-budget-baseball-2002">Winning on a small budget (baseball, 2002)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../foundations/#preparing-for-a-hurricane-retail-2004">Preparing for a hurricane (retail, 2004)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../foundations/#when-big-data-got-it-wrong-public-health-20082015">When big data got it wrong (public health, 2008–2015)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/#where-you-meet-analytics-every-day">Where you meet analytics every day</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/#why-presentation-is-part-of-analysis">Why presentation is part of analysis</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/#what-comes-next">What comes next</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../foundations/statistics-are-not-enough/">Statistics Are Not Enough</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/statistics-are-not-enough/#anscombes-quartet">Anscombe's quartet</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/statistics-are-not-enough/#the-datasaurus-dozen">The Datasaurus Dozen</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/statistics-are-not-enough/#what-this-means-at-work">What this means at work</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/statistics-are-not-enough/#try-it-yourself">Try it yourself</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../foundations/misleading-statistics/">How Statistics Can Mislead</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/misleading-statistics/#1-correlation-is-not-causation">1. Correlation is not causation</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/misleading-statistics/#2-simpsons-paradox-the-total-can-reverse-the-parts">2. Simpson's paradox: the total can reverse the parts</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/misleading-statistics/#3-misleading-axes">3. Misleading axes</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/misleading-statistics/#4-cherry-picked-time-windows">4. Cherry-picked time windows</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/misleading-statistics/#5-which-average">5. Which average?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/misleading-statistics/#6-percentages-without-the-base">6. Percentages without the base</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/misleading-statistics/#7-survivorship-bias">7. Survivorship bias</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/misleading-statistics/#a-checklist-for-any-number-you-are-shown">A checklist for any number you are shown</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/misleading-statistics/#try-it-yourself">Try it yourself</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../foundations/types-of-analysis/">Types of Analysis</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/types-of-analysis/#univariate-analysis-one-variable-at-a-time">Univariate analysis: one variable at a time</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/types-of-analysis/#bivariate-analysis-two-variables-together">Bivariate analysis: two variables together</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/types-of-analysis/#multivariate-analysis-three-or-more-variables">Multivariate analysis: three or more variables</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/types-of-analysis/#choosing-a-chart-quick-guide">Choosing a chart: quick guide</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/types-of-analysis/#try-it-yourself">Try it yourself</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../foundations/visual-design/">Designing Clear Visuals</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/visual-design/#the-data-ink-ratio">The data-ink ratio</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/visual-design/#pre-attentive-attributes-what-the-eye-sees-first">Pre-attentive attributes: what the eye sees first</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/visual-design/#gestalt-principles-how-we-group-things">Gestalt principles: how we group things</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/visual-design/#colour-with-purpose">Colour with purpose</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/visual-design/#a-clean-chart-checklist">A clean-chart checklist</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/visual-design/#try-it-yourself">Try it yourself</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../foundations/storytelling/">Storytelling with Data</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/storytelling/#the-challenger-disaster-right-data-wrong-presentation">The Challenger disaster: right data, wrong presentation</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../foundations/storytelling/#what-did-the-data-show">What did the data show?</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/storytelling/#what-makes-a-data-story">What makes a data story</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../foundations/storytelling/#start-with-the-big-idea">Start with the "big idea"</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/storytelling/#a-simple-process">A simple process</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/storytelling/#exploratory-versus-explanatory">Exploratory versus explanatory</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/storytelling/#try-it-yourself">Try it yourself</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Course</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../course/roadmap/">Learning Roadmap</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#how-each-session-works">How each session works</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#part-a-thinking-with-data">Part A: Thinking with data</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#part-b-describing-and-measuring">Part B: Describing and measuring</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#part-c-relationships-change-and-uncertainty">Part C: Relationships, change and uncertainty</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#part-d-business-cases">Part D: Business cases</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#part-e-communicating-and-bringing-it-together">Part E: Communicating and bringing it together</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#part-f-tableau">Part F: Tableau</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#how-you-will-be-assessed">How you will be assessed</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#extra-practice-topics">Extra practice topics</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../course/setup/">Setup and Practice</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/setup/#what-you-need">What you need</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/setup/#open-a-lesson-in-google-colab">Open a lesson in Google Colab</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/setup/#keep-your-data-safe">Keep your data safe</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/setup/#if-something-does-not-work">If something does not work</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/setup/#tableau-later">Tableau (later)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/setup/#keep-an-evidence-log">Keep an evidence log</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../course/workflow/">Analytical Workflow</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/workflow/#the-seven-steps">The seven steps</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../course/workflow/#1-business-question">1. Business question</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../course/workflow/#2-data-understanding">2. Data understanding</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../course/workflow/#3-preparation">3. Preparation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../course/workflow/#4-analysis">4. Analysis</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../course/workflow/#5-validation">5. Validation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../course/workflow/#6-visualization">6. Visualization</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../course/workflow/#7-recommendation">7. Recommendation</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/workflow/#a-worked-example">A worked example</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/workflow/#when-a-result-looks-wrong">When a result looks wrong</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/workflow/#association-is-not-causation">Association is not causation</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../cases/">Business Cases</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../cases/#the-five-core-cases">The five core cases</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../cases/#retail">Retail</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../cases/#finance">Finance</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../cases/#operations">Operations</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../cases/#marketing">Marketing</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../cases/#hr">HR</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../cases/#what-every-case-includes">What every case includes</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../cases/#combining-evidence-across-departments">Combining evidence across departments</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../cases/#additional-practice-choices">Additional practice choices</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Python Sessions</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" >Session 1: Why Data Analytics Matters</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../01_why_data_analytics_lecture/">Lecture</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lecture/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lecture/#part-1-what-is-data-analytics">Part 1: What is data analytics?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lecture/#part-2-real-stories-where-data-changed-the-outcome">Part 2: Real stories where data changed the outcome</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lecture/#part-3-from-question-to-recommendation">Part 3: From question to recommendation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lecture/#part-4-always-plot-your-data-anscombes-quartet">Part 4: Always plot your data — Anscombe's quartet</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lecture/#part-5-the-datasaurus-dozen">Part 5: The Datasaurus Dozen</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lecture/#part-6-a-preview-of-how-numbers-mislead">Part 6: A preview of how numbers mislead</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lecture/#summary">Summary</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lecture/#quiz">Quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lecture/#in-the-lab">In the Lab</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../01_why_data_analytics_lab/">Lab</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lab/#how-this-lab-works">How this lab works</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lab/#part-a-guided-practice-core">Part A: Guided practice (Core)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lab/#part-b-independent-tasks">Part B: Independent tasks</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lab/#part-c-challenge-the-datasaurus-dozen">Part C: Challenge — the Datasaurus Dozen</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lab/#quick-reference">Quick reference</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lab/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_why_data_analytics_lab/#evidence-to-keep">Evidence to keep</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Session 2: Data, Grain and the DataFrame</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../02_data_and_grain_lecture/">Lecture</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lecture/#recap-quiz">Recap quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lecture/#what-you-will-be-able-to-explain">What you will be able to explain</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lecture/#part-1-levels-of-measurement">Part 1: Levels of measurement</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lecture/#part-2-tidy-data">Part 2: Tidy data</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lecture/#part-3-grain-and-keys">Part 3: Grain and keys</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lecture/#part-4-data-dictionaries">Part 4: Data dictionaries</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lecture/#part-5-data-quality-dimensions">Part 5: Data-quality dimensions</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lecture/#part-6-worked-case-the-superstore-order-lines">Part 6: Worked case — the Superstore order lines</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lecture/#summary">Summary</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lecture/#quiz">Quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lecture/#lab-briefing">Lab briefing</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../02_data_and_grain_lab/">Lab</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lab/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lab/#how-this-lab-works">How this lab works</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lab/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lab/#guided-practice">Guided practice</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lab/#independent-tasks">Independent tasks</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lab/#challenge">Challenge</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lab/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lab/#evidence-to-keep">Evidence to keep</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../02_data_and_grain_lab/#after-the-lab">After the lab</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >Session 3: Cleaning and Preparing Data</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../03_cleaning_and_preparing_lecture/">Lecture</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lecture/#recap-quiz">Recap quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lecture/#what-you-will-be-able-to-explain">What you will be able to explain</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lecture/#part-1-raw-data-and-the-cleaning-log">Part 1: Raw data and the cleaning log</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lecture/#part-2-missing-data">Part 2: Missing data</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lecture/#part-3-duplicates">Part 3: Duplicates</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lecture/#part-4-outliers">Part 4: Outliers</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lecture/#part-5-text-numbers-dates-and-encodings">Part 5: Text, numbers, dates and encodings</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lecture/#part-6-joins-and-cardinality">Part 6: Joins and cardinality</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lecture/#part-7-reshaping">Part 7: Reshaping</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lecture/#part-8-worked-case-world-cup-attendance">Part 8: Worked case — World Cup attendance</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lecture/#summary">Summary</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lecture/#quiz">Quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_cleaning_and_preparing_lecture/#lab-briefing">Lab briefing</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Lab</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#how-this-lab-works">How this lab works</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#guided-practice">Guided practice</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#independent-tasks">Independent tasks</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#challenge">Challenge</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#evidence-to-keep">Evidence to keep</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#after-the-lab">After the lab</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Session 4: Descriptive Statistics and Distributions</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../04_descriptive_statistics_lecture/">Lecture</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lecture/#recap-quiz">Recap quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lecture/#what-you-will-be-able-to-explain">What you will be able to explain</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lecture/#part-1-the-centre-mean-median-and-mode">Part 1: The centre — mean, median and mode</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lecture/#part-2-spread-how-different-are-the-values">Part 2: Spread — how different are the values?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lecture/#part-3-shape-skew-and-long-tails">Part 3: Shape — skew and long tails</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lecture/#part-4-three-pictures-of-one-distribution">Part 4: Three pictures of one distribution</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lecture/#part-5-z-scores-and-the-normal-curve-as-a-reference">Part 5: z-scores and the normal curve as a reference</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lecture/#part-6-unusual-values-flag-do-not-delete">Part 6: Unusual values — flag, do not delete</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lecture/#part-7-worked-case-superstore-orders">Part 7: Worked case — Superstore orders</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lecture/#summary">Summary</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lecture/#quiz">Quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lecture/#lab-briefing">Lab briefing</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../04_descriptive_statistics_lab/">Lab</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lab/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lab/#how-this-lab-works">How this lab works</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lab/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lab/#guided-practice">Guided practice</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lab/#independent-tasks">Independent tasks</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lab/#challenge">Challenge</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lab/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lab/#evidence-to-keep">Evidence to keep</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_descriptive_statistics_lab/#after-the-lab">After the lab</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Session 5: Metrics and KPIs</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../05_metrics_and_kpis_lecture/">Lecture</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lecture/#recap-quiz">Recap quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lecture/#what-you-will-be-able-to-explain">What you will be able to explain</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lecture/#part-1-what-makes-a-good-metric">Part 1: What makes a good metric?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lecture/#part-2-metric-contracts">Part 2: Metric contracts</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lecture/#part-3-ratio-of-sums-versus-mean-of-ratios">Part 3: Ratio of sums versus mean of ratios</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lecture/#part-4-weighted-rates-in-practice">Part 4: Weighted rates in practice</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lecture/#part-5-distinct-counts-do-not-add-up">Part 5: Distinct counts do not add up</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lecture/#part-6-simpsons-paradox">Part 6: Simpson's paradox</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lecture/#part-7-goodharts-law">Part 7: Goodhart's law</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lecture/#part-8-worked-case-a-segment-kpi-table-that-reconciles">Part 8: Worked case — a segment KPI table that reconciles</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lecture/#summary">Summary</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lecture/#quiz">Quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lecture/#lab-briefing">Lab briefing</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../05_metrics_and_kpis_lab/">Lab</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lab/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lab/#how-this-lab-works">How this lab works</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lab/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lab/#guided-practice">Guided practice</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lab/#independent-tasks">Independent tasks</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lab/#challenge">Challenge</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lab/#validation-checklist">Validation checklist</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lab/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lab/#evidence-to-keep">Evidence to keep</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../05_metrics_and_kpis_lab/#after-the-lab">After the lab</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Session 6: Visualisation Principles</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../06_visualisation_principles_lecture/">Lecture</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lecture/#recap-quiz">Recap quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lecture/#what-you-will-be-able-to-explain">What you will be able to explain</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lecture/#part-1-choose-the-chart-from-the-task">Part 1: Choose the chart from the task</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lecture/#part-2-how-accurately-we-read-encodings">Part 2: How accurately we read encodings</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lecture/#part-3-pre-attentive-attributes">Part 3: Pre-attentive attributes</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lecture/#part-4-data-ink-and-decluttering">Part 4: Data-ink and decluttering</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lecture/#part-5-gestalt-what-belongs-together">Part 5: Gestalt: what belongs together</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lecture/#part-6-colour-with-a-job">Part 6: Colour with a job</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lecture/#part-7-honest-axes">Part 7: Honest axes</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lecture/#part-8-message-titles-and-annotation">Part 8: Message titles and annotation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lecture/#part-9-small-multiples">Part 9: Small multiples</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lecture/#summary">Summary</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lecture/#quiz">Quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lecture/#in-the-lab">In the Lab</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../06_visualisation_principles_lab/">Lab</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lab/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lab/#how-this-lab-works">How this lab works</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../06_visualisation_principles_lab/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Session 7: Time Series and Trends</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../07_trends_and_growth_lecture/">Lecture</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lecture/#recap-quiz">Recap quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lecture/#what-you-will-be-able-to-explain">What you will be able to explain</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lecture/#part-1-the-three-components-of-a-series">Part 1: The three components of a series</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lecture/#part-2-month-on-month-versus-year-on-year">Part 2: Month-on-month versus year-on-year</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lecture/#part-3-rolling-averages-trailing-and-centred">Part 3: Rolling averages, trailing and centred</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lecture/#part-4-index-numbers-base-100">Part 4: Index numbers (base = 100)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lecture/#part-5-seasonally-adjusted-series">Part 5: Seasonally adjusted series</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lecture/#part-6-incomplete-and-missing-periods">Part 6: Incomplete and missing periods</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lecture/#part-7-growth-after-filtering-the-trap">Part 7: Growth after filtering, the trap</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lecture/#part-8-worked-case-superstore-monthly-sales">Part 8: Worked case — Superstore monthly Sales</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lecture/#summary">Summary</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lecture/#quiz">Quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lecture/#lab-briefing">Lab briefing</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../07_trends_and_growth_lab/">Lab</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lab/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lab/#how-this-lab-works">How this lab works</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lab/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lab/#before-you-start">Before you start</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lab/#guided-practice">Guided practice</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lab/#independent-tasks">Independent tasks</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lab/#challenge">Challenge</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lab/#validation-checklist">Validation checklist</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lab/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lab/#evidence-to-keep">Evidence to keep</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../07_trends_and_growth_lab/#after-the-lab">After the lab</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Tableau (Coming Later)</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lessons/class-01/">Tableau Lesson 1 (draft)</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#before-you-start">Before you start</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#part-1-from-request-to-question">Part 1: From request to question</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#part-2-watch-the-demonstration">Part 2: Watch the demonstration</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#part-3-guided-practice">Part 3: Guided practice</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-01/#connect-to-the-file">Connect to the file</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-01/#check-the-column-types">Check the column types</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-01/#build-a-first-chart">Build a first chart</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-01/#add-a-filter">Add a filter</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-01/#save-and-reopen">Save and reopen</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#part-4-rows-versus-orders">Part 4: Rows versus orders</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#part-5-independent-work">Part 5: Independent work</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#part-6-challenge">Part 6: Challenge</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#after-the-lesson">After the lesson</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lessons/class-02/">Tableau Lesson 2 (draft)</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#before-you-start">Before you start</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#part-1-meet-the-data-dictionary">Part 1: Meet the data dictionary</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#part-2-find-the-grain">Part 2: Find the grain</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#part-3-count-orders-correctly">Part 3: Count orders correctly</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-02/#demonstration">Demonstration</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-02/#guided-practice">Guided practice</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#part-4-what-the-returns-flag-means">Part 4: What the returns flag means</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#part-5-check-one-order-by-hand">Part 5: Check one order by hand</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#part-6-keep-a-preparation-log">Part 6: Keep a preparation log</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#part-7-independent-work">Part 7: Independent work</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#part-8-debugging-challenge">Part 8: Debugging challenge</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#after-the-lesson">After the lesson</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lessons/class-03/">Tableau Lesson 3 (draft)</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#before-you-start">Before you start</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#part-1-agree-the-measures">Part 1: Agree the measures</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#part-2-watch-the-demonstration">Part 2: Watch the demonstration</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#part-3-guided-practice-build-the-calculations">Part 3: Guided practice — build the calculations</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#part-4-guided-practice-the-segment-table">Part 4: Guided practice — the segment table</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-03/#check-that-it-reconciles">Check that it reconciles</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#part-5-independent-work">Part 5: Independent work</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-03/#a-filter-by-region">A. Filter by region</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-03/#b-look-at-a-category">B. Look at a category</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#part-6-debugging-challenge">Part 6: Debugging challenge</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#part-7-make-a-recommendation">Part 7: Make a recommendation</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#validation-checklist">Validation checklist</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#after-the-lesson">After the lesson</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lessons/class-04/">Tableau Lesson 4 (draft)</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#before-you-start">Before you start</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#part-1-the-monthly-trend">Part 1: The monthly trend</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#part-2-two-kinds-of-growth">Part 2: Two kinds of growth</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-04/#month-on-month-growth">Month-on-month growth</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-04/#year-on-year-growth">Year-on-year growth</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-04/#which-one-is-fair">Which one is fair?</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#part-3-the-returns-list">Part 3: The returns list</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#part-4-guided-practice-build-the-dashboard">Part 4: Guided practice — build the dashboard</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-04/#design-checks">Design checks</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#part-5-independent-work">Part 5: Independent work</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#part-6-debugging-challenge">Part 6: Debugging challenge</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#part-7-recommend-a-test">Part 7: Recommend a test</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#validation-checklist">Validation checklist</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#after-the-lesson">After the lesson</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../lessons/lesson-template/">Lesson Template</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#1-the-business-decision">1. The business decision</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#2-what-you-will-demonstrate">2. What you will demonstrate</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#3-before-you-start">3. Before you start</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#4-understand-the-data">4. Understand the data</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#5-agree-the-measures">5. Agree the measures</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#6-watch-a-worked-example">6. Watch a worked example</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#7-try-it-with-guidance">7. Try it with guidance</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#8-work-independently">8. Work independently</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#9-debug-a-result">9. Debug a result</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#10-make-a-recommendation">10. Make a recommendation</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#11-connection-to-the-other-tool">11. Connection to the other tool</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#12-submit-and-reflect">12. Submit and reflect</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Data Analytics</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Python Sessions</li>
+          <li class="breadcrumb-item">Session 3: Cleaning and Preparing Data</li>
+      <li class="breadcrumb-item active">Lab</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="session-3-lab-clean-it-check-it-log-it">Session 3 lab: Clean it, check it, log it<a class="headerlink" href="#session-3-lab-clean-it-check-it-log-it" title="Permanent link">&para;</a></h1>
+<p class="lead">
+Three files from three sources, each with its own problems: repeated football matches, a usage file with most of its dates missing, and a retail workbook whose sheets must be joined without losing or doubling anything.
+</p>
+
+<p><a href="https://colab.research.google.com/github/Aayush181509/AnalyticsLecture/blob/main/notebooks/03_cleaning_and_preparing_lab.ipynb"><img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg" /></a></p>
+<p>Open this notebook in Google Colab with the button above, then run each cell from top to bottom with <strong>Shift + Enter</strong>. Save your own copy with <strong>File → Save a copy in Drive</strong>.</p>
+<hr />
+<h2 id="the-business-decision">The business decision<a class="headerlink" href="#the-business-decision" title="Permanent link">&para;</a></h2>
+<p>The head of analytics says:</p>
+<blockquote>
+<p><em>"We have been handed three files for next quarter's reports. Before anyone builds a chart on them: what is wrong with each one, what did you fix, and can I see the proof?"</em></p>
+</blockquote>
+<p>Your job today is not to find insights. It is to make each file <strong>fit for use</strong>, show the evidence, and say clearly what still cannot be trusted.</p>
+<blockquote>
+<p><strong>About the data</strong></p>
+<ul>
+<li><strong>World Cup results</strong>: compiled for <em>Sports Viz Sundays 2018</em> and published in Tableau's sample-data catalog. We download it from that source for learning; we do not redistribute it, and the course does not claim a licence for it.</li>
+<li><strong>Mobile OS usage</strong>: from <strong>Statcounter Global Stats</strong> (licence CC BY-SA 3.0), via Tableau's sample-data catalog. Each percentage is a share of <strong>page views</strong> on the websites Statcounter tracks, not a share of devices sold or of people.</li>
+<li><strong>Superstore</strong>: Tableau's sample for a <strong>fictitious</strong> company. Sales and Profit are in source monetary units; no currency is stated.</li>
+</ul>
+</blockquote>
+<hr />
+<h2 id="how-this-lab-works">How this lab works<a class="headerlink" href="#how-this-lab-works" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Part</th>
+<th>What you do</th>
+<th>Tasks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Guided practice</strong></td>
+<td>Follow along step by step, everyone together</td>
+<td>G1–G5</td>
+</tr>
+<tr>
+<td><strong>Independent tasks</strong></td>
+<td>Same skills, new questions, on your own or in pairs</td>
+<td>I1–I6</td>
+</tr>
+<tr>
+<td><strong>Challenge</strong></td>
+<td>Harder reasoning and debugging</td>
+<td>C1–C2</td>
+</tr>
+</tbody>
+</table>
+<p>Each task has a level:</p>
+<ul>
+<li><strong>Core</strong>: everyone completes it; it is enough for your portfolio.</li>
+<li><strong>Stretch</strong>: for when you finish the core tasks early.</li>
+<li><strong>Challenge</strong>: optional, harder reasoning.</li>
+</ul>
+<hr />
+<h2 id="what-you-will-be-able-to-do">What you will be able to do<a class="headerlink" href="#what-you-will-be-able-to-do" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Profile a new file: size, types, missing values and duplicates.</li>
+<li>Find exact duplicates and confirm the fix against an independent total.</li>
+<li>Detect stray spaces, broken characters and inconsistent names.</li>
+<li>Diagnose missing dates and choose a subset you can defend.</li>
+<li>Join three tables with <code>validate=</code>, <code>indicator=True</code> and row-count checks.</li>
+<li>Keep a <strong>cleaning log</strong> with before and after counts.</li>
+</ol>
+<p><strong>Evidence you keep:</strong> your cleaning log, the duplicate check against official totals, your Mobile OS decision with its reason, the Superstore join checks and your fix for the debugging challenge.</p>
+<p>Before you start, work through the <a href="../03_cleaning_and_preparing_lecture/">Session 3 lecture</a>.</p>
+<hr />
+<h2 id="guided-practice">Guided practice<a class="headerlink" href="#guided-practice" title="Permanent link">&para;</a></h2>
+<h3 id="g1-core-load-the-three-files">G1 (Core): Load the three files<a class="headerlink" href="#g1-core-load-the-three-files" title="Permanent link">&para;</a></h3>
+<p>The first cell is the course setup cell you know from Session 2: it downloads the Superstore workbook and checks it. The second cell defines <code>fetch</code>, which downloads a file into memory and checks its fingerprint, and then loads the other two files. Nothing is saved over the originals: every change today happens to a <strong>copy</strong> in Python.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Course data setup. Run this cell first; you do not need to understand it yet.</span>
+<span class="c1"># It downloads the Superstore sample from Tableau&#39;s website, checks it is the</span>
+<span class="c1"># exact version this course was written for, and prepares the order-lines table.</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">hashlib</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">urllib.request</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+
+<span class="n">SOURCE_URL</span> <span class="o">=</span> <span class="s2">&quot;https://public.tableau.com/app/sample-data/sample_-_superstore.xls&quot;</span>
+<span class="n">EXPECTED_SHA256</span> <span class="o">=</span> <span class="s2">&quot;5045ed4fec49cae2cc0dfc5ab0d204ba09efa767fe00c996822499e8cc42fbbd&quot;</span>
+<span class="n">SOURCE_FILE</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;COURSE_XLS_PATH&quot;</span><span class="p">,</span> <span class="s2">&quot;sample_-_superstore.xls&quot;</span><span class="p">)</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="kn">import</span><span class="w"> </span><span class="nn">xlrd</span>  <span class="c1"># noqa: F401  (needed to read .xls files)</span>
+<span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+    <span class="kn">import</span><span class="w"> </span><span class="nn">subprocess</span>
+    <span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+
+    <span class="n">subprocess</span><span class="o">.</span><span class="n">check_call</span><span class="p">([</span><span class="n">sys</span><span class="o">.</span><span class="n">executable</span><span class="p">,</span> <span class="s2">&quot;-m&quot;</span><span class="p">,</span> <span class="s2">&quot;pip&quot;</span><span class="p">,</span> <span class="s2">&quot;install&quot;</span><span class="p">,</span> <span class="s2">&quot;-q&quot;</span><span class="p">,</span> <span class="s2">&quot;xlrd&quot;</span><span class="p">])</span>
+
+<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">SOURCE_FILE</span><span class="p">):</span>
+    <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlretrieve</span><span class="p">(</span><span class="n">SOURCE_URL</span><span class="p">,</span> <span class="n">SOURCE_FILE</span><span class="p">)</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">SOURCE_FILE</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">digest</span> <span class="o">=</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">sha256</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">())</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span>
+<span class="k">if</span> <span class="n">digest</span> <span class="o">!=</span> <span class="n">EXPECTED_SHA256</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;WARNING: Tableau has changed this sample file since the course was written.&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Your numbers will differ from the lesson. Ask your facilitator for the course copy.&quot;</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">load_orders</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Return one row per order line, orders placed 2023-01-01 to 2025-12-31.&quot;&quot;&quot;</span>
+    <span class="n">raw</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">SOURCE_FILE</span><span class="p">,</span> <span class="n">sheet_name</span><span class="o">=</span><span class="s2">&quot;Orders&quot;</span><span class="p">)</span>
+    <span class="n">returns</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">SOURCE_FILE</span><span class="p">,</span> <span class="n">sheet_name</span><span class="o">=</span><span class="s2">&quot;Returns&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Orders with more than one Customer ID (a known data issue), found before filtering.</span>
+    <span class="n">ids_per_order</span> <span class="o">=</span> <span class="n">raw</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;Order ID&quot;</span><span class="p">)[</span><span class="s2">&quot;Customer ID&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span>
+    <span class="n">conflict_orders</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">ids_per_order</span><span class="p">[</span><span class="n">ids_per_order</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+
+    <span class="n">in_scope</span> <span class="o">=</span> <span class="p">(</span><span class="n">raw</span><span class="p">[</span><span class="s2">&quot;Order Date&quot;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="s2">&quot;2023-01-01&quot;</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">raw</span><span class="p">[</span><span class="s2">&quot;Order Date&quot;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="s2">&quot;2026-01-01&quot;</span><span class="p">)</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">raw</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">in_scope</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+    <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;Row ID&quot;</span><span class="p">:</span> <span class="s2">&quot;row_id&quot;</span><span class="p">,</span> <span class="s2">&quot;Order ID&quot;</span><span class="p">:</span> <span class="s2">&quot;order_id&quot;</span><span class="p">,</span> <span class="s2">&quot;Order Date&quot;</span><span class="p">:</span> <span class="s2">&quot;order_date&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Ship Date&quot;</span><span class="p">:</span> <span class="s2">&quot;ship_date&quot;</span><span class="p">,</span> <span class="s2">&quot;Ship Mode&quot;</span><span class="p">:</span> <span class="s2">&quot;ship_mode&quot;</span><span class="p">,</span> <span class="s2">&quot;Customer ID&quot;</span><span class="p">:</span> <span class="s2">&quot;customer_id&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Segment&quot;</span><span class="p">:</span> <span class="s2">&quot;segment&quot;</span><span class="p">,</span> <span class="s2">&quot;Country/Region&quot;</span><span class="p">:</span> <span class="s2">&quot;country_region&quot;</span><span class="p">,</span> <span class="s2">&quot;Region&quot;</span><span class="p">:</span> <span class="s2">&quot;region&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Category&quot;</span><span class="p">:</span> <span class="s2">&quot;category&quot;</span><span class="p">,</span> <span class="s2">&quot;Sub-Category&quot;</span><span class="p">:</span> <span class="s2">&quot;sub_category&quot;</span><span class="p">,</span> <span class="s2">&quot;Product ID&quot;</span><span class="p">:</span> <span class="s2">&quot;product_id&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Product Name&quot;</span><span class="p">:</span> <span class="s2">&quot;product_name&quot;</span><span class="p">,</span> <span class="s2">&quot;Sales&quot;</span><span class="p">:</span> <span class="s2">&quot;sales&quot;</span><span class="p">,</span> <span class="s2">&quot;Quantity&quot;</span><span class="p">:</span> <span class="s2">&quot;quantity&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Discount&quot;</span><span class="p">:</span> <span class="s2">&quot;discount&quot;</span><span class="p">,</span> <span class="s2">&quot;Profit&quot;</span><span class="p">:</span> <span class="s2">&quot;profit&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+    <span class="n">df</span><span class="p">[</span><span class="s2">&quot;returned_order_flag&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;order_id&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">returns</span><span class="p">[</span><span class="s2">&quot;Order ID&quot;</span><span class="p">]))</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+    <span class="n">df</span><span class="p">[</span><span class="s2">&quot;customer_order_conflict&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;order_id&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">conflict_orders</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+    <span class="n">df</span><span class="p">[</span><span class="s2">&quot;customer_analysis_eligible&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;customer_order_conflict&quot;</span><span class="p">]</span>
+    <span class="n">df</span><span class="p">[</span><span class="s2">&quot;order_to_ship_days&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;ship_date&quot;</span><span class="p">]</span> <span class="o">-</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;order_date&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">days</span>
+    <span class="n">df</span><span class="p">[</span><span class="s2">&quot;order_month&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;order_date&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">to_period</span><span class="p">(</span><span class="s2">&quot;M&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">to_timestamp</span><span class="p">()</span>
+
+    <span class="n">columns</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="s2">&quot;row_id&quot;</span><span class="p">,</span> <span class="s2">&quot;order_id&quot;</span><span class="p">,</span> <span class="s2">&quot;order_date&quot;</span><span class="p">,</span> <span class="s2">&quot;ship_date&quot;</span><span class="p">,</span> <span class="s2">&quot;ship_mode&quot;</span><span class="p">,</span> <span class="s2">&quot;customer_id&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;segment&quot;</span><span class="p">,</span> <span class="s2">&quot;country_region&quot;</span><span class="p">,</span> <span class="s2">&quot;region&quot;</span><span class="p">,</span> <span class="s2">&quot;category&quot;</span><span class="p">,</span> <span class="s2">&quot;sub_category&quot;</span><span class="p">,</span> <span class="s2">&quot;product_id&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;product_name&quot;</span><span class="p">,</span> <span class="s2">&quot;sales&quot;</span><span class="p">,</span> <span class="s2">&quot;quantity&quot;</span><span class="p">,</span> <span class="s2">&quot;discount&quot;</span><span class="p">,</span> <span class="s2">&quot;profit&quot;</span><span class="p">,</span> <span class="s2">&quot;returned_order_flag&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;customer_analysis_eligible&quot;</span><span class="p">,</span> <span class="s2">&quot;customer_order_conflict&quot;</span><span class="p">,</span> <span class="s2">&quot;order_to_ship_days&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;order_month&quot;</span><span class="p">,</span>
+    <span class="p">]</span>
+    <span class="k">return</span> <span class="n">df</span><span class="p">[</span><span class="n">columns</span><span class="p">]</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s2">&quot;row_id&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+
+<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s2">&quot;display.float_format&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="si">{:,.2f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="o">.</span><span class="n">update</span><span class="p">({</span>
+    <span class="s2">&quot;figure.figsize&quot;</span><span class="p">:</span> <span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span>
+    <span class="s2">&quot;axes.spines.top&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="s2">&quot;axes.spines.right&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="s2">&quot;axes.grid&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s2">&quot;axes.axisbelow&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s2">&quot;grid.color&quot;</span><span class="p">:</span> <span class="s2">&quot;#e6e5e1&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;axes.prop_cycle&quot;</span><span class="p">:</span> <span class="n">plt</span><span class="o">.</span><span class="n">cycler</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;#2a78d6&quot;</span><span class="p">,</span> <span class="s2">&quot;#eb6834&quot;</span><span class="p">,</span> <span class="s2">&quot;#1baf7a&quot;</span><span class="p">]),</span>
+    <span class="s2">&quot;axes.titleweight&quot;</span><span class="p">:</span> <span class="s2">&quot;bold&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;axes.titlelocation&quot;</span><span class="p">:</span> <span class="s2">&quot;left&quot;</span><span class="p">,</span>
+<span class="p">})</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Setup complete.&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Setup complete.
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">hashlib</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">io</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">fetch</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">expected_sha256</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Download a file into memory and check its SHA-256 fingerprint.&quot;&quot;&quot;</span>
+    <span class="k">with</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">url</span><span class="p">)</span> <span class="k">as</span> <span class="n">response</span><span class="p">:</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">sha256</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span> <span class="o">!=</span> <span class="n">expected_sha256</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;WARNING: this file has changed since the course was written:&quot;</span><span class="p">,</span> <span class="n">url</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Your numbers may differ from the lab. Ask your facilitator.&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">data</span>
+
+
+<span class="n">world_cup_bytes</span> <span class="o">=</span> <span class="n">fetch</span><span class="p">(</span>
+    <span class="s2">&quot;https://public.tableau.com/app/sample-data/world_cup_results.xlsx&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;dbad641c16c914c14fef0c95bf6f918fa5d2746671e4dc269b6a1ec3e2a3cc45&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">mobile_bytes</span> <span class="o">=</span> <span class="n">fetch</span><span class="p">(</span>
+    <span class="s2">&quot;https://public.tableau.com/app/sample-data/mobile_os_usage.csv&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;0db44110e84a31c06491af89a30949cd8ced1c42fac56488cb04ca4f9e449995&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">matches_raw</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">io</span><span class="o">.</span><span class="n">BytesIO</span><span class="p">(</span><span class="n">world_cup_bytes</span><span class="p">),</span> <span class="n">sheet_name</span><span class="o">=</span><span class="s2">&quot;WorldCupMatches&quot;</span><span class="p">)</span>
+<span class="n">cups</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">io</span><span class="o">.</span><span class="n">BytesIO</span><span class="p">(</span><span class="n">world_cup_bytes</span><span class="p">),</span> <span class="n">sheet_name</span><span class="o">=</span><span class="s2">&quot;WorldCups&quot;</span><span class="p">)</span>
+<span class="n">mobile_raw</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">io</span><span class="o">.</span><span class="n">BytesIO</span><span class="p">(</span><span class="n">mobile_bytes</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;World Cup matches:&quot;</span><span class="p">,</span> <span class="n">matches_raw</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;World Cup tournaments:&quot;</span><span class="p">,</span> <span class="n">cups</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Mobile OS usage:&quot;</span><span class="p">,</span> <span class="n">mobile_raw</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>World Cup matches: (852, 12)
+World Cup tournaments: (20, 10)
+Mobile OS usage: (1898, 3)
+</code></pre></div>
+<p>Start the cleaning log now. Every step you take today adds one row to it.</p>
+<div class="highlight"><pre><span></span><code><span class="n">cleaning_log</span> <span class="o">=</span> <span class="p">[]</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">log_step</span><span class="p">(</span><span class="n">dataset</span><span class="p">,</span> <span class="n">change</span><span class="p">,</span> <span class="n">why</span><span class="p">,</span> <span class="n">before</span><span class="p">,</span> <span class="n">after</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Add one row to the cleaning log.&quot;&quot;&quot;</span>
+    <span class="n">cleaning_log</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="s2">&quot;dataset&quot;</span><span class="p">:</span> <span class="n">dataset</span><span class="p">,</span> <span class="s2">&quot;change&quot;</span><span class="p">:</span> <span class="n">change</span><span class="p">,</span> <span class="s2">&quot;why&quot;</span><span class="p">:</span> <span class="n">why</span><span class="p">,</span>
+                         <span class="s2">&quot;rows_before&quot;</span><span class="p">:</span> <span class="n">before</span><span class="p">,</span> <span class="s2">&quot;rows_after&quot;</span><span class="p">:</span> <span class="n">after</span><span class="p">})</span>
+
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Cleaning log ready.&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Cleaning log ready.
+</code></pre></div>
+<hr />
+<h3 id="g2-core-profile-the-match-results">G2 (Core): Profile the match results<a class="headerlink" href="#g2-core-profile-the-match-results" title="Permanent link">&para;</a></h3>
+<p>Before fixing anything, look. What does one row represent, what types are the columns, and is anything missing?</p>
+<div class="highlight"><pre><span></span><code><span class="n">matches_raw</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Year</th>
+      <th>Date</th>
+      <th>Time</th>
+      <th>Round</th>
+      <th>Stadium</th>
+      <th>City</th>
+      <th>Country</th>
+      <th>HomeTeam</th>
+      <th>HomeGoals</th>
+      <th>AwayGoals</th>
+      <th>AwayTeam</th>
+      <th>Observation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1930</td>
+      <td>1930-07-13</td>
+      <td>15:00</td>
+      <td>Group 1</td>
+      <td>Pocitos</td>
+      <td>Montevideo</td>
+      <td>Uruguay</td>
+      <td>France</td>
+      <td>4</td>
+      <td>1</td>
+      <td>Mexico</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1930</td>
+      <td>1930-07-13</td>
+      <td>15:00</td>
+      <td>Group 4</td>
+      <td>Parque Central</td>
+      <td>Montevideo</td>
+      <td>Uruguay</td>
+      <td>USA</td>
+      <td>3</td>
+      <td>0</td>
+      <td>Belgium</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1930</td>
+      <td>1930-07-14</td>
+      <td>12:45</td>
+      <td>Group 2</td>
+      <td>Parque Central</td>
+      <td>Montevideo</td>
+      <td>Uruguay</td>
+      <td>Yugoslavia</td>
+      <td>2</td>
+      <td>1</td>
+      <td>Brazil</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1930</td>
+      <td>1930-07-14</td>
+      <td>14:50</td>
+      <td>Group 3</td>
+      <td>Pocitos</td>
+      <td>Montevideo</td>
+      <td>Uruguay</td>
+      <td>Romania</td>
+      <td>3</td>
+      <td>1</td>
+      <td>Peru</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1930</td>
+      <td>1930-07-15</td>
+      <td>16:00</td>
+      <td>Group 1</td>
+      <td>Parque Central</td>
+      <td>Montevideo</td>
+      <td>Uruguay</td>
+      <td>Argentina</td>
+      <td>1</td>
+      <td>0</td>
+      <td>France</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">matches_raw</span><span class="o">.</span><span class="n">dtypes</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Missing values per column:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">matches_raw</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Year                    int64
+Date           datetime64[ns]
+Time                   object
+Round                  object
+Stadium                object
+City                   object
+Country                object
+HomeTeam               object
+HomeGoals               int64
+AwayGoals               int64
+AwayTeam               object
+Observation            object
+dtype: object
+
+Missing values per column:
+Year           0
+Date           0
+Time           0
+Round          0
+Stadium        0
+City           0
+Country        0
+HomeTeam       0
+HomeGoals      0
+AwayGoals      0
+AwayTeam       0
+Observation    0
+dtype: int64
+</code></pre></div>
+<p>One row is <strong>one match</strong>: a year, a date, two teams and their goals. The <code>Observation</code> column holds notes such as "win after extra time".</p>
+<p><code>isna()</code> reports no missing values at all, yet most matches have no note. Blanks can be stored as <strong>empty text</strong> instead of <code>NaN</code>, and then <code>isna()</code> cannot see them:</p>
+<div class="highlight"><pre><span></span><code><span class="n">empty_notes</span> <span class="o">=</span> <span class="n">matches_raw</span><span class="p">[</span><span class="s2">&quot;Observation&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Observation cells that are empty text:&quot;</span><span class="p">,</span> <span class="n">empty_notes</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span> <span class="s2">&quot;of&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">matches_raw</span><span class="p">))</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Observation cells that are empty text: 787 of 852
+</code></pre></div>
+<p>Here an empty note is expected (most matches end normally), so we leave it. The lesson: check for empty text as well as <code>NaN</code> before you call a column complete.</p>
+<p>The <code>WorldCups</code> sheet records the official number of matches and goals for each tournament. That gives us an <strong>independent check</strong>: count the match rows per year and compare.</p>
+<div class="highlight"><pre><span></span><code><span class="n">check</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s2">&quot;match_rows&quot;</span><span class="p">:</span> <span class="n">matches_raw</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;Year&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">size</span><span class="p">(),</span>
+    <span class="s2">&quot;official_matches&quot;</span><span class="p">:</span> <span class="n">cups</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">&quot;Year&quot;</span><span class="p">)[</span><span class="s2">&quot;MatchesPlayed&quot;</span><span class="p">],</span>
+<span class="p">})</span>
+<span class="n">check</span><span class="p">[</span><span class="s2">&quot;difference&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">check</span><span class="p">[</span><span class="s2">&quot;match_rows&quot;</span><span class="p">]</span> <span class="o">-</span> <span class="n">check</span><span class="p">[</span><span class="s2">&quot;official_matches&quot;</span><span class="p">]</span>
+<span class="n">check</span><span class="p">[</span><span class="n">check</span><span class="p">[</span><span class="s2">&quot;difference&quot;</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">]</span>
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>match_rows</th>
+      <th>official_matches</th>
+      <th>difference</th>
+    </tr>
+    <tr>
+      <th>Year</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2014</th>
+      <td>80</td>
+      <td>64</td>
+      <td>16</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<blockquote>
+<p><strong>Predict before you continue</strong></p>
+<p>Only one tournament disagrees, and it has <strong>more</strong> rows than matches played. Write down two possible explanations before you run G3.</p>
+</blockquote>
+<hr />
+<h3 id="g3-core-find-and-remove-the-duplicates">G3 (Core): Find and remove the duplicates<a class="headerlink" href="#g3-core-find-and-remove-the-duplicates" title="Permanent link">&para;</a></h3>
+<p><code>duplicated()</code> marks rows that are identical, in every column, to an earlier row.</p>
+<div class="highlight"><pre><span></span><code><span class="n">is_copy</span> <span class="o">=</span> <span class="n">matches_raw</span><span class="o">.</span><span class="n">duplicated</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Exact duplicate rows:&quot;</span><span class="p">,</span> <span class="n">is_copy</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Years affected:&quot;</span><span class="p">,</span> <span class="n">matches_raw</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">is_copy</span><span class="p">,</span> <span class="s2">&quot;Year&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">to_dict</span><span class="p">())</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Exact duplicate rows: 16
+Years affected: {2014: 16}
+</code></pre></div>
+<p>Look at both copies of a few of them. <code>keep=False</code> marks the first copy too, so you can see the pairs side by side.</p>
+<div class="highlight"><pre><span></span><code><span class="n">pairs</span> <span class="o">=</span> <span class="n">matches_raw</span><span class="p">[</span><span class="n">matches_raw</span><span class="o">.</span><span class="n">duplicated</span><span class="p">(</span><span class="n">keep</span><span class="o">=</span><span class="kc">False</span><span class="p">)]</span>
+<span class="n">pairs</span><span class="o">.</span><span class="n">sort_values</span><span class="p">([</span><span class="s2">&quot;Date&quot;</span><span class="p">,</span> <span class="s2">&quot;HomeTeam&quot;</span><span class="p">])[[</span><span class="s2">&quot;Year&quot;</span><span class="p">,</span> <span class="s2">&quot;Date&quot;</span><span class="p">,</span> <span class="s2">&quot;Round&quot;</span><span class="p">,</span> <span class="s2">&quot;HomeTeam&quot;</span><span class="p">,</span> <span class="s2">&quot;HomeGoals&quot;</span><span class="p">,</span> <span class="s2">&quot;AwayGoals&quot;</span><span class="p">,</span> <span class="s2">&quot;AwayTeam&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Year</th>
+      <th>Date</th>
+      <th>Round</th>
+      <th>HomeTeam</th>
+      <th>HomeGoals</th>
+      <th>AwayGoals</th>
+      <th>AwayTeam</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>820</th>
+      <td>2014</td>
+      <td>2014-06-28</td>
+      <td>Round of 16</td>
+      <td>Brazil</td>
+      <td>1</td>
+      <td>1</td>
+      <td>Chile</td>
+    </tr>
+    <tr>
+      <th>836</th>
+      <td>2014</td>
+      <td>2014-06-28</td>
+      <td>Round of 16</td>
+      <td>Brazil</td>
+      <td>1</td>
+      <td>1</td>
+      <td>Chile</td>
+    </tr>
+    <tr>
+      <th>821</th>
+      <td>2014</td>
+      <td>2014-06-28</td>
+      <td>Round of 16</td>
+      <td>Colombia</td>
+      <td>2</td>
+      <td>0</td>
+      <td>Uruguay</td>
+    </tr>
+    <tr>
+      <th>837</th>
+      <td>2014</td>
+      <td>2014-06-28</td>
+      <td>Round of 16</td>
+      <td>Colombia</td>
+      <td>2</td>
+      <td>0</td>
+      <td>Uruguay</td>
+    </tr>
+    <tr>
+      <th>833</th>
+      <td>2014</td>
+      <td>2014-06-29</td>
+      <td>Round of 16</td>
+      <td>Costa Rica</td>
+      <td>1</td>
+      <td>1</td>
+      <td>Greece</td>
+    </tr>
+    <tr>
+      <th>839</th>
+      <td>2014</td>
+      <td>2014-06-29</td>
+      <td>Round of 16</td>
+      <td>Costa Rica</td>
+      <td>1</td>
+      <td>1</td>
+      <td>Greece</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p>Same teams, same date, same score, same stadium: the same match recorded twice. Each match is one real event, so these are <strong>true duplicates</strong>. Remove them from a copy, log the step, and run the independent check again.</p>
+<div class="highlight"><pre><span></span><code><span class="n">before</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">matches_raw</span><span class="p">)</span>
+<span class="n">matches</span> <span class="o">=</span> <span class="n">matches_raw</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">()</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">log_step</span><span class="p">(</span><span class="s2">&quot;World Cup matches&quot;</span><span class="p">,</span> <span class="s2">&quot;Removed exact duplicate rows&quot;</span><span class="p">,</span>
+         <span class="s2">&quot;Same match recorded twice; match count exceeded the official total&quot;</span><span class="p">,</span> <span class="n">before</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">matches</span><span class="p">))</span>
+
+<span class="n">check</span><span class="p">[</span><span class="s2">&quot;match_rows_clean&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">matches</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;Year&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">size</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Years where clean rows differ from the official count:&quot;</span><span class="p">,</span>
+      <span class="p">(</span><span class="n">check</span><span class="p">[</span><span class="s2">&quot;match_rows_clean&quot;</span><span class="p">]</span> <span class="o">!=</span> <span class="n">check</span><span class="p">[</span><span class="s2">&quot;official_matches&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Years where clean rows differ from the official count: 0
+</code></pre></div>
+<blockquote>
+<p><strong>Remember</strong></p>
+<p>The fix is confirmed by a number that came from <strong>somewhere else</strong> (the official match count), not just by "the duplicates are gone". Copy the before and after counts into your evidence log.</p>
+</blockquote>
+<hr />
+<h3 id="g4-core-text-problems-spaces-broken-characters-names">G4 (Core): Text problems — spaces, broken characters, names<a class="headerlink" href="#g4-core-text-problems-spaces-broken-characters-names" title="Permanent link">&para;</a></h3>
+<p>Text columns hide problems that are invisible when you look at a few rows. Start with stray spaces.</p>
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">column</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;City&quot;</span><span class="p">,</span> <span class="s2">&quot;Stadium&quot;</span><span class="p">,</span> <span class="s2">&quot;HomeTeam&quot;</span><span class="p">,</span> <span class="s2">&quot;AwayTeam&quot;</span><span class="p">]:</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">matches</span><span class="p">[</span><span class="n">column</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">column</span><span class="si">:</span><span class="s2">9</span><span class="si">}</span><span class="s2"> values with leading or trailing spaces: </span><span class="si">{</span><span class="p">(</span><span class="n">text</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">text</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>City      values with leading or trailing spaces: 836
+Stadium   values with leading or trailing spaces: 0
+HomeTeam  values with leading or trailing spaces: 0
+AwayTeam  values with leading or trailing spaces: 0
+</code></pre></div>
+<p>Every <code>City</code> value ends with a space. That is harmless until you join on city or type <code>"Paris"</code> in a filter. Strip it and log it (a text fix does not change the row count, so before and after are the same).</p>
+<div class="highlight"><pre><span></span><code><span class="n">matches</span><span class="p">[</span><span class="s2">&quot;City&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">matches</span><span class="p">[</span><span class="s2">&quot;City&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+<span class="n">log_step</span><span class="p">(</span><span class="s2">&quot;World Cup matches&quot;</span><span class="p">,</span> <span class="s2">&quot;Stripped spaces from City&quot;</span><span class="p">,</span> <span class="s2">&quot;Every City value ended in a space&quot;</span><span class="p">,</span>
+         <span class="nb">len</span><span class="p">(</span><span class="n">matches</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">matches</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Cities with spaces left:&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">matches</span><span class="p">[</span><span class="s2">&quot;City&quot;</span><span class="p">]</span> <span class="o">!=</span> <span class="n">matches</span><span class="p">[</span><span class="s2">&quot;City&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Cities with spaces left: 0
+</code></pre></div>
+<p>Next, <strong>broken characters</strong>. The symbols <code>ï¿½</code> are what is left of letters such as <strong>ô</strong> or <strong>é</strong> after the file passed through the wrong encoding. The original letter is gone.</p>
+<div class="highlight"><pre><span></span><code><span class="n">text_columns</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;City&quot;</span><span class="p">,</span> <span class="s2">&quot;Stadium&quot;</span><span class="p">,</span> <span class="s2">&quot;HomeTeam&quot;</span><span class="p">,</span> <span class="s2">&quot;AwayTeam&quot;</span><span class="p">]</span>
+<span class="n">broken</span> <span class="o">=</span> <span class="n">matches</span><span class="p">[</span><span class="n">text_columns</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">column</span><span class="p">:</span> <span class="n">column</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s2">&quot;ï¿½&quot;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Rows with a broken character:&quot;</span><span class="p">,</span> <span class="n">broken</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">matches</span><span class="p">[</span><span class="n">text_columns</span><span class="p">]</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">broken</span><span class="p">)</span><span class="o">.</span><span class="n">stack</span><span class="p">()))</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Rows with a broken character: 73
+
+
+
+
+
+0                                   Stade Vï¿½lodrome
+1     Maracanï¿½ - Estï¿½dio Jornalista Mï¿½rio Filho
+2                                             Malmï¿½
+3                                        Norrkï¿½Ping
+4                           Nou Camp - Estadio Leï¿½n
+5                                        Dï¿½Sseldorf
+6                      Estadio Josï¿½ Marï¿½a Minella
+7                 Estadio Olï¿½mpico Chateau Carreras
+8                     Estadio Municipal de Balaï¿½dos
+9                                         La Coruï¿½A
+10                   Estadio Olï¿½mpico Universitario
+11                                    Cï¿½te d&#39;Ivoire
+dtype: object
+</code></pre></div>
+<p>Some of these are easy to read (<code>Cï¿½te d'Ivoire</code> is Côte d'Ivoire), others are not. We <strong>flag</strong> the affected rows rather than guessing; correcting them needs a trusted reference list.</p>
+<div class="highlight"><pre><span></span><code><span class="n">matches</span><span class="p">[</span><span class="s2">&quot;text_broken_flag&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">broken</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+<span class="n">log_step</span><span class="p">(</span><span class="s2">&quot;World Cup matches&quot;</span><span class="p">,</span> <span class="s2">&quot;Flagged rows with broken characters (not corrected)&quot;</span><span class="p">,</span>
+         <span class="s2">&quot;Encoding damage; original letters cannot be recovered from the file&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">matches</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">matches</span><span class="p">))</span>
+<span class="n">matches</span><span class="p">[</span><span class="s2">&quot;text_broken_flag&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>text_broken_flag
+0    763
+1     73
+Name: count, dtype: int64
+</code></pre></div>
+<p>Finally, <strong>names</strong>. Look for teams that might be the same country under two names.</p>
+<div class="highlight"><pre><span></span><code><span class="n">teams</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">matches</span><span class="p">[</span><span class="s2">&quot;HomeTeam&quot;</span><span class="p">],</span> <span class="n">matches</span><span class="p">[</span><span class="s2">&quot;AwayTeam&quot;</span><span class="p">]])</span>
+<span class="n">teams</span><span class="p">[</span><span class="n">teams</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s2">&quot;Iran|Germany&quot;</span><span class="p">)]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Germany FR    62
+Germany       44
+Iran           6
+IR Iran        6
+Name: count, dtype: int64
+</code></pre></div>
+<blockquote>
+<p><strong>Not every difference is an error</strong></p>
+<ul>
+<li><code>Iran</code> and <code>IR Iran</code> are the <strong>same</strong> team written two ways: a candidate for a documented mapping.</li>
+<li><code>Germany FR</code> (West Germany), <code>German DR</code> (East Germany) and <code>Germany</code> are <strong>historically different</strong> teams. Merging them is an analytical choice, not a fix, and must be stated if you make it.</li>
+</ul>
+<p>You decide how to treat each one in I4.</p>
+</blockquote>
+<hr />
+<h3 id="g5-core-join-the-three-superstore-sheets-safely">G5 (Core): Join the three Superstore sheets safely<a class="headerlink" href="#g5-core-join-the-three-superstore-sheets-safely" title="Permanent link">&para;</a></h3>
+<p>The Superstore workbook has three sheets. Read them raw from the file the setup cell downloaded.</p>
+<div class="highlight"><pre><span></span><code><span class="n">orders_raw</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">SOURCE_FILE</span><span class="p">,</span> <span class="n">sheet_name</span><span class="o">=</span><span class="s2">&quot;Orders&quot;</span><span class="p">)</span>
+<span class="n">returns_raw</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">SOURCE_FILE</span><span class="p">,</span> <span class="n">sheet_name</span><span class="o">=</span><span class="s2">&quot;Returns&quot;</span><span class="p">)</span>
+<span class="n">people_raw</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">SOURCE_FILE</span><span class="p">,</span> <span class="n">sheet_name</span><span class="o">=</span><span class="s2">&quot;People&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Orders: &quot;</span><span class="p">,</span> <span class="n">orders_raw</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Returns:&quot;</span><span class="p">,</span> <span class="n">returns_raw</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;People: &quot;</span><span class="p">,</span> <span class="n">people_raw</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="n">people_raw</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Orders:  (10194, 21)
+Returns: (296, 2)
+People:  (4, 2)
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Regional Manager</th>
+      <th>Region</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Sadie Pawthorne</td>
+      <td>West</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Chuck Magee</td>
+      <td>East</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Roxanne Rodriguez</td>
+      <td>Central</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Fred Suzuki</td>
+      <td>South</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p><strong>Step 1: before the join, check the keys.</strong> Orders will be joined to Returns on <code>Order ID</code> and to People on <code>Region</code>. Each key must be <strong>unique</strong> on the Returns and People side, or rows will multiply.</p>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Returns: is Order ID unique?&quot;</span><span class="p">,</span> <span class="n">returns_raw</span><span class="p">[</span><span class="s2">&quot;Order ID&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">is_unique</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;People:  is Region unique?  &quot;</span><span class="p">,</span> <span class="n">people_raw</span><span class="p">[</span><span class="s2">&quot;Region&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">is_unique</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Returns: values in Returned:&quot;</span><span class="p">,</span> <span class="n">returns_raw</span><span class="p">[</span><span class="s2">&quot;Returned&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">())</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Returns: is Order ID unique? True
+People:  is Region unique?   True
+Returns: values in Returned: [&#39;Yes&#39;]
+</code></pre></div>
+<p><strong>Step 2: join with <code>validate</code> and <code>indicator</code>.</strong> Each order line has at most one returns row and exactly one region manager, so both joins are <strong>many-to-one</strong>.</p>
+<div class="highlight"><pre><span></span><code><span class="n">step1</span> <span class="o">=</span> <span class="n">orders_raw</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">returns_raw</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s2">&quot;Order ID&quot;</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s2">&quot;left&quot;</span><span class="p">,</span>
+                         <span class="n">validate</span><span class="o">=</span><span class="s2">&quot;many_to_one&quot;</span><span class="p">,</span> <span class="n">indicator</span><span class="o">=</span><span class="s2">&quot;returns_match&quot;</span><span class="p">)</span>
+<span class="n">step2</span> <span class="o">=</span> <span class="n">step1</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">people_raw</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s2">&quot;Region&quot;</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s2">&quot;left&quot;</span><span class="p">,</span>
+                    <span class="n">validate</span><span class="o">=</span><span class="s2">&quot;many_to_one&quot;</span><span class="p">,</span> <span class="n">indicator</span><span class="o">=</span><span class="s2">&quot;people_match&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Rows: orders&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">orders_raw</span><span class="p">),</span> <span class="s2">&quot;| after Returns&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">step1</span><span class="p">),</span> <span class="s2">&quot;| after People&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">step2</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">step2</span><span class="p">[</span><span class="s2">&quot;returns_match&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">step2</span><span class="p">[</span><span class="s2">&quot;people_match&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">())</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Rows: orders 10194 | after Returns 10194 | after People 10194
+
+returns_match
+left_only     9394
+both           800
+right_only       0
+Name: count, dtype: int64
+
+people_match
+both          10194
+left_only         0
+right_only        0
+Name: count, dtype: int64
+</code></pre></div>
+<p><strong>Step 3: after the join, check a total and the unmatched rows.</strong></p>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Sales before joins:&quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">orders_raw</span><span class="p">[</span><span class="s2">&quot;Sales&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span> <span class="mi">2</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Sales after joins: &quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">step2</span><span class="p">[</span><span class="s2">&quot;Sales&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span> <span class="mi">2</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Lines without a manager:&quot;</span><span class="p">,</span> <span class="n">step2</span><span class="p">[</span><span class="s2">&quot;Regional Manager&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Listed orders found in Orders:&quot;</span><span class="p">,</span> <span class="n">returns_raw</span><span class="p">[</span><span class="s2">&quot;Order ID&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">orders_raw</span><span class="p">[</span><span class="s2">&quot;Order ID&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span>
+      <span class="s2">&quot;of&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">returns_raw</span><span class="p">))</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Sales before joins: 2326534.35
+Sales after joins:  2326534.35
+Lines without a manager: 0
+Listed orders found in Orders: 296 of 296
+</code></pre></div>
+<p>Read the output above:</p>
+<ul>
+<li>The row count and the Sales total did not change, so neither join multiplied anything.</li>
+<li>Lines whose order is <strong>not</strong> on the returns list get a blank <code>Returned</code>. Blank here means "not listed", not "unknown": that is why <code>load_orders()</code> turns it into a 0/1 flag.</li>
+<li>Every line found a manager.</li>
+</ul>
+<p>Turn the blank into an explicit flag, and log the join.</p>
+<div class="highlight"><pre><span></span><code><span class="n">orders_joined</span> <span class="o">=</span> <span class="n">step2</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;returns_match&quot;</span><span class="p">,</span> <span class="s2">&quot;people_match&quot;</span><span class="p">])</span>
+<span class="n">orders_joined</span><span class="p">[</span><span class="s2">&quot;returned_listed&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">orders_joined</span><span class="p">[</span><span class="s2">&quot;Returned&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">eq</span><span class="p">(</span><span class="s2">&quot;Yes&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+
+<span class="n">log_step</span><span class="p">(</span><span class="s2">&quot;Superstore&quot;</span><span class="p">,</span> <span class="s2">&quot;Left-joined Returns (on Order ID) and People (on Region)&quot;</span><span class="p">,</span>
+         <span class="s2">&quot;Add returns listing and regional manager to each line; validated many-to-one&quot;</span><span class="p">,</span>
+         <span class="nb">len</span><span class="p">(</span><span class="n">orders_raw</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">orders_joined</span><span class="p">))</span>
+<span class="n">orders_joined</span><span class="p">[[</span><span class="s2">&quot;Order ID&quot;</span><span class="p">,</span> <span class="s2">&quot;Region&quot;</span><span class="p">,</span> <span class="s2">&quot;Regional Manager&quot;</span><span class="p">,</span> <span class="s2">&quot;Returned&quot;</span><span class="p">,</span> <span class="s2">&quot;returned_listed&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Order ID</th>
+      <th>Region</th>
+      <th>Regional Manager</th>
+      <th>Returned</th>
+      <th>returned_listed</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>US-2023-103800</td>
+      <td>Central</td>
+      <td>Roxanne Rodriguez</td>
+      <td>NaN</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>US-2023-112326</td>
+      <td>Central</td>
+      <td>Roxanne Rodriguez</td>
+      <td>NaN</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>US-2023-112326</td>
+      <td>Central</td>
+      <td>Roxanne Rodriguez</td>
+      <td>NaN</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>US-2023-112326</td>
+      <td>Central</td>
+      <td>Roxanne Rodriguez</td>
+      <td>NaN</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>US-2023-141817</td>
+      <td>East</td>
+      <td>Chuck Magee</td>
+      <td>NaN</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<hr />
+<h2 id="independent-tasks">Independent tasks<a class="headerlink" href="#independent-tasks" title="Permanent link">&para;</a></h2>
+<h3 id="i1-core-profile-the-mobile-os-file">I1 (Core): Profile the Mobile OS file<a class="headerlink" href="#i1-core-profile-the-mobile-os-file" title="Permanent link">&para;</a></h3>
+<p>The file has three columns: a month, an operating system and its percentage of page views. Profile it the same way you profiled the matches.</p>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">mobile_raw</span><span class="o">.</span><span class="n">dtypes</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Missing values per column:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mobile_raw</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+<span class="n">mobile_raw</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Date                        object
+Mobile Operating System     object
+Percent of Usage           float64
+dtype: object
+
+Missing values per column:
+Date                       1772
+Mobile Operating System       0
+Percent of Usage              0
+dtype: int64
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Date</th>
+      <th>Mobile Operating System</th>
+      <th>Percent of Usage</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2008-12-01</td>
+      <td>Android</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2008-12-01</td>
+      <td>iOS</td>
+      <td>32.56</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2008-12-01</td>
+      <td>SymbianOS</td>
+      <td>42.02</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2008-12-01</td>
+      <td>Series 40</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2008-12-01</td>
+      <td>BlackBerry OS</td>
+      <td>0.00</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p>Most dates are missing. Which months <strong>do</strong> have dates, how many operating systems does each have, and do their percentages add up to about 100?</p>
+<div class="highlight"><pre><span></span><code><span class="n">dated</span> <span class="o">=</span> <span class="n">mobile_raw</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Date&quot;</span><span class="p">])</span>
+<span class="n">dated</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;Date&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">(</span>
+    <span class="n">systems</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;Mobile Operating System&quot;</span><span class="p">,</span> <span class="s2">&quot;nunique&quot;</span><span class="p">),</span>
+    <span class="n">percent_total</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;Percent of Usage&quot;</span><span class="p">,</span> <span class="s2">&quot;sum&quot;</span><span class="p">),</span>
+<span class="p">)</span>
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>systems</th>
+      <th>percent_total</th>
+    </tr>
+    <tr>
+      <th>Date</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2008-12-01</th>
+      <td>26</td>
+      <td>100.00</td>
+    </tr>
+    <tr>
+      <th>2009-01-01</th>
+      <td>26</td>
+      <td>100.00</td>
+    </tr>
+    <tr>
+      <th>2009-02-01</th>
+      <td>26</td>
+      <td>100.01</td>
+    </tr>
+    <tr>
+      <th>2009-03-01</th>
+      <td>26</td>
+      <td>99.99</td>
+    </tr>
+    <tr>
+      <th>2009-04-01</th>
+      <td>22</td>
+      <td>99.17</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p>Record in your evidence log:</p>
+<ol>
+<li>How many rows have a date, and how many do not.</li>
+<li>Which months are dated, and which of them look <strong>complete</strong> (all systems present, total close to 100).</li>
+<li>One month that looks <strong>incomplete</strong>, and how you can tell.</li>
+</ol>
+<h3 id="i2-core-choose-a-subset-you-can-defend">I2 (Core): Choose a subset you can defend<a class="headerlink" href="#i2-core-choose-a-subset-you-can-defend" title="Permanent link">&para;</a></h3>
+<p>The undated rows cannot be placed in time. It is tempting to give them dates based on their <strong>position</strong> in the file, but row order is not evidence: a file can be sorted, filtered or appended in any order.</p>
+<p>The defensible choice is to keep <strong>only the dated rows</strong>, and to mark the month that is incomplete.</p>
+<div class="highlight"><pre><span></span><code><span class="n">before</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">mobile_raw</span><span class="p">)</span>
+<span class="n">mobile</span> <span class="o">=</span> <span class="n">mobile_raw</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Date&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">mobile</span><span class="p">[</span><span class="s2">&quot;Date&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">mobile</span><span class="p">[</span><span class="s2">&quot;Date&quot;</span><span class="p">])</span>
+
+<span class="n">month_totals</span> <span class="o">=</span> <span class="n">mobile</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;Date&quot;</span><span class="p">)[</span><span class="s2">&quot;Percent of Usage&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">complete_months</span> <span class="o">=</span> <span class="n">month_totals</span><span class="p">[(</span><span class="n">month_totals</span> <span class="o">-</span> <span class="mi">100</span><span class="p">)</span><span class="o">.</span><span class="n">abs</span><span class="p">()</span> <span class="o">&lt;</span> <span class="mf">0.5</span><span class="p">]</span><span class="o">.</span><span class="n">index</span>
+<span class="n">mobile</span><span class="p">[</span><span class="s2">&quot;complete_month&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">mobile</span><span class="p">[</span><span class="s2">&quot;Date&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">complete_months</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+
+<span class="n">log_step</span><span class="p">(</span><span class="s2">&quot;Mobile OS&quot;</span><span class="p">,</span> <span class="s2">&quot;Kept only rows with a date; flagged incomplete months&quot;</span><span class="p">,</span>
+         <span class="s2">&quot;Undated rows cannot be placed in time; row order is not evidence&quot;</span><span class="p">,</span> <span class="n">before</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">mobile</span><span class="p">))</span>
+<span class="n">mobile</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;Date&quot;</span><span class="p">)[</span><span class="s2">&quot;complete_month&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">first</span><span class="p">()</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Date
+2008-12-01    1
+2009-01-01    1
+2009-02-01    1
+2009-03-01    1
+2009-04-01    0
+Name: complete_month, dtype: int64
+</code></pre></div>
+<blockquote>
+<p><strong>Your turn:</strong> change the code in the next cell and run it again.</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="c1"># 1. Run the cell: it charts the share of page views for two systems, complete months only.</span>
+<span class="c1"># 2. Change the list to two or three other systems, for example &quot;BlackBerry OS&quot; or &quot;Android&quot;.</span>
+<span class="c1"># 3. Rewrite the title so it says exactly what the chart shows, including the period.</span>
+<span class="n">selected</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;iOS&quot;</span><span class="p">,</span> <span class="s2">&quot;SymbianOS&quot;</span><span class="p">]</span>
+
+<span class="n">subset</span> <span class="o">=</span> <span class="n">mobile</span><span class="p">[(</span><span class="n">mobile</span><span class="p">[</span><span class="s2">&quot;complete_month&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="o">&amp;</span> <span class="n">mobile</span><span class="p">[</span><span class="s2">&quot;Mobile Operating System&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">selected</span><span class="p">)]</span>
+<span class="n">chart</span> <span class="o">=</span> <span class="n">subset</span><span class="o">.</span><span class="n">pivot</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="s2">&quot;Date&quot;</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="s2">&quot;Mobile Operating System&quot;</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="s2">&quot;Percent of Usage&quot;</span><span class="p">)</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">chart</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">marker</span><span class="o">=</span><span class="s2">&quot;o&quot;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Share of mobile page views, Dec 2008 – Mar 2009 (Statcounter)&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Percent of page views&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+<p><img alt="png" src="../03_cleaning_and_preparing_lab_files/03_cleaning_and_preparing_lab_45_0.png" /></p>
+<p>Write one sentence describing your chart and one sentence on what the file <strong>cannot</strong> tell you (think about what a page-view share measures, and about the period covered).</p>
+<hr />
+<h3 id="i3-core-how-much-did-the-duplicates-matter">I3 (Core): How much did the duplicates matter?<a class="headerlink" href="#i3-core-how-much-did-the-duplicates-matter" title="Permanent link">&para;</a></h3>
+<p>Compare goals per match for each tournament using the <strong>raw</strong> and the <strong>clean</strong> match tables.</p>
+<blockquote>
+<p><strong>Your turn:</strong> change the code in the next cell and run it again.</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="c1"># 1. Run the cell and find the tournament where raw and clean differ.</span>
+<span class="c1"># 2. Change &quot;goals_per_match&quot; to &quot;matches&quot; to compare match counts instead.</span>
+<span class="c1"># 3. Then compare the clean goals with the official GoalsScored column in cups.</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">per_tournament</span><span class="p">(</span><span class="n">table</span><span class="p">):</span>
+    <span class="n">goals</span> <span class="o">=</span> <span class="n">table</span><span class="p">[</span><span class="s2">&quot;HomeGoals&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="n">table</span><span class="p">[</span><span class="s2">&quot;AwayGoals&quot;</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+        <span class="s2">&quot;matches&quot;</span><span class="p">:</span> <span class="n">table</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;Year&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">size</span><span class="p">(),</span>
+        <span class="s2">&quot;goals&quot;</span><span class="p">:</span> <span class="n">goals</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">table</span><span class="p">[</span><span class="s2">&quot;Year&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span>
+    <span class="p">})</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">goals_per_match</span><span class="o">=</span><span class="k">lambda</span> <span class="n">t</span><span class="p">:</span> <span class="n">t</span><span class="p">[</span><span class="s2">&quot;goals&quot;</span><span class="p">]</span> <span class="o">/</span> <span class="n">t</span><span class="p">[</span><span class="s2">&quot;matches&quot;</span><span class="p">])</span>
+
+
+<span class="n">comparison</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s2">&quot;raw&quot;</span><span class="p">:</span> <span class="n">per_tournament</span><span class="p">(</span><span class="n">matches_raw</span><span class="p">)[</span><span class="s2">&quot;goals_per_match&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;clean&quot;</span><span class="p">:</span> <span class="n">per_tournament</span><span class="p">(</span><span class="n">matches</span><span class="p">)[</span><span class="s2">&quot;goals_per_match&quot;</span><span class="p">],</span>
+<span class="p">})</span>
+<span class="n">comparison</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>raw</th>
+      <th>clean</th>
+    </tr>
+    <tr>
+      <th>Year</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1998</th>
+      <td>2.67</td>
+      <td>2.67</td>
+    </tr>
+    <tr>
+      <th>2002</th>
+      <td>2.52</td>
+      <td>2.52</td>
+    </tr>
+    <tr>
+      <th>2006</th>
+      <td>2.30</td>
+      <td>2.30</td>
+    </tr>
+    <tr>
+      <th>2010</th>
+      <td>2.27</td>
+      <td>2.27</td>
+    </tr>
+    <tr>
+      <th>2014</th>
+      <td>2.58</td>
+      <td>2.67</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p>Did the duplicates change the <strong>average</strong> much? Would they have changed a <strong>total</strong> (all goals scored in 2014) more or less? Write your answer, with the numbers, in your log.</p>
+<hr />
+<h3 id="i4-core-finish-the-cleaning-log">I4 (Core): Finish the cleaning log<a class="headerlink" href="#i4-core-finish-the-cleaning-log" title="Permanent link">&para;</a></h3>
+<p>Decide how to treat <code>Iran</code> / <code>IR Iran</code> and the German teams from G4. Add one row to the log for your decision, even if the decision is "leave unchanged".</p>
+<blockquote>
+<p><strong>Your turn:</strong> change the code in the next cell and run it again.</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="c1"># 1. Edit the mapping: add or remove names you decide to combine.</span>
+<span class="c1"># 2. Fill in the reason in log_step. If you change nothing, log that decision too.</span>
+<span class="n">name_map</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;IR Iran&quot;</span><span class="p">:</span> <span class="s2">&quot;Iran&quot;</span><span class="p">}</span>
+
+<span class="n">before_names</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">matches</span><span class="p">[</span><span class="s2">&quot;HomeTeam&quot;</span><span class="p">],</span> <span class="n">matches</span><span class="p">[</span><span class="s2">&quot;AwayTeam&quot;</span><span class="p">]])</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span>
+<span class="n">matches</span><span class="p">[</span><span class="s2">&quot;HomeTeam&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">matches</span><span class="p">[</span><span class="s2">&quot;HomeTeam&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">name_map</span><span class="p">)</span>
+<span class="n">matches</span><span class="p">[</span><span class="s2">&quot;AwayTeam&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">matches</span><span class="p">[</span><span class="s2">&quot;AwayTeam&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">name_map</span><span class="p">)</span>
+<span class="n">after_names</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">matches</span><span class="p">[</span><span class="s2">&quot;HomeTeam&quot;</span><span class="p">],</span> <span class="n">matches</span><span class="p">[</span><span class="s2">&quot;AwayTeam&quot;</span><span class="p">]])</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span>
+
+<span class="n">log_step</span><span class="p">(</span><span class="s2">&quot;World Cup matches&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;Renamed teams: </span><span class="si">{</span><span class="n">name_map</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;Write your reason here&quot;</span><span class="p">,</span>
+         <span class="nb">len</span><span class="p">(</span><span class="n">matches</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">matches</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Different team names before:&quot;</span><span class="p">,</span> <span class="n">before_names</span><span class="p">,</span> <span class="s2">&quot;| after:&quot;</span><span class="p">,</span> <span class="n">after_names</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Different team names before: 83 | after: 82
+</code></pre></div>
+<p>Now print the whole log. This table is your main evidence for today.</p>
+<div class="highlight"><pre><span></span><code><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">cleaning_log</span><span class="p">)</span>
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>dataset</th>
+      <th>change</th>
+      <th>why</th>
+      <th>rows_before</th>
+      <th>rows_after</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>World Cup matches</td>
+      <td>Removed exact duplicate rows</td>
+      <td>Same match recorded twice; match count exceede...</td>
+      <td>852</td>
+      <td>836</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>World Cup matches</td>
+      <td>Stripped spaces from City</td>
+      <td>Every City value ended in a space</td>
+      <td>836</td>
+      <td>836</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>World Cup matches</td>
+      <td>Flagged rows with broken characters (not corre...</td>
+      <td>Encoding damage; original letters cannot be re...</td>
+      <td>836</td>
+      <td>836</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Superstore</td>
+      <td>Left-joined Returns (on Order ID) and People (...</td>
+      <td>Add returns listing and regional manager to ea...</td>
+      <td>10194</td>
+      <td>10194</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Mobile OS</td>
+      <td>Kept only rows with a date; flagged incomplete...</td>
+      <td>Undated rows cannot be placed in time; row ord...</td>
+      <td>1898</td>
+      <td>126</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>World Cup matches</td>
+      <td>Renamed teams: {'IR Iran': 'Iran'}</td>
+      <td>Write your reason here</td>
+      <td>836</td>
+      <td>836</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<hr />
+<h3 id="i5-stretch-reshape-the-mobile-os-data">I5 (Stretch): Reshape the Mobile OS data<a class="headerlink" href="#i5-stretch-reshape-the-mobile-os-data" title="Permanent link">&para;</a></h3>
+<p>Make a <strong>wide</strong> table with one row per operating system and one column per month, then check each month's total and melt it back to long.</p>
+<blockquote>
+<p><strong>Your turn:</strong> change the code in the next cell and run it again.</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="c1"># 1. Run the cell. Which month&#39;s column does not add up to about 100?</span>
+<span class="c1"># 2. Change sort_values(&quot;2008-12-01&quot;) to sort by another month.</span>
+<span class="n">wide</span> <span class="o">=</span> <span class="n">mobile</span><span class="o">.</span><span class="n">pivot</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="s2">&quot;Mobile Operating System&quot;</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="s2">&quot;Date&quot;</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="s2">&quot;Percent of Usage&quot;</span><span class="p">)</span>
+<span class="n">wide</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="n">wide</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%Y-%m-</span><span class="si">%d</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Column totals:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">wide</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
+<span class="n">wide</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s2">&quot;2008-12-01&quot;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Column totals:
+Date
+2008-12-01   100.00
+2009-01-01   100.00
+2009-02-01   100.01
+2009-03-01    99.99
+2009-04-01    99.17
+dtype: float64
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Date</th>
+      <th>2008-12-01</th>
+      <th>2009-01-01</th>
+      <th>2009-02-01</th>
+      <th>2009-03-01</th>
+      <th>2009-04-01</th>
+    </tr>
+    <tr>
+      <th>Mobile Operating System</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>SymbianOS</th>
+      <td>42.02</td>
+      <td>39.31</td>
+      <td>37.04</td>
+      <td>35.12</td>
+      <td>34.25</td>
+    </tr>
+    <tr>
+      <th>iOS</th>
+      <td>32.56</td>
+      <td>35.56</td>
+      <td>36.43</td>
+      <td>39.60</td>
+      <td>41.91</td>
+    </tr>
+    <tr>
+      <th>Unknown</th>
+      <td>16.00</td>
+      <td>14.73</td>
+      <td>11.87</td>
+      <td>11.29</td>
+      <td>10.20</td>
+    </tr>
+    <tr>
+      <th>Playstation</th>
+      <td>4.47</td>
+      <td>4.33</td>
+      <td>3.58</td>
+      <td>3.18</td>
+      <td>2.85</td>
+    </tr>
+    <tr>
+      <th>WinCE</th>
+      <td>2.22</td>
+      <td>2.10</td>
+      <td>1.94</td>
+      <td>1.70</td>
+      <td>1.55</td>
+    </tr>
+    <tr>
+      <th>Linux</th>
+      <td>1.66</td>
+      <td>1.24</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>Other</th>
+      <td>1.07</td>
+      <td>1.12</td>
+      <td>1.52</td>
+      <td>0.95</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>Android</th>
+      <td>0.00</td>
+      <td>0.66</td>
+      <td>2.06</td>
+      <td>2.18</td>
+      <td>2.02</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="highlight"><pre><span></span><code><span class="n">long_again</span> <span class="o">=</span> <span class="n">wide</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span><span class="o">.</span><span class="n">melt</span><span class="p">(</span><span class="n">id_vars</span><span class="o">=</span><span class="s2">&quot;Mobile Operating System&quot;</span><span class="p">,</span> <span class="n">var_name</span><span class="o">=</span><span class="s2">&quot;Date&quot;</span><span class="p">,</span>
+                                     <span class="n">value_name</span><span class="o">=</span><span class="s2">&quot;Percent of Usage&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Rows in mobile:&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">mobile</span><span class="p">),</span> <span class="s2">&quot;| rows after reshaping back:&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">long_again</span><span class="p">))</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Rows in mobile: 126 | rows after reshaping back: 126
+</code></pre></div>
+<p>Explain why some cells in the wide table are blank, and why we drop them (instead of filling them with 0) when melting back.</p>
+<hr />
+<h3 id="i6-stretch-which-listed-returns-fall-in-the-course-period">I6 (Stretch): Which listed returns fall in the course period?<a class="headerlink" href="#i6-stretch-which-listed-returns-fall-in-the-course-period" title="Permanent link">&para;</a></h3>
+<p>The Returns sheet lists orders from every year in the Orders sheet. Our course period is orders placed <strong>2023 to 2025</strong>. How many listed orders fall inside it?</p>
+<blockquote>
+<p><strong>Your turn:</strong> change the code in the next cell and run it again.</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="c1"># 1. Run the cell.</span>
+<span class="c1"># 2. Change the period to only 2025 (&quot;2025-01-01&quot; to &quot;2026-01-01&quot;) and run again.</span>
+<span class="n">start</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="s2">&quot;2023-01-01&quot;</span><span class="p">,</span> <span class="s2">&quot;2026-01-01&quot;</span>
+
+<span class="n">order_dates</span> <span class="o">=</span> <span class="n">orders_raw</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;Order ID&quot;</span><span class="p">)[</span><span class="s2">&quot;Order Date&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+<span class="n">listed_dates</span> <span class="o">=</span> <span class="n">order_dates</span><span class="o">.</span><span class="n">reindex</span><span class="p">(</span><span class="n">returns_raw</span><span class="p">[</span><span class="s2">&quot;Order ID&quot;</span><span class="p">])</span>
+<span class="n">in_period</span> <span class="o">=</span> <span class="p">(</span><span class="n">listed_dates</span> <span class="o">&gt;=</span> <span class="n">start</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">listed_dates</span> <span class="o">&lt;</span> <span class="n">end</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Orders on the returns list:&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">returns_raw</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Of those, placed in the period:&quot;</span><span class="p">,</span> <span class="n">in_period</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Orders on the returns list: 296
+Of those, placed in the period: 191
+</code></pre></div>
+<p>Compare your result with the number of distinct listed orders in <code>load_orders()</code> (Session 2, task G6). Do they agree?</p>
+<hr />
+<h2 id="challenge">Challenge<a class="headerlink" href="#challenge" title="Permanent link">&para;</a></h2>
+<h3 id="c1-challenge-the-sales-total-that-grew">C1 (Challenge): The sales total that grew<a class="headerlink" href="#c1-challenge-the-sales-total-that-grew" title="Permanent link">&para;</a></h3>
+<p>A colleague adds regional <strong>sales targets</strong> to the order lines and reports total Sales from the joined table. Their total is bigger than yours.</p>
+<blockquote>
+<p><strong>Your turn:</strong> change the code in the next cell and run it again.</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="c1"># The colleague&#39;s code. It runs without errors, but the total is wrong.</span>
+<span class="c1"># 1. Find out why the joined table has more rows than orders_raw.</span>
+<span class="c1"># 2. Fix the targets table or the join so every order line appears exactly once.</span>
+<span class="c1"># 3. Add validate= so the same mistake can never pass silently again.</span>
+<span class="n">targets</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s2">&quot;Region&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;West&quot;</span><span class="p">,</span> <span class="s2">&quot;West&quot;</span><span class="p">,</span> <span class="s2">&quot;East&quot;</span><span class="p">,</span> <span class="s2">&quot;Central&quot;</span><span class="p">,</span> <span class="s2">&quot;South&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;version&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;original&quot;</span><span class="p">,</span> <span class="s2">&quot;revised&quot;</span><span class="p">,</span> <span class="s2">&quot;original&quot;</span><span class="p">,</span> <span class="s2">&quot;original&quot;</span><span class="p">,</span> <span class="s2">&quot;original&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;target&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">700_000</span><span class="p">,</span> <span class="mi">760_000</span><span class="p">,</span> <span class="mi">650_000</span><span class="p">,</span> <span class="mi">500_000</span><span class="p">,</span> <span class="mi">400_000</span><span class="p">],</span>
+<span class="p">})</span>
+
+<span class="n">with_targets</span> <span class="o">=</span> <span class="n">orders_raw</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">targets</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s2">&quot;Region&quot;</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s2">&quot;left&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Rows:&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">orders_raw</span><span class="p">),</span> <span class="s2">&quot;-&gt;&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">with_targets</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Total Sales reported by the colleague:&quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">with_targets</span><span class="p">[</span><span class="s2">&quot;Sales&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span> <span class="mi">2</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Total Sales in the Orders sheet:      &quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">orders_raw</span><span class="p">[</span><span class="s2">&quot;Sales&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span> <span class="mi">2</span><span class="p">))</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Rows: 10194 -&gt; 13447
+Total Sales reported by the colleague: 3066347.96
+Total Sales in the Orders sheet:       2326534.35
+</code></pre></div>
+<blockquote>
+<p><strong>How would you check your fix?</strong></p>
+<p>Your fixed join must keep the row count and the Sales total of <code>orders_raw</code>. Write a two-sentence message to the colleague that explains the mistake without blaming anyone, and names the check that would have caught it.</p>
+</blockquote>
+<hr />
+<h3 id="c2-challenge-the-tempting-fill">C2 (Challenge): The tempting fill<a class="headerlink" href="#c2-challenge-the-tempting-fill" title="Permanent link">&para;</a></h3>
+<p>Look at the rows straight after the last dated April 2009 row.</p>
+<div class="highlight"><pre><span></span><code><span class="n">mobile_raw</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">118</span><span class="p">:</span><span class="mi">132</span><span class="p">]</span>
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Date</th>
+      <th>Mobile Operating System</th>
+      <th>Percent of Usage</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>118</th>
+      <td>2009-04-01</td>
+      <td>WinCE</td>
+      <td>1.55</td>
+    </tr>
+    <tr>
+      <th>119</th>
+      <td>2009-04-01</td>
+      <td>Nintendo 3DS</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>120</th>
+      <td>2009-04-01</td>
+      <td>Nintendo</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>121</th>
+      <td>2009-04-01</td>
+      <td>webOS</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>122</th>
+      <td>2009-04-01</td>
+      <td>WinXP</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>123</th>
+      <td>2009-04-01</td>
+      <td>Brew</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>124</th>
+      <td>2009-04-01</td>
+      <td>Motorola</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>125</th>
+      <td>2009-04-01</td>
+      <td>Win7</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>126</th>
+      <td>NaN</td>
+      <td>MeeGo</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>127</th>
+      <td>NaN</td>
+      <td>Maemo 5</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>128</th>
+      <td>NaN</td>
+      <td>WinVista</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>129</th>
+      <td>NaN</td>
+      <td>Other</td>
+      <td>0.85</td>
+    </tr>
+    <tr>
+      <th>130</th>
+      <td>NaN</td>
+      <td>Android</td>
+      <td>1.86</td>
+    </tr>
+    <tr>
+      <th>131</th>
+      <td>NaN</td>
+      <td>iOS</td>
+      <td>37.32</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p>April has fewer systems than the other months, and its total is below 100. The four undated rows that follow look like exactly the missing systems, and adding them brings April close to 100. A colleague proposes filling every blank date with the date of the row above it.</p>
+<p>In your log, answer:</p>
+<ol>
+<li>What evidence supports giving those four rows the April date? What evidence is missing?</li>
+<li>What would forward-filling do to the other undated rows, and why is that far more dangerous?</li>
+<li>What would you need from the data provider to use the undated rows at all?</li>
+</ol>
+<hr />
+<h2 id="exit-ticket">Exit ticket<a class="headerlink" href="#exit-ticket" title="Permanent link">&para;</a></h2>
+<ol>
+<li>One duplicate you removed and the independent number that confirmed the fix.</li>
+<li>Your Mobile OS decision in one sentence, with its reason.</li>
+<li>The three checks you ran around the Superstore join.</li>
+<li>Why the colleague's total in C1 grew.</li>
+<li>One thing you are still unsure about.</li>
+</ol>
+<h2 id="evidence-to-keep">Evidence to keep<a class="headerlink" href="#evidence-to-keep" title="Permanent link">&para;</a></h2>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled/> Duplicate check against the official match counts, before and after (G2–G3)</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Text problems found and how each was treated: fixed, flagged or left (G4, I4)</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Superstore join with key checks, <code>validate</code>, <code>indicator</code>, row counts and Sales total (G5)</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Mobile OS profile and your defended subset (I1–I2)</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Your complete cleaning log (I4)</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Your fix and message for the debugging challenge (C1), if attempted</li>
+</ul>
+<h2 id="after-the-lab">After the lab<a class="headerlink" href="#after-the-lab" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Previous: <a href="../03_cleaning_and_preparing_lecture/">Session 3 lecture</a>. Next: <a href="../04_descriptive_statistics_lecture/">Session 4 lecture</a>, descriptive statistics and distributions.</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../03_cleaning_and_preparing_lecture/" class="btn btn-neutral float-left" title="Lecture"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../04_descriptive_statistics_lecture/" class="btn btn-neutral float-right" title="Lecture">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Copyright &copy; 2026 - Aayush Raj Regmi</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../03_cleaning_and_preparing_lecture/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../04_descriptive_statistics_lecture/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

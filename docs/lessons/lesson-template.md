@@ -21,7 +21,7 @@ The structure every lesson in this course will follow. Each section below shows 
 By the end, you will be able to:
 
 - [Explain what a row means and which records are in scope.]
-- [Prepare the data and calculate the specified measures in Tableau.]
+- [Prepare the data and calculate the specified measures in Python (or, in the Tableau section, in Tableau).]
 - [Check a result and explain a common error.]
 - [Present a recommendation supported by evidence and one limitation.]
 
@@ -31,11 +31,11 @@ By the end, you will be able to:
 
 ## 3. Before you start
 
-[Required prior skills, the tested Tableau setup, the approved dataset release and what to do if access fails. Python is optional.]
+[Required prior skills, the notebook to download, the approved dataset release and what to do if access fails.]
 
 !!! warning "Data safety"
 
-    Only use data approved for this lesson in Tableau Public. Published workbooks and their data are public, and hiding a profile item does not make it private. Never upload workplace or personal data.
+    Only use data approved for this lesson. Never upload workplace or personal data to Colab, Tableau Public or any other online tool. Anything published to Tableau Public is public, even if hidden on a profile.
 
     [State whether publishing is required and give the tested submission route.]
 
@@ -77,7 +77,7 @@ By the end, you will be able to:
 
 ## 7. Try it with guidance
 
-[A bounded Tableau task with prompts, the expected result and a checkpoint. Include a recovery step and an accessible table alternative for key visuals.]
+[A bounded task (code to run and modify, or Tableau steps in the Tableau section) with prompts, the expected result and a checkpoint. Include a recovery step and an accessible table alternative for key visuals.]
 
 ---
 
@@ -107,9 +107,9 @@ By the end, you will be able to:
 
 ---
 
-## 11. Optional Python connection
+## 11. Connection to the other tool
 
-[How the same analysis looks in pandas, using the same dataset and metric definitions. Provided only after it is tested. Not needed for the essential Tableau submission.]
+[In the Tableau section: how the same analysis looks in Tableau, using the same dataset and metric definitions. Provided only after it is tested.]
 
 ---
 

@@ -8,13 +8,17 @@ The user requests Claude takeover next. Read [AGENTS.md](../AGENTS.md) → [PROJ
 
 Learner site keeps the Read the Docs theme (user preference after a brief Material trial, DEC-036) plus `docs/stylesheets/readability.css`; all six pages were restructured for readability (DEC-034, DOC01). Write every new learner page in that style: lead sentence, `---` breaks, short paragraphs, numbered steps, tables or `###` subsections, note/tip/hint/warning admonitions. No Material-only syntax. User approved the rendered result. Preview with `/tmp/kings-data-docs-venv/bin/python -m mkdocs serve` (reinstall from requirements.txt if the venv is gone). D03 Tableau checks remain open because this session had no desktop-app control (DEC-035).
 
+## Python-first — 2026-10-13 (read this first)
+
+Main path is now Python in Google Colab (DEC-041). The lesson source is `notebooks/NN_*.ipynb` (DEC-042): edit the notebook, run `scripts/run_notebooks.py --check-data` (Python 3.12, `requirements.txt`), then `make convert-all` to refresh `docs/lectures/`. Push to GitHub so the Open in Colab badges work. The Tableau drafts under `docs/lessons/class-0N.md` are a deferred later section. Next: Colab trial; private exercise answers for the Python lessons; D02R refunds; finance case.
+
 ## Lessons 3–4 drafts — 2026-10-12
 
 Draft Lessons 1–4 now cover the whole retail stage. All four need one Tableau rehearsal with the user at the keyboard, using the checklists in `instructor/sessions/*/teaching-notes.md`; that rehearsal also closes D03. After that: D02R synthetic refund/cost supplement, then the finance case (D04 data contract, L04 lesson).
 
 ## Foundations and content-first framing — 2026-10-12
 
-New `docs/foundations/` module (DEC-038) precedes the Tableau lessons; regenerate its figures with `scripts/make_foundation_figures.py` (deps in requirements-figures.txt). Learner pages must not frame the course by session count or hour budgets (DEC-039); lessons are "Lesson N".
+New `docs/foundations/` module (DEC-038) precedes the Tableau lessons; regenerate its figures with `scripts/make_foundation_figures.py` (deps in requirements.txt). Learner pages must not frame the course by session count or hour budgets (DEC-039); lessons are "Lesson N".
 
 ## Class 1–2 drafts — 2026-10-12
 

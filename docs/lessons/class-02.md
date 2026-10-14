@@ -1,10 +1,12 @@
-# Lesson 2: Can we trust the sales table?
+# Tableau Lesson 2: Can we trust the sales table?
 
 <p class="lead">
 Before comparing anything, find out exactly what the retail file contains: what a row is, which columns can be added up, and how to count orders correctly.
 </p>
 
-!!! warning "Draft lesson"
+!!! warning "Draft lesson: Tableau section (coming later)"
+
+    The course currently teaches this lesson in Python: see [Python Lesson 2](../lectures/02_trust_the_sales_table.md). This Tableau version will be completed in the later Tableau section.
 
     The Tableau steps on this page have not yet been rehearsed on the course version of Tableau. Menu names may differ slightly on your computer.
 

@@ -1,3 +1,24 @@
-# MkDocs foundation only. Python companions have a separate future environment.
+# Project dependencies, grouped by purpose. Use Python 3.12 (matches Google Colab;
+# pandas 2.2.3 does not run on Python 3.14).
+#
+#   python3.12 -m venv .venv
+#   .venv/bin/python -m pip install -r requirements.txt
+
+# --- Documentation site (mkdocs build / serve) ---
 mkdocs>=1.6,<2
 pymdown-extensions>=10,<11
+
+# --- Data: source audit, preparation and validation (scripts/*retail*.py, scripts/*catalog*.py) ---
+pandas==2.2.3
+openpyxl>=3.1,<4
+xlrd==2.0.2
+
+# --- Figures for the Foundations pages (scripts/make_foundation_figures.py) ---
+matplotlib>=3.8,<4
+pyreadr>=0.5,<1
+
+# --- Lesson notebooks: execute (scripts/run_notebooks.py) and convert (make convert-all) ---
+nbconvert>=7.16
+nbclient>=0.10
+nbformat>=5.10
+ipykernel>=6.29

@@ -1,10 +1,12 @@
-# Lesson 3: Which segment deserves a closer look?
+# Tableau Lesson 3: Which segment deserves a closer look?
 
 <p class="lead">
 Compare the three customer segments using five measures, calculate each one correctly, check that the numbers add up, and make a careful recommendation.
 </p>
 
-!!! warning "Draft lesson"
+!!! warning "Draft lesson: Tableau section (coming later)"
+
+    The course currently teaches this lesson in Python: see [Python Lesson 3](../lectures/03_segment_comparison.md). This Tableau version will be completed in the later Tableau section.
 
     The Tableau steps on this page have not yet been rehearsed on the course version of Tableau. Menu names may differ slightly on your computer.
 

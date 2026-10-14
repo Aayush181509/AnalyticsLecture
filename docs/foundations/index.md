@@ -4,7 +4,7 @@
 Every organisation makes decisions. Data analytics is the discipline of making those decisions with evidence instead of guesswork, and of explaining that evidence so other people act on it.
 </p>
 
-Before we open Tableau, this Foundations section answers a simple question: **why bother?** You will see how analysis has changed real outcomes, how numbers can mislead, and why the way we *present* evidence matters as much as the evidence itself.
+Before we write any code or build any charts, this Foundations section answers a simple question: **why bother?** You will see how analysis has changed real outcomes, how numbers can mislead, and why the way we *present* evidence matters as much as the evidence itself.
 
 ---
 

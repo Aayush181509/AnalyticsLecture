@@ -96,12 +96,22 @@ You will rarely meet a dinosaur in a sales report. But you will meet the same pr
 
     Think of a number you see regularly in your job, for example average monthly sales or average response time. Write down two different situations that would produce the **same average** but would need **different decisions**.
 
-!!! hint "Exercise 3: in Tableau (after Lesson 1)"
+!!! hint "Exercise 3: in Python (after Lesson 0)"
 
-    Type the Anscombe data from the table above into a spreadsheet with three columns: `dataset` (I, II, III or IV), `x` and `y`, one row per point (44 rows). Connect Tableau to it, then:
+    In a new Colab notebook, recreate Dataset II and compare its statistics with a chart:
 
-    1. Drag `dataset` to **Columns**, then drag `x` to **Columns** to its right.
-    2. Drag `y` to **Rows**.
-    3. Open the **Analysis** menu and untick **Aggregate Measures**, so each row becomes its own point instead of one summed mark per dataset.
+    ```python
+    import pandas as pd
+    import matplotlib.pyplot as plt
 
-    You have just recreated the quartet.
+    d = pd.DataFrame({
+        "x": [10, 8, 13, 9, 11, 14, 6, 4, 12, 7, 5],
+        "y": [9.14, 8.14, 8.74, 8.77, 9.26, 8.10, 6.13, 3.10, 9.13, 7.26, 4.74],
+    })
+    print(d.mean())
+    print("Correlation:", d["x"].corr(d["y"]))
+    d.plot(kind="scatter", x="x", y="y", title="Anscombe dataset II")
+    plt.show()
+    ```
+
+    Then replace the `y` values with Dataset III from the table above. The printed statistics barely change. Does the chart?

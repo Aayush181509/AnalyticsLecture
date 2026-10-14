@@ -13,8 +13,8 @@ From the repository root:
 
 ```bash
 python3 scripts/acquire_catalog_samples.py
-python3 -m venv .venv-data
-.venv-data/bin/python -m pip install -r requirements-data.txt
+python3.12 -m venv .venv-data
+.venv-data/bin/python -m pip install -r requirements.txt
 .venv-data/bin/python scripts/profile_catalog_samples.py
 ```
 
@@ -22,7 +22,7 @@ The acquisition script uses curl with normal TLS verification. With the existing
 
 The offline profiler verifies bytes/hashes, reads the manifest's XLS/XLSX/CSV files, checks the observed keys and snapshot invariants, then writes `metadata/catalog-audit-2026-10-12/profiles.json` and private `instructor/source-audit/catalog-2026-10-12-controls.json`. It does not modify raw files, reconstruct missing dates, deduplicate originals, create learner derivatives or recalculate workbook formulas. Source workbook reads use stored results. Control totals are source-inspection evidence, not released lesson answers or independent upstream verification.
 
-Tested: Python 3.12.14, pandas 2.2.3, openpyxl 3.1.5, xlrd 2.0.2. The actual audit used the bundled Python plus xlrd installed in a temporary library directory; the local-venv recipe is a reproducibility path, not a separately tested installation. `requirements-data.txt` declares audit dependency ranges, not an exact lockfile. These dependencies are separate from MkDocs and are not required for the essential Tableau learner path.
+Tested: Python 3.12.14, pandas 2.2.3, openpyxl 3.1.5, xlrd 2.0.2. The actual audit used the bundled Python plus xlrd installed in a temporary library directory; the local-venv recipe is a reproducibility path, not a separately tested installation. The single `requirements.txt` (data section) declares these dependencies; it is not an exact lockfile. Use Python 3.12.14 when re-running `scripts/validate_retail.py`: its immutable private reports record the Python version, so another patch version stops with "Immutable numeric output mismatch" and replaces nothing.
 
 The separately present `scripts/fetch_catalog_sources.py` and its six-source layout were not executed or adopted by this audit. Do not confuse its paths with the four-source manifest or treat its embedded checksums as verification evidence from this run.
 

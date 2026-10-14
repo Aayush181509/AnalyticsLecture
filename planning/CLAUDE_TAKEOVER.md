@@ -2,6 +2,8 @@
 
 Prepared 2026-10-12 (Asia/Kathmandu) at the user's request. Workspace: `/Users/aayush/Documents/Kings/Data`.
 
+**Update 2026-10-13:** the teaching path is now Python-first in Google Colab (DEC-041); see HANDOFF and AGENTS "Python lessons" before using the Tableau-focused next actions below.
+
 **Resume the existing course project. Foundation, four-source inspection, the first retail contract and D02 preparation are complete. Independent numerical validation passed; D03 remains in progress for Tableau worksheet checks. Full course production is still a sequenced backlog.** This brief is a snapshot; AGENTS.md is the shared authority, and STATUS/TASKS record later changes.
 
 ## Start in this order
@@ -88,8 +90,8 @@ Final integration passed: six-page learner boundary/link check, strict temporary
 Run from the workspace root. Standard data setup recipe (documented, not separately installation-tested):
 
 ```bash
-python3 -m venv .venv-data
-.venv-data/bin/python -m pip install -r requirements-data.txt
+python3.12 -m venv .venv-data
+.venv-data/bin/python -m pip install -r requirements.txt
 .venv-data/bin/python scripts/check_retail_contract.py
 .venv-data/bin/python scripts/prepare_retail.py
 .venv-data/bin/python scripts/validate_retail.py

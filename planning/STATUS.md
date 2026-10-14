@@ -4,6 +4,39 @@ Updated: 2026-10-12 (Asia/Kathmandu). **Phase: foundation, source audit, D01 ret
 
 
 
+## Claude session: single requirements file and commit — 2026-10-14
+
+Merged the three extra requirement files into one sectioned `requirements.txt` (DEC-043) and updated every reference (README, data/README, notebooks/README, AGENTS, CLAUDE_TAKEOVER, HANDOFF, script docstrings). Verification in a fresh uv venv (Python 3.12.13) from the merged file:
+
+- `make_foundation_figures.py`, `run_notebooks.py --check-data` and `make convert-all` all ran, and every SVG, notebook and converted page was byte-identical to the committed state.
+- `check_retail_contract.py` and `prepare_retail.py` passed.
+- `validate_retail.py` refused, as designed, because its private reports record Python 3.12.14. In a second fresh venv on Python 3.12.14 from the same file it passed and re-verified both private reports byte-identically.
+- `check_docs.py` and the strict MkDocs build passed.
+
+The user then asked to commit.
+
+## Claude session: notebooks become the source (DEC-042) — 2026-10-13
+
+The user clarified they want `.ipynb` notebooks and already convert them with the Makefile. Changes:
+
+- Converted the five lessons into `notebooks/00_python_and_colab_basics.ipynb`, `01_decision_to_evidence`, `02_trust_the_sales_table`, `03_segment_comparison` and `04_trends_returns_dashboard`. Admonitions became blockquotes; each notebook opens with an Open in Colab badge pointing to the public repo `Aayush181509/AnalyticsLecture`; each exercise has a "Your turn" note.
+- Added `scripts/run_notebooks.py`, which executes notebooks in place with nbclient and checks the data. Ran `make convert-all` unchanged (jupyter from a Python 3.12 venv), producing `docs/lectures/*.md` and `*_files/*.png`.
+- Removed the superseded custom pipeline (`scripts/build_python_lessons.py`, `notebooks/src/`, `docs/python/`, `docs/notebooks/`, `docs/assets/python/`). `requirements-lessons.txt` was replaced by `requirements-notebooks.txt`.
+- Navigation now points Python Lessons to `docs/lectures/`. The setup page explains the Open in Colab button. CSS added for pandas tables (horizontal scroll) and blockquote callouts.
+- Verification: run_notebooks executed all 5 notebooks (85 code cells, no errors). `--check-data` PASS (shared setup cell in 4 notebooks; 6,815 rows / 3,388 orders match the CSV). Re-execution was byte-identical. `make convert-all` succeeded. `check_docs.py` PASS (21 pages); strict build PASS; image paths resolve in the built site.
+- Side effect found and reverted: an `ipykernel install --user` briefly created `~/Library/Jupyter/kernels/python3` pointing to the temporary venv. It was created in this session (the `kernels/` folder did not exist before) and was removed, leaving only the pre-existing `runtime/`.
+- Not verified: Open in Colab links (the notebooks are not on GitHub until pushed), an actual Colab run, novice timing.
+
+## Claude session: Python-first lessons — 2026-10-13
+
+User switched the teaching path to Python (DEC-041; choices: Google Colab, read-run-modify, Tableau drafts kept as a later section).
+
+- Pipeline: `scripts/build_python_lessons.py` + `notebooks/src/_setup.py` + `notebooks/src/lesson00–04.py` → `docs/python/lesson-00–04.md` (real executed outputs, 11 SVG charts in `docs/assets/python/`) and output-free `docs/notebooks/lesson-00–04.ipynb`. Lesson 0 (Python/Colab basics) and Lesson 1 were written by the lead. Lessons 2–4 were written by three parallel case/data-designer agents with exclusive files. Their sessions ended before they reported, so the lead rebuilt everything from scratch and reviewed it. Fixes: integer columns no longer display as decimals; the dashboard returns-share is shown as a percent; a raw legend label was replaced; a seasonal title reworded.
+- Navigation: Python Lessons section; Tableau drafts moved to "Tableau (Coming Later)" with banners linking to the Python versions. Home, setup (Colab), roadmap (Stage 1 Python, Stage 4 Tableau), Foundations wording, the Anscombe exercise (now Python) and the lesson template were updated.
+- Verification, actually run: builder `--check-data` PASS (the loader reproduces all 6,815 rows / 3,388 orders and every value of the validated CSV); two consecutive builds byte-identical (md, ipynb, svg); executed every code cell of all five downloadable notebooks in order, exercise cells included: 85 cells, no errors; the setup cell in an empty folder downloaded the live Tableau file and its SHA-256 matched (no warning); generated outputs checked against `reference_answers.json` (segment KPIs, overall AOV/ratio, returns 191 vs 511 lines, category 4,779, Jan 2025 MoM −75.1% / YoY +2.0%, Dec 2025, returns shares by segment); scan found no hand-typed result numbers, "margin", "return rate" or currency labels in lesson markdown; chart PNG previews inspected; `check_docs.py` PASS (21 pages); strict MkDocs build PASS; notebook download links resolve in the built site.
+- Environments: the temporary docs venv had been wiped and was recreated with uv (Python 3.12, MkDocs 1.6.1, from requirements.txt). The lesson venv `/tmp/kings-python-lessons-venv` uses Python 3.12.13, pandas 2.2.3, matplotlib 3.11.2, xlrd 2.0.2, tabulate 0.10.0. pandas 2.2.3 segfaults on Python 3.14, hence 3.12.
+- Not verified: an actual Google Colab session (local execution simulated it), novice timing, private answers for the Python exercise cells.
+
 ## User-authorized Git commit (Claude session) — 2026-10-12
 
 User asked to commit everything so far. All Claude-session work is in one local commit: readability styling, Foundations module and figures, Lessons 1–4 drafts and private notes, planning updates. The commit also includes the previously untracked Makefile, `scripts/fetch_catalog_sources.py`, the `retrieved-2026-10-12` raw copies (byte-identical to the committed Codex copies, so Git stores each blob once) and the Datasaurus/Challenger inputs. By user choice the 49 MB CrunchBase workbook is excluded and listed in .gitignore, because its provider terms apply. graphify-out/ stays ignored. Pre-commit: docs checker PASS, strict build PASS. Staged whitespace check passes except two known generated/original artifacts: the original CRLF Mobile OS CSV (same bytes as the committed copy) and matplotlib SVG path output. No push.

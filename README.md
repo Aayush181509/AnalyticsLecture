@@ -29,10 +29,10 @@ A course under development for working professionals: twelve two-hour live class
 
 ## Preview and verify
 
-From the project root, create a local environment and install the documentation dependencies:
+From the project root, create a local Python 3.12 environment and install all project dependencies (one `requirements.txt`, grouped by purpose):
 
 ```bash
-python3 -m venv .venv
+python3.12 -m venv .venv
 source .venv/bin/activate
 python -m pip install -r requirements.txt
 python scripts/check_docs.py
@@ -40,9 +40,9 @@ python -m mkdocs build --strict --site-dir /tmp/data-analytics-site-check
 python -m mkdocs serve
 ```
 
-Open the local address printed by MkDocs. The temporary build destination protects existing `site/` output. Documentation dependency ranges are in requirements.txt; the exact environment used this session is in STATUS.md. Python/pandas/Jupyter are not required to build the site or complete the essential Tableau path.
+Open the local address printed by MkDocs. The temporary build destination protects existing `site/` output. All dependencies (site, data scripts, figures, notebooks) are in requirements.txt; exact environments used are recorded in STATUS.md. Learners do not install anything: they run the lesson notebooks in Google Colab.
 
-The pre-existing Makefile is retained. Its build/serve commands require the environment above; its `run` target references an absent `main.py`, and notebook conversion awaits actual notebooks. `make deploy` publishes externally and is not a verification command. No site was published this session.
+The pre-existing Makefile is retained. Its build/serve commands require the environment above; its `run` target references an absent `main.py`. `make convert-all` converts the lesson notebooks in `notebooks/` to `docs/lectures/`; run `python scripts/run_notebooks.py --check-data` first so they carry fresh outputs. `make deploy` publishes externally and is not a verification command. No site was published this session.
 
 ## Work conventions
 

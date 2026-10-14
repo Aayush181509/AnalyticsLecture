@@ -7,7 +7,7 @@ docs/assets/foundations/. Re-running produces identical files.
 
 Usage:
     python scripts/make_foundation_figures.py
-Requires: pandas, matplotlib, pyreadr (see requirements-figures.txt).
+Requires: pandas, matplotlib, pyreadr (see requirements.txt).
 """
 
 from pathlib import Path

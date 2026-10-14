@@ -25,16 +25,17 @@ You learn why analysis and clear presentation matter before touching any softwar
 
 ---
 
-## Stage 1: Tableau and retail data
+## Stage 1: Python and retail data
 
-You learn Tableau and the core habits of careful analysis using one retail dataset.
+You learn just enough Python to analyse data in Google Colab, and the core habits of careful analysis using one retail dataset.
 
 | Lesson | Business question | You will produce |
 |---|---|---|
-| **[1](../lessons/class-01.md)** | What makes a business question answerable? Tableau orientation and your first chart. | A question, its population and a first evidence view. |
-| **[2](../lessons/class-02.md)** | What does a retail row represent? Data types, keys and preparation. | A grain statement and a quality checklist. |
-| **[3](../lessons/class-03.md)** | Which retail segment deserves a closer look? Distinct orders, Sales, Profit, average order value and profit ratio. | A checked KPI worksheet and a short debugging explanation. |
-| **[4](../lessons/class-04.md)** | How do trends and returns change the decision? Monthly growth and dashboard design. | A retail dashboard and a recommendation. |
+| **[0](../lectures/00_python_and_colab_basics.md)** | How do I run Python in Colab? Variables, tables, filters, totals and a first chart. | A working notebook and a first chart from made-up data. |
+| **[1](../lectures/01_decision_to_evidence.md)** | What makes a business question answerable? Load the data and build a first chart. | A question, its population and a first evidence view. |
+| **[2](../lectures/02_trust_the_sales_table.md)** | What does a retail row represent? Data types, keys and preparation. | A grain statement and a quality checklist. |
+| **[3](../lectures/03_segment_comparison.md)** | Which retail segment deserves a closer look? Distinct orders, Sales, Profit, average order value and profit ratio. | A checked KPI worksheet and a short debugging explanation. |
+| **[4](../lectures/04_trends_returns_dashboard.md)** | How do trends and returns change the decision? Monthly growth and dashboard design. | A retail dashboard and a recommendation. |
 
 ---
 
@@ -64,6 +65,12 @@ You combine evidence from several departments into one executive recommendation.
 
 ---
 
+## Stage 4: Tableau
+
+A separate section will rebuild the same analyses in Tableau as interactive dashboards. The [draft Tableau lessons](../lessons/class-01.md) are previews and will be completed later.
+
+---
+
 ## What you will be able to do
 
 By the end of the course you should be able to:
@@ -72,7 +79,7 @@ By the end of the course you should be able to:
 2. Identify what a row means, the keys, data types, units and missing records, and document your preparation.
 3. Calculate metrics with the right aggregation and the right denominator.
 4. Check results with reconciliations, small manual checks and alternative explanations.
-5. Build readable Tableau views and dashboards that make the important comparison obvious.
+5. Build readable charts and dashboards, in Python and later in Tableau, that make the important comparison obvious.
 6. Recommend an action while explaining limitations, trade-offs and how success will be measured.
 
 ---

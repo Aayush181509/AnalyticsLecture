@@ -1,4 +1,0 @@
-# Figures for learner Foundations pages (scripts/make_foundation_figures.py).
-pandas>=2.2
-matplotlib>=3.8,<4
-pyreadr>=0.5,<1

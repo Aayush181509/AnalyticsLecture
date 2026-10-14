@@ -4,7 +4,7 @@ Read `planning/PROJECT_CONTEXT.md`, `planning/STATUS.md`, `planning/TASKS.md`, a
 
 ## Scope and ownership
 
-- This is a practical Data Analytics course for working professionals. Tableau is essential; Python/pandas companions start optional. Cover retail, finance, operations, marketing, and HR meaningfully. Use the confirmed hybrid data approach: existing synthetic strategy plus Tableau sample-data catalog sources, with sports/technology/government and other suitable choice exercises.
+- This is a practical Data Analytics course for working professionals. Python-first since 2026-10-13 (DEC-041): lessons teach pandas/matplotlib in Google Colab with a "read, run, then modify" approach; Tableau follows later as a separate section using the same data and metric contracts. Cover retail, finance, operations, marketing, and HR meaningfully. Use the confirmed hybrid data approach: existing synthetic strategy plus Tableau sample-data catalog sources, with sports/technology/government and other suitable choice exercises.
 - The current phase is planning and foundation, not full lesson production. Complete production tasks in dependency order.
 - Preserve existing work and uncommitted user changes. Do not deploy, publish, commit, or replace source datasets as an incidental verification step.
 - User authorizes bounded subagents. Lead integrates and reviews. Give every role exclusive file ownership; reusable briefs are in `planning/agents/`.
@@ -24,6 +24,12 @@ Read `planning/PROJECT_CONTEXT.md`, `planning/STATUS.md`, `planning/TASKS.md`, a
 - Only `docs/` is learner-facing MkDocs source. Keep planning in `planning/`, notes/answers in `instructor/`, datasets in `data/`, and companions in `notebooks/`.
 - Never link learner pages to instructor answers or internal planning. Publish only reviewed synthetic/public data; Tableau Public publication is public. Public profile hiding is not a privacy control.
 - Keep infrastructure small. The learner site keeps the Read the Docs theme (user preference, DEC-036) plus `docs/stylesheets/readability.css` for spacious, easy-to-follow pages (DEC-034). Write learner pages with a short lead, short paragraphs, numbered steps, tables or `###` subsections for comparisons, and admonitions (note, tip, hint, warning) for status, safety and tips; avoid dense prose blocks.
+
+## Python lessons
+
+- The lesson notebooks `notebooks/NN_name.ipynb` are the single source (DEC-042). The user's Makefile converts them: `make convert-all` writes `docs/lectures/*.md` plus `*_files/` images. Never hand-edit `docs/lectures/`.
+- Before converting, execute them with `python scripts/run_notebooks.py --check-data` in a Python 3.12 environment from `requirements.txt`. It runs every cell, strips execution timestamps, enforces one shared setup cell and confirms `load_orders()` reproduces the validated prepared CSV.
+- Callouts in notebooks are blockquotes, not `!!!` admonitions. Markdown must not hand-type result numbers. Exercise answers go in `instructor/` only. See `notebooks/README.md`.
 
 ## Verification and handoff
 

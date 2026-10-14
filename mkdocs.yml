@@ -17,11 +17,17 @@ nav:
       - Setup and Practice: course/setup.md
       - Analytical Workflow: course/workflow.md
   - Business Cases: cases/index.md
-  - Lessons:
-      - "Lesson 1: From Decision to Evidence": lessons/class-01.md
-      - "Lesson 2: Can We Trust the Sales Table?": lessons/class-02.md
-      - "Lesson 3: Which Segment Deserves a Closer Look?": lessons/class-03.md
-      - "Lesson 4: Trends, Returns and a Decision Dashboard": lessons/class-04.md
+  - Python Lessons:
+      - "Lesson 0: Python and Colab Basics": lectures/00_python_and_colab_basics.md
+      - "Lesson 1: From Decision to Evidence": lectures/01_decision_to_evidence.md
+      - "Lesson 2: Can We Trust the Sales Table?": lectures/02_trust_the_sales_table.md
+      - "Lesson 3: Which Segment Deserves a Closer Look?": lectures/03_segment_comparison.md
+      - "Lesson 4: Trends, Returns and a Decision Dashboard": lectures/04_trends_returns_dashboard.md
+  - Tableau (Coming Later):
+      - "Tableau Lesson 1 (draft)": lessons/class-01.md
+      - "Tableau Lesson 2 (draft)": lessons/class-02.md
+      - "Tableau Lesson 3 (draft)": lessons/class-03.md
+      - "Tableau Lesson 4 (draft)": lessons/class-04.md
   - Lesson Template: lessons/lesson-template.md
 
 theme:

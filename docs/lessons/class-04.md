@@ -1,10 +1,12 @@
-# Lesson 4: Trends, returns and a decision dashboard
+# Tableau Lesson 4: Trends, returns and a decision dashboard
 
 <p class="lead">
 Add time to your segment comparison, read growth figures without being fooled by seasons, use the returns list carefully, and bring it all together in one dashboard with a recommendation.
 </p>
 
-!!! warning "Draft lesson"
+!!! warning "Draft lesson: Tableau section (coming later)"
+
+    The course currently teaches this lesson in Python: see [Python Lesson 4](../lectures/04_trends_returns_dashboard.md). This Tableau version will be completed in the later Tableau section.
 
     The Tableau steps on this page have not yet been rehearsed on the course version of Tableau. Menu names may differ slightly on your computer.
 

@@ -4,6 +4,9 @@ Last updated: 2026-10-12 (Asia/Kathmandu). Phase: planning foundation, source au
 
 ## Confirmed by the user
 
+**Update 2026-10-13 (DEC-041):** the user switched the main teaching path to **Python** ("plan all these contents in python for now, later we can add a separate section and teach it for tableau"). Learners run notebooks in **Google Colab** using **read, run, then modify** code; the four Tableau lesson drafts are kept as a later "Tableau (coming later)" section. Learner pages focus on content, not session counts or hours (DEC-039). Items below that make Tableau the required first tool or Python optional are superseded in those respects; their data, metric and boundary rules still apply.
+
+
 - Working professionals with mixed experience; basic spreadsheet skills, no assumed Python or Tableau.
 - Twelve two-hour live classes across several weeks (24 contact hours), plus independent practice.
 - MkDocs teaching documentation developed section by section.

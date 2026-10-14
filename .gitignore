@@ -16,3 +16,6 @@ __pycache__/
 
 # CrunchBase export: provider terms of service apply; kept local only.
 data/raw/startup-venture-funding/
+
+# Private instructor answers and keys; kept local, never pushed to the public repo.
+instructor/

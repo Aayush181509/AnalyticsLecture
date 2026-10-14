@@ -6,7 +6,7 @@ Add time to your segment comparison, read growth figures without being fooled by
 
 !!! warning "Draft lesson: Tableau section (coming later)"
 
-    The course currently teaches this lesson in Python: see [Python Lesson 4](../lectures/04_trends_returns_dashboard.md). This Tableau version will be completed in the later Tableau section.
+    The course currently teaches this lesson in Python: see [Session 7 lab](../lectures/07_trends_and_growth_lab.md). This Tableau version will be completed in the later Tableau section.
 
     The Tableau steps on this page have not yet been rehearsed on the course version of Tableau. Menu names may differ slightly on your computer.
 

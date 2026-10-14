@@ -19,7 +19,7 @@ We will explore and explain data from five areas of a business: retail and e-com
 ## Course at a glance
 
 - **Live, hands-on classes.** Demonstrations, guided practice and independent work, plus practice between sessions.
-- **Spreadsheet basics are enough.** No coding experience is assumed. Lesson 0 starts from the very beginning.
+- **Spreadsheet basics are enough.** No coding experience is assumed. Session 1 starts from the very beginning.
 - **Python in your browser.** You run every lesson in Google Colab: nothing to install, and every result on these pages comes from the same code you run.
 - **Synthetic and public data only.** Never private workplace data.
 - **Portfolio and briefing.** You finish with a practical portfolio and an executive briefing grounded in checked evidence.
@@ -36,7 +36,7 @@ Work through these pages in order:
 3. **[Setup and practice](course/setup.md)**: getting started with Google Colab and keeping notes.
 4. **[Analytical workflow](course/workflow.md)**: the seven steps we use in every analysis.
 5. **[Business cases](cases/index.md)**: the five business problems you will solve.
-6. **[Python Lesson 0](lectures/00_python_and_colab_basics.md)**: Python and Colab basics, then Lessons 1–4 on retail data.
+6. **[Session 1 lecture](lectures/01_why_data_analytics_lecture.md)**: why data analytics matters, then its lab on Python and Colab basics.
 
 ---
 

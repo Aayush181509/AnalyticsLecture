@@ -8,7 +8,15 @@ The user requests Claude takeover next. Read [AGENTS.md](../AGENTS.md) → [PROJ
 
 Learner site keeps the Read the Docs theme (user preference after a brief Material trial, DEC-036) plus `docs/stylesheets/readability.css`; all six pages were restructured for readability (DEC-034, DOC01). Write every new learner page in that style: lead sentence, `---` breaks, short paragraphs, numbered steps, tables or `###` subsections, note/tip/hint/warning admonitions. No Material-only syntax. User approved the rendered result. Preview with `/tmp/kings-data-docs-venv/bin/python -m mkdocs serve` (reinstall from requirements.txt if the venv is gone). D03 Tableau checks remain open because this session had no desktop-app control (DEC-035).
 
-## Python-first — 2026-10-13 (read this first)
+## Sessions 1–2 built — 2026-10-14 (read this first)
+
+Session 1 and 2 lecture + lab notebooks, quizzes and private answers exist (DEC-045; see STATUS). Draft labs for Sessions 5 and 7 renamed. Superseded notebooks 00–02 and the old generated `docs/lectures/00–04` pages were deleted with user approval; `make convert-all` is safe again. Next: review + Colab trial of Sessions 1–2, then Session 3 and D08.
+
+## Course plan v2 — 2026-10-14 (read this first)
+
+`planning/COURSE_PLAN.md` is the working plan: every session = 2-hour lecture + 3-hour lab, applied statistics for analysts, 16 Python sessions + Tableau section. Next: build Sessions 1 and 2 end to end (lecture notebook, lab with core/stretch/challenge, quiz, private answers) as the template; then D08 synthetic A/B data for Sessions 8, 9 and 12.
+
+## Python-first — 2026-10-13
 
 Main path is now Python in Google Colab (DEC-041). The lesson source is `notebooks/NN_*.ipynb` (DEC-042): edit the notebook, run `scripts/run_notebooks.py --check-data` (Python 3.12, `requirements.txt`), then `make convert-all` to refresh `docs/lectures/`. Push to GitHub so the Open in Colab badges work. The Tableau drafts under `docs/lessons/class-0N.md` are a deferred later section. Next: Colab trial; private exercise answers for the Python lessons; D02R refunds; finance case.
 

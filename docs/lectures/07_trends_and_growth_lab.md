@@ -1,10 +1,10 @@
-# Lesson 4: Trends, returns and a decision dashboard
+# Session 7 lab (draft): Trends, returns and a decision dashboard
 
 <p class="lead">
 Add time to your segment comparison, read growth figures without being fooled by the seasons, use the returns list carefully, and bring it all together in one dashboard with a recommendation.
 </p>
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Aayush181509/AnalyticsLecture/blob/main/notebooks/04_trends_returns_dashboard.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Aayush181509/AnalyticsLecture/blob/main/notebooks/07_trends_and_growth_lab.ipynb)
 
 Open this notebook in Google Colab with the button above, then run each cell from top to bottom with **Shift + Enter**. Save your own copy with **File → Save a copy in Drive**.
 
@@ -36,7 +36,7 @@ By the end of this lesson you will be able to:
 
 ## Before you start
 
-- Complete [Lesson 3](03_segment_comparison.md), where you built the segment KPI table.
+- Complete the [Session 5 lab](05_metrics_and_kpis_lab.md), where you built the segment KPI table.
 - Re-read [cherry-picked time windows](../foundations/misleading-statistics.md) and [storytelling with data](../foundations/storytelling.md).
 
 > **About the data**
@@ -140,7 +140,9 @@ print("Rows (order lines):", len(df))
 print("Different orders:  ", df["order_id"].nunique())
 ```
 
-    Rows (order lines): 6815
+    Rows (order lines):
+
+     6815
     Different orders:   3388
 
 
@@ -205,7 +207,7 @@ plt.show()
 
 
     
-![png](04_trends_returns_dashboard_files/04_trends_returns_dashboard_8_0.png)
+![png](07_trends_and_growth_lab_files/07_trends_and_growth_lab_8_0.png)
     
 
 
@@ -226,7 +228,7 @@ plt.show()
 
 
     
-![png](04_trends_returns_dashboard_files/04_trends_returns_dashboard_10_0.png)
+![png](07_trends_and_growth_lab_files/07_trends_and_growth_lab_10_0.png)
     
 
 
@@ -253,7 +255,7 @@ plt.show()
 
 
     
-![png](04_trends_returns_dashboard_files/04_trends_returns_dashboard_12_0.png)
+![png](07_trends_and_growth_lab_files/07_trends_and_growth_lab_12_0.png)
     
 
 
@@ -486,7 +488,7 @@ plt.show()
 
 
     
-![png](04_trends_returns_dashboard_files/04_trends_returns_dashboard_22_0.png)
+![png](07_trends_and_growth_lab_files/07_trends_and_growth_lab_22_0.png)
     
 
 
@@ -590,7 +592,7 @@ Filtering by **segment** or **region** is different: it changes *which* lines co
 
 ## Part 4: The returns list
 
-From Lesson 2, `returned_order_flag` is 1 when an order appears on the source's **returns list**. It is an **order-level** flag: every line of a listed order has 1. So we count **distinct orders**, never lines.
+From the Session 2 lab, `returned_order_flag` is 1 when an order appears on the source's **returns list**. It is an **order-level** flag: every line of a listed order has 1. So we count **distinct orders**, never lines.
 
 
 ```python
@@ -749,7 +751,7 @@ draw_dashboard(df, "all regions")
 
 
     
-![png](04_trends_returns_dashboard_files/04_trends_returns_dashboard_28_0.png)
+![png](07_trends_and_growth_lab_files/07_trends_and_growth_lab_28_0.png)
     
 
 
@@ -846,7 +848,7 @@ draw_dashboard(df[df["region"] == region], f"{region} region only")
 
 
     
-![png](04_trends_returns_dashboard_files/04_trends_returns_dashboard_31_0.png)
+![png](07_trends_and_growth_lab_files/07_trends_and_growth_lab_31_0.png)
     
 
 

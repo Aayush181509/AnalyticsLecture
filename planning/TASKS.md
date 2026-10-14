@@ -68,3 +68,30 @@ Learner-time framing removed (DEC-039): learner pages focus on content; do not r
 ## Python-first switch — 2026-10-13
 
 Teaching path is Python in Colab (DEC-041). L01–L03 Tableau drafts are deferred to the later Tableau section; D03 Tableau checks are needed only when that section is produced. Next concrete tasks: (1) Colab trial of Python Lessons 0–4 with a novice; (2) private exercise answers for the Python lessons in `instructor/sessions/`; (3) D02R synthetic refund supplement as a Python lesson extension; (4) finance case (D04 contract, then a Python lesson).
+
+## Session production backlog — COURSE_PLAN.md (2026-10-14)
+
+Each session needs: lecture notebook, lab notebook (core / stretch / challenge), theory quiz, private answers in `instructor/sessions/NN/`, `run_notebooks.py --check-data`, `make convert-all`, docs build, and an independent review. Status for the session as a whole:
+
+| ID | Session | Depends on | Status | Notes |
+|---|---|---|---|---|
+| S-01 | Why data analytics matters | FND01, PY01 | REVIEW | `01_why_data_analytics_lecture/lab.ipynb` + `instructor/sessions/01/answers.md` built and executed 2026-10-14; needs independent review and a Colab trial |
+| S-02 | Data, grain and the DataFrame | PY01 | REVIEW | `02_data_and_grain_lecture/lab.ipynb` + `instructor/sessions/02/answers.md` built, executed and data-checked 2026-10-14; old Lessons 1–2 merged into the lab; needs independent review and a Colab trial |
+| S-03 | Cleaning and preparing data | S01 audit | PLANNED | Prepared-subset rules for World Cup, Mobile OS; join cardinality on Superstore sheets |
+| S-04 | Descriptive statistics and distributions | S-02 | PLANNED | Home Sales series selection needed |
+| S-05 | Metrics and KPIs | S-02 | IN PROGRESS | Draft lab renamed `05_metrics_and_kpis_lab.ipynb`; lecture + Berkeley task + metric-contract exercise |
+| S-06 | Visualisation principles | S-04 | PLANNED | Reuse Foundations figures in lecture |
+| S-07 | Time series and trends | S-05 | IN PROGRESS | Draft lab renamed `07_trends_and_growth_lab.ipynb`; lecture + construction-spending task (US/XXXX/T series) |
+| S-08 | Correlation and regression | S-04, D08 | PLANNED | Needs synthetic marketing spend/revenue data |
+| S-09 | Sampling, uncertainty and experiments | S-04, D08 | PLANNED | Needs synthetic A/B dataset (D08) |
+| S-10 | Finance case | D04 | PLANNED | |
+| S-11 | Operations case | D05 | PLANNED | |
+| S-12 | Marketing case | D06, D08 | PLANNED | |
+| S-13 | HR case | D07 | PLANNED | |
+| S-14 | Dashboards and storytelling | S-07 | PLANNED | |
+| S-15 | Capstone studio | S-10–S-13 | PLANNED | |
+| S-16 | Executive briefings | S-15, R01 | PLANNED | Presentation format depends on class size |
+| D08 | Synthetic A/B test and marketing spend data | D01 pattern | PLANNED | Seeded generator, contract and hand checks; feeds S-08, S-09, S-12 |
+| T-01–T-04 | Tableau section | S-14 | DEFERRED | From the Tableau drafts |
+
+Sessions 1 and 2 built 2026-10-14 (REVIEW). The superseded notebooks 00–02 and old generated pages 00–04 were deleted with user approval. Next: (1) independent review + Colab trial of Sessions 1–2; (2) Session 3 and D08.

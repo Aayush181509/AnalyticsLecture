@@ -1,10 +1,10 @@
-# Lesson 2: Can we trust the sales table?
+# Session 2 lab: Can we trust the sales table?
 
 <p class="lead">
-Before comparing anything, find out exactly what the retail table contains: what a row is, how the setup cell prepared it, which columns can be added up, and how to count orders correctly.
+Turn a vague request into a clear question, take the retail table apart, and prove you can count its orders correctly before anyone draws a chart.
 </p>
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Aayush181509/AnalyticsLecture/blob/main/notebooks/02_trust_the_sales_table.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Aayush181509/AnalyticsLecture/blob/main/notebooks/02_data_and_grain_lab.ipynb)
 
 Open this notebook in Google Colab with the button above, then run each cell from top to bottom with **Shift + Enter**. Save your own copy with **File → Save a copy in Drive**.
 
@@ -12,39 +12,73 @@ Open this notebook in Google Colab with the button above, then run each cell fro
 
 ## The business decision
 
-The retail head now asks:
+The head of a retail business says:
 
-> *"Before you show me any chart, can I trust these numbers? How many orders did we actually have?"*
+> *"Sales feel uneven across our customer groups. I need to know where to look first. But before you show me any chart: can I trust these numbers? How many orders did we actually have?"*
 
-A wrong count at this stage spoils every later chart. This lesson is about building trust in the data.
+This is not yet a question you can answer with data, and a wrong count at this stage spoils every later chart. Today you turn the request into a question and build trust in the data.
 
 > **About the data**
 >
-> The Superstore sample describes a **fictitious** company. Sales and Profit are in **source monetary units**: the file does not state a currency, so we never add a currency symbol.
+> We use the **Superstore** sample published by Tableau. It describes a **fictitious** company, not a real one. Sales and Profit are in **source monetary units**: the file does not state a currency, so we never label it as dollars, rupees or anything else.
+
+---
+
+## How this lab works
+
+| Part | What you do | Tasks |
+|---|---|---|
+| **Guided practice** | Follow along step by step, everyone together | G1–G7 |
+| **Independent tasks** | Same skills, new questions, on your own or in pairs | I1–I6 |
+| **Challenge** | Harder reasoning and debugging | C1–C2 |
+
+Each task has a level:
+
+- **Core**: everyone completes it; it is enough for your portfolio.
+- **Stretch**: for when you finish the core tasks early.
+- **Challenge**: optional, harder reasoning.
 
 ---
 
 ## What you will be able to do
 
-By the end of this lesson you will be able to:
-
-1. Explain what the setup cell's `load_orders()` does, step by step.
-2. State the **grain** of the table: what one row represents.
-3. Tell which columns are identifiers, categories, dates or amounts.
-4. Count **orders** correctly with `nunique()`.
+1. Write a business question that names a decision, a population, a period and a measure.
+2. Explain what the setup cell's `load_orders()` does, step by step.
+3. State the **grain** of the table and count **orders** correctly with `nunique()`.
+4. Write a **data dictionary** and run a **quality checklist** across five dimensions.
 5. Explain what the returns flag does and does not tell you.
-6. Check one order by hand.
-7. Record what you changed in a short **preparation log**.
+6. Check one order by hand and keep a **preparation log**.
 
-**Evidence you keep:** a grain statement, a short quality checklist, a preparation log and one checked order.
+**Evidence you keep:** your question, grain statement, data dictionary, quality checklist, preparation log, one hand-checked order and a first chart with its filters written down.
 
-Before you start, complete [Lesson 1](01_decision_to_evidence.md) and have your evidence log open.
+Before you start, work through the [Session 2 lecture](02_data_and_grain_lecture.md) and the [Session 1 lab](01_why_data_analytics_lab.md), and have your evidence log open.
 
 ---
 
-## Part 1: Load the data
+## Guided practice
 
-Run the setup cell first, exactly as in Lesson 1.
+### G1 (Core): From request to question
+
+A good analytical question answers four things:
+
+| Part | Ask yourself | Example |
+|---|---|---|
+| **Decision** | What will someone do differently? | Choose one customer segment to investigate next month |
+| **Population** | Which records count? | All order lines in the course data |
+| **Period** | Which dates? | Orders placed in 2023, 2024 and 2025 |
+| **Measure** | What will we compare? | Sales by customer segment |
+
+> *"Which customer segment had the highest Sales for orders placed in 2023–2025, so we can choose one segment to investigate next month?"*
+
+> **Your turn**
+>
+> Rewrite the head's request as your own one-sentence question, using the four parts. Write it in your evidence log.
+
+---
+
+### G2 (Core): Load the data
+
+Run the setup cell first. It downloads the sample from Tableau's website, checks it is exactly the version this course was written for, and prepares the table. In G4 you will open it up and see what each step does.
 
 
 ```python
@@ -134,20 +168,255 @@ print("Setup complete.")
     Setup complete.
 
 
+Now load the table into a variable called `df` and look at the first rows.
+
 
 ```python
 df = load_orders()
+df.head()
+```
+
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>row_id</th>
+      <th>order_id</th>
+      <th>order_date</th>
+      <th>ship_date</th>
+      <th>ship_mode</th>
+      <th>customer_id</th>
+      <th>segment</th>
+      <th>country_region</th>
+      <th>region</th>
+      <th>category</th>
+      <th>...</th>
+      <th>product_name</th>
+      <th>sales</th>
+      <th>quantity</th>
+      <th>discount</th>
+      <th>profit</th>
+      <th>returned_order_flag</th>
+      <th>customer_analysis_eligible</th>
+      <th>customer_order_conflict</th>
+      <th>order_to_ship_days</th>
+      <th>order_month</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>US-2023-103800</td>
+      <td>2023-01-03</td>
+      <td>2023-01-07</td>
+      <td>Standard Class</td>
+      <td>DP-13000</td>
+      <td>Consumer</td>
+      <td>United States</td>
+      <td>Central</td>
+      <td>Office Supplies</td>
+      <td>...</td>
+      <td>Message Book, Wirebound, Four 5 1/2" X 4" Form...</td>
+      <td>16.45</td>
+      <td>2</td>
+      <td>0.20</td>
+      <td>5.55</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>4</td>
+      <td>2023-01-01</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>US-2023-112326</td>
+      <td>2023-01-04</td>
+      <td>2023-01-08</td>
+      <td>Standard Class</td>
+      <td>PO-19195</td>
+      <td>Home Office</td>
+      <td>United States</td>
+      <td>Central</td>
+      <td>Office Supplies</td>
+      <td>...</td>
+      <td>GBC Standard Plastic Binding Systems Combs</td>
+      <td>3.54</td>
+      <td>2</td>
+      <td>0.80</td>
+      <td>-5.49</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>4</td>
+      <td>2023-01-01</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>US-2023-112326</td>
+      <td>2023-01-04</td>
+      <td>2023-01-08</td>
+      <td>Standard Class</td>
+      <td>PO-19195</td>
+      <td>Home Office</td>
+      <td>United States</td>
+      <td>Central</td>
+      <td>Office Supplies</td>
+      <td>...</td>
+      <td>Avery 508</td>
+      <td>11.78</td>
+      <td>3</td>
+      <td>0.20</td>
+      <td>4.27</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>4</td>
+      <td>2023-01-01</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>US-2023-112326</td>
+      <td>2023-01-04</td>
+      <td>2023-01-08</td>
+      <td>Standard Class</td>
+      <td>PO-19195</td>
+      <td>Home Office</td>
+      <td>United States</td>
+      <td>Central</td>
+      <td>Office Supplies</td>
+      <td>...</td>
+      <td>SAFCO Boltless Steel Shelving</td>
+      <td>272.74</td>
+      <td>3</td>
+      <td>0.20</td>
+      <td>-64.77</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>4</td>
+      <td>2023-01-01</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>US-2023-141817</td>
+      <td>2023-01-05</td>
+      <td>2023-01-12</td>
+      <td>Standard Class</td>
+      <td>MB-18085</td>
+      <td>Consumer</td>
+      <td>United States</td>
+      <td>East</td>
+      <td>Office Supplies</td>
+      <td>...</td>
+      <td>Avery Hi-Liter EverBold Pen Style Fluorescent ...</td>
+      <td>19.54</td>
+      <td>3</td>
+      <td>0.20</td>
+      <td>4.88</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>7</td>
+      <td>2023-01-01</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 22 columns</p>
+</div>
+
+
+
+---
+
+### G3 (Core): Size, column types and dates
+
+
+```python
 print("Rows, columns:", df.shape)
+df.dtypes
 ```
 
     Rows, columns: (6815, 22)
 
 
+
+
+
+    row_id                                 int64
+    order_id                              object
+    order_date                    datetime64[ns]
+    ship_date                     datetime64[ns]
+    ship_mode                             object
+    customer_id                           object
+    segment                               object
+    country_region                        object
+    region                                object
+    category                              object
+    sub_category                          object
+    product_id                            object
+    product_name                          object
+    sales                                float64
+    quantity                               int64
+    discount                             float64
+    profit                               float64
+    returned_order_flag                    int64
+    customer_analysis_eligible             int64
+    customer_order_conflict                int64
+    order_to_ship_days                     int64
+    order_month                   datetime64[ns]
+    dtype: object
+
+
+
+Check the types make sense:
+
+- `order_id`, `segment`, `region` are text (`object`).
+- `sales`, `profit`, `discount` are decimals (`float64`); `quantity` is a whole number.
+- `order_date`, `ship_date`, `order_month` are dates (`datetime64`).
+
+> **IDs are not amounts**
+>
+> `row_id` is stored as a number, but adding it up means nothing. It is an identifier: a **nominal** variable, whatever its storage type.
+
+Which dates are included?
+
+
+```python
+print("First order date:", df["order_date"].min().date())
+print("Last order date: ", df["order_date"].max().date())
+```
+
+    First order date: 2023-01-03
+    Last order date:  2025-12-31
+
+
 ---
 
-## Part 2: What `load_orders()` does
+### G4 (Core): What `load_orders()` does
 
-In Lesson 1 you used `load_orders()` without looking inside. Now we open it up. You do not need to memorise this code; you need to know **what was changed** between the original file and `df`, so you can explain your numbers.
+So far you used `load_orders()` without looking inside. Now we open it up. You do not need to memorise this code; you need to know **what was changed** between the original file and `df`, so you can explain your numbers.
 
 The function does seven things:
 
@@ -163,7 +432,7 @@ The function does seven things:
 
 The cells below repeat each step on its own so you can see the effect.
 
-### Step 1: Read the raw sheets
+#### Step 1: Read the raw sheets
 
 `SOURCE_FILE` is the Excel file the setup cell downloaded. `pd.read_excel` reads one sheet into a DataFrame.
 
@@ -236,7 +505,7 @@ returns.head(3)
 
 
 
-### Step 2: Find orders with more than one customer
+#### Step 2: Find orders with more than one customer
 
 Every order should belong to one customer. The code counts the different Customer IDs inside each order and keeps the orders where that count is above 1. This is done on the **whole raw file**, before any filtering, so no conflict is hidden by the date filter.
 
@@ -254,7 +523,7 @@ conflict_orders
 
 
 
-### Step 3: Keep orders placed 2023 to 2025
+#### Step 3: Keep orders placed 2023 to 2025
 
 The filter keeps rows whose **Order Date** is on or after 1 January 2023 and before 1 January 2026. It looks at the order date only.
 
@@ -279,7 +548,7 @@ print("Lines in df that shipped in 2026:", (df["ship_date"] >= "2026-01-01").sum
     Lines in df that shipped in 2026: 34
 
 
-### Step 4: Rename columns
+#### Step 4: Rename columns
 
 `rename` swaps the original names (with spaces and capitals) for short names. Four raw columns are not kept at all, because the course does not need them:
 
@@ -298,11 +567,11 @@ kept_raw = ["Row ID", "Order ID", "Order Date", "Ship Date", "Ship Mode", "Custo
 
 
 
-### Step 5: The returns flag
+#### Step 5: The returns flag
 
 `isin` asks, for each row, "is this order ID on the returns list?". The answer `True`/`False` is turned into `1`/`0`. A three-line order on the list gets a `1` on **all three lines**.
 
-### Step 6: The customer-conflict flags
+#### Step 6: The customer-conflict flags
 
 The same `isin` trick marks every line of a conflicted order with `customer_order_conflict = 1`. `customer_analysis_eligible` is the opposite (`1 - conflict`). These lines stay in all Sales and order counts; they are left out only when we later analyse individual customers.
 
@@ -323,7 +592,7 @@ df.groupby("customer_order_conflict")["order_id"].nunique()
 
 Compare this with the output of Step 2: not every conflicted order in the raw file was placed inside the course period, so fewer of them appear in `df`.
 
-### Step 7: Two derived date columns
+#### Step 7: Two derived date columns
 
 - `order_to_ship_days` = ship date minus order date, in whole days.
 - `order_month` = the first day of the order's month, used to group by month.
@@ -398,61 +667,7 @@ df[["order_id", "order_date", "ship_date", "order_to_ship_days", "order_month"]]
 
 ---
 
-## Part 3: Meet the data dictionary
-
-Every column has a job. Knowing that job tells you how to use it.
-
-| Column | What it is | Can you add it up? |
-|---|---|---|
-| `row_id` | Unique number for each order line | No, it is an identifier |
-| `order_id` | Order identifier; repeats across that order's lines | No, count it with `nunique()` |
-| `order_date`, `ship_date` | Calendar dates | No |
-| `order_month` | First day of the order's month | No, use it to group |
-| `ship_mode` | Shipping service chosen | No, use it to group |
-| `customer_id` | Fictitious customer identifier | No |
-| `segment` | Customer group: Consumer, Corporate or Home Office | No, use it to group |
-| `country_region`, `region` | Location labels | No, use them to group |
-| `category`, `sub_category` | Product groups | No, use them to group |
-| `product_id`, `product_name` | Product identifier and name | No |
-| `sales` | Sales reported for the line, in source monetary units | **Yes** |
-| `quantity` | Number of items on the line | **Yes**, but it counts items, not orders |
-| `profit` | Profit reported for the line (can be negative) | **Yes** |
-| `discount` | Discount value as given in the source | **No**, its base is not documented |
-| `returned_order_flag` | 1 if the order is on the returns list, else 0 | Not across lines (see Part 6) |
-| `order_to_ship_days` | Days from order date to ship date | Not as a total; it repeats on every line of an order |
-| `customer_analysis_eligible`, `customer_order_conflict` | Flags for the customer-ID issue | Used only for customer analysis later |
-
-> **Discount is not a KPI**
->
-> The source does not say what `discount` is a share of. Adding it up or averaging it produces a number nobody can interpret, so we do not use it as a measure.
-
----
-
-## Part 4: Quality checklist
-
-Three quick checks every analyst runs on a new table:
-
-1. Are any values missing?
-2. Is the row identifier really unique?
-3. Are the dates inside the stated period?
-
-
-```python
-print("Missing values in the whole table:", df.isna().sum().sum())
-print("Is row_id unique?                 ", df["row_id"].is_unique)
-print("Order dates from", df["order_date"].min().date(), "to", df["order_date"].max().date())
-```
-
-    Missing values in the whole table: 0
-    Is row_id unique?                  True
-    Order dates from 2023-01-03 to 2025-12-31
-
-
-Copy each check and its result from the output above into your evidence log.
-
----
-
-## Part 5: Find the grain and count orders
+### G5 (Core): Find the grain and count orders
 
 **Grain** means: what does one row represent?
 
@@ -553,6 +768,10 @@ print("Different orders:  ", df["order_id"].nunique())
     Different orders:   3388
 
 
+> **Remember**
+>
+> `len(df)` counts **rows**. `df["order_id"].nunique()` counts **different orders**. Use the second one whenever a question is about orders.
+
 How many lines do orders usually have? `groupby("order_id").size()` counts the lines in each order; `value_counts()` then counts how many orders have 1 line, 2 lines, and so on.
 
 
@@ -567,7 +786,7 @@ plt.show()
 
 
     
-![png](02_trust_the_sales_table_files/02_trust_the_sales_table_26_0.png)
+![png](02_data_and_grain_lab_files/02_data_and_grain_lab_29_0.png)
     
 
 
@@ -575,7 +794,7 @@ Many orders have one line, but plenty have several. That is why `len(df)` overst
 
 ---
 
-## Part 6: What the returns flag means
+### G6 (Core): What the returns flag means
 
 `returned_order_flag` is `1` when an order is on the source's **returns list**. Be careful with what it does **not** tell you:
 
@@ -583,7 +802,7 @@ Many orders have one line, but plenty have several. That is why `len(df)` overst
 - A `0` means **not on the list**. It does not prove the order was never returned.
 - The flag repeats on **every line** of a listed order.
 
-The order you looked at in Part 5 is on the list. See how the flag repeats:
+The order you looked at in G5 is on the list. See how the flag repeats:
 
 
 ```python
@@ -668,7 +887,519 @@ Say "orders on the returns list", not "returned orders" or "return rate": the li
 
 ---
 
-## Part 7: Check one order by hand
+### G7 (Core): A first chart, with a filter
+
+Total Sales for each customer segment:
+
+
+```python
+sales_by_segment = df.groupby("segment")["sales"].sum().sort_values()
+sales_by_segment
+```
+
+
+
+
+    segment
+    Home Office   277,656.95
+    Corporate     467,562.02
+    Consumer      835,747.86
+    Name: sales, dtype: float64
+
+
+
+
+```python
+sales_by_segment.plot(kind="barh", title="Sales by segment, orders placed 2023–2025")
+plt.xlabel("Sales (source monetary units)")
+plt.ylabel("")
+plt.show()
+```
+
+
+    
+![png](02_data_and_grain_lab_files/02_data_and_grain_lab_36_0.png)
+    
+
+
+The same chart for one region only. The filter keeps rows where `region` is `"West"`.
+
+
+```python
+west = df[df["region"] == "West"]
+west.groupby("segment")["sales"].sum().sort_values().plot(
+    kind="barh", title="Sales by segment, West region only"
+)
+plt.xlabel("Sales (source monetary units)")
+plt.ylabel("")
+plt.show()
+```
+
+
+    
+![png](02_data_and_grain_lab_files/02_data_and_grain_lab_38_0.png)
+    
+
+
+> **Write it down**
+>
+> Every time you filter, record it in your evidence log. A chart without its filters written down is easy to misread later.
+
+---
+
+## Independent tasks
+
+### I1 (Core): Write a data dictionary
+
+pandas can fill in the mechanical part of a dictionary. Run the cell to profile every column.
+
+
+```python
+profile = pd.DataFrame({
+    "dtype": df.dtypes.astype(str),
+    "missing": df.isna().sum(),
+    "distinct": df.nunique(),
+    "example": df.iloc[0],
+})
+profile
+```
+
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>dtype</th>
+      <th>missing</th>
+      <th>distinct</th>
+      <th>example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>row_id</th>
+      <td>int64</td>
+      <td>0</td>
+      <td>6815</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>order_id</th>
+      <td>object</td>
+      <td>0</td>
+      <td>3388</td>
+      <td>US-2023-103800</td>
+    </tr>
+    <tr>
+      <th>order_date</th>
+      <td>datetime64[ns]</td>
+      <td>0</td>
+      <td>918</td>
+      <td>2023-01-03 00:00:00</td>
+    </tr>
+    <tr>
+      <th>ship_date</th>
+      <td>datetime64[ns]</td>
+      <td>0</td>
+      <td>989</td>
+      <td>2023-01-07 00:00:00</td>
+    </tr>
+    <tr>
+      <th>ship_mode</th>
+      <td>object</td>
+      <td>0</td>
+      <td>4</td>
+      <td>Standard Class</td>
+    </tr>
+    <tr>
+      <th>customer_id</th>
+      <td>object</td>
+      <td>0</td>
+      <td>793</td>
+      <td>DP-13000</td>
+    </tr>
+    <tr>
+      <th>segment</th>
+      <td>object</td>
+      <td>0</td>
+      <td>3</td>
+      <td>Consumer</td>
+    </tr>
+    <tr>
+      <th>country_region</th>
+      <td>object</td>
+      <td>0</td>
+      <td>2</td>
+      <td>United States</td>
+    </tr>
+    <tr>
+      <th>region</th>
+      <td>object</td>
+      <td>0</td>
+      <td>4</td>
+      <td>Central</td>
+    </tr>
+    <tr>
+      <th>category</th>
+      <td>object</td>
+      <td>0</td>
+      <td>3</td>
+      <td>Office Supplies</td>
+    </tr>
+    <tr>
+      <th>sub_category</th>
+      <td>object</td>
+      <td>0</td>
+      <td>17</td>
+      <td>Paper</td>
+    </tr>
+    <tr>
+      <th>product_id</th>
+      <td>object</td>
+      <td>0</td>
+      <td>1803</td>
+      <td>OFF-PA-10000174</td>
+    </tr>
+    <tr>
+      <th>product_name</th>
+      <td>object</td>
+      <td>0</td>
+      <td>1794</td>
+      <td>Message Book, Wirebound, Four 5 1/2" X 4" Form...</td>
+    </tr>
+    <tr>
+      <th>sales</th>
+      <td>float64</td>
+      <td>0</td>
+      <td>4640</td>
+      <td>16.45</td>
+    </tr>
+    <tr>
+      <th>quantity</th>
+      <td>int64</td>
+      <td>0</td>
+      <td>14</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>discount</th>
+      <td>float64</td>
+      <td>0</td>
+      <td>12</td>
+      <td>0.20</td>
+    </tr>
+    <tr>
+      <th>profit</th>
+      <td>float64</td>
+      <td>0</td>
+      <td>5471</td>
+      <td>5.55</td>
+    </tr>
+    <tr>
+      <th>returned_order_flag</th>
+      <td>int64</td>
+      <td>0</td>
+      <td>2</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>customer_analysis_eligible</th>
+      <td>int64</td>
+      <td>0</td>
+      <td>2</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>customer_order_conflict</th>
+      <td>int64</td>
+      <td>0</td>
+      <td>2</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>order_to_ship_days</th>
+      <td>int64</td>
+      <td>0</td>
+      <td>9</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>order_month</th>
+      <td>datetime64[ns]</td>
+      <td>0</td>
+      <td>36</td>
+      <td>2023-01-01 00:00:00</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+Now add the human part. The next cell has three columns filled in as examples.
+
+1. Add at least **eight more** columns, including `order_id`, `quantity`, `profit`, `discount`, `returned_order_flag` and `order_to_ship_days`.
+2. For each, write its meaning, its **level of measurement** (nominal, ordinal, interval or ratio) and whether you can add it up across rows.
+3. Run the cell to see your dictionary as a table.
+
+> **Your turn:** change the code in the next cell and run it again.
+
+
+```python
+# Add one entry per column: "column": ("meaning", "level of measurement", "can you add it up?")
+dictionary_notes = {
+    "row_id": ("Unique number for each order line", "nominal", "No, it is an identifier"),
+    "segment": ("Customer group", "nominal", "No, use it to group"),
+    "sales": ("Sales reported for the line, source monetary units", "ratio", "Yes"),
+}
+
+my_dictionary = pd.DataFrame.from_dict(
+    dictionary_notes, orient="index", columns=["meaning", "level", "add up?"]
+)
+my_dictionary.join(profile[["dtype", "distinct"]])
+```
+
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>meaning</th>
+      <th>level</th>
+      <th>add up?</th>
+      <th>dtype</th>
+      <th>distinct</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>row_id</th>
+      <td>Unique number for each order line</td>
+      <td>nominal</td>
+      <td>No, it is an identifier</td>
+      <td>int64</td>
+      <td>6815</td>
+    </tr>
+    <tr>
+      <th>segment</th>
+      <td>Customer group</td>
+      <td>nominal</td>
+      <td>No, use it to group</td>
+      <td>object</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>sales</th>
+      <td>Sales reported for the line, source monetary u...</td>
+      <td>ratio</td>
+      <td>Yes</td>
+      <td>float64</td>
+      <td>4640</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+When you have finished, compare your entries with the course dictionary below. Where you disagree, write down why.
+
+| Column | What it is | Can you add it up? |
+|---|---|---|
+| `row_id` | Unique number for each order line | No, it is an identifier |
+| `order_id` | Order identifier; repeats across that order's lines | No, count it with `nunique()` |
+| `order_date`, `ship_date` | Calendar dates | No |
+| `order_month` | First day of the order's month | No, use it to group |
+| `ship_mode` | Shipping service chosen | No, use it to group |
+| `customer_id` | Fictitious customer identifier | No |
+| `segment` | Customer group: Consumer, Corporate or Home Office | No, use it to group |
+| `country_region`, `region` | Location labels | No, use them to group |
+| `category`, `sub_category` | Product groups | No, use them to group |
+| `product_id`, `product_name` | Product identifier and name | No |
+| `sales` | Sales reported for the line, in source monetary units | **Yes** |
+| `quantity` | Number of items on the line | **Yes**, but it counts items, not orders |
+| `profit` | Profit reported for the line (can be negative) | **Yes** |
+| `discount` | Discount value as given in the source | **No**, its base is not documented |
+| `returned_order_flag` | 1 if the order is on the returns list, else 0 | Not across lines (see G6) |
+| `order_to_ship_days` | Days from order date to ship date | Not as a total; it repeats on every line of an order |
+| `customer_analysis_eligible`, `customer_order_conflict` | Flags for the customer-ID issue | Used only for customer analysis later |
+
+> **Discount is not a KPI**
+>
+> The source does not say what `discount` is a share of. Adding it up or averaging it produces a number nobody can interpret, so we do not use it as a measure.
+
+---
+
+### I2 (Core): Quality checklist across five dimensions
+
+The cell runs one or more checks for each data-quality dimension from the lecture. Read each line of the output and decide: **pass**, **fail** or **pass with a note**.
+
+
+```python
+checks = pd.DataFrame([
+    ("Completeness", "Missing values in the whole table", df.isna().sum().sum()),
+    ("Validity", "Quantity always above zero", (df["quantity"] > 0).all()),
+    ("Validity", "Sales never negative", (df["sales"] >= 0).all()),
+    ("Validity", "Segment only Consumer / Corporate / Home Office",
+     df["segment"].isin(["Consumer", "Corporate", "Home Office"]).all()),
+    ("Consistency", "Ship date never before order date", (df["ship_date"] >= df["order_date"]).all()),
+    ("Consistency", "Each order has one order date", (df.groupby("order_id")["order_date"].nunique() == 1).all()),
+    ("Consistency", "Orders with more than one customer ID", df.loc[df["customer_order_conflict"] == 1, "order_id"].nunique()),
+    ("Uniqueness", "row_id is unique", df["row_id"].is_unique),
+    ("Uniqueness", "Fully duplicated rows", df.duplicated().sum()),
+    ("Timeliness", "First order date", df["order_date"].min().date()),
+    ("Timeliness", "Last order date", df["order_date"].max().date()),
+    ("Timeliness", "Calendar months with orders", df["order_month"].nunique()),
+], columns=["dimension", "check", "result"])
+checks
+```
+
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>dimension</th>
+      <th>check</th>
+      <th>result</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Completeness</td>
+      <td>Missing values in the whole table</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Validity</td>
+      <td>Quantity always above zero</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Validity</td>
+      <td>Sales never negative</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Validity</td>
+      <td>Segment only Consumer / Corporate / Home Office</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Consistency</td>
+      <td>Ship date never before order date</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Consistency</td>
+      <td>Each order has one order date</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Consistency</td>
+      <td>Orders with more than one customer ID</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Uniqueness</td>
+      <td>row_id is unique</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>Uniqueness</td>
+      <td>Fully duplicated rows</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>Timeliness</td>
+      <td>First order date</td>
+      <td>2023-01-03</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>Timeliness</td>
+      <td>Last order date</td>
+      <td>2025-12-31</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>Timeliness</td>
+      <td>Calendar months with orders</td>
+      <td>36</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+Copy the table into your evidence log and add two columns: **pass / fail / note** and **what we do about it**. For example, the customer-ID conflicts are a known consistency issue: kept in all order and Sales counts, excluded only from customer-level analysis.
+
+> **Your turn**
+>
+> Add one more check of your own to the list above (for example: is `order_month` always the first day of the order's month? Is `profit` ever larger than `sales`?). Say which dimension it belongs to.
+
+---
+
+### I3 (Core): Check one order by hand
 
 Pick one order with several lines and add it up yourself.
 
@@ -783,7 +1514,7 @@ Record the order ID, your hand total and the pandas total in your log.
 
 ---
 
-## Part 8: Keep a preparation log
+### I4 (Core): Keep a preparation log
 
 Write down every change made to how the data is read or shaped, even small ones. You can keep the log in pandas too:
 
@@ -847,7 +1578,7 @@ prep_log
 
 
 ```python
-# Add one more row to the log: the change you think matters most from Part 2.
+# Add one more row to the log: the change you think matters most from G4.
 # Fill in the three texts, then run the cell.
 prep_log = pd.concat([prep_log, pd.DataFrame([
     {"change": "...", "why": "...", "checked": "..."},
@@ -908,7 +1639,32 @@ prep_log
 
 ---
 
-## Part 9: Segment versus category
+### I5 (Stretch): Your own filtered chart
+
+> **Your turn:** change the code in the next cell and run it again.
+
+
+```python
+# 1. Change "segment" to "category" to see Sales by product category.
+# 2. Change "West" to another region: "East", "Central" or "South".
+# 3. Update the title so it says exactly what the chart shows.
+selected = df[df["region"] == "West"]
+selected.groupby("segment")["sales"].sum().sort_values().plot(kind="barh", title="Sales by segment, West")
+plt.xlabel("Sales (source monetary units)")
+plt.show()
+```
+
+
+    
+![png](02_data_and_grain_lab_files/02_data_and_grain_lab_58_0.png)
+    
+
+
+Write one sentence describing what your chart shows, including its filter. Do not explain *why* yet.
+
+---
+
+### I6 (Stretch): Segment versus category
 
 For each segment: number of rows, number of distinct orders and total sales. `agg` computes several summaries at once.
 
@@ -1076,7 +1832,7 @@ plt.show()
 
 
     
-![png](02_trust_the_sales_table_files/02_trust_the_sales_table_47_0.png)
+![png](02_data_and_grain_lab_files/02_data_and_grain_lab_65_0.png)
     
 
 
@@ -1117,7 +1873,9 @@ print("Overall distinct orders:", df["order_id"].nunique())
 
 ---
 
-## Part 10: Debugging challenge
+## Challenge
+
+### C1 (Challenge): Debugging a colleague's summary
 
 A colleague sends this code and summary:
 
@@ -1141,19 +1899,39 @@ print("We had", orders, "orders, and", returned, "of them were returned.")
 
 > **How would you check your fix?**
 >
-> Compare your corrected numbers with the outputs in Parts 5 and 6. Then pick one listed order and confirm it is counted once, not once per line.
+> Compare your corrected numbers with the outputs in G5 and G6. Then pick one listed order and confirm it is counted once, not once per line.
+
+---
+
+### C2 (Challenge): Is the biggest bar the best segment?
+
+A colleague looks at your G7 chart and says:
+
+> *"The biggest bar is the best segment, so we should invest there."*
+
+In two or three sentences, explain why a bigger Sales bar alone does not tell us where to invest. What else would you want to see?
 
 ---
 
 ## Exit ticket
 
-1. Your grain statement.
-2. Why rows and orders differ in this table.
+1. Your one-sentence business question.
+2. Your grain statement, and why rows and orders differ in this table.
 3. One thing the returns flag cannot tell you.
 4. One change `load_orders()` makes to the original file, and why.
+5. One thing you are still unsure about.
 
-## After the lesson
+## Evidence to keep
 
-- Finish the grouping exercise in Part 9 and your hand-checked order.
-- Complete your preparation log and quality checklist.
-- Previous: [Lesson 1](01_decision_to_evidence.md). Next: [Lesson 3](03_segment_comparison.md), comparing segments with Sales, Profit and average order value.
+- [ ] Business question with decision, population, period and measure (G1)
+- [ ] Grain statement (G5)
+- [ ] Data dictionary with level of measurement for at least eleven columns (I1)
+- [ ] Quality checklist with a decision for each check (I2)
+- [ ] One hand-checked order (I3)
+- [ ] Preparation log (I4)
+- [ ] A first chart with its filters written down (G7 or I5)
+
+## After the lab
+
+- Read the [Analytical workflow](../course/workflow.md) page.
+- Previous: [Session 2 lecture](02_data_and_grain_lecture.md). Next: Session 3, cleaning and preparing data.

@@ -34,7 +34,7 @@ The first code cell in each lesson downloads the course data from Tableau's samp
 
     Choose **Runtime → Restart session and run all**. This runs everything again from the top and fixes most problems.
 
-New to Python? Start with [Lesson 0: Python and Colab basics](../lectures/00_python_and_colab_basics.md).
+New to Python? Start with the [Session 1 lab: Python, Colab and always plotting your data](../lectures/01_why_data_analytics_lab.md).
 
 ---
 

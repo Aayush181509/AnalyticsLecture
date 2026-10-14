@@ -1,5 +1,7 @@
 # Curriculum blueprint
 
+> **Superseded for teaching structure (2026-10-14, DEC-044).** The working plan is [COURSE_PLAN.md](COURSE_PLAN.md): 16 Python sessions of 2-hour lecture + 3-hour lab, then a Tableau section. This file is kept for its original reasoning, outcomes mapping and domain evidence design.
+
 Planning status: recommended instructional design; no full lessons, datasets, Tableau workbooks, or numerical answers have been produced or verified by this document.
 
 ## Requirements and design choices

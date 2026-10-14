@@ -1,73 +1,88 @@
 # Learning roadmap
 
 <p class="lead">
-The course moves from why analytics matters, through careful work on one retail dataset, to one business department at a time, and finally to an executive recommendation that brings the evidence together.
+The course has sixteen Python sessions, followed by a Tableau section. Every session has two parts: a <strong>Lecture</strong> that teaches the theory with worked examples, and a <strong>Lab</strong> where you practise it yourself on real and synthetic data.
 </p>
 
-!!! note "This is a proposed sequence"
+!!! note "This is the planned sequence"
 
-    Lesson instructions and data are released only after they have been checked.
+    Lecture and lab materials are released only after they have been checked. Sessions marked with a link already have draft material.
 
 ---
 
-## Stage 0: Foundations
+## How each session works
 
-You learn why analysis and clear presentation matter before touching any software.
+**Lecture.** A short recap quiz, then the theory, explained with examples and questions where you predict the answer before seeing it. It ends with a worked case in code.
 
-| Topic | Key ideas | You will produce |
+**Lab.** Three levels of practice in a Colab notebook:
+
+1. **Guided:** step-by-step, everyone together.
+2. **Independent:** the same skill applied to a new question.
+3. **Challenge:** a harder problem or a deliberate mistake to debug.
+
+You keep the evidence from every lab in your portfolio.
+
+---
+
+## Part A: Thinking with data
+
+| Session | Lecture | Lab |
 |---|---|---|
-| [Why data analytics matters](../foundations/index.md) | Real stories, the four levels of analytics, why presentation is part of analysis | A workplace decision that data could have improved |
-| [Statistics are not enough](../foundations/statistics-are-not-enough.md) | Anscombe's quartet, the Datasaurus Dozen | Two situations with the same average but different decisions |
-| [How statistics can mislead](../foundations/misleading-statistics.md) | Correlation vs causation, Simpson's paradox, misleading axes, survivorship bias | A fair rewrite of a misleading headline |
-| [Types of analysis](../foundations/types-of-analysis.md) | Univariate, bivariate and multivariate questions and charts | One question of each type about your own work |
-| [Designing clear visuals](../foundations/visual-design.md) | Data-ink ratio, pre-attentive attributes, Gestalt principles, colour | A decluttered version of a real chart |
-| [Storytelling with data](../foundations/storytelling.md) | The Challenger disaster, the big idea, situation–complication–resolution | A one-sentence big idea and a three-slide story plan |
+| **1. Why data analytics matters** | [Why data analytics matters](../lectures/01_why_data_analytics_lecture.md): the four levels of analytics, decision-driven questions, and why statistics alone can mislead | [Python, Colab and always plotting your data](../lectures/01_why_data_analytics_lab.md): recreate Anscombe's quartet and the Datasaurus |
+| **2. Data, grain and the DataFrame** | [Data, grain and the DataFrame](../lectures/02_data_and_grain_lecture.md): types of data, tidy data, grain and keys, data dictionaries, data quality | [Can we trust the sales table?](../lectures/02_data_and_grain_lab.md) |
+| **3. Cleaning and preparing data** | Missing data, duplicates, outliers, dates, joins and their pitfalls, reshaping | Clean World Cup and mobile-OS data; merge tables safely |
 
 ---
 
-## Stage 1: Python and retail data
+## Part B: Describing and measuring
 
-You learn just enough Python to analyse data in Google Colab, and the core habits of careful analysis using one retail dataset.
-
-| Lesson | Business question | You will produce |
+| Session | Lecture | Lab |
 |---|---|---|
-| **[0](../lectures/00_python_and_colab_basics.md)** | How do I run Python in Colab? Variables, tables, filters, totals and a first chart. | A working notebook and a first chart from made-up data. |
-| **[1](../lectures/01_decision_to_evidence.md)** | What makes a business question answerable? Load the data and build a first chart. | A question, its population and a first evidence view. |
-| **[2](../lectures/02_trust_the_sales_table.md)** | What does a retail row represent? Data types, keys and preparation. | A grain statement and a quality checklist. |
-| **[3](../lectures/03_segment_comparison.md)** | Which retail segment deserves a closer look? Distinct orders, Sales, Profit, average order value and profit ratio. | A checked KPI worksheet and a short debugging explanation. |
-| **[4](../lectures/04_trends_returns_dashboard.md)** | How do trends and returns change the decision? Monthly growth and dashboard design. | A retail dashboard and a recommendation. |
+| **4. Descriptive statistics and distributions** | Centre, spread, percentiles, skew, outliers, histograms and box plots | Distributions of order value and shipping time; median vs mean house prices |
+| **5. Metrics and KPIs** | Designing metrics, ratios of totals, weighted rates, Simpson's paradox | [Which segment deserves a closer look?](../lectures/05_metrics_and_kpis_lab.md) (draft lab); the Berkeley admissions paradox |
+| **6. Visualisation principles** | Choosing charts, perception, data-ink, Gestalt, colour and accessibility ([Designing clear visuals](../foundations/visual-design.md)) | Redesign bad charts; one-, two- and many-variable views |
 
 ---
 
-## Stage 2: One department at a time
+## Part C: Relationships, change and uncertainty
 
-Each lesson is a new business area. Support is gradually reduced so you work more independently.
-
-| Lesson | Business question | You will produce |
+| Session | Lecture | Lab |
 |---|---|---|
-| **5** | **Finance:** where is spending above plan? | A reconciled budget-versus-actual view. |
-| **6** | **Operations:** where do deliveries miss their promise? | A service view that includes still-pending shipments. |
-| **7** | **Marketing:** which campaigns need a closer look? | A campaign comparison with notes on denominators. |
-| **8** | **HR:** how is the workforce changing? | A synthetic workforce snapshot and a fair comparison. |
+| **7. Time series and trends** | Trend and seasonality, month-on-month vs year-on-year, moving averages | [Trends, returns and a decision dashboard](../lectures/07_trends_and_growth_lab.md) (draft lab); construction spending |
+| **8. Correlation and regression** | Correlation, confounding, simple linear regression, residuals | Discount vs profit; advertising spend vs revenue |
+| **9. Sampling, uncertainty and experiments** | Samples and populations, confidence intervals, A/B tests, practical vs statistical significance | Simulate sampling; bootstrap a confidence interval; analyse an A/B test |
 
 ---
 
-## Stage 3: Bring it together
+## Part D: Business cases
 
-You combine evidence from several departments into one executive recommendation.
-
-| Lesson | Business question | You will produce |
+| Session | Lecture | Lab |
 |---|---|---|
-| **9** | Which departmental findings agree or conflict? | A five-domain evidence register and a briefing proposal. |
-| **10** | What decision should executives make? | A draft briefing with traceable evidence. |
-| **11** | Does the recommendation survive scrutiny? | A validation log and a revised briefing. |
-| **12** | What action and follow-up measure should leaders approve? | The final executive briefing and a portfolio reflection. |
+| **10. Finance** | Budget vs actual, variance, reconciliation | Find the spending that needs review |
+| **11. Operations** | Service levels, open shipments, delay distributions | Measure delivery reliability fairly |
+| **12. Marketing** | Funnels, weighted conversion, cost per acquisition, attribution limits | Compare campaigns and judge an experiment |
+| **13. HR** | Headcount, turnover, cohorts, fairness and privacy | Track workforce change correctly |
 
 ---
 
-## Stage 4: Tableau
+## Part E: Communicating and bringing it together
 
-A separate section will rebuild the same analyses in Tableau as interactive dashboards. The [draft Tableau lessons](../lessons/class-01.md) are previews and will be completed later.
+| Session | Lecture | Lab |
+|---|---|---|
+| **14. Dashboards and storytelling** | Audience, the big idea, dashboard design, the Challenger case ([Storytelling with data](../foundations/storytelling.md)) | Build a decision dashboard and a three-slide story |
+| **15. Capstone studio** | Combining evidence across departments, validation, trade-offs | Build your capstone analysis with coaching |
+| **16. Executive briefings** | Presenting to executives and handling questions | Present, give and receive critique, revise |
+
+---
+
+## Part F: Tableau
+
+| Session | Lecture | Lab |
+|---|---|---|
+| **T1. Tableau fundamentals** | How Tableau thinks: dimensions, measures, aggregation | Rebuild earlier views ([draft](../lessons/class-01.md)) |
+| **T2. Calculations and KPIs** | Calculated fields, distinct counts, table calculations | Rebuild the segment KPIs and growth measures |
+| **T3. Dashboards in Tableau** | Layout, filters, actions, accessibility | Rebuild your decision dashboard |
+| **T4. Publishing and portfolio** | Tableau Public and privacy | Your Tableau portfolio piece |
 
 ---
 
@@ -75,27 +90,28 @@ A separate section will rebuild the same analyses in Tableau as interactive dash
 
 By the end of the course you should be able to:
 
-1. Turn a stakeholder's concern into a clear question with a population, a period and a decision.
-2. Identify what a row means, the keys, data types, units and missing records, and document your preparation.
-3. Calculate metrics with the right aggregation and the right denominator.
-4. Check results with reconciliations, small manual checks and alternative explanations.
-5. Build readable charts and dashboards, in Python and later in Tableau, that make the important comparison obvious.
-6. Recommend an action while explaining limitations, trade-offs and how success will be measured.
+1. Turn a business request into a clear question with a decision, population, period and measure.
+2. Load, inspect, clean and reshape data in Python, keeping a record of every change.
+3. Describe data with the right statistics and charts, and explain distributions, outliers and skew.
+4. Define metrics precisely and avoid the common traps.
+5. Measure relationships and change over time, and explain what correlation and regression can and cannot show.
+6. Express uncertainty with confidence intervals and simple experiments.
+7. Design clear charts and dashboards, and tell a decision-focused story.
+8. Apply all of this to retail, finance, operations, marketing and HR, and defend a recommendation to executives.
+9. Rebuild key analyses in Tableau.
 
 ---
 
 ## How you will be assessed
 
-Your **portfolio** includes evidence from all five business areas.
+- **Theory quizzes** at the start of each lecture help you check your understanding. They are for feedback.
+- Your **lab portfolio** collects your evidence from every session and covers all five business areas.
+- Your **capstone** combines findings from at least three areas into a dashboard and an executive briefing.
 
-Your **final briefing** combines findings from at least three of them. The submission details and presentation format will be shared before assessment begins.
-
-Feedback rewards correct reasoning and careful checking, not only attractive charts.
+Feedback rewards correct reasoning, careful checking and honest statements of uncertainty, not only attractive charts.
 
 ---
 
 ## Extra practice topics
 
-Alongside the five business areas, selected datasets from the [Tableau sample-data catalog](https://public.tableau.com/app/learn/sample-data) give you choices in sports, technology, government and more.
-
-These use the same question-to-recommendation workflow. Each dataset keeps its own real dates, units and context.
+Selected datasets from the [Tableau sample-data catalog](https://public.tableau.com/app/learn/sample-data) give you practice in sports, technology, government and more. Each keeps its own real dates, units and context.

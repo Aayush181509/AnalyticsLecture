@@ -4,6 +4,14 @@ Updated: 2026-10-12 (Asia/Kathmandu). **Phase: foundation, source audit, D01 ret
 
 
 
+## Claude session: Sessions 1 and 2 built — 2026-10-14
+
+Built Session 1 (`01_why_data_analytics_lecture/lab.ipynb`) and Session 2 (`02_data_and_grain_lecture/lab.ipynb`) with quizzes and private answers in `instructor/sessions/01/` and `02/` (DEC-045). Renamed draft labs to `05_metrics_and_kpis_lab.ipynb` and `07_trends_and_growth_lab.ipynb` and fixed their titles, badges and links. Updated nav, roadmap, index, setup, Tableau draft links and notebooks/README. Verification: `run_notebooks.py --check-data` on all six notebooks (no errors; data check PASS, 4 notebooks share one setup cell, 6,815 rows / 3,388 orders); nbconvert of the six; `check_docs.py` PASS (27 pages); strict MkDocs build passed (INFO lists the five orphaned old lesson pages). Then, with user approval, deleted superseded notebooks 00–02 and old pages 00–04 and committed. Not done: independent review, Colab trial, push.
+
+## Claude session: course plan v2 — 2026-10-14
+
+User asked for a rigorous course with theory and hands-on practice and gave three answers: 2-hour lecture + 3-hour lab per session; applied statistics for analysts; Lecture/Lab shown on pages without hours (DEC-044). Wrote `planning/COURSE_PLAN.md`, covering session format, outcomes, 16 Python sessions in five parts plus 4 Tableau sessions, per-session lecture and lab content, data plan, assessment and a mapping of existing material. Rewrote the learner roadmap to match, without hours. Marked CURRICULUM.md as superseded for structure. Added the session production backlog to TASKS. No notebooks changed. Verification: `check_docs.py` and strict build (below).
+
 ## Claude session: single requirements file and commit — 2026-10-14
 
 Merged the three extra requirement files into one sectioned `requirements.txt` (DEC-043) and updated every reference (README, data/README, notebooks/README, AGENTS, CLAUDE_TAKEOVER, HANDOFF, script docstrings). Verification in a fresh uv venv (Python 3.12.13) from the merged file:

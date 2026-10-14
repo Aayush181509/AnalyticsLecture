@@ -6,7 +6,7 @@ Compare the three customer segments using five measures, calculate each one corr
 
 !!! warning "Draft lesson: Tableau section (coming later)"
 
-    The course currently teaches this lesson in Python: see [Python Lesson 3](../lectures/03_segment_comparison.md). This Tableau version will be completed in the later Tableau section.
+    The course currently teaches this lesson in Python: see [Session 5 lab](../lectures/05_metrics_and_kpis_lab.md). This Tableau version will be completed in the later Tableau section.
 
     The Tableau steps on this page have not yet been rehearsed on the course version of Tableau. Menu names may differ slightly on your computer.
 

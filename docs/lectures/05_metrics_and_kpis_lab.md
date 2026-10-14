@@ -1,10 +1,10 @@
-# Lesson 3: Which segment deserves a closer look?
+# Session 5 lab (draft): Which segment deserves a closer look?
 
 <p class="lead">
 Compare the three customer segments using five measures, calculate each one correctly, check that the numbers add up, and make a careful recommendation.
 </p>
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Aayush181509/AnalyticsLecture/blob/main/notebooks/03_segment_comparison.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Aayush181509/AnalyticsLecture/blob/main/notebooks/05_metrics_and_kpis_lab.ipynb)
 
 Open this notebook in Google Colab with the button above, then run each cell from top to bottom with **Shift + Enter**. Save your own copy with **File → Save a copy in Drive**.
 
@@ -35,7 +35,7 @@ A big Sales total alone is not enough to decide. A segment can sell a lot and st
 
 **Evidence you keep:** a segment KPI table, your metric definitions, a validation checklist and a five-sentence recommendation.
 
-Before you start, complete [Lesson 2](02_trust_the_sales_table.md) and have your grain statement and evidence log ready. Re-read the [averages and percentages traps](../foundations/misleading-statistics.md) in Foundations.
+Before you start, complete the [Session 2 lab](02_data_and_grain_lab.md) and have your grain statement and evidence log ready. Re-read the [averages and percentages traps](../foundations/misleading-statistics.md) in Foundations.
 
 ---
 
@@ -206,7 +206,7 @@ print("Profit ratio (%):", round(profit_ratio * 100, 1))
 
 ### Step 1: totals for each segment
 
-In Lesson 0 you used `groupby` with one sum. `.agg` lets you calculate several totals at once. Each line inside reads as **new column name = (column to use, how to summarise it)**.
+In the Session 1 lab you used `groupby` with one sum. `.agg` lets you calculate several totals at once. Each line inside reads as **new column name = (column to use, how to summarise it)**.
 
 
 ```python
@@ -462,7 +462,7 @@ plt.show()
 
 
     
-![png](03_segment_comparison_files/03_segment_comparison_12_0.png)
+![png](05_metrics_and_kpis_lab_files/05_metrics_and_kpis_lab_12_0.png)
     
 
 
@@ -972,4 +972,4 @@ Before submitting, confirm:
 
 - Finish the region and category work from Part 5.
 - Correct the colleague's summary from Part 6 and add it to your evidence log.
-- Next: [Lesson 4](04_trends_returns_dashboard.md), where we look at monthly trends and the returns list.
+- Next: the [Session 7 lab](07_trends_and_growth_lab.md), where we look at monthly trends and the returns list.

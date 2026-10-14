@@ -17,12 +17,15 @@ nav:
       - Setup and Practice: course/setup.md
       - Analytical Workflow: course/workflow.md
   - Business Cases: cases/index.md
-  - Python Lessons:
-      - "Lesson 0: Python and Colab Basics": lectures/00_python_and_colab_basics.md
-      - "Lesson 1: From Decision to Evidence": lectures/01_decision_to_evidence.md
-      - "Lesson 2: Can We Trust the Sales Table?": lectures/02_trust_the_sales_table.md
-      - "Lesson 3: Which Segment Deserves a Closer Look?": lectures/03_segment_comparison.md
-      - "Lesson 4: Trends, Returns and a Decision Dashboard": lectures/04_trends_returns_dashboard.md
+  - Python Sessions:
+      - "Session 1: Why Data Analytics Matters":
+          - Lecture: lectures/01_why_data_analytics_lecture.md
+          - Lab: lectures/01_why_data_analytics_lab.md
+      - "Session 2: Data, Grain and the DataFrame":
+          - Lecture: lectures/02_data_and_grain_lecture.md
+          - Lab: lectures/02_data_and_grain_lab.md
+      - "Session 5 Lab (draft): Which Segment Deserves a Closer Look?": lectures/05_metrics_and_kpis_lab.md
+      - "Session 7 Lab (draft): Trends, Returns and a Decision Dashboard": lectures/07_trends_and_growth_lab.md
   - Tableau (Coming Later):
       - "Tableau Lesson 1 (draft)": lessons/class-01.md
       - "Tableau Lesson 2 (draft)": lessons/class-02.md

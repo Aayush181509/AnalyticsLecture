@@ -6,7 +6,7 @@ Before comparing anything, find out exactly what the retail file contains: what 
 
 !!! warning "Draft lesson: Tableau section (coming later)"
 
-    The course currently teaches this lesson in Python: see [Python Lesson 2](../lectures/02_trust_the_sales_table.md). This Tableau version will be completed in the later Tableau section.
+    The course currently teaches this lesson in Python: see [Session 2 lab](../lectures/02_data_and_grain_lab.md). This Tableau version will be completed in the later Tableau section.
 
     The Tableau steps on this page have not yet been rehearsed on the course version of Tableau. Menu names may differ slightly on your computer.
 

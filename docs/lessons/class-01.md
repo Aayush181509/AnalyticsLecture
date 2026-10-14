@@ -6,7 +6,7 @@ Turn a vague business request into a clear question, open your first dataset in 
 
 !!! warning "Draft lesson: Tableau section (coming later)"
 
-    The course currently teaches this lesson in Python: see [Python Lesson 1](../lectures/01_decision_to_evidence.md). This Tableau version will be completed in the later Tableau section.
+    The course currently teaches this lesson in Python: see [Session 2 lab](../lectures/02_data_and_grain_lab.md). This Tableau version will be completed in the later Tableau section.
 
     The Tableau steps on this page have not yet been rehearsed on the course version of Tableau. Menu names may differ slightly on your computer. Your facilitator will confirm them in class.
 

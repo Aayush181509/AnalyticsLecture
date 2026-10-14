@@ -4,6 +4,10 @@ Updated: 2026-10-12 (Asia/Kathmandu). **Phase: foundation, source audit, D01 ret
 
 
 
+## Claude session: Sessions 3, 4 and 6 built — 2026-10-14
+
+Built lecture + lab notebooks and private answers for Session 3 (cleaning and preparing), Session 4 (descriptive statistics) and Session 6 (visualisation principles), DEC-045 naming. World Cup, Mobile OS and US home sales are downloaded inside the notebooks from Tableau's catalog and checked by SHA-256 (live files byte-identical to the preserved raw copies); nothing is bundled, consistent with SOURCE_RIGHTS. Added nav, roadmap and notebooks/README entries. Verification: `run_notebooks.py --check-data` on all 12 notebooks (no errors; PASS, 9 notebooks share one setup cell, 6,815 rows / 3,388 orders); `make convert-all`; `check_docs.py` PASS (28 pages); strict MkDocs build passed with no warnings. Session 7 output differed only in print-stream chunking and was restored. Not done: independent review, Colab trial.
+
 ## Claude session: Sessions 1 and 2 built — 2026-10-14
 
 Built Session 1 (`01_why_data_analytics_lecture/lab.ipynb`) and Session 2 (`02_data_and_grain_lecture/lab.ipynb`) with quizzes and private answers in `instructor/sessions/01/` and `02/` (DEC-045). Renamed draft labs to `05_metrics_and_kpis_lab.ipynb` and `07_trends_and_growth_lab.ipynb` and fixed their titles, badges and links. Updated nav, roadmap, index, setup, Tableau draft links and notebooks/README. Verification: `run_notebooks.py --check-data` on all six notebooks (no errors; data check PASS, 4 notebooks share one setup cell, 6,815 rows / 3,388 orders); nbconvert of the six; `check_docs.py` PASS (27 pages); strict MkDocs build passed (INFO lists the five orphaned old lesson pages). Then, with user approval, deleted superseded notebooks 00–02 and old pages 00–04 and committed. Not done: independent review, Colab trial, push.

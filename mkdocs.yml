@@ -24,7 +24,16 @@ nav:
       - "Session 2: Data, Grain and the DataFrame":
           - Lecture: lectures/02_data_and_grain_lecture.md
           - Lab: lectures/02_data_and_grain_lab.md
+      - "Session 3: Cleaning and Preparing Data":
+          - Lecture: lectures/03_cleaning_and_preparing_lecture.md
+          - Lab: lectures/03_cleaning_and_preparing_lab.md
+      - "Session 4: Descriptive Statistics and Distributions":
+          - Lecture: lectures/04_descriptive_statistics_lecture.md
+          - Lab: lectures/04_descriptive_statistics_lab.md
       - "Session 5 Lab (draft): Which Segment Deserves a Closer Look?": lectures/05_metrics_and_kpis_lab.md
+      - "Session 6: Visualisation Principles":
+          - Lecture: lectures/06_visualisation_principles_lecture.md
+          - Lab: lectures/06_visualisation_principles_lab.md
       - "Session 7 Lab (draft): Trends, Returns and a Decision Dashboard": lectures/07_trends_and_growth_lab.md
   - Tableau (Coming Later):
       - "Tableau Lesson 1 (draft)": lessons/class-01.md

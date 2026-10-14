@@ -30,7 +30,7 @@ You keep the evidence from every lab in your portfolio.
 |---|---|---|
 | **1. Why data analytics matters** | [Why data analytics matters](../lectures/01_why_data_analytics_lecture.md): the four levels of analytics, decision-driven questions, and why statistics alone can mislead | [Python, Colab and always plotting your data](../lectures/01_why_data_analytics_lab.md): recreate Anscombe's quartet and the Datasaurus |
 | **2. Data, grain and the DataFrame** | [Data, grain and the DataFrame](../lectures/02_data_and_grain_lecture.md): types of data, tidy data, grain and keys, data dictionaries, data quality | [Can we trust the sales table?](../lectures/02_data_and_grain_lab.md) |
-| **3. Cleaning and preparing data** | Missing data, duplicates, outliers, dates, joins and their pitfalls, reshaping | Clean World Cup and mobile-OS data; merge tables safely |
+| **3. Cleaning and preparing data** | [Cleaning and preparing data](../lectures/03_cleaning_and_preparing_lecture.md): missing data, duplicates, outliers, dates, joins and their pitfalls, reshaping | [Clean World Cup and mobile-OS data; merge tables safely](../lectures/03_cleaning_and_preparing_lab.md) |
 
 ---
 
@@ -38,9 +38,9 @@ You keep the evidence from every lab in your portfolio.
 
 | Session | Lecture | Lab |
 |---|---|---|
-| **4. Descriptive statistics and distributions** | Centre, spread, percentiles, skew, outliers, histograms and box plots | Distributions of order value and shipping time; median vs mean house prices |
+| **4. Descriptive statistics and distributions** | [Descriptive statistics and distributions](../lectures/04_descriptive_statistics_lecture.md): centre, spread, percentiles, skew, outliers, histograms and box plots | [Distributions of order value and shipping time; median vs mean house prices](../lectures/04_descriptive_statistics_lab.md) |
 | **5. Metrics and KPIs** | Designing metrics, ratios of totals, weighted rates, Simpson's paradox | [Which segment deserves a closer look?](../lectures/05_metrics_and_kpis_lab.md) (draft lab); the Berkeley admissions paradox |
-| **6. Visualisation principles** | Choosing charts, perception, data-ink, Gestalt, colour and accessibility ([Designing clear visuals](../foundations/visual-design.md)) | Redesign bad charts; one-, two- and many-variable views |
+| **6. Visualisation principles** | [Visualisation principles](../lectures/06_visualisation_principles_lecture.md): choosing charts, perception, data-ink, Gestalt, colour and accessibility ([Designing clear visuals](../foundations/visual-design.md)) | [Redesign bad charts; one-, two- and many-variable views](../lectures/06_visualisation_principles_lab.md) |
 
 ---
 

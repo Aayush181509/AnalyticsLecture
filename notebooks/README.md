@@ -10,7 +10,13 @@ Every session has a **lecture** notebook (theory, demonstrations, check-your-und
 | `01_why_data_analytics_lab.ipynb` | Session 1 lab: Python, Colab and always plotting your data |
 | `02_data_and_grain_lecture.ipynb` | Session 2 lecture: Data, grain and the DataFrame |
 | `02_data_and_grain_lab.ipynb` | Session 2 lab: Can we trust the sales table? |
+| `03_cleaning_and_preparing_lecture.ipynb` | Session 3 lecture: Cleaning and preparing data |
+| `03_cleaning_and_preparing_lab.ipynb` | Session 3 lab: Clean it, check it, log it |
+| `04_descriptive_statistics_lecture.ipynb` | Session 4 lecture: Descriptive statistics and distributions |
+| `04_descriptive_statistics_lab.ipynb` | Session 4 lab: What does a typical order look like? |
 | `05_metrics_and_kpis_lab.ipynb` | Session 5 lab (draft, lecture to come): Which segment deserves a closer look? |
+| `06_visualisation_principles_lecture.ipynb` | Session 6 lecture: Visualisation principles |
+| `06_visualisation_principles_lab.ipynb` | Session 6 lab: From default charts to decision charts |
 | `07_trends_and_growth_lab.ipynb` | Session 7 lab (draft, lecture to come): Trends, returns and a decision dashboard |
 
 ## Workflow

@@ -77,10 +77,10 @@ Each session needs: lecture notebook, lab notebook (core / stretch / challenge),
 |---|---|---|---|---|
 | S-01 | Why data analytics matters | FND01, PY01 | REVIEW | `01_why_data_analytics_lecture/lab.ipynb` + `instructor/sessions/01/answers.md` built and executed 2026-10-14; needs independent review and a Colab trial |
 | S-02 | Data, grain and the DataFrame | PY01 | REVIEW | `02_data_and_grain_lecture/lab.ipynb` + `instructor/sessions/02/answers.md` built, executed and data-checked 2026-10-14; old Lessons 1–2 merged into the lab; needs independent review and a Colab trial |
-| S-03 | Cleaning and preparing data | S01 audit | PLANNED | Prepared-subset rules for World Cup, Mobile OS; join cardinality on Superstore sheets |
-| S-04 | Descriptive statistics and distributions | S-02 | PLANNED | Home Sales series selection needed |
+| S-03 | Cleaning and preparing data | S01 audit | REVIEW | `03_cleaning_and_preparing_lecture/lab.ipynb` + answers built 2026-10-14; World Cup and Mobile OS downloaded in-notebook from Tableau catalog with SHA-256 (no bundling); new quirks found: City trailing spaces, 73 `ï¿½` rows, Iran/IR Iran, empty-text Observation, mixed WorldCups Attendance types |
+| S-04 | Descriptive statistics and distributions | S-02 | REVIEW | `04_descriptive_statistics_lecture/lab.ipynb` + answers built 2026-10-14; home sales series SOLD/US/unadjusted MEDIAN vs AVERAG, 1975-01–2016-10, downloaded in-notebook with SHA-256 |
 | S-05 | Metrics and KPIs | S-02 | IN PROGRESS | Draft lab renamed `05_metrics_and_kpis_lab.ipynb`; lecture + Berkeley task + metric-contract exercise |
-| S-06 | Visualisation principles | S-04 | PLANNED | Reuse Foundations figures in lecture |
+| S-06 | Visualisation principles | S-04 | REVIEW | `06_visualisation_principles_lecture/lab.ipynb` + answers built 2026-10-14; before/after demos for every principle |
 | S-07 | Time series and trends | S-05 | IN PROGRESS | Draft lab renamed `07_trends_and_growth_lab.ipynb`; lecture + construction-spending task (US/XXXX/T series) |
 | S-08 | Correlation and regression | S-04, D08 | PLANNED | Needs synthetic marketing spend/revenue data |
 | S-09 | Sampling, uncertainty and experiments | S-04, D08 | PLANNED | Needs synthetic A/B dataset (D08) |
@@ -94,4 +94,4 @@ Each session needs: lecture notebook, lab notebook (core / stretch / challenge),
 | D08 | Synthetic A/B test and marketing spend data | D01 pattern | PLANNED | Seeded generator, contract and hand checks; feeds S-08, S-09, S-12 |
 | T-01–T-04 | Tableau section | S-14 | DEFERRED | From the Tableau drafts |
 
-Sessions 1 and 2 built 2026-10-14 (REVIEW). The superseded notebooks 00–02 and old generated pages 00–04 were deleted with user approval. Next: (1) independent review + Colab trial of Sessions 1–2; (2) Session 3 and D08.
+Sessions 1 and 2 built 2026-10-14 (REVIEW). The superseded notebooks 00–02 and old generated pages 00–04 were deleted with user approval. Sessions 3, 4 and 6 built 2026-10-14 (REVIEW). Next: (1) independent review + Colab trial of Sessions 1–4 and 6; (2) Session 5 and 7 lectures; (3) D08 for Sessions 8, 9, 12.

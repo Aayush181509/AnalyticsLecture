@@ -8,6 +8,10 @@ The user requests Claude takeover next. Read [AGENTS.md](../AGENTS.md) → [PROJ
 
 Learner site keeps the Read the Docs theme (user preference after a brief Material trial, DEC-036) plus `docs/stylesheets/readability.css`; all six pages were restructured for readability (DEC-034, DOC01). Write every new learner page in that style: lead sentence, `---` breaks, short paragraphs, numbered steps, tables or `###` subsections, note/tip/hint/warning admonitions. No Material-only syntax. User approved the rendered result. Preview with `/tmp/kings-data-docs-venv/bin/python -m mkdocs serve` (reinstall from requirements.txt if the venv is gone). D03 Tableau checks remain open because this session had no desktop-app control (DEC-035).
 
+## Private answers are local only — 2026-10-14 (read this first)
+
+The GitHub repo is public, so `instructor/` (answer keys, quiz keys, reference values) is in `.gitignore` and was removed from the entire git history, which the user force-pushed. Every commit ID before `27f52e4` changed; other clones (including any Codex workspace) must re-clone or hard-reset to `origin/main`. Keep writing private answers to `instructor/sessions/NN/` on disk, never commit them, and never `git push --all`: local branches `backup/before-history-rewrite` and `backup/before-untrack` still contain the old answers.
+
 ## Sessions 1–7 built, D08 ready — 2026-10-14 (read this first)
 
 Sessions 1–7 each have lecture + lab notebooks, quiz and private answers. D08 synthetic marketing data exists for Sessions 8, 9 and 12. Next: Sessions 8 and 9, then case data D04–D07.

@@ -4,6 +4,10 @@ Updated: 2026-10-12 (Asia/Kathmandu). **Phase: foundation, source audit, D01 ret
 
 
 
+## Claude session: Sessions 5 and 7 completed, D08 built — 2026-10-14
+
+New lecture notebooks for Sessions 5 and 7; their labs restructured into Guided/Independent/Challenge with new tasks (Berkeley admissions, metric contract, construction spending) and "draft" removed; answers in `instructor/sessions/05/` and `07/`. D08 synthetic marketing data (campaign-day funnel, 2,555 rows; A/B test, 60,000 visitors) with generator, independent validator, README contract, manifest and private reference answers (DEC-046). Fixed a numpy/pandas DeprecationWarning that printed a local temp path in Session 6 outputs. Verification: `run_notebooks.py --check-data` on all 14 notebooks (no errors; PASS, 11 share one setup cell); `validate_marketing.py` PASS; `make convert-all`; no warnings or local paths in outputs; `check_docs.py` PASS (30 pages); strict MkDocs build clean. Not done: independent review, Colab trial.
+
 ## Claude session: Sessions 3, 4 and 6 built — 2026-10-14
 
 Built lecture + lab notebooks and private answers for Session 3 (cleaning and preparing), Session 4 (descriptive statistics) and Session 6 (visualisation principles), DEC-045 naming. World Cup, Mobile OS and US home sales are downloaded inside the notebooks from Tableau's catalog and checked by SHA-256 (live files byte-identical to the preserved raw copies); nothing is bundled, consistent with SOURCE_RIGHTS. Added nav, roadmap and notebooks/README entries. Verification: `run_notebooks.py --check-data` on all 12 notebooks (no errors; PASS, 9 notebooks share one setup cell, 6,815 rows / 3,388 orders); `make convert-all`; `check_docs.py` PASS (28 pages); strict MkDocs build passed with no warnings. Session 7 output differed only in print-stream chunking and was restored. Not done: independent review, Colab trial.

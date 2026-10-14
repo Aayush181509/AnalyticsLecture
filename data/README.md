@@ -3,7 +3,7 @@
 The user selected a hybrid approach: the established synthetic strategy plus [Tableau sample-data catalog](https://public.tableau.com/app/learn/sample-data) sources. Four catalog originals have been acquired and inspected locally. They are audit sources, not learner releases; no source-derived publication is approved. See [source audit](../planning/SOURCE_AUDIT.md), [rights evidence](../planning/SOURCE_RIGHTS.md) and [data strategy](../planning/DATA_STRATEGY.md).
 
 - `raw/`: untouched external acquisitions. Audited originals are the exact four paths in `metadata/catalog-audit-2026-10-12/source_manifest.json`. Keep provider, retrieval date, original file and rights evidence. Additional files/layouts present in the workspace are preserved but not covered by this manifest.
-- `synthetic/`: future immutable versioned synthetic source releases, with generator seed, schema, manifest, checksums and synthetic labels.
+- `synthetic/`: immutable versioned synthetic source releases, with generator seed, schema, manifest, checksums and synthetic labels. First release: `synthetic/marketing-v1/` (D08: campaign-day funnel data and an A/B test), built by `scripts/generate_marketing.py` and checked by `scripts/validate_marketing.py`.
 - `prepared/`: derived learner tables for a specific source version, with transformation and reconciliation logs. Never edit a prepared CSV to fix a source without recording the change.
 - `metadata/`: source manifests and reproducible schema/quality profiles; not a learner download directory.
 

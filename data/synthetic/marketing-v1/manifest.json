@@ -1,0 +1,29 @@
+{
+  "currency": "neutral currency units (not fixed by the course)",
+  "dataset": "marketing-v1",
+  "files": {
+    "README.md": {
+      "bytes": 3596,
+      "sha256": "069280ac2b2446407ba6cbccaaf769222692d8d143233d264a67db7a38535a4c"
+    },
+    "ab_test.csv": {
+      "bytes": 2125501,
+      "sha256": "41a3662997111b66d7ab1eb899f4b32e26bd64c66284ce881db6b8a7300ad47f"
+    },
+    "marketing_daily.csv": {
+      "bytes": 201972,
+      "sha256": "1cbfc8e1c91ae72d18364b2d13bdf6db513c4aec28c339ef8b91f87a60dc0a07"
+    }
+  },
+  "generator": "scripts/generate_marketing.py",
+  "generator_sha256": "7c6cda971b5697b8c0adcbac7b9a677b8dba40bdd26aa50d39d7bc784fbd73de",
+  "label": "synthetic",
+  "numpy": "2.5.4",
+  "pandas": "2.2.3",
+  "rights": "unresolved; see planning/DATA_STRATEGY.md Rights status",
+  "rows": {
+    "ab_test.csv": 60000,
+    "marketing_daily.csv": 2555
+  },
+  "seed": 20251001
+}

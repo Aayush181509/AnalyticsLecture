@@ -39,7 +39,7 @@ You keep the evidence from every lab in your portfolio.
 | Session | Lecture | Lab |
 |---|---|---|
 | **4. Descriptive statistics and distributions** | [Descriptive statistics and distributions](../lectures/04_descriptive_statistics_lecture.md): centre, spread, percentiles, skew, outliers, histograms and box plots | [Distributions of order value and shipping time; median vs mean house prices](../lectures/04_descriptive_statistics_lab.md) |
-| **5. Metrics and KPIs** | Designing metrics, ratios of totals, weighted rates, Simpson's paradox | [Which segment deserves a closer look?](../lectures/05_metrics_and_kpis_lab.md) (draft lab); the Berkeley admissions paradox |
+| **5. Metrics and KPIs** | [Metrics and KPIs](../lectures/05_metrics_and_kpis_lecture.md): designing metrics, ratios of totals, weighted rates, Simpson's paradox | [Which segment deserves a closer look?](../lectures/05_metrics_and_kpis_lab.md); the Berkeley admissions paradox |
 | **6. Visualisation principles** | [Visualisation principles](../lectures/06_visualisation_principles_lecture.md): choosing charts, perception, data-ink, Gestalt, colour and accessibility ([Designing clear visuals](../foundations/visual-design.md)) | [Redesign bad charts; one-, two- and many-variable views](../lectures/06_visualisation_principles_lab.md) |
 
 ---
@@ -48,7 +48,7 @@ You keep the evidence from every lab in your portfolio.
 
 | Session | Lecture | Lab |
 |---|---|---|
-| **7. Time series and trends** | Trend and seasonality, month-on-month vs year-on-year, moving averages | [Trends, returns and a decision dashboard](../lectures/07_trends_and_growth_lab.md) (draft lab); construction spending |
+| **7. Time series and trends** | [Time series and trends](../lectures/07_trends_and_growth_lecture.md): trend and seasonality, month-on-month vs year-on-year, moving averages | [Trends, returns and a decision dashboard](../lectures/07_trends_and_growth_lab.md); construction spending |
 | **8. Correlation and regression** | Correlation, confounding, simple linear regression, residuals | Discount vs profit; advertising spend vs revenue |
 | **9. Sampling, uncertainty and experiments** | Samples and populations, confidence intervals, A/B tests, practical vs statistical significance | Simulate sampling; bootstrap a confidence interval; analyse an A/B test |
 

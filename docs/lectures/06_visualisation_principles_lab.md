@@ -629,6 +629,7 @@ The redesign below keeps all twelve series but makes the chart **about one of th
 # 2. Rewrite the title so it states what the highlighted line shows compared with the others.
 # 3. Stretch: replace the whole chart with small multiples, one panel per category,
 #    with regions as lines (see lecture Part 9).
+import datetime
 quarter = df["order_date"].dt.to_period("Q").dt.to_timestamp()
 quarterly = df.groupby([quarter, "region", "category"])["sales"].sum().unstack(["region", "category"])
 focus = ("West", "Technology")
@@ -640,20 +641,16 @@ for key in quarterly.columns:
 ax.plot(quarterly.index, quarterly[focus], color=HIGHLIGHT, linewidth=2.8)
 ax.text(quarterly.index[-1], quarterly[focus].iloc[-1], "  " + " ".join(focus), color=HIGHLIGHT,
         va="center", fontweight="bold")
-ax.set_xlim(right=quarterly.index[-1] + pd.Timedelta(days=200))
+ax.set_xlim(right=quarterly.index[-1].to_pydatetime() + datetime.timedelta(days=200))
 ax.yaxis.set_major_formatter("{x:,.0f}")
 finish(ax, f"{focus[1]} in the {focus[0]} against the other eleven region–category lines",
        "Quarterly Sales, orders placed 2023–2025 (source monetary units)", ylabel="Sales")
 plt.show()
 ```
 
-    /var/folders/qr/z61dfxk90914kcsdy7jskgqr0000gn/T/ipykernel_52681/665101469.py:16: DeprecationWarning: The 'generic' unit for NumPy timedelta is deprecated, and will raise an error in the future. This includes implicit conversion of bare integers (e.g. `+ 1`). Please use a specific unit instead.
-      ax.set_xlim(right=quarterly.index[-1] + pd.Timedelta(days=200))
-
-
 
     
-![png](06_visualisation_principles_lab_files/06_visualisation_principles_lab_25_1.png)
+![png](06_visualisation_principles_lab_files/06_visualisation_principles_lab_25_0.png)
     
 
 

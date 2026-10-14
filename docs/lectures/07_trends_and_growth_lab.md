@@ -1,7 +1,7 @@
-# Session 7 lab (draft): Trends, returns and a decision dashboard
+# Session 7 lab: Trends, returns and a decision dashboard
 
 <p class="lead">
-Add time to your segment comparison, read growth figures without being fooled by the seasons, use the returns list carefully, and bring it all together in one dashboard with a recommendation.
+Add time to your segment comparison, read growth figures without being fooled by the seasons, use the returns list carefully, apply the same ideas to official construction spending, and bring it together in one dashboard with a recommendation.
 </p>
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Aayush181509/AnalyticsLecture/blob/main/notebooks/07_trends_and_growth_lab.ipynb)
@@ -18,30 +18,54 @@ The commercial lead asks:
 
 A single snapshot cannot answer this. A month can look like a crash or a boom simply because of the time of year.
 
+> **About the data**
+>
+> **Superstore** is a sample published by Tableau about a **fictitious** company. Sales are in the file's own **source monetary units**; the currency is not stated. A pattern over time shows *when* something happened, not *why*.
+>
+> **US construction spending** comes from the **U.S. Census Bureau**'s monthly Construction Spending survey (value of construction put in place), as mirrored in Tableau's sample-data catalog. Values are in **millions of US dollars of each month**, not adjusted for inflation.
+
+---
+
+## How this lab works
+
+| Part | What you do | Tasks |
+|---|---|---|
+| **Guided practice** | Follow along step by step, everyone together | G1–G6 |
+| **Independent tasks** | Same skills, new questions, on your own or in pairs | I1–I7 |
+| **Challenge** | Harder reasoning and debugging | C1–C2 |
+
+Each task has a level:
+
+- **Core**: everyone completes it; it is enough for your portfolio.
+- **Stretch**: for when you finish the core tasks early.
+- **Challenge**: optional, harder reasoning.
+
 ---
 
 ## What you will be able to do
 
-By the end of this lesson you will be able to:
-
-1. Build a monthly Sales trend and recognise seasonal patterns.
+1. Build a complete monthly series and recognise seasonal patterns.
 2. Calculate month-on-month and year-on-year growth, and explain when each is fair.
 3. Explain why a blank growth value means "no comparison", and why filtering too early creates blanks.
 4. Measure the share of orders on the returns list, and state what it cannot tell you.
-5. Combine three charts into one dashboard and write a recommendation for a test.
+5. Select one consistent series from an official statistics file and compare part-years fairly.
+6. Combine three charts into one dashboard and write a recommendation for a test.
 
-**Evidence you keep:** your dashboard, your growth and returns definitions, and a five-sentence recommendation. Together they are your **retail portfolio checkpoint**.
+**Evidence you keep:** your dashboard, your growth and returns definitions, your construction-spending chart with its series definition, and a five-sentence recommendation. Together they are your **retail portfolio checkpoint**.
 
 ---
 
 ## Before you start
 
-- Complete the [Session 5 lab](05_metrics_and_kpis_lab.md), where you built the segment KPI table.
+- Read the [Session 7 lecture](07_trends_and_growth_lecture.md).
+- Have your segment KPI table from the [Session 5 lab](05_metrics_and_kpis_lab.md) to hand.
 - Re-read [cherry-picked time windows](../foundations/misleading-statistics.md) and [storytelling with data](../foundations/storytelling.md).
 
-> **About the data**
->
-> Superstore is a **fictitious** sample. Sales are in the file's own **source monetary units**; the currency is not stated. Patterns in this lesson describe the sample, and a pattern over time shows *when* something happened, not *why*.
+---
+
+## Guided practice
+
+### G1 (Core): The monthly trend
 
 Run the setup cell, then load the table.
 
@@ -140,15 +164,9 @@ print("Rows (order lines):", len(df))
 print("Different orders:  ", df["order_id"].nunique())
 ```
 
-    Rows (order lines):
-
-     6815
+    Rows (order lines): 6815
     Different orders:   3388
 
-
----
-
-## Part 1: The monthly trend
 
 Every row has an `order_month` column: the **first day** of the month the order was placed. Grouping by it gives one Sales total per calendar month.
 
@@ -172,7 +190,7 @@ monthly.head(6)
 
 
 
-### Check that no month is missing
+#### Check that no month is missing
 
 Growth calculations compare a month with an earlier month. If a month were missing, the "previous" row would silently be the wrong month. So before anything else, build the full list of calendar months and compare.
 
@@ -211,7 +229,7 @@ plt.show()
     
 
 
-### One line per segment
+### G2 (Core): Segments and seasons
 
 `unstack()` turns the segment level into columns, so each segment becomes its own line.
 
@@ -232,9 +250,7 @@ plt.show()
     
 
 
-### Is there a seasonal pattern?
-
-Put the three years on top of each other: one line per year, with the month of the year along the bottom.
+Now put the three years on top of each other: one line per year, with the month of the year along the bottom.
 
 
 ```python
@@ -278,9 +294,7 @@ for year, sales in monthly.groupby(monthly.index.year):
 >
 > Write down three observations from the charts and the output above. Are the same months high every year? Are the same months low? Does the pattern look similar in every segment?
 
----
-
-## Part 2: Two kinds of growth
+### G3 (Core): Two kinds of growth
 
 | Growth type | Compares each month with | pandas |
 |---|---|---|
@@ -407,7 +421,7 @@ Read the output above row by row:
 3. Look at **March 2023**. A very large MoM figure often just means the previous month was small, not that something remarkable happened.
 4. Compare **January 2025** MoM with January 2025 YoY. Do they tell the same story?
 
-### Where are the blanks?
+#### Where are the blanks?
 
 `isna()` marks blanks as `True`; summing counts them. Here we count blanks in each year.
 
@@ -467,7 +481,7 @@ growth[["mom_growth", "yoy_growth"]].isna().groupby(growth.index.year).sum()
 >
 > A blank (`NaN`) means **"no comparison available"**. It is not 0% growth, and you must never fill it with 0. A table or chart that shows 0% for January 2023 is wrong.
 
-### See the difference on a chart
+#### See the difference on a chart
 
 
 ```python
@@ -488,20 +502,18 @@ plt.show()
 
 
     
-![png](07_trends_and_growth_lab_files/07_trends_and_growth_lab_22_0.png)
+![png](07_trends_and_growth_lab_files/07_trends_and_growth_lab_23_0.png)
     
 
 
-### Which one is fair?
+#### Which one is fair?
 
 | Growth type | Good for | Can mislead when |
 |---|---|---|
 | Month-on-month | Spotting sudden changes | The business is seasonal: January after a busy December always looks like a crash |
 | Year-on-year | Comparing like with like across seasons | A one-off event happened in the same month last year |
 
----
-
-## Part 3: Filtering can remove the comparison
+### G4 (Core): Filtering can remove the comparison
 
 Suppose you only care about 2025. There are two orders of work:
 
@@ -588,9 +600,7 @@ In the output above, filtering first leaves January 2025 with no row above it, s
 
 Filtering by **segment** or **region** is different: it changes *which* lines count, and it applies equally to both months being compared. That is fine, as long as you build the full 36-month series for that group and state the filter.
 
----
-
-## Part 4: The returns list
+### G5 (Core): The returns list
 
 From the Session 2 lab, `returned_order_flag` is 1 when an order appears on the source's **returns list**. It is an **order-level** flag: every line of a listed order has 1. So we count **distinct orders**, never lines.
 
@@ -685,9 +695,7 @@ The **All segments** row is calculated from the whole table, not by adding the s
 >
 > So call it *"share of orders on the returns list"*, not "return rate", and do not subtract anything from Sales because of it.
 
----
-
-## Part 5: Build the dashboard
+### G6 (Core): Build the dashboard
 
 In Python, a simple dashboard is **one figure with several charts** (called *subplots*). `plt.subplots(3, 1)` creates three charts stacked vertically; each one has its own `ax` to draw on.
 
@@ -751,7 +759,7 @@ draw_dashboard(df, "all regions")
 
 
     
-![png](07_trends_and_growth_lab_files/07_trends_and_growth_lab_28_0.png)
+![png](07_trends_and_growth_lab_files/07_trends_and_growth_lab_32_0.png)
     
 
 
@@ -819,7 +827,7 @@ draw_dashboard(df, "all regions")
 
 The table under the chart is the segment KPI table the function returned. The message titles were written after reading these charts on the full data; if you redraw for one region, check that each title is still true and change it if not.
 
-### Design checks
+#### Design checks
 
 Use what you learned in [Designing clear visuals](../foundations/visual-design.md):
 
@@ -831,9 +839,9 @@ Use what you learned in [Designing clear visuals](../foundations/visual-design.m
 
 ---
 
-## Part 6: Your turn
+## Independent tasks
 
-### 1. Redraw the dashboard for one region
+### I1 (Core): Redraw the dashboard for one region
 
 > **Your turn:** change the code in the next cell and run it again.
 
@@ -848,7 +856,7 @@ draw_dashboard(df[df["region"] == region], f"{region} region only")
 
 
     
-![png](07_trends_and_growth_lab_files/07_trends_and_growth_lab_31_0.png)
+![png](07_trends_and_growth_lab_files/07_trends_and_growth_lab_36_0.png)
     
 
 
@@ -914,7 +922,385 @@ draw_dashboard(df[df["region"] == region], f"{region} region only")
 
 
 
-### 2. One segment over three years
+### I2 (Core): Official construction spending — choose one series
+
+Official statistics files often hold **many series in one table**: totals and parts, adjusted and unadjusted, amounts and percentages. Adding everything up would mix incompatible measures. Your first job is to **select exactly one series** and say precisely what it is.
+
+Run the cell to download the file and check it is the version this course was written for.
+
+
+```python
+# U.S. Census Bureau, Construction Spending (value put in place), as mirrored in
+# Tableau's sample-data catalog. The file is read straight into memory; nothing is saved to disk.
+import hashlib
+import io
+import urllib.request
+
+CONS_URL = ("https://public.tableau.com/app/sample-data/"
+            "enigma-us.gov_.census.eits_.vip-97d8678900cbb89fee543a41aa21ab9a_2_0.csv")
+CONS_SHA256 = "6cf9ad9f20c8eeb2c5b33d9cc29b8c648579a52ff50a24d3f6f5f1ba332b8b34"
+
+cons_bytes = urllib.request.urlopen(CONS_URL).read()
+if hashlib.sha256(cons_bytes).hexdigest() != CONS_SHA256:
+    print("WARNING: this file has changed since the course was written. Tell your facilitator.")
+cons_raw = pd.read_csv(io.BytesIO(cons_bytes))
+print("Rows, columns:", cons_raw.shape)
+cons_raw.head(3)
+```
+
+    Rows, columns: (50208, 20)
+
+
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>per_idx</th>
+      <th>per_name</th>
+      <th>cat_idx</th>
+      <th>cat_code</th>
+      <th>cat_desc</th>
+      <th>cat_indent</th>
+      <th>dt_idx</th>
+      <th>dt_code</th>
+      <th>dt_desc</th>
+      <th>dt_unit</th>
+      <th>et_idx</th>
+      <th>et_code</th>
+      <th>et_desc</th>
+      <th>et_unit</th>
+      <th>geo_idx</th>
+      <th>geo_code</th>
+      <th>geo_desc</th>
+      <th>is_adj</th>
+      <th>val</th>
+      <th>serialid</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>2002-01-01</td>
+      <td>1</td>
+      <td>XXXX</td>
+      <td>Total Construction</td>
+      <td>0</td>
+      <td>1</td>
+      <td>T</td>
+      <td>Total Construction</td>
+      <td>MLN$</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1</td>
+      <td>US</td>
+      <td>U.S. Total</td>
+      <td>0</td>
+      <td>59,516.00</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>2002-01-01</td>
+      <td>2</td>
+      <td>00XX</td>
+      <td>Residential</td>
+      <td>0</td>
+      <td>1</td>
+      <td>T</td>
+      <td>Total Construction</td>
+      <td>MLN$</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1</td>
+      <td>US</td>
+      <td>U.S. Total</td>
+      <td>0</td>
+      <td>25,972.00</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1</td>
+      <td>2002-01-01</td>
+      <td>3</td>
+      <td>NRXX</td>
+      <td>Nonresidential</td>
+      <td>0</td>
+      <td>1</td>
+      <td>T</td>
+      <td>Total Construction</td>
+      <td>MLN$</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1</td>
+      <td>US</td>
+      <td>U.S. Total</td>
+      <td>0</td>
+      <td>33,545.00</td>
+      <td>3</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+Each row is **one value of one series in one month**. The columns that pick out a series are:
+
+| Column | Meaning | Value we want |
+|---|---|---|
+| `cat_code` | Category of construction | `XXXX` = Total construction |
+| `dt_code` | Data type | `T` = Total (private + public) |
+| `et_idx` | Estimate or its error measure | `0` = the estimate itself |
+| `geo_code` | Geography | `US` |
+| `is_adj` | Seasonally adjusted? | `0` = not adjusted (actual monthly amounts) |
+
+First look at how many different categories and units the file mixes:
+
+
+```python
+print("Category codes:", cons_raw["cat_code"].nunique())
+print("Units:", cons_raw["dt_unit"].unique())
+print("Rows with no value:", cons_raw["val"].isna().sum(), "of", len(cons_raw))
+cons_raw[cons_raw["cat_code"].isin(["XXXX", "AXXXX"])].groupby(
+    ["cat_code", "cat_desc", "is_adj", "dt_unit"])["val"].count()
+```
+
+    Category codes: 38
+    Units: ['MLN$' 'PCT' nan]
+    Rows with no value: 33216 of 50208
+
+
+
+
+
+    cat_code  cat_desc                            is_adj  dt_unit
+    AXXXX     Annual Rate for Total Construction  1       MLN$       531
+    XXXX      Total Construction                  0       MLN$       531
+                                                  1       PCT          0
+    Name: val, dtype: int64
+
+
+
+Now apply all five conditions, and check the result before using it: one row per month, one unit, no blanks, no gaps in the calendar.
+
+
+```python
+selected = cons_raw[
+    (cons_raw["cat_code"] == "XXXX")
+    & (cons_raw["dt_code"] == "T")
+    & (cons_raw["et_idx"] == 0)
+    & (cons_raw["geo_code"] == "US")
+    & (cons_raw["is_adj"] == 0)
+].copy()
+selected["month"] = pd.to_datetime(selected["per_name"])
+
+print("Rows:", len(selected), "| distinct months:", selected["month"].nunique())
+print("Units:", selected["dt_unit"].unique(), "| blank values:", selected["val"].isna().sum())
+
+spend = selected.set_index("month")["val"].sort_index()
+calendar = pd.date_range(spend.index.min(), spend.index.max(), freq="MS")
+print("First month:", spend.index.min().date(), "| last month:", spend.index.max().date(),
+      "| missing months:", len(calendar.difference(spend.index)))
+spend = spend.reindex(calendar)
+```
+
+    Rows: 177 | distinct months: 177
+    Units: ['MLN$'] | blank values: 0
+    First month: 2002-01-01 | last month: 2016-09-01 | missing months: 0
+
+
+> **Write your series definition**
+>
+> Complete this sentence in your evidence log: *"US total construction spending (value put in place), all owners, not seasonally adjusted, millions of US dollars, monthly from ___ to ___; U.S. Census Bureau via Tableau's sample-data catalog."*
+
+Plot the series and a year-overlay. Fifteen years on one chart is a lot of lines, so (as in Session 6) we draw the older years in grey and **highlight** the two most recent.
+
+> **Your turn:** change the code in the next cell and run it again.
+
+
+```python
+# 1. Run the cell and describe the long-run trend in one sentence. When did it turn?
+# 2. In the overlay, which months are high and which are low every year?
+# 3. Change the two highlighted years, for example to 2008 and 2009. What changed?
+highlight = {2015: "#2a78d6", 2016: "#eb6834"}
+
+fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(11, 3.8))
+ax1.plot(spend.index, spend / 1000, color="#2a78d6")
+ax1.set_title("US construction spending, monthly")
+ax1.set_ylabel("Billions of US dollars (not adjusted)")
+
+table = pd.DataFrame({"year": spend.index.year, "month": spend.index.month, "value": spend.values / 1000})
+by_year = table.pivot(index="month", columns="year", values="value")
+for year in by_year.columns:
+    if year not in highlight:
+        ax2.plot(by_year.index, by_year[year], color="#d4d2cc", linewidth=1)
+for year, colour in highlight.items():
+    ax2.plot(by_year.index, by_year[year], color=colour, linewidth=2.5, label=str(year))
+ax2.set_title("Same months, every year (grey = other years)")
+ax2.set_xlabel("Month of the year")
+ax2.set_xticks(range(1, 13))
+ax2.legend()
+fig.tight_layout()
+plt.show()
+```
+
+
+    
+![png](07_trends_and_growth_lab_files/07_trends_and_growth_lab_45_0.png)
+    
+
+
+> **Check the last year**
+>
+> Look at where the 2016 line stops. How many months of 2016 are in the file? Keep that in mind for the next task.
+
+### I3 (Core): Construction — fair growth comparisons
+
+Compute YoY growth on the **complete** monthly series, then compare years using only the months every year has.
+
+> **Your turn:** change the code in the next cell and run it again.
+
+
+```python
+# 1. Run the cell. In which years was YoY growth negative for most months?
+# 2. Read the year-to-date table: which months does it cover, and why not the full year?
+# 3. Change last_month to 6 (January–June). Does the ranking of 2015 vs 2016 change?
+yoy = spend.pct_change(periods=12, fill_method=None)
+
+fig, ax = plt.subplots()
+ax.bar(yoy.index, yoy * 100, width=25, color=["#2a78d6" if v >= 0 else "#eb6834" for v in yoy.fillna(0)])
+ax.axhline(0, color="black", linewidth=0.8)
+ax.set_title("Year-on-year growth of monthly construction spending (2002 has no comparison)")
+ax.set_xlabel("Month")
+ax.set_ylabel("YoY growth (%)")
+plt.show()
+
+last_month = 9
+ytd = spend[spend.index.month <= last_month]
+ytd_by_year = ytd.groupby(ytd.index.year).agg(months="count", total="sum")
+ytd_by_year["YoY"] = ytd_by_year["total"].pct_change().map("{:+.1%}".format)
+ytd_by_year["total"] = (ytd_by_year["total"] / 1000).round(1)
+ytd_by_year.rename(columns={"total": f"Jan–month {last_month} total ($bn)"}).tail(6)
+```
+
+
+    
+![png](07_trends_and_growth_lab_files/07_trends_and_growth_lab_48_0.png)
+    
+
+
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>months</th>
+      <th>Jan–month 9 total ($bn)</th>
+      <th>YoY</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2011</th>
+      <td>9</td>
+      <td>583.80</td>
+      <td>-4.0%</td>
+    </tr>
+    <tr>
+      <th>2012</th>
+      <td>9</td>
+      <td>631.10</td>
+      <td>+8.1%</td>
+    </tr>
+    <tr>
+      <th>2013</th>
+      <td>9</td>
+      <td>666.20</td>
+      <td>+5.6%</td>
+    </tr>
+    <tr>
+      <th>2014</th>
+      <td>9</td>
+      <td>744.30</td>
+      <td>+11.7%</td>
+    </tr>
+    <tr>
+      <th>2015</th>
+      <td>9</td>
+      <td>826.80</td>
+      <td>+11.1%</td>
+    </tr>
+    <tr>
+      <th>2016</th>
+      <td>9</td>
+      <td>863.20</td>
+      <td>+4.4%</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+Write two sentences: one on the long-run trend, one comparing the latest part-year with the same months a year earlier. Name the months you compared.
+
+### I4 (Core): Recommend a test
+
+Write **five sentences** to the commercial lead:
+
+1. **The test:** one specific change to try, in one segment.
+2. **Evidence:** one measure from the trend or growth views.
+3. **Evidence:** one measure from the segment table, including the returns-list share.
+4. **Limitation:** for example, the trend shows *when* sales change, not *why*; the returns list has no refund amounts; the data is a fictitious sample.
+5. **How to measure success:** the measure and comparison you would use to judge the test, such as YoY Sales for the same months, or the same months in a similar group that did not get the change.
+
+> **Why a test?**
+>
+> Past data shows patterns, not causes. A segment growing at the same time as something else happened is an **association**, not proof that one caused the other. A small, well-measured test, compared fairly with the same months last year or with an untouched group, is how you find out whether a change actually works.
+
+### I5 (Stretch): One segment over three years
 
 This code adds up Sales by quarter for one segment and puts the years side by side, so you compare the **same quarter** across years.
 
@@ -996,7 +1382,7 @@ quarterly
 
 
 
-### 3. Growth for one segment
+### I6 (Stretch): Growth for one segment
 
 Change the segment and the months. Remember: build the full series for the segment first, then pick the months to show.
 
@@ -1066,9 +1452,54 @@ growth_table(seg_growth, ["2024-12-01", "2025-01-01", "2025-06-01"])
 
 
 
+### I7 (Stretch): Adjusted versus not adjusted, and a rolling average
+
+The file also holds the **seasonally adjusted annual rate** for total construction (`cat_code` `AXXXX`, `is_adj` 1). It is a different measure: adjusted for the seasons **and** scaled up to a full year. Dividing it by 12 puts it on a monthly scale so it can share a chart with the actual amounts. It must never be added to them.
+
+> **Your turn:** change the code in the next cell and run it again.
+
+
+```python
+# 1. Run the cell. Which line shows the turning points most clearly?
+# 2. Why do the trailing 12-month average and the adjusted line not match exactly in time?
+# 3. Change window to 3. What happens to the seasonal wiggles?
+saar = cons_raw[
+    (cons_raw["cat_code"] == "AXXXX") & (cons_raw["dt_code"] == "T")
+    & (cons_raw["et_idx"] == 0) & (cons_raw["geo_code"] == "US") & (cons_raw["is_adj"] == 1)
+].assign(month=lambda d: pd.to_datetime(d["per_name"])).set_index("month")["val"].sort_index()
+print("Adjusted annual-rate rows:", len(saar), "| same months as the actual series:",
+      saar.index.equals(spend.index))
+
+window = 12
+ax = (spend / 1000).plot(color="#b8b6b0", label="Actual monthly (not adjusted)")
+(saar / 12 / 1000).plot(ax=ax, color="#eb6834", linewidth=2, label="Adjusted annual rate ÷ 12")
+(spend.rolling(window).mean() / 1000).plot(ax=ax, color="#2a78d6", linewidth=2,
+                                           label=f"Trailing {window}-month average of actual")
+ax.set_title("Three views of the same spending")
+ax.set_xlabel("Month")
+ax.set_ylabel("Billions of US dollars per month")
+ax.legend(fontsize=8)
+plt.show()
+```
+
+    Adjusted annual-rate rows: 177 | same months as the actual series: True
+
+
+
+    
+![png](07_trends_and_growth_lab_files/07_trends_and_growth_lab_57_1.png)
+    
+
+
+> **Do not mix them**
+>
+> The actual monthly amounts can be added up within a period. The annual-rate values cannot: each one already describes a whole year. Never add Total to its parts either (for example Total plus Residential).
+
 ---
 
-## Part 7: Debugging challenge
+## Challenge
+
+### C1 (Challenge): The "75% crash"
 
 A colleague posts this in a team chat:
 
@@ -1105,31 +1536,50 @@ Use the output above, and the seasonal chart from Part 1, to answer:
 >
 > Look at what happened every January in the seasonal chart, not just in 2025. Then go back to Part 3.
 
----
+### C2 (Challenge): "2016 was the weakest year in a decade"
 
-## Part 8: Recommend a test
+Another colleague adds up construction spending by calendar year and posts:
 
-Write **five sentences** to the commercial lead:
+> *"Construction spending in 2016 was the lowest yearly total since 2012. The boom is over."*
 
-1. **The test:** one specific change to try, in one segment.
-2. **Evidence:** one measure from the trend or growth views.
-3. **Evidence:** one measure from the segment table, including the returns-list share.
-4. **Limitation:** for example, the trend shows *when* sales change, not *why*; the returns list has no refund amounts; the data is a fictitious sample.
-5. **How to measure success:** the measure and comparison you would use to judge the test, such as YoY Sales for the same months, or the same months in a similar group that did not get the change.
+> **Your turn:** change the code in the next cell and run it again.
 
-> **Why a test?**
+
+```python
+# The colleague's code. It runs, but the comparison is unfair.
+# 1. Find what is wrong with the 2016 figure.
+# 2. Fix the comparison so every year covers the same months.
+# 3. Rewrite the colleague's sentence so it is accurate, naming the months compared.
+yearly = spend.groupby(spend.index.year).sum() / 1000
+print("Yearly totals ($bn), the colleague's version:")
+print(yearly.tail(6).round(1))
+```
+
+    Yearly totals ($bn), the colleague's version:
+    2011     788.30
+    2012     850.50
+    2013     906.40
+    2014   1,005.60
+    2015   1,112.40
+    2016     863.20
+    Name: val, dtype: float64
+
+
+> **Hint**
 >
-> Past data shows patterns, not causes. A segment growing at the same time as something else happened is an **association**, not proof that one caused the other. A small, well-measured test, compared fairly with the same months last year or with an untouched group, is how you find out whether a change actually works.
+> Count the months behind each total. Then go back to I3.
 
 ---
 
 ## Validation checklist
 
-- [ ] The monthly series has all 36 months, Jan 2023 to Dec 2025, with no gaps.
+- [ ] The Superstore monthly series has all 36 months, Jan 2023 to Dec 2025, with no gaps.
 - [ ] Growth was computed on the complete series **before** filtering to a period.
 - [ ] Blanks appear only where no comparison exists, and are never shown as 0%.
 - [ ] Returns are counted as **distinct orders**, not lines, and called "share of orders on the returns list".
 - [ ] Segment order counts add up to the all-segments total.
+- [ ] The construction series is exactly one series (category, data type, estimate, geography, adjustment), with one row per month and its units stated.
+- [ ] Part-years are compared only with the same months of earlier years.
 - [ ] Every chart has a message title, labelled axes with units, and the dashboard has a scope note.
 
 ---
@@ -1139,9 +1589,26 @@ Write **five sentences** to the commercial lead:
 1. Why can month-on-month growth mislead for a seasonal business?
 2. Why does filtering to one year before computing growth create blanks?
 3. What is one thing the returns list cannot tell you?
-4. What would you measure to judge whether your proposed test worked?
+4. Why can you not compare the 2016 construction total with the 2015 total directly?
+5. What would you measure to judge whether your proposed test worked?
 
-## After the lesson
+---
 
-- Save your dashboard image (right-click the chart in Colab and save it) and your five-sentence recommendation. Together they form your **retail portfolio checkpoint**.
-- Record in your evidence log: the data version, any filters you used and your growth and returns definitions.
+## Evidence to keep
+
+- [ ] Monthly trend and seasonal overlay with three observations (G1–G2)
+- [ ] Growth definitions (MoM, YoY) and the "blank is not zero" rule (G3–G4)
+- [ ] Returns-list share by segment with its limitations (G5)
+- [ ] Dashboard image, all regions or one region (G6 or I1)
+- [ ] Construction series definition, chart and fair part-year comparison (I2–I3)
+- [ ] Five-sentence test recommendation (I4)
+- [ ] Corrected colleague messages (C1, C2, if attempted)
+
+Save your dashboard image (right-click the chart in Colab and save it). Record in your evidence log the data versions, any filters you used, and your growth and returns definitions.
+
+---
+
+## After the lab
+
+- Previous: [Session 7 lecture](07_trends_and_growth_lecture.md).
+- Next: Session 8, correlation and regression.

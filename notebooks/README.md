@@ -14,10 +14,12 @@ Every session has a **lecture** notebook (theory, demonstrations, check-your-und
 | `03_cleaning_and_preparing_lab.ipynb` | Session 3 lab: Clean it, check it, log it |
 | `04_descriptive_statistics_lecture.ipynb` | Session 4 lecture: Descriptive statistics and distributions |
 | `04_descriptive_statistics_lab.ipynb` | Session 4 lab: What does a typical order look like? |
-| `05_metrics_and_kpis_lab.ipynb` | Session 5 lab (draft, lecture to come): Which segment deserves a closer look? |
+| `05_metrics_and_kpis_lecture.ipynb` | Session 5 lecture: Metrics and KPIs |
+| `05_metrics_and_kpis_lab.ipynb` | Session 5 lab: Which segment deserves a closer look? |
 | `06_visualisation_principles_lecture.ipynb` | Session 6 lecture: Visualisation principles |
 | `06_visualisation_principles_lab.ipynb` | Session 6 lab: From default charts to decision charts |
-| `07_trends_and_growth_lab.ipynb` | Session 7 lab (draft, lecture to come): Trends, returns and a decision dashboard |
+| `07_trends_and_growth_lecture.ipynb` | Session 7 lecture: Time series and trends |
+| `07_trends_and_growth_lab.ipynb` | Session 7 lab: Trends, returns and a decision dashboard |
 
 ## Workflow
 

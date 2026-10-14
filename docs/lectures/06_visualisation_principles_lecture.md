@@ -646,6 +646,7 @@ Now decide what the chart is **about**. Here: the sub-category whose yearly Sale
 
 
 ```python
+import datetime
 yearly = df.groupby([df["order_date"].dt.year, "sub_category"])["sales"].sum().unstack()
 growth = (yearly.iloc[-1] - yearly.iloc[0]).sort_values()
 focus = growth.index[-1]
@@ -657,7 +658,7 @@ for name in by_quarter.columns:
 ax.plot(by_quarter.index, by_quarter[focus], color=ORANGE, linewidth=2.8)
 ax.text(by_quarter.index[-1], by_quarter[focus].iloc[-1], f"  {focus}", color=ORANGE,
         va="center", fontweight="bold")
-ax.set_xlim(right=by_quarter.index[-1] + pd.Timedelta(days=200))
+ax.set_xlim(right=by_quarter.index[-1].to_pydatetime() + datetime.timedelta(days=200))
 ax.set_title(f"{focus} added more Sales than any other sub-category, {yearly.index[0]} to {yearly.index[-1]}", pad=22)
 ax.text(0, 1.02, "Quarterly Sales; grey lines are the other sub-categories",
         transform=ax.transAxes, fontsize=9, color=INK)
@@ -668,13 +669,9 @@ plt.show()
 print(f"{focus} yearly Sales, {yearly.index[0]}: {yearly[focus].iloc[0]:,.0f} | {yearly.index[-1]}: {yearly[focus].iloc[-1]:,.0f}")
 ```
 
-    /var/folders/qr/z61dfxk90914kcsdy7jskgqr0000gn/T/ipykernel_52694/3374556044.py:12: DeprecationWarning: The 'generic' unit for NumPy timedelta is deprecated, and will raise an error in the future. This includes implicit conversion of bare integers (e.g. `+ 1`). Please use a specific unit instead.
-      ax.set_xlim(right=by_quarter.index[-1] + pd.Timedelta(days=200))
-
-
 
     
-![png](06_visualisation_principles_lecture_files/06_visualisation_principles_lecture_30_1.png)
+![png](06_visualisation_principles_lecture_files/06_visualisation_principles_lecture_30_0.png)
     
 
 
@@ -769,6 +766,7 @@ Same data, opposite impressions, and the crossing point of the two lines means n
 
 
 ```python
+import datetime
 indexed = pd.DataFrame({
     "Website visits": visits / visits.iloc[0] * 100,
     "Revenue": revenue / revenue.iloc[0] * 100,
@@ -780,7 +778,7 @@ ax.plot(indexed.index, indexed["Revenue"], color=ORANGE, linewidth=2)
 ax.axhline(100, color=INK, linewidth=0.8)
 for name, colour in [("Website visits", BLUE), ("Revenue", ORANGE)]:
     ax.text(indexed.index[-1], indexed[name].iloc[-1], f"  {name}", color=colour, va="center")
-ax.set_xlim(right=indexed.index[-1] + pd.Timedelta(days=150))
+ax.set_xlim(right=indexed.index[-1].to_pydatetime() + datetime.timedelta(days=150))
 growth_v = indexed["Website visits"].iloc[-1] - 100
 growth_r = indexed["Revenue"].iloc[-1] - 100
 ax.set_title(f"Visits grew {growth_v:.0f}% and revenue {growth_r:.0f}% over two years", pad=22)
@@ -788,13 +786,9 @@ ax.text(0, 1.02, "Index, January 2024 = 100 (made-up data)", transform=ax.transA
 plt.show()
 ```
 
-    /var/folders/qr/z61dfxk90914kcsdy7jskgqr0000gn/T/ipykernel_52694/1324167377.py:12: DeprecationWarning: The 'generic' unit for NumPy timedelta is deprecated, and will raise an error in the future. This includes implicit conversion of bare integers (e.g. `+ 1`). Please use a specific unit instead.
-      ax.set_xlim(right=indexed.index[-1] + pd.Timedelta(days=150))
-
-
 
     
-![png](06_visualisation_principles_lecture_files/06_visualisation_principles_lecture_36_1.png)
+![png](06_visualisation_principles_lecture_files/06_visualisation_principles_lecture_36_0.png)
     
 
 

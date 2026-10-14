@@ -79,9 +79,9 @@ Each session needs: lecture notebook, lab notebook (core / stretch / challenge),
 | S-02 | Data, grain and the DataFrame | PY01 | REVIEW | `02_data_and_grain_lecture/lab.ipynb` + `instructor/sessions/02/answers.md` built, executed and data-checked 2026-10-14; old Lessons 1–2 merged into the lab; needs independent review and a Colab trial |
 | S-03 | Cleaning and preparing data | S01 audit | REVIEW | `03_cleaning_and_preparing_lecture/lab.ipynb` + answers built 2026-10-14; World Cup and Mobile OS downloaded in-notebook from Tableau catalog with SHA-256 (no bundling); new quirks found: City trailing spaces, 73 `ï¿½` rows, Iran/IR Iran, empty-text Observation, mixed WorldCups Attendance types |
 | S-04 | Descriptive statistics and distributions | S-02 | REVIEW | `04_descriptive_statistics_lecture/lab.ipynb` + answers built 2026-10-14; home sales series SOLD/US/unadjusted MEDIAN vs AVERAG, 1975-01–2016-10, downloaded in-notebook with SHA-256 |
-| S-05 | Metrics and KPIs | S-02 | IN PROGRESS | Draft lab renamed `05_metrics_and_kpis_lab.ipynb`; lecture + Berkeley task + metric-contract exercise |
+| S-05 | Metrics and KPIs | S-02 | REVIEW | `05_metrics_and_kpis_lecture.ipynb` new, lab restructured (Berkeley, metric contract, Simpson within West/Technology), answers in `instructor/sessions/05/` — 2026-10-14 |
 | S-06 | Visualisation principles | S-04 | REVIEW | `06_visualisation_principles_lecture/lab.ipynb` + answers built 2026-10-14; before/after demos for every principle |
-| S-07 | Time series and trends | S-05 | IN PROGRESS | Draft lab renamed `07_trends_and_growth_lab.ipynb`; lecture + construction-spending task (US/XXXX/T series) |
+| S-07 | Time series and trends | S-05 | REVIEW | `07_trends_and_growth_lecture.ipynb` new, lab restructured with construction spending (XXXX/T/US, not adjusted, 2002-01–2016-09, downloaded with SHA-256), answers in `instructor/sessions/07/` — 2026-10-14 |
 | S-08 | Correlation and regression | S-04, D08 | PLANNED | Needs synthetic marketing spend/revenue data |
 | S-09 | Sampling, uncertainty and experiments | S-04, D08 | PLANNED | Needs synthetic A/B dataset (D08) |
 | S-10 | Finance case | D04 | PLANNED | |
@@ -91,7 +91,7 @@ Each session needs: lecture notebook, lab notebook (core / stretch / challenge),
 | S-14 | Dashboards and storytelling | S-07 | PLANNED | |
 | S-15 | Capstone studio | S-10–S-13 | PLANNED | |
 | S-16 | Executive briefings | S-15, R01 | PLANNED | Presentation format depends on class size |
-| D08 | Synthetic A/B test and marketing spend data | D01 pattern | PLANNED | Seeded generator, contract and hand checks; feeds S-08, S-09, S-12 |
+| D08 | Synthetic A/B test and marketing spend data | D01 pattern | DONE (local) | `data/synthetic/marketing-v1/` from `scripts/generate_marketing.py` (seed 20251001, numpy 2.5.4), validated by `scripts/validate_marketing.py`; private key in `instructor/solutions/marketing-v1/`. Notebooks should load it from a commit-pinned raw GitHub URL with SHA-256 after push |
 | T-01–T-04 | Tableau section | S-14 | DEFERRED | From the Tableau drafts |
 
-Sessions 1 and 2 built 2026-10-14 (REVIEW). The superseded notebooks 00–02 and old generated pages 00–04 were deleted with user approval. Sessions 3, 4 and 6 built 2026-10-14 (REVIEW). Next: (1) independent review + Colab trial of Sessions 1–4 and 6; (2) Session 5 and 7 lectures; (3) D08 for Sessions 8, 9, 12.
+Sessions 1 and 2 built 2026-10-14 (REVIEW). The superseded notebooks 00–02 and old generated pages 00–04 were deleted with user approval. Sessions 3, 4 and 6 built 2026-10-14 (REVIEW). Sessions 5 and 7 completed and D08 built 2026-10-14. Next: (1) independent review + Colab trial of Sessions 1–7; (2) Sessions 8 and 9 (use D08); (3) D04–D07 case data for Sessions 10–13.

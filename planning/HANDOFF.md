@@ -8,7 +8,11 @@ The user requests Claude takeover next. Read [AGENTS.md](../AGENTS.md) → [PROJ
 
 Learner site keeps the Read the Docs theme (user preference after a brief Material trial, DEC-036) plus `docs/stylesheets/readability.css`; all six pages were restructured for readability (DEC-034, DOC01). Write every new learner page in that style: lead sentence, `---` breaks, short paragraphs, numbered steps, tables or `###` subsections, note/tip/hint/warning admonitions. No Material-only syntax. User approved the rendered result. Preview with `/tmp/kings-data-docs-venv/bin/python -m mkdocs serve` (reinstall from requirements.txt if the venv is gone). D03 Tableau checks remain open because this session had no desktop-app control (DEC-035).
 
-## Sessions 1–4 and 6 built — 2026-10-14 (read this first)
+## Sessions 1–7 built, D08 ready — 2026-10-14 (read this first)
+
+Sessions 1–7 each have lecture + lab notebooks, quiz and private answers. D08 synthetic marketing data exists for Sessions 8, 9 and 12. Next: Sessions 8 and 9, then case data D04–D07.
+
+## Sessions 1–4 and 6 built — 2026-10-14
 
 Sessions 3, 4 and 6 added the same day (see STATUS). Remaining Python sessions: 5 and 7 lectures (labs exist as drafts), 8–16. D08 blocks 8, 9, 12.
 

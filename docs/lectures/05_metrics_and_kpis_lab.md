@@ -1,7 +1,7 @@
-# Session 5 lab (draft): Which segment deserves a closer look?
+# Session 5 lab: Which segment deserves a closer look?
 
 <p class="lead">
-Compare the three customer segments using five measures, calculate each one correctly, check that the numbers add up, and make a careful recommendation.
+Compare the three customer segments using five measures, calculate each one correctly, check that the numbers add up, write a metric contract, and make a careful recommendation.
 </p>
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Aayush181509/AnalyticsLecture/blob/main/notebooks/05_metrics_and_kpis_lab.ipynb)
@@ -16,11 +16,29 @@ The retail head has one analyst free next month and asks:
 
 > *"Which customer segment should we investigate first, and what should we check before we change any promotions?"*
 
-A big Sales total alone is not enough to decide. A segment can sell a lot and still earn little profit, or have many small orders. In this lesson you build a fair comparison.
+A big Sales total alone is not enough to decide. A segment can sell a lot and still earn little profit, or have many small orders. In this lab you build a fair comparison.
 
 > **About the data**
 >
 > The Superstore sample describes a **fictitious** company. Sales and Profit are in **source monetary units**: the currency is not stated, so never add a currency symbol. The source does not explain how Profit is calculated, so we say **profit ratio**, never "margin".
+>
+> The **Berkeley admissions** counts are the published figures for the six largest departments in 1973 (Bickel, Hammel and O'Connell, 1975, *Science*).
+
+---
+
+## How this lab works
+
+| Part | What you do | Tasks |
+|---|---|---|
+| **Guided practice** | Follow along step by step, everyone together | G1–G5 |
+| **Independent tasks** | Same skills, new questions, on your own or in pairs | I1–I7 |
+| **Challenge** | Harder reasoning and debugging | C1–C2 |
+
+Each task has a level:
+
+- **Core**: everyone completes it; it is enough for your portfolio.
+- **Stretch**: for when you finish the core tasks early.
+- **Challenge**: optional, harder reasoning.
 
 ---
 
@@ -31,15 +49,18 @@ A big Sales total alone is not enough to decide. A segment can sell a lot and st
 3. Calculate ratios **from totals**, not by averaging other ratios.
 4. Check that segment results reconcile with the overall total.
 5. Explain how a filter changes every measure.
-6. Write a short, evidence-based recommendation with one limitation.
+6. Write a metric contract and explain Simpson's paradox with real data.
+7. Write a short, evidence-based recommendation with one limitation.
 
-**Evidence you keep:** a segment KPI table, your metric definitions, a validation checklist and a five-sentence recommendation.
+**Evidence you keep:** a segment KPI table, a metric contract, a validation checklist, a Berkeley explanation and a five-sentence recommendation.
 
-Before you start, complete the [Session 2 lab](02_data_and_grain_lab.md) and have your grain statement and evidence log ready. Re-read the [averages and percentages traps](../foundations/misleading-statistics.md) in Foundations.
+Before you start, read the [Session 5 lecture](05_metrics_and_kpis_lecture.md) and have your grain statement from the [Session 2 lab](02_data_and_grain_lab.md) ready.
 
 ---
 
-## Part 1: Agree the measures
+## Guided practice
+
+### G1 (Core): Agree the measures
 
 Every measure uses the **same rows**: all order lines in the table, unless you deliberately apply a filter.
 
@@ -53,22 +74,18 @@ Every measure uses the **same rows**: all order lines in the table, unless you d
 
 > **Totals first, then divide**
 >
-> AOV and Profit ratio are always calculated from the **totals** of whatever you are looking at. Never average the ratios of individual rows or of segments. You will see why in Part 6.
+> AOV and Profit ratio are always calculated from the **totals** of whatever you are looking at. Never average the ratios of individual rows or of segments. You will see why in C1.
 
 > **When there is nothing to divide by**
 >
 > If a filter leaves no orders or no Sales, the ratio is **not available**. pandas shows this as `NaN` ("not a number"). Read it as *"not available"*, never as 0%.
 
-### Predict first
+#### Predict first
 
 Before you run the next cells, write down your answers:
 
 1. Will AOV be larger or smaller than Sales divided by the number of **rows**? Why?
 2. Can Profit ratio be negative? When?
-
----
-
-## Part 2: The five measures for the whole table
 
 Run the setup cell, then load the table.
 
@@ -169,7 +186,9 @@ print("Order lines (rows):", len(df))
     Order lines (rows): 6815
 
 
-Now calculate the five measures. Read each line: it matches one row of the table in Part 1.
+### G2 (Core): The five measures for the whole table
+
+Read each line: it matches one row of the table in G1.
 
 
 ```python
@@ -202,9 +221,9 @@ print("Profit ratio (%):", round(profit_ratio * 100, 1))
 
 ---
 
-## Part 3: The segment KPI table
+### G3 (Core): The segment KPI table
 
-### Step 1: totals for each segment
+#### Step 1: totals for each segment
 
 In the Session 1 lab you used `groupby` with one sum. `.agg` lets you calculate several totals at once. Each line inside reads as **new column name = (column to use, how to summarise it)**.
 
@@ -275,7 +294,7 @@ segment_kpis
 
 
 
-### Step 2: the two ratios, from each segment's totals
+#### Step 2: the two ratios, from each segment's totals
 
 
 ```python
@@ -351,9 +370,9 @@ segment_kpis
 
 
 
-### Step 3: add an overall row
+#### Step 3: add an overall row
 
-The overall row uses the totals from Part 2. Its AOV and profit ratio are **recalculated from totals**, not added up or averaged from the rows above.
+The overall row uses the totals from G2. Its AOV and profit ratio are **recalculated from totals**, not added up or averaged from the rows above.
 
 
 ```python
@@ -438,11 +457,11 @@ segment_kpis.round(2)
 
 
 
-The second line keeps `orders` as whole numbers. The third line puts the columns in the same order as the table in Part 1.
+The second line keeps `orders` as whole numbers. The third line puts the columns in the same order as the table in G1.
 
 Give the table a clear title in your evidence log, for example *"Segment comparison, orders placed 2023–2025 (source monetary units)"*.
 
-### A picture of the profit ratio
+#### A picture of the profit ratio
 
 The dashed line is the overall profit ratio from the **All** row.
 
@@ -472,7 +491,7 @@ plt.show()
 
 ---
 
-## Part 4: Check that it reconciles
+### G4 (Core): Check that it reconciles
 
 A table you cannot reconcile is a table you cannot trust. `by_segment` is the table without the **All** row.
 
@@ -513,7 +532,7 @@ Tick each check in your evidence log:
 
 ---
 
-## Part 5: Independent work
+### G5 (Core): Package the steps as a function
 
 Building the table step by step takes several cells. To repeat it quickly on filtered data, we package the same steps as a **function**: a named recipe you can reuse. You do not need to write functions yet; just read it and see that each line matches a step above.
 
@@ -611,9 +630,13 @@ kpi_table(df, "segment")
 
 
 
-It gives the same table as Part 3. The `.replace(0, float("nan"))` parts make a zero denominator show `NaN` (*not available*) instead of a misleading number.
+It gives the same table as G3. The `.replace(0, float("nan"))` parts make a zero denominator show `NaN` (*not available*) instead of a misleading number.
 
-### A. Filter by region
+---
+
+## Independent tasks
+
+### I1 (Core): Filter by region
 
 1. Run the cell below for the West region.
 2. Change `"West"` to `"East"`, `"Central"` or `"South"` and run it again.
@@ -707,7 +730,331 @@ kpi_table(selected, "segment")
 >
 > The filter removes rows **before** anything is added up. So Sales, Orders, Profit and both ratios all describe the filtered rows only, including the **All** row.
 
-### B. Look inside one category
+---
+
+### I2 (Core): Write a metric contract
+
+A metric contract removes every choice an analyst could make differently (see Part 2 of the lecture). The cell below holds a contract for **Profit ratio** with three fields left for you to complete.
+
+1. Replace each `"???"` with your own wording.
+2. Run the cell to see the contract as a table.
+3. Run the next cell: it calculates the measure **only from the contract's choices** and compares it with your KPI table. They must match.
+
+> **Your turn:** change the code in the next cell and run it again.
+
+
+```python
+profit_ratio_contract = {
+    "name": "Profit ratio",
+    "purpose": "Compare how much profit each segment keeps per unit of Sales",
+    "grain": "One order line",
+    "numerator": "Sum of profit",
+    "denominator": "???",
+    "scope": "???",
+    "zero_rule": "???",
+    "unit": "Percent of Sales, 1 decimal",
+    "owner": "Retail analytics lead",
+}
+pd.Series(profit_ratio_contract, name="definition").to_frame()
+```
+
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>definition</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>name</th>
+      <td>Profit ratio</td>
+    </tr>
+    <tr>
+      <th>purpose</th>
+      <td>Compare how much profit each segment keeps per...</td>
+    </tr>
+    <tr>
+      <th>grain</th>
+      <td>One order line</td>
+    </tr>
+    <tr>
+      <th>numerator</th>
+      <td>Sum of profit</td>
+    </tr>
+    <tr>
+      <th>denominator</th>
+      <td>???</td>
+    </tr>
+    <tr>
+      <th>scope</th>
+      <td>???</td>
+    </tr>
+    <tr>
+      <th>zero_rule</th>
+      <td>???</td>
+    </tr>
+    <tr>
+      <th>unit</th>
+      <td>Percent of Sales, 1 decimal</td>
+    </tr>
+    <tr>
+      <th>owner</th>
+      <td>Retail analytics lead</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+
+```python
+# Calculate the profit ratio for each segment exactly as the contract says, then compare.
+from_contract = df.groupby("segment")["profit"].sum() / df.groupby("segment")["sales"].sum() * 100
+comparison = pd.DataFrame({
+    "from contract": from_contract.round(2),
+    "from KPI table": by_segment["profit_ratio_pct"].round(2),
+})
+comparison["match"] = (comparison["from contract"] - comparison["from KPI table"]).abs() < 0.01
+comparison
+```
+
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>from contract</th>
+      <th>from KPI table</th>
+      <th>match</th>
+    </tr>
+    <tr>
+      <th>segment</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Consumer</th>
+      <td>10.78</td>
+      <td>10.78</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>Corporate</th>
+      <td>14.08</td>
+      <td>14.08</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>Home Office</th>
+      <td>14.56</td>
+      <td>14.56</td>
+      <td>True</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+4. Now write a second contract, for **Orders** or **AOV**, in your evidence log. Pay special attention to the denominator and to what happens when a filter leaves no rows.
+
+> **A contract is a promise**
+>
+> If anyone reports "profit ratio" with a different denominator or scope, the contract shows the difference immediately. That is the point: disagreements become visible instead of hidden in code.
+
+---
+
+### I3 (Core): Berkeley admissions and Simpson's paradox
+
+The six largest departments at UC Berkeley in 1973, with the number of applicants and the number admitted.
+
+1. Run the first cell to calculate the admission rate of men and women in each department.
+2. Run the second cell to calculate the combined rate for the six departments.
+3. Write two sentences: in how many departments is the women's rate higher, and which group has the higher combined rate?
+
+
+```python
+berkeley = pd.DataFrame({
+    "department": ["A", "B", "C", "D", "E", "F"],
+    "men_applied":     [825, 560, 325, 417, 191, 373],
+    "men_admitted":    [512, 353, 120, 138,  53,  22],
+    "women_applied":   [108,  25, 593, 375, 393, 341],
+    "women_admitted":  [ 89,  17, 202, 131,  94,  24],
+}).set_index("department")
+
+berkeley["men_rate"] = berkeley["men_admitted"] / berkeley["men_applied"]
+berkeley["women_rate"] = berkeley["women_admitted"] / berkeley["women_applied"]
+berkeley[["men_rate", "women_rate"]].round(3)
+```
+
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>men_rate</th>
+      <th>women_rate</th>
+    </tr>
+    <tr>
+      <th>department</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>A</th>
+      <td>0.62</td>
+      <td>0.82</td>
+    </tr>
+    <tr>
+      <th>B</th>
+      <td>0.63</td>
+      <td>0.68</td>
+    </tr>
+    <tr>
+      <th>C</th>
+      <td>0.37</td>
+      <td>0.34</td>
+    </tr>
+    <tr>
+      <th>D</th>
+      <td>0.33</td>
+      <td>0.35</td>
+    </tr>
+    <tr>
+      <th>E</th>
+      <td>0.28</td>
+      <td>0.24</td>
+    </tr>
+    <tr>
+      <th>F</th>
+      <td>0.06</td>
+      <td>0.07</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+
+```python
+men_overall = berkeley["men_admitted"].sum() / berkeley["men_applied"].sum()
+women_overall = berkeley["women_admitted"].sum() / berkeley["women_applied"].sum()
+print("Six departments combined, men:  ", f"{men_overall:.1%}")
+print("Six departments combined, women:", f"{women_overall:.1%}")
+print("Departments where women's rate is higher:", (berkeley["women_rate"] > berkeley["men_rate"]).sum())
+```
+
+    Six departments combined, men:   44.5%
+    Six departments combined, women: 30.4%
+    Departments where women's rate is higher: 4
+
+
+4. Now find the reason. The cell below shows where each group applied. Change `"men_applied"` to `"women_applied"` and compare the two.
+5. Explain the reversal in three sentences for a non-technical reader. Use the words *mix* and *weighted*.
+
+> **Your turn:** change the code in the next cell and run it again.
+
+
+```python
+# Share of the group's applications that went to each department.
+# Change "men_applied" to "women_applied" and run again.
+group = "men_applied"
+share = berkeley[group] / berkeley[group].sum()
+# Departments stay in the same order (A at the top) so the two charts are easy to compare.
+share.sort_index(ascending=False).plot(kind="barh", title=f"Where applications went: {group}")
+plt.xlabel("Share of the group's applications")
+plt.ylabel("Department")
+plt.show()
+```
+
+
+    
+![png](05_metrics_and_kpis_lab_files/05_metrics_and_kpis_lab_34_0.png)
+    
+
+
+> **Careful wording**
+>
+> The department view shows that the combined gap is explained by **where** people applied. It does not, by itself, prove there was no bias: why the groups applied to different departments is a separate question.
+
+---
+
+### I4 (Core): Make a recommendation
+
+Write **five sentences** to the retail head:
+
+1. **Recommendation:** which segment to investigate first.
+2. **Evidence 1:** one measure, with its value from your table and how it compares with the **All** row.
+3. **Evidence 2:** a second, different measure.
+4. **Limitation:** one thing this data cannot tell you. For example, it shows which segment *looks* different; it does not show *why*.
+5. **Next check:** one specific piece of evidence to request before changing promotions.
+
+Copy the numbers from **the outputs above**; do not retype them from memory.
+
+> **Association, not cause**
+>
+> If a segment with more discounts has a lower profit ratio, that is a pattern worth investigating. It is not proof that the discounts caused it. Other differences between segments, such as product mix, could explain it.
+
+---
+
+### I5 (Stretch): Look inside one category
 
 1. Run the cell below, which keeps only Furniture lines.
 2. Change `"Furniture"` to `"Office Supplies"` or `"Technology"`.
@@ -798,7 +1145,9 @@ category_view
 
 
 
-### C. Do category orders add up?
+---
+
+### I6 (Stretch): Do category orders add up?
 
 Now group by **category** instead of segment, with no filter.
 
@@ -896,7 +1245,92 @@ by_category
 
 ---
 
-## Part 6: Debugging challenge
+### I7 (Stretch): Does the segment ranking hold inside every category?
+
+Simpson's paradox can hide in any table. Check whether the ranking of segments by profit ratio is the same inside each category as it is overall.
+
+1. Run the cell. Each row is a category; each column a segment.
+2. Compare each row's order with the overall ranking from G3.
+3. Change `"category"` to `"region"` and check again. Write one sentence on what you find.
+
+> **Your turn:** change the code in the next cell and run it again.
+
+
+```python
+by = "category"
+inside = df.groupby([by, "segment"])[["profit", "sales"]].sum()
+inside = (inside["profit"] / inside["sales"] * 100).unstack().round(1)
+inside["highest segment"] = inside.idxmax(axis=1)
+inside
+```
+
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>segment</th>
+      <th>Consumer</th>
+      <th>Corporate</th>
+      <th>Home Office</th>
+      <th>highest segment</th>
+    </tr>
+    <tr>
+      <th>category</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Furniture</th>
+      <td>1.90</td>
+      <td>3.90</td>
+      <td>5.30</td>
+      <td>Home Office</td>
+    </tr>
+    <tr>
+      <th>Office Supplies</th>
+      <td>15.70</td>
+      <td>17.60</td>
+      <td>23.50</td>
+      <td>Home Office</td>
+    </tr>
+    <tr>
+      <th>Technology</th>
+      <td>15.10</td>
+      <td>21.80</td>
+      <td>14.60</td>
+      <td>Corporate</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+---
+
+## Challenge
+
+### C1 (Challenge): Debug a colleague's KPI summary
 
 A colleague sends you this summary:
 
@@ -905,7 +1339,7 @@ A colleague sends you this summary:
 Their code is below.
 
 1. Run it to calculate the colleague's two numbers.
-2. Compare them with the **All** row of your segment table in Part 3.
+2. Compare them with the **All** row of your segment table in G3.
 3. Explain each mistake in one sentence.
 4. Which segment has the most influence on the correct overall profit ratio, and why? Add a line `print(by_segment["sales"] / total_sales * 100)` to see each segment's share of Sales.
 
@@ -928,23 +1362,85 @@ print("Colleague's AOV:                     ", round(colleague_aov, 2))
 >
 > A segment with much more Sales should pull the overall ratio more strongly than a small segment. Does a simple average of the three ratios allow that? And what does one **row** represent: an order, or one product line within an order?
 
----
-
-## Part 7: Make a recommendation
-
-Write **five sentences** to the retail head:
-
-1. **Recommendation:** which segment to investigate first.
-2. **Evidence 1:** one measure, with its value from your table and how it compares with the **All** row.
-3. **Evidence 2:** a second, different measure.
-4. **Limitation:** one thing this data cannot tell you. For example, it shows which segment *looks* different; it does not show *why*.
-5. **Next check:** one specific piece of evidence to request before changing promotions.
-
-Copy the numbers from **the output above**; do not retype them from memory.
-
-> **Association, not cause**
+> **How would you check your fix?**
 >
-> If a segment with more discounts has a lower profit ratio, that is a pattern worth investigating. It is not proof that the discounts caused it. Other differences between segments, such as product mix, could explain it.
+> Multiply each segment's profit ratio by its share of Sales and add the three results. You should get the **All** row's ratio exactly.
+
+### C2 (Challenge): Make the colleague's numbers look right, honestly
+
+Your colleague now asks: *"So when is the average of the segment ratios ever correct?"*
+
+1. In the cell below, change the three `sales` values so that the simple mean of the ratios equals the ratio of the sums. Keep the profit ratios the same (change `profit` in proportion).
+2. Write one sentence stating the general rule.
+
+> **Your turn:** change the code in the next cell and run it again.
+
+
+```python
+toy = pd.DataFrame({
+    "sales":  [600, 300, 100],
+    "profit": [ 60,  45,  20],
+}, index=["Consumer", "Corporate", "Home Office"])
+toy["ratio"] = toy["profit"] / toy["sales"]
+print("Simple mean of ratios:", f"{toy['ratio'].mean():.2%}")
+print("Ratio of sums:        ", f"{toy['profit'].sum() / toy['sales'].sum():.2%}")
+toy
+```
+
+    Simple mean of ratios: 15.00%
+    Ratio of sums:         12.50%
+
+
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>sales</th>
+      <th>profit</th>
+      <th>ratio</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Consumer</th>
+      <td>600</td>
+      <td>60</td>
+      <td>0.10</td>
+    </tr>
+    <tr>
+      <th>Corporate</th>
+      <td>300</td>
+      <td>45</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <th>Home Office</th>
+      <td>100</td>
+      <td>20</td>
+      <td>0.20</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
 
 ---
 
@@ -958,6 +1454,7 @@ Before submitting, confirm:
 - [ ] Segment Sales, Profit and Orders reconcile with the **All** row.
 - [ ] Money is labelled "source monetary units", with no currency symbol.
 - [ ] A `NaN` ratio is described as "not available", not 0%.
+- [ ] Your metric contract states the denominator, scope and zero rule.
 - [ ] The recommendation names a limitation and a next check.
 
 ---
@@ -966,10 +1463,24 @@ Before submitting, confirm:
 
 1. Why is the average of three segment ratios not the overall ratio?
 2. What does a `NaN` AOV or profit ratio mean?
-3. One question you would want answered before acting on your recommendation.
+3. In one sentence, why did the combined Berkeley comparison point the other way from most departments?
+4. One question you would want answered before acting on your recommendation.
 
-## After the lesson
+---
 
-- Finish the region and category work from Part 5.
-- Correct the colleague's summary from Part 6 and add it to your evidence log.
-- Next: the [Session 7 lab](07_trends_and_growth_lab.md), where we look at monthly trends and the returns list.
+## Evidence to keep
+
+- [ ] Segment KPI table with an **All** row and a clear title (G3)
+- [ ] Reconciliation checks ticked (G4)
+- [ ] One region's KPI table with two sentences (I1)
+- [ ] Two metric contracts: Profit ratio and one more (I2)
+- [ ] Berkeley explanation in three sentences (I3)
+- [ ] Five-sentence recommendation (I4)
+- [ ] Corrected colleague summary (C1, if attempted)
+
+---
+
+## After the lab
+
+- Finish any region and category work from I1, I5 and I6.
+- Next: the [Session 6 lecture](06_visualisation_principles_lecture.md), on choosing and designing honest charts.

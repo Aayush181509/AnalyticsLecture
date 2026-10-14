@@ -1,0 +1,1779 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Lesson 2: Can We Trust the Sales Table? - Data Analytics</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../stylesheets/readability.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Lesson 2: Can We Trust the Sales Table?";
+        var mkdocs_page_input_path = "lectures/02_trust_the_sales_table.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Data Analytics
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Getting Started</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../..#course-at-a-glance">Course at a glance</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../..#where-to-start">Where to start</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../..#how-we-will-practise">How we will practise</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Foundations</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../foundations/">Why Data Analytics Matters</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/#what-is-data-analytics">What is data analytics?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/#real-stories-where-data-changed-the-outcome">Real stories where data changed the outcome</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../foundations/#a-map-that-changed-how-we-think-about-disease-london-1854">A map that changed how we think about disease (London, 1854)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../foundations/#a-chart-that-reformed-hospitals-1850s">A chart that reformed hospitals (1850s)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../foundations/#winning-on-a-small-budget-baseball-2002">Winning on a small budget (baseball, 2002)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../foundations/#preparing-for-a-hurricane-retail-2004">Preparing for a hurricane (retail, 2004)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../foundations/#when-big-data-got-it-wrong-public-health-20082015">When big data got it wrong (public health, 2008–2015)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/#where-you-meet-analytics-every-day">Where you meet analytics every day</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/#why-presentation-is-part-of-analysis">Why presentation is part of analysis</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/#what-comes-next">What comes next</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../foundations/statistics-are-not-enough/">Statistics Are Not Enough</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/statistics-are-not-enough/#anscombes-quartet">Anscombe's quartet</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/statistics-are-not-enough/#the-datasaurus-dozen">The Datasaurus Dozen</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/statistics-are-not-enough/#what-this-means-at-work">What this means at work</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/statistics-are-not-enough/#try-it-yourself">Try it yourself</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../foundations/misleading-statistics/">How Statistics Can Mislead</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/misleading-statistics/#1-correlation-is-not-causation">1. Correlation is not causation</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/misleading-statistics/#2-simpsons-paradox-the-total-can-reverse-the-parts">2. Simpson's paradox: the total can reverse the parts</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/misleading-statistics/#3-misleading-axes">3. Misleading axes</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/misleading-statistics/#4-cherry-picked-time-windows">4. Cherry-picked time windows</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/misleading-statistics/#5-which-average">5. Which average?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/misleading-statistics/#6-percentages-without-the-base">6. Percentages without the base</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/misleading-statistics/#7-survivorship-bias">7. Survivorship bias</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/misleading-statistics/#a-checklist-for-any-number-you-are-shown">A checklist for any number you are shown</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/misleading-statistics/#try-it-yourself">Try it yourself</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../foundations/types-of-analysis/">Types of Analysis</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/types-of-analysis/#univariate-analysis-one-variable-at-a-time">Univariate analysis: one variable at a time</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/types-of-analysis/#bivariate-analysis-two-variables-together">Bivariate analysis: two variables together</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/types-of-analysis/#multivariate-analysis-three-or-more-variables">Multivariate analysis: three or more variables</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/types-of-analysis/#choosing-a-chart-quick-guide">Choosing a chart: quick guide</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/types-of-analysis/#try-it-yourself">Try it yourself</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../foundations/visual-design/">Designing Clear Visuals</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/visual-design/#the-data-ink-ratio">The data-ink ratio</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/visual-design/#pre-attentive-attributes-what-the-eye-sees-first">Pre-attentive attributes: what the eye sees first</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/visual-design/#gestalt-principles-how-we-group-things">Gestalt principles: how we group things</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/visual-design/#colour-with-purpose">Colour with purpose</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/visual-design/#a-clean-chart-checklist">A clean-chart checklist</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/visual-design/#try-it-yourself">Try it yourself</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../foundations/storytelling/">Storytelling with Data</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/storytelling/#the-challenger-disaster-right-data-wrong-presentation">The Challenger disaster: right data, wrong presentation</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../foundations/storytelling/#what-did-the-data-show">What did the data show?</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/storytelling/#what-makes-a-data-story">What makes a data story</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../foundations/storytelling/#start-with-the-big-idea">Start with the "big idea"</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/storytelling/#a-simple-process">A simple process</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/storytelling/#exploratory-versus-explanatory">Exploratory versus explanatory</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/storytelling/#try-it-yourself">Try it yourself</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Course</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../course/roadmap/">Learning Roadmap</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#stage-0-foundations">Stage 0: Foundations</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#stage-1-python-and-retail-data">Stage 1: Python and retail data</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#stage-2-one-department-at-a-time">Stage 2: One department at a time</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#stage-3-bring-it-together">Stage 3: Bring it together</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#stage-4-tableau">Stage 4: Tableau</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#how-you-will-be-assessed">How you will be assessed</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#extra-practice-topics">Extra practice topics</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../course/setup/">Setup and Practice</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/setup/#what-you-need">What you need</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/setup/#open-a-lesson-in-google-colab">Open a lesson in Google Colab</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/setup/#keep-your-data-safe">Keep your data safe</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/setup/#if-something-does-not-work">If something does not work</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/setup/#tableau-later">Tableau (later)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/setup/#keep-an-evidence-log">Keep an evidence log</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../course/workflow/">Analytical Workflow</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/workflow/#the-seven-steps">The seven steps</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../course/workflow/#1-business-question">1. Business question</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../course/workflow/#2-data-understanding">2. Data understanding</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../course/workflow/#3-preparation">3. Preparation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../course/workflow/#4-analysis">4. Analysis</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../course/workflow/#5-validation">5. Validation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../course/workflow/#6-visualization">6. Visualization</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../course/workflow/#7-recommendation">7. Recommendation</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/workflow/#a-worked-example">A worked example</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/workflow/#when-a-result-looks-wrong">When a result looks wrong</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/workflow/#association-is-not-causation">Association is not causation</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../cases/">Business Cases</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../cases/#the-five-core-cases">The five core cases</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../cases/#retail">Retail</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../cases/#finance">Finance</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../cases/#operations">Operations</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../cases/#marketing">Marketing</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../cases/#hr">HR</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../cases/#what-every-case-includes">What every case includes</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../cases/#combining-evidence-across-departments">Combining evidence across departments</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../cases/#additional-practice-choices">Additional practice choices</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Python Lessons</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../00_python_and_colab_basics/">Lesson 0: Python and Colab Basics</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../00_python_and_colab_basics/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../00_python_and_colab_basics/#part-1-google-colab-in-two-minutes">Part 1: Google Colab in two minutes</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../00_python_and_colab_basics/#part-2-values-and-variables">Part 2: Values and variables</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../00_python_and_colab_basics/#part-3-tables-with-pandas">Part 3: Tables with pandas</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../00_python_and_colab_basics/#part-4-select-filter-add-up-count">Part 4: Select, filter, add up, count</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../00_python_and_colab_basics/#part-5-group-and-summarise">Part 5: Group and summarise</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../00_python_and_colab_basics/#part-6-your-first-chart">Part 6: Your first chart</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../00_python_and_colab_basics/#quick-reference">Quick reference</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../00_python_and_colab_basics/#exit-ticket">Exit ticket</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../01_decision_to_evidence/">Lesson 1: From Decision to Evidence</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../01_decision_to_evidence/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../01_decision_to_evidence/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../01_decision_to_evidence/#part-1-from-request-to-question">Part 1: From request to question</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../01_decision_to_evidence/#part-2-load-the-data">Part 2: Load the data</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../01_decision_to_evidence/#how-big-is-it-and-what-types-are-the-columns">How big is it, and what types are the columns?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../01_decision_to_evidence/#which-dates-are-included">Which dates are included?</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../01_decision_to_evidence/#part-3-rows-versus-orders">Part 3: Rows versus orders</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../01_decision_to_evidence/#part-4-a-first-chart">Part 4: A first chart</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../01_decision_to_evidence/#add-a-filter">Add a filter</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../01_decision_to_evidence/#part-5-your-turn">Part 5: Your turn</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../01_decision_to_evidence/#part-6-challenge">Part 6: Challenge</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../01_decision_to_evidence/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../01_decision_to_evidence/#after-the-lesson">After the lesson</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Lesson 2: Can We Trust the Sales Table?</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#part-1-load-the-data">Part 1: Load the data</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#part-2-what-load_orders-does">Part 2: What load_orders() does</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#step-1-read-the-raw-sheets">Step 1: Read the raw sheets</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#step-2-find-orders-with-more-than-one-customer">Step 2: Find orders with more than one customer</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#step-3-keep-orders-placed-2023-to-2025">Step 3: Keep orders placed 2023 to 2025</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#step-4-rename-columns">Step 4: Rename columns</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#step-5-the-returns-flag">Step 5: The returns flag</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#step-6-the-customer-conflict-flags">Step 6: The customer-conflict flags</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#step-7-two-derived-date-columns">Step 7: Two derived date columns</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#part-3-meet-the-data-dictionary">Part 3: Meet the data dictionary</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#part-4-quality-checklist">Part 4: Quality checklist</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#part-5-find-the-grain-and-count-orders">Part 5: Find the grain and count orders</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#part-6-what-the-returns-flag-means">Part 6: What the returns flag means</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#part-7-check-one-order-by-hand">Part 7: Check one order by hand</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#part-8-keep-a-preparation-log">Part 8: Keep a preparation log</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#part-9-segment-versus-category">Part 9: Segment versus category</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#part-10-debugging-challenge">Part 10: Debugging challenge</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#after-the-lesson">After the lesson</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../03_segment_comparison/">Lesson 3: Which Segment Deserves a Closer Look?</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../03_segment_comparison/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../03_segment_comparison/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../03_segment_comparison/#part-1-agree-the-measures">Part 1: Agree the measures</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../03_segment_comparison/#predict-first">Predict first</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../03_segment_comparison/#part-2-the-five-measures-for-the-whole-table">Part 2: The five measures for the whole table</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../03_segment_comparison/#part-3-the-segment-kpi-table">Part 3: The segment KPI table</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../03_segment_comparison/#step-1-totals-for-each-segment">Step 1: totals for each segment</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_segment_comparison/#step-2-the-two-ratios-from-each-segments-totals">Step 2: the two ratios, from each segment's totals</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_segment_comparison/#step-3-add-an-overall-row">Step 3: add an overall row</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_segment_comparison/#a-picture-of-the-profit-ratio">A picture of the profit ratio</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../03_segment_comparison/#part-4-check-that-it-reconciles">Part 4: Check that it reconciles</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../03_segment_comparison/#part-5-independent-work">Part 5: Independent work</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../03_segment_comparison/#a-filter-by-region">A. Filter by region</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_segment_comparison/#b-look-inside-one-category">B. Look inside one category</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../03_segment_comparison/#c-do-category-orders-add-up">C. Do category orders add up?</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../03_segment_comparison/#part-6-debugging-challenge">Part 6: Debugging challenge</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../03_segment_comparison/#part-7-make-a-recommendation">Part 7: Make a recommendation</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../03_segment_comparison/#validation-checklist">Validation checklist</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../03_segment_comparison/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../03_segment_comparison/#after-the-lesson">After the lesson</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../04_trends_returns_dashboard/">Lesson 4: Trends, Returns and a Decision Dashboard</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../04_trends_returns_dashboard/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../04_trends_returns_dashboard/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../04_trends_returns_dashboard/#before-you-start">Before you start</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../04_trends_returns_dashboard/#part-1-the-monthly-trend">Part 1: The monthly trend</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../04_trends_returns_dashboard/#check-that-no-month-is-missing">Check that no month is missing</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_trends_returns_dashboard/#one-line-per-segment">One line per segment</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_trends_returns_dashboard/#is-there-a-seasonal-pattern">Is there a seasonal pattern?</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../04_trends_returns_dashboard/#part-2-two-kinds-of-growth">Part 2: Two kinds of growth</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../04_trends_returns_dashboard/#where-are-the-blanks">Where are the blanks?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_trends_returns_dashboard/#see-the-difference-on-a-chart">See the difference on a chart</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_trends_returns_dashboard/#which-one-is-fair">Which one is fair?</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../04_trends_returns_dashboard/#part-3-filtering-can-remove-the-comparison">Part 3: Filtering can remove the comparison</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../04_trends_returns_dashboard/#part-4-the-returns-list">Part 4: The returns list</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../04_trends_returns_dashboard/#part-5-build-the-dashboard">Part 5: Build the dashboard</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../04_trends_returns_dashboard/#design-checks">Design checks</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../04_trends_returns_dashboard/#part-6-your-turn">Part 6: Your turn</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../04_trends_returns_dashboard/#1-redraw-the-dashboard-for-one-region">1. Redraw the dashboard for one region</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_trends_returns_dashboard/#2-one-segment-over-three-years">2. One segment over three years</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../04_trends_returns_dashboard/#3-growth-for-one-segment">3. Growth for one segment</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../04_trends_returns_dashboard/#part-7-debugging-challenge">Part 7: Debugging challenge</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../04_trends_returns_dashboard/#part-8-recommend-a-test">Part 8: Recommend a test</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../04_trends_returns_dashboard/#validation-checklist">Validation checklist</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../04_trends_returns_dashboard/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../04_trends_returns_dashboard/#after-the-lesson">After the lesson</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Tableau (Coming Later)</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lessons/class-01/">Tableau Lesson 1 (draft)</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#before-you-start">Before you start</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#part-1-from-request-to-question">Part 1: From request to question</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#part-2-watch-the-demonstration">Part 2: Watch the demonstration</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#part-3-guided-practice">Part 3: Guided practice</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-01/#connect-to-the-file">Connect to the file</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-01/#check-the-column-types">Check the column types</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-01/#build-a-first-chart">Build a first chart</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-01/#add-a-filter">Add a filter</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-01/#save-and-reopen">Save and reopen</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#part-4-rows-versus-orders">Part 4: Rows versus orders</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#part-5-independent-work">Part 5: Independent work</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#part-6-challenge">Part 6: Challenge</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#after-the-lesson">After the lesson</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lessons/class-02/">Tableau Lesson 2 (draft)</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#before-you-start">Before you start</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#part-1-meet-the-data-dictionary">Part 1: Meet the data dictionary</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#part-2-find-the-grain">Part 2: Find the grain</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#part-3-count-orders-correctly">Part 3: Count orders correctly</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-02/#demonstration">Demonstration</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-02/#guided-practice">Guided practice</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#part-4-what-the-returns-flag-means">Part 4: What the returns flag means</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#part-5-check-one-order-by-hand">Part 5: Check one order by hand</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#part-6-keep-a-preparation-log">Part 6: Keep a preparation log</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#part-7-independent-work">Part 7: Independent work</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#part-8-debugging-challenge">Part 8: Debugging challenge</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#after-the-lesson">After the lesson</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lessons/class-03/">Tableau Lesson 3 (draft)</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#before-you-start">Before you start</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#part-1-agree-the-measures">Part 1: Agree the measures</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#part-2-watch-the-demonstration">Part 2: Watch the demonstration</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#part-3-guided-practice-build-the-calculations">Part 3: Guided practice — build the calculations</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#part-4-guided-practice-the-segment-table">Part 4: Guided practice — the segment table</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-03/#check-that-it-reconciles">Check that it reconciles</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#part-5-independent-work">Part 5: Independent work</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-03/#a-filter-by-region">A. Filter by region</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-03/#b-look-at-a-category">B. Look at a category</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#part-6-debugging-challenge">Part 6: Debugging challenge</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#part-7-make-a-recommendation">Part 7: Make a recommendation</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#validation-checklist">Validation checklist</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#after-the-lesson">After the lesson</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lessons/class-04/">Tableau Lesson 4 (draft)</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#before-you-start">Before you start</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#part-1-the-monthly-trend">Part 1: The monthly trend</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#part-2-two-kinds-of-growth">Part 2: Two kinds of growth</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-04/#month-on-month-growth">Month-on-month growth</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-04/#year-on-year-growth">Year-on-year growth</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-04/#which-one-is-fair">Which one is fair?</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#part-3-the-returns-list">Part 3: The returns list</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#part-4-guided-practice-build-the-dashboard">Part 4: Guided practice — build the dashboard</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-04/#design-checks">Design checks</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#part-5-independent-work">Part 5: Independent work</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#part-6-debugging-challenge">Part 6: Debugging challenge</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#part-7-recommend-a-test">Part 7: Recommend a test</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#validation-checklist">Validation checklist</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#after-the-lesson">After the lesson</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../lessons/lesson-template/">Lesson Template</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#1-the-business-decision">1. The business decision</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#2-what-you-will-demonstrate">2. What you will demonstrate</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#3-before-you-start">3. Before you start</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#4-understand-the-data">4. Understand the data</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#5-agree-the-measures">5. Agree the measures</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#6-watch-a-worked-example">6. Watch a worked example</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#7-try-it-with-guidance">7. Try it with guidance</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#8-work-independently">8. Work independently</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#9-debug-a-result">9. Debug a result</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#10-make-a-recommendation">10. Make a recommendation</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#11-connection-to-the-other-tool">11. Connection to the other tool</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#12-submit-and-reflect">12. Submit and reflect</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Data Analytics</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Python Lessons</li>
+      <li class="breadcrumb-item active">Lesson 2: Can We Trust the Sales Table?</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="lesson-2-can-we-trust-the-sales-table">Lesson 2: Can we trust the sales table?<a class="headerlink" href="#lesson-2-can-we-trust-the-sales-table" title="Permanent link">&para;</a></h1>
+<p class="lead">
+Before comparing anything, find out exactly what the retail table contains: what a row is, how the setup cell prepared it, which columns can be added up, and how to count orders correctly.
+</p>
+
+<p><a href="https://colab.research.google.com/github/Aayush181509/AnalyticsLecture/blob/main/notebooks/02_trust_the_sales_table.ipynb"><img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg" /></a></p>
+<p>Open this notebook in Google Colab with the button above, then run each cell from top to bottom with <strong>Shift + Enter</strong>. Save your own copy with <strong>File → Save a copy in Drive</strong>.</p>
+<hr />
+<h2 id="the-business-decision">The business decision<a class="headerlink" href="#the-business-decision" title="Permanent link">&para;</a></h2>
+<p>The retail head now asks:</p>
+<blockquote>
+<p><em>"Before you show me any chart, can I trust these numbers? How many orders did we actually have?"</em></p>
+</blockquote>
+<p>A wrong count at this stage spoils every later chart. This lesson is about building trust in the data.</p>
+<blockquote>
+<p><strong>About the data</strong></p>
+<p>The Superstore sample describes a <strong>fictitious</strong> company. Sales and Profit are in <strong>source monetary units</strong>: the file does not state a currency, so we never add a currency symbol.</p>
+</blockquote>
+<hr />
+<h2 id="what-you-will-be-able-to-do">What you will be able to do<a class="headerlink" href="#what-you-will-be-able-to-do" title="Permanent link">&para;</a></h2>
+<p>By the end of this lesson you will be able to:</p>
+<ol>
+<li>Explain what the setup cell's <code>load_orders()</code> does, step by step.</li>
+<li>State the <strong>grain</strong> of the table: what one row represents.</li>
+<li>Tell which columns are identifiers, categories, dates or amounts.</li>
+<li>Count <strong>orders</strong> correctly with <code>nunique()</code>.</li>
+<li>Explain what the returns flag does and does not tell you.</li>
+<li>Check one order by hand.</li>
+<li>Record what you changed in a short <strong>preparation log</strong>.</li>
+</ol>
+<p><strong>Evidence you keep:</strong> a grain statement, a short quality checklist, a preparation log and one checked order.</p>
+<p>Before you start, complete <a href="../01_decision_to_evidence/">Lesson 1</a> and have your evidence log open.</p>
+<hr />
+<h2 id="part-1-load-the-data">Part 1: Load the data<a class="headerlink" href="#part-1-load-the-data" title="Permanent link">&para;</a></h2>
+<p>Run the setup cell first, exactly as in Lesson 1.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Course data setup. Run this cell first; you do not need to understand it yet.</span>
+<span class="c1"># It downloads the Superstore sample from Tableau&#39;s website, checks it is the</span>
+<span class="c1"># exact version this course was written for, and prepares the order-lines table.</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">hashlib</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">urllib.request</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+
+<span class="n">SOURCE_URL</span> <span class="o">=</span> <span class="s2">&quot;https://public.tableau.com/app/sample-data/sample_-_superstore.xls&quot;</span>
+<span class="n">EXPECTED_SHA256</span> <span class="o">=</span> <span class="s2">&quot;5045ed4fec49cae2cc0dfc5ab0d204ba09efa767fe00c996822499e8cc42fbbd&quot;</span>
+<span class="n">SOURCE_FILE</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;COURSE_XLS_PATH&quot;</span><span class="p">,</span> <span class="s2">&quot;sample_-_superstore.xls&quot;</span><span class="p">)</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="kn">import</span><span class="w"> </span><span class="nn">xlrd</span>  <span class="c1"># noqa: F401  (needed to read .xls files)</span>
+<span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+    <span class="kn">import</span><span class="w"> </span><span class="nn">subprocess</span>
+    <span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+
+    <span class="n">subprocess</span><span class="o">.</span><span class="n">check_call</span><span class="p">([</span><span class="n">sys</span><span class="o">.</span><span class="n">executable</span><span class="p">,</span> <span class="s2">&quot;-m&quot;</span><span class="p">,</span> <span class="s2">&quot;pip&quot;</span><span class="p">,</span> <span class="s2">&quot;install&quot;</span><span class="p">,</span> <span class="s2">&quot;-q&quot;</span><span class="p">,</span> <span class="s2">&quot;xlrd&quot;</span><span class="p">])</span>
+
+<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">SOURCE_FILE</span><span class="p">):</span>
+    <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlretrieve</span><span class="p">(</span><span class="n">SOURCE_URL</span><span class="p">,</span> <span class="n">SOURCE_FILE</span><span class="p">)</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">SOURCE_FILE</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">digest</span> <span class="o">=</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">sha256</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">())</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span>
+<span class="k">if</span> <span class="n">digest</span> <span class="o">!=</span> <span class="n">EXPECTED_SHA256</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;WARNING: Tableau has changed this sample file since the course was written.&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Your numbers will differ from the lesson. Ask your facilitator for the course copy.&quot;</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">load_orders</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Return one row per order line, orders placed 2023-01-01 to 2025-12-31.&quot;&quot;&quot;</span>
+    <span class="n">raw</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">SOURCE_FILE</span><span class="p">,</span> <span class="n">sheet_name</span><span class="o">=</span><span class="s2">&quot;Orders&quot;</span><span class="p">)</span>
+    <span class="n">returns</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">SOURCE_FILE</span><span class="p">,</span> <span class="n">sheet_name</span><span class="o">=</span><span class="s2">&quot;Returns&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Orders with more than one Customer ID (a known data issue), found before filtering.</span>
+    <span class="n">ids_per_order</span> <span class="o">=</span> <span class="n">raw</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;Order ID&quot;</span><span class="p">)[</span><span class="s2">&quot;Customer ID&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span>
+    <span class="n">conflict_orders</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">ids_per_order</span><span class="p">[</span><span class="n">ids_per_order</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+
+    <span class="n">in_scope</span> <span class="o">=</span> <span class="p">(</span><span class="n">raw</span><span class="p">[</span><span class="s2">&quot;Order Date&quot;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="s2">&quot;2023-01-01&quot;</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">raw</span><span class="p">[</span><span class="s2">&quot;Order Date&quot;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="s2">&quot;2026-01-01&quot;</span><span class="p">)</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">raw</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">in_scope</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+    <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;Row ID&quot;</span><span class="p">:</span> <span class="s2">&quot;row_id&quot;</span><span class="p">,</span> <span class="s2">&quot;Order ID&quot;</span><span class="p">:</span> <span class="s2">&quot;order_id&quot;</span><span class="p">,</span> <span class="s2">&quot;Order Date&quot;</span><span class="p">:</span> <span class="s2">&quot;order_date&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Ship Date&quot;</span><span class="p">:</span> <span class="s2">&quot;ship_date&quot;</span><span class="p">,</span> <span class="s2">&quot;Ship Mode&quot;</span><span class="p">:</span> <span class="s2">&quot;ship_mode&quot;</span><span class="p">,</span> <span class="s2">&quot;Customer ID&quot;</span><span class="p">:</span> <span class="s2">&quot;customer_id&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Segment&quot;</span><span class="p">:</span> <span class="s2">&quot;segment&quot;</span><span class="p">,</span> <span class="s2">&quot;Country/Region&quot;</span><span class="p">:</span> <span class="s2">&quot;country_region&quot;</span><span class="p">,</span> <span class="s2">&quot;Region&quot;</span><span class="p">:</span> <span class="s2">&quot;region&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Category&quot;</span><span class="p">:</span> <span class="s2">&quot;category&quot;</span><span class="p">,</span> <span class="s2">&quot;Sub-Category&quot;</span><span class="p">:</span> <span class="s2">&quot;sub_category&quot;</span><span class="p">,</span> <span class="s2">&quot;Product ID&quot;</span><span class="p">:</span> <span class="s2">&quot;product_id&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Product Name&quot;</span><span class="p">:</span> <span class="s2">&quot;product_name&quot;</span><span class="p">,</span> <span class="s2">&quot;Sales&quot;</span><span class="p">:</span> <span class="s2">&quot;sales&quot;</span><span class="p">,</span> <span class="s2">&quot;Quantity&quot;</span><span class="p">:</span> <span class="s2">&quot;quantity&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Discount&quot;</span><span class="p">:</span> <span class="s2">&quot;discount&quot;</span><span class="p">,</span> <span class="s2">&quot;Profit&quot;</span><span class="p">:</span> <span class="s2">&quot;profit&quot;</span><span class="p">,</span>
+    <span class="p">})</span>
+    <span class="n">df</span><span class="p">[</span><span class="s2">&quot;returned_order_flag&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;order_id&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">returns</span><span class="p">[</span><span class="s2">&quot;Order ID&quot;</span><span class="p">]))</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+    <span class="n">df</span><span class="p">[</span><span class="s2">&quot;customer_order_conflict&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;order_id&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">conflict_orders</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+    <span class="n">df</span><span class="p">[</span><span class="s2">&quot;customer_analysis_eligible&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;customer_order_conflict&quot;</span><span class="p">]</span>
+    <span class="n">df</span><span class="p">[</span><span class="s2">&quot;order_to_ship_days&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;ship_date&quot;</span><span class="p">]</span> <span class="o">-</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;order_date&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">days</span>
+    <span class="n">df</span><span class="p">[</span><span class="s2">&quot;order_month&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;order_date&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">to_period</span><span class="p">(</span><span class="s2">&quot;M&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">to_timestamp</span><span class="p">()</span>
+
+    <span class="n">columns</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="s2">&quot;row_id&quot;</span><span class="p">,</span> <span class="s2">&quot;order_id&quot;</span><span class="p">,</span> <span class="s2">&quot;order_date&quot;</span><span class="p">,</span> <span class="s2">&quot;ship_date&quot;</span><span class="p">,</span> <span class="s2">&quot;ship_mode&quot;</span><span class="p">,</span> <span class="s2">&quot;customer_id&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;segment&quot;</span><span class="p">,</span> <span class="s2">&quot;country_region&quot;</span><span class="p">,</span> <span class="s2">&quot;region&quot;</span><span class="p">,</span> <span class="s2">&quot;category&quot;</span><span class="p">,</span> <span class="s2">&quot;sub_category&quot;</span><span class="p">,</span> <span class="s2">&quot;product_id&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;product_name&quot;</span><span class="p">,</span> <span class="s2">&quot;sales&quot;</span><span class="p">,</span> <span class="s2">&quot;quantity&quot;</span><span class="p">,</span> <span class="s2">&quot;discount&quot;</span><span class="p">,</span> <span class="s2">&quot;profit&quot;</span><span class="p">,</span> <span class="s2">&quot;returned_order_flag&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;customer_analysis_eligible&quot;</span><span class="p">,</span> <span class="s2">&quot;customer_order_conflict&quot;</span><span class="p">,</span> <span class="s2">&quot;order_to_ship_days&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;order_month&quot;</span><span class="p">,</span>
+    <span class="p">]</span>
+    <span class="k">return</span> <span class="n">df</span><span class="p">[</span><span class="n">columns</span><span class="p">]</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s2">&quot;row_id&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+
+<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s2">&quot;display.float_format&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="si">{:,.2f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="o">.</span><span class="n">update</span><span class="p">({</span>
+    <span class="s2">&quot;figure.figsize&quot;</span><span class="p">:</span> <span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span>
+    <span class="s2">&quot;axes.spines.top&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="s2">&quot;axes.spines.right&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="s2">&quot;axes.grid&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s2">&quot;axes.axisbelow&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s2">&quot;grid.color&quot;</span><span class="p">:</span> <span class="s2">&quot;#e6e5e1&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;axes.prop_cycle&quot;</span><span class="p">:</span> <span class="n">plt</span><span class="o">.</span><span class="n">cycler</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;#2a78d6&quot;</span><span class="p">,</span> <span class="s2">&quot;#eb6834&quot;</span><span class="p">,</span> <span class="s2">&quot;#1baf7a&quot;</span><span class="p">]),</span>
+    <span class="s2">&quot;axes.titleweight&quot;</span><span class="p">:</span> <span class="s2">&quot;bold&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;axes.titlelocation&quot;</span><span class="p">:</span> <span class="s2">&quot;left&quot;</span><span class="p">,</span>
+<span class="p">})</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Setup complete.&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Setup complete.
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">df</span> <span class="o">=</span> <span class="n">load_orders</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Rows, columns:&quot;</span><span class="p">,</span> <span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Rows, columns: (6815, 22)
+</code></pre></div>
+<hr />
+<h2 id="part-2-what-load_orders-does">Part 2: What <code>load_orders()</code> does<a class="headerlink" href="#part-2-what-load_orders-does" title="Permanent link">&para;</a></h2>
+<p>In Lesson 1 you used <code>load_orders()</code> without looking inside. Now we open it up. You do not need to memorise this code; you need to know <strong>what was changed</strong> between the original file and <code>df</code>, so you can explain your numbers.</p>
+<p>The function does seven things:</p>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>What happens</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Reads the <strong>Orders</strong> and <strong>Returns</strong> sheets from the Excel file</td>
+<td>These are the raw tables</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Finds orders that have more than one Customer ID</td>
+<td>A known data issue, flagged before filtering</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Keeps orders placed from <strong>2023-01-01 to 2025-12-31</strong></td>
+<td>Gives the course a fixed, complete period</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Renames columns to short lowercase names</td>
+<td>Easier to type: <code>order_id</code> instead of <code>"Order ID"</code></td>
+</tr>
+<tr>
+<td>5</td>
+<td>Adds <code>returned_order_flag</code></td>
+<td>Marks orders on the returns list</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Adds <code>customer_order_conflict</code> and <code>customer_analysis_eligible</code></td>
+<td>Marks the customer-ID issue from step 2</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Adds <code>order_to_ship_days</code> and <code>order_month</code>, then keeps 22 columns sorted by <code>row_id</code></td>
+<td>Handy derived columns</td>
+</tr>
+</tbody>
+</table>
+<p>The cells below repeat each step on its own so you can see the effect.</p>
+<h3 id="step-1-read-the-raw-sheets">Step 1: Read the raw sheets<a class="headerlink" href="#step-1-read-the-raw-sheets" title="Permanent link">&para;</a></h3>
+<p><code>SOURCE_FILE</code> is the Excel file the setup cell downloaded. <code>pd.read_excel</code> reads one sheet into a DataFrame.</p>
+<div class="highlight"><pre><span></span><code><span class="n">raw</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">SOURCE_FILE</span><span class="p">,</span> <span class="n">sheet_name</span><span class="o">=</span><span class="s2">&quot;Orders&quot;</span><span class="p">)</span>
+<span class="n">returns</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">SOURCE_FILE</span><span class="p">,</span> <span class="n">sheet_name</span><span class="o">=</span><span class="s2">&quot;Returns&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Raw Orders sheet, rows and columns:&quot;</span><span class="p">,</span> <span class="n">raw</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Returns sheet, rows and columns:   &quot;</span><span class="p">,</span> <span class="n">returns</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Order dates in the raw file:&quot;</span><span class="p">,</span> <span class="n">raw</span><span class="p">[</span><span class="s2">&quot;Order Date&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()</span><span class="o">.</span><span class="n">date</span><span class="p">(),</span> <span class="s2">&quot;to&quot;</span><span class="p">,</span> <span class="n">raw</span><span class="p">[</span><span class="s2">&quot;Order Date&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span><span class="o">.</span><span class="n">date</span><span class="p">())</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Raw Orders sheet, rows and columns: (10194, 21)
+Returns sheet, rows and columns:    (296, 2)
+Order dates in the raw file: 2023-01-03 to 2026-12-30
+</code></pre></div>
+<p>The raw file has more rows than <code>df</code>, and its dates run further. The Returns sheet is just a list of order IDs:</p>
+<div class="highlight"><pre><span></span><code><span class="n">returns</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Order ID</th>
+      <th>Returned</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>US-2023-100762</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>US-2023-100867</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>US-2023-102652</td>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h3 id="step-2-find-orders-with-more-than-one-customer">Step 2: Find orders with more than one customer<a class="headerlink" href="#step-2-find-orders-with-more-than-one-customer" title="Permanent link">&para;</a></h3>
+<p>Every order should belong to one customer. The code counts the different Customer IDs inside each order and keeps the orders where that count is above 1. This is done on the <strong>whole raw file</strong>, before any filtering, so no conflict is hidden by the date filter.</p>
+<div class="highlight"><pre><span></span><code><span class="n">ids_per_order</span> <span class="o">=</span> <span class="n">raw</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;Order ID&quot;</span><span class="p">)[</span><span class="s2">&quot;Customer ID&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span>
+<span class="n">conflict_orders</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">ids_per_order</span><span class="p">[</span><span class="n">ids_per_order</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+<span class="n">conflict_orders</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>{&#39;CA-2025-121465&#39;, &#39;CA-2026-130494&#39;}
+</code></pre></div>
+<h3 id="step-3-keep-orders-placed-2023-to-2025">Step 3: Keep orders placed 2023 to 2025<a class="headerlink" href="#step-3-keep-orders-placed-2023-to-2025" title="Permanent link">&para;</a></h3>
+<p>The filter keeps rows whose <strong>Order Date</strong> is on or after 1 January 2023 and before 1 January 2026. It looks at the order date only.</p>
+<div class="highlight"><pre><span></span><code><span class="n">in_scope</span> <span class="o">=</span> <span class="p">(</span><span class="n">raw</span><span class="p">[</span><span class="s2">&quot;Order Date&quot;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="s2">&quot;2023-01-01&quot;</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">raw</span><span class="p">[</span><span class="s2">&quot;Order Date&quot;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="s2">&quot;2026-01-01&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Rows kept:   &quot;</span><span class="p">,</span> <span class="n">in_scope</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Rows dropped:&quot;</span><span class="p">,</span> <span class="p">(</span><span class="o">~</span><span class="n">in_scope</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Rows kept:    6815
+Rows dropped: 3379
+</code></pre></div>
+<p>The ship date is <strong>not</strong> filtered. An order placed late in 2025 may ship in early 2026, and it stays in, because the order date defines the period:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Lines in df that shipped in 2026:&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;ship_date&quot;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="s2">&quot;2026-01-01&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Lines in df that shipped in 2026: 34
+</code></pre></div>
+<h3 id="step-4-rename-columns">Step 4: Rename columns<a class="headerlink" href="#step-4-rename-columns" title="Permanent link">&para;</a></h3>
+<p><code>rename</code> swaps the original names (with spaces and capitals) for short names. Four raw columns are not kept at all, because the course does not need them:</p>
+<div class="highlight"><pre><span></span><code><span class="n">kept_raw</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Row ID&quot;</span><span class="p">,</span> <span class="s2">&quot;Order ID&quot;</span><span class="p">,</span> <span class="s2">&quot;Order Date&quot;</span><span class="p">,</span> <span class="s2">&quot;Ship Date&quot;</span><span class="p">,</span> <span class="s2">&quot;Ship Mode&quot;</span><span class="p">,</span> <span class="s2">&quot;Customer ID&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;Segment&quot;</span><span class="p">,</span> <span class="s2">&quot;Country/Region&quot;</span><span class="p">,</span> <span class="s2">&quot;Region&quot;</span><span class="p">,</span> <span class="s2">&quot;Category&quot;</span><span class="p">,</span> <span class="s2">&quot;Sub-Category&quot;</span><span class="p">,</span> <span class="s2">&quot;Product ID&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;Product Name&quot;</span><span class="p">,</span> <span class="s2">&quot;Sales&quot;</span><span class="p">,</span> <span class="s2">&quot;Quantity&quot;</span><span class="p">,</span> <span class="s2">&quot;Discount&quot;</span><span class="p">,</span> <span class="s2">&quot;Profit&quot;</span><span class="p">]</span>
+<span class="p">[</span><span class="n">col</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">raw</span><span class="o">.</span><span class="n">columns</span> <span class="k">if</span> <span class="n">col</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">kept_raw</span><span class="p">]</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>[&#39;Customer Name&#39;, &#39;City&#39;, &#39;State/Province&#39;, &#39;Postal Code&#39;]
+</code></pre></div>
+<h3 id="step-5-the-returns-flag">Step 5: The returns flag<a class="headerlink" href="#step-5-the-returns-flag" title="Permanent link">&para;</a></h3>
+<p><code>isin</code> asks, for each row, "is this order ID on the returns list?". The answer <code>True</code>/<code>False</code> is turned into <code>1</code>/<code>0</code>. A three-line order on the list gets a <code>1</code> on <strong>all three lines</strong>.</p>
+<h3 id="step-6-the-customer-conflict-flags">Step 6: The customer-conflict flags<a class="headerlink" href="#step-6-the-customer-conflict-flags" title="Permanent link">&para;</a></h3>
+<p>The same <code>isin</code> trick marks every line of a conflicted order with <code>customer_order_conflict = 1</code>. <code>customer_analysis_eligible</code> is the opposite (<code>1 - conflict</code>). These lines stay in all Sales and order counts; they are left out only when we later analyse individual customers.</p>
+<div class="highlight"><pre><span></span><code><span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;customer_order_conflict&quot;</span><span class="p">)[</span><span class="s2">&quot;order_id&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>customer_order_conflict
+0    3387
+1       1
+Name: order_id, dtype: int64
+</code></pre></div>
+<p>Compare this with the output of Step 2: not every conflicted order in the raw file was placed inside the course period, so fewer of them appear in <code>df</code>.</p>
+<h3 id="step-7-two-derived-date-columns">Step 7: Two derived date columns<a class="headerlink" href="#step-7-two-derived-date-columns" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>order_to_ship_days</code> = ship date minus order date, in whole days.</li>
+<li><code>order_month</code> = the first day of the order's month, used to group by month.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="n">df</span><span class="p">[[</span><span class="s2">&quot;order_id&quot;</span><span class="p">,</span> <span class="s2">&quot;order_date&quot;</span><span class="p">,</span> <span class="s2">&quot;ship_date&quot;</span><span class="p">,</span> <span class="s2">&quot;order_to_ship_days&quot;</span><span class="p">,</span> <span class="s2">&quot;order_month&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>order_id</th>
+      <th>order_date</th>
+      <th>ship_date</th>
+      <th>order_to_ship_days</th>
+      <th>order_month</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>US-2023-103800</td>
+      <td>2023-01-03</td>
+      <td>2023-01-07</td>
+      <td>4</td>
+      <td>2023-01-01</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>US-2023-112326</td>
+      <td>2023-01-04</td>
+      <td>2023-01-08</td>
+      <td>4</td>
+      <td>2023-01-01</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>US-2023-112326</td>
+      <td>2023-01-04</td>
+      <td>2023-01-08</td>
+      <td>4</td>
+      <td>2023-01-01</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<blockquote>
+<p><strong>Remember</strong></p>
+<p>The original Excel file is never changed. <code>load_orders()</code> builds a fresh, prepared copy every time you run it, so anyone can repeat your work and get the same table.</p>
+</blockquote>
+<hr />
+<h2 id="part-3-meet-the-data-dictionary">Part 3: Meet the data dictionary<a class="headerlink" href="#part-3-meet-the-data-dictionary" title="Permanent link">&para;</a></h2>
+<p>Every column has a job. Knowing that job tells you how to use it.</p>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>What it is</th>
+<th>Can you add it up?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>row_id</code></td>
+<td>Unique number for each order line</td>
+<td>No, it is an identifier</td>
+</tr>
+<tr>
+<td><code>order_id</code></td>
+<td>Order identifier; repeats across that order's lines</td>
+<td>No, count it with <code>nunique()</code></td>
+</tr>
+<tr>
+<td><code>order_date</code>, <code>ship_date</code></td>
+<td>Calendar dates</td>
+<td>No</td>
+</tr>
+<tr>
+<td><code>order_month</code></td>
+<td>First day of the order's month</td>
+<td>No, use it to group</td>
+</tr>
+<tr>
+<td><code>ship_mode</code></td>
+<td>Shipping service chosen</td>
+<td>No, use it to group</td>
+</tr>
+<tr>
+<td><code>customer_id</code></td>
+<td>Fictitious customer identifier</td>
+<td>No</td>
+</tr>
+<tr>
+<td><code>segment</code></td>
+<td>Customer group: Consumer, Corporate or Home Office</td>
+<td>No, use it to group</td>
+</tr>
+<tr>
+<td><code>country_region</code>, <code>region</code></td>
+<td>Location labels</td>
+<td>No, use them to group</td>
+</tr>
+<tr>
+<td><code>category</code>, <code>sub_category</code></td>
+<td>Product groups</td>
+<td>No, use them to group</td>
+</tr>
+<tr>
+<td><code>product_id</code>, <code>product_name</code></td>
+<td>Product identifier and name</td>
+<td>No</td>
+</tr>
+<tr>
+<td><code>sales</code></td>
+<td>Sales reported for the line, in source monetary units</td>
+<td><strong>Yes</strong></td>
+</tr>
+<tr>
+<td><code>quantity</code></td>
+<td>Number of items on the line</td>
+<td><strong>Yes</strong>, but it counts items, not orders</td>
+</tr>
+<tr>
+<td><code>profit</code></td>
+<td>Profit reported for the line (can be negative)</td>
+<td><strong>Yes</strong></td>
+</tr>
+<tr>
+<td><code>discount</code></td>
+<td>Discount value as given in the source</td>
+<td><strong>No</strong>, its base is not documented</td>
+</tr>
+<tr>
+<td><code>returned_order_flag</code></td>
+<td>1 if the order is on the returns list, else 0</td>
+<td>Not across lines (see Part 6)</td>
+</tr>
+<tr>
+<td><code>order_to_ship_days</code></td>
+<td>Days from order date to ship date</td>
+<td>Not as a total; it repeats on every line of an order</td>
+</tr>
+<tr>
+<td><code>customer_analysis_eligible</code>, <code>customer_order_conflict</code></td>
+<td>Flags for the customer-ID issue</td>
+<td>Used only for customer analysis later</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Discount is not a KPI</strong></p>
+<p>The source does not say what <code>discount</code> is a share of. Adding it up or averaging it produces a number nobody can interpret, so we do not use it as a measure.</p>
+</blockquote>
+<hr />
+<h2 id="part-4-quality-checklist">Part 4: Quality checklist<a class="headerlink" href="#part-4-quality-checklist" title="Permanent link">&para;</a></h2>
+<p>Three quick checks every analyst runs on a new table:</p>
+<ol>
+<li>Are any values missing?</li>
+<li>Is the row identifier really unique?</li>
+<li>Are the dates inside the stated period?</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Missing values in the whole table:&quot;</span><span class="p">,</span> <span class="n">df</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Is row_id unique?                 &quot;</span><span class="p">,</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;row_id&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">is_unique</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Order dates from&quot;</span><span class="p">,</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;order_date&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()</span><span class="o">.</span><span class="n">date</span><span class="p">(),</span> <span class="s2">&quot;to&quot;</span><span class="p">,</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;order_date&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span><span class="o">.</span><span class="n">date</span><span class="p">())</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Missing values in the whole table: 0
+Is row_id unique?                  True
+Order dates from 2023-01-03 to 2025-12-31
+</code></pre></div>
+<p>Copy each check and its result from the output above into your evidence log.</p>
+<hr />
+<h2 id="part-5-find-the-grain-and-count-orders">Part 5: Find the grain and count orders<a class="headerlink" href="#part-5-find-the-grain-and-count-orders" title="Permanent link">&para;</a></h2>
+<p><strong>Grain</strong> means: what does one row represent?</p>
+<p>Look at all the rows of one order:</p>
+<div class="highlight"><pre><span></span><code><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;order_id&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;US-2023-100762&quot;</span><span class="p">][[</span><span class="s2">&quot;row_id&quot;</span><span class="p">,</span> <span class="s2">&quot;order_id&quot;</span><span class="p">,</span> <span class="s2">&quot;segment&quot;</span><span class="p">,</span> <span class="s2">&quot;category&quot;</span><span class="p">,</span> <span class="s2">&quot;product_id&quot;</span><span class="p">,</span> <span class="s2">&quot;sales&quot;</span><span class="p">]]</span>
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>row_id</th>
+      <th>order_id</th>
+      <th>segment</th>
+      <th>category</th>
+      <th>product_id</th>
+      <th>sales</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1684</th>
+      <td>1685</td>
+      <td>US-2023-100762</td>
+      <td>Corporate</td>
+      <td>Office Supplies</td>
+      <td>OFF-AR-10000380</td>
+      <td>151.92</td>
+    </tr>
+    <tr>
+      <th>1688</th>
+      <td>1689</td>
+      <td>US-2023-100762</td>
+      <td>Corporate</td>
+      <td>Office Supplies</td>
+      <td>OFF-LA-10003930</td>
+      <td>196.62</td>
+    </tr>
+    <tr>
+      <th>1690</th>
+      <td>1691</td>
+      <td>US-2023-100762</td>
+      <td>Corporate</td>
+      <td>Office Supplies</td>
+      <td>OFF-PA-10001815</td>
+      <td>144.12</td>
+    </tr>
+    <tr>
+      <th>1691</th>
+      <td>1692</td>
+      <td>US-2023-100762</td>
+      <td>Corporate</td>
+      <td>Office Supplies</td>
+      <td>OFF-PA-10004082</td>
+      <td>15.96</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p>Same <code>order_id</code>, different <code>row_id</code> and product: each row is <strong>one product line within an order</strong>.</p>
+<blockquote>
+<p><strong>Write your grain statement</strong></p>
+<p>Complete this sentence in your log: <em>"One row in df represents one <strong><em>_</em>_ , identified by </strong>____ ."</em></p>
+</blockquote>
+<p>Predict before you run the next cell: will the number of rows equal the number of orders?</p>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Rows (order lines):&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Different orders:  &quot;</span><span class="p">,</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;order_id&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">())</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Rows (order lines): 6815
+Different orders:   3388
+</code></pre></div>
+<p>How many lines do orders usually have? <code>groupby("order_id").size()</code> counts the lines in each order; <code>value_counts()</code> then counts how many orders have 1 line, 2 lines, and so on.</p>
+<div class="highlight"><pre><span></span><code><span class="n">lines_per_order</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;order_id&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">size</span><span class="p">()</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">sort_index</span><span class="p">()</span>
+<span class="n">lines_per_order</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s2">&quot;bar&quot;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;How many lines each order has, orders placed 2023–2025&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Lines in the order&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Number of orders&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+<p><img alt="png" src="../02_trust_the_sales_table_files/02_trust_the_sales_table_26_0.png" /></p>
+<p>Many orders have one line, but plenty have several. That is why <code>len(df)</code> overstates the number of orders.</p>
+<hr />
+<h2 id="part-6-what-the-returns-flag-means">Part 6: What the returns flag means<a class="headerlink" href="#part-6-what-the-returns-flag-means" title="Permanent link">&para;</a></h2>
+<p><code>returned_order_flag</code> is <code>1</code> when an order is on the source's <strong>returns list</strong>. Be careful with what it does <strong>not</strong> tell you:</p>
+<ul>
+<li>It has <strong>no</strong> return date, quantity or refund amount.</li>
+<li>A <code>0</code> means <strong>not on the list</strong>. It does not prove the order was never returned.</li>
+<li>The flag repeats on <strong>every line</strong> of a listed order.</li>
+</ul>
+<p>The order you looked at in Part 5 is on the list. See how the flag repeats:</p>
+<div class="highlight"><pre><span></span><code><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;order_id&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;US-2023-100762&quot;</span><span class="p">][[</span><span class="s2">&quot;row_id&quot;</span><span class="p">,</span> <span class="s2">&quot;order_id&quot;</span><span class="p">,</span> <span class="s2">&quot;returned_order_flag&quot;</span><span class="p">]]</span>
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>row_id</th>
+      <th>order_id</th>
+      <th>returned_order_flag</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1684</th>
+      <td>1685</td>
+      <td>US-2023-100762</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1688</th>
+      <td>1689</td>
+      <td>US-2023-100762</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1690</th>
+      <td>1691</td>
+      <td>US-2023-100762</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1691</th>
+      <td>1692</td>
+      <td>US-2023-100762</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p>Now compare two ways of counting:</p>
+<div class="highlight"><pre><span></span><code><span class="n">flagged</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;returned_order_flag&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Sum of the flag (counts LINES):        &quot;</span><span class="p">,</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;returned_order_flag&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Distinct orders on the returns list:   &quot;</span><span class="p">,</span> <span class="n">flagged</span><span class="p">[</span><span class="s2">&quot;order_id&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">())</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Sum of the flag (counts LINES):         511
+Distinct orders on the returns list:    191
+</code></pre></div>
+<blockquote>
+<p><strong>A common mistake</strong></p>
+<p>Adding up <code>returned_order_flag</code> counts <strong>lines</strong> of listed orders, not orders. To count orders on the returns list, filter to flag 1 and use <code>nunique()</code> on <code>order_id</code>, as in the second line of the output above.</p>
+</blockquote>
+<p>Say "orders on the returns list", not "returned orders" or "return rate": the list tells us membership only.</p>
+<hr />
+<h2 id="part-7-check-one-order-by-hand">Part 7: Check one order by hand<a class="headerlink" href="#part-7-check-one-order-by-hand" title="Permanent link">&para;</a></h2>
+<p>Pick one order with several lines and add it up yourself.</p>
+<ol>
+<li>Show each line's <code>sales</code> and <code>profit</code>.</li>
+<li>Add the lines up on paper or with a calculator.</li>
+<li>Compare with what pandas says.</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="n">one_order</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;order_id&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;US-2023-100762&quot;</span><span class="p">]</span>
+<span class="n">one_order</span><span class="p">[[</span><span class="s2">&quot;row_id&quot;</span><span class="p">,</span> <span class="s2">&quot;product_id&quot;</span><span class="p">,</span> <span class="s2">&quot;sales&quot;</span><span class="p">,</span> <span class="s2">&quot;profit&quot;</span><span class="p">]]</span>
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>row_id</th>
+      <th>product_id</th>
+      <th>sales</th>
+      <th>profit</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1684</th>
+      <td>1685</td>
+      <td>OFF-AR-10000380</td>
+      <td>151.92</td>
+      <td>45.58</td>
+    </tr>
+    <tr>
+      <th>1688</th>
+      <td>1689</td>
+      <td>OFF-LA-10003930</td>
+      <td>196.62</td>
+      <td>96.34</td>
+    </tr>
+    <tr>
+      <th>1690</th>
+      <td>1691</td>
+      <td>OFF-PA-10001815</td>
+      <td>144.12</td>
+      <td>69.18</td>
+    </tr>
+    <tr>
+      <th>1691</th>
+      <td>1692</td>
+      <td>OFF-PA-10004082</td>
+      <td>15.96</td>
+      <td>7.98</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;pandas total sales: &quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">one_order</span><span class="p">[</span><span class="s2">&quot;sales&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span> <span class="mi">2</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;pandas total profit:&quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">one_order</span><span class="p">[</span><span class="s2">&quot;profit&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span> <span class="mi">2</span><span class="p">))</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>pandas total sales:  508.62
+pandas total profit: 219.08
+</code></pre></div>
+<p>Do your hand totals match the output above? Small differences in the last digit come from rounding.</p>
+<blockquote>
+<p><strong>Your turn:</strong> change the code in the next cell and run it again.</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="c1"># Hand-check a different order.</span>
+<span class="c1"># 1. Replace the order ID with another one that has several lines,</span>
+<span class="c1">#    for example one you saw in df.head(20).</span>
+<span class="c1"># 2. Add up the lines yourself, then compare with the totals printed below.</span>
+<span class="n">one_order</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;order_id&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;US-2023-100762&quot;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">one_order</span><span class="p">[[</span><span class="s2">&quot;row_id&quot;</span><span class="p">,</span> <span class="s2">&quot;product_id&quot;</span><span class="p">,</span> <span class="s2">&quot;sales&quot;</span><span class="p">,</span> <span class="s2">&quot;profit&quot;</span><span class="p">]])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;pandas total sales: &quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">one_order</span><span class="p">[</span><span class="s2">&quot;sales&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span> <span class="mi">2</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;pandas total profit:&quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">one_order</span><span class="p">[</span><span class="s2">&quot;profit&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span> <span class="mi">2</span><span class="p">))</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>      row_id       product_id  sales  profit
+1684    1685  OFF-AR-10000380 151.92   45.58
+1688    1689  OFF-LA-10003930 196.62   96.34
+1690    1691  OFF-PA-10001815 144.12   69.18
+1691    1692  OFF-PA-10004082  15.96    7.98
+pandas total sales:  508.62
+pandas total profit: 219.08
+</code></pre></div>
+<p>Record the order ID, your hand total and the pandas total in your log.</p>
+<hr />
+<h2 id="part-8-keep-a-preparation-log">Part 8: Keep a preparation log<a class="headerlink" href="#part-8-keep-a-preparation-log" title="Permanent link">&para;</a></h2>
+<p>Write down every change made to how the data is read or shaped, even small ones. You can keep the log in pandas too:</p>
+<div class="highlight"><pre><span></span><code><span class="n">prep_log</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([</span>
+    <span class="p">{</span><span class="s2">&quot;change&quot;</span><span class="p">:</span> <span class="s2">&quot;Kept orders placed 2023-01-01 to 2025-12-31&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;why&quot;</span><span class="p">:</span> <span class="s2">&quot;Fixed course period&quot;</span><span class="p">,</span> <span class="s2">&quot;checked&quot;</span><span class="p">:</span> <span class="s2">&quot;Min and max order_date&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;change&quot;</span><span class="p">:</span> <span class="s2">&quot;Counted orders with order_id.nunique()&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;why&quot;</span><span class="p">:</span> <span class="s2">&quot;Rows are order lines&quot;</span><span class="p">,</span> <span class="s2">&quot;checked&quot;</span><span class="p">:</span> <span class="s2">&quot;Compared with len(df); hand-checked one order&quot;</span><span class="p">},</span>
+<span class="p">])</span>
+<span class="n">prep_log</span>
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>change</th>
+      <th>why</th>
+      <th>checked</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Kept orders placed 2023-01-01 to 2025-12-31</td>
+      <td>Fixed course period</td>
+      <td>Min and max order_date</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Counted orders with order_id.nunique()</td>
+      <td>Rows are order lines</td>
+      <td>Compared with len(df); hand-checked one order</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<blockquote>
+<p><strong>Your turn:</strong> change the code in the next cell and run it again.</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="c1"># Add one more row to the log: the change you think matters most from Part 2.</span>
+<span class="c1"># Fill in the three texts, then run the cell.</span>
+<span class="n">prep_log</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">prep_log</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([</span>
+    <span class="p">{</span><span class="s2">&quot;change&quot;</span><span class="p">:</span> <span class="s2">&quot;...&quot;</span><span class="p">,</span> <span class="s2">&quot;why&quot;</span><span class="p">:</span> <span class="s2">&quot;...&quot;</span><span class="p">,</span> <span class="s2">&quot;checked&quot;</span><span class="p">:</span> <span class="s2">&quot;...&quot;</span><span class="p">},</span>
+<span class="p">])],</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">prep_log</span>
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>change</th>
+      <th>why</th>
+      <th>checked</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Kept orders placed 2023-01-01 to 2025-12-31</td>
+      <td>Fixed course period</td>
+      <td>Min and max order_date</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Counted orders with order_id.nunique()</td>
+      <td>Rows are order lines</td>
+      <td>Compared with len(df); hand-checked one order</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<hr />
+<h2 id="part-9-segment-versus-category">Part 9: Segment versus category<a class="headerlink" href="#part-9-segment-versus-category" title="Permanent link">&para;</a></h2>
+<p>For each segment: number of rows, number of distinct orders and total sales. <code>agg</code> computes several summaries at once.</p>
+<div class="highlight"><pre><span></span><code><span class="n">by_segment</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;segment&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">(</span>
+    <span class="n">rows</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;row_id&quot;</span><span class="p">,</span> <span class="s2">&quot;count&quot;</span><span class="p">),</span>
+    <span class="n">orders</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;order_id&quot;</span><span class="p">,</span> <span class="s2">&quot;nunique&quot;</span><span class="p">),</span>
+    <span class="n">sales</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;sales&quot;</span><span class="p">,</span> <span class="s2">&quot;sum&quot;</span><span class="p">),</span>
+<span class="p">)</span>
+<span class="n">by_segment</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>segment</th>
+      <th>rows</th>
+      <th>orders</th>
+      <th>sales</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Consumer</td>
+      <td>3586</td>
+      <td>1738</td>
+      <td>835,747.86</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Corporate</td>
+      <td>2084</td>
+      <td>1044</td>
+      <td>467,562.02</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Home Office</td>
+      <td>1145</td>
+      <td>606</td>
+      <td>277,656.95</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Sum of segment order counts:&quot;</span><span class="p">,</span> <span class="n">by_segment</span><span class="p">[</span><span class="s2">&quot;orders&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Overall distinct orders:    &quot;</span><span class="p">,</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;order_id&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">())</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Sum of segment order counts: 3388
+Overall distinct orders:     3388
+</code></pre></div>
+<p>The same table for product category:</p>
+<div class="highlight"><pre><span></span><code><span class="n">by_category</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;category&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">(</span>
+    <span class="n">rows</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;row_id&quot;</span><span class="p">,</span> <span class="s2">&quot;count&quot;</span><span class="p">),</span>
+    <span class="n">orders</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;order_id&quot;</span><span class="p">,</span> <span class="s2">&quot;nunique&quot;</span><span class="p">),</span>
+    <span class="n">sales</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;sales&quot;</span><span class="p">,</span> <span class="s2">&quot;sum&quot;</span><span class="p">),</span>
+<span class="p">)</span>
+<span class="n">by_category</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>category</th>
+      <th>rows</th>
+      <th>orders</th>
+      <th>sales</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Furniture</td>
+      <td>1488</td>
+      <td>1235</td>
+      <td>535,434.83</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Office Supplies</td>
+      <td>4093</td>
+      <td>2516</td>
+      <td>478,057.88</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Technology</td>
+      <td>1234</td>
+      <td>1028</td>
+      <td>567,474.11</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Sum of category order counts:&quot;</span><span class="p">,</span> <span class="n">by_category</span><span class="p">[</span><span class="s2">&quot;orders&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Overall distinct orders:     &quot;</span><span class="p">,</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;order_id&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">())</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Sum of category order counts: 4779
+Overall distinct orders:      3388
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">by_category</span><span class="p">[</span><span class="s2">&quot;orders&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sort_values</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s2">&quot;barh&quot;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Distinct orders containing each category&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;order_id&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">(),</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#555555&quot;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;All distinct orders&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Number of distinct orders&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+<p><img alt="png" src="../02_trust_the_sales_table_files/02_trust_the_sales_table_47_0.png" /></p>
+<p>Compare the two pairs of numbers in the outputs above.</p>
+<ul>
+<li>In this table every order has exactly one segment, so the segment counts add up to the overall total.</li>
+<li>One order can contain products from <strong>several categories</strong>. That order is counted once in each category it touches, so the category counts add up to <strong>more</strong> than the overall total.</li>
+</ul>
+<blockquote>
+<p><strong>Distinct counts do not always add up</strong></p>
+<p>Sales and Profit can be added across groups. Distinct order counts can only be added when every order belongs to exactly one group. Always recount distinct orders at the level you display.</p>
+<p><strong>Your turn:</strong> change the code in the next cell and run it again.</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="c1"># Try another grouping.</span>
+<span class="c1"># 1. Change &quot;category&quot; to &quot;region&quot;, then to &quot;sub_category&quot;.</span>
+<span class="c1"># 2. For each, compare the sum of order counts with the overall distinct orders.</span>
+<span class="c1">#    Which one behaves like segment, and which like category?</span>
+<span class="n">by_group</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;category&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">(</span>
+    <span class="n">rows</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;row_id&quot;</span><span class="p">,</span> <span class="s2">&quot;count&quot;</span><span class="p">),</span>
+    <span class="n">orders</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;order_id&quot;</span><span class="p">,</span> <span class="s2">&quot;nunique&quot;</span><span class="p">),</span>
+<span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">by_group</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Sum of order counts:    &quot;</span><span class="p">,</span> <span class="n">by_group</span><span class="p">[</span><span class="s2">&quot;orders&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Overall distinct orders:&quot;</span><span class="p">,</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;order_id&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">())</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>                 rows  orders
+category                     
+Furniture        1488    1235
+Office Supplies  4093    2516
+Technology       1234    1028
+Sum of order counts:     4779
+Overall distinct orders: 3388
+</code></pre></div>
+<hr />
+<h2 id="part-10-debugging-challenge">Part 10: Debugging challenge<a class="headerlink" href="#part-10-debugging-challenge" title="Permanent link">&para;</a></h2>
+<p>A colleague sends this code and summary:</p>
+<blockquote>
+<p><em>"We had <code>len(df)</code> orders, and <code>df["returned_order_flag"].sum()</code> of them were returned."</em></p>
+<p><strong>Your turn:</strong> change the code in the next cell and run it again.</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="c1"># The colleague&#39;s code. It runs, but both numbers answer the wrong question.</span>
+<span class="c1"># 1. Find the two mistakes.</span>
+<span class="c1"># 2. Fix each line so it counts ORDERS, not lines.</span>
+<span class="c1"># 3. Rewrite the sentence using careful wording about the returns list.</span>
+<span class="n">orders</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+<span class="n">returned</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;returned_order_flag&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;We had&quot;</span><span class="p">,</span> <span class="n">orders</span><span class="p">,</span> <span class="s2">&quot;orders, and&quot;</span><span class="p">,</span> <span class="n">returned</span><span class="p">,</span> <span class="s2">&quot;of them were returned.&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>We had 6815 orders, and 511 of them were returned.
+</code></pre></div>
+<blockquote>
+<p><strong>How would you check your fix?</strong></p>
+<p>Compare your corrected numbers with the outputs in Parts 5 and 6. Then pick one listed order and confirm it is counted once, not once per line.</p>
+</blockquote>
+<hr />
+<h2 id="exit-ticket">Exit ticket<a class="headerlink" href="#exit-ticket" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Your grain statement.</li>
+<li>Why rows and orders differ in this table.</li>
+<li>One thing the returns flag cannot tell you.</li>
+<li>One change <code>load_orders()</code> makes to the original file, and why.</li>
+</ol>
+<h2 id="after-the-lesson">After the lesson<a class="headerlink" href="#after-the-lesson" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Finish the grouping exercise in Part 9 and your hand-checked order.</li>
+<li>Complete your preparation log and quality checklist.</li>
+<li>Previous: <a href="../01_decision_to_evidence/">Lesson 1</a>. Next: <a href="../03_segment_comparison/">Lesson 3</a>, comparing segments with Sales, Profit and average order value.</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../01_decision_to_evidence/" class="btn btn-neutral float-left" title="Lesson 1: From Decision to Evidence"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../03_segment_comparison/" class="btn btn-neutral float-right" title="Lesson 3: Which Segment Deserves a Closer Look?">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Copyright &copy; 2026 - Aayush Raj Regmi</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../01_decision_to_evidence/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../03_segment_comparison/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

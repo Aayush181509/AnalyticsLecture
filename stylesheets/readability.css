@@ -77,3 +77,52 @@
     padding: 1.4em 1.2em;
   }
 }
+
+/* Python lessons: label printed under each code cell's result. */
+.rst-content .output-label {
+  margin: -0.6em 0 0.4em;
+  font-size: 0.8em;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #6a6a6a;
+}
+
+/* Lesson pages converted from notebooks (make convert-all). */
+.rst-content table.dataframe {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  border-collapse: collapse;
+  border: none;
+  font-size: 0.85em;
+  margin-bottom: 1.4em;
+}
+
+.rst-content table.dataframe th,
+.rst-content table.dataframe td {
+  padding: 6px 12px;
+  border: 1px solid #e1e4e5;
+  white-space: nowrap;
+}
+
+.rst-content table.dataframe thead th {
+  background: #f3f6f6;
+}
+
+/* Notebook callouts are written as blockquotes so they read well in Colab too. */
+.rst-content blockquote {
+  margin: 1.6em 0;
+  padding: 0.9em 1.2em;
+  border-left: 4px solid #2980b9;
+  background: #f3f8fc;
+}
+
+.rst-content blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+/* Text output printed by notebook cells. */
+.rst-content pre {
+  line-height: 1.5;
+}

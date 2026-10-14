@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>Lesson 1: From Decision to Evidence - Data Analytics</title>
+    <title>Tableau Lesson 1 (draft) - Data Analytics</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
@@ -13,7 +13,7 @@
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Lesson 1: From Decision to Evidence";
+        var mkdocs_page_name = "Tableau Lesson 1 (draft)";
         var mkdocs_page_input_path = "lessons/class-01.md";
         var mkdocs_page_url = null;
       </script>
@@ -173,11 +173,13 @@
     <ul>
     <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#stage-0-foundations">Stage 0: Foundations</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#stage-1-tableau-and-retail-data">Stage 1: Tableau and retail data</a>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#stage-1-python-and-retail-data">Stage 1: Python and retail data</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#stage-2-one-department-at-a-time">Stage 2: One department at a time</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#stage-3-bring-it-together">Stage 3: Bring it together</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#stage-4-tableau">Stage 4: Tableau</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#what-you-will-be-able-to-do">What you will be able to do</a>
     </li>
@@ -191,13 +193,13 @@
     <ul>
     <li class="toctree-l2"><a class="reference internal" href="../../course/setup/#what-you-need">What you need</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="../../course/setup/#install-tableau-desktop-public-edition">Install Tableau Desktop Public Edition</a>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/setup/#open-a-lesson-in-google-colab">Open a lesson in Google Colab</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="../../course/setup/#keep-your-data-safe">Keep your data safe</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="../../course/setup/#if-something-does-not-work">If something does not work</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="../../course/setup/#optional-python-path">Optional Python path</a>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/setup/#tableau-later">Tableau (later)</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="../../course/setup/#keep-an-evidence-log">Keep an evidence log</a>
     </li>
@@ -258,9 +260,226 @@
     </ul>
                 </li>
               </ul>
-              <p class="caption"><span class="caption-text">Lessons</span></p>
+              <p class="caption"><span class="caption-text">Python Lessons</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lectures/00_python_and_colab_basics/">Lesson 0: Python and Colab Basics</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../lectures/00_python_and_colab_basics/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lectures/00_python_and_colab_basics/#part-1-google-colab-in-two-minutes">Part 1: Google Colab in two minutes</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lectures/00_python_and_colab_basics/#part-2-values-and-variables">Part 2: Values and variables</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lectures/00_python_and_colab_basics/#part-3-tables-with-pandas">Part 3: Tables with pandas</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lectures/00_python_and_colab_basics/#part-4-select-filter-add-up-count">Part 4: Select, filter, add up, count</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lectures/00_python_and_colab_basics/#part-5-group-and-summarise">Part 5: Group and summarise</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lectures/00_python_and_colab_basics/#part-6-your-first-chart">Part 6: Your first chart</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lectures/00_python_and_colab_basics/#quick-reference">Quick reference</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lectures/00_python_and_colab_basics/#exit-ticket">Exit ticket</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lectures/01_decision_to_evidence/">Lesson 1: From Decision to Evidence</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../lectures/01_decision_to_evidence/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lectures/01_decision_to_evidence/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lectures/01_decision_to_evidence/#part-1-from-request-to-question">Part 1: From request to question</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lectures/01_decision_to_evidence/#part-2-load-the-data">Part 2: Load the data</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/01_decision_to_evidence/#how-big-is-it-and-what-types-are-the-columns">How big is it, and what types are the columns?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/01_decision_to_evidence/#which-dates-are-included">Which dates are included?</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lectures/01_decision_to_evidence/#part-3-rows-versus-orders">Part 3: Rows versus orders</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lectures/01_decision_to_evidence/#part-4-a-first-chart">Part 4: A first chart</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/01_decision_to_evidence/#add-a-filter">Add a filter</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lectures/01_decision_to_evidence/#part-5-your-turn">Part 5: Your turn</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lectures/01_decision_to_evidence/#part-6-challenge">Part 6: Challenge</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lectures/01_decision_to_evidence/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lectures/01_decision_to_evidence/#after-the-lesson">After the lesson</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lectures/02_trust_the_sales_table/">Lesson 2: Can We Trust the Sales Table?</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../lectures/02_trust_the_sales_table/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lectures/02_trust_the_sales_table/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lectures/02_trust_the_sales_table/#part-1-load-the-data">Part 1: Load the data</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lectures/02_trust_the_sales_table/#part-2-what-load_orders-does">Part 2: What load_orders() does</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/02_trust_the_sales_table/#step-1-read-the-raw-sheets">Step 1: Read the raw sheets</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/02_trust_the_sales_table/#step-2-find-orders-with-more-than-one-customer">Step 2: Find orders with more than one customer</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/02_trust_the_sales_table/#step-3-keep-orders-placed-2023-to-2025">Step 3: Keep orders placed 2023 to 2025</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/02_trust_the_sales_table/#step-4-rename-columns">Step 4: Rename columns</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/02_trust_the_sales_table/#step-5-the-returns-flag">Step 5: The returns flag</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/02_trust_the_sales_table/#step-6-the-customer-conflict-flags">Step 6: The customer-conflict flags</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/02_trust_the_sales_table/#step-7-two-derived-date-columns">Step 7: Two derived date columns</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lectures/02_trust_the_sales_table/#part-3-meet-the-data-dictionary">Part 3: Meet the data dictionary</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lectures/02_trust_the_sales_table/#part-4-quality-checklist">Part 4: Quality checklist</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lectures/02_trust_the_sales_table/#part-5-find-the-grain-and-count-orders">Part 5: Find the grain and count orders</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lectures/02_trust_the_sales_table/#part-6-what-the-returns-flag-means">Part 6: What the returns flag means</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lectures/02_trust_the_sales_table/#part-7-check-one-order-by-hand">Part 7: Check one order by hand</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lectures/02_trust_the_sales_table/#part-8-keep-a-preparation-log">Part 8: Keep a preparation log</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lectures/02_trust_the_sales_table/#part-9-segment-versus-category">Part 9: Segment versus category</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lectures/02_trust_the_sales_table/#part-10-debugging-challenge">Part 10: Debugging challenge</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lectures/02_trust_the_sales_table/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lectures/02_trust_the_sales_table/#after-the-lesson">After the lesson</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lectures/03_segment_comparison/">Lesson 3: Which Segment Deserves a Closer Look?</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../lectures/03_segment_comparison/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lectures/03_segment_comparison/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lectures/03_segment_comparison/#part-1-agree-the-measures">Part 1: Agree the measures</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/03_segment_comparison/#predict-first">Predict first</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lectures/03_segment_comparison/#part-2-the-five-measures-for-the-whole-table">Part 2: The five measures for the whole table</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lectures/03_segment_comparison/#part-3-the-segment-kpi-table">Part 3: The segment KPI table</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/03_segment_comparison/#step-1-totals-for-each-segment">Step 1: totals for each segment</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/03_segment_comparison/#step-2-the-two-ratios-from-each-segments-totals">Step 2: the two ratios, from each segment's totals</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/03_segment_comparison/#step-3-add-an-overall-row">Step 3: add an overall row</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/03_segment_comparison/#a-picture-of-the-profit-ratio">A picture of the profit ratio</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lectures/03_segment_comparison/#part-4-check-that-it-reconciles">Part 4: Check that it reconciles</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lectures/03_segment_comparison/#part-5-independent-work">Part 5: Independent work</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/03_segment_comparison/#a-filter-by-region">A. Filter by region</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/03_segment_comparison/#b-look-inside-one-category">B. Look inside one category</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/03_segment_comparison/#c-do-category-orders-add-up">C. Do category orders add up?</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lectures/03_segment_comparison/#part-6-debugging-challenge">Part 6: Debugging challenge</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lectures/03_segment_comparison/#part-7-make-a-recommendation">Part 7: Make a recommendation</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lectures/03_segment_comparison/#validation-checklist">Validation checklist</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lectures/03_segment_comparison/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lectures/03_segment_comparison/#after-the-lesson">After the lesson</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lectures/04_trends_returns_dashboard/">Lesson 4: Trends, Returns and a Decision Dashboard</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../lectures/04_trends_returns_dashboard/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lectures/04_trends_returns_dashboard/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lectures/04_trends_returns_dashboard/#before-you-start">Before you start</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lectures/04_trends_returns_dashboard/#part-1-the-monthly-trend">Part 1: The monthly trend</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/04_trends_returns_dashboard/#check-that-no-month-is-missing">Check that no month is missing</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/04_trends_returns_dashboard/#one-line-per-segment">One line per segment</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/04_trends_returns_dashboard/#is-there-a-seasonal-pattern">Is there a seasonal pattern?</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lectures/04_trends_returns_dashboard/#part-2-two-kinds-of-growth">Part 2: Two kinds of growth</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/04_trends_returns_dashboard/#where-are-the-blanks">Where are the blanks?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/04_trends_returns_dashboard/#see-the-difference-on-a-chart">See the difference on a chart</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/04_trends_returns_dashboard/#which-one-is-fair">Which one is fair?</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lectures/04_trends_returns_dashboard/#part-3-filtering-can-remove-the-comparison">Part 3: Filtering can remove the comparison</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lectures/04_trends_returns_dashboard/#part-4-the-returns-list">Part 4: The returns list</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lectures/04_trends_returns_dashboard/#part-5-build-the-dashboard">Part 5: Build the dashboard</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/04_trends_returns_dashboard/#design-checks">Design checks</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lectures/04_trends_returns_dashboard/#part-6-your-turn">Part 6: Your turn</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/04_trends_returns_dashboard/#1-redraw-the-dashboard-for-one-region">1. Redraw the dashboard for one region</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/04_trends_returns_dashboard/#2-one-segment-over-three-years">2. One segment over three years</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/04_trends_returns_dashboard/#3-growth-for-one-segment">3. Growth for one segment</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lectures/04_trends_returns_dashboard/#part-7-debugging-challenge">Part 7: Debugging challenge</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lectures/04_trends_returns_dashboard/#part-8-recommend-a-test">Part 8: Recommend a test</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lectures/04_trends_returns_dashboard/#validation-checklist">Validation checklist</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lectures/04_trends_returns_dashboard/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lectures/04_trends_returns_dashboard/#after-the-lesson">After the lesson</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Tableau (Coming Later)</span></p>
               <ul class="current">
-                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Lesson 1: From Decision to Evidence</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Tableau Lesson 1 (draft)</a>
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#the-business-decision">The business decision</a>
     </li>
@@ -298,7 +517,7 @@
     </li>
     </ul>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../class-02/">Lesson 2: Can We Trust the Sales Table?</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../class-02/">Tableau Lesson 2 (draft)</a>
     <ul>
     <li class="toctree-l2"><a class="reference internal" href="../class-02/#the-business-decision">The business decision</a>
     </li>
@@ -334,7 +553,7 @@
     </li>
     </ul>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../class-03/">Lesson 3: Which Segment Deserves a Closer Look?</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../class-03/">Tableau Lesson 3 (draft)</a>
     <ul>
     <li class="toctree-l2"><a class="reference internal" href="../class-03/#the-business-decision">The business decision</a>
     </li>
@@ -374,7 +593,7 @@
     </li>
     </ul>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../class-04/">Lesson 4: Trends, Returns and a Decision Dashboard</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../class-04/">Tableau Lesson 4 (draft)</a>
     <ul>
     <li class="toctree-l2"><a class="reference internal" href="../class-04/#the-business-decision">The business decision</a>
     </li>
@@ -440,7 +659,7 @@
     </li>
     <li class="toctree-l2"><a class="reference internal" href="../lesson-template/#10-make-a-recommendation">10. Make a recommendation</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="../lesson-template/#11-optional-python-connection">11. Optional Python connection</a>
+    <li class="toctree-l2"><a class="reference internal" href="../lesson-template/#11-connection-to-the-other-tool">11. Connection to the other tool</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="../lesson-template/#12-submit-and-reflect">12. Submit and reflect</a>
     </li>
@@ -461,8 +680,8 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
-          <li class="breadcrumb-item">Lessons</li>
-      <li class="breadcrumb-item active">Lesson 1: From Decision to Evidence</li>
+          <li class="breadcrumb-item">Tableau (Coming Later)</li>
+      <li class="breadcrumb-item active">Tableau Lesson 1 (draft)</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -471,13 +690,14 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="lesson-1-from-decision-to-evidence">Lesson 1: From decision to evidence<a class="headerlink" href="#lesson-1-from-decision-to-evidence" title="Permanent link">&para;</a></h1>
+                <h1 id="tableau-lesson-1-from-decision-to-evidence">Tableau Lesson 1: From decision to evidence<a class="headerlink" href="#tableau-lesson-1-from-decision-to-evidence" title="Permanent link">&para;</a></h1>
 <p class="lead">
 Turn a vague business request into a clear question, open your first dataset in Tableau, and build a first chart you can explain.
 </p>
 
 <div class="admonition warning">
-<p class="admonition-title">Draft lesson</p>
+<p class="admonition-title">Draft lesson: Tableau section (coming later)</p>
+<p>The course currently teaches this lesson in Python: see <a href="../../lectures/01_decision_to_evidence/">Python Lesson 1</a>. This Tableau version will be completed in the later Tableau section.</p>
 <p>The Tableau steps on this page have not yet been rehearsed on the course version of Tableau. Menu names may differ slightly on your computer. Your facilitator will confirm them in class.</p>
 </div>
 <hr />
@@ -679,8 +899,8 @@ Turn a vague business request into a clear question, open your first dataset in 
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../../cases/" class="btn btn-neutral float-left" title="Business Cases"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../class-02/" class="btn btn-neutral float-right" title="Lesson 2: Can We Trust the Sales Table?">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../../lectures/04_trends_returns_dashboard/" class="btn btn-neutral float-left" title="Lesson 4: Trends, Returns and a Decision Dashboard"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../class-02/" class="btn btn-neutral float-right" title="Tableau Lesson 2 (draft)">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -704,7 +924,7 @@ Turn a vague business request into a clear question, open your first dataset in 
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../../cases/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../../lectures/04_trends_returns_dashboard/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
       <span><a href="../class-02/" style="color: #fcfcfc">Next &raquo;</a></span>

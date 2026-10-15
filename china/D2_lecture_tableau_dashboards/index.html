@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>Lecture: Python and Jupyter basics - Data Analytics</title>
+    <title>Lecture: Building dashboards in Tableau - Data Analytics</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
@@ -13,8 +13,8 @@
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Lecture: Python and Jupyter basics";
-        var mkdocs_page_input_path = "china/D1_lecture_python_jupyter_basics.md";
+        var mkdocs_page_name = "Lecture: Building dashboards in Tableau";
+        var mkdocs_page_input_path = "china/D2_lecture_tableau_dashboards.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -1209,6 +1209,8 @@
     </li>
     <li class="toctree-l2"><a class="reference internal" href="../#course-learning-outcomes">Course learning outcomes</a>
     </li>
+    <li class="toctree-l2"><a class="reference internal" href="../#how-the-course-is-organised">How the course is organised</a>
+    </li>
     <li class="toctree-l2"><a class="reference internal" href="../#graded-work">Graded work</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="../#main-textbook">Main textbook</a>
@@ -1217,9 +1219,11 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../schedule/">Schedule</a>
     <ul>
-    <li class="toctree-l2"><a class="reference internal" href="../schedule/#daily-timetable">Daily timetable</a>
+    <li class="toctree-l2"><a class="reference internal" href="../schedule/#daily-timetable-on-campus">Daily timetable on campus</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="../schedule/#week-1">Week 1</a>
+    <li class="toctree-l2"><a class="reference internal" href="../schedule/#pre-class-week-online-before-tuesday-10-november">Pre-class week (online, before Tuesday 10 November)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../schedule/#in-class-module-1">In-class Module 1</a>
         <ul>
     <li class="toctree-l3"><a class="reference internal" href="../schedule/#day-1-tuesday-10-november">Day 1 · Tuesday 10 November</a>
     </li>
@@ -1231,7 +1235,7 @@
     </li>
         </ul>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="../schedule/#week-2">Week 2</a>
+    <li class="toctree-l2"><a class="reference internal" href="../schedule/#in-class-module-2">In-class Module 2</a>
         <ul>
     <li class="toctree-l3"><a class="reference internal" href="../schedule/#day-4-monday-16-november">Day 4 · Monday 16 November</a>
     </li>
@@ -1243,7 +1247,7 @@
     </li>
         </ul>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="../schedule/#after-the-last-teaching-day">After the last teaching day</a>
+    <li class="toctree-l2"><a class="reference internal" href="../schedule/#post-class-week-and-deadlines">Post-class week and deadlines</a>
     </li>
     </ul>
                   </li>
@@ -1262,31 +1266,81 @@
     <li class="toctree-l2"><a class="reference internal" href="../setup/#5-excel">5. Excel</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="../setup/#running-and-submitting-a-notebook">Running and submitting a notebook</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../setup/#combining-pdfs-without-internet">Combining PDFs without internet</a>
+    </li>
+        </ul>
     </li>
     </ul>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../00_setup_check/">Setup check</a>
+                  <li class="toctree-l1"><a class="reference internal" >Pre-class (online)</a>
     <ul>
-    <li class="toctree-l2"><a class="reference internal" href="../00_setup_check/#how-to-use-it">How to use it</a>
+                <li class="toctree-l2"><a class="reference internal" href="../00_setup_check/">Setup check</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../00_setup_check/#how-to-use-it">How to use it</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="../00_setup_check/#1-python-version">1. Python version</a>
+    <li class="toctree-l3"><a class="reference internal" href="../00_setup_check/#1-python-version">1. Python version</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="../00_setup_check/#2-packages">2. Packages</a>
+    <li class="toctree-l3"><a class="reference internal" href="../00_setup_check/#2-packages">2. Packages</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="../00_setup_check/#3-data-files">3. Data files</a>
+    <li class="toctree-l3"><a class="reference internal" href="../00_setup_check/#3-data-files">3. Data files</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="../00_setup_check/#4-text-tools-nltk-offline">4. Text tools (NLTK), offline</a>
+    <li class="toctree-l3"><a class="reference internal" href="../00_setup_check/#4-text-tools-nltk-offline">4. Text tools (NLTK), offline</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="../00_setup_check/#5-the-co2-time-series">5. The CO₂ time series</a>
+    <li class="toctree-l3"><a class="reference internal" href="../00_setup_check/#5-the-co2-time-series">5. The CO₂ time series</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="../00_setup_check/#6-a-test-chart">6. A test chart</a>
+    <li class="toctree-l3"><a class="reference internal" href="../00_setup_check/#6-a-test-chart">6. A test chart</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="../00_setup_check/#summary">Summary</a>
+    <li class="toctree-l3"><a class="reference internal" href="../00_setup_check/#summary">Summary</a>
     </li>
     </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../00_preclass_python_jupyter_basics/">Python and Jupyter basics</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../00_preclass_python_jupyter_basics/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../00_preclass_python_jupyter_basics/#part-1-a-tour-of-jupyterlab">Part 1: A tour of JupyterLab</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../00_preclass_python_jupyter_basics/#part-2-python-essentials">Part 2: Python essentials</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../00_preclass_python_jupyter_basics/#part-3-dataframes-with-pandas">Part 3: DataFrames with pandas</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../00_preclass_python_jupyter_basics/#part-4-data-types-and-levels-of-measurement">Part 4: Data types and levels of measurement</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../00_preclass_python_jupyter_basics/#part-5-what-does-a-row-mean">Part 5: What does a row mean?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../00_preclass_python_jupyter_basics/#part-6-a-first-chart">Part 6: A first chart</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../00_preclass_python_jupyter_basics/#quick-reference">Quick reference</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../00_preclass_python_jupyter_basics/#summary">Summary</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../00_preclass_python_jupyter_basics/#quiz">Quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../00_preclass_python_jupyter_basics/#next-activity-1">Next: Activity 1</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../00_preclass_activity1_readiness/">Activity 1: Readiness check</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../00_preclass_activity1_readiness/#what-you-will-do">What you will do</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../00_preclass_activity1_readiness/#part-a-exploratory-analysis-in-jupyter">Part A: Exploratory analysis in Jupyter</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../00_preclass_activity1_readiness/#part-b-tableau-readiness">Part B: Tableau readiness</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../00_preclass_activity1_readiness/#part-c-submission">Part C: Submission</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../00_preclass_activity1_readiness/#checklist-before-you-upload">Checklist before you upload</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../00_preclass_activity1_readiness/#how-it-is-marked">How it is marked</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" >Day 1 · Tue 10 Nov</a>
-    <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" >Day 1 · Tue 10 Nov</a>
+    <ul>
                 <li class="toctree-l2"><a class="reference internal" href="../D1_lecture_data_driven_decisions/">Lecture: Data-driven decisions</a>
     <ul>
     <li class="toctree-l3"><a class="reference internal" href="../D1_lecture_data_driven_decisions/#what-you-will-be-able-to-do">What you will be able to do</a>
@@ -1313,45 +1367,293 @@
     </li>
     </ul>
                 </li>
-                <li class="toctree-l2 current"><a class="reference internal current" href="#">Lecture: Python and Jupyter basics</a>
-    <ul class="current">
-    <li class="toctree-l3"><a class="reference internal" href="#what-you-will-be-able-to-do">What you will be able to do</a>
+                <li class="toctree-l2"><a class="reference internal" href="../D1_lecture_exploratory_analysis/">Lecture: Exploring data in Python</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../D1_lecture_exploratory_analysis/#what-you-will-be-able-to-do">What you will be able to do</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#part-1-a-tour-of-jupyterlab">Part 1: A tour of JupyterLab</a>
+    <li class="toctree-l3"><a class="reference internal" href="../D1_lecture_exploratory_analysis/#recap-this-morning">Recap: this morning</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#part-2-python-essentials">Part 2: Python essentials</a>
+    <li class="toctree-l3"><a class="reference internal" href="../D1_lecture_exploratory_analysis/#part-1-the-exploration-routine">Part 1: The exploration routine</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#part-3-dataframes-with-pandas">Part 3: DataFrames with pandas</a>
+    <li class="toctree-l3"><a class="reference internal" href="../D1_lecture_exploratory_analysis/#part-2-structure-and-data-quality">Part 2: Structure and data quality</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#part-4-data-types-and-levels-of-measurement">Part 4: Data types and levels of measurement</a>
+    <li class="toctree-l3"><a class="reference internal" href="../D1_lecture_exploratory_analysis/#part-3-distributions-and-skew">Part 3: Distributions and skew</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#part-5-what-does-a-row-mean">Part 5: What does a row mean?</a>
+    <li class="toctree-l3"><a class="reference internal" href="../D1_lecture_exploratory_analysis/#part-4-pivot-tables-and-groupby">Part 4: Pivot tables and groupby</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#part-6-a-first-chart">Part 6: A first chart</a>
+    <li class="toctree-l3"><a class="reference internal" href="../D1_lecture_exploratory_analysis/#part-5-correlation-and-the-heatmap">Part 5: Correlation and the heatmap</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#quick-reference">Quick reference</a>
+    <li class="toctree-l3"><a class="reference internal" href="../D1_lecture_exploratory_analysis/#part-6-confounding-and-simpsons-paradox">Part 6: Confounding and Simpson's paradox</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#summary">Summary</a>
+    <li class="toctree-l3"><a class="reference internal" href="../D1_lecture_exploratory_analysis/#part-7-charts-for-large-datasets">Part 7: Charts for large datasets</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#quiz">Quiz</a>
+    <li class="toctree-l3"><a class="reference internal" href="../D1_lecture_exploratory_analysis/#summary">Summary</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#in-the-lab">In the lab</a>
+    <li class="toctree-l3"><a class="reference internal" href="../D1_lecture_exploratory_analysis/#quick-reference">Quick reference</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D1_lecture_exploratory_analysis/#quiz-ready-for-the-lab">Quiz: ready for the lab?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D1_lecture_exploratory_analysis/#in-the-lab">In the lab</a>
     </li>
     </ul>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="../D1_lab_activity1_readiness/">Lab: Activity 1 readiness check</a>
+                <li class="toctree-l2"><a class="reference internal" href="../D1_lab_lab1_diamonds/">Lab 1: Data exploration</a>
     <ul>
-    <li class="toctree-l3"><a class="reference internal" href="../D1_lab_activity1_readiness/#what-you-will-do">What you will do</a>
+    <li class="toctree-l3"><a class="reference internal" href="../D1_lab_lab1_diamonds/#the-business-scenario">The business scenario</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="../D1_lab_activity1_readiness/#part-a-exploratory-analysis-in-jupyter">Part A: Exploratory analysis in Jupyter</a>
+    <li class="toctree-l3"><a class="reference internal" href="../D1_lab_lab1_diamonds/#part-1-load-the-libraries-and-the-data">Part 1: Load the libraries and the data</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="../D1_lab_activity1_readiness/#part-b-tableau-readiness">Part B: Tableau readiness</a>
+    <li class="toctree-l3"><a class="reference internal" href="../D1_lab_lab1_diamonds/#part-2-structural-inspection-and-data-quality">Part 2: Structural inspection and data quality</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="../D1_lab_activity1_readiness/#part-c-submission">Part C: Submission</a>
+    <li class="toctree-l3"><a class="reference internal" href="../D1_lab_lab1_diamonds/#part-3-pivot-table-average-price-by-cut-and-colour">Part 3: Pivot table — average price by cut and colour</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="../D1_lab_activity1_readiness/#checklist-before-you-upload">Checklist before you upload</a>
+    <li class="toctree-l3"><a class="reference internal" href="../D1_lab_lab1_diamonds/#part-4-visualising-more-than-50000-diamonds">Part 4: Visualising more than 50,000 diamonds</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="../D1_lab_activity1_readiness/#how-it-is-marked">How it is marked</a>
+    <li class="toctree-l3"><a class="reference internal" href="../D1_lab_lab1_diamonds/#part-5-questions">Part 5: Questions</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D1_lab_lab1_diamonds/#going-further-not-graded">Going further (not graded)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D1_lab_lab1_diamonds/#part-6-export-and-submit">Part 6: Export and submit</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D1_lab_lab1_diamonds/#checklist-before-you-upload">Checklist before you upload</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D1_lab_lab1_diamonds/#how-it-is-marked">How it is marked</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >Day 2 · Wed 11 Nov</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../D2_lecture_visualisation_communication/">Lecture: Visualising and communicating results</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../D2_lecture_visualisation_communication/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D2_lecture_visualisation_communication/#recap-day-1">Recap: Day 1</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D2_lecture_visualisation_communication/#part-1-choose-the-chart-from-the-task">Part 1: Choose the chart from the task</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D2_lecture_visualisation_communication/#part-2-how-accurately-we-read-encodings">Part 2: How accurately we read encodings</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D2_lecture_visualisation_communication/#part-3-pre-attentive-attributes">Part 3: Pre-attentive attributes</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D2_lecture_visualisation_communication/#part-4-data-ink-and-decluttering">Part 4: Data-ink and decluttering</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D2_lecture_visualisation_communication/#part-5-gestalt-what-belongs-together">Part 5: Gestalt: what belongs together</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D2_lecture_visualisation_communication/#part-6-colour-with-a-job-and-accessibility">Part 6: Colour with a job, and accessibility</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D2_lecture_visualisation_communication/#part-7-honest-axes-and-misleading-charts">Part 7: Honest axes and misleading charts</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D2_lecture_visualisation_communication/#part-8-message-titles-annotation-and-small-multiples">Part 8: Message titles, annotation and small multiples</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D2_lecture_visualisation_communication/#part-9-communicating-results-audience-big-idea-story">Part 9: Communicating results: audience, big idea, story</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D2_lecture_visualisation_communication/#part-10-the-challenger-case">Part 10: The Challenger case</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D2_lecture_visualisation_communication/#part-11-dashboards-and-kpis">Part 11: Dashboards and KPIs</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D2_lecture_visualisation_communication/#part-12-marketing-analytics">Part 12: Marketing analytics</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D2_lecture_visualisation_communication/#summary">Summary</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D2_lecture_visualisation_communication/#closing-quiz">Closing quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D2_lecture_visualisation_communication/#this-afternoon">This afternoon</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Lecture: Building dashboards in Tableau</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#part-1-the-tableau-workspace">Part 1: The Tableau workspace</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#part-2-connecting-to-data">Part 2: Connecting to data</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#part-3-dimensions-and-measures-discrete-and-continuous">Part 3: Dimensions and measures, discrete and continuous</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#part-4-aggregation-and-the-level-of-detail">Part 4: Aggregation and the level of detail</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#part-5-the-marks-card">Part 5: The Marks card</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#part-6-filters">Part 6: Filters</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#part-7-calculated-fields-and-a-ratio-kpi">Part 7: Calculated fields and a ratio KPI</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#part-8-from-sheets-to-a-dashboard">Part 8: From sheets to a dashboard</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#part-9-actions-making-the-dashboard-interactive">Part 9: Actions: making the dashboard interactive</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#part-10-formatting-for-the-reader">Part 10: Formatting for the reader</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#part-11-saving-printing-to-pdf-and-publishing">Part 11: Saving, printing to PDF and publishing</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#summary">Summary</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#closing-quiz">Closing quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#part-12-assignment-1-briefing">Part 12: Assignment 1 briefing</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../D2_lab_lab2_dashboard/">Lab 2: Dashboard creation</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../D2_lab_lab2_dashboard/#the-business-problem">The business problem</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D2_lab_lab2_dashboard/#before-you-start">Before you start</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D2_lab_lab2_dashboard/#part-1-connect-to-the-data-core">Part 1: Connect to the data (Core)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D2_lab_lab2_dashboard/#part-2-build-three-worksheets-core">Part 2: Build three worksheets (Core)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D2_lab_lab2_dashboard/#part-3-assemble-the-interactive-dashboard-core">Part 3: Assemble the interactive dashboard (Core)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D2_lab_lab2_dashboard/#part-4-answer-the-business-questions-core">Part 4: Answer the business questions (Core)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D2_lab_lab2_dashboard/#part-5-export-combine-and-submit-core">Part 5: Export, combine and submit (Core)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D2_lab_lab2_dashboard/#part-6-improve-the-design-stretch-optional">Part 6: Improve the design (Stretch, optional)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D2_lab_lab2_dashboard/#part-7-add-a-second-action-challenge-optional">Part 7: Add a second action (Challenge, optional)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D2_lab_lab2_dashboard/#how-this-lab-is-marked">How this lab is marked</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D2_lab_lab2_dashboard/#validation-checklist">Validation checklist</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D2_lab_lab2_dashboard/#exit-ticket">Exit ticket</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../D2_assignment1_tips_report/">Assignment 1: Descriptive analytics report</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../D2_assignment1_tips_report/#the-scenario">The scenario</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D2_assignment1_tips_report/#what-you-must-do">What you must do</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D2_assignment1_tips_report/#part-1-the-analysis">Part 1: The analysis</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D2_assignment1_tips_report/#part-2-the-business-report">Part 2: The business report</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D2_assignment1_tips_report/#part-3-export-and-submit">Part 3: Export and submit</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D2_assignment1_tips_report/#how-it-is-marked">How it is marked</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D2_assignment1_tips_report/#final-checklist">Final checklist</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Day 3 · Thu 12 Nov</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../D3_lecture_text_mining/">Lecture: Text mining</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../D3_lecture_text_mining/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D3_lecture_text_mining/#recap-day-2">Recap: Day 2</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D3_lecture_text_mining/#part-1-unstructured-text-and-the-text-mining-routine">Part 1: Unstructured text and the text-mining routine</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D3_lecture_text_mining/#part-2-tokenising">Part 2: Tokenising</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D3_lecture_text_mining/#part-3-stopwords">Part 3: Stopwords</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D3_lecture_text_mining/#part-4-word-frequency">Part 4: Word frequency</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D3_lecture_text_mining/#part-5-word-clouds-and-word-pairs">Part 5: Word clouds and word pairs</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D3_lecture_text_mining/#part-6-sentiment-with-vader">Part 6: Sentiment with VADER</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D3_lecture_text_mining/#part-7-checking-the-scores-against-star-ratings">Part 7: Checking the scores against star ratings</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D3_lecture_text_mining/#part-8-from-reviews-to-a-decision">Part 8: From reviews to a decision</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D3_lecture_text_mining/#summary">Summary</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D3_lecture_text_mining/#quick-reference">Quick reference</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D3_lecture_text_mining/#closing-quiz">Closing quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D3_lecture_text_mining/#this-afternoon">This afternoon</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../D3_lecture_forecasting/">Lecture: Forecasting</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../D3_lecture_forecasting/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D3_lecture_forecasting/#part-1-why-forecast-and-the-words-we-use">Part 1: Why forecast, and the words we use</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D3_lecture_forecasting/#part-2-the-data-co2-at-mauna-loa">Part 2: The data: CO₂ at Mauna Loa</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D3_lecture_forecasting/#part-3-trend-seasonality-and-decomposition">Part 3: Trend, seasonality and decomposition</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D3_lecture_forecasting/#part-4-moving-averages">Part 4: Moving averages</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D3_lecture_forecasting/#part-5-train-and-test-in-time-order">Part 5: Train and test in time order</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D3_lecture_forecasting/#part-6-measuring-forecast-error-and-baselines">Part 6: Measuring forecast error, and baselines</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D3_lecture_forecasting/#part-7-exponential-smoothing">Part 7: Exponential smoothing</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D3_lecture_forecasting/#part-8-the-arima-idea">Part 8: The ARIMA idea</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D3_lecture_forecasting/#part-9-forecast-intervals">Part 9: Forecast intervals</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D3_lecture_forecasting/#part-10-choosing-a-model-and-making-the-decision">Part 10: Choosing a model and making the decision</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D3_lecture_forecasting/#summary">Summary</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D3_lecture_forecasting/#quick-reference">Quick reference</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D3_lecture_forecasting/#closing-quiz">Closing quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D3_lecture_forecasting/#this-afternoon">This afternoon</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../D3_lab_lab3_text_mining/">Lab 3: Text mining</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../D3_lab_lab3_text_mining/#the-business-scenario">The business scenario</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D3_lab_lab3_text_mining/#part-1-set-up-nltk-and-load-the-reviews">Part 1: Set up NLTK and load the reviews</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D3_lab_lab3_text_mining/#part-2-text-preprocessing-and-key-terms">Part 2: Text preprocessing and key terms</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D3_lab_lab3_text_mining/#part-3-sentiment-analysis-with-vader">Part 3: Sentiment analysis with VADER</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D3_lab_lab3_text_mining/#part-4-questions">Part 4: Questions</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D3_lab_lab3_text_mining/#going-further-not-graded">Going further (not graded)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D3_lab_lab3_text_mining/#part-5-export-and-submit">Part 5: Export and submit</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D3_lab_lab3_text_mining/#checklist-before-you-upload">Checklist before you upload</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D3_lab_lab3_text_mining/#how-it-is-marked">How it is marked</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../D3_lab_lab4_forecasting/">Lab 4: Forecasting</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../D3_lab_lab4_forecasting/#the-business-scenario">The business scenario</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D3_lab_lab4_forecasting/#part-1-load-the-data-and-test-for-stationarity">Part 1: Load the data and test for stationarity</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D3_lab_lab4_forecasting/#part-2-traintest-split-in-time-order">Part 2: Train/test split in time order</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D3_lab_lab4_forecasting/#part-3-sarima-model-and-accuracy">Part 3: SARIMA model and accuracy</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D3_lab_lab4_forecasting/#part-4-questions">Part 4: Questions</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D3_lab_lab4_forecasting/#going-further-not-graded">Going further (not graded)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D3_lab_lab4_forecasting/#part-5-export-and-submit">Part 5: Export and submit</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D3_lab_lab4_forecasting/#checklist-before-you-upload">Checklist before you upload</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D3_lab_lab4_forecasting/#how-it-is-marked">How it is marked</a>
     </li>
     </ul>
                 </li>
@@ -1562,8 +1864,8 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
           <li class="breadcrumb-item">DATA 300 (China Classroom)</li>
-          <li class="breadcrumb-item">Day 1 · Tue 10 Nov</li>
-      <li class="breadcrumb-item active">Lecture: Python and Jupyter basics</li>
+          <li class="breadcrumb-item">Day 2 · Wed 11 Nov</li>
+      <li class="breadcrumb-item active">Lecture: Building dashboards in Tableau</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -1572,27 +1874,24 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="day-1-lecture-python-and-jupyter-basics">Day 1 lecture: Python and Jupyter basics<a class="headerlink" href="#day-1-lecture-python-and-jupyter-basics" title="Permanent link">&para;</a></h1>
+                <h1 id="day-2-lecture-building-dashboards-in-tableau">Day 2 lecture: Building dashboards in Tableau<a class="headerlink" href="#day-2-lecture-building-dashboards-in-tableau" title="Permanent link">&para;</a></h1>
 <p class="lead">
-Learn just enough Jupyter, Python and pandas to run every notebook in this course: cells and outputs, variables and lists, loading a table, selecting, filtering and grouping, the kind of data each column holds, what one row means, and a first chart.
+This morning you learned what makes a chart and a dashboard clear. This afternoon you build them in Tableau: connecting to data, dimensions and measures, aggregation, the Marks card, filters, calculated fields, sheets, dashboards, actions, formatting and printing to PDF. Short Python cells show the same ideas in pandas, so you can see that both tools do the same arithmetic.
 </p>
 
-<p>Open this notebook in JupyterLab from the course folder and run each cell from top to bottom with <strong>Shift + Enter</strong>.</p>
+<p>Open <strong>Tableau Desktop</strong> and this notebook side by side. Follow the numbered steps in Tableau; run the Python cells in JupyterLab with <strong>Shift + Enter</strong>.</p>
 <hr />
 <h2 id="what-you-will-be-able-to-do">What you will be able to do<a class="headerlink" href="#what-you-will-be-able-to-do" title="Permanent link">&para;</a></h2>
 <ol>
-<li>Open, run, edit, restart and export a notebook in JupyterLab.</li>
-<li>Use Python variables, numbers, text, lists and dictionaries, and call a function.</li>
-<li>Load a CSV file into a pandas <strong>DataFrame</strong> and inspect it with <code>head</code>, <code>shape</code>, <code>dtypes</code> and <code>describe</code>.</li>
-<li>Select columns, filter rows, group and count.</li>
-<li>Name the <strong>level of measurement</strong> of a column and choose a sensible summary for it.</li>
-<li>Say what one row of a table represents (its <strong>grain</strong>).</li>
-<li>Draw a first chart with matplotlib and seaborn.</li>
+<li>Connect Tableau to a saved data source and to a CSV file, and check the data types.</li>
+<li>Tell <strong>dimensions</strong> from <strong>measures</strong> and <strong>discrete</strong> (blue) from <strong>continuous</strong> (green) fields.</li>
+<li>Explain how Tableau <strong>aggregates</strong> a measure for each mark, and change the aggregation.</li>
+<li>Use the <strong>Marks card</strong> (Color, Size, Label, Detail, Tooltip) and the <strong>Filters</strong> shelf.</li>
+<li>Write a <strong>calculated field</strong>, including a ratio KPI computed as a <strong>ratio of sums</strong>.</li>
+<li>Assemble sheets into a <strong>dashboard</strong>, add a <strong>filter action</strong>, and format it for a reader.</li>
+<li>Save a packaged workbook and <strong>print a dashboard to PDF</strong> for submission.</li>
 </ol>
-<blockquote>
-<p><strong>How the course uses code</strong></p>
-<p>Every notebook gives you <strong>working code</strong> with explanations. You <strong>read</strong> it, <strong>run</strong> it, then <strong>change</strong> a few lines. You will not be asked to write programs from scratch.</p>
-</blockquote>
+<p><strong>Reading:</strong> Tableau Software (n.d.), <em>What is data visualization?</em> and <em>Tableau for students</em> (licence and download).</p>
 <table>
 <thead>
 <tr>
@@ -1603,251 +1902,175 @@ Learn just enough Jupyter, Python and pandas to run every notebook in this cours
 <tbody>
 <tr>
 <td>1</td>
-<td>A tour of JupyterLab</td>
+<td>The Tableau workspace</td>
 </tr>
 <tr>
 <td>2</td>
-<td>Python essentials</td>
+<td>Connecting to data</td>
 </tr>
 <tr>
 <td>3</td>
-<td>DataFrames with pandas</td>
+<td>Dimensions and measures, discrete and continuous</td>
 </tr>
 <tr>
 <td>4</td>
-<td>Data types and levels of measurement</td>
+<td>Aggregation and the level of detail</td>
 </tr>
 <tr>
 <td>5</td>
-<td>What does a row mean?</td>
+<td>The Marks card</td>
 </tr>
 <tr>
 <td>6</td>
-<td>A first chart</td>
+<td>Filters</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Calculated fields and a ratio KPI</td>
+</tr>
+<tr>
+<td>8</td>
+<td>From sheets to a dashboard</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Actions: making the dashboard interactive</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Formatting for the reader</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Saving, printing to PDF and publishing</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Assignment 1 briefing</td>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<p><strong>Field names differ between versions</strong></p>
+<p>Tableau has changed its Sample – Superstore data several times: dates, field names (<em>State</em> or <em>State/Province</em>) and some values differ between versions. Use the names you see in <strong>your</strong> Data pane. When a CSV column is called <code>total_bill</code>, Tableau may display it as <strong>Total Bill</strong>; it is the same field.</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+
+<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s2">&quot;display.float_format&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="si">{:,.2f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">)</span>
+<span class="n">tips</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;data/tips.csv&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Rows (bills):&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">tips</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Columns:&quot;</span><span class="p">,</span> <span class="nb">list</span><span class="p">(</span><span class="n">tips</span><span class="o">.</span><span class="n">columns</span><span class="p">))</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Rows (bills): 244
+Columns: [&#39;total_bill&#39;, &#39;tip&#39;, &#39;sex&#39;, &#39;smoker&#39;, &#39;day&#39;, &#39;time&#39;, &#39;size&#39;]
+</code></pre></div>
 <hr />
-<h2 id="part-1-a-tour-of-jupyterlab">Part 1: A tour of JupyterLab<a class="headerlink" href="#part-1-a-tour-of-jupyterlab" title="Permanent link">&para;</a></h2>
-<p><strong>JupyterLab</strong> is the program you use to open and run notebooks. You start it from <strong>Anaconda Navigator</strong> (click <em>Launch</em> under JupyterLab) or by typing <code>jupyter lab</code> in Anaconda Prompt (Windows) or Terminal (macOS). It opens in your web browser but runs on <strong>your computer</strong>, so it works without internet.</p>
+<h2 id="part-1-the-tableau-workspace">Part 1: The Tableau workspace<a class="headerlink" href="#part-1-the-tableau-workspace" title="Permanent link">&para;</a></h2>
+<p>When you open a worksheet, the screen has the same parts every time:</p>
 <table>
 <thead>
 <tr>
 <th>Area</th>
-<th>What it is for</th>
+<th>Where</th>
+<th>What it does</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>File browser</strong> (left)</td>
-<td>Open the course folder and double-click a notebook (<code>.ipynb</code>)</td>
+<td><strong>Data pane</strong></td>
+<td>Left</td>
+<td>Lists the fields of the connected data, dimensions above the line, measures below</td>
 </tr>
 <tr>
-<td><strong>Notebook</strong> (centre)</td>
-<td>A list of <strong>cells</strong>, run from top to bottom</td>
+<td><strong>Columns</strong> and <strong>Rows</strong> shelves</td>
+<td>Top</td>
+<td>Fields placed here define the chart's axes and headers</td>
 </tr>
 <tr>
-<td><strong>Toolbar</strong></td>
-<td>Run, stop, restart, add cells, choose the cell type</td>
+<td><strong>Marks card</strong></td>
+<td>Left of the view</td>
+<td>Chooses the mark type and what drives colour, size, labels, detail and tooltips</td>
 </tr>
 <tr>
-<td><strong>Kernel</strong> (top right)</td>
-<td>The Python process that runs your code. "Idle" means ready</td>
+<td><strong>Filters</strong> shelf</td>
+<td>Above the Marks card</td>
+<td>Fields placed here limit which rows are used</td>
+</tr>
+<tr>
+<td><strong>View</strong> (canvas)</td>
+<td>Centre</td>
+<td>The chart itself</td>
+</tr>
+<tr>
+<td><strong>Show Me</strong></td>
+<td>Top right</td>
+<td>Suggests chart types for the fields you have selected</td>
+</tr>
+<tr>
+<td><strong>Sheet tabs</strong></td>
+<td>Bottom</td>
+<td>Worksheets, dashboards and stories; plus the <strong>Data Source</strong> tab</td>
 </tr>
 </tbody>
 </table>
-<h3 id="two-kinds-of-cell">Two kinds of cell<a class="headerlink" href="#two-kinds-of-cell" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th>Cell type</th>
-<th>Contains</th>
-<th>When you run it</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Markdown</strong></td>
-<td>Formatted text, like this cell</td>
-<td>It shows as formatted text</td>
-</tr>
-<tr>
-<td><strong>Code</strong></td>
-<td>Python</td>
-<td>Python runs it and shows the result underneath</td>
-</tr>
-</tbody>
-</table>
-<h3 id="keys-worth-learning-today">Keys worth learning today<a class="headerlink" href="#keys-worth-learning-today" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th>Key</th>
-<th>Action</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Shift + Enter</strong></td>
-<td>Run the cell and move to the next one</td>
-</tr>
-<tr>
-<td><strong>Enter</strong></td>
-<td>Start editing the selected cell</td>
-</tr>
-<tr>
-<td><strong>Esc</strong></td>
-<td>Stop editing (the cell stays selected)</td>
-</tr>
-<tr>
-<td><strong>A</strong> / <strong>B</strong> (not editing)</td>
-<td>Add a cell above / below</td>
-</tr>
-<tr>
-<td><strong>M</strong> / <strong>Y</strong> (not editing)</td>
-<td>Turn the cell into Markdown / Code</td>
-</tr>
-<tr>
-<td><strong>D, D</strong> (not editing)</td>
-<td>Delete the cell</td>
-</tr>
-<tr>
-<td><strong>Ctrl + S</strong> (Cmd + S on macOS)</td>
-<td>Save</td>
-</tr>
-</tbody>
-</table>
-<p>Run the next cell with <strong>Shift + Enter</strong>. The number in brackets on its left, <code>[1]</code>, records the <strong>order</strong> in which cells ran.</p>
-<div class="highlight"><pre><span></span><code><span class="n">price</span> <span class="o">=</span> <span class="mi">120</span>
-<span class="n">quantity</span> <span class="o">=</span> <span class="mi">3</span>
-<span class="n">price</span> <span class="o">*</span> <span class="n">quantity</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>360
-</code></pre></div>
+<p>The three icons next to the sheet tabs create a <strong>new worksheet</strong>, a <strong>new dashboard</strong> and a <strong>new story</strong>.</p>
 <blockquote>
-<p><strong>Predict, then reveal: running cells out of order</strong></p>
-<p>The next cell uses <code>quantity</code>. Suppose you went back up, changed <code>quantity = 3</code> to <code>quantity = 10</code> and ran <strong>only that</strong> cell, then ran the next one. Which value would the next cell use? Write your guess, then try it.</p>
+<p><strong>How Tableau thinks</strong></p>
+<p>You never write "draw a bar chart". You drag <strong>fields</strong> onto <strong>shelves</strong>, and Tableau decides the chart from what you placed where. A measure on Rows and a dimension on Columns gives a bar chart; a date on Columns gives a line. <strong>Show Me</strong> is a shortcut, not a different method.</p>
 </blockquote>
-<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">"Quantity Python remembers right now:"</span><span class="p">,</span> <span class="n">quantity</span><span class="p">)</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>Quantity Python remembers right now: 3
-</code></pre></div>
-<p>Python remembers whatever ran <strong>last</strong>, not what is written higher up on the page. That is the most common source of confusion in notebooks. The cure:</p>
-<blockquote>
-<p><strong>Restart and run all</strong></p>
-<p>Choose <strong>Kernel → Restart Kernel and Run All Cells</strong>. Python forgets everything and runs the notebook from the top, in order. Do this before you export or submit any notebook, so the outputs match the code.</p>
-</blockquote>
-<h3 id="exporting-to-pdf">Exporting to PDF<a class="headerlink" href="#exporting-to-pdf" title="Permanent link">&para;</a></h3>
-<p>Every graded lab is submitted as a PDF:</p>
+<hr />
+<h2 id="part-2-connecting-to-data">Part 2: Connecting to data<a class="headerlink" href="#part-2-connecting-to-data" title="Permanent link">&para;</a></h2>
+<h3 id="the-built-in-sample">The built-in sample<a class="headerlink" href="#the-built-in-sample" title="Permanent link">&para;</a></h3>
 <ol>
-<li><strong>Kernel → Restart Kernel and Run All Cells</strong>, and check every output and chart is visible.</li>
-<li><strong>File → Print</strong> (or Ctrl + P / Cmd + P).</li>
-<li>In the print window, set the destination to <strong>Save as PDF</strong>. Under <em>More settings</em>, tick <strong>Background graphics</strong> so chart colours print.</li>
-<li>Save with the file name the lab asks for.</li>
+<li>Open Tableau Desktop. On the start page, under <strong>Saved Data Sources</strong> (left side), click <strong>Sample – Superstore</strong>.</li>
+<li>A blank worksheet, <strong>Sheet 1</strong>, opens. The Data pane lists tables such as <em>Orders</em>, <em>People</em> and <em>Returns</em>.</li>
+</ol>
+<h3 id="a-csv-file">A CSV file<a class="headerlink" href="#a-csv-file" title="Permanent link">&para;</a></h3>
+<ol>
+<li>On the start page, under <strong>Connect → To a File</strong>, click <strong>Text file</strong>.</li>
+<li>Go to the course folder <code>notebooks/China_Classroom/data/</code> and open <code>tips.csv</code>.</li>
+<li>The <strong>Data Source</strong> page shows a preview of the rows. Above each column an icon shows the <strong>data type</strong> Tableau guessed:</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Icon</th>
+<th>Type</th>
+<th>Example in tips</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>#</strong></td>
+<td>Number</td>
+<td><code>total_bill</code>, <code>tip</code>, <code>size</code></td>
+</tr>
+<tr>
+<td><strong>Abc</strong></td>
+<td>Text (string)</td>
+<td><code>sex</code>, <code>smoker</code>, <code>day</code>, <code>time</code></td>
+</tr>
+<tr>
+<td>Calendar</td>
+<td>Date</td>
+<td>(none in tips)</td>
+</tr>
+<tr>
+<td>Globe</td>
+<td>Geographic</td>
+<td>(none in tips)</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>Click a type icon to change it if the guess is wrong. Then click the <strong>Sheet 1</strong> tab at the bottom to start building.</li>
 </ol>
 <blockquote>
-<p><strong>Check your understanding</strong></p>
-<p>You change a number in cell 3 of a notebook but forget to rerun cells 4 to 10, then export to PDF. What could be wrong in the PDF, and how do you prevent it?</p>
+<p><strong>Check what one row means</strong></p>
+<p>As in Python, look at the preview and say what one row is before you build anything. In <code>tips.csv</code> one row is <strong>one bill</strong> (one table served). In Superstore's <em>Orders</em> table one row is <strong>one order line</strong> (one product in one order), not one order.</p>
 </blockquote>
-<hr />
-<h2 id="part-2-python-essentials">Part 2: Python essentials<a class="headerlink" href="#part-2-python-essentials" title="Permanent link">&para;</a></h2>
-<h3 id="variables-and-types">Variables and types<a class="headerlink" href="#variables-and-types" title="Permanent link">&para;</a></h3>
-<p>A <strong>variable</strong> is a name for a value. <code>=</code> stores the value under the name. Every value has a <strong>type</strong>.</p>
-<div class="highlight"><pre><span></span><code><span class="n">store</span> <span class="o">=</span> <span class="s2">"Shanghai West"</span>   <span class="c1"># text: a string, inside quotes</span>
-<span class="n">orders</span> <span class="o">=</span> <span class="mi">42</span>               <span class="c1"># whole number: an int</span>
-<span class="n">average_basket</span> <span class="o">=</span> <span class="mf">18.75</span>    <span class="c1"># decimal number: a float</span>
-<span class="n">is_open</span> <span class="o">=</span> <span class="kc">True</span>            <span class="c1"># True or False: a bool</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">store</span><span class="p">),</span> <span class="nb">type</span><span class="p">(</span><span class="n">orders</span><span class="p">),</span> <span class="nb">type</span><span class="p">(</span><span class="n">average_basket</span><span class="p">),</span> <span class="nb">type</span><span class="p">(</span><span class="n">is_open</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Revenue estimate:"</span><span class="p">,</span> <span class="n">orders</span> <span class="o">*</span> <span class="n">average_basket</span><span class="p">)</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>&lt;class 'str'&gt; &lt;class 'int'&gt; &lt;class 'float'&gt; &lt;class 'bool'&gt;
-Revenue estimate: 787.5
-</code></pre></div>
-<p><code>print</code> shows several things on one line. An <strong>f-string</strong> (a string starting with <code>f</code>) puts values inside text, and <code>:.2f</code> rounds to two decimals:</p>
-<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">store</span><span class="si">}</span><span class="s2"> had </span><span class="si">{</span><span class="n">orders</span><span class="si">}</span><span class="s2"> orders, about </span><span class="si">{</span><span class="n">orders</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">average_basket</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> dollars in total."</span><span class="p">)</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>Shanghai West had 42 orders, about 787.50 dollars in total.
-</code></pre></div>
-<h3 id="lists-several-values-in-order">Lists: several values in order<a class="headerlink" href="#lists-several-values-in-order" title="Permanent link">&para;</a></h3>
-<p>A <strong>list</strong> holds values in square brackets. Python counts positions from <strong>0</strong>.</p>
-<div class="highlight"><pre><span></span><code><span class="n">monthly_sales</span> <span class="o">=</span> <span class="p">[</span><span class="mi">120</span><span class="p">,</span> <span class="mi">95</span><span class="p">,</span> <span class="mi">140</span><span class="p">,</span> <span class="mi">180</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"First month:"</span><span class="p">,</span> <span class="n">monthly_sales</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Last month: "</span><span class="p">,</span> <span class="n">monthly_sales</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Total:"</span><span class="p">,</span> <span class="nb">sum</span><span class="p">(</span><span class="n">monthly_sales</span><span class="p">),</span> <span class="s2">"| months:"</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">monthly_sales</span><span class="p">))</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>First month: 120
-Last month:  180
-Total: 535 | months: 4
-</code></pre></div>
-<h3 id="dictionaries-values-looked-up-by-name">Dictionaries: values looked up by name<a class="headerlink" href="#dictionaries-values-looked-up-by-name" title="Permanent link">&para;</a></h3>
-<p>A <strong>dictionary</strong> pairs <strong>keys</strong> with <strong>values</strong>, inside curly brackets. A table is like a dictionary of columns.</p>
-<div class="highlight"><pre><span></span><code><span class="n">prices</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"coffee"</span><span class="p">:</span> <span class="mf">3.5</span><span class="p">,</span> <span class="s2">"tea"</span><span class="p">:</span> <span class="mf">2.8</span><span class="p">,</span> <span class="s2">"cake"</span><span class="p">:</span> <span class="mf">4.2</span><span class="p">}</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Price of tea:"</span><span class="p">,</span> <span class="n">prices</span><span class="p">[</span><span class="s2">"tea"</span><span class="p">])</span>
-<span class="n">prices</span><span class="p">[</span><span class="s2">"juice"</span><span class="p">]</span> <span class="o">=</span> <span class="mf">3.9</span>   <span class="c1"># add a new key</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Items on the menu:"</span><span class="p">,</span> <span class="nb">list</span><span class="p">(</span><span class="n">prices</span><span class="o">.</span><span class="n">keys</span><span class="p">()))</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>Price of tea: 2.8
-Items on the menu: ['coffee', 'tea', 'cake', 'juice']
-</code></pre></div>
-<h3 id="calling-functions-and-methods">Calling functions and methods<a class="headerlink" href="#calling-functions-and-methods" title="Permanent link">&para;</a></h3>
-<p>A <strong>function</strong> does a job when you <strong>call</strong> it with brackets: <code>len(monthly_sales)</code>, <code>round(3.14159, 2)</code>, <code>max(...)</code>. A <strong>method</strong> is a function that belongs to a value and is called with a dot: <code>store.upper()</code>.</p>
-<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="mf">3.14159</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">monthly_sales</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">store</span><span class="o">.</span><span class="n">upper</span><span class="p">())</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">prices</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">prices</span><span class="o">.</span><span class="n">get</span><span class="p">))</span>   <span class="c1"># menu items from cheapest to dearest</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>3.14
-180
-SHANGHAI WEST
-['tea', 'coffee', 'juice', 'cake']
-</code></pre></div>
-<h3 id="when-something-goes-wrong">When something goes wrong<a class="headerlink" href="#when-something-goes-wrong" title="Permanent link">&para;</a></h3>
-<p>Errors are normal. Read the <strong>last line</strong> of the red message first.</p>
-<table>
-<thead>
-<tr>
-<th>Error message</th>
-<th>Usual cause</th>
-<th>Fix</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>NameError: name 'x' is not defined</code></td>
-<td>A cell that creates <code>x</code> has not run yet</td>
-<td>Run the earlier cells, or restart and run all</td>
-</tr>
-<tr>
-<td><code>SyntaxError</code></td>
-<td>A missing bracket, quote or comma</td>
-<td>Look at the line the arrow points to</td>
-</tr>
-<tr>
-<td><code>KeyError: 'Tip'</code></td>
-<td>A column or key spelled differently (capital letters count)</td>
-<td>Check the exact name, for example with <code>df.columns</code></td>
-</tr>
-<tr>
-<td><code>FileNotFoundError</code></td>
-<td>The notebook is not next to the <code>data</code> folder</td>
-<td>Open the notebook from inside the course folder</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p><strong>Check your understanding</strong></p>
-<p>What does <code>monthly_sales[1]</code> return, and why not <code>120</code>? What type is <code>prices["cake"]</code>?</p>
-</blockquote>
-<hr />
-<h2 id="part-3-dataframes-with-pandas">Part 3: DataFrames with pandas<a class="headerlink" href="#part-3-dataframes-with-pandas" title="Permanent link">&para;</a></h2>
-<p><strong>pandas</strong> is the Python library analysts use for tables. A table in pandas is a <strong>DataFrame</strong>: rows and named columns, like a spreadsheet you control with code.</p>
-<p>Our table records restaurant bills: one row per table served, with the bill, the tip, and details about the party. It comes from a well-known teaching dataset (Bryant and Smith, 1995) in which one waiter recorded every tip over a few months. Money is in <strong>US dollars</strong>.</p>
-<h3 id="load-and-look">Load and look<a class="headerlink" href="#load-and-look" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
-
-<span class="n">tips</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">"data/tips.csv"</span><span class="p">)</span>
-<span class="n">tips</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<p>The Python version of "connect and preview" is the cell you ran above, plus <code>head()</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="n">tips</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </code></pre></div>
 <div>
 <style scoped>
@@ -1931,525 +2154,253 @@ SHANGHAI WEST
 </table>
 </div>
 
-<p><code>head()</code> shows the first five rows. Next, the size of the table and the type of each column:</p>
-<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">"Rows and columns:"</span><span class="p">,</span> <span class="n">tips</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">tips</span><span class="o">.</span><span class="n">dtypes</span><span class="p">)</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>Rows and columns: (244, 7)
-
-total_bill    float64
-tip           float64
-sex            object
-smoker         object
-day            object
-time           object
-size            int64
-dtype: object
-</code></pre></div>
-<p><code>float64</code> means decimal numbers, <code>int64</code> whole numbers, and <code>object</code> text.</p>
-<p><code>describe()</code> summarises every numeric column: how many values, the mean, standard deviation, minimum, quartiles and maximum.</p>
-<div class="highlight"><pre><span></span><code><span class="n">tips</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre></div>
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>total_bill</th>
-      <th>tip</th>
-      <th>size</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>count</th>
-      <td>244.00</td>
-      <td>244.00</td>
-      <td>244.00</td>
-    </tr>
-    <tr>
-      <th>mean</th>
-      <td>19.79</td>
-      <td>3.00</td>
-      <td>2.57</td>
-    </tr>
-    <tr>
-      <th>std</th>
-      <td>8.90</td>
-      <td>1.38</td>
-      <td>0.95</td>
-    </tr>
-    <tr>
-      <th>min</th>
-      <td>3.07</td>
-      <td>1.00</td>
-      <td>1.00</td>
-    </tr>
-    <tr>
-      <th>25%</th>
-      <td>13.35</td>
-      <td>2.00</td>
-      <td>2.00</td>
-    </tr>
-    <tr>
-      <th>50%</th>
-      <td>17.80</td>
-      <td>2.90</td>
-      <td>2.00</td>
-    </tr>
-    <tr>
-      <th>75%</th>
-      <td>24.13</td>
-      <td>3.56</td>
-      <td>3.00</td>
-    </tr>
-    <tr>
-      <th>max</th>
-      <td>50.81</td>
-      <td>10.00</td>
-      <td>6.00</td>
-    </tr>
-  </tbody>
+<hr />
+<h2 id="part-3-dimensions-and-measures-discrete-and-continuous">Part 3: Dimensions and measures, discrete and continuous<a class="headerlink" href="#part-3-dimensions-and-measures-discrete-and-continuous" title="Permanent link">&para;</a></h2>
+<p>Tableau sorts every field in two ways.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Meaning</th>
+<th>Examples</th>
+<th>Typical use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Dimension</strong></td>
+<td>A field you group <strong>by</strong>: categories, names, dates</td>
+<td>Category, Region, <code>day</code>, <code>smoker</code></td>
+<td>Headers, colours, filters</td>
+</tr>
+<tr>
+<td><strong>Measure</strong></td>
+<td>A number you <strong>aggregate</strong> (add up, average)</td>
+<td>Sales, Profit, <code>total_bill</code>, <code>tip</code></td>
+<td>Axes, bar lengths, sizes</td>
+</tr>
+</tbody>
 </table>
-</div>
-
-<p>For text columns, <code>describe(include="object")</code> counts values and shows the most common one:</p>
-<div class="highlight"><pre><span></span><code><span class="n">tips</span><span class="o">.</span><span class="n">describe</span><span class="p">(</span><span class="n">include</span><span class="o">=</span><span class="s2">"object"</span><span class="p">)</span>
-</code></pre></div>
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>sex</th>
-      <th>smoker</th>
-      <th>day</th>
-      <th>time</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>count</th>
-      <td>244</td>
-      <td>244</td>
-      <td>244</td>
-      <td>244</td>
-    </tr>
-    <tr>
-      <th>unique</th>
-      <td>2</td>
-      <td>2</td>
-      <td>4</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>top</th>
-      <td>Male</td>
-      <td>No</td>
-      <td>Sat</td>
-      <td>Dinner</td>
-    </tr>
-    <tr>
-      <th>freq</th>
-      <td>157</td>
-      <td>151</td>
-      <td>87</td>
-      <td>176</td>
-    </tr>
-  </tbody>
+<p>And separately, by colour of the pill:</p>
+<table>
+<thead>
+<tr>
+<th>Pill colour</th>
+<th>Kind</th>
+<th>What it draws</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Blue</strong></td>
+<td><strong>Discrete</strong>: separate values</td>
+<td>Headers and separate panes (Jan, Feb, Mar as labels)</td>
+</tr>
+<tr>
+<td><strong>Green</strong></td>
+<td><strong>Continuous</strong>: a range of values</td>
+<td>An axis (a time line from 2023 to 2026)</td>
+</tr>
+</tbody>
 </table>
-</div>
+<p>Usually dimensions are discrete and measures continuous, but not always. A date can be either: <strong>YEAR(Order Date)</strong> as a blue pill gives one column per year; a green continuous month gives one long timeline. In Lab 2 you will change a date pill from discrete to continuous to draw a monthly trend.</p>
+<blockquote>
+<p><strong>A number that is really a category</strong></p>
+<p>In <code>tips.csv</code>, <code>size</code> (the number of people at the table) arrives as a measure, so Tableau would <strong>add it up</strong>. To compare party sizes, right-click <code>size</code> in the Data pane → <strong>Convert to Dimension</strong>, and Tableau treats each size as a group. In Python the same decision is whether you write <code>groupby("size")</code> or <code>["size"].sum()</code>.</p>
+<p><strong>Check your understanding</strong></p>
+<p>For each Superstore field, say dimension or measure, and discrete or continuous in a typical chart: <em>Region</em>, <em>Sales</em>, <em>Order Date</em> on a monthly trend line, <em>Quantity</em>, <em>Customer Name</em>.</p>
+</blockquote>
+<hr />
+<h2 id="part-4-aggregation-and-the-level-of-detail">Part 4: Aggregation and the level of detail<a class="headerlink" href="#part-4-aggregation-and-the-level-of-detail" title="Permanent link">&para;</a></h2>
+<p>When you drag a measure into the view, Tableau does not draw one mark per row. It draws <strong>one mark for each combination of the dimensions in the view</strong>, and <strong>aggregates</strong> the measure inside each mark. The default aggregation is <strong>SUM</strong>.</p>
+<p><strong>In Tableau (with Sample – Superstore):</strong></p>
+<ol>
+<li>Drag <strong>Region</strong> to Columns and <strong>Sales</strong> to Rows. The pill reads <code>SUM(Sales)</code>: one bar per region, each the total of its order lines.</li>
+<li>Right-click the <code>SUM(Sales)</code> pill → <strong>Measure (Sum)</strong> → <strong>Average</strong>. The pill becomes <code>AVG(Sales)</code> and each bar shows the average <strong>order line</strong>, a different question.</li>
+<li>Drag <strong>Segment</strong> to Color. Now there is one mark for each region <strong>and</strong> segment: the <strong>level of detail</strong> got finer, and each mark aggregates fewer rows.</li>
+</ol>
+<p>The same three steps in pandas, on the tips data (grouping by <code>smoker</code> instead of Region):</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Step 1: SUM, one value per group (Tableau&#39;s default).</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;SUM(total_bill) by smoker:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tips</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;smoker&quot;</span><span class="p">)[</span><span class="s2">&quot;total_bill&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
 
-<h3 id="select-columns">Select columns<a class="headerlink" href="#select-columns" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="n">tips</span><span class="p">[</span><span class="s2">"tip"</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>          <span class="c1"># one column, as a Series</span>
+<span class="c1"># Step 2: AVG, the same groups, a different question.</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">AVG(total_bill) by smoker:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tips</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;smoker&quot;</span><span class="p">)[</span><span class="s2">&quot;total_bill&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
+
+<span class="c1"># Step 3: a finer level of detail, one value per smoker AND time.</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">SUM(total_bill) by smoker and time:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tips</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;smoker&quot;</span><span class="p">,</span> <span class="s2">&quot;time&quot;</span><span class="p">])[</span><span class="s2">&quot;total_bill&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>0    1.01
-1    1.66
-2    3.50
-3    3.31
-4    3.61
+<div class="highlight"><pre><span></span><code>SUM(total_bill) by smoker:
+smoker
+No    2,897.43
+Yes   1,930.34
+Name: total_bill, dtype: float64
+
+AVG(total_bill) by smoker:
+smoker
+No    19.19
+Yes   20.76
+Name: total_bill, dtype: float64
+
+SUM(total_bill) by smoker and time:
+smoker  time  
+No      Dinner   2,130.14
+        Lunch      767.29
+Yes     Dinner   1,530.16
+        Lunch      400.18
+Name: total_bill, dtype: float64
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Tableau</th>
+<th>pandas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dimensions in the view (Columns, Rows, Color, Detail…)</td>
+<td>The columns in <code>groupby([...])</code></td>
+</tr>
+<tr>
+<td><code>SUM(Sales)</code></td>
+<td><code>["sales"].sum()</code></td>
+</tr>
+<tr>
+<td><code>AVG(Sales)</code></td>
+<td><code>["sales"].mean()</code></td>
+</tr>
+<tr>
+<td><code>CNT(Sales)</code> / <code>COUNTD(Order ID)</code></td>
+<td><code>.size()</code> / <code>["order_id"].nunique()</code></td>
+</tr>
+<tr>
+<td>One mark</td>
+<td>One row of the grouped result</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Predict, then reveal</strong></p>
+<p>In Tableau you put <strong>Category</strong> on Rows and <code>SUM(Sales)</code> on Columns: 3 bars. Then you drag <strong>Order ID</strong> onto <strong>Detail</strong>. How many marks do you expect now, and why does the chart stop making sense? (Try it.)</p>
+</blockquote>
+<hr />
+<h2 id="part-5-the-marks-card">Part 5: The Marks card<a class="headerlink" href="#part-5-the-marks-card" title="Permanent link">&para;</a></h2>
+<p>The <strong>Marks card</strong> controls how each mark looks.</p>
+<table>
+<thead>
+<tr>
+<th>Button</th>
+<th>What it encodes</th>
+<th>Good use</th>
+<th>Watch out</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Mark type</strong> (dropdown)</td>
+<td>Bar, Line, Circle, Square, Text, Map, Pie…</td>
+<td>Leave on Automatic until you need a specific type</td>
+<td>Pie only for two or three parts</td>
+</tr>
+<tr>
+<td><strong>Color</strong></td>
+<td>A dimension (categories) or measure (scale)</td>
+<td>Highlight one thing, or profit (diverging)</td>
+<td>Rainbow palettes; colour alone</td>
+</tr>
+<tr>
+<td><strong>Size</strong></td>
+<td>A measure</td>
+<td>Secondary information</td>
+<td>Area is read inaccurately (this morning, Part 2)</td>
+</tr>
+<tr>
+<td><strong>Label</strong></td>
+<td>Writes values on marks</td>
+<td>Direct labels instead of an axis</td>
+<td>Too many labels clutter</td>
+</tr>
+<tr>
+<td><strong>Detail</strong></td>
+<td>Splits marks without encoding them</td>
+<td>Needed for maps and for tooltip fields</td>
+<td>Makes the level of detail finer</td>
+</tr>
+<tr>
+<td><strong>Tooltip</strong></td>
+<td>Text shown on hover</td>
+<td>Exact values, definitions</td>
+<td>Hover does not exist on a printed PDF</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Try it (Superstore):</strong> on a sheet with <strong>Sub-Category</strong> on Rows and <code>SUM(Sales)</code> on Columns, drag <strong>Profit</strong> onto <strong>Color</strong>. Tableau uses a <strong>diverging orange–blue</strong> palette centred on zero: orange for losses, blue for profits. This is this morning's diverging palette, chosen automatically because Profit can be negative. Click <strong>Color → Edit Colors</strong> to check where the centre sits.</p>
+<hr />
+<h2 id="part-6-filters">Part 6: Filters<a class="headerlink" href="#part-6-filters" title="Permanent link">&para;</a></h2>
+<p>A filter limits <strong>which rows</strong> reach the view.</p>
+<ol>
+<li>Drag a dimension (for example <strong>Region</strong>) to the <strong>Filters</strong> shelf, tick the values to keep, click <strong>OK</strong>.</li>
+<li>Right-click the pill on the Filters shelf → <strong>Show Filter</strong> to put a filter control next to the chart for the reader.</li>
+<li>To make one filter change several sheets: on the filter control's menu (small arrow) → <strong>Apply to Worksheets → All Using This Data Source</strong> (or <strong>Selected Worksheets</strong>).</li>
+<li>Measures can be filtered too: drag <strong>Sales</strong> to Filters and choose a range of <code>SUM(Sales)</code>.</li>
+</ol>
+<p>In pandas, a filter is a boolean condition applied <strong>before</strong> grouping:</p>
+<div class="highlight"><pre><span></span><code><span class="n">dinner</span> <span class="o">=</span> <span class="n">tips</span><span class="p">[</span><span class="n">tips</span><span class="p">[</span><span class="s2">&quot;time&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Dinner&quot;</span><span class="p">]</span>          <span class="c1"># filter: keep dinner bills only</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Bills after the filter:&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">dinner</span><span class="p">),</span> <span class="s2">&quot;of&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">tips</span><span class="p">))</span>
+<span class="n">dinner</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;smoker&quot;</span><span class="p">)[</span><span class="s2">&quot;tip&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>  <span class="c1"># then aggregate, as Tableau does</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Bills after the filter: 176 of 244
+
+
+
+
+
+smoker
+No    331.45
+Yes   214.62
 Name: tip, dtype: float64
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="n">tips</span><span class="p">[[</span><span class="s2">"day"</span><span class="p">,</span> <span class="s2">"time"</span><span class="p">,</span> <span class="s2">"total_bill"</span><span class="p">,</span> <span class="s2">"tip"</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>   <span class="c1"># several columns: a list inside the brackets</span>
-</code></pre></div>
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>day</th>
-      <th>time</th>
-      <th>total_bill</th>
-      <th>tip</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>Sun</td>
-      <td>Dinner</td>
-      <td>16.99</td>
-      <td>1.01</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Sun</td>
-      <td>Dinner</td>
-      <td>10.34</td>
-      <td>1.66</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Sun</td>
-      <td>Dinner</td>
-      <td>21.01</td>
-      <td>3.50</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>Sun</td>
-      <td>Dinner</td>
-      <td>23.68</td>
-      <td>3.31</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>Sun</td>
-      <td>Dinner</td>
-      <td>24.59</td>
-      <td>3.61</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-<h3 id="filter-rows">Filter rows<a class="headerlink" href="#filter-rows" title="Permanent link">&para;</a></h3>
-<p>A condition inside the brackets keeps only the rows where it is true. Combine conditions with <code>&amp;</code> (and) or <code>|</code> (or), each in its own brackets.</p>
-<div class="highlight"><pre><span></span><code><span class="n">dinners</span> <span class="o">=</span> <span class="n">tips</span><span class="p">[</span><span class="n">tips</span><span class="p">[</span><span class="s2">"time"</span><span class="p">]</span> <span class="o">==</span> <span class="s2">"Dinner"</span><span class="p">]</span>
-<span class="n">big_weekend</span> <span class="o">=</span> <span class="n">tips</span><span class="p">[(</span><span class="n">tips</span><span class="p">[</span><span class="s2">"day"</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="s2">"Sat"</span><span class="p">,</span> <span class="s2">"Sun"</span><span class="p">]))</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">tips</span><span class="p">[</span><span class="s2">"size"</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">4</span><span class="p">)]</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Dinner bills:"</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">dinners</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Weekend parties of four or more:"</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">big_weekend</span><span class="p">))</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>Dinner bills: 176
-Weekend parties of four or more: 36
-</code></pre></div>
-<h3 id="add-a-column">Add a column<a class="headerlink" href="#add-a-column" title="Permanent link">&para;</a></h3>
-<p>New columns are calculated from existing ones, row by row. The tip as a percentage of the bill:</p>
-<div class="highlight"><pre><span></span><code><span class="n">tips</span><span class="p">[</span><span class="s2">"tip_percent"</span><span class="p">]</span> <span class="o">=</span> <span class="mi">100</span> <span class="o">*</span> <span class="n">tips</span><span class="p">[</span><span class="s2">"tip"</span><span class="p">]</span> <span class="o">/</span> <span class="n">tips</span><span class="p">[</span><span class="s2">"total_bill"</span><span class="p">]</span>
-<span class="n">tips</span><span class="p">[[</span><span class="s2">"total_bill"</span><span class="p">,</span> <span class="s2">"tip"</span><span class="p">,</span> <span class="s2">"tip_percent"</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-</code></pre></div>
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>total_bill</th>
-      <th>tip</th>
-      <th>tip_percent</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>17.0</td>
-      <td>1.0</td>
-      <td>5.9</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>10.3</td>
-      <td>1.7</td>
-      <td>16.1</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>21.0</td>
-      <td>3.5</td>
-      <td>16.7</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>23.7</td>
-      <td>3.3</td>
-      <td>14.0</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>24.6</td>
-      <td>3.6</td>
-      <td>14.7</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-<h3 id="group-and-count">Group and count<a class="headerlink" href="#group-and-count" title="Permanent link">&para;</a></h3>
-<p><code>value_counts()</code> counts how often each value appears. <code>groupby</code> splits the table into groups and summarises each one.</p>
-<div class="highlight"><pre><span></span><code><span class="n">tips</span><span class="p">[</span><span class="s2">"day"</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>day
-Sat     87
-Sun     76
-Thur    62
-Fri     19
-Name: count, dtype: int64
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="n">tips</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">"day"</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">(</span>
-    <span class="n">bills</span><span class="o">=</span><span class="p">(</span><span class="s2">"total_bill"</span><span class="p">,</span> <span class="s2">"count"</span><span class="p">),</span>
-    <span class="n">average_bill</span><span class="o">=</span><span class="p">(</span><span class="s2">"total_bill"</span><span class="p">,</span> <span class="s2">"mean"</span><span class="p">),</span>
-    <span class="n">average_tip_percent</span><span class="o">=</span><span class="p">(</span><span class="s2">"tip_percent"</span><span class="p">,</span> <span class="s2">"mean"</span><span class="p">),</span>
-<span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre></div>
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>bills</th>
-      <th>average_bill</th>
-      <th>average_tip_percent</th>
-    </tr>
-    <tr>
-      <th>day</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Fri</th>
-      <td>19</td>
-      <td>17.15</td>
-      <td>16.99</td>
-    </tr>
-    <tr>
-      <th>Sat</th>
-      <td>87</td>
-      <td>20.44</td>
-      <td>15.32</td>
-    </tr>
-    <tr>
-      <th>Sun</th>
-      <td>76</td>
-      <td>21.41</td>
-      <td>16.69</td>
-    </tr>
-    <tr>
-      <th>Thur</th>
-      <td>62</td>
-      <td>17.68</td>
-      <td>16.13</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-<p>Each line inside <code>agg</code> reads: <em>new column name = (column to use, summary to compute)</em>.</p>
 <blockquote>
-<p><strong>Predict, then reveal</strong></p>
-<p>Which is larger: the number of <strong>lunch</strong> bills or <strong>dinner</strong> bills? Guess from what you know about restaurants, then change <code>"day"</code> to <code>"time"</code> in the <code>value_counts()</code> cell above and run it.</p>
-<p><strong>Check your understanding</strong></p>
-<p>Write the code that keeps only bills from smokers (<code>smoker</code> is <code>"Yes"</code>) and computes their average <code>tip_percent</code>. Which two ideas from this part do you combine?</p>
+<p><strong>State the filter on the page</strong></p>
+<p>A filtered chart answers a narrower question. Put the filter in the title or the scope note ("Dinner bills only"), or the reader will assume the whole dataset.</p>
 </blockquote>
 <hr />
-<h2 id="part-4-data-types-and-levels-of-measurement">Part 4: Data types and levels of measurement<a class="headerlink" href="#part-4-data-types-and-levels-of-measurement" title="Permanent link">&para;</a></h2>
-<p>The <strong>type</strong> pandas shows (<code>int64</code>, <code>object</code>) is about how a value is <strong>stored</strong>. The <strong>level of measurement</strong> is about what it <strong>means</strong>, and it decides which calculations make sense.</p>
+<h2 id="part-7-calculated-fields-and-a-ratio-kpi">Part 7: Calculated fields and a ratio KPI<a class="headerlink" href="#part-7-calculated-fields-and-a-ratio-kpi" title="Permanent link">&para;</a></h2>
+<p>A <strong>calculated field</strong> is a new field defined by a formula. Create one with <strong>Analysis → Create Calculated Field</strong>, or right-click in the Data pane → <strong>Create → Calculated Field</strong>. Give it a name, type the formula, and check that the message under the box says <strong>The calculation is valid</strong>.</p>
+<h3 id="row-level-versus-aggregate-calculations">Row-level versus aggregate calculations<a class="headerlink" href="#row-level-versus-aggregate-calculations" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
-<th>Level</th>
-<th>What the values do</th>
-<th>Examples</th>
-<th>What makes sense</th>
+<th>Formula</th>
+<th>What Tableau does</th>
+<th>Result in the view (with AVG)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Nominal</strong></td>
-<td>Name a group; no order</td>
-<td>Sex, smoker, product ID, postcode</td>
-<td>Count, share, mode</td>
+<td><code>[Tip] / [Total Bill]</code></td>
+<td>Computes the ratio for <strong>every row</strong>, then you aggregate it (Tableau suggests SUM; you would choose AVG)</td>
+<td>The <strong>mean of ratios</strong>: each bill's tip % averaged</td>
 </tr>
 <tr>
-<td><strong>Ordinal</strong></td>
-<td>Name a group <strong>in order</strong>; gaps not equal</td>
-<td>Shirt size, satisfaction 1–5</td>
-<td>+ median, "higher than"</td>
-</tr>
-<tr>
-<td><strong>Interval</strong></td>
-<td>Ordered with <strong>equal gaps</strong>; zero is arbitrary</td>
-<td>Temperature in °C, calendar dates</td>
-<td>+ differences, mean</td>
-</tr>
-<tr>
-<td><strong>Ratio</strong></td>
-<td>Equal gaps and a <strong>true zero</strong></td>
-<td>Bill, tip, party size, age</td>
-<td>+ ratios: "twice as much"</td>
+<td><code>SUM([Tip]) / SUM([Total Bill])</code></td>
+<td>Adds up the tips and the bills for each mark, <strong>then</strong> divides</td>
+<td>The <strong>ratio of sums</strong>: the share of all spending that went to tips</td>
 </tr>
 </tbody>
 </table>
-<p>Nominal and ordinal variables are <strong>categorical</strong>. Interval and ratio variables are <strong>numeric</strong> (quantitative).</p>
-<p>The columns of the tips table:</p>
-<table>
-<thead>
-<tr>
-<th>Column</th>
-<th>Stored as</th>
-<th>Level</th>
-<th>A sensible summary</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>total_bill</code>, <code>tip</code></td>
-<td><code>float64</code></td>
-<td>Ratio</td>
-<td>Mean, median, total</td>
-</tr>
-<tr>
-<td><code>size</code></td>
-<td><code>int64</code></td>
-<td>Ratio (a count of people)</td>
-<td>Mean, median, counts per size</td>
-</tr>
-<tr>
-<td><code>sex</code>, <code>smoker</code>, <code>time</code></td>
-<td><code>object</code></td>
-<td>Nominal</td>
-<td>Counts and shares</td>
-</tr>
-<tr>
-<td><code>day</code></td>
-<td><code>object</code></td>
-<td>Nominal, or ordinal if you care about the order of days</td>
-<td>Counts; sort in real day order</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p><strong>Predict, then reveal: numbers that are not quantities</strong></p>
-<p>pandas sorts text <strong>alphabetically</strong>. In what order will the days appear in the next cell? Is that the order you want in a report?</p>
-</blockquote>
-<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">"Alphabetical:"</span><span class="p">,</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">tips</span><span class="p">[</span><span class="s2">"day"</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()))</span>
-
-<span class="n">day_order</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"Thur"</span><span class="p">,</span> <span class="s2">"Fri"</span><span class="p">,</span> <span class="s2">"Sat"</span><span class="p">,</span> <span class="s2">"Sun"</span><span class="p">]</span>
-<span class="n">tips</span><span class="p">[</span><span class="s2">"day"</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Categorical</span><span class="p">(</span><span class="n">tips</span><span class="p">[</span><span class="s2">"day"</span><span class="p">],</span> <span class="n">categories</span><span class="o">=</span><span class="n">day_order</span><span class="p">,</span> <span class="n">ordered</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Real order:  "</span><span class="p">,</span> <span class="nb">list</span><span class="p">(</span><span class="n">tips</span><span class="p">[</span><span class="s2">"day"</span><span class="p">]</span><span class="o">.</span><span class="n">cat</span><span class="o">.</span><span class="n">categories</span><span class="p">))</span>
-<span class="n">tips</span><span class="p">[</span><span class="s2">"day"</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">(</span><span class="n">sort</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<p>This morning (Part 11) you saw that these answer different questions, and that a KPI tile should normally use the <strong>ratio of sums</strong>. In Tableau, the <code>SUM(...) / SUM(...)</code> form is how you write it. Superstore's standard KPI is:</p>
+<div class="highlight"><pre><span></span><code>Profit Ratio = SUM([Profit]) / SUM([Sales])
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>Alphabetical: ['Fri', 'Sat', 'Sun', 'Thur']
-Real order:   ['Thur', 'Fri', 'Sat', 'Sun']
-
-
-
-
-
-day
-Thur    62
-Fri     19
-Sat     87
-Sun     76
-Name: count, dtype: int64
-</code></pre></div>
-<p>An <strong>ordered categorical</strong> keeps the real order, so tables and charts list Thursday to Sunday.</p>
-<blockquote>
-<p><strong>Remember</strong></p>
-<p>An ID or postcode stored as a number is still <strong>nominal</strong>: its average means nothing. Always ask what a column means before you average it.</p>
-<p><strong>Check your understanding</strong></p>
-<p>A survey stores satisfaction as 1, 2, 3, 4 or 5 in an <code>int64</code> column. Which level is it? Why is "the share scoring 4 or 5" safer to report than the mean?</p>
-</blockquote>
-<hr />
-<h2 id="part-5-what-does-a-row-mean">Part 5: What does a row mean?<a class="headerlink" href="#part-5-what-does-a-row-mean" title="Permanent link">&para;</a></h2>
-<p>The <strong>grain</strong> of a table is what <strong>one row</strong> represents. Here: one table's bill on one visit, served by one waiter. Grain decides what counting means:</p>
-<ul>
-<li><code>len(tips)</code> counts <strong>bills (tables served)</strong>, not customers.</li>
-<li>The number of <strong>customers</strong> is the sum of <code>size</code>, because each row is a party.</li>
-</ul>
-<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">"Bills (rows):            "</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">tips</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Customers (sum of size): "</span><span class="p">,</span> <span class="n">tips</span><span class="p">[</span><span class="s2">"size"</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>Bills (rows):             244
-Customers (sum of size):  627
-</code></pre></div>
-<p>The table has <strong>no ID column</strong>, so nothing guarantees that each row is a different bill.</p>
-<blockquote>
-<p><strong>Predict, then reveal</strong></p>
-<p>Do you expect any row to appear twice, with every value identical? If one does, is it a mistake?</p>
-</blockquote>
-<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">"Fully duplicated rows:"</span><span class="p">,</span> <span class="n">tips</span><span class="o">.</span><span class="n">duplicated</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
-<span class="n">tips</span><span class="p">[</span><span class="n">tips</span><span class="o">.</span><span class="n">duplicated</span><span class="p">(</span><span class="n">keep</span><span class="o">=</span><span class="kc">False</span><span class="p">)]</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>Fully duplicated rows: 1
+<p>After creating it, right-click the field → <strong>Default Properties → Number Format → Percentage</strong> so it always displays as a percentage.</p>
+<p>Here are both versions in pandas, for each value of <code>smoker</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="n">kpi</span> <span class="o">=</span> <span class="n">tips</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;smoker&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">(</span><span class="n">tips_sum</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;tip&quot;</span><span class="p">,</span> <span class="s2">&quot;sum&quot;</span><span class="p">),</span> <span class="n">bills_sum</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;total_bill&quot;</span><span class="p">,</span> <span class="s2">&quot;sum&quot;</span><span class="p">))</span>
+<span class="n">kpi</span><span class="p">[</span><span class="s2">&quot;ratio of sums %&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">100</span> <span class="o">*</span> <span class="n">kpi</span><span class="p">[</span><span class="s2">&quot;tips_sum&quot;</span><span class="p">]</span> <span class="o">/</span> <span class="n">kpi</span><span class="p">[</span><span class="s2">&quot;bills_sum&quot;</span><span class="p">]</span>          <span class="c1"># SUM([Tip]) / SUM([Total Bill])</span>
+<span class="n">kpi</span><span class="p">[</span><span class="s2">&quot;mean of ratios %&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">100</span> <span class="o">*</span> <span class="p">(</span><span class="n">tips</span><span class="p">[</span><span class="s2">&quot;tip&quot;</span><span class="p">]</span> <span class="o">/</span> <span class="n">tips</span><span class="p">[</span><span class="s2">&quot;total_bill&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">tips</span><span class="p">[</span><span class="s2">&quot;smoker&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>  <span class="c1"># AVG([Tip] / [Total Bill])</span>
+<span class="n">kpi</span>
 </code></pre></div>
 <div>
 <style scoped>
@@ -2469,163 +2420,315 @@ Customers (sum of size):  627
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>total_bill</th>
-      <th>tip</th>
-      <th>sex</th>
+      <th>tips_sum</th>
+      <th>bills_sum</th>
+      <th>ratio of sums %</th>
+      <th>mean of ratios %</th>
+    </tr>
+    <tr>
       <th>smoker</th>
-      <th>day</th>
-      <th>time</th>
-      <th>size</th>
-      <th>tip_percent</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>198</th>
-      <td>13.0</td>
-      <td>2.0</td>
-      <td>Female</td>
-      <td>Yes</td>
-      <td>Thur</td>
-      <td>Lunch</td>
-      <td>2</td>
-      <td>15.384615</td>
+      <th>No</th>
+      <td>451.77</td>
+      <td>2,897.43</td>
+      <td>15.59</td>
+      <td>15.93</td>
     </tr>
     <tr>
-      <th>202</th>
-      <td>13.0</td>
-      <td>2.0</td>
-      <td>Female</td>
-      <td>Yes</td>
-      <td>Thur</td>
-      <td>Lunch</td>
-      <td>2</td>
-      <td>15.384615</td>
+      <th>Yes</th>
+      <td>279.81</td>
+      <td>1,930.34</td>
+      <td>14.50</td>
+      <td>16.32</td>
     </tr>
   </tbody>
 </table>
 </div>
 
-<p>Two different parties could really have had the same bill, tip, day and size. Without an ID (a <strong>primary key</strong>) we cannot tell a genuine repeat from a double entry, so we <strong>keep</strong> the row and <strong>note</strong> it. Deleting data needs evidence.</p>
+<p>The two percentage columns in the output above differ. Look closely: do they even rank smokers and non-smokers in the <strong>same order</strong>? If a dashboard tile said "Tip rate" without saying which one, two analysts could report different numbers from the same data. <strong>Name the formula</strong> in the tile or the scope note.</p>
 <blockquote>
-<p><strong>Grain also limits what you can conclude</strong></p>
-<p>All these bills come from <strong>one waiter</strong> in <strong>one restaurant</strong>. They describe that waiter's tips, not tipping in general.</p>
+<p><strong>Other useful calculations</strong></p>
+<ul>
+<li><code>IF SUM([Profit]) &lt; 0 THEN "Loss" ELSE "Profit" END</code>: a label you can put on Color.</li>
+<li><code>DATEDIFF('day', [Order Date], [Ship Date])</code>: days to ship, per row.</li>
+<li><code>COUNTD([Order ID])</code>: distinct orders, because Superstore has several rows per order.</li>
+</ul>
 <p><strong>Check your understanding</strong></p>
-<p>A sales table has one row per <strong>product within an order</strong>. Why does <code>len(sales)</code> not give the number of orders? Which pandas method would?</p>
+<p>In Superstore, why does <code>AVG([Profit] / [Sales])</code> give a different number from <code>SUM([Profit]) / SUM([Sales])</code> for the whole company? Which one would you put on an executive dashboard, and why?</p>
 </blockquote>
 <hr />
-<h2 id="part-6-a-first-chart">Part 6: A first chart<a class="headerlink" href="#part-6-a-first-chart" title="Permanent link">&para;</a></h2>
-<p>A chart needs a <strong>title</strong>, <strong>labelled axes with units</strong>, and ends with <code>plt.show()</code>.</p>
-<p>A <strong>histogram</strong> shows how one numeric column is spread out: how many bills fall into each range of values.</p>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
-
-<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">tips</span><span class="p">[</span><span class="s2">"total_bill"</span><span class="p">],</span> <span class="n">bins</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">"#2a78d6"</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s2">"white"</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">"How big are the bills? Total bill per table served"</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">"Total bill (US dollars)"</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">"Number of bills"</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</code></pre></div>
-<p><img alt="png" src="../D1_lecture_python_jupyter_basics_files/D1_lecture_python_jupyter_basics_45_0.png" /></p>
-<p><strong>seaborn</strong> builds on matplotlib and makes charts of a DataFrame in one call. A <strong>scatter plot</strong> shows two numbers for each row; <code>hue</code> colours the dots by a category.</p>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">seaborn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sns</span>
-
-<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mf">4.5</span><span class="p">))</span>
-<span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span>
-    <span class="n">data</span><span class="o">=</span><span class="n">tips</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">"total_bill"</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">"tip"</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s2">"time"</span><span class="p">,</span>
-    <span class="n">palette</span><span class="o">=</span><span class="p">{</span><span class="s2">"Lunch"</span><span class="p">:</span> <span class="s2">"#eb6834"</span><span class="p">,</span> <span class="s2">"Dinner"</span><span class="p">:</span> <span class="s2">"#2a78d6"</span><span class="p">},</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span>
-<span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">"Larger bills tend to come with larger tips"</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">"Total bill (US dollars)"</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">"Tip (US dollars)"</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</code></pre></div>
-<p><img alt="png" src="../D1_lecture_python_jupyter_basics_files/D1_lecture_python_jupyter_basics_47_0.png" /></p>
+<h2 id="part-8-from-sheets-to-a-dashboard">Part 8: From sheets to a dashboard<a class="headerlink" href="#part-8-from-sheets-to-a-dashboard" title="Permanent link">&para;</a></h2>
+<p>A dashboard is built from <strong>worksheets</strong>: build and title each chart on its own sheet first, then arrange them.</p>
+<h3 id="plan-before-you-build">Plan before you build<a class="headerlink" href="#plan-before-you-build" title="Permanent link">&para;</a></h3>
+<p>Use this morning's principles. On paper, sketch:</p>
+<ol>
+<li>The <strong>decision</strong> and the <strong>audience</strong> (for example: a regional manager deciding which products to review).</li>
+<li>The <strong>3–5 views</strong>, each answering one part of the question.</li>
+<li>The <strong>layout</strong>: headline and KPIs at the top left, detail below and to the right.</li>
+</ol>
+<h3 id="build">Build<a class="headerlink" href="#build" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Build each sheet and <strong>rename its tab</strong> (double-click the tab), for example <em>Sales trend</em>, <em>Profit by state</em>, <em>Sales by sub-category</em>. The tab name becomes the default title on the dashboard.</li>
+<li>Click the <strong>New Dashboard</strong> icon at the bottom.</li>
+<li>On the left, under <strong>Size</strong>, choose <strong>Automatic</strong> so the dashboard fills the screen (or a <strong>Fixed size</strong> such as A4 landscape if you will print it).</li>
+<li>Under <strong>Sheets</strong>, drag each sheet onto the canvas. Grey shaded areas show where it will land: top, bottom, left or right of what is already there.</li>
+<li>Leave objects <strong>Tiled</strong> (the default) so they line up in a grid; <strong>Floating</strong> objects sit on top and are easy to misalign.</li>
+<li>Add a <strong>Text</strong> object (under <strong>Objects</strong>) for the headline message and a small one for the scope note (period, data source, units).</li>
+<li>Remove legends you do not need (click the legend → <strong>x</strong>), and delete repeated titles.</li>
+</ol>
 <blockquote>
 <p><strong>Check your understanding</strong></p>
+<p>Your dashboard has six sheets and three legends and still has no headline. Using this morning's principles, name three changes.</p>
+</blockquote>
+<hr />
+<h2 id="part-9-actions-making-the-dashboard-interactive">Part 9: Actions: making the dashboard interactive<a class="headerlink" href="#part-9-actions-making-the-dashboard-interactive" title="Permanent link">&para;</a></h2>
+<p><strong>Actions</strong> let a click on one view change the others.</p>
+<h3 id="the-quick-way-use-as-filter">The quick way: Use as Filter<a class="headerlink" href="#the-quick-way-use-as-filter" title="Permanent link">&para;</a></h3>
 <ol>
-<li>The histogram title asks a question. Write a better title that states the main message of the chart in one sentence.</li>
-<li>In the scatter plot, what does one dot represent? (Hint: the grain.)</li>
+<li>On the dashboard, click once on a view (for example a map) to select it. A grey border appears with small icons at its top right.</li>
+<li>Click the <strong>funnel</strong> icon (<strong>Use as Filter</strong>). Now clicking a mark in that view (a state) <strong>filters</strong> every other view on the dashboard.</li>
+<li>To clear the selection, click the same mark again, or click an empty part of the view, or press <strong>Esc</strong>.</li>
+</ol>
+<h3 id="the-full-way-dashboard-actions">The full way: Dashboard → Actions<a class="headerlink" href="#the-full-way-dashboard-actions" title="Permanent link">&para;</a></h3>
+<p><strong>Dashboard → Actions → Add Action</strong> offers:</p>
+<table>
+<thead>
+<tr>
+<th>Action</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Filter</strong></td>
+<td>Clicking a mark keeps only the matching rows in the target views (this is what <em>Use as Filter</em> creates)</td>
+</tr>
+<tr>
+<td><strong>Highlight</strong></td>
+<td>Clicking a mark highlights matching marks elsewhere and greys the rest, without removing them</td>
+</tr>
+<tr>
+<td><strong>Go to Sheet / URL / parameter / set</strong></td>
+<td>Navigation and advanced uses</td>
+</tr>
+</tbody>
+</table>
+<p>For each action choose the <strong>source sheet</strong>, <strong>target sheets</strong>, and whether it runs on <strong>Hover</strong>, <strong>Select</strong> (click) or <strong>Menu</strong>, and what happens when the selection is cleared (<strong>Show all values</strong> is usually what a reader expects).</p>
+<p>In Python there is no clicking, but the idea of one filter driving every view is a function with a parameter. Every number below is recomputed for the chosen group:</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">mini_dashboard</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">smoker</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Recompute every KPI for one selection, as a dashboard filter action does.&quot;&quot;&quot;</span>
+    <span class="n">view</span> <span class="o">=</span> <span class="n">data</span> <span class="k">if</span> <span class="n">smoker</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">data</span><span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;smoker&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">smoker</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">({</span>
+        <span class="s2">&quot;bills&quot;</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">view</span><span class="p">),</span>
+        <span class="s2">&quot;total spend (dollars)&quot;</span><span class="p">:</span> <span class="n">view</span><span class="p">[</span><span class="s2">&quot;total_bill&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span>
+        <span class="s2">&quot;tip rate, sum/sum (%)&quot;</span><span class="p">:</span> <span class="mi">100</span> <span class="o">*</span> <span class="n">view</span><span class="p">[</span><span class="s2">&quot;tip&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">/</span> <span class="n">view</span><span class="p">[</span><span class="s2">&quot;total_bill&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span>
+        <span class="s2">&quot;average party size&quot;</span><span class="p">:</span> <span class="n">view</span><span class="p">[</span><span class="s2">&quot;size&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span>
+    <span class="p">})</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+
+
+<span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s2">&quot;All bills&quot;</span><span class="p">:</span> <span class="n">mini_dashboard</span><span class="p">(</span><span class="n">tips</span><span class="p">),</span>
+    <span class="s2">&quot;Click: smoker = Yes&quot;</span><span class="p">:</span> <span class="n">mini_dashboard</span><span class="p">(</span><span class="n">tips</span><span class="p">,</span> <span class="s2">&quot;Yes&quot;</span><span class="p">),</span>
+    <span class="s2">&quot;Click: smoker = No&quot;</span><span class="p">:</span> <span class="n">mini_dashboard</span><span class="p">(</span><span class="n">tips</span><span class="p">,</span> <span class="s2">&quot;No&quot;</span><span class="p">),</span>
+<span class="p">})</span>
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>All bills</th>
+      <th>Click: smoker = Yes</th>
+      <th>Click: smoker = No</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>bills</th>
+      <td>244.00</td>
+      <td>93.00</td>
+      <td>151.00</td>
+    </tr>
+    <tr>
+      <th>total spend (dollars)</th>
+      <td>4,827.77</td>
+      <td>1,930.34</td>
+      <td>2,897.43</td>
+    </tr>
+    <tr>
+      <th>tip rate, sum/sum (%)</th>
+      <td>15.15</td>
+      <td>14.50</td>
+      <td>15.59</td>
+    </tr>
+    <tr>
+      <th>average party size</th>
+      <td>2.57</td>
+      <td>2.41</td>
+      <td>2.67</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<blockquote>
+<p><strong>Actions do not print</strong></p>
+<p>A PDF shows one state of the dashboard. Before printing, <strong>clear all selections</strong> so the reader sees the whole picture, unless the assignment asks for a filtered view; then say in a caption which state is selected.</p>
+</blockquote>
+<hr />
+<h2 id="part-10-formatting-for-the-reader">Part 10: Formatting for the reader<a class="headerlink" href="#part-10-formatting-for-the-reader" title="Permanent link">&para;</a></h2>
+<p>Apply this morning's design rules inside Tableau:</p>
+<table>
+<thead>
+<tr>
+<th>Goal</th>
+<th>Where in Tableau</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Message titles</strong></td>
+<td>Double-click a sheet title on the dashboard and type the finding; keep units in the axis title</td>
+</tr>
+<tr>
+<td><strong>Sort</strong> bars by value</td>
+<td>The <strong>Sort Descending</strong> button in the toolbar, or right-click the dimension → <strong>Sort</strong></td>
+</tr>
+<tr>
+<td><strong>Number formats</strong> (thousands separators, %)</td>
+<td>Right-click the measure pill or axis → <strong>Format</strong> → Numbers</td>
+</tr>
+<tr>
+<td><strong>Colour-blind-safe colours</strong></td>
+<td><strong>Color → Edit Colors</strong> → choose the <strong>Color Blind</strong> palette for categories; keep orange–blue for profit and loss</td>
+</tr>
+<tr>
+<td><strong>Remove clutter</strong></td>
+<td><strong>Format → Lines</strong>: set grid lines to None; right-click an axis → uncheck <strong>Show Header</strong> when bars are labelled</td>
+</tr>
+<tr>
+<td><strong>Direct labels</strong></td>
+<td>Click <strong>Label</strong> on the Marks card → <strong>Show mark labels</strong></td>
+</tr>
+<tr>
+<td><strong>Readable tooltips</strong></td>
+<td>Click <strong>Tooltip</strong> on the Marks card and rewrite it as a sentence</td>
+</tr>
+<tr>
+<td><strong>Scope note</strong></td>
+<td>A small Text object at the bottom: data source, period, filters, units</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Bars still start at zero in Tableau</strong></p>
+<p>Tableau's bar axes start at zero by default. If you right-click an axis → <strong>Edit Axis</strong> and untick <strong>Include zero</strong>, you have built this morning's misleading truncated bar chart.</p>
+</blockquote>
+<hr />
+<h2 id="part-11-saving-printing-to-pdf-and-publishing">Part 11: Saving, printing to PDF and publishing<a class="headerlink" href="#part-11-saving-printing-to-pdf-and-publishing" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Task</th>
+<th>How</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Save your work</strong></td>
+<td><strong>File → Save As</strong> → <em>Tableau Packaged Workbook</em> (<code>.twbx</code>)</td>
+<td>A <code>.twbx</code> contains the data, so it opens on another computer. A <code>.twb</code> does not</td>
+</tr>
+<tr>
+<td><strong>Print to PDF</strong> (for GAP)</td>
+<td><strong>File → Print to PDF</strong> → <em>Range</em>: <strong>Active Sheet</strong> (with the dashboard tab open) → <strong>OK</strong> → choose a file name</td>
+<td>Choose landscape paper; check that nothing is cut off</td>
+</tr>
+<tr>
+<td><strong>Export an image</strong></td>
+<td><strong>Dashboard → Export Image</strong></td>
+<td>Useful for a Word report</td>
+</tr>
+<tr>
+<td><strong>Publish to the web</strong></td>
+<td><strong>Server → Tableau Public → Save to Tableau Public</strong></td>
+<td>Anyone on the internet can see it. <strong>Never publish confidential or personal data</strong>; course submissions go to GAP as PDF</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Before you print, check</strong></p>
+<ol>
+<li>The dashboard tab is the <strong>active sheet</strong>.</li>
+<li>No mark is selected and no filter is left on by accident.</li>
+<li>Every title is a message, every axis has units, and the scope note is visible.</li>
+<li>Open the PDF and read it as the reader will: is anything cut off or too small?</li>
 </ol>
 </blockquote>
-<hr />
-<h2 id="quick-reference">Quick reference<a class="headerlink" href="#quick-reference" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th>You want to…</th>
-<th>Code</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Load a CSV file</td>
-<td><code>df = pd.read_csv("data/file.csv")</code></td>
-</tr>
-<tr>
-<td>See the first rows / size / types</td>
-<td><code>df.head()</code> / <code>df.shape</code> / <code>df.dtypes</code></td>
-</tr>
-<tr>
-<td>Summary statistics</td>
-<td><code>df.describe()</code></td>
-</tr>
-<tr>
-<td>One column / several columns</td>
-<td><code>df["tip"]</code> / <code>df[["day", "tip"]]</code></td>
-</tr>
-<tr>
-<td>Filter rows</td>
-<td><code>df[df["time"] == "Dinner"]</code></td>
-</tr>
-<tr>
-<td>New column</td>
-<td><code>df["tip_percent"] = 100 * df["tip"] / df["total_bill"]</code></td>
-</tr>
-<tr>
-<td>Count values</td>
-<td><code>df["day"].value_counts()</code></td>
-</tr>
-<tr>
-<td>Summary per group</td>
-<td><code>df.groupby("day").agg(average_tip=("tip", "mean"))</code></td>
-</tr>
-<tr>
-<td>Duplicated rows</td>
-<td><code>df.duplicated().sum()</code></td>
-</tr>
-<tr>
-<td>Histogram / scatter plot</td>
-<td><code>plt.hist(...)</code> / <code>sns.scatterplot(data=df, x=..., y=...)</code></td>
-</tr>
-</tbody>
-</table>
 <hr />
 <h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
 <ul>
-<li>A notebook is cells run in order. <strong>Restart and run all</strong> before you export; export with <strong>File → Print → Save as PDF</strong>.</li>
-<li>Python stores values in variables; lists hold values in order, dictionaries by name; functions are called with brackets.</li>
-<li>A DataFrame is a table: inspect it with <code>head</code>, <code>shape</code>, <code>dtypes</code>, <code>describe</code>; select, filter, group and count with one line each.</li>
-<li>Storage type is not meaning. Name the <strong>level of measurement</strong> before choosing a summary.</li>
-<li>Know the <strong>grain</strong> before you count anything.</li>
+<li>Tableau draws <strong>one mark per combination of dimensions in the view</strong> and <strong>aggregates</strong> each measure in that mark (SUM by default), exactly like <code>groupby</code> in pandas.</li>
+<li><strong>Blue</strong> pills are discrete (headers), <strong>green</strong> pills are continuous (axes). Dates can be either.</li>
+<li>The <strong>Marks card</strong> maps fields to colour, size, label, detail and tooltip; the <strong>Filters</strong> shelf limits rows.</li>
+<li>Ratio KPIs are calculated fields written as <code>SUM([numerator]) / SUM([denominator])</code>.</li>
+<li>A dashboard is a few titled sheets, laid out for one decision, connected by <strong>actions</strong>, with a headline and a scope note.</li>
+<li>Submit dashboards as a <strong>PDF</strong> from <strong>File → Print to PDF</strong>; keep a <code>.twbx</code> copy of your work.</li>
 </ul>
-<h2 id="quiz">Quiz<a class="headerlink" href="#quiz" title="Permanent link">&para;</a></h2>
+<hr />
+<h2 id="closing-quiz">Closing quiz<a class="headerlink" href="#closing-quiz" title="Permanent link">&para;</a></h2>
 <ol>
-<li>What does <strong>Shift + Enter</strong> do, and what does the number in <code>[ ]</code> beside a cell tell you?</li>
-<li>What is the difference between <code>tips["tip"]</code> and <code>tips[["tip"]]</code>?</li>
-<li>Which code gives the average tip for each value of <code>time</code>?</li>
-<li>Is <code>size</code> in the tips table nominal, ordinal, interval or ratio? Why?</li>
-<li>What does one row of the tips table represent, and how do you count customers?</li>
+<li>What is the difference between a dimension and a measure? Give one example of each from Superstore.</li>
+<li>A pill is green. What does that tell you, and what will it draw?</li>
+<li>You put <code>SUM(Sales)</code> on Rows and <strong>Region</strong> on Columns, then add <strong>Segment</strong> to Color. What happens to the number of marks?</li>
+<li>Write the calculated field for a profit ratio KPI. Why not <code>AVG([Profit] / [Sales])</code>?</li>
+<li>What does the funnel (<strong>Use as Filter</strong>) icon on a dashboard view do?</li>
+<li>Name two things to check before <strong>Print to PDF</strong>.</li>
 </ol>
 <hr />
-<h2 id="in-the-lab">In the lab<a class="headerlink" href="#in-the-lab" title="Permanent link">&para;</a></h2>
-<p>The <a href="../D1_lab_activity1_readiness/">Activity 1 lab</a> uses exactly these skills on a new table, the Palmer Penguins, and then checks that Tableau is ready.</p>
+<h2 id="part-12-assignment-1-briefing">Part 12: Assignment 1 briefing<a class="headerlink" href="#part-12-assignment-1-briefing" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>Assignment 1: Data visualisation and descriptive analytics report</strong> (6%, CLO 1–3)</p>
+<p><strong>Due Sunday 15 November 2026, 23:59 China Standard Time</strong>, on <strong>GAP (Moodle)</strong>.</p>
+</blockquote>
+<p>You act as an analytics consultant for <strong>Bistro Analytics</strong>, advising a busy restaurant. Using the tips data (244 bills), you run a Python notebook that produces two summary tables and three figures, then write a short <strong>business report</strong> with four fixed sections:</p>
+<ol>
+<li>Executive summary</li>
+<li>Descriptive data overview</li>
+<li>Visual insights and graphical trends</li>
+<li>Strategic business recommendations</li>
+</ol>
+<p>The restaurant owner wants help with two decisions: <strong>when to schedule the strongest staff</strong> and <strong>how to raise revenue and server income through upselling</strong>.</p>
+<p>Everything you learned today applies: message titles, honest axes, ratio of sums, and turning findings into a recommendation for a specific audience.</p>
+<p><strong>Start here:</strong> <a href="../D2_assignment1_tips_report/">Assignment 1 brief and starter notebook</a>. Open <code>D2_assignment1_tips_report.ipynb</code> in JupyterLab, read the brief, and save your own copy as <code>YourLastName_DATA300_Assignment1.ipynb</code>.</p>
+<p>After this briefing, the lab starts with <a href="../D2_lab_lab2_dashboard/">Applied Lab 2: Dashboard creation</a>. If you finish the lab early, start Assignment 1.</p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../D1_lecture_data_driven_decisions/" class="btn btn-neutral float-left" title="Lecture: Data-driven decisions"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../D1_lab_activity1_readiness/" class="btn btn-neutral float-right" title="Lab: Activity 1 readiness check">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../D2_lecture_visualisation_communication/" class="btn btn-neutral float-left" title="Lecture: Visualising and communicating results"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../D2_lab_lab2_dashboard/" class="btn btn-neutral float-right" title="Lab 2: Dashboard creation">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -2649,10 +2752,10 @@ Customers (sum of size):  627
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../D1_lecture_data_driven_decisions/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../D2_lecture_visualisation_communication/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../D1_lab_activity1_readiness/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../D2_lab_lab2_dashboard/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

@@ -1,0 +1,2239 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Lab 2: Dashboard creation - Data Analytics</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../stylesheets/readability.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Lab 2: Dashboard creation";
+        var mkdocs_page_input_path = "china/D2_lab_lab2_dashboard.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Data Analytics
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Getting Started</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../..#course-at-a-glance">Course at a glance</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../..#where-to-start">Where to start</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../..#how-we-will-practise">How we will practise</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Foundations</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../foundations/">Why Data Analytics Matters</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/#what-is-data-analytics">What is data analytics?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/#real-stories-where-data-changed-the-outcome">Real stories where data changed the outcome</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../foundations/#a-map-that-changed-how-we-think-about-disease-london-1854">A map that changed how we think about disease (London, 1854)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../foundations/#a-chart-that-reformed-hospitals-1850s">A chart that reformed hospitals (1850s)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../foundations/#winning-on-a-small-budget-baseball-2002">Winning on a small budget (baseball, 2002)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../foundations/#preparing-for-a-hurricane-retail-2004">Preparing for a hurricane (retail, 2004)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../foundations/#when-big-data-got-it-wrong-public-health-20082015">When big data got it wrong (public health, 2008–2015)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/#where-you-meet-analytics-every-day">Where you meet analytics every day</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/#why-presentation-is-part-of-analysis">Why presentation is part of analysis</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/#what-comes-next">What comes next</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../foundations/statistics-are-not-enough/">Statistics Are Not Enough</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/statistics-are-not-enough/#anscombes-quartet">Anscombe's quartet</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/statistics-are-not-enough/#the-datasaurus-dozen">The Datasaurus Dozen</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/statistics-are-not-enough/#what-this-means-at-work">What this means at work</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/statistics-are-not-enough/#try-it-yourself">Try it yourself</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../foundations/misleading-statistics/">How Statistics Can Mislead</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/misleading-statistics/#1-correlation-is-not-causation">1. Correlation is not causation</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/misleading-statistics/#2-simpsons-paradox-the-total-can-reverse-the-parts">2. Simpson's paradox: the total can reverse the parts</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/misleading-statistics/#3-misleading-axes">3. Misleading axes</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/misleading-statistics/#4-cherry-picked-time-windows">4. Cherry-picked time windows</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/misleading-statistics/#5-which-average">5. Which average?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/misleading-statistics/#6-percentages-without-the-base">6. Percentages without the base</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/misleading-statistics/#7-survivorship-bias">7. Survivorship bias</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/misleading-statistics/#a-checklist-for-any-number-you-are-shown">A checklist for any number you are shown</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/misleading-statistics/#try-it-yourself">Try it yourself</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../foundations/types-of-analysis/">Types of Analysis</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/types-of-analysis/#univariate-analysis-one-variable-at-a-time">Univariate analysis: one variable at a time</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/types-of-analysis/#bivariate-analysis-two-variables-together">Bivariate analysis: two variables together</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/types-of-analysis/#multivariate-analysis-three-or-more-variables">Multivariate analysis: three or more variables</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/types-of-analysis/#choosing-a-chart-quick-guide">Choosing a chart: quick guide</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/types-of-analysis/#try-it-yourself">Try it yourself</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../foundations/visual-design/">Designing Clear Visuals</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/visual-design/#the-data-ink-ratio">The data-ink ratio</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/visual-design/#pre-attentive-attributes-what-the-eye-sees-first">Pre-attentive attributes: what the eye sees first</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/visual-design/#gestalt-principles-how-we-group-things">Gestalt principles: how we group things</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/visual-design/#colour-with-purpose">Colour with purpose</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/visual-design/#a-clean-chart-checklist">A clean-chart checklist</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/visual-design/#try-it-yourself">Try it yourself</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../foundations/storytelling/">Storytelling with Data</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/storytelling/#the-challenger-disaster-right-data-wrong-presentation">The Challenger disaster: right data, wrong presentation</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../foundations/storytelling/#what-did-the-data-show">What did the data show?</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/storytelling/#what-makes-a-data-story">What makes a data story</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../foundations/storytelling/#start-with-the-big-idea">Start with the "big idea"</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/storytelling/#a-simple-process">A simple process</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/storytelling/#exploratory-versus-explanatory">Exploratory versus explanatory</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../foundations/storytelling/#try-it-yourself">Try it yourself</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Course</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../course/roadmap/">Learning Roadmap</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#how-each-session-works">How each session works</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#part-a-thinking-with-data">Part A: Thinking with data</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#part-b-describing-and-measuring">Part B: Describing and measuring</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#part-c-relationships-change-and-uncertainty">Part C: Relationships, change and uncertainty</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#part-d-business-cases">Part D: Business cases</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#part-e-communicating-and-bringing-it-together">Part E: Communicating and bringing it together</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#part-f-tableau">Part F: Tableau</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#how-you-will-be-assessed">How you will be assessed</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/roadmap/#extra-practice-topics">Extra practice topics</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../course/setup/">Setup and Practice</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/setup/#what-you-need">What you need</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/setup/#open-a-lesson-in-google-colab">Open a lesson in Google Colab</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/setup/#submit-your-work-on-moodle">Submit your work on Moodle</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/setup/#keep-your-data-safe">Keep your data safe</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/setup/#if-something-does-not-work">If something does not work</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/setup/#tableau-later">Tableau (later)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/setup/#keep-an-evidence-log">Keep an evidence log</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../course/workflow/">Analytical Workflow</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/workflow/#the-seven-steps">The seven steps</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../course/workflow/#1-business-question">1. Business question</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../course/workflow/#2-data-understanding">2. Data understanding</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../course/workflow/#3-preparation">3. Preparation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../course/workflow/#4-analysis">4. Analysis</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../course/workflow/#5-validation">5. Validation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../course/workflow/#6-visualization">6. Visualization</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../course/workflow/#7-recommendation">7. Recommendation</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/workflow/#a-worked-example">A worked example</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/workflow/#when-a-result-looks-wrong">When a result looks wrong</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../course/workflow/#association-is-not-causation">Association is not causation</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../cases/">Business Cases</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../cases/#the-five-core-cases">The five core cases</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../cases/#retail">Retail</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../cases/#finance">Finance</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../cases/#operations">Operations</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../cases/#marketing">Marketing</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../cases/#hr">HR</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../cases/#what-every-case-includes">What every case includes</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../cases/#combining-evidence-across-departments">Combining evidence across departments</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../cases/#additional-practice-choices">Additional practice choices</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Python Sessions</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" >Session 1: Why Data Analytics Matters</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../lectures/01_why_data_analytics_lecture/">Lecture</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/01_why_data_analytics_lecture/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/01_why_data_analytics_lecture/#part-1-what-is-data-analytics">Part 1: What is data analytics?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/01_why_data_analytics_lecture/#part-2-real-stories-where-data-changed-the-outcome">Part 2: Real stories where data changed the outcome</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/01_why_data_analytics_lecture/#part-3-from-question-to-recommendation">Part 3: From question to recommendation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/01_why_data_analytics_lecture/#part-4-always-plot-your-data-anscombes-quartet">Part 4: Always plot your data — Anscombe's quartet</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/01_why_data_analytics_lecture/#part-5-the-datasaurus-dozen">Part 5: The Datasaurus Dozen</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/01_why_data_analytics_lecture/#part-6-a-preview-of-how-numbers-mislead">Part 6: A preview of how numbers mislead</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/01_why_data_analytics_lecture/#summary">Summary</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/01_why_data_analytics_lecture/#quiz">Quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/01_why_data_analytics_lecture/#in-the-lab">In the Lab</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../lectures/01_why_data_analytics_lab/">Lab</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/01_why_data_analytics_lab/#how-this-lab-works">How this lab works</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/01_why_data_analytics_lab/#part-a-guided-practice-core">Part A: Guided practice (Core)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/01_why_data_analytics_lab/#part-b-independent-tasks">Part B: Independent tasks</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/01_why_data_analytics_lab/#part-c-challenge-the-datasaurus-dozen">Part C: Challenge — the Datasaurus Dozen</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/01_why_data_analytics_lab/#quick-reference">Quick reference</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/01_why_data_analytics_lab/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/01_why_data_analytics_lab/#evidence-to-keep">Evidence to keep</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Session 2: Data, Grain and the DataFrame</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../lectures/02_data_and_grain_lecture/">Lecture</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/02_data_and_grain_lecture/#recap-quiz">Recap quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/02_data_and_grain_lecture/#what-you-will-be-able-to-explain">What you will be able to explain</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/02_data_and_grain_lecture/#part-1-levels-of-measurement">Part 1: Levels of measurement</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/02_data_and_grain_lecture/#part-2-tidy-data">Part 2: Tidy data</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/02_data_and_grain_lecture/#part-3-grain-and-keys">Part 3: Grain and keys</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/02_data_and_grain_lecture/#part-4-data-dictionaries">Part 4: Data dictionaries</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/02_data_and_grain_lecture/#part-5-data-quality-dimensions">Part 5: Data-quality dimensions</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/02_data_and_grain_lecture/#part-6-worked-case-the-superstore-order-lines">Part 6: Worked case — the Superstore order lines</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/02_data_and_grain_lecture/#summary">Summary</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/02_data_and_grain_lecture/#quiz">Quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/02_data_and_grain_lecture/#lab-briefing">Lab briefing</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../lectures/02_data_and_grain_lab/">Lab</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/02_data_and_grain_lab/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/02_data_and_grain_lab/#how-this-lab-works">How this lab works</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/02_data_and_grain_lab/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/02_data_and_grain_lab/#guided-practice">Guided practice</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/02_data_and_grain_lab/#independent-tasks">Independent tasks</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/02_data_and_grain_lab/#challenge">Challenge</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/02_data_and_grain_lab/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/02_data_and_grain_lab/#evidence-to-keep">Evidence to keep</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/02_data_and_grain_lab/#after-the-lab">After the lab</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Session 3: Cleaning and Preparing Data</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../lectures/03_cleaning_and_preparing_lecture/">Lecture</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/03_cleaning_and_preparing_lecture/#recap-quiz">Recap quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/03_cleaning_and_preparing_lecture/#what-you-will-be-able-to-explain">What you will be able to explain</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/03_cleaning_and_preparing_lecture/#part-1-raw-data-and-the-cleaning-log">Part 1: Raw data and the cleaning log</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/03_cleaning_and_preparing_lecture/#part-2-missing-data">Part 2: Missing data</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/03_cleaning_and_preparing_lecture/#part-3-duplicates">Part 3: Duplicates</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/03_cleaning_and_preparing_lecture/#part-4-outliers">Part 4: Outliers</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/03_cleaning_and_preparing_lecture/#part-5-text-numbers-dates-and-encodings">Part 5: Text, numbers, dates and encodings</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/03_cleaning_and_preparing_lecture/#part-6-joins-and-cardinality">Part 6: Joins and cardinality</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/03_cleaning_and_preparing_lecture/#part-7-reshaping">Part 7: Reshaping</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/03_cleaning_and_preparing_lecture/#part-8-worked-case-world-cup-attendance">Part 8: Worked case — World Cup attendance</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/03_cleaning_and_preparing_lecture/#summary">Summary</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/03_cleaning_and_preparing_lecture/#quiz">Quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/03_cleaning_and_preparing_lecture/#lab-briefing">Lab briefing</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../lectures/03_cleaning_and_preparing_lab/">Lab</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/03_cleaning_and_preparing_lab/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/03_cleaning_and_preparing_lab/#how-this-lab-works">How this lab works</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/03_cleaning_and_preparing_lab/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/03_cleaning_and_preparing_lab/#guided-practice">Guided practice</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/03_cleaning_and_preparing_lab/#independent-tasks">Independent tasks</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/03_cleaning_and_preparing_lab/#challenge">Challenge</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/03_cleaning_and_preparing_lab/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/03_cleaning_and_preparing_lab/#evidence-to-keep">Evidence to keep</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/03_cleaning_and_preparing_lab/#after-the-lab">After the lab</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Session 4: Descriptive Statistics and Distributions</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../lectures/04_descriptive_statistics_lecture/">Lecture</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/04_descriptive_statistics_lecture/#recap-quiz">Recap quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/04_descriptive_statistics_lecture/#what-you-will-be-able-to-explain">What you will be able to explain</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/04_descriptive_statistics_lecture/#part-1-the-centre-mean-median-and-mode">Part 1: The centre — mean, median and mode</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/04_descriptive_statistics_lecture/#part-2-spread-how-different-are-the-values">Part 2: Spread — how different are the values?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/04_descriptive_statistics_lecture/#part-3-shape-skew-and-long-tails">Part 3: Shape — skew and long tails</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/04_descriptive_statistics_lecture/#part-4-three-pictures-of-one-distribution">Part 4: Three pictures of one distribution</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/04_descriptive_statistics_lecture/#part-5-z-scores-and-the-normal-curve-as-a-reference">Part 5: z-scores and the normal curve as a reference</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/04_descriptive_statistics_lecture/#part-6-unusual-values-flag-do-not-delete">Part 6: Unusual values — flag, do not delete</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/04_descriptive_statistics_lecture/#part-7-worked-case-superstore-orders">Part 7: Worked case — Superstore orders</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/04_descriptive_statistics_lecture/#summary">Summary</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/04_descriptive_statistics_lecture/#quiz">Quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/04_descriptive_statistics_lecture/#lab-briefing">Lab briefing</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../lectures/04_descriptive_statistics_lab/">Lab</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/04_descriptive_statistics_lab/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/04_descriptive_statistics_lab/#how-this-lab-works">How this lab works</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/04_descriptive_statistics_lab/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/04_descriptive_statistics_lab/#guided-practice">Guided practice</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/04_descriptive_statistics_lab/#independent-tasks">Independent tasks</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/04_descriptive_statistics_lab/#challenge">Challenge</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/04_descriptive_statistics_lab/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/04_descriptive_statistics_lab/#evidence-to-keep">Evidence to keep</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/04_descriptive_statistics_lab/#after-the-lab">After the lab</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Session 5: Metrics and KPIs</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../lectures/05_metrics_and_kpis_lecture/">Lecture</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/05_metrics_and_kpis_lecture/#recap-quiz">Recap quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/05_metrics_and_kpis_lecture/#what-you-will-be-able-to-explain">What you will be able to explain</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/05_metrics_and_kpis_lecture/#part-1-what-makes-a-good-metric">Part 1: What makes a good metric?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/05_metrics_and_kpis_lecture/#part-2-metric-contracts">Part 2: Metric contracts</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/05_metrics_and_kpis_lecture/#part-3-ratio-of-sums-versus-mean-of-ratios">Part 3: Ratio of sums versus mean of ratios</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/05_metrics_and_kpis_lecture/#part-4-weighted-rates-in-practice">Part 4: Weighted rates in practice</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/05_metrics_and_kpis_lecture/#part-5-distinct-counts-do-not-add-up">Part 5: Distinct counts do not add up</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/05_metrics_and_kpis_lecture/#part-6-simpsons-paradox">Part 6: Simpson's paradox</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/05_metrics_and_kpis_lecture/#part-7-goodharts-law">Part 7: Goodhart's law</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/05_metrics_and_kpis_lecture/#part-8-worked-case-a-segment-kpi-table-that-reconciles">Part 8: Worked case — a segment KPI table that reconciles</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/05_metrics_and_kpis_lecture/#summary">Summary</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/05_metrics_and_kpis_lecture/#quiz">Quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/05_metrics_and_kpis_lecture/#lab-briefing">Lab briefing</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../lectures/05_metrics_and_kpis_lab/">Lab</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/05_metrics_and_kpis_lab/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/05_metrics_and_kpis_lab/#how-this-lab-works">How this lab works</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/05_metrics_and_kpis_lab/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/05_metrics_and_kpis_lab/#guided-practice">Guided practice</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/05_metrics_and_kpis_lab/#independent-tasks">Independent tasks</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/05_metrics_and_kpis_lab/#challenge">Challenge</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/05_metrics_and_kpis_lab/#validation-checklist">Validation checklist</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/05_metrics_and_kpis_lab/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/05_metrics_and_kpis_lab/#evidence-to-keep">Evidence to keep</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/05_metrics_and_kpis_lab/#after-the-lab">After the lab</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Session 6: Visualisation Principles</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../lectures/06_visualisation_principles_lecture/">Lecture</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/06_visualisation_principles_lecture/#recap-quiz">Recap quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/06_visualisation_principles_lecture/#what-you-will-be-able-to-explain">What you will be able to explain</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/06_visualisation_principles_lecture/#part-1-choose-the-chart-from-the-task">Part 1: Choose the chart from the task</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/06_visualisation_principles_lecture/#part-2-how-accurately-we-read-encodings">Part 2: How accurately we read encodings</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/06_visualisation_principles_lecture/#part-3-pre-attentive-attributes">Part 3: Pre-attentive attributes</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/06_visualisation_principles_lecture/#part-4-data-ink-and-decluttering">Part 4: Data-ink and decluttering</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/06_visualisation_principles_lecture/#part-5-gestalt-what-belongs-together">Part 5: Gestalt: what belongs together</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/06_visualisation_principles_lecture/#part-6-colour-with-a-job">Part 6: Colour with a job</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/06_visualisation_principles_lecture/#part-7-honest-axes">Part 7: Honest axes</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/06_visualisation_principles_lecture/#part-8-message-titles-and-annotation">Part 8: Message titles and annotation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/06_visualisation_principles_lecture/#part-9-small-multiples">Part 9: Small multiples</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/06_visualisation_principles_lecture/#summary">Summary</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/06_visualisation_principles_lecture/#quiz">Quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/06_visualisation_principles_lecture/#in-the-lab">In the Lab</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../lectures/06_visualisation_principles_lab/">Lab</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/06_visualisation_principles_lab/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/06_visualisation_principles_lab/#how-this-lab-works">How this lab works</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/06_visualisation_principles_lab/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Session 7: Time Series and Trends</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../lectures/07_trends_and_growth_lecture/">Lecture</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/07_trends_and_growth_lecture/#recap-quiz">Recap quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/07_trends_and_growth_lecture/#what-you-will-be-able-to-explain">What you will be able to explain</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/07_trends_and_growth_lecture/#part-1-the-three-components-of-a-series">Part 1: The three components of a series</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/07_trends_and_growth_lecture/#part-2-month-on-month-versus-year-on-year">Part 2: Month-on-month versus year-on-year</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/07_trends_and_growth_lecture/#part-3-rolling-averages-trailing-and-centred">Part 3: Rolling averages, trailing and centred</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/07_trends_and_growth_lecture/#part-4-index-numbers-base-100">Part 4: Index numbers (base = 100)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/07_trends_and_growth_lecture/#part-5-seasonally-adjusted-series">Part 5: Seasonally adjusted series</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/07_trends_and_growth_lecture/#part-6-incomplete-and-missing-periods">Part 6: Incomplete and missing periods</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/07_trends_and_growth_lecture/#part-7-growth-after-filtering-the-trap">Part 7: Growth after filtering, the trap</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/07_trends_and_growth_lecture/#part-8-worked-case-superstore-monthly-sales">Part 8: Worked case — Superstore monthly Sales</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/07_trends_and_growth_lecture/#summary">Summary</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/07_trends_and_growth_lecture/#quiz">Quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/07_trends_and_growth_lecture/#lab-briefing">Lab briefing</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../lectures/07_trends_and_growth_lab/">Lab</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/07_trends_and_growth_lab/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/07_trends_and_growth_lab/#how-this-lab-works">How this lab works</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/07_trends_and_growth_lab/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/07_trends_and_growth_lab/#before-you-start">Before you start</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/07_trends_and_growth_lab/#guided-practice">Guided practice</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/07_trends_and_growth_lab/#independent-tasks">Independent tasks</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/07_trends_and_growth_lab/#challenge">Challenge</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/07_trends_and_growth_lab/#validation-checklist">Validation checklist</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/07_trends_and_growth_lab/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/07_trends_and_growth_lab/#evidence-to-keep">Evidence to keep</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/07_trends_and_growth_lab/#after-the-lab">After the lab</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Session 8: Correlation and Regression</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../lectures/08_correlation_and_regression_lecture/">Lecture</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/08_correlation_and_regression_lecture/#recap-quiz">Recap quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/08_correlation_and_regression_lecture/#what-you-will-be-able-to-explain">What you will be able to explain</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/08_correlation_and_regression_lecture/#part-1-scatter-plots">Part 1: Scatter plots</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/08_correlation_and_regression_lecture/#part-2-covariance-and-correlation">Part 2: Covariance and correlation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/08_correlation_and_regression_lecture/#part-3-spearman-correlation">Part 3: Spearman correlation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/08_correlation_and_regression_lecture/#part-4-correlation-is-not-causation">Part 4: Correlation is not causation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/08_correlation_and_regression_lecture/#part-5-simple-linear-regression">Part 5: Simple linear regression</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/08_correlation_and_regression_lecture/#part-6-outliers-and-leverage">Part 6: Outliers and leverage</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/08_correlation_and_regression_lecture/#part-7-the-danger-of-extrapolation">Part 7: The danger of extrapolation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/08_correlation_and_regression_lecture/#part-8-worked-case-advertising-spend-and-revenue">Part 8: Worked case — advertising spend and revenue</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/08_correlation_and_regression_lecture/#summary">Summary</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/08_correlation_and_regression_lecture/#quiz">Quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/08_correlation_and_regression_lecture/#lab-briefing">Lab briefing</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../lectures/08_correlation_and_regression_lab/">Lab</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/08_correlation_and_regression_lab/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/08_correlation_and_regression_lab/#how-this-lab-works">How this lab works</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/08_correlation_and_regression_lab/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/08_correlation_and_regression_lab/#before-you-start">Before you start</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/08_correlation_and_regression_lab/#guided-practice">Guided practice</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/08_correlation_and_regression_lab/#independent-tasks">Independent tasks</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/08_correlation_and_regression_lab/#challenge">Challenge</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/08_correlation_and_regression_lab/#validation-checklist">Validation checklist</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/08_correlation_and_regression_lab/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/08_correlation_and_regression_lab/#evidence-to-keep">Evidence to keep</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/08_correlation_and_regression_lab/#after-the-lab">After the lab</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Session 9: Sampling, Uncertainty and Experiments</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../lectures/09_sampling_and_experiments_lecture/">Lecture</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/09_sampling_and_experiments_lecture/#recap-quiz">Recap quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/09_sampling_and_experiments_lecture/#what-you-will-be-able-to-explain">What you will be able to explain</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/09_sampling_and_experiments_lecture/#part-1-population-sample-and-sampling-error">Part 1: Population, sample and sampling error</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/09_sampling_and_experiments_lecture/#part-2-the-sampling-distribution-by-simulation">Part 2: The sampling distribution, by simulation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/09_sampling_and_experiments_lecture/#part-3-standard-error-and-why-it-shrinks-with-n">Part 3: Standard error, and why it shrinks with √n</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/09_sampling_and_experiments_lecture/#part-4-confidence-intervals-bootstrap-first">Part 4: Confidence intervals, bootstrap first</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/09_sampling_and_experiments_lecture/#part-5-what-95-confidence-means">Part 5: What "95% confidence" means</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/09_sampling_and_experiments_lecture/#part-6-experiments-and-why-we-randomise">Part 6: Experiments and why we randomise</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/09_sampling_and_experiments_lecture/#part-7-conversion-rate-and-lift">Part 7: Conversion rate and lift</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/09_sampling_and_experiments_lecture/#part-8-a-confidence-interval-for-the-lift">Part 8: A confidence interval for the lift</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/09_sampling_and_experiments_lecture/#part-9-a-p-value-by-shuffling-permutation-test">Part 9: A p-value by shuffling (permutation test)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/09_sampling_and_experiments_lecture/#part-10-reading-a-p-value-and-practical-versus-statistical-significance">Part 10: Reading a p-value, and practical versus statistical significance</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/09_sampling_and_experiments_lecture/#part-11-peeking-and-multiple-comparisons">Part 11: Peeking and multiple comparisons</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/09_sampling_and_experiments_lecture/#part-12-worked-case-the-checkout-page-result-for-a-manager">Part 12: Worked case — the checkout-page result for a manager</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/09_sampling_and_experiments_lecture/#summary">Summary</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/09_sampling_and_experiments_lecture/#quiz">Quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/09_sampling_and_experiments_lecture/#lab-briefing">Lab briefing</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../lectures/09_sampling_and_experiments_lab/">Lab</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/09_sampling_and_experiments_lab/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/09_sampling_and_experiments_lab/#how-this-lab-works">How this lab works</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/09_sampling_and_experiments_lab/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/09_sampling_and_experiments_lab/#before-you-start">Before you start</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/09_sampling_and_experiments_lab/#guided-practice">Guided practice</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/09_sampling_and_experiments_lab/#independent-tasks">Independent tasks</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/09_sampling_and_experiments_lab/#challenge">Challenge</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/09_sampling_and_experiments_lab/#validation-checklist">Validation checklist</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/09_sampling_and_experiments_lab/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/09_sampling_and_experiments_lab/#evidence-to-keep">Evidence to keep</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Session 10: Finance: Budget Accountability</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../lectures/10_finance_budget_lecture/">Lecture</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/10_finance_budget_lecture/#recap-quiz">Recap quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/10_finance_budget_lecture/#what-you-will-be-able-to-explain">What you will be able to explain</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/10_finance_budget_lecture/#part-1-the-business-decision">Part 1: The business decision</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/10_finance_budget_lecture/#part-2-grain-keys-and-signs">Part 2: Grain, keys and signs</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/10_finance_budget_lecture/#part-3-the-join-trap">Part 3: The join trap</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/10_finance_budget_lecture/#part-4-aggregate-first-then-an-outer-join-with-an-indicator">Part 4: Aggregate first, then an outer join with an indicator</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/10_finance_budget_lecture/#part-5-unknown-missing-and-zero-are-different">Part 5: Unknown, missing and zero are different</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/10_finance_budget_lecture/#part-6-variance-and-favourability">Part 6: Variance and favourability</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/10_finance_budget_lecture/#part-7-reconciliation-checks">Part 7: Reconciliation checks</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/10_finance_budget_lecture/#part-8-materiality-using-amount-and-percentage">Part 8: Materiality, using amount and percentage</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/10_finance_budget_lecture/#part-9-never-average-percentages">Part 9: Never average percentages</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/10_finance_budget_lecture/#part-10-credits-reversals-and-timing">Part 10: Credits, reversals and timing</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/10_finance_budget_lecture/#part-11-worked-case-the-annual-department-account-view">Part 11: Worked case — the annual department × account view</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/10_finance_budget_lecture/#summary">Summary</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/10_finance_budget_lecture/#quiz">Quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/10_finance_budget_lecture/#lab-briefing">Lab briefing</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../lectures/10_finance_budget_lab/">Lab</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/10_finance_budget_lab/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/10_finance_budget_lab/#how-this-lab-works">How this lab works</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/10_finance_budget_lab/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/10_finance_budget_lab/#before-you-start">Before you start</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/10_finance_budget_lab/#guided-practice">Guided practice</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/10_finance_budget_lab/#independent-tasks">Independent tasks</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/10_finance_budget_lab/#challenge">Challenge</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/10_finance_budget_lab/#validation-checklist">Validation checklist</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/10_finance_budget_lab/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/10_finance_budget_lab/#evidence-to-keep">Evidence to keep</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Session 11: Operations: Service Performance</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../lectures/11_operations_service_lecture/">Lecture</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/11_operations_service_lecture/#recap-quiz">Recap quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/11_operations_service_lecture/#what-you-will-be-able-to-explain">What you will be able to explain</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/11_operations_service_lecture/#part-1-the-decision">Part 1: The decision</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/11_operations_service_lecture/#part-2-event-dates-a-cutoff-and-statuses">Part 2: Event dates, a cutoff and statuses</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/11_operations_service_lecture/#part-3-the-grain-is-the-shipment">Part 3: The grain is the shipment</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/11_operations_service_lecture/#part-4-a-tiny-hand-fixture">Part 4: A tiny hand fixture</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/11_operations_service_lecture/#part-5-the-due-population-and-the-on-time-rate">Part 5: The due population and the on-time rate</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/11_operations_service_lecture/#part-6-why-delivered-only-overstates-service">Part 6: Why "delivered only" overstates service</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/11_operations_service_lecture/#part-7-lead-time-for-completed-shipments">Part 7: Lead time for completed shipments</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/11_operations_service_lecture/#part-8-the-backlog-days-past-due">Part 8: The backlog: days past due</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/11_operations_service_lecture/#part-9-comparing-carriers-and-warehouses-fairly">Part 9: Comparing carriers and warehouses fairly</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/11_operations_service_lecture/#part-10-small-groups-and-uncertainty">Part 10: Small groups and uncertainty</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/11_operations_service_lecture/#part-11-worked-case-the-monthly-trend-and-the-december-disruption">Part 11: Worked case: the monthly trend and the December disruption</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/11_operations_service_lecture/#summary">Summary</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/11_operations_service_lecture/#quiz">Quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/11_operations_service_lecture/#lab-briefing">Lab briefing</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../lectures/11_operations_service_lab/">Lab</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/11_operations_service_lab/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/11_operations_service_lab/#how-this-lab-works">How this lab works</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/11_operations_service_lab/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/11_operations_service_lab/#before-you-start">Before you start</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/11_operations_service_lab/#guided-practice">Guided practice</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/11_operations_service_lab/#independent-tasks">Independent tasks</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/11_operations_service_lab/#challenge">Challenge</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/11_operations_service_lab/#validation-checklist">Validation checklist</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/11_operations_service_lab/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/11_operations_service_lab/#evidence-to-keep">Evidence to keep</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Session 12: Marketing: Campaign Evaluation</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../lectures/12_marketing_campaigns_lecture/">Lecture</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/12_marketing_campaigns_lecture/#recap-quiz">Recap quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/12_marketing_campaigns_lecture/#what-you-will-be-able-to-explain">What you will be able to explain</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/12_marketing_campaigns_lecture/#part-1-the-decision">Part 1: The decision</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/12_marketing_campaigns_lecture/#part-2-the-funnel-and-the-grain">Part 2: The funnel and the grain</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/12_marketing_campaigns_lecture/#part-3-funnel-rates-are-ratios-of-sums">Part 3: Funnel rates are ratios of sums</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/12_marketing_campaigns_lecture/#part-4-zero-denominators-and-review-cases">Part 4: Zero denominators and review cases</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/12_marketing_campaigns_lecture/#part-5-the-campaign-scorecard">Part 5: The campaign scorecard</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/12_marketing_campaigns_lecture/#part-6-weighted-rate-versus-the-mean-of-campaign-rates">Part 6: Weighted rate versus the mean of campaign rates</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/12_marketing_campaigns_lecture/#part-7-attribution-and-what-roas-does-not-tell-you">Part 7: Attribution, and what ROAS does not tell you</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/12_marketing_campaigns_lecture/#part-8-from-comparison-to-experiment">Part 8: From comparison to experiment</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/12_marketing_campaigns_lecture/#part-9-worked-case-a-scorecard-the-lead-can-use">Part 9: Worked case — a scorecard the lead can use</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/12_marketing_campaigns_lecture/#summary">Summary</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/12_marketing_campaigns_lecture/#quiz">Quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/12_marketing_campaigns_lecture/#lab-briefing">Lab briefing</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../lectures/12_marketing_campaigns_lab/">Lab</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/12_marketing_campaigns_lab/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/12_marketing_campaigns_lab/#how-this-lab-works">How this lab works</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/12_marketing_campaigns_lab/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/12_marketing_campaigns_lab/#before-you-start">Before you start</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/12_marketing_campaigns_lab/#guided-practice">Guided practice</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/12_marketing_campaigns_lab/#independent-tasks">Independent tasks</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/12_marketing_campaigns_lab/#challenge">Challenge</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/12_marketing_campaigns_lab/#validation-checklist">Validation checklist</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/12_marketing_campaigns_lab/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/12_marketing_campaigns_lab/#evidence-to-keep">Evidence to keep</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Session 13: HR: Workforce Analytics</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../lectures/13_hr_workforce_lecture/">Lecture</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/13_hr_workforce_lecture/#recap-quiz">Recap quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/13_hr_workforce_lecture/#what-you-will-be-able-to-explain">What you will be able to explain</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/13_hr_workforce_lecture/#part-1-the-decision">Part 1: The decision</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/13_hr_workforce_lecture/#part-2-three-tables-three-grains">Part 2: Three tables, three grains</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/13_hr_workforce_lecture/#part-3-intervals-and-active-on-a-date">Part 3: Intervals and "active on a date"</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/13_hr_workforce_lecture/#part-4-a-hand-fixture-across-a-month-boundary">Part 4: A hand fixture across a month boundary</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/13_hr_workforce_lecture/#part-5-the-monthly-company-bridge">Part 5: The monthly company bridge</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/13_hr_workforce_lecture/#part-6-average-headcount-and-turnover">Part 6: Average headcount and turnover</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/13_hr_workforce_lecture/#part-7-the-current-headcount-trap">Part 7: The current-headcount trap</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/13_hr_workforce_lecture/#part-8-department-bridges-and-transfers">Part 8: Department bridges and transfers</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/13_hr_workforce_lecture/#part-9-tenure-versus-completed-service">Part 9: Tenure versus completed service</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/13_hr_workforce_lecture/#part-10-recruitment-time-to-fill-and-open-age">Part 10: Recruitment: time to fill and open age</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/13_hr_workforce_lecture/#part-11-small-groups-privacy-and-fairness">Part 11: Small groups, privacy and fairness</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/13_hr_workforce_lecture/#part-12-worked-case-where-is-the-workforce-under-strain">Part 12: Worked case: where is the workforce under strain?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/13_hr_workforce_lecture/#summary">Summary</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/13_hr_workforce_lecture/#quiz">Quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/13_hr_workforce_lecture/#lab-briefing">Lab briefing</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../lectures/13_hr_workforce_lab/">Lab</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/13_hr_workforce_lab/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/13_hr_workforce_lab/#how-this-lab-works">How this lab works</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/13_hr_workforce_lab/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/13_hr_workforce_lab/#before-you-start">Before you start</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/13_hr_workforce_lab/#guided-practice">Guided practice</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/13_hr_workforce_lab/#independent-tasks">Independent tasks</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/13_hr_workforce_lab/#challenge">Challenge</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/13_hr_workforce_lab/#validation-checklist">Validation checklist</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/13_hr_workforce_lab/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/13_hr_workforce_lab/#evidence-to-keep">Evidence to keep</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Session 14: Dashboards and Storytelling</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../lectures/14_dashboards_storytelling_lecture/">Lecture</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/14_dashboards_storytelling_lecture/#recap-quiz">Recap quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/14_dashboards_storytelling_lecture/#what-you-will-be-able-to-explain">What you will be able to explain</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/14_dashboards_storytelling_lecture/#part-1-exploratory-versus-explanatory">Part 1: Exploratory versus explanatory</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/14_dashboards_storytelling_lecture/#part-2-the-big-idea-the-story-and-the-title">Part 2: The big idea, the story and the title</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/14_dashboards_storytelling_lecture/#part-3-the-challenger-case-in-depth">Part 3: The Challenger case, in depth</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/14_dashboards_storytelling_lecture/#part-4-decluttering-a-default-chart-step-by-step">Part 4: Decluttering a default chart, step by step</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/14_dashboards_storytelling_lecture/#part-5-dashboard-design-principles">Part 5: Dashboard design principles</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/14_dashboards_storytelling_lecture/#part-6-worked-case-a-decision-dashboard-for-the-commercial-lead">Part 6: Worked case: a decision dashboard for the commercial lead</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/14_dashboards_storytelling_lecture/#part-7-writing-for-executives">Part 7: Writing for executives</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/14_dashboards_storytelling_lecture/#summary">Summary</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/14_dashboards_storytelling_lecture/#quiz">Quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/14_dashboards_storytelling_lecture/#lab-briefing">Lab briefing</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../lectures/14_dashboards_storytelling_lab/">Lab</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/14_dashboards_storytelling_lab/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/14_dashboards_storytelling_lab/#how-this-lab-works">How this lab works</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/14_dashboards_storytelling_lab/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/14_dashboards_storytelling_lab/#before-you-start">Before you start</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/14_dashboards_storytelling_lab/#guided-practice">Guided practice</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/14_dashboards_storytelling_lab/#independent-tasks">Independent tasks</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/14_dashboards_storytelling_lab/#challenge">Challenge</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/14_dashboards_storytelling_lab/#validation-checklist">Validation checklist</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/14_dashboards_storytelling_lab/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/14_dashboards_storytelling_lab/#evidence-to-keep">Evidence to keep</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/14_dashboards_storytelling_lab/#after-the-lab">After the lab</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Session 15: Capstone Studio</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../lectures/15_capstone_studio_lecture/">Lecture</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/15_capstone_studio_lecture/#recap-quiz">Recap quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/15_capstone_studio_lecture/#what-you-will-be-able-to-explain">What you will be able to explain</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/15_capstone_studio_lecture/#part-1-what-a-capstone-must-show">Part 1: What a capstone must show</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/15_capstone_studio_lecture/#part-2-the-decision-for-this-lectures-worked-case">Part 2: The decision for this lecture's worked case</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/15_capstone_studio_lecture/#part-3-build-each-domains-evidence-separately">Part 3: Build each domain's evidence separately</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/15_capstone_studio_lecture/#part-4-the-evidence-register">Part 4: The evidence register</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/15_capstone_studio_lecture/#part-5-combining-evidence-without-false-joins">Part 5: Combining evidence without false joins</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/15_capstone_studio_lecture/#part-6-trade-off-analysis">Part 6: Trade-off analysis</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/15_capstone_studio_lecture/#part-7-the-validation-pack">Part 7: The validation pack</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/15_capstone_studio_lecture/#part-8-peer-review-protocol">Part 8: Peer review protocol</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/15_capstone_studio_lecture/#part-9-worked-case-a-draft-capstone-summary">Part 9: Worked case: a draft capstone summary</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/15_capstone_studio_lecture/#summary">Summary</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/15_capstone_studio_lecture/#quiz">Quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/15_capstone_studio_lecture/#lab-briefing">Lab briefing</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../lectures/15_capstone_studio_lab/">Lab</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/15_capstone_studio_lab/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/15_capstone_studio_lab/#how-this-lab-works">How this lab works</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/15_capstone_studio_lab/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/15_capstone_studio_lab/#before-you-start">Before you start</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/15_capstone_studio_lab/#guided-practice">Guided practice</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/15_capstone_studio_lab/#independent-tasks">Independent tasks</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/15_capstone_studio_lab/#challenge">Challenge</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/15_capstone_studio_lab/#validation-checklist">Validation checklist</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/15_capstone_studio_lab/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/15_capstone_studio_lab/#evidence-to-keep">Evidence to keep</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Session 16: Executive Briefings</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../lectures/16_executive_briefings_lecture/">Lecture</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/16_executive_briefings_lecture/#recap-quiz">Recap quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/16_executive_briefings_lecture/#what-you-will-be-able-to-explain">What you will be able to explain</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/16_executive_briefings_lecture/#part-1-recommendation-first">Part 1: Recommendation first</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/16_executive_briefings_lecture/#part-2-so-what-titles">Part 2: So-what titles</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/16_executive_briefings_lecture/#part-3-numbers-with-context">Part 3: Numbers with context</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/16_executive_briefings_lecture/#part-4-presenting-uncertainty-honestly">Part 4: Presenting uncertainty honestly</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/16_executive_briefings_lecture/#part-5-one-summary-figure">Part 5: One summary figure</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/16_executive_briefings_lecture/#part-6-one-page-or-three-to-five-slides">Part 6: One page, or three to five slides</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/16_executive_briefings_lecture/#part-7-handling-questions-and-challenge">Part 7: Handling questions and challenge</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/16_executive_briefings_lecture/#part-8-common-failure-modes">Part 8: Common failure modes</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/16_executive_briefings_lecture/#part-9-the-feedback-rubric">Part 9: The feedback rubric</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/16_executive_briefings_lecture/#part-10-reflection-and-next-steps">Part 10: Reflection and next steps</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/16_executive_briefings_lecture/#summary">Summary</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/16_executive_briefings_lecture/#lab-briefing">Lab briefing</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../lectures/16_executive_briefings_lab/">Lab</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/16_executive_briefings_lab/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/16_executive_briefings_lab/#how-this-lab-works">How this lab works</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/16_executive_briefings_lab/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/16_executive_briefings_lab/#before-you-start">Before you start</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/16_executive_briefings_lab/#guided-practice">Guided practice</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/16_executive_briefings_lab/#independent-tasks">Independent tasks</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/16_executive_briefings_lab/#challenge">Challenge</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/16_executive_briefings_lab/#validation-checklist">Validation checklist</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/16_executive_briefings_lab/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/16_executive_briefings_lab/#course-reflection">Course reflection</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lectures/16_executive_briefings_lab/#evidence-to-keep">Evidence to keep</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">DATA 300 (China Classroom)</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../">Overview</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../#what-the-course-covers">What the course covers</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../#course-learning-outcomes">Course learning outcomes</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../#how-the-course-is-organised">How the course is organised</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../#graded-work">Graded work</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../#main-textbook">Main textbook</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../schedule/">Schedule</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../schedule/#daily-timetable-on-campus">Daily timetable on campus</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../schedule/#pre-class-week-online-before-tuesday-10-november">Pre-class week (online, before Tuesday 10 November)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../schedule/#in-class-module-1">In-class Module 1</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../schedule/#day-1-tuesday-10-november">Day 1 · Tuesday 10 November</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../schedule/#day-2-wednesday-11-november">Day 2 · Wednesday 11 November</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../schedule/#day-3-thursday-12-november">Day 3 · Thursday 12 November</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../schedule/#weekend-friday-13-sunday-15-november">Weekend · Friday 13 – Sunday 15 November</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../schedule/#in-class-module-2">In-class Module 2</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../schedule/#day-4-monday-16-november">Day 4 · Monday 16 November</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../schedule/#day-5-tuesday-17-november">Day 5 · Tuesday 17 November</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../schedule/#day-6-wednesday-18-november">Day 6 · Wednesday 18 November</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../schedule/#day-7-thursday-19-november">Day 7 · Thursday 19 November</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../schedule/#post-class-week-and-deadlines">Post-class week and deadlines</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../setup/">Setup</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../setup/#what-you-need">What you need</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../setup/#1-install-anaconda">1. Install Anaconda</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../setup/#2-unzip-the-course-folder">2. Unzip the course folder</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../setup/#3-run-the-setup-check">3. Run the setup check</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../setup/#4-tableau">4. Tableau</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../setup/#5-excel">5. Excel</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../setup/#running-and-submitting-a-notebook">Running and submitting a notebook</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../setup/#combining-pdfs-without-internet">Combining PDFs without internet</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Pre-class (online)</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../00_setup_check/">Setup check</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../00_setup_check/#how-to-use-it">How to use it</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../00_setup_check/#1-python-version">1. Python version</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../00_setup_check/#2-packages">2. Packages</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../00_setup_check/#3-data-files">3. Data files</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../00_setup_check/#4-text-tools-nltk-offline">4. Text tools (NLTK), offline</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../00_setup_check/#5-the-co2-time-series">5. The CO₂ time series</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../00_setup_check/#6-a-test-chart">6. A test chart</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../00_setup_check/#summary">Summary</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../00_preclass_python_jupyter_basics/">Python and Jupyter basics</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../00_preclass_python_jupyter_basics/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../00_preclass_python_jupyter_basics/#part-1-a-tour-of-jupyterlab">Part 1: A tour of JupyterLab</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../00_preclass_python_jupyter_basics/#part-2-python-essentials">Part 2: Python essentials</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../00_preclass_python_jupyter_basics/#part-3-dataframes-with-pandas">Part 3: DataFrames with pandas</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../00_preclass_python_jupyter_basics/#part-4-data-types-and-levels-of-measurement">Part 4: Data types and levels of measurement</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../00_preclass_python_jupyter_basics/#part-5-what-does-a-row-mean">Part 5: What does a row mean?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../00_preclass_python_jupyter_basics/#part-6-a-first-chart">Part 6: A first chart</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../00_preclass_python_jupyter_basics/#quick-reference">Quick reference</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../00_preclass_python_jupyter_basics/#summary">Summary</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../00_preclass_python_jupyter_basics/#quiz">Quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../00_preclass_python_jupyter_basics/#next-activity-1">Next: Activity 1</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../00_preclass_activity1_readiness/">Activity 1: Readiness check</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../00_preclass_activity1_readiness/#what-you-will-do">What you will do</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../00_preclass_activity1_readiness/#part-a-exploratory-analysis-in-jupyter">Part A: Exploratory analysis in Jupyter</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../00_preclass_activity1_readiness/#part-b-tableau-readiness">Part B: Tableau readiness</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../00_preclass_activity1_readiness/#part-c-submission">Part C: Submission</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../00_preclass_activity1_readiness/#checklist-before-you-upload">Checklist before you upload</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../00_preclass_activity1_readiness/#how-it-is-marked">How it is marked</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Day 1 · Tue 10 Nov</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../D1_lecture_data_driven_decisions/">Lecture: Data-driven decisions</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../D1_lecture_data_driven_decisions/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D1_lecture_data_driven_decisions/#part-1-the-course-map">Part 1: The course map</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D1_lecture_data_driven_decisions/#part-2-why-data-driven-decisions">Part 2: Why data-driven decisions?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D1_lecture_data_driven_decisions/#part-3-four-kinds-of-analytics">Part 3: Four kinds of analytics</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D1_lecture_data_driven_decisions/#part-4-analysis-fundamentals-from-question-to-decision">Part 4: Analysis fundamentals — from question to decision</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D1_lecture_data_driven_decisions/#part-5-statistics-are-not-enough-anscombes-quartet">Part 5: Statistics are not enough — Anscombe's quartet</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D1_lecture_data_driven_decisions/#part-6-the-datasaurus-dozen">Part 6: The Datasaurus Dozen</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D1_lecture_data_driven_decisions/#part-7-a-preview-of-how-numbers-mislead">Part 7: A preview of how numbers mislead</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D1_lecture_data_driven_decisions/#summary">Summary</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D1_lecture_data_driven_decisions/#closing-quiz">Closing quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D1_lecture_data_driven_decisions/#this-afternoon">This afternoon</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../D1_lecture_exploratory_analysis/">Lecture: Exploring data in Python</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../D1_lecture_exploratory_analysis/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D1_lecture_exploratory_analysis/#recap-this-morning">Recap: this morning</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D1_lecture_exploratory_analysis/#part-1-the-exploration-routine">Part 1: The exploration routine</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D1_lecture_exploratory_analysis/#part-2-structure-and-data-quality">Part 2: Structure and data quality</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D1_lecture_exploratory_analysis/#part-3-distributions-and-skew">Part 3: Distributions and skew</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D1_lecture_exploratory_analysis/#part-4-pivot-tables-and-groupby">Part 4: Pivot tables and groupby</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D1_lecture_exploratory_analysis/#part-5-correlation-and-the-heatmap">Part 5: Correlation and the heatmap</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D1_lecture_exploratory_analysis/#part-6-confounding-and-simpsons-paradox">Part 6: Confounding and Simpson's paradox</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D1_lecture_exploratory_analysis/#part-7-charts-for-large-datasets">Part 7: Charts for large datasets</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D1_lecture_exploratory_analysis/#summary">Summary</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D1_lecture_exploratory_analysis/#quick-reference">Quick reference</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D1_lecture_exploratory_analysis/#quiz-ready-for-the-lab">Quiz: ready for the lab?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D1_lecture_exploratory_analysis/#in-the-lab">In the lab</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../D1_lab_lab1_diamonds/">Lab 1: Data exploration</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../D1_lab_lab1_diamonds/#the-business-scenario">The business scenario</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D1_lab_lab1_diamonds/#part-1-load-the-libraries-and-the-data">Part 1: Load the libraries and the data</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D1_lab_lab1_diamonds/#part-2-structural-inspection-and-data-quality">Part 2: Structural inspection and data quality</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D1_lab_lab1_diamonds/#part-3-pivot-table-average-price-by-cut-and-colour">Part 3: Pivot table — average price by cut and colour</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D1_lab_lab1_diamonds/#part-4-visualising-more-than-50000-diamonds">Part 4: Visualising more than 50,000 diamonds</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D1_lab_lab1_diamonds/#part-5-questions">Part 5: Questions</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D1_lab_lab1_diamonds/#going-further-not-graded">Going further (not graded)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D1_lab_lab1_diamonds/#part-6-export-and-submit">Part 6: Export and submit</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D1_lab_lab1_diamonds/#checklist-before-you-upload">Checklist before you upload</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D1_lab_lab1_diamonds/#how-it-is-marked">How it is marked</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >Day 2 · Wed 11 Nov</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../D2_lecture_visualisation_communication/">Lecture: Visualising and communicating results</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../D2_lecture_visualisation_communication/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D2_lecture_visualisation_communication/#recap-day-1">Recap: Day 1</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D2_lecture_visualisation_communication/#part-1-choose-the-chart-from-the-task">Part 1: Choose the chart from the task</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D2_lecture_visualisation_communication/#part-2-how-accurately-we-read-encodings">Part 2: How accurately we read encodings</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D2_lecture_visualisation_communication/#part-3-pre-attentive-attributes">Part 3: Pre-attentive attributes</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D2_lecture_visualisation_communication/#part-4-data-ink-and-decluttering">Part 4: Data-ink and decluttering</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D2_lecture_visualisation_communication/#part-5-gestalt-what-belongs-together">Part 5: Gestalt: what belongs together</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D2_lecture_visualisation_communication/#part-6-colour-with-a-job-and-accessibility">Part 6: Colour with a job, and accessibility</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D2_lecture_visualisation_communication/#part-7-honest-axes-and-misleading-charts">Part 7: Honest axes and misleading charts</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D2_lecture_visualisation_communication/#part-8-message-titles-annotation-and-small-multiples">Part 8: Message titles, annotation and small multiples</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D2_lecture_visualisation_communication/#part-9-communicating-results-audience-big-idea-story">Part 9: Communicating results: audience, big idea, story</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D2_lecture_visualisation_communication/#part-10-the-challenger-case">Part 10: The Challenger case</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D2_lecture_visualisation_communication/#part-11-dashboards-and-kpis">Part 11: Dashboards and KPIs</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D2_lecture_visualisation_communication/#part-12-marketing-analytics">Part 12: Marketing analytics</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D2_lecture_visualisation_communication/#summary">Summary</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D2_lecture_visualisation_communication/#closing-quiz">Closing quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D2_lecture_visualisation_communication/#this-afternoon">This afternoon</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../D2_lecture_tableau_dashboards/">Lecture: Building dashboards in Tableau</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../D2_lecture_tableau_dashboards/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D2_lecture_tableau_dashboards/#part-1-the-tableau-workspace">Part 1: The Tableau workspace</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D2_lecture_tableau_dashboards/#part-2-connecting-to-data">Part 2: Connecting to data</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D2_lecture_tableau_dashboards/#part-3-dimensions-and-measures-discrete-and-continuous">Part 3: Dimensions and measures, discrete and continuous</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D2_lecture_tableau_dashboards/#part-4-aggregation-and-the-level-of-detail">Part 4: Aggregation and the level of detail</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D2_lecture_tableau_dashboards/#part-5-the-marks-card">Part 5: The Marks card</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D2_lecture_tableau_dashboards/#part-6-filters">Part 6: Filters</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D2_lecture_tableau_dashboards/#part-7-calculated-fields-and-a-ratio-kpi">Part 7: Calculated fields and a ratio KPI</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D2_lecture_tableau_dashboards/#part-8-from-sheets-to-a-dashboard">Part 8: From sheets to a dashboard</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D2_lecture_tableau_dashboards/#part-9-actions-making-the-dashboard-interactive">Part 9: Actions: making the dashboard interactive</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D2_lecture_tableau_dashboards/#part-10-formatting-for-the-reader">Part 10: Formatting for the reader</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D2_lecture_tableau_dashboards/#part-11-saving-printing-to-pdf-and-publishing">Part 11: Saving, printing to PDF and publishing</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D2_lecture_tableau_dashboards/#summary">Summary</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D2_lecture_tableau_dashboards/#closing-quiz">Closing quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D2_lecture_tableau_dashboards/#part-12-assignment-1-briefing">Part 12: Assignment 1 briefing</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Lab 2: Dashboard creation</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#the-business-problem">The business problem</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#before-you-start">Before you start</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#part-1-connect-to-the-data-core">Part 1: Connect to the data (Core)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#part-2-build-three-worksheets-core">Part 2: Build three worksheets (Core)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#part-3-assemble-the-interactive-dashboard-core">Part 3: Assemble the interactive dashboard (Core)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#part-4-answer-the-business-questions-core">Part 4: Answer the business questions (Core)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#part-5-export-combine-and-submit-core">Part 5: Export, combine and submit (Core)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#part-6-improve-the-design-stretch-optional">Part 6: Improve the design (Stretch, optional)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#part-7-add-a-second-action-challenge-optional">Part 7: Add a second action (Challenge, optional)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#how-this-lab-is-marked">How this lab is marked</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#validation-checklist">Validation checklist</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#exit-ticket">Exit ticket</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../D2_assignment1_tips_report/">Assignment 1: Descriptive analytics report</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../D2_assignment1_tips_report/#the-scenario">The scenario</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D2_assignment1_tips_report/#what-you-must-do">What you must do</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D2_assignment1_tips_report/#part-1-the-analysis">Part 1: The analysis</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D2_assignment1_tips_report/#part-2-the-business-report">Part 2: The business report</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D2_assignment1_tips_report/#part-3-export-and-submit">Part 3: Export and submit</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D2_assignment1_tips_report/#how-it-is-marked">How it is marked</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D2_assignment1_tips_report/#final-checklist">Final checklist</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Day 3 · Thu 12 Nov</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../D3_lecture_text_mining/">Lecture: Text mining</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../D3_lecture_text_mining/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D3_lecture_text_mining/#recap-day-2">Recap: Day 2</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D3_lecture_text_mining/#part-1-unstructured-text-and-the-text-mining-routine">Part 1: Unstructured text and the text-mining routine</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D3_lecture_text_mining/#part-2-tokenising">Part 2: Tokenising</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D3_lecture_text_mining/#part-3-stopwords">Part 3: Stopwords</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D3_lecture_text_mining/#part-4-word-frequency">Part 4: Word frequency</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D3_lecture_text_mining/#part-5-word-clouds-and-word-pairs">Part 5: Word clouds and word pairs</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D3_lecture_text_mining/#part-6-sentiment-with-vader">Part 6: Sentiment with VADER</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D3_lecture_text_mining/#part-7-checking-the-scores-against-star-ratings">Part 7: Checking the scores against star ratings</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D3_lecture_text_mining/#part-8-from-reviews-to-a-decision">Part 8: From reviews to a decision</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D3_lecture_text_mining/#summary">Summary</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D3_lecture_text_mining/#quick-reference">Quick reference</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D3_lecture_text_mining/#closing-quiz">Closing quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D3_lecture_text_mining/#this-afternoon">This afternoon</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../D3_lecture_forecasting/">Lecture: Forecasting</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../D3_lecture_forecasting/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D3_lecture_forecasting/#part-1-why-forecast-and-the-words-we-use">Part 1: Why forecast, and the words we use</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D3_lecture_forecasting/#part-2-the-data-co2-at-mauna-loa">Part 2: The data: CO₂ at Mauna Loa</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D3_lecture_forecasting/#part-3-trend-seasonality-and-decomposition">Part 3: Trend, seasonality and decomposition</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D3_lecture_forecasting/#part-4-moving-averages">Part 4: Moving averages</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D3_lecture_forecasting/#part-5-train-and-test-in-time-order">Part 5: Train and test in time order</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D3_lecture_forecasting/#part-6-measuring-forecast-error-and-baselines">Part 6: Measuring forecast error, and baselines</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D3_lecture_forecasting/#part-7-exponential-smoothing">Part 7: Exponential smoothing</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D3_lecture_forecasting/#part-8-the-arima-idea">Part 8: The ARIMA idea</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D3_lecture_forecasting/#part-9-forecast-intervals">Part 9: Forecast intervals</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D3_lecture_forecasting/#part-10-choosing-a-model-and-making-the-decision">Part 10: Choosing a model and making the decision</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D3_lecture_forecasting/#summary">Summary</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D3_lecture_forecasting/#quick-reference">Quick reference</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D3_lecture_forecasting/#closing-quiz">Closing quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D3_lecture_forecasting/#this-afternoon">This afternoon</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../D3_lab_lab3_text_mining/">Lab 3: Text mining</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../D3_lab_lab3_text_mining/#the-business-scenario">The business scenario</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D3_lab_lab3_text_mining/#part-1-set-up-nltk-and-load-the-reviews">Part 1: Set up NLTK and load the reviews</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D3_lab_lab3_text_mining/#part-2-text-preprocessing-and-key-terms">Part 2: Text preprocessing and key terms</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D3_lab_lab3_text_mining/#part-3-sentiment-analysis-with-vader">Part 3: Sentiment analysis with VADER</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D3_lab_lab3_text_mining/#part-4-questions">Part 4: Questions</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D3_lab_lab3_text_mining/#going-further-not-graded">Going further (not graded)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D3_lab_lab3_text_mining/#part-5-export-and-submit">Part 5: Export and submit</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D3_lab_lab3_text_mining/#checklist-before-you-upload">Checklist before you upload</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D3_lab_lab3_text_mining/#how-it-is-marked">How it is marked</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../D3_lab_lab4_forecasting/">Lab 4: Forecasting</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../D3_lab_lab4_forecasting/#the-business-scenario">The business scenario</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D3_lab_lab4_forecasting/#part-1-load-the-data-and-test-for-stationarity">Part 1: Load the data and test for stationarity</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D3_lab_lab4_forecasting/#part-2-traintest-split-in-time-order">Part 2: Train/test split in time order</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D3_lab_lab4_forecasting/#part-3-sarima-model-and-accuracy">Part 3: SARIMA model and accuracy</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D3_lab_lab4_forecasting/#part-4-questions">Part 4: Questions</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D3_lab_lab4_forecasting/#going-further-not-graded">Going further (not graded)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D3_lab_lab4_forecasting/#part-5-export-and-submit">Part 5: Export and submit</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D3_lab_lab4_forecasting/#checklist-before-you-upload">Checklist before you upload</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D3_lab_lab4_forecasting/#how-it-is-marked">How it is marked</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Tableau (Coming Later)</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lessons/class-01/">Tableau Lesson 1 (draft)</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#before-you-start">Before you start</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#part-1-from-request-to-question">Part 1: From request to question</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#part-2-watch-the-demonstration">Part 2: Watch the demonstration</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#part-3-guided-practice">Part 3: Guided practice</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-01/#connect-to-the-file">Connect to the file</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-01/#check-the-column-types">Check the column types</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-01/#build-a-first-chart">Build a first chart</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-01/#add-a-filter">Add a filter</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-01/#save-and-reopen">Save and reopen</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#part-4-rows-versus-orders">Part 4: Rows versus orders</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#part-5-independent-work">Part 5: Independent work</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#part-6-challenge">Part 6: Challenge</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-01/#after-the-lesson">After the lesson</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lessons/class-02/">Tableau Lesson 2 (draft)</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#before-you-start">Before you start</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#part-1-meet-the-data-dictionary">Part 1: Meet the data dictionary</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#part-2-find-the-grain">Part 2: Find the grain</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#part-3-count-orders-correctly">Part 3: Count orders correctly</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-02/#demonstration">Demonstration</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-02/#guided-practice">Guided practice</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#part-4-what-the-returns-flag-means">Part 4: What the returns flag means</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#part-5-check-one-order-by-hand">Part 5: Check one order by hand</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#part-6-keep-a-preparation-log">Part 6: Keep a preparation log</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#part-7-independent-work">Part 7: Independent work</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#part-8-debugging-challenge">Part 8: Debugging challenge</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-02/#after-the-lesson">After the lesson</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lessons/class-03/">Tableau Lesson 3 (draft)</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#before-you-start">Before you start</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#part-1-agree-the-measures">Part 1: Agree the measures</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#part-2-watch-the-demonstration">Part 2: Watch the demonstration</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#part-3-guided-practice-build-the-calculations">Part 3: Guided practice — build the calculations</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#part-4-guided-practice-the-segment-table">Part 4: Guided practice — the segment table</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-03/#check-that-it-reconciles">Check that it reconciles</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#part-5-independent-work">Part 5: Independent work</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-03/#a-filter-by-region">A. Filter by region</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-03/#b-look-at-a-category">B. Look at a category</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#part-6-debugging-challenge">Part 6: Debugging challenge</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#part-7-make-a-recommendation">Part 7: Make a recommendation</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#validation-checklist">Validation checklist</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-03/#after-the-lesson">After the lesson</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../lessons/class-04/">Tableau Lesson 4 (draft)</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#the-business-decision">The business decision</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#before-you-start">Before you start</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#part-1-the-monthly-trend">Part 1: The monthly trend</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#part-2-two-kinds-of-growth">Part 2: Two kinds of growth</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-04/#month-on-month-growth">Month-on-month growth</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-04/#year-on-year-growth">Year-on-year growth</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-04/#which-one-is-fair">Which one is fair?</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#part-3-the-returns-list">Part 3: The returns list</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#part-4-guided-practice-build-the-dashboard">Part 4: Guided practice — build the dashboard</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../../lessons/class-04/#design-checks">Design checks</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#part-5-independent-work">Part 5: Independent work</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#part-6-debugging-challenge">Part 6: Debugging challenge</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#part-7-recommend-a-test">Part 7: Recommend a test</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#validation-checklist">Validation checklist</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#exit-ticket">Exit ticket</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/class-04/#after-the-lesson">After the lesson</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../lessons/lesson-template/">Lesson Template</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#1-the-business-decision">1. The business decision</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#2-what-you-will-demonstrate">2. What you will demonstrate</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#3-before-you-start">3. Before you start</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#4-understand-the-data">4. Understand the data</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#5-agree-the-measures">5. Agree the measures</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#6-watch-a-worked-example">6. Watch a worked example</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#7-try-it-with-guidance">7. Try it with guidance</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#8-work-independently">8. Work independently</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#9-debug-a-result">9. Debug a result</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#10-make-a-recommendation">10. Make a recommendation</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#11-connection-to-the-other-tool">11. Connection to the other tool</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../lessons/lesson-template/#12-submit-and-reflect">12. Submit and reflect</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Data Analytics</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">DATA 300 (China Classroom)</li>
+          <li class="breadcrumb-item">Day 2 · Wed 11 Nov</li>
+      <li class="breadcrumb-item active">Lab 2: Dashboard creation</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="day-2-lab-applied-lab-2-dashboard-creation">Day 2 lab: Applied Lab 2 — Dashboard creation<a class="headerlink" href="#day-2-lab-applied-lab-2-dashboard-creation" title="Permanent link">&para;</a></h1>
+<p class="lead">
+Build an interactive executive dashboard in Tableau from three worksheets (a monthly sales trend, a profit map and a sub-category bar chart), connect them with a filter action, and use the dashboard to answer five business questions for regional managers.
+</p>
+
+<p><em>Adapted from the DATA 300 syllabus, Applied Lab 2 (Dashboard creation). Instructions rewritten for this classroom.</em></p>
+<blockquote>
+<p><strong>Graded work: Applied Lab 2 (3%, CLO 1, 2 and 3)</strong></p>
+<ul>
+<li><strong>Tools:</strong> Tableau Desktop (student licence) with the built-in <strong>Sample – Superstore</strong> data, and Word (or another editor that saves PDF).</li>
+<li><strong>Hand in:</strong> one PDF, <code>YourLastName_DATA300_AppliedLab2.pdf</code>, uploaded to <strong>GAP (Moodle)</strong>.</li>
+<li><strong>Deadline:</strong> 23:59 China Standard Time on <strong>Wednesday 11 November</strong>, unless your facilitator says otherwise.</li>
+</ul>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Part</th>
+<th>What you do</th>
+<th>Level</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Connect to the data</td>
+<td>Core (graded)</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Build three worksheets</td>
+<td>Core (graded)</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Assemble the interactive dashboard</td>
+<td>Core (graded)</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Answer five business questions</td>
+<td>Core (graded)</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Export, combine and submit</td>
+<td>Core (graded)</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Improve the design</td>
+<td>Stretch (optional)</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Add a second action</td>
+<td>Challenge (optional)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="the-business-problem">The business problem<a class="headerlink" href="#the-business-problem" title="Permanent link">&para;</a></h2>
+<p>You are an analytics consultant for a national retail chain, <strong>Superstore</strong>. Its regional managers say two things are hard to see in their current reports:</p>
+<ol>
+<li>how <strong>their own state's</strong> sales are moving from month to month, and</li>
+<li>which <strong>product sub-categories</strong> make or lose money in their state.</li>
+</ol>
+<p>Your job is to build one interactive <strong>Executive Summary Dashboard</strong>. A manager clicks their state on a map, and the other charts immediately show that state's monthly sales trend and its sub-categories, coloured by profit.</p>
+<p>This is this morning's dashboard design in practice: one audience (regional managers), one decision (which products to look at), a few views, and an action that filters every view.</p>
+<hr />
+<h2 id="before-you-start">Before you start<a class="headerlink" href="#before-you-start" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Open <strong>Tableau Desktop</strong>. If it asks for a licence, use your student licence key.</li>
+<li>On the start page, check that <strong>Sample – Superstore</strong> appears under <strong>Saved Data Sources</strong>. If it does not, ask your facilitator for the course copy of the Superstore file; then connect with <strong>Connect → To a File → Microsoft Excel</strong> and drag the <strong>Orders</strong> sheet onto the canvas.</li>
+<li>Make a folder for this lab, for example <code>Lab2</code>, to keep your files together.</li>
+</ol>
+<blockquote>
+<p><strong>Your numbers may differ from your neighbour's</strong></p>
+<p>Tableau ships different versions of Sample – Superstore with different releases (different years, and sometimes Canadian provinces as well as US states). Answer from <strong>your</strong> dashboard. If a field is called <em>State/Province</em> instead of <em>State</em>, use that; the steps are the same.</p>
+</blockquote>
+<hr />
+<h2 id="part-1-connect-to-the-data-core">Part 1: Connect to the data (Core)<a class="headerlink" href="#part-1-connect-to-the-data-core" title="Permanent link">&para;</a></h2>
+<ol>
+<li>On the start page, under <strong>Saved Data Sources</strong>, click <strong>Sample – Superstore</strong>.</li>
+<li>Tableau opens a blank worksheet called <strong>Sheet 1</strong>. The Data pane on the left lists the fields. You are connected.</li>
+</ol>
+<blockquote>
+<p><strong>Check:</strong> you can see <strong>Order Date</strong>, <strong>State</strong> (or <em>State/Province</em>), <strong>Sub-Category</strong>, <strong>Sales</strong> and <strong>Profit</strong> in the Data pane.</p>
+</blockquote>
+<hr />
+<h2 id="part-2-build-three-worksheets-core">Part 2: Build three worksheets (Core)<a class="headerlink" href="#part-2-build-three-worksheets-core" title="Permanent link">&para;</a></h2>
+<p>A dashboard is assembled from separate worksheets. Build and name each one first.</p>
+<h3 id="sheet-1-monthly-sales-trend-a-line-chart">Sheet 1: Monthly Sales Trend (a line chart)<a class="headerlink" href="#sheet-1-monthly-sales-trend-a-line-chart" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Rename</strong> the sheet: right-click the <strong>Sheet 1</strong> tab at the bottom → <strong>Rename</strong> → type <code>Monthly Sales Trend</code>.</li>
+<li>Drag <strong>Order Date</strong> from the Data pane to the <strong>Columns</strong> shelf. Tableau shows a blue pill, <code>YEAR(Order Date)</code>: one column per year.</li>
+<li>Right-click that pill. The menu shows two lists of date options. In the <strong>second</strong> list (the continuous date values, which show an example such as <em>May 2015</em>), choose <strong>Month</strong>. The pill turns <strong>green</strong>: the dates now form one continuous timeline, month by month.</li>
+<li>Drag <strong>Sales</strong> to the <strong>Rows</strong> shelf. A line chart of total sales per month appears.</li>
+</ol>
+<blockquote>
+<p><strong>Check:</strong> the pill on Columns is green and reads <code>MONTH(Order Date)</code>; the x-axis is a timeline across several years, not twelve month names.</p>
+</blockquote>
+<h3 id="sheet-2-profitability-by-state-a-filled-map">Sheet 2: Profitability by State (a filled map)<a class="headerlink" href="#sheet-2-profitability-by-state-a-filled-map" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Click the <strong>New Worksheet</strong> icon (the first small icon to the right of the sheet tabs).</li>
+<li>Rename the new tab <code>Profitability by State</code>.</li>
+<li>In the Data pane, <strong>double-click State</strong> (or <em>State/Province</em>). Tableau draws a map with one dot per state.</li>
+<li>On the <strong>Marks</strong> card, open the mark-type dropdown (it says <strong>Automatic</strong>) and choose <strong>Map</strong>. Each state is now filled.</li>
+<li>Drag <strong>Profit</strong> onto <strong>Color</strong> on the Marks card. Tableau colours states on a diverging scale: <strong>blue for profit, orange for loss</strong>.</li>
+</ol>
+<blockquote>
+<p><strong>Check:</strong> most states are blue, and a few are orange. If the map is empty or shows "unknown" locations, click the grey <strong>unknown</strong> indicator at the bottom right of the map and ask your facilitator.</p>
+</blockquote>
+<h3 id="sheet-3-sales-by-sub-category-a-bar-chart-coloured-by-profit">Sheet 3: Sales by Sub-Category (a bar chart coloured by profit)<a class="headerlink" href="#sheet-3-sales-by-sub-category-a-bar-chart-coloured-by-profit" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Create another <strong>New Worksheet</strong> and rename it <code>Sales by Sub-Category</code>.</li>
+<li>Drag <strong>Sub-Category</strong> to <strong>Rows</strong>.</li>
+<li>Drag <strong>Sales</strong> to <strong>Columns</strong>. You see horizontal bars.</li>
+<li>Click the <strong>Sort Descending</strong> button in the toolbar so the biggest sub-category is at the top.</li>
+<li>Drag <strong>Profit</strong> onto <strong>Color</strong> on the Marks card. Now the <strong>length</strong> of each bar is sales and its <strong>colour</strong> is profit.</li>
+</ol>
+<blockquote>
+<p><strong>Check:</strong> 17 bars, sorted from largest to smallest sales, most of them blue and a few orange.</p>
+</blockquote>
+<hr />
+<h2 id="part-3-assemble-the-interactive-dashboard-core">Part 3: Assemble the interactive dashboard (Core)<a class="headerlink" href="#part-3-assemble-the-interactive-dashboard-core" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Click the <strong>New Dashboard</strong> icon (the second small icon next to the sheet tabs).</li>
+<li>In the <strong>Size</strong> section on the left, change the size setting to <strong>Automatic</strong> so the dashboard fills the screen.</li>
+<li>Under <strong>Sheets</strong> on the left you see your three worksheets. Drag them onto the canvas:<ul>
+<li><strong>Profitability by State</strong> across the <strong>top half</strong>;</li>
+<li><strong>Monthly Sales Trend</strong> in the <strong>bottom left</strong>;</li>
+<li><strong>Sales by Sub-Category</strong> in the <strong>bottom right</strong>.</li>
+</ul>
+</li>
+<li><strong>Make the map a filter.</strong> Click once on the map inside the dashboard so a grey border appears around it. At the top right of that border, click the small <strong>funnel</strong> icon (<strong>Use as Filter</strong>). It changes colour when it is on.</li>
+<li>Test it: click <strong>Texas</strong> on the map. The trend and the bar chart should change to show Texas only. Click Texas again (or press <strong>Esc</strong>) to clear the selection.</li>
+</ol>
+<blockquote>
+<p><strong>Check:</strong> clicking any state changes both bottom charts; clearing the selection brings back the national totals.</p>
+</blockquote>
+<p>Rename the dashboard tab to <code>Executive Summary Dashboard</code>, then <strong>save</strong> your work: <strong>File → Save As</strong> → <em>Tableau Packaged Workbook</em> (<code>.twbx</code>) in your Lab2 folder.</p>
+<hr />
+<h2 id="part-4-answer-the-business-questions-core">Part 4: Answer the business questions (Core)<a class="headerlink" href="#part-4-answer-the-business-questions-core" title="Permanent link">&para;</a></h2>
+<p>Use your dashboard to answer these questions in a <strong>Word document</strong> (one or two sentences each, in full sentences). Put your name and student ID at the top.</p>
+<h3 id="national-view-no-state-selected">National view (no state selected)<a class="headerlink" href="#national-view-no-state-selected" title="Permanent link">&para;</a></h3>
+<p><strong>Question 1.</strong> Looking at the whole country, which sub-category has the <strong>highest total sales</strong>? Is it profitable? (Is its bar blue or orange?)</p>
+<p><strong>Question 2.</strong> On the national map, name <strong>two states</strong> that make an overall <strong>loss</strong> (coloured orange).</p>
+<h3 id="using-the-dashboard-filter">Using the dashboard filter<a class="headerlink" href="#using-the-dashboard-filter" title="Permanent link">&para;</a></h3>
+<p><strong>Question 3.</strong> Click <strong>Texas</strong> on the map.</p>
+<ul>
+<li>(a) In <em>Sales by Sub-Category</em>, which sub-category makes the <strong>largest loss</strong> in Texas (the darkest orange)?</li>
+<li>(b) In <em>Monthly Sales Trend</em>, in which <strong>month and year</strong> did Texas have an unusually large <strong>spike</strong> in sales?</li>
+</ul>
+<p><strong>Question 4.</strong> Now click <strong>California</strong>. Compare its <em>Sales by Sub-Category</em> chart with Texas's. Are the <strong>top three</strong> best-selling sub-categories the same in both states? If not, name California's top three.</p>
+<h3 id="visual-design">Visual design<a class="headerlink" href="#visual-design" title="Permanent link">&para;</a></h3>
+<p><strong>Question 5.</strong> Why is it more useful to colour the <em>Sales by Sub-Category</em> bars by <strong>Profit</strong> rather than by Sales? What business insight does showing two measures in one chart (length = sales, colour = profit) reveal that a plain sales bar chart would hide?</p>
+<blockquote>
+<p><strong>Tip for Question 3(a)</strong></p>
+<p>Hover over a bar to see its exact profit in the tooltip. The darkest orange is the most negative profit, not the shortest bar.</p>
+</blockquote>
+<p>The cell below prints a template for your answers document. Run it, copy the text into Word, and fill it in.</p>
+<div class="highlight"><pre><span></span><code><span class="n">template</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;DATA 300 — Applied Lab 2: Dashboard creation</span>
+<span class="s2">Name: ____________________   Student ID: ____________________</span>
+
+<span class="s2">Question 1 (top sub-category nationally; profitable?):</span>
+
+<span class="s2">Question 2 (two loss-making states):</span>
+
+<span class="s2">Question 3(a) (largest loss in Texas):</span>
+
+<span class="s2">Question 3(b) (month and year of the Texas sales spike):</span>
+
+<span class="s2">Question 4 (California&#39;s top three compared with Texas):</span>
+
+<span class="s2">Question 5 (why colour the bars by profit?):</span>
+<span class="s2">&quot;&quot;&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">template</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>DATA 300 — Applied Lab 2: Dashboard creation
+Name: ____________________   Student ID: ____________________
+
+Question 1 (top sub-category nationally; profitable?):
+
+Question 2 (two loss-making states):
+
+Question 3(a) (largest loss in Texas):
+
+Question 3(b) (month and year of the Texas sales spike):
+
+Question 4 (California&#39;s top three compared with Texas):
+
+Question 5 (why colour the bars by profit?):
+</code></pre></div>
+<hr />
+<h2 id="part-5-export-combine-and-submit-core">Part 5: Export, combine and submit (Core)<a class="headerlink" href="#part-5-export-combine-and-submit-core" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>What to do</th>
+<th>File name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>In Word, finish your answers to Questions 1–5 and <strong>save as PDF</strong></td>
+<td><code>Answers_Lab2.pdf</code></td>
+</tr>
+<tr>
+<td>2</td>
+<td>In Tableau, open the <strong>Executive Summary Dashboard</strong> tab and <strong>clear any selection</strong> on the map (click an empty area of the map or press <strong>Esc</strong>), so the dashboard shows the national view</td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>File → Print to PDF</strong>. Under <em>Range</em> choose <strong>Active Sheet</strong> (your dashboard). Click <strong>OK</strong> and save</td>
+<td><code>Tableau_Dashboard_Lab2.pdf</code></td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>Combine</strong> the two PDFs into one file, answers first, dashboard second</td>
+<td><code>YourLastName_DATA300_AppliedLab2.pdf</code></td>
+</tr>
+<tr>
+<td>5</td>
+<td>Upload the single PDF to the <strong>Applied Lab 2</strong> drop-box on <strong>GAP (Moodle)</strong> and click <strong>Submit</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Combining PDFs without internet</strong></p>
+<ul>
+<li><strong>Word:</strong> insert the dashboard as a picture instead (<strong>Dashboard → Export Image</strong> in Tableau, then <strong>Insert → Pictures</strong> in Word on a new page after your answers), and save the whole document as one PDF named <code>YourLastName_DATA300_AppliedLab2.pdf</code>.</li>
+<li><strong>Mac:</strong> open the answers PDF in Preview, show thumbnails, and drag the dashboard PDF into the sidebar below the last page; then save.</li>
+<li><strong>Adobe Acrobat</strong> (if installed): <strong>Tools → Combine Files</strong>.</li>
+</ul>
+<p>Whichever method you use, the final PDF must contain your answers and a readable, full dashboard.</p>
+</blockquote>
+<hr />
+<h2 id="part-6-improve-the-design-stretch-optional">Part 6: Improve the design (Stretch, optional)<a class="headerlink" href="#part-6-improve-the-design-stretch-optional" title="Permanent link">&para;</a></h2>
+<p>These steps are not required for the grade, but they apply this morning's principles and make the dashboard better for a manager.</p>
+<ol>
+<li><strong>Message titles.</strong> Double-click each sheet title on the dashboard and replace it with a sentence that states the finding, for example what the map shows about losses.</li>
+<li><strong>A profit ratio KPI.</strong> Create a calculated field <code>Profit Ratio = SUM([Profit]) / SUM([Sales])</code>, format it as a percentage, and add it to the bar chart's <strong>Tooltip</strong> or <strong>Label</strong>.</li>
+<li><strong>A scope note.</strong> Add a small <strong>Text</strong> object at the bottom: data (Sample – Superstore), period covered, units, and "click a state to filter".</li>
+<li><strong>Accessibility.</strong> Check that the orange–blue colours are kept (they are colour-blind safe) and that each chart also has labels or tooltips that carry the numbers.</li>
+</ol>
+<hr />
+<h2 id="part-7-add-a-second-action-challenge-optional">Part 7: Add a second action (Challenge, optional)<a class="headerlink" href="#part-7-add-a-second-action-challenge-optional" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>Dashboard → Actions → Add Action → Highlight.</strong> Source: <em>Sales by Sub-Category</em>; target: <em>Profitability by State</em>; run on <strong>Select</strong>. What happens to the map when you click <em>Tables</em>?</li>
+<li>Explain in two sentences when a <strong>highlight</strong> action is better for a manager than a <strong>filter</strong> action.</li>
+</ol>
+<hr />
+<h2 id="how-this-lab-is-marked">How this lab is marked<a class="headerlink" href="#how-this-lab-is-marked" title="Permanent link">&para;</a></h2>
+<p>The lab is marked out of 100 with the course's lab rubric, then scaled to its 3% weight.</p>
+<table>
+<thead>
+<tr>
+<th>Criterion</th>
+<th>Points</th>
+<th>What earns them here</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>CLO 1</strong>: principles of descriptive (and later predictive and prescriptive) analytics</td>
+<td>25</td>
+<td>Correct, specific answers to the descriptive questions (1–4), read from the right view</td>
+</tr>
+<tr>
+<td><strong>CLO 2</strong>: visualisation tools that communicate for decisions</td>
+<td>25</td>
+<td>A complete, readable dashboard with all three views and a working filter; a thoughtful answer to Question 5</td>
+</tr>
+<tr>
+<td><strong>CLO 3</strong>: computational problem-solving to find relationships</td>
+<td>30</td>
+<td>Correct use of the dashboard filter to answer the state-level questions (3 and 4)</td>
+</tr>
+<tr>
+<td><strong>Professional formatting</strong></td>
+<td>10</td>
+<td>One combined PDF, correct file name, name and ID on the answers, dashboard not cut off</td>
+</tr>
+<tr>
+<td><strong>Writing</strong></td>
+<td>10</td>
+<td>Clear, complete sentences with correct terms</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="validation-checklist">Validation checklist<a class="headerlink" href="#validation-checklist" title="Permanent link">&para;</a></h2>
+<p>Before you upload, tick every line:</p>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled/> Three worksheets, named <code>Monthly Sales Trend</code>, <code>Profitability by State</code> and <code>Sales by Sub-Category</code>.</li>
+<li class="task-list-item"><input type="checkbox" disabled/> The trend uses a <strong>continuous</strong> (green) month pill.</li>
+<li class="task-list-item"><input type="checkbox" disabled/> The map is a filled map coloured by Profit; the bar chart is sorted and coloured by Profit.</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Clicking a state filters both other views; nothing is selected in the exported PDF.</li>
+<li class="task-list-item"><input type="checkbox" disabled/> All five questions answered in full sentences, with name and student ID.</li>
+<li class="task-list-item"><input type="checkbox" disabled/> One PDF named <code>YourLastName_DATA300_AppliedLab2.pdf</code>, answers first, uploaded to GAP.</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Your <code>.twbx</code> workbook is saved in case you need to re-export.</li>
+</ul>
+<hr />
+<h2 id="exit-ticket">Exit ticket<a class="headerlink" href="#exit-ticket" title="Permanent link">&para;</a></h2>
+<p>Write one sentence for each, and hand it to your facilitator or post it as instructed:</p>
+<ol>
+<li>One thing your dashboard shows a regional manager that a table of numbers would not.</li>
+<li>One design change you would make if the dashboard were for the <strong>chief executive</strong> instead of a regional manager.</li>
+</ol>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../D2_lecture_tableau_dashboards/" class="btn btn-neutral float-left" title="Lecture: Building dashboards in Tableau"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../D2_assignment1_tips_report/" class="btn btn-neutral float-right" title="Assignment 1: Descriptive analytics report">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Copyright &copy; 2026 - Aayush Raj Regmi</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../D2_lecture_tableau_dashboards/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../D2_assignment1_tips_report/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

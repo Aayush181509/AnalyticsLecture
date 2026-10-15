@@ -1,4 +1,4 @@
-# Day 1 lab: Activity 1 — Readiness check
+# Pre-class: Activity 1 — Readiness check
 
 <p class="lead">
 A short diagnostic that checks your tools and your starting point: run a small exploratory analysis of the Palmer Penguins data in Jupyter, build two quick views of the Sample – Superstore data in Tableau, answer five questions and submit one combined PDF.
@@ -12,7 +12,7 @@ A short diagnostic that checks your tools and your starting point: run a small e
 | **Outcomes** | CLO 1, 2, 3 and 4 |
 | **Tools** | JupyterLab (Anaconda) and Tableau Desktop |
 | **You submit** | One PDF, `YourLastName_DATA300_Week1_Readiness.pdf`, on **GAP (Moodle)** |
-| **Deadline** | As announced by your facilitator (see the [schedule](schedule.md)) |
+| **Deadline** | Monday 9 November, 23:59 China Standard Time, before the course starts (see the [schedule](schedule.md)) |
 
 ---
 
@@ -281,7 +281,7 @@ plt.show()
 
 
     
-![png](D1_lab_activity1_readiness_files/D1_lab_activity1_readiness_8_0.png)
+![png](00_preclass_activity1_readiness_files/00_preclass_activity1_readiness_8_0.png)
     
 
 
@@ -309,7 +309,7 @@ plt.show()
 
 
     
-![png](D1_lab_activity1_readiness_files/D1_lab_activity1_readiness_10_0.png)
+![png](00_preclass_activity1_readiness_files/00_preclass_activity1_readiness_10_0.png)
     
 
 
@@ -438,4 +438,4 @@ The activity is marked with the course's activity rubric: four criteria for **CL
 
 > **Stuck?**
 >
-> Setup problems are exactly what this activity is meant to uncover. If a cell will not run or Tableau will not install, take a screenshot and tell your facilitator during the lab.
+> Setup problems are exactly what this activity is meant to uncover. If a cell will not run or Tableau will not install, take a screenshot and contact your facilitator through the pre-class online support, before the deadline.

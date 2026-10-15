@@ -1,12 +1,12 @@
 # Schedule
 
 <p class="lead">
-Seven teaching days over two weeks. Each period is 45 minutes. Mornings are theory; most afternoons end with a hands-on lab where you complete the graded work.
+A pre-class online week, two in-class modules on campus (seven teaching days), and a post-class online week. Each period is 45 minutes. Mornings are theory; most afternoons end with a hands-on lab where you complete graded work.
 </p>
 
 ---
 
-## Daily timetable
+## Daily timetable on campus
 
 | Day | Morning | Afternoon | Late afternoon / evening |
 |---|---|---|---|
@@ -19,7 +19,15 @@ Lunch is from 11:40. Friday to Sunday there are no classes, but you work on assi
 
 ---
 
-## Week 1
+## Pre-class week (online, before Tuesday 10 November)
+
+1. Follow the [setup guide](setup.md) and run the [setup check](00_setup_check.md).
+2. Work through [Python and Jupyter basics](00_preclass_python_jupyter_basics.md) at your own pace.
+3. Complete [Activity 1: Readiness check](00_preclass_activity1_readiness.md), due **Monday 9 November**.
+
+---
+
+## In-class Module 1
 
 ### Day 1 · Tuesday 10 November
 
@@ -27,94 +35,93 @@ Lunch is from 11:40. Friday to Sunday there are no classes, but you work on assi
 
 - The course, its outcomes and graded work
 - How data and analytics improve decisions
-- Descriptive, predictive and prescriptive analytics
-- Analysis fundamentals; why statistics alone can mislead
-- Getting started with Python and Jupyter: DataFrames, data types and what a row means
+- Descriptive, diagnostic, predictive and prescriptive analytics
+- Why statistics alone can mislead
+- Exploring data in Python: data quality, descriptive statistics, pivot tables, correlation and confounding
 
-**Lab:** Activity 1, the self-assessment and readiness check (Jupyter and Tableau).
+Pages: [Data-driven decisions](D1_lecture_data_driven_decisions.md) · [Exploring data in Python](D1_lecture_exploratory_analysis.md)
+
+**Lab:** [Applied Lab 1, data exploration](D1_lab_lab1_diamonds.md) (diamond pricing).
 
 ### Day 2 · Wednesday 11 November
 
 **Theory**
 
-- Descriptive statistics and distributions
-- Data quality and cleaning
-- Pivot tables and group summaries
-- Correlation and confounding
-- Visualisation principles and misleading charts
+- Data visualisation principles and misleading charts
+- Communicating results: storytelling, dashboards and KPIs
+- Marketing analytics
+- Building dashboards in Tableau; Assignment 1 briefing
 
-**Lab:** Applied Lab 1, data exploration (diamond pricing), then guided practice for Assignment 1.
+Pages: [Visualising and communicating results](D2_lecture_visualisation_communication.md) · [Building dashboards in Tableau](D2_lecture_tableau_dashboards.md)
+
+**Lab:** [Applied Lab 2, dashboard creation in Tableau](D2_lab_lab2_dashboard.md). Start [Assignment 1](D2_assignment1_tips_report.md).
 
 ### Day 3 · Thursday 12 November
 
 **Theory**
 
-- Communicating analytical results: storytelling and dashboards
-- KPIs and ratio metrics
-- Marketing analytics
+- **Midterm exam** (first two periods), covering Days 1–2
+- Text mining: unstructured text, cleaning, word frequency and sentiment
+- Forecasting: trend, seasonality, smoothing, ARIMA and forecast error
 
-**Lab:** Applied Lab 2, dashboard creation in Tableau. Assignment 1 begins.
+**Lab:** Applied Lab 3, text mining, and Applied Lab 4, forecasting.
 
 ### Weekend · Friday 13 – Sunday 15 November
 
-- Finish **Assignment 1** (descriptive analytics report), due **Sunday 15 November**.
+- Finish **Assignment 1**, due **Sunday 15 November**.
 - Online support is available.
 
 ---
 
-## Week 2
+## In-class Module 2
 
 ### Day 4 · Monday 16 November
 
 **Theory**
 
-- Text mining: structured and unstructured data
-- Cleaning text, word frequency and word clouds
-- Measuring sentiment, and its limits
-- Midterm review
-
-SM Activity 1 is released.
+- Predictive analytics
+- Simple and multiple linear regression
+- Judging a model: R², error and testing on new data
+- Data mining with text features; Assignment 2 briefing
 
 ### Day 5 · Tuesday 17 November
 
 **Theory**
 
-- Forecasting: trend, seasonality and noise
-- Moving averages and exponential smoothing
-- Stationarity and ARIMA
-- Measuring forecast error; forecast uncertainty
+- Financial modelling
+- Spreadsheet simulation in Excel: random inputs, distributions, Data Tables and scenarios
 
-**Lab:** Applied Lab 3, text mining of customer reviews.
+**Lab:** Applied Lab 5, predictive linear regression modelling.
 
 ### Day 6 · Wednesday 18 November
 
 **Theory**
 
-- **Midterm exam** (first two periods)
-- Linear and multiple regression
-- Judging a model: R², error and testing on new data
-- Predictive data mining with text features (Assignment 2 briefing)
+- Business intelligence strategy
+- BI case studies, ethics and societal context
+- Assignment 3 briefing
 
-**Lab:** Applied Lab 4, forecasting, and Applied Lab 5, multiple regression.
+**Lab:** Applied Lab 6, spreadsheet simulation, and Applied Lab 7, BI case study.
 
 ### Day 7 · Thursday 19 November
 
 **Theory**
 
-- Simulation and decision models in Excel
-- Business intelligence case studies, ethics and societal context
-- The capstone briefing
+- Course review
+- **Final exam**
 
-**Lab:** Applied Lab 6, spreadsheet simulation, and Applied Lab 7, BI case study.
+**Lab:** Capstone (Assignment 4) launch and studio; support for Assignments 2 and 3.
 
 ---
 
-## After the last teaching day
+## Post-class week and deadlines
 
 All deadlines are **23:59 China Standard Time** on the date shown. Submit everything on **GAP (Moodle)**.
 
 | Work | Deadline |
 |---|---|
-| SM Activity 1, Lab 7 | Sunday 22 November |
+| Activity 1 | Monday 9 November |
+| Assignment 1 | Sunday 15 November |
+| Labs 1–7 | End of the day they are set, unless your facilitator says otherwise |
 | Assignment 2 and Assignment 3 | Sunday 22 November |
-| Assignment 4 (capstone) and SM Activity 2 (reflection) | Sunday 29 November |
+| Assignment 4 (capstone) | Sunday 29 November |

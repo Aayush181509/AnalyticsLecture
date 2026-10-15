@@ -7,7 +7,7 @@ Reusable role brief; this file does not start an agent or prove the role ran. It
 - DATA 300 *Data Driven Decision Making* (Westcliff University), taught intensively in person in China, 10–19 Nov 2026 (DEC-051).
 - Plan, day mapping and period budget: `planning/china_classroom/PLAN.md`.
 - Learner pages: `docs/china/`; the notebook rules are in `notebooks/China_Classroom/README.md`.
-- The syllabus PDF (repository root, gitignored) is the authority for graded work. Its text is extracted at `/tmp/claude-501/syllabus_clean.txt` if that file still exists; otherwise extract it with pypdf from the PDF.
+- **Authority for structure, weights and modules: the WUT syllabus** (`DATA_300_WUT_*.pdf`, repo root, gitignored; text at `/tmp/claude-501/wut_clean.txt`). **Detailed lab and assignment content** (datasets, tasks, questions) comes from the larger `DATA300_*.pdf` (text at `/tmp/claude-501/syllabus_clean.txt`). If those text files are gone, extract them with pypdf. Graded weights and module days are in `planning/china_classroom/PLAN.md` (WUT): use those weights, not the larger syllabus's. There are no SM activities; there is a midterm (15%, Module 1 Day 3) and a final exam (20%, Module 2 Day 4). Python basics and Activity 1 are pre-class (files `00_preclass_*`).
 - Confirmed:
   - Students run **local Jupyter (Anaconda)**.
   - Students submit on **GAP (Moodle)**.

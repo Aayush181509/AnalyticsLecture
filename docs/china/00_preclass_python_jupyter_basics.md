@@ -1,4 +1,4 @@
-# Day 1 lecture: Python and Jupyter basics
+# Pre-class: Python and Jupyter basics
 
 <p class="lead">
 Learn just enough Jupyter, Python and pandas to run every notebook in this course: cells and outputs, variables and lists, loading a table, selecting, filtering and grouping, the kind of data each column holds, what one row means, and a first chart.
@@ -51,7 +51,7 @@ Open this notebook in JupyterLab from the course folder and run each cell from t
 | **Markdown** | Formatted text, like this cell | It shows as formatted text |
 | **Code** | Python | Python runs it and shows the result underneath |
 
-### Keys worth learning today
+### Keys worth learning first
 
 | Key | Action |
 |---|---|
@@ -970,7 +970,7 @@ plt.show()
 
 
     
-![png](D1_lecture_python_jupyter_basics_files/D1_lecture_python_jupyter_basics_45_0.png)
+![png](00_preclass_python_jupyter_basics_files/00_preclass_python_jupyter_basics_45_0.png)
     
 
 
@@ -993,7 +993,7 @@ plt.show()
 
 
     
-![png](D1_lecture_python_jupyter_basics_files/D1_lecture_python_jupyter_basics_47_0.png)
+![png](00_preclass_python_jupyter_basics_files/00_preclass_python_jupyter_basics_47_0.png)
     
 
 
@@ -1039,6 +1039,6 @@ plt.show()
 
 ---
 
-## In the lab
+## Next: Activity 1
 
-The [Activity 1 lab](D1_lab_activity1_readiness.md) uses exactly these skills on a new table, the Palmer Penguins, and then checks that Tableau is ready.
+[Activity 1, the readiness check](00_preclass_activity1_readiness.md), uses exactly these skills on a new table, the Palmer Penguins, and then checks that Tableau is ready. Complete it before the course starts.

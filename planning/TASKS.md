@@ -108,6 +108,9 @@ All 16 Python sessions drafted (2026-10-15). Next: real Colab trial with a novic
 |---|---|---|---|
 | CN-00 | Plan, schedule, setup pages | DONE (draft) | `planning/china_classroom/PLAN.md`, `docs/china/` |
 | CN-01 | Bundle offline data + SOURCES.md + setup check notebook | DONE | penguins, diamonds, tips, mpg, CO₂ series, VADER lexicon; Lab 3/5/Assignment 2 text data |
-| CN-D1 | Day 1: two lectures + Activity 1 lab + setup check | DONE (draft) | Private answers `instructor/china_classroom/D1/`. Activity 1 deadline and offline PDF merge method still to decide. |
-| CN-D2…D7 | Lecture + offline-ready lab notebooks per day | PLANNED | Reuse Foundations and Sessions 1–16; syllabus labs graded as written |
+| CN-PRE | Pre-class (WUT): setup check, Python basics, Activity 1 (4%, due Mon 9 Nov) | DONE (draft) | `00_preclass_*`; answers in `instructor/china_classroom/D1/` |
+| CN-D1 | Day 1 (WUT): data-driven decisions + EDA lectures, Lab 1 diamonds (3%) | DONE (draft) | Private answers `instructor/china_classroom/D1/` |
+| CN-D2 | Day 2 (WUT): visualisation/communication + Tableau lectures, Lab 2 (3%), Assignment 1 (6%, due Sun 15 Nov) | DONE (draft) | Private answers `instructor/china_classroom/D2/`. Assignment 1 starter has incomplete "your turn" cells |
+| CN-D3 | Day 3: midterm (15%, we write), text mining + forecasting lectures, Labs 3 and 4 | NEXT | |
+| CN-D4…D7 | Module 2: regression, Excel simulation, BI strategy; Labs 5–7; Assignments 2–3; final exam (20%); capstone Assignment 4 (25%) | PLANNED | DEC-052 day mapping |
 | CN-Q | Confirm deadlines, LMS, Tableau licence, Excel/WPS, midterm source | DONE (2026-10-15) | See PLAN.md "Risks and open questions" |

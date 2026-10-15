@@ -70,11 +70,19 @@ nav:
       - Overview: china/index.md
       - Schedule: china/schedule.md
       - Setup: china/setup.md
-      - Setup check: china/00_setup_check.md
+      - "Pre-class (online)":
+          - Setup check: china/00_setup_check.md
+          - "Python and Jupyter basics": china/00_preclass_python_jupyter_basics.md
+          - "Activity 1: Readiness check": china/00_preclass_activity1_readiness.md
       - "Day 1 · Tue 10 Nov":
           - "Lecture: Data-driven decisions": china/D1_lecture_data_driven_decisions.md
-          - "Lecture: Python and Jupyter basics": china/D1_lecture_python_jupyter_basics.md
-          - "Lab: Activity 1 readiness check": china/D1_lab_activity1_readiness.md
+          - "Lecture: Exploring data in Python": china/D1_lecture_exploratory_analysis.md
+          - "Lab 1: Data exploration": china/D1_lab_lab1_diamonds.md
+      - "Day 2 · Wed 11 Nov":
+          - "Lecture: Visualising and communicating results": china/D2_lecture_visualisation_communication.md
+          - "Lecture: Building dashboards in Tableau": china/D2_lecture_tableau_dashboards.md
+          - "Lab 2: Dashboard creation": china/D2_lab_lab2_dashboard.md
+          - "Assignment 1: Descriptive analytics report": china/D2_assignment1_tips_report.md
   - Tableau (Coming Later):
       - "Tableau Lesson 1 (draft)": lessons/class-01.md
       - "Tableau Lesson 2 (draft)": lessons/class-02.md

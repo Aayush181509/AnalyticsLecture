@@ -1,12 +1,12 @@
 # DATA 300: Data Driven Decision Making
 
 <p class="lead">
-An intensive, in-person version of DATA 300 for the China classroom: seven teaching days of theory and hands-on labs, covering descriptive, predictive and prescriptive analytics for better business decisions.
+DATA 300 for the China classroom: a pre-class online week, seven intensive teaching days on campus, and a post-class online week, covering descriptive, predictive and prescriptive analytics for better business decisions.
 </p>
 
 !!! note "This section is being prepared"
 
-    The schedule and setup pages are ready. Lecture and lab notebooks are added day by day before the course starts on **Tuesday 10 November 2026**.
+    The schedule, setup, pre-class, Day 1 and Day 2 pages are ready; the remaining days are added before the course starts on **Tuesday 10 November 2026**.
 
 ---
 
@@ -38,22 +38,38 @@ By the end of the course you will be able to:
 
 ---
 
+## How the course is organised
+
+| Module | When | Where |
+|---|---|---|
+| Pre-class | The week before 10 November | Online: setup, Python basics, Activity 1 |
+| In-class Module 1 | Tuesday 10 – Thursday 12 November | On campus |
+| In-class Module 2 | Monday 16 – Thursday 19 November | On campus |
+| Post-class | The week after 19 November | Online: capstone and remaining assignments |
+
+---
+
 ## Graded work
 
-| Item | Weight |
-|---|---|
-| Activity 1: Self-assessment and setup readiness check | 4% |
-| Applied Labs 1–7 (Data exploration, Dashboard, Text mining, Forecasting, Regression, Spreadsheet simulation, BI case study) | 7 × 4% = 28% |
-| Assignment 1: Data visualisation and descriptive analytics report | 8% |
-| SM Activity 1 | 3% |
-| Midterm exam | 15% |
-| Assignment 2: Predictive data mining report | 7% |
-| Assignment 3: Spreadsheet simulation and decision model | 7% |
-| Assignment 4: Final comprehensive assignment (capstone) | 25% |
-| SM Activity 2: Reflection | 3% |
-| **Total** | **100%** |
+| Module | Item | Weight |
+|---|---|---|
+| Pre-class | Activity 1: Self-assessment and readiness check (JupyterLab and Tableau) | 4% |
+| Module 1 · Day 1 | Lab 1: Data exploration | 3% |
+| Module 1 · Day 2 | Lab 2: Dashboard creation | 3% |
+| Module 1 · Day 3 | Assignment 1: Data visualisation and descriptive analytics report | 6% |
+| Module 1 · Day 3 | Lab 3: Text mining application | 3% |
+| Module 1 · Day 3 | Midterm exam | 15% |
+| Module 1 · Day 3 | Lab 4: Forecasting | 3% |
+| Module 2 · Day 1 | Assignment 2: Predictive data mining report | 6% |
+| Module 2 · Day 1 | Lab 5: Predictive linear regression modelling | 2% |
+| Module 2 · Day 2 | Lab 6: Advanced spreadsheet simulation | 2% |
+| Module 2 · Day 3 | Assignment 3: Spreadsheet simulation and decision model | 6% |
+| Module 2 · Day 3 | Lab 7: BI case study implementation | 2% |
+| Module 2 · Day 4 | Final exam | 20% |
+| Post-class | Assignment 4: Final comprehensive assignment (capstone) | 25% |
+| | **Total** | **100%** |
 
-See the [schedule](schedule.md) for when each item happens, and [setup](setup.md) for what to install before the first day.
+See the [schedule](schedule.md) for when each item happens, and [setup](setup.md) for what to install before the course starts.
 
 ---
 

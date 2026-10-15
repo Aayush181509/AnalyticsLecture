@@ -16,5 +16,6 @@ This is a **separate course** from the 16-session Python course in `notebooks/`.
 | Prefix | Contents |
 |---|---|
 | `00_setup_check.ipynb` | Package and data check for students' machines |
+| `00_preclass_*` | Pre-class self-study and Activity 1 |
 | `D1_*` … `D7_*` | One folder-free set per teaching day: `Dn_lecture_<topic>.ipynb` (theory) and `Dn_lab_<lab>.ipynb` (graded lab, offline-ready) |
 | `data/` | Bundled datasets and lexicons, with a `SOURCES.md` listing origin and terms |

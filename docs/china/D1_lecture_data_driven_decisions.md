@@ -51,31 +51,48 @@ Every graded item is tied to one or more of these outcomes.
 | **4** | Build predictive models with time-series forecasting, linear regression and spreadsheet simulation |
 | **5** | Evaluate business intelligence tools in a full case study and write managerial reports that consider ethical and societal context |
 
+### How the course is organised
+
+| Module | When | Where |
+|---|---|---|
+| Pre-class | The week before 10 November | Online: setup, Python basics, Activity 1 |
+| In-class Module 1 | Tuesday 10 – Thursday 12 November | On campus (today is Module 1, Day 1) |
+| In-class Module 2 | Monday 16 – Thursday 19 November | On campus |
+| Post-class | The week after 19 November | Online: capstone and remaining assignments |
+
 ### Graded work
 
-| Item | Weight |
-|---|---|
-| Activity 1: self-assessment and readiness check (**this afternoon**) | 4% |
-| Applied Labs 1–7 | 7 × 4% = 28% |
-| Assignment 1: data visualisation and descriptive analytics report | 8% |
-| SM Activity 1 | 3% |
-| Midterm exam | 15% |
-| Assignment 2: predictive data mining report | 7% |
-| Assignment 3: spreadsheet simulation and decision model | 7% |
-| Assignment 4: final comprehensive assignment (capstone) | 25% |
-| SM Activity 2: reflection | 3% |
+| Module | Item | Weight |
+|---|---|---|
+| Pre-class | Activity 1: Self-assessment and readiness check (JupyterLab and Tableau) | 4% |
+| Module 1 · Day 1 | Lab 1: Data exploration (**today**) | 3% |
+| Module 1 · Day 2 | Lab 2: Dashboard creation | 3% |
+| Module 1 · Day 3 | Assignment 1: Data visualisation and descriptive analytics report | 6% |
+| Module 1 · Day 3 | Lab 3: Text mining application | 3% |
+| Module 1 · Day 3 | Midterm exam | 15% |
+| Module 1 · Day 3 | Lab 4: Forecasting | 3% |
+| Module 2 · Day 1 | Assignment 2: Predictive data mining report | 6% |
+| Module 2 · Day 1 | Lab 5: Predictive linear regression modelling | 2% |
+| Module 2 · Day 2 | Lab 6: Advanced spreadsheet simulation | 2% |
+| Module 2 · Day 3 | Assignment 3: Spreadsheet simulation and decision model | 6% |
+| Module 2 · Day 3 | Lab 7: BI case study implementation | 2% |
+| Module 2 · Day 4 | Final exam | 20% |
+| Post-class | Assignment 4: Final comprehensive assignment (capstone) | 25% |
+| | **Total** | **100%** |
 
 All work is submitted as a PDF on **GAP (Moodle)**.
 
 ### How the days work
 
-Mornings are theory, like this lecture. Most afternoons end with a **lab**, where you complete a graded item in class. The [schedule](schedule.md) lists what happens each day and the deadlines; the [setup](setup.md) page explains the software. Today:
+Mornings are theory, like this lecture. Most afternoons continue the theory and end with a **lab**, where you complete a graded item in class. The [schedule](schedule.md) lists what happens each day and the deadlines; the [setup](setup.md) page explains the software.
+
+Before today, in the pre-class week, you set up your computer, worked through [Python and Jupyter basics](00_preclass_python_jupyter_basics.md) and submitted [Activity 1, the readiness check](00_preclass_activity1_readiness.md). Today:
 
 | When | What |
 |---|---|
 | Morning | This lecture |
-| Early afternoon | [Python and Jupyter basics](D1_lecture_python_jupyter_basics.md) |
-| Late afternoon | [Activity 1 lab](D1_lab_activity1_readiness.md): the readiness check in Jupyter and Tableau |
+| Early afternoon | [Exploring data in Python](D1_lecture_exploratory_analysis.md): data quality, descriptive statistics, pivot tables, correlation and confounding |
+| Late afternoon | [Applied Lab 1: Data exploration](D1_lab_lab1_diamonds.md) (3%), in Jupyter |
 
 > **Check your understanding**
 >
@@ -162,13 +179,13 @@ Many textbooks, including ours, group the first two together and speak of **desc
 
 | Kind | Course topics |
 |---|---|
-| Descriptive and diagnostic | Data exploration, visualisation, dashboards, text mining (Days 1–4) |
-| Predictive | Forecasting and regression (Days 5–6) |
-| Prescriptive | Spreadsheet simulation and decision models (Day 7) |
+| Descriptive and diagnostic | Data exploration, visualisation, dashboards, text mining (Days 1–3) |
+| Predictive | Forecasting (Day 3) and regression (Day 4) |
+| Prescriptive | Spreadsheet simulation and decision models (Days 5–6) |
 
 ### A small live example
 
-The cell below loads a table of restaurant bills that you will meet properly this afternoon. Each row is one table's bill and the tip it left (in US dollars, from a real restaurant study). We use it only to see the first three kinds of question in code.
+The cell below loads the table of restaurant bills you met in the pre-class [Python and Jupyter basics](00_preclass_python_jupyter_basics.md) notebook. Each row is one table's bill and the tip it left (in US dollars, from a real restaurant study). We use it only to see the first three kinds of question in code.
 
 
 ```python
@@ -284,7 +301,7 @@ print(f"Predicted tip on a {new_bill}-dollar bill: {intercept + slope * new_bill
     Predicted tip on a 40-dollar bill: 5.12 dollars
 
 
-**Prescriptive** analytics would go one step further: compare **options** (for example, which evening to add a second server) against an **objective** (service quality, wages) under **constraints** (staff available), and recommend one. You will build that kind of model in Excel on Day 7.
+**Prescriptive** analytics would go one step further: compare **options** (for example, which evening to add a second server) against an **objective** (service quality, wages) under **constraints** (staff available), and recommend one. You will build that kind of model in Excel on Day 5.
 
 > **Check your understanding**
 >
@@ -329,7 +346,7 @@ A manager says: *"Sales feel uneven across our customer groups."* That is a feel
 
 ### Step 2 in detail: what does one row mean?
 
-A manager asks: *"How many orders did we have?"* The sales file has one row per **order line**, so an order with three products takes three rows. Counting rows counts **lines**, not orders. You must first know what one row represents (the table's **grain**), then count distinct order numbers. You will practise this in the afternoon.
+A manager asks: *"How many orders did we have?"* The sales file has one row per **order line**, so an order with three products takes three rows. Counting rows counts **lines**, not orders. You must first know what one row represents (the table's **grain**), then count distinct order numbers. You practised this in the pre-class Python and Jupyter basics notebook.
 
 ### Step 4 in detail: validation
 
@@ -903,13 +920,13 @@ The full list of traps is in [How statistics can mislead](../foundations/mislead
 
 | Trap | One-line warning | Where we meet it again |
 |---|---|---|
-| Correlation is not causation | Two things moving together may share a hidden cause | Day 2 (correlation), Day 6 (regression) |
-| Simpson's paradox | A total can reverse the story of every part | Day 2 |
+| Correlation is not causation | Two things moving together may share a hidden cause | This afternoon (correlation and confounding), Day 4 (regression) |
+| Simpson's paradox | A total can reverse the story of every part | This afternoon |
 | Misleading axes | Where the axis starts changes the impression | Day 2 (visualisation) |
-| Cherry-picked time windows | The chosen start and end dates can create any trend | Day 5 (forecasting) |
-| Which average? | Mean and median can tell different stories | Day 2 (descriptive statistics) |
-| Percentages without the base | "Up 200%" means little without the counts | Day 3 (KPIs) |
-| Survivorship bias | The records you see may be only the survivors | Day 7 (case studies) |
+| Cherry-picked time windows | The chosen start and end dates can create any trend | Day 3 (forecasting) |
+| Which average? | Mean and median can tell different stories | This afternoon (descriptive statistics) |
+| Percentages without the base | "Up 200%" means little without the counts | Day 2 (dashboards and KPIs) |
+| Survivorship bias | The records you see may be only the survivors | Day 6 (BI case studies) |
 
 > **A checklist for any number you are shown**
 >
@@ -947,5 +964,7 @@ Answer in your own words, alone, in two or three minutes per question. We discus
 
 ## This afternoon
 
-1. **Theory:** [Python and Jupyter basics](D1_lecture_python_jupyter_basics.md): notebooks, Python essentials, DataFrames, data types and what a row means.
-2. **Lab:** [Activity 1, the readiness check](D1_lab_activity1_readiness.md) (4%), in Jupyter and Tableau.
+1. **Theory:** [Exploring data in Python](D1_lecture_exploratory_analysis.md): structure and data quality, descriptive statistics and skew, pivot tables, correlation, confounding and charts for large datasets.
+2. **Lab:** [Applied Lab 1: Data exploration](D1_lab_lab1_diamonds.md) (3%), where you apply the same steps to a table of more than 50,000 diamonds.
+
+Bring a working JupyterLab: if the [setup check](00_setup_check.md) did not pass on your laptop, tell your facilitator at lunch.

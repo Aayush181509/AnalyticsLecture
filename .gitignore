@@ -25,3 +25,4 @@ DATA300_*.pdf
 
 # Extracted at runtime by the China classroom notebooks.
 notebooks/China_Classroom/data/nltk_data/tokenizers/punkt_tab/
+DATA_300_*.pdf

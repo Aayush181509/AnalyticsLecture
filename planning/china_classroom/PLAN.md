@@ -82,7 +82,8 @@ Notes:
 
 - Module 1 Day 3 carries four graded items. The midterm uses the morning so that the labs keep the afternoon.
 - Monday has no lab period, so Lab 5 runs on Tuesday's lab slot and Lab 6 moves to Wednesday with Lab 7.
-- Deadlines are proposals in China Standard Time; they replace the earlier proposal (DEC-051), with SM activities removed.
+- Labs are due 23:59 China Standard Time on the day they are set (confirmed 2026-10-15).
+- Deadlines are in China Standard Time; they replace the earlier proposal (DEC-051), with SM activities removed.
 
 ## Reuse of existing material
 
@@ -99,6 +100,6 @@ Notes:
 1. **Internet in China:** solved by bundling data and NLTK resources (CN-01). Labs must load locally.
 2. **Python packages:** `wordcloud` may need installing; the setup check reports it.
 3. **Dataset rights:** see `notebooks/China_Classroom/data/SOURCES.md`; re-check before any public redistribution.
-4. **Copyright:** the syllabus forbids public reproduction of course materials. Labs and assignments are rewritten in our own words, and the PDFs stay out of git. The site is public, so check with the university whether syllabus-derived lab pages may be published or should stay in the private course folder only.
+4. **Copyright:** the syllabus forbids public reproduction of course materials. Labs and assignments are rewritten in our own words, and the PDFs stay out of git. The user confirmed on 2026-10-15 that publishing these own-words lab pages on the public site is acceptable.
 5. **Day 1 timing:** Lab 1 needs EDA skills on Day 1, so Python basics move to pre-class self-study and Day 1 afternoon teaches EDA directly.
 6. **Exams:** we write the midterm (Days 1–2 content) and the final exam (all CLOs); question banks and keys stay in `instructor/`.

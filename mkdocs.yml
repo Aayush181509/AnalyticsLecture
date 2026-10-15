@@ -83,6 +83,11 @@ nav:
           - "Lecture: Building dashboards in Tableau": china/D2_lecture_tableau_dashboards.md
           - "Lab 2: Dashboard creation": china/D2_lab_lab2_dashboard.md
           - "Assignment 1: Descriptive analytics report": china/D2_assignment1_tips_report.md
+      - "Day 3 · Thu 12 Nov":
+          - "Lecture: Text mining": china/D3_lecture_text_mining.md
+          - "Lecture: Forecasting": china/D3_lecture_forecasting.md
+          - "Lab 3: Text mining": china/D3_lab_lab3_text_mining.md
+          - "Lab 4: Forecasting": china/D3_lab_lab4_forecasting.md
   - Tableau (Coming Later):
       - "Tableau Lesson 1 (draft)": lessons/class-01.md
       - "Tableau Lesson 2 (draft)": lessons/class-02.md

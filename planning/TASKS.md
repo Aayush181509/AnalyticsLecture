@@ -111,6 +111,6 @@ All 16 Python sessions drafted (2026-10-15). Next: real Colab trial with a novic
 | CN-PRE | Pre-class (WUT): setup check, Python basics, Activity 1 (4%, due Mon 9 Nov) | DONE (draft) | `00_preclass_*`; answers in `instructor/china_classroom/D1/` |
 | CN-D1 | Day 1 (WUT): data-driven decisions + EDA lectures, Lab 1 diamonds (3%) | DONE (draft) | Private answers `instructor/china_classroom/D1/` |
 | CN-D2 | Day 2 (WUT): visualisation/communication + Tableau lectures, Lab 2 (3%), Assignment 1 (6%, due Sun 15 Nov) | DONE (draft) | Private answers `instructor/china_classroom/D2/`. Assignment 1 starter has incomplete "your turn" cells |
-| CN-D3 | Day 3: midterm (15%, we write), text mining + forecasting lectures, Labs 3 and 4 | NEXT | |
+| CN-D3 | Day 3: midterm (15%, we write), text mining + forecasting lectures, Labs 3 and 4 | DONE (draft) | Midterm, key and answers private in `instructor/china_classroom/D3/`. Midterm assumed closed book with basic calculator; assesses CLO 1–3 (forecasting taught after it) |
 | CN-D4…D7 | Module 2: regression, Excel simulation, BI strategy; Labs 5–7; Assignments 2–3; final exam (20%); capstone Assignment 4 (25%) | PLANNED | DEC-052 day mapping |
 | CN-Q | Confirm deadlines, LMS, Tableau licence, Excel/WPS, midterm source | DONE (2026-10-15) | See PLAN.md "Risks and open questions" |

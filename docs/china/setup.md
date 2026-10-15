@@ -57,7 +57,7 @@ Open the setup check notebook from the course folder and run all cells (**Run �
 
 ## 5. Excel
 
-Labs 6–7 and Assignment 3 use **Microsoft Excel** (`RAND()`, `NORM.INV()` and **Data Table**). It is installed on the lab PCs; if you use your own laptop, check that Excel opens before Day 7.
+Labs 6–7 and Assignment 3 use **Microsoft Excel** (`RAND()`, `NORM.INV()` and **Data Table**). It is installed on the lab PCs; if you use your own laptop, check that Excel opens before Day 5 (Tuesday 17 November).
 
 ---
 
@@ -66,6 +66,16 @@ Labs 6–7 and Assignment 3 use **Microsoft Excel** (`RAND()`, `NORM.INV()` and 
 1. Open a notebook, then choose **Run → Run All Cells**, or run cells one by one with **Shift + Enter**.
 2. Save often with **Ctrl + S** (Windows) or **Cmd + S** (macOS).
 3. To submit, follow the instructions in each lab. Most labs ask you to export the notebook to **PDF** (**File → Print**, then *Save as PDF*) and upload it to the matching assignment on **GAP (Moodle)**.
+
+### Combining PDFs without internet
+
+Several labs and assignments ask for one PDF made from two parts, for example your written answers and a dashboard or notebook. Online PDF tools are often blocked, so combine them on your own computer:
+
+- **Word (any computer):** put everything in one Word document. Paste the dashboard or notebook output as pictures on new pages after your answers (in Tableau, **Dashboard → Export Image**), then **File → Save As → PDF**.
+- **macOS Preview:** open the first PDF, choose **View → Thumbnails**, drag the second PDF into the sidebar below the last page, then **File → Export as PDF**.
+- **Adobe Acrobat** (if installed): **Tools → Combine Files**.
+
+Check that the final PDF has the parts in the order the lab asks for and the exact file name it gives.
 
 !!! warning "Only use course data"
 

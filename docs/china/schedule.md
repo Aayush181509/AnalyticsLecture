@@ -64,7 +64,9 @@ Pages: [Visualising and communicating results](D2_lecture_visualisation_communic
 - Text mining: unstructured text, cleaning, word frequency and sentiment
 - Forecasting: trend, seasonality, smoothing, ARIMA and forecast error
 
-**Lab:** Applied Lab 3, text mining, and Applied Lab 4, forecasting.
+Pages: [Text mining](D3_lecture_text_mining.md) · [Forecasting](D3_lecture_forecasting.md)
+
+**Lab:** [Applied Lab 3, text mining](D3_lab_lab3_text_mining.md), and [Applied Lab 4, forecasting](D3_lab_lab4_forecasting.md).
 
 ### Weekend · Friday 13 – Sunday 15 November
 

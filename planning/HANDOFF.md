@@ -8,7 +8,11 @@ The user requests Claude takeover next. Read [AGENTS.md](../AGENTS.md) → [PROJ
 
 Learner site keeps the Read the Docs theme (user preference after a brief Material trial, DEC-036) plus `docs/stylesheets/readability.css`; all six pages were restructured for readability (DEC-034, DOC01). Write every new learner page in that style: lead sentence, `---` breaks, short paragraphs, numbered steps, tables or `###` subsections, note/tip/hint/warning admonitions. No Material-only syntax. User approved the rendered result. Preview with `/tmp/kings-data-docs-venv/bin/python -m mkdocs serve` (reinstall from requirements.txt if the venv is gone). D03 Tableau checks remain open because this session had no desktop-app control (DEC-035).
 
-## All 16 Python sessions drafted — 2026-10-15 (read this first)
+## DATA 300 China classroom — 2026-10-15 (read this first)
+
+A second, separate course is being prepared: `planning/china_classroom/PLAN.md` and `docs/china/`. Offline-first (no Colab/GitHub); syllabus labs are graded work. Day 1 and the bundled data are done; use `planning/agents/china-notebook-author.md` for Days 2–7.
+
+## All 16 Python sessions drafted — 2026-10-15
 
 Sessions 1–16 have lecture and lab notebooks, quizzes and private answers. Build with the project `.venv`; delegate notebook work with `planning/agents/notebook-author.md`. Rubric confirmed (DEC-049). Next: Colab trial, then the Tableau section.
 

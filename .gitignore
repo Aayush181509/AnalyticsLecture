@@ -19,3 +19,9 @@ data/raw/startup-venture-funding/
 
 # Private instructor answers and keys; kept local, never pushed to the public repo.
 instructor/
+
+# Institutional syllabus (copyright notice applies); keep local, never publish.
+DATA300_*.pdf
+
+# Extracted at runtime by the China classroom notebooks.
+notebooks/China_Classroom/data/nltk_data/tokenizers/punkt_tab/

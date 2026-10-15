@@ -66,6 +66,15 @@ nav:
       - "Session 16: Executive Briefings":
           - Lecture: lectures/16_executive_briefings_lecture.md
           - Lab: lectures/16_executive_briefings_lab.md
+  - "DATA 300 (China Classroom)":
+      - Overview: china/index.md
+      - Schedule: china/schedule.md
+      - Setup: china/setup.md
+      - Setup check: china/00_setup_check.md
+      - "Day 1 · Tue 10 Nov":
+          - "Lecture: Data-driven decisions": china/D1_lecture_data_driven_decisions.md
+          - "Lecture: Python and Jupyter basics": china/D1_lecture_python_jupyter_basics.md
+          - "Lab: Activity 1 readiness check": china/D1_lab_activity1_readiness.md
   - Tableau (Coming Later):
       - "Tableau Lesson 1 (draft)": lessons/class-01.md
       - "Tableau Lesson 2 (draft)": lessons/class-02.md

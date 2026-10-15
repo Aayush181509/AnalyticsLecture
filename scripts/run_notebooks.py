@@ -49,7 +49,7 @@ def merge_streams(outputs):
 def execute(path):
     nb = nbformat.read(path, as_version=4)
     NotebookClient(nb, timeout=600, kernel_name="python3",
-                   resources={"metadata": {"path": str(NB_DIR)}}).execute()
+                   resources={"metadata": {"path": str(path.parent)}}).execute()
     for cell in nb.cells:
         cell.metadata.pop("execution", None)
         if cell.cell_type == "code":

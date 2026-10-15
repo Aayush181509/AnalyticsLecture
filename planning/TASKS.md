@@ -101,3 +101,13 @@ Next concrete task (2026-10-14): Session 10 (finance case) lecture + lab from fi
 Next concrete tasks (2026-10-15): push the new synthetic releases (finance-v1, operations-v1, hr-v1) so Colab downloads work; Session 14 (dashboards and storytelling); Sessions 15–16 (capstone kit); a real Colab trial; D06 is not needed (marketing case uses D08 marketing-v1).
 
 All 16 Python sessions drafted (2026-10-15). Next: real Colab trial with a novice; then the Tableau section (T-01–T-04) and R01 logistics.
+
+## DATA 300 China classroom (DEC-051) — 2026-10-15
+
+| ID | Task | Status | Notes |
+|---|---|---|---|
+| CN-00 | Plan, schedule, setup pages | DONE (draft) | `planning/china_classroom/PLAN.md`, `docs/china/` |
+| CN-01 | Bundle offline data + SOURCES.md + setup check notebook | DONE | penguins, diamonds, tips, mpg, CO₂ series, VADER lexicon; Lab 3/5/Assignment 2 text data |
+| CN-D1 | Day 1: two lectures + Activity 1 lab + setup check | DONE (draft) | Private answers `instructor/china_classroom/D1/`. Activity 1 deadline and offline PDF merge method still to decide. |
+| CN-D2…D7 | Lecture + offline-ready lab notebooks per day | PLANNED | Reuse Foundations and Sessions 1–16; syllabus labs graded as written |
+| CN-Q | Confirm deadlines, LMS, Tableau licence, Excel/WPS, midterm source | DONE (2026-10-15) | See PLAN.md "Risks and open questions" |

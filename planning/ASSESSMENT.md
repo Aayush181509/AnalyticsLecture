@@ -61,6 +61,8 @@ Provide a short instructor feedback note for each gate: observed evidence, criti
 
 ## Recommended analytic rubric
 
+> **Superseded (2026-10-15, DEC-049):** the user confirmed the seven-criterion feedback rubric in Session 16 (adds "statistical reasoning"; weights 15/20/15/15/10/15/10). The table below is kept for its level descriptions.
+
 Recommendation: score six criteria on a four-level scale. For each criterion, award its weight × level ÷ 4; absent evidence receives zero. This provides a transparent 100-point working rubric without establishing an official grading policy. Any pass threshold, grade bands, rounding, moderation, remediation, or late policy needs a separate user decision. Use the same dataset/version and rubric calibration examples for all assessors.
 
 | Criterion | Weight | 4 — strong, independently defensible | 3 — sound and usable | 2 — developing, substantive repair needed | 1 — limited or unreliable |

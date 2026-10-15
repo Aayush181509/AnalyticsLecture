@@ -88,9 +88,9 @@ Each session needs: lecture notebook, lab notebook (core / stretch / challenge),
 | S-11 | Operations case | D05 | DONE (draft; Colab trial pending) | Lecture + lab, quiz, private answers `instructor/sessions/11/` (2026-10-14). Matches operations-v1 references. |
 | S-12 | Marketing case | D08 | DONE (draft; Colab trial pending) | Lecture + lab, quiz, private answers `instructor/sessions/12/` (2026-10-15). Matches marketing-v1 references. |
 | S-13 | HR case | D07 | DONE (draft; Colab trial pending) | Lecture + lab, quiz, private answers `instructor/sessions/13/` (2026-10-15). Matches hr-v1 references. |
-| S-14 | Dashboards and storytelling | S-07 | PLANNED | |
-| S-15 | Capstone studio | S-10–S-13 | PLANNED | |
-| S-16 | Executive briefings | S-15, R01 | PLANNED | Presentation format depends on class size |
+| S-14 | Dashboards and storytelling | S-07 | DONE (draft; Colab trial pending) | Lecture + lab, quiz, private answers `instructor/sessions/14/` (2026-10-15). |
+| S-15 | Capstone studio | S-10–S-13 | DONE (draft; Colab trial pending) | Lecture + lab, private answers `instructor/sessions/15/` (2026-10-15). Shows the false month join and the honest side-by-side view. |
+| S-16 | Executive briefings | S-15, R01 | DONE (draft) | Lecture + lab, private answers `instructor/sessions/16/` (2026-10-15). Rubric weights confirmed by the user (DEC-049). Presentation format still depends on class size (R01). |
 | D08 | Synthetic A/B test and marketing spend data | D01 pattern | DONE (local) | `data/synthetic/marketing-v1/` from `scripts/generate_marketing.py` (seed 20251001, numpy 2.5.4), validated by `scripts/validate_marketing.py`; private key in `instructor/solutions/marketing-v1/`. Notebooks should load it from a commit-pinned raw GitHub URL with SHA-256 after push |
 | T-01–T-04 | Tableau section | S-14 | DEFERRED | From the Tableau drafts |
 
@@ -99,3 +99,5 @@ Sessions 1 and 2 built 2026-10-14 (REVIEW). The superseded notebooks 00–02 and
 Next concrete task (2026-10-14): Session 10 (finance case) lecture + lab from finance-v1; then D05 operations data → S-11, D06/D07 → S-12/S-13.
 
 Next concrete tasks (2026-10-15): push the new synthetic releases (finance-v1, operations-v1, hr-v1) so Colab downloads work; Session 14 (dashboards and storytelling); Sessions 15–16 (capstone kit); a real Colab trial; D06 is not needed (marketing case uses D08 marketing-v1).
+
+All 16 Python sessions drafted (2026-10-15). Next: real Colab trial with a novice; then the Tableau section (T-01–T-04) and R01 logistics.

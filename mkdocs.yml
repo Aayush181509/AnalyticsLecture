@@ -57,6 +57,15 @@ nav:
       - "Session 13: HR: Workforce Analytics":
           - Lecture: lectures/13_hr_workforce_lecture.md
           - Lab: lectures/13_hr_workforce_lab.md
+      - "Session 14: Dashboards and Storytelling":
+          - Lecture: lectures/14_dashboards_storytelling_lecture.md
+          - Lab: lectures/14_dashboards_storytelling_lab.md
+      - "Session 15: Capstone Studio":
+          - Lecture: lectures/15_capstone_studio_lecture.md
+          - Lab: lectures/15_capstone_studio_lab.md
+      - "Session 16: Executive Briefings":
+          - Lecture: lectures/16_executive_briefings_lecture.md
+          - Lab: lectures/16_executive_briefings_lab.md
   - Tableau (Coming Later):
       - "Tableau Lesson 1 (draft)": lessons/class-01.md
       - "Tableau Lesson 2 (draft)": lessons/class-02.md

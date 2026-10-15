@@ -69,9 +69,9 @@ You keep the evidence from every lab in your portfolio.
 
 | Session | Lecture | Lab |
 |---|---|---|
-| **14. Dashboards and storytelling** | Audience, the big idea, dashboard design, the Challenger case ([Storytelling with data](../foundations/storytelling.md)) | Build a decision dashboard and a three-slide story |
-| **15. Capstone studio** | Combining evidence across departments, validation, trade-offs | Build your capstone analysis with coaching |
-| **16. Executive briefings** | Presenting to executives and handling questions | Present, give and receive critique, revise |
+| **14. Dashboards and storytelling** | [Dashboards and storytelling](../lectures/14_dashboards_storytelling_lecture.md): audience, the big idea, dashboard design, the Challenger case | [From analysis to a decision dashboard](../lectures/14_dashboards_storytelling_lab.md) |
+| **15. Capstone studio** | [Combining evidence](../lectures/15_capstone_studio_lecture.md): evidence registers, no false joins, validation, trade-offs | [Build your capstone](../lectures/15_capstone_studio_lab.md) |
+| **16. Executive briefings** | [Executive briefings](../lectures/16_executive_briefings_lecture.md): recommendation first, uncertainty, handling questions | [Brief, critique, revise](../lectures/16_executive_briefings_lab.md) |
 
 ---
 

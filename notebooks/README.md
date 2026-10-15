@@ -32,6 +32,12 @@ Every session has a **lecture** notebook (theory, demonstrations, check-your-und
 | `12_marketing_campaigns_lab.ipynb` | Session 12 lab: Which campaigns deserve the budget? |
 | `13_hr_workforce_lecture.ipynb` | Session 13 lecture: HR: workforce analytics |
 | `13_hr_workforce_lab.ipynb` | Session 13 lab: Is workforce change creating a capacity problem? |
+| `14_dashboards_storytelling_lecture.ipynb` | Session 14 lecture: Dashboards and storytelling |
+| `14_dashboards_storytelling_lab.ipynb` | Session 14 lab: From analysis to a decision dashboard |
+| `15_capstone_studio_lecture.ipynb` | Session 15 lecture: Capstone studio: combining evidence |
+| `15_capstone_studio_lab.ipynb` | Session 15 lab: Build your capstone |
+| `16_executive_briefings_lecture.ipynb` | Session 16 lecture: Executive briefings |
+| `16_executive_briefings_lab.ipynb` | Session 16 lab: Brief, critique, revise |
 
 ## Workflow
 
@@ -50,7 +56,7 @@ Every session has a **lecture** notebook (theory, demonstrations, check-your-und
 
 4. Check the site: `python3 scripts/check_docs.py` and `mkdocs build --strict`.
 
-Use a Python 3.12 environment (matching Colab) built from `requirements.txt`. pandas 2.2.3 does not run on Python 3.14.
+Use a Python 3.12 environment (matching Colab) built from `requirements.txt`, for example the gitignored project `.venv` (`uv venv -p 3.12 .venv && uv pip install -p .venv/bin/python -r requirements.txt`). Agent brief: `planning/agents/notebook-author.md`. pandas 2.2.3 does not run on Python 3.14.
 
 ## Conventions
 

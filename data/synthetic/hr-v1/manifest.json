@@ -1,0 +1,34 @@
+{
+  "cutoff": "2025-12-31",
+  "dataset": "hr-v1",
+  "files": {
+    "README.md": {
+      "bytes": 3741,
+      "sha256": "acd6d2fde0d67a813cd4f9e14651600d70af1b95c15d8c91b9fe4bb45450807b"
+    },
+    "department_history.csv": {
+      "bytes": 19157,
+      "sha256": "12e6524a7838e9d5426c2bef116769ad850d5eaf11e10958a4e4ae13d21dca36"
+    },
+    "employees.csv": {
+      "bytes": 15797,
+      "sha256": "7d59a66675d53b7d6de8cce6a4d3369ddd6268e51913e86f30e9560c019342a9"
+    },
+    "recruitment.csv": {
+      "bytes": 11988,
+      "sha256": "3a6c2046fd5cbb4a07d435f50e3d10e5df160314decd1e651718a5d0bd7fbc05"
+    }
+  },
+  "generator": "scripts/generate_hr.py",
+  "generator_sha256": "9ead832ccaf34a1f4c62c6b2697ddf013b28b4b23abe812a4533697b1d1aa115",
+  "label": "synthetic",
+  "numpy": "2.5.4",
+  "pandas": "2.2.3",
+  "rights": "unresolved; see planning/DATA_STRATEGY.md Rights status",
+  "rows": {
+    "department_history.csv": 543,
+    "employees.csv": 520,
+    "recruitment.csv": 160
+  },
+  "seed": 20251231
+}

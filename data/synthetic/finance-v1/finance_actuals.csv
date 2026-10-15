@@ -1,0 +1,1379 @@
+posting_id,posting_date,month,department_id,department,account_id,account,amount,posting_type,reference_posting_id,description
+P25-00001,2025-01-01,2025-01-01,D02,Marketing,A200,Travel,534.24,expense,,Travel - Marketing
+P25-00002,2025-01-01,2025-01-01,D06,Finance and Admin,A300,Software subscriptions,254.84,expense,,Software subscriptions - Finance and Admin
+P25-00003,2025-01-02,2025-01-01,D03,Operations,A400,Facilities,9148.20,expense,,Facilities - Operations
+P25-00004,2025-01-02,2025-01-01,D05,People,A300,Software subscriptions,1350.20,expense,,Software subscriptions - People
+P25-00005,2025-01-02,2025-01-01,D05,People,A600,Training,2036.12,expense,,Training - People
+P25-00006,2025-01-03,2025-01-01,D03,Operations,A300,Software subscriptions,719.59,expense,,Software subscriptions - Operations
+P25-00007,2025-01-04,2025-01-01,D05,People,A200,Travel,127.21,expense,,Travel - People
+P25-00008,2025-01-04,2025-01-01,D05,People,A600,Training,387.38,expense,,Training - People
+P25-00009,2025-01-05,2025-01-01,D03,Operations,A300,Software subscriptions,1241.14,expense,,Software subscriptions - Operations
+P25-00010,2025-01-05,2025-01-01,D03,Operations,A500,Professional services,766.14,expense,,Professional services - Operations
+P25-00011,2025-01-05,2025-01-01,D04,Technology,A400,Facilities,352.48,expense,,Facilities - Technology
+P25-00012,2025-01-05,2025-01-01,D04,Technology,A400,Facilities,2647.71,expense,,Facilities - Technology
+P25-00013,2025-01-05,2025-01-01,D04,Technology,A500,Professional services,2596.28,expense,,Professional services - Technology
+P25-00014,2025-01-05,2025-01-01,D06,Finance and Admin,A300,Software subscriptions,351.50,expense,,Software subscriptions - Finance and Admin
+P25-00015,2025-01-06,2025-01-01,D01,Sales,A200,Travel,1220.78,expense,,Travel - Sales
+P25-00016,2025-01-06,2025-01-01,D04,Technology,A400,Facilities,818.16,expense,,Facilities - Technology
+P25-00017,2025-01-06,2025-01-01,D05,People,A300,Software subscriptions,291.83,expense,,Software subscriptions - People
+P25-00018,2025-01-06,2025-01-01,D06,Finance and Admin,A300,Software subscriptions,1237.76,expense,,Software subscriptions - Finance and Admin
+P25-00019,2025-01-07,2025-01-01,D02,Marketing,A200,Travel,525.38,expense,,Travel - Marketing
+P25-00020,2025-01-08,2025-01-01,D01,Sales,A200,Travel,1228.52,expense,,Travel - Sales
+P25-00021,2025-01-08,2025-01-01,D02,Marketing,A600,Training,432.06,expense,,Training - Marketing
+P25-00022,2025-01-09,2025-01-01,D01,Sales,A500,Professional services,684.03,expense,,Professional services - Sales
+P25-00023,2025-01-09,2025-01-01,D02,Marketing,A200,Travel,271.29,expense,,Travel - Marketing
+P25-00024,2025-01-10,2025-01-01,D02,Marketing,A200,Travel,660.24,expense,,Travel - Marketing
+P25-00025,2025-01-10,2025-01-01,D04,Technology,A300,Software subscriptions,3060.44,expense,,Software subscriptions - Technology
+P25-00026,2025-01-10,2025-01-01,D06,Finance and Admin,A400,Facilities,534.74,expense,,Facilities - Finance and Admin
+P25-00027,2025-01-11,2025-01-01,D01,Sales,A500,Professional services,1293.41,expense,,Professional services - Sales
+P25-00028,2025-01-11,2025-01-01,D01,Sales,A600,Training,385.34,expense,,Training - Sales
+P25-00029,2025-01-12,2025-01-01,D02,Marketing,A500,Professional services,815.51,expense,,Professional services - Marketing
+P25-00030,2025-01-12,2025-01-01,D02,Marketing,A500,Professional services,1691.71,expense,,Professional services - Marketing
+P25-00031,2025-01-13,2025-01-01,D01,Sales,A200,Travel,2058.64,expense,,Travel - Sales
+P25-00032,2025-01-13,2025-01-01,D05,People,A600,Training,175.92,expense,,Training - People
+P25-00033,2025-01-14,2025-01-01,D03,Operations,A500,Professional services,3027.06,expense,,Professional services - Operations
+P25-00034,2025-01-15,2025-01-01,D01,Sales,A100,Salaries and wages,29522.77,expense,,Salaries and wages - Sales
+P25-00035,2025-01-15,2025-01-01,D02,Marketing,A100,Salaries and wages,34127.31,expense,,Salaries and wages - Marketing
+P25-00036,2025-01-15,2025-01-01,D02,Marketing,A500,Professional services,2963.65,expense,,Professional services - Marketing
+P25-00037,2025-01-15,2025-01-01,D03,Operations,A100,Salaries and wages,85313.61,expense,,Salaries and wages - Operations
+P25-00038,2025-01-15,2025-01-01,D04,Technology,A100,Salaries and wages,58112.82,expense,,Salaries and wages - Technology
+P25-00039,2025-01-15,2025-01-01,D05,People,A100,Salaries and wages,16675.26,expense,,Salaries and wages - People
+P25-00040,2025-01-15,2025-01-01,D05,People,A400,Facilities,1951.40,expense,,Facilities - People
+P25-00041,2025-01-15,2025-01-01,D06,Finance and Admin,A100,Salaries and wages,13764.16,expense,,Salaries and wages - Finance and Admin
+P25-00042,2025-01-16,2025-01-01,D04,Technology,A400,Facilities,842.02,expense,,Facilities - Technology
+P25-00043,2025-01-16,2025-01-01,D05,People,A200,Travel,161.01,expense,,Travel - People
+P25-00044,2025-01-16,2025-01-01,D05,People,A200,Travel,192.88,expense,,Travel - People
+P25-00045,2025-01-16,2025-01-01,D06,Finance and Admin,A300,Software subscriptions,1116.99,expense,,Software subscriptions - Finance and Admin
+P25-00046,2025-01-16,2025-01-01,D06,Finance and Admin,A400,Facilities,2406.15,expense,,Facilities - Finance and Admin
+P25-00047,2025-01-17,2025-01-01,D05,People,A200,Travel,130.37,expense,,Travel - People
+P25-00048,2025-01-18,2025-01-01,D05,People,A400,Facilities,816.41,expense,,Facilities - People
+P25-00049,2025-01-18,2025-01-01,D05,People,A600,Training,500.01,expense,,Training - People
+P25-00050,2025-01-18,2025-01-01,D06,Finance and Admin,A200,Travel,278.66,expense,,Travel - Finance and Admin
+P25-00051,2025-01-19,2025-01-01,D03,Operations,A300,Software subscriptions,776.22,expense,,Software subscriptions - Operations
+P25-00052,2025-01-19,2025-01-01,D04,Technology,A200,Travel,207.08,expense,,Travel - Technology
+P25-00053,2025-01-19,2025-01-01,D04,Technology,A300,Software subscriptions,3235.77,expense,,Software subscriptions - Technology
+P25-00054,2025-01-20,2025-01-01,D02,Marketing,A600,Training,509.66,expense,,Training - Marketing
+P25-00055,2025-01-20,2025-01-01,D04,Technology,A200,Travel,195.55,expense,,Travel - Technology
+P25-00056,2025-01-20,2025-01-01,D05,People,A600,Training,664.64,expense,,Training - People
+P25-00057,2025-01-21,2025-01-01,D01,Sales,A200,Travel,1108.72,expense,,Travel - Sales
+P25-00058,2025-01-21,2025-01-01,D03,Operations,A200,Travel,2146.61,expense,,Travel - Operations
+P25-00059,2025-01-21,2025-01-01,D03,Operations,A600,Training,522.33,expense,,Training - Operations
+P25-00060,2025-01-22,2025-01-01,D02,Marketing,A400,Facilities,3719.55,expense,,Facilities - Marketing
+P25-00061,2025-01-22,2025-01-01,D04,Technology,A200,Travel,163.21,expense,,Travel - Technology
+P25-00062,2025-01-22,2025-01-01,D06,Finance and Admin,A400,Facilities,296.68,expense,,Facilities - Finance and Admin
+P25-00063,2025-01-23,2025-01-01,D01,Sales,A200,Travel,92.96,expense,,Travel - Sales
+P25-00064,2025-01-23,2025-01-01,D01,Sales,A500,Professional services,93.73,expense,,Professional services - Sales
+P25-00065,2025-01-23,2025-01-01,D01,Sales,A600,Training,195.69,expense,,Training - Sales
+P25-00066,2025-01-23,2025-01-01,D03,Operations,A600,Training,620.76,expense,,Training - Operations
+P25-00067,2025-01-23,2025-01-01,D04,Technology,A500,Professional services,2239.74,expense,,Professional services - Technology
+P25-00068,2025-01-23,2025-01-01,D06,Finance and Admin,A200,Travel,134.62,expense,,Travel - Finance and Admin
+P25-00069,2025-01-24,2025-01-01,D01,Sales,A200,Travel,1133.79,expense,,Travel - Sales
+P25-00070,2025-01-24,2025-01-01,D02,Marketing,A300,Software subscriptions,1377.75,expense,,Software subscriptions - Marketing
+P25-00071,2025-01-24,2025-01-01,D03,Operations,A400,Facilities,12473.02,expense,,Facilities - Operations
+P25-00072,2025-01-24,2025-01-01,D05,People,A200,Travel,189.64,expense,,Travel - People
+P25-00073,2025-01-25,2025-01-01,D01,Sales,A600,Training,167.91,expense,,Training - Sales
+P25-00074,2025-01-25,2025-01-01,D04,Technology,A500,Professional services,1129.20,expense,,Professional services - Technology
+P25-00075,2025-01-25,2025-01-01,D05,People,A600,Training,438.94,expense,,Training - People
+P25-00076,2025-01-26,2025-01-01,D02,Marketing,A300,Software subscriptions,3805.21,expense,,Software subscriptions - Marketing
+P25-00077,2025-01-27,2025-01-01,D02,Marketing,A300,Software subscriptions,403.98,expense,,Software subscriptions - Marketing
+P25-00078,2025-01-27,2025-01-01,D03,Operations,A600,Training,236.89,expense,,Training - Operations
+P25-00079,2025-01-27,2025-01-01,D04,Technology,A300,Software subscriptions,834.91,expense,,Software subscriptions - Technology
+P25-00080,2025-01-27,2025-01-01,D04,Technology,A300,Software subscriptions,5996.08,expense,,Software subscriptions - Technology
+P25-00081,2025-01-28,2025-01-01,D01,Sales,A300,Software subscriptions,2362.25,expense,,Software subscriptions - Sales
+P25-00082,2025-01-28,2025-01-01,D02,Marketing,A200,Travel,866.17,expense,,Travel - Marketing
+P25-00083,2025-01-28,2025-01-01,D02,Marketing,A600,Training,209.27,expense,,Training - Marketing
+P25-00084,2025-01-28,2025-01-01,D03,Operations,A600,Training,384.97,expense,,Training - Operations
+P25-00085,2025-01-29,2025-01-01,D01,Sales,A600,Training,817.74,expense,,Training - Sales
+P25-00086,2025-01-29,2025-01-01,D05,People,A500,Professional services,2963.36,expense,,Professional services - People
+P25-00087,2025-01-30,2025-01-01,D01,Sales,A300,Software subscriptions,1404.78,expense,,Software subscriptions - Sales
+P25-00088,2025-01-30,2025-01-01,D01,Sales,A400,Facilities,5512.62,expense,,Facilities - Sales
+P25-00089,2025-01-30,2025-01-01,D04,Technology,A200,Travel,467.32,expense,,Travel - Technology
+P25-00090,2025-01-30,2025-01-01,D04,Technology,A400,Facilities,1270.45,expense,,Facilities - Technology
+P25-00091,2025-01-30,2025-01-01,D04,Technology,A600,Training,2240.23,expense,,Training - Technology
+P25-00092,2025-01-30,2025-01-01,D06,Finance and Admin,A500,Professional services,7896.90,expense,,Professional services - Finance and Admin
+P25-00093,2025-01-31,2025-01-01,D01,Sales,A100,Salaries and wages,55947.33,expense,,Salaries and wages - Sales
+P25-00094,2025-01-31,2025-01-01,D02,Marketing,A100,Salaries and wages,4928.53,expense,,Salaries and wages - Marketing
+P25-00095,2025-01-31,2025-01-01,D02,Marketing,A200,Travel,246.64,expense,,Travel - Marketing
+P25-00096,2025-01-31,2025-01-01,D03,Operations,A100,Salaries and wages,44492.08,expense,,Salaries and wages - Operations
+P25-00097,2025-01-31,2025-01-01,D04,Technology,A100,Salaries and wages,11856.27,expense,,Salaries and wages - Technology
+P25-00098,2025-01-31,2025-01-01,D05,People,A100,Salaries and wages,7649.50,expense,,Salaries and wages - People
+P25-00099,2025-01-31,2025-01-01,D05,People,A300,Software subscriptions,343.42,expense,,Software subscriptions - People
+P25-00100,2025-01-31,2025-01-01,D06,Finance and Admin,A100,Salaries and wages,17326.86,expense,,Salaries and wages - Finance and Admin
+P25-00101,2025-01-31,2025-01-01,D06,Finance and Admin,A200,Travel,230.15,expense,,Travel - Finance and Admin
+P25-00102,2025-02-01,2025-02-01,D01,Sales,A600,Training,1491.98,expense,,Training - Sales
+P25-00103,2025-02-01,2025-02-01,D03,Operations,A300,Software subscriptions,821.24,expense,,Software subscriptions - Operations
+P25-00104,2025-02-01,2025-02-01,D06,Finance and Admin,A200,Travel,74.58,expense,,Travel - Finance and Admin
+P25-00105,2025-02-01,2025-02-01,D06,Finance and Admin,A400,Facilities,605.50,expense,,Facilities - Finance and Admin
+P25-00106,2025-02-01,2025-02-01,D06,Finance and Admin,A500,Professional services,8776.60,expense,,Professional services - Finance and Admin
+P25-00107,2025-02-02,2025-02-01,D03,Operations,A200,Travel,463.82,expense,,Travel - Operations
+P25-00108,2025-02-02,2025-02-01,D03,Operations,A600,Training,477.79,expense,,Training - Operations
+P25-00109,2025-02-02,2025-02-01,D05,People,A400,Facilities,502.88,expense,,Facilities - People
+P25-00110,2025-02-02,2025-02-01,D06,Finance and Admin,A300,Software subscriptions,3077.22,expense,,Software subscriptions - Finance and Admin
+P25-00111,2025-02-03,2025-02-01,D02,Marketing,A600,Training,501.83,expense,,Training - Marketing
+P25-00112,2025-02-03,2025-02-01,D05,People,A300,Software subscriptions,361.74,expense,,Software subscriptions - People
+P25-00113,2025-02-03,2025-02-01,D05,People,A400,Facilities,668.99,expense,,Facilities - People
+P25-00114,2025-02-04,2025-02-01,D02,Marketing,A300,Software subscriptions,1441.47,expense,,Software subscriptions - Marketing
+P25-00115,2025-02-04,2025-02-01,D03,Operations,A300,Software subscriptions,270.67,expense,,Software subscriptions - Operations
+P25-00116,2025-02-04,2025-02-01,D03,Operations,A600,Training,475.11,expense,,Training - Operations
+P25-00117,2025-02-05,2025-02-01,D05,People,A200,Travel,241.27,expense,,Travel - People
+P25-00118,2025-02-05,2025-02-01,D06,Finance and Admin,A200,Travel,124.76,expense,,Travel - Finance and Admin
+P25-00119,2025-02-05,2025-02-01,D06,Finance and Admin,A400,Facilities,579.37,expense,,Facilities - Finance and Admin
+P25-00120,2025-02-06,2025-02-01,D01,Sales,A400,Facilities,1715.68,expense,,Facilities - Sales
+P25-00121,2025-02-06,2025-02-01,D02,Marketing,A400,Facilities,930.54,expense,,Facilities - Marketing
+P25-00122,2025-02-06,2025-02-01,D02,Marketing,A500,Professional services,5136.70,expense,,Professional services - Marketing
+P25-00123,2025-02-06,2025-02-01,D03,Operations,A600,Training,239.55,expense,,Training - Operations
+P25-00124,2025-02-06,2025-02-01,D04,Technology,A300,Software subscriptions,1883.55,expense,,Software subscriptions - Technology
+P25-00125,2025-02-06,2025-02-01,D05,People,A400,Facilities,260.58,expense,,Facilities - People
+P25-00126,2025-02-07,2025-02-01,D01,Sales,A500,Professional services,837.97,expense,,Professional services - Sales
+P25-00127,2025-02-07,2025-02-01,D02,Marketing,A300,Software subscriptions,931.54,expense,,Software subscriptions - Marketing
+P25-00128,2025-02-07,2025-02-01,D04,Technology,A600,Training,1478.66,expense,,Training - Technology
+P25-00129,2025-02-08,2025-02-01,D03,Operations,A600,Training,343.89,expense,,Training - Operations
+P25-00130,2025-02-08,2025-02-01,D04,Technology,A300,Software subscriptions,2411.48,expense,,Software subscriptions - Technology
+P25-00131,2025-02-09,2025-02-01,D01,Sales,A200,Travel,1148.82,expense,,Travel - Sales
+P25-00132,2025-02-09,2025-02-01,D02,Marketing,A400,Facilities,932.96,expense,,Facilities - Marketing
+P25-00133,2025-02-09,2025-02-01,D03,Operations,A200,Travel,263.42,expense,,Travel - Operations
+P25-00134,2025-02-09,2025-02-01,D03,Operations,A200,Travel,429.43,expense,,Travel - Operations
+P25-00135,2025-02-09,2025-02-01,D04,Technology,A300,Software subscriptions,2542.93,expense,,Software subscriptions - Technology
+P25-00136,2025-02-10,2025-02-01,D01,Sales,A300,Software subscriptions,3278.00,expense,,Software subscriptions - Sales
+P25-00137,2025-02-10,2025-02-01,D03,Operations,A500,Professional services,322.69,expense,,Professional services - Operations
+P25-00138,2025-02-10,2025-02-01,D05,People,A400,Facilities,906.40,expense,,Facilities - People
+P25-00139,2025-02-11,2025-02-01,D01,Sales,A500,Professional services,755.15,expense,,Professional services - Sales
+P25-00140,2025-02-11,2025-02-01,D03,Operations,A500,Professional services,741.12,expense,,Professional services - Operations
+P25-00141,2025-02-11,2025-02-01,D04,Technology,A600,Training,619.32,expense,,Training - Technology
+P25-00142,2025-02-11,2025-02-01,D05,People,A300,Software subscriptions,420.44,expense,,Software subscriptions - People
+P25-00143,2025-02-12,2025-02-01,D03,Operations,A200,Travel,278.06,expense,,Travel - Operations
+P25-00144,2025-02-12,2025-02-01,D04,Technology,A200,Travel,567.28,expense,,Travel - Technology
+P25-00145,2025-02-12,2025-02-01,D04,Technology,A500,Professional services,2135.45,expense,,Professional services - Technology
+P25-00146,2025-02-12,2025-02-01,D05,People,A400,Facilities,286.07,expense,,Facilities - People
+P25-00147,2025-02-13,2025-02-01,D01,Sales,A200,Travel,1606.62,expense,,Travel - Sales
+P25-00148,2025-02-13,2025-02-01,D01,Sales,A300,Software subscriptions,580.28,expense,,Software subscriptions - Sales
+P25-00149,2025-02-13,2025-02-01,D03,Operations,A300,Software subscriptions,205.22,expense,,Software subscriptions - Operations
+P25-00150,2025-02-13,2025-02-01,D03,Operations,A400,Facilities,2240.90,expense,,Facilities - Operations
+P25-00151,2025-02-13,2025-02-01,D05,People,A300,Software subscriptions,171.07,expense,,Software subscriptions - People
+P25-00152,2025-02-14,2025-02-01,D04,Technology,A300,Software subscriptions,2676.40,expense,,Software subscriptions - Technology
+P25-00153,2025-02-14,2025-02-01,D04,Technology,A300,Software subscriptions,3724.17,expense,,Software subscriptions - Technology
+P25-00154,2025-02-14,2025-02-01,D05,People,A300,Software subscriptions,624.95,expense,,Software subscriptions - People
+P25-00155,2025-02-15,2025-02-01,D01,Sales,A100,Salaries and wages,12177.81,expense,,Salaries and wages - Sales
+P25-00156,2025-02-15,2025-02-01,D02,Marketing,A100,Salaries and wages,21775.09,expense,,Salaries and wages - Marketing
+P25-00157,2025-02-15,2025-02-01,D03,Operations,A100,Salaries and wages,24276.85,expense,,Salaries and wages - Operations
+P25-00158,2025-02-15,2025-02-01,D04,Technology,A100,Salaries and wages,28063.79,expense,,Salaries and wages - Technology
+P25-00159,2025-02-15,2025-02-01,D05,People,A100,Salaries and wages,10398.71,expense,,Salaries and wages - People
+P25-00160,2025-02-15,2025-02-01,D05,People,A300,Software subscriptions,179.25,expense,,Software subscriptions - People
+P25-00161,2025-02-15,2025-02-01,D06,Finance and Admin,A100,Salaries and wages,13551.42,expense,,Salaries and wages - Finance and Admin
+P25-00162,2025-02-16,2025-02-01,D02,Marketing,A200,Travel,3392.01,expense,,Travel - Marketing
+P25-00163,2025-02-16,2025-02-01,D02,Marketing,A400,Facilities,550.90,expense,,Facilities - Marketing
+P25-00164,2025-02-16,2025-02-01,D02,Marketing,A600,Training,374.98,expense,,Training - Marketing
+P25-00165,2025-02-16,2025-02-01,D03,Operations,A300,Software subscriptions,397.95,expense,,Software subscriptions - Operations
+P25-00166,2025-02-16,2025-02-01,D03,Operations,A400,Facilities,4910.35,expense,,Facilities - Operations
+P25-00167,2025-02-16,2025-02-01,D04,Technology,A400,Facilities,1050.61,expense,,Facilities - Technology
+P25-00168,2025-02-16,2025-02-01,D05,People,A300,Software subscriptions,605.26,expense,,Software subscriptions - People
+P25-00169,2025-02-16,2025-02-01,D05,People,A600,Training,4229.77,expense,,Training - People
+P25-00170,2025-02-18,2025-02-01,D02,Marketing,A600,Training,81.51,expense,,Training - Marketing
+P25-00171,2025-02-18,2025-02-01,D03,Operations,A400,Facilities,4765.81,expense,,Facilities - Operations
+P25-00172,2025-02-18,2025-02-01,D04,Technology,A200,Travel,513.66,expense,,Travel - Technology
+P25-00173,2025-02-18,2025-02-01,D04,Technology,A300,Software subscriptions,2393.04,expense,,Software subscriptions - Technology
+P25-00174,2025-02-18,2025-02-01,D04,Technology,A400,Facilities,4722.34,expense,,Facilities - Technology
+P25-00175,2025-02-19,2025-02-01,D06,Finance and Admin,A200,Travel,164.28,expense,,Travel - Finance and Admin
+P25-00176,2025-02-19,2025-02-01,D06,Finance and Admin,A400,Facilities,1411.10,expense,,Facilities - Finance and Admin
+P25-00177,2025-02-20,2025-02-01,D01,Sales,A400,Facilities,2548.13,expense,,Facilities - Sales
+P25-00178,2025-02-20,2025-02-01,D02,Marketing,A300,Software subscriptions,995.48,expense,,Software subscriptions - Marketing
+P25-00179,2025-02-20,2025-02-01,D03,Operations,A600,Training,168.91,expense,,Training - Operations
+P25-00180,2025-02-20,2025-02-01,D05,People,A200,Travel,673.13,expense,,Travel - People
+P25-00181,2025-02-20,2025-02-01,D06,Finance and Admin,A200,Travel,65.80,expense,,Travel - Finance and Admin
+P25-00182,2025-02-21,2025-02-01,D01,Sales,A500,Professional services,501.64,expense,,Professional services - Sales
+P25-00183,2025-02-21,2025-02-01,D05,People,A400,Facilities,522.82,expense,,Facilities - People
+P25-00184,2025-02-21,2025-02-01,D06,Finance and Admin,A600,Training,603.23,expense,,Training - Finance and Admin
+P25-00185,2025-02-22,2025-02-01,D02,Marketing,A600,Training,96.84,expense,,Training - Marketing
+P25-00186,2025-02-23,2025-02-01,D01,Sales,A400,Facilities,456.66,expense,,Facilities - Sales
+P25-00187,2025-02-23,2025-02-01,D02,Marketing,A400,Facilities,1271.15,expense,,Facilities - Marketing
+P25-00188,2025-02-23,2025-02-01,D03,Operations,A600,Training,217.47,expense,,Training - Operations
+P25-00189,2025-02-23,2025-02-01,D04,Technology,A500,Professional services,1452.79,expense,,Professional services - Technology
+P25-00190,2025-02-23,2025-02-01,D06,Finance and Admin,A600,Training,336.38,expense,,Training - Finance and Admin
+P25-00191,2025-02-24,2025-02-01,D01,Sales,A200,Travel,4203.80,expense,,Travel - Sales
+P25-00192,2025-02-24,2025-02-01,D02,Marketing,A300,Software subscriptions,776.18,expense,,Software subscriptions - Marketing
+P25-00193,2025-02-24,2025-02-01,D03,Operations,A400,Facilities,10346.14,expense,,Facilities - Operations
+P25-00194,2025-02-24,2025-02-01,D03,Operations,A500,Professional services,1110.18,expense,,Professional services - Operations
+P25-00195,2025-02-24,2025-02-01,D05,People,A500,Professional services,3319.59,expense,,Professional services - People
+P25-00196,2025-02-25,2025-02-01,D02,Marketing,A300,Software subscriptions,1258.18,expense,,Software subscriptions - Marketing
+P25-00197,2025-02-25,2025-02-01,D03,Operations,A300,Software subscriptions,206.47,expense,,Software subscriptions - Operations
+P25-00198,2025-02-26,2025-02-01,D03,Operations,A200,Travel,172.80,expense,,Travel - Operations
+P25-00199,2025-02-26,2025-02-01,D03,Operations,A200,Travel,1096.83,expense,,Travel - Operations
+P25-00200,2025-02-26,2025-02-01,D03,Operations,A500,Professional services,779.93,expense,,Professional services - Operations
+P25-00201,2025-02-26,2025-02-01,D06,Finance and Admin,A200,Travel,111.40,expense,,Travel - Finance and Admin
+P25-00202,2025-02-26,2025-02-01,D06,Finance and Admin,A400,Facilities,728.99,expense,,Facilities - Finance and Admin
+P25-00203,2025-02-26,2025-02-01,D06,Finance and Admin,A600,Training,245.28,expense,,Training - Finance and Admin
+P25-00204,2025-02-26,2025-02-01,D06,Finance and Admin,A600,Training,377.72,expense,,Training - Finance and Admin
+P25-00205,2025-02-27,2025-02-01,D02,Marketing,A600,Training,308.79,expense,,Training - Marketing
+P25-00206,2025-02-27,2025-02-01,D03,Operations,A500,Professional services,752.36,expense,,Professional services - Operations
+P25-00207,2025-02-27,2025-02-01,D04,Technology,A500,Professional services,2376.41,expense,,Professional services - Technology
+P25-00208,2025-02-28,2025-02-01,D01,Sales,A100,Salaries and wages,71957.65,expense,,Salaries and wages - Sales
+P25-00209,2025-02-28,2025-02-01,D01,Sales,A400,Facilities,535.83,expense,,Facilities - Sales
+P25-00210,2025-02-28,2025-02-01,D02,Marketing,A100,Salaries and wages,16203.00,expense,,Salaries and wages - Marketing
+P25-00211,2025-02-28,2025-02-01,D03,Operations,A100,Salaries and wages,97641.73,expense,,Salaries and wages - Operations
+P25-00212,2025-02-28,2025-02-01,D03,Operations,A300,Software subscriptions,829.22,expense,,Software subscriptions - Operations
+P25-00213,2025-02-28,2025-02-01,D04,Technology,A100,Salaries and wages,43206.71,expense,,Salaries and wages - Technology
+P25-00214,2025-02-28,2025-02-01,D05,People,A100,Salaries and wages,15273.48,expense,,Salaries and wages - People
+P25-00215,2025-02-28,2025-02-01,D06,Finance and Admin,A100,Salaries and wages,15639.14,expense,,Salaries and wages - Finance and Admin
+P25-00216,2025-02-28,2025-02-01,D06,Finance and Admin,A200,Travel,63.04,expense,,Travel - Finance and Admin
+P25-00217,2025-02-28,2025-02-01,D06,Finance and Admin,A600,Training,287.39,expense,,Training - Finance and Admin
+P25-00218,2025-03-01,2025-03-01,D03,Operations,A400,Facilities,21153.11,expense,,Facilities - Operations
+P25-00219,2025-03-01,2025-03-01,D03,Operations,A500,Professional services,1526.51,expense,,Professional services - Operations
+P25-00220,2025-03-01,2025-03-01,D04,Technology,A300,Software subscriptions,1374.66,expense,,Software subscriptions - Technology
+P25-00221,2025-03-02,2025-03-01,D01,Sales,A200,Travel,6848.88,expense,,Travel - Sales
+P25-00222,2025-03-02,2025-03-01,D01,Sales,A500,Professional services,366.56,expense,,Professional services - Sales
+P25-00223,2025-03-02,2025-03-01,D01,Sales,A600,Training,317.48,expense,,Training - Sales
+P25-00224,2025-03-02,2025-03-01,D02,Marketing,A300,Software subscriptions,6256.26,expense,,Software subscriptions - Marketing
+P25-00225,2025-03-02,2025-03-01,D03,Operations,A500,Professional services,750.92,expense,,Professional services - Operations
+P25-00226,2025-03-03,2025-03-01,D05,People,A200,Travel,277.66,expense,,Travel - People
+P25-00227,2025-03-03,2025-03-01,D05,People,A400,Facilities,257.25,expense,,Facilities - People
+P25-00228,2025-03-03,2025-03-01,D05,People,A400,Facilities,1753.86,expense,,Facilities - People
+P25-00229,2025-03-04,2025-03-01,D03,Operations,A500,Professional services,669.17,expense,,Professional services - Operations
+P25-00230,2025-03-04,2025-03-01,D03,Operations,A600,Training,1696.42,expense,,Training - Operations
+P25-00231,2025-03-04,2025-03-01,D05,People,A300,Software subscriptions,590.47,expense,,Software subscriptions - People
+P25-00232,2025-03-04,2025-03-01,D05,People,A400,Facilities,417.24,expense,,Facilities - People
+P25-00233,2025-03-05,2025-03-01,D03,Operations,A300,Software subscriptions,529.37,expense,,Software subscriptions - Operations
+P25-00234,2025-03-05,2025-03-01,D04,Technology,A200,Travel,314.59,expense,,Travel - Technology
+P25-00235,2025-03-06,2025-03-01,D02,Marketing,A400,Facilities,1915.64,expense,,Facilities - Marketing
+P25-00236,2025-03-06,2025-03-01,D03,Operations,A300,Software subscriptions,770.51,expense,,Software subscriptions - Operations
+P25-00237,2025-03-06,2025-03-01,D04,Technology,A200,Travel,190.58,expense,,Travel - Technology
+P25-00238,2025-03-06,2025-03-01,D06,Finance and Admin,A200,Travel,329.86,expense,,Travel - Finance and Admin
+P25-00239,2025-03-06,2025-03-01,D06,Finance and Admin,A500,Professional services,425.13,expense,,Professional services - Finance and Admin
+P25-00240,2025-03-07,2025-03-01,D01,Sales,A400,Facilities,928.76,expense,,Facilities - Sales
+P25-00241,2025-03-07,2025-03-01,D01,Sales,A500,Professional services,379.42,expense,,Professional services - Sales
+P25-00242,2025-03-07,2025-03-01,D03,Operations,A600,Training,295.01,expense,,Training - Operations
+P25-00243,2025-03-07,2025-03-01,D04,Technology,A200,Travel,223.03,expense,,Travel - Technology
+P25-00244,2025-03-07,2025-03-01,D05,People,A600,Training,601.17,expense,,Training - People
+P25-00245,2025-03-08,2025-03-01,D01,Sales,A200,Travel,3835.88,expense,,Travel - Sales
+P25-00246,2025-03-08,2025-03-01,D01,Sales,A300,Software subscriptions,321.10,expense,,Software subscriptions - Sales
+P25-00247,2025-03-08,2025-03-01,D01,Sales,A400,Facilities,2235.35,expense,,Facilities - Sales
+P25-00248,2025-03-08,2025-03-01,D02,Marketing,A600,Training,228.81,expense,,Training - Marketing
+P25-00249,2025-03-08,2025-03-01,D05,People,A200,Travel,777.93,expense,,Travel - People
+P25-00250,2025-03-10,2025-03-01,D01,Sales,A600,Training,616.52,expense,,Training - Sales
+P25-00251,2025-03-10,2025-03-01,D05,People,A600,Training,801.82,expense,,Training - People
+P25-00252,2025-03-11,2025-03-01,D04,Technology,A300,Software subscriptions,3829.29,expense,,Software subscriptions - Technology
+P25-00253,2025-03-12,2025-03-01,D01,Sales,A300,Software subscriptions,346.20,expense,,Software subscriptions - Sales
+P25-00254,2025-03-12,2025-03-01,D01,Sales,A400,Facilities,716.28,expense,,Facilities - Sales
+P25-00255,2025-03-12,2025-03-01,D01,Sales,A500,Professional services,316.77,expense,,Professional services - Sales
+P25-00256,2025-03-12,2025-03-01,D04,Technology,A200,Travel,303.89,expense,,Travel - Technology
+P25-00257,2025-03-12,2025-03-01,D05,People,A200,Travel,112.44,expense,,Travel - People
+P25-00258,2025-03-12,2025-03-01,D06,Finance and Admin,A200,Travel,441.59,expense,,Travel - Finance and Admin
+P25-00259,2025-03-13,2025-03-01,D03,Operations,A200,Travel,3119.23,expense,,Travel - Operations
+P25-00260,2025-03-13,2025-03-01,D04,Technology,A600,Training,316.60,expense,,Training - Technology
+P25-00261,2025-03-13,2025-03-01,D05,People,A400,Facilities,751.92,expense,,Facilities - People
+P25-00262,2025-03-14,2025-03-01,D01,Sales,A500,Professional services,304.33,expense,,Professional services - Sales
+P25-00263,2025-03-14,2025-03-01,D02,Marketing,A200,Travel,544.95,expense,,Travel - Marketing
+P25-00264,2025-03-14,2025-03-01,D06,Finance and Admin,A200,Travel,172.50,expense,,Travel - Finance and Admin
+P25-00265,2025-03-15,2025-03-01,D01,Sales,A100,Salaries and wages,58906.34,expense,,Salaries and wages - Sales
+P25-00266,2025-03-15,2025-03-01,D02,Marketing,A100,Salaries and wages,29122.28,expense,,Salaries and wages - Marketing
+P25-00267,2025-03-15,2025-03-01,D02,Marketing,A600,Training,138.26,expense,,Training - Marketing
+P25-00268,2025-03-15,2025-03-01,D03,Operations,A100,Salaries and wages,30620.71,expense,,Salaries and wages - Operations
+P25-00269,2025-03-15,2025-03-01,D04,Technology,A100,Salaries and wages,29636.39,expense,,Salaries and wages - Technology
+P25-00270,2025-03-15,2025-03-01,D05,People,A100,Salaries and wages,6472.98,expense,,Salaries and wages - People
+P25-00271,2025-03-15,2025-03-01,D06,Finance and Admin,A100,Salaries and wages,21466.54,expense,,Salaries and wages - Finance and Admin
+P25-00272,2025-03-15,2025-03-01,D06,Finance and Admin,A400,Facilities,3308.18,expense,,Facilities - Finance and Admin
+P25-00273,2025-03-16,2025-03-01,D01,Sales,A300,Software subscriptions,517.30,expense,,Software subscriptions - Sales
+P25-00274,2025-03-16,2025-03-01,D01,Sales,A500,Professional services,732.31,expense,,Professional services - Sales
+P25-00275,2025-03-16,2025-03-01,D03,Operations,A300,Software subscriptions,380.88,expense,,Software subscriptions - Operations
+P25-00276,2025-03-16,2025-03-01,D03,Operations,A300,Software subscriptions,766.31,expense,,Software subscriptions - Operations
+P25-00277,2025-03-16,2025-03-01,D06,Finance and Admin,A300,Software subscriptions,1784.70,expense,,Software subscriptions - Finance and Admin
+P25-00278,2025-03-18,2025-03-01,D01,Sales,A300,Software subscriptions,1084.23,expense,,Software subscriptions - Sales
+P25-00279,2025-03-18,2025-03-01,D06,Finance and Admin,A500,Professional services,3627.98,expense,,Professional services - Finance and Admin
+P25-00280,2025-03-19,2025-03-01,D03,Operations,A500,Professional services,528.26,expense,,Professional services - Operations
+P25-00281,2025-03-19,2025-03-01,D04,Technology,A300,Software subscriptions,1899.95,expense,,Software subscriptions - Technology
+P25-00282,2025-03-19,2025-03-01,D04,Technology,A600,Training,1912.93,expense,,Training - Technology
+P25-00283,2025-03-20,2025-03-01,D02,Marketing,A600,Training,574.86,expense,,Training - Marketing
+P25-00284,2025-03-20,2025-03-01,D06,Finance and Admin,A500,Professional services,2136.94,expense,,Professional services - Finance and Admin
+P25-00285,2025-03-21,2025-03-01,D02,Marketing,A400,Facilities,2041.91,expense,,Facilities - Marketing
+P25-00286,2025-03-21,2025-03-01,D04,Technology,A400,Facilities,2476.49,expense,,Facilities - Technology
+P25-00287,2025-03-21,2025-03-01,D06,Finance and Admin,A500,Professional services,947.03,expense,,Professional services - Finance and Admin
+P25-00288,2025-03-22,2025-03-01,D02,Marketing,A200,Travel,2513.45,expense,,Travel - Marketing
+P25-00289,2025-03-22,2025-03-01,D03,Operations,A200,Travel,499.97,expense,,Travel - Operations
+P25-00290,2025-03-23,2025-03-01,D02,Marketing,A500,Professional services,5757.38,expense,,Professional services - Marketing
+P25-00291,2025-03-23,2025-03-01,D05,People,A600,Training,1084.04,expense,,Training - People
+P25-00292,2025-03-24,2025-03-01,D05,People,A300,Software subscriptions,1530.27,expense,,Software subscriptions - People
+P25-00293,2025-03-24,2025-03-01,D06,Finance and Admin,A300,Software subscriptions,1565.65,expense,,Software subscriptions - Finance and Admin
+P25-00294,2025-03-24,2025-03-01,D06,Finance and Admin,A500,Professional services,442.27,expense,,Professional services - Finance and Admin
+P25-00295,2025-03-25,2025-03-01,D01,Sales,A400,Facilities,1549.72,expense,,Facilities - Sales
+P25-00296,2025-03-25,2025-03-01,D01,Sales,A600,Training,333.69,expense,,Training - Sales
+P25-00297,2025-03-25,2025-03-01,D04,Technology,A300,Software subscriptions,5810.05,expense,,Software subscriptions - Technology
+P25-00298,2025-03-26,2025-03-01,D03,Operations,A300,Software subscriptions,67.61,expense,,Software subscriptions - Operations
+P25-00299,2025-03-26,2025-03-01,D03,Operations,A500,Professional services,402.80,expense,,Professional services - Operations
+P25-00300,2025-03-27,2025-03-01,D04,Technology,A200,Travel,220.09,expense,,Travel - Technology
+P25-00301,2025-03-27,2025-03-01,D04,Technology,A400,Facilities,3569.71,expense,,Facilities - Technology
+P25-00302,2025-03-27,2025-03-01,D05,People,A600,Training,1663.73,expense,,Training - People
+P25-00303,2025-03-28,2025-03-01,D03,Operations,A300,Software subscriptions,398.99,expense,,Software subscriptions - Operations
+P25-00304,2025-03-28,2025-03-01,D04,Technology,A200,Travel,405.40,expense,,Travel - Technology
+P25-00305,2025-03-28,2025-03-01,D04,Technology,A500,Professional services,6918.16,expense,,Professional services - Technology
+P25-00306,2025-03-29,2025-03-01,D01,Sales,A600,Training,397.99,expense,,Training - Sales
+P25-00307,2025-03-29,2025-03-01,D02,Marketing,A600,Training,362.83,expense,,Training - Marketing
+P25-00308,2025-03-29,2025-03-01,D06,Finance and Admin,A500,Professional services,854.57,expense,,Professional services - Finance and Admin
+P25-00309,2025-03-30,2025-03-01,D05,People,A500,Professional services,1525.10,expense,,Professional services - People
+P25-00310,2025-03-30,2025-03-01,D05,People,A500,Professional services,1600.25,expense,,Professional services - People
+P25-00311,2025-03-31,2025-03-01,D01,Sales,A100,Salaries and wages,24858.97,expense,,Salaries and wages - Sales
+P25-00312,2025-03-31,2025-03-01,D01,Sales,A300,Software subscriptions,1585.15,expense,,Software subscriptions - Sales
+P25-00313,2025-03-31,2025-03-01,D02,Marketing,A100,Salaries and wages,11214.88,expense,,Salaries and wages - Marketing
+P25-00314,2025-03-31,2025-03-01,D02,Marketing,A200,Travel,1524.59,expense,,Travel - Marketing
+P25-00315,2025-03-31,2025-03-01,D03,Operations,A100,Salaries and wages,99459.63,expense,,Salaries and wages - Operations
+P25-00316,2025-03-31,2025-03-01,D04,Technology,A100,Salaries and wages,37975.49,expense,,Salaries and wages - Technology
+P25-00317,2025-03-31,2025-03-01,D04,Technology,A300,Software subscriptions,1442.96,expense,,Software subscriptions - Technology
+P25-00318,2025-03-31,2025-03-01,D05,People,A100,Salaries and wages,19738.99,expense,,Salaries and wages - People
+P25-00319,2025-03-31,2025-03-01,D06,Finance and Admin,A100,Salaries and wages,10069.09,expense,,Salaries and wages - Finance and Admin
+P25-00320,2025-04-01,2025-04-01,D01,Sales,A300,Software subscriptions,301.33,expense,,Software subscriptions - Sales
+P25-00321,2025-04-01,2025-04-01,D04,Technology,A500,Professional services,3805.23,expense,,Professional services - Technology
+P25-00322,2025-04-01,2025-04-01,D05,People,A200,Travel,653.49,expense,,Travel - People
+P25-00323,2025-04-01,2025-04-01,D06,Finance and Admin,A300,Software subscriptions,990.47,expense,,Software subscriptions - Finance and Admin
+P25-00324,2025-04-01,2025-04-01,D06,Finance and Admin,A300,Software subscriptions,1047.64,expense,,Software subscriptions - Finance and Admin
+P25-00325,2025-04-01,2025-04-01,D06,Finance and Admin,A600,Training,126.64,expense,,Training - Finance and Admin
+P25-00326,2025-04-02,2025-04-01,D03,Operations,A300,Software subscriptions,1022.38,expense,,Software subscriptions - Operations
+P25-00327,2025-04-02,2025-04-01,D03,Operations,A500,Professional services,2319.48,expense,,Professional services - Operations
+P25-00328,2025-04-03,2025-04-01,D03,Operations,A400,Facilities,2129.40,expense,,Facilities - Operations
+P25-00329,2025-04-03,2025-04-01,D04,Technology,A600,Training,230.11,expense,,Training - Technology
+P25-00330,2025-04-03,2025-04-01,D05,People,A300,Software subscriptions,365.42,expense,,Software subscriptions - People
+P25-00331,2025-04-03,2025-04-01,D05,People,A300,Software subscriptions,482.92,expense,,Software subscriptions - People
+P25-00332,2025-04-03,2025-04-01,D06,Finance and Admin,A300,Software subscriptions,977.15,expense,,Software subscriptions - Finance and Admin
+P25-00333,2025-04-03,2025-04-01,D06,Finance and Admin,A600,Training,95.51,expense,,Training - Finance and Admin
+P25-00334,2025-04-04,2025-04-01,D04,Technology,A300,Software subscriptions,4226.55,expense,,Software subscriptions - Technology
+P25-00335,2025-04-04,2025-04-01,D04,Technology,A500,Professional services,1629.86,expense,,Professional services - Technology
+P25-00336,2025-04-04,2025-04-01,D05,People,A600,Training,878.98,expense,,Training - People
+P25-00337,2025-04-05,2025-04-01,D02,Marketing,A300,Software subscriptions,631.21,expense,,Software subscriptions - Marketing
+P25-00338,2025-04-05,2025-04-01,D02,Marketing,A500,Professional services,2074.89,expense,,Professional services - Marketing
+P25-00339,2025-04-05,2025-04-01,D03,Operations,A600,Training,596.50,expense,,Training - Operations
+P25-00340,2025-04-05,2025-04-01,D05,People,A600,Training,1176.94,expense,,Training - People
+P25-00341,2025-04-05,2025-04-01,D06,Finance and Admin,A600,Training,161.69,expense,,Training - Finance and Admin
+P25-00342,2025-04-06,2025-04-01,D01,Sales,A400,Facilities,118.35,expense,,Facilities - Sales
+P25-00343,2025-04-06,2025-04-01,D03,Operations,A200,Travel,382.73,expense,,Travel - Operations
+P25-00344,2025-04-06,2025-04-01,D06,Finance and Admin,A200,Travel,326.27,expense,,Travel - Finance and Admin
+P25-00345,2025-04-07,2025-04-01,D01,Sales,A500,Professional services,1016.29,expense,,Professional services - Sales
+P25-00346,2025-04-08,2025-04-01,D02,Marketing,A500,Professional services,1010.53,expense,,Professional services - Marketing
+P25-00347,2025-04-08,2025-04-01,D03,Operations,A400,Facilities,4491.95,expense,,Facilities - Operations
+P25-00348,2025-04-09,2025-04-01,D02,Marketing,A300,Software subscriptions,1056.83,expense,,Software subscriptions - Marketing
+P25-00349,2025-04-09,2025-04-01,D02,Marketing,A600,Training,252.11,expense,,Training - Marketing
+P25-00350,2025-04-09,2025-04-01,D05,People,A200,Travel,243.86,expense,,Travel - People
+P25-00351,2025-04-09,2025-04-01,D05,People,A400,Facilities,1303.79,expense,,Facilities - People
+P25-00352,2025-04-10,2025-04-01,D01,Sales,A300,Software subscriptions,1123.01,expense,,Software subscriptions - Sales
+P25-00353,2025-04-10,2025-04-01,D02,Marketing,A400,Facilities,507.25,expense,,Facilities - Marketing
+P25-00354,2025-04-10,2025-04-01,D03,Operations,A600,Training,302.02,expense,,Training - Operations
+P25-00355,2025-04-10,2025-04-01,D03,Operations,A600,Training,1129.75,expense,,Training - Operations
+P25-00356,2025-04-10,2025-04-01,D04,Technology,A200,Travel,1708.63,expense,,Travel - Technology
+P25-00357,2025-04-10,2025-04-01,D05,People,A600,Training,638.18,expense,,Training - People
+P25-00358,2025-04-10,2025-04-01,D06,Finance and Admin,A200,Travel,95.69,expense,,Travel - Finance and Admin
+P25-00359,2025-04-11,2025-04-01,D01,Sales,A600,Training,259.15,expense,,Training - Sales
+P25-00360,2025-04-11,2025-04-01,D02,Marketing,A600,Training,194.97,expense,,Training - Marketing
+P25-00361,2025-04-11,2025-04-01,D03,Operations,A200,Travel,447.15,expense,,Travel - Operations
+P25-00362,2025-04-11,2025-04-01,D03,Operations,A200,Travel,601.75,expense,,Travel - Operations
+P25-00363,2025-04-11,2025-04-01,D04,Technology,A300,Software subscriptions,2687.61,expense,,Software subscriptions - Technology
+P25-00364,2025-04-11,2025-04-01,D04,Technology,A600,Training,317.02,expense,,Training - Technology
+P25-00365,2025-04-12,2025-04-01,D02,Marketing,A400,Facilities,609.86,expense,,Facilities - Marketing
+P25-00366,2025-04-12,2025-04-01,D02,Marketing,A400,Facilities,940.78,expense,,Facilities - Marketing
+P25-00367,2025-04-12,2025-04-01,D04,Technology,A300,Software subscriptions,2192.77,expense,,Software subscriptions - Technology
+P25-00368,2025-04-12,2025-04-01,D05,People,A400,Facilities,386.48,expense,,Facilities - People
+P25-00369,2025-04-13,2025-04-01,D01,Sales,A200,Travel,10213.47,expense,,Travel - Sales
+P25-00370,2025-04-13,2025-04-01,D04,Technology,A600,Training,598.46,expense,,Training - Technology
+P25-00371,2025-04-13,2025-04-01,D06,Finance and Admin,A200,Travel,197.21,expense,,Travel - Finance and Admin
+P25-00372,2025-04-14,2025-04-01,D01,Sales,A500,Professional services,434.81,expense,,Professional services - Sales
+P25-00373,2025-04-14,2025-04-01,D02,Marketing,A500,Professional services,792.18,expense,,Professional services - Marketing
+P25-00374,2025-04-14,2025-04-01,D02,Marketing,A600,Training,525.06,expense,,Training - Marketing
+P25-00375,2025-04-14,2025-04-01,D03,Operations,A400,Facilities,2158.60,expense,,Facilities - Operations
+P25-00376,2025-04-14,2025-04-01,D04,Technology,A400,Facilities,6998.32,expense,,Facilities - Technology
+P25-00377,2025-04-15,2025-04-01,D01,Sales,A100,Salaries and wages,36359.47,expense,,Salaries and wages - Sales
+P25-00378,2025-04-15,2025-04-01,D02,Marketing,A100,Salaries and wages,21397.57,expense,,Salaries and wages - Marketing
+P25-00379,2025-04-15,2025-04-01,D03,Operations,A100,Salaries and wages,92896.29,expense,,Salaries and wages - Operations
+P25-00380,2025-04-15,2025-04-01,D03,Operations,A300,Software subscriptions,1830.65,expense,,Software subscriptions - Operations
+P25-00381,2025-04-15,2025-04-01,D04,Technology,A100,Salaries and wages,29629.49,expense,,Salaries and wages - Technology
+P25-00382,2025-04-15,2025-04-01,D04,Technology,A300,Software subscriptions,6609.61,expense,,Software subscriptions - Technology
+P25-00383,2025-04-15,2025-04-01,D05,People,A100,Salaries and wages,18488.25,expense,,Salaries and wages - People
+P25-00384,2025-04-15,2025-04-01,D06,Finance and Admin,A100,Salaries and wages,25949.05,expense,,Salaries and wages - Finance and Admin
+P25-00385,2025-04-17,2025-04-01,D01,Sales,A400,Facilities,368.72,expense,,Facilities - Sales
+P25-00386,2025-04-17,2025-04-01,D06,Finance and Admin,A600,Training,224.65,expense,,Training - Finance and Admin
+P25-00387,2025-04-18,2025-04-01,D01,Sales,A300,Software subscriptions,226.77,expense,,Software subscriptions - Sales
+P25-00388,2025-04-18,2025-04-01,D03,Operations,A200,Travel,201.72,expense,,Travel - Operations
+P25-00389,2025-04-18,2025-04-01,D06,Finance and Admin,A200,Travel,209.83,expense,,Travel - Finance and Admin
+P25-00390,2025-04-18,2025-04-01,D06,Finance and Admin,A400,Facilities,3084.66,expense,,Facilities - Finance and Admin
+P25-00391,2025-04-18,2025-04-01,D06,Finance and Admin,A600,Training,279.60,expense,,Training - Finance and Admin
+P25-00392,2025-04-19,2025-04-01,D02,Marketing,A600,Training,342.26,expense,,Training - Marketing
+P25-00393,2025-04-19,2025-04-01,D03,Operations,A500,Professional services,830.92,expense,,Professional services - Operations
+P25-00394,2025-04-19,2025-04-01,D05,People,A300,Software subscriptions,549.92,expense,,Software subscriptions - People
+P25-00395,2025-04-19,2025-04-01,D06,Finance and Admin,A500,Professional services,6915.08,expense,,Professional services - Finance and Admin
+P25-00396,2025-04-20,2025-04-01,D02,Marketing,A400,Facilities,651.87,expense,,Facilities - Marketing
+P25-00397,2025-04-20,2025-04-01,D03,Operations,A200,Travel,1478.40,expense,,Travel - Operations
+P25-00398,2025-04-21,2025-04-01,D01,Sales,A300,Software subscriptions,1088.78,expense,,Software subscriptions - Sales
+P25-00399,2025-04-21,2025-04-01,D04,Technology,A600,Training,663.82,expense,,Training - Technology
+P25-00400,2025-04-21,2025-04-01,D05,People,A400,Facilities,1335.61,expense,,Facilities - People
+P25-00401,2025-04-21,2025-04-01,D05,People,A500,Professional services,886.27,expense,,Professional services - People
+P25-00402,2025-04-21,2025-04-01,D05,People,A600,Training,434.19,expense,,Training - People
+P25-00403,2025-04-22,2025-04-01,D01,Sales,A400,Facilities,747.36,expense,,Facilities - Sales
+P25-00404,2025-04-22,2025-04-01,D01,Sales,A600,Training,639.89,expense,,Training - Sales
+P25-00405,2025-04-22,2025-04-01,D03,Operations,A200,Travel,660.72,expense,,Travel - Operations
+P25-00406,2025-04-22,2025-04-01,D03,Operations,A500,Professional services,1150.95,expense,,Professional services - Operations
+P25-00407,2025-04-22,2025-04-01,D05,People,A200,Travel,200.67,expense,,Travel - People
+P25-00408,2025-04-23,2025-04-01,D02,Marketing,A400,Facilities,232.61,expense,,Facilities - Marketing
+P25-00409,2025-04-23,2025-04-01,D05,People,A500,Professional services,969.67,expense,,Professional services - People
+P25-00410,2025-04-24,2025-04-01,D01,Sales,A600,Training,785.59,expense,,Training - Sales
+P25-00411,2025-04-24,2025-04-01,D02,Marketing,A300,Software subscriptions,391.57,expense,,Software subscriptions - Marketing
+P25-00412,2025-04-24,2025-04-01,D05,People,A300,Software subscriptions,744.90,expense,,Software subscriptions - People
+P25-00413,2025-04-25,2025-04-01,D01,Sales,A300,Software subscriptions,506.80,expense,,Software subscriptions - Sales
+P25-00414,2025-04-25,2025-04-01,D02,Marketing,A300,Software subscriptions,1006.97,expense,,Software subscriptions - Marketing
+P25-00415,2025-04-25,2025-04-01,D02,Marketing,A300,Software subscriptions,1203.47,expense,,Software subscriptions - Marketing
+P25-00416,2025-04-25,2025-04-01,D02,Marketing,A400,Facilities,867.08,expense,,Facilities - Marketing
+P25-00417,2025-04-25,2025-04-01,D03,Operations,A400,Facilities,8999.62,expense,,Facilities - Operations
+P25-00418,2025-04-25,2025-04-01,D04,Technology,A300,Software subscriptions,2318.24,expense,,Software subscriptions - Technology
+P25-00419,2025-04-25,2025-04-01,D04,Technology,A600,Training,305.55,expense,,Training - Technology
+P25-00420,2025-04-26,2025-04-01,D01,Sales,A300,Software subscriptions,482.44,expense,,Software subscriptions - Sales
+P25-00421,2025-04-26,2025-04-01,D01,Sales,A400,Facilities,1048.60,expense,,Facilities - Sales
+P25-00422,2025-04-26,2025-04-01,D01,Sales,A400,Facilities,2092.84,expense,,Facilities - Sales
+P25-00423,2025-04-26,2025-04-01,D04,Technology,A500,Professional services,1284.07,expense,,Professional services - Technology
+P25-00424,2025-04-26,2025-04-01,D04,Technology,A600,Training,165.57,expense,,Training - Technology
+P25-00425,2025-04-27,2025-04-01,D02,Marketing,A300,Software subscriptions,1925.54,expense,,Software subscriptions - Marketing
+P25-00426,2025-04-27,2025-04-01,D05,People,A200,Travel,253.17,expense,,Travel - People
+P25-00427,2025-04-28,2025-04-01,D01,Sales,A500,Professional services,697.83,expense,,Professional services - Sales
+P25-00428,2025-04-28,2025-04-01,D06,Finance and Admin,A200,Travel,261.07,expense,,Travel - Finance and Admin
+P25-00429,2025-04-29,2025-04-01,D02,Marketing,A200,Travel,5105.54,expense,,Travel - Marketing
+P25-00430,2025-04-29,2025-04-01,D05,People,A500,Professional services,311.91,expense,,Professional services - People
+P25-00431,2025-04-29,2025-04-01,D05,People,A500,Professional services,921.72,expense,,Professional services - People
+P25-00432,2025-04-30,2025-04-01,D01,Sales,A100,Salaries and wages,41363.00,expense,,Salaries and wages - Sales
+P25-00433,2025-04-30,2025-04-01,D01,Sales,A400,Facilities,752.21,expense,,Facilities - Sales
+P25-00434,2025-04-30,2025-04-01,D02,Marketing,A100,Salaries and wages,17181.53,expense,,Salaries and wages - Marketing
+P25-00435,2025-04-30,2025-04-01,D02,Marketing,A500,Professional services,1440.33,expense,,Professional services - Marketing
+P25-00436,2025-04-30,2025-04-01,D03,Operations,A100,Salaries and wages,41059.32,expense,,Salaries and wages - Operations
+P25-00437,2025-04-30,2025-04-01,D03,Operations,A400,Facilities,2397.63,expense,,Facilities - Operations
+P25-00438,2025-04-30,2025-04-01,D04,Technology,A100,Salaries and wages,39077.51,expense,,Salaries and wages - Technology
+P25-00439,2025-04-30,2025-04-01,D04,Technology,A300,Software subscriptions,1250.18,expense,,Software subscriptions - Technology
+P25-00440,2025-04-30,2025-04-01,D05,People,A100,Salaries and wages,8422.17,expense,,Salaries and wages - People
+P25-00441,2025-04-30,2025-04-01,D05,People,A600,Training,792.02,expense,,Training - People
+P25-00442,2025-04-30,2025-04-01,D06,Finance and Admin,A100,Salaries and wages,5283.63,expense,,Salaries and wages - Finance and Admin
+P25-00443,2025-05-01,2025-05-01,D01,Sales,A300,Software subscriptions,473.04,expense,,Software subscriptions - Sales
+P25-00444,2025-05-01,2025-05-01,D03,Operations,A400,Facilities,1253.59,expense,,Facilities - Operations
+P25-00445,2025-05-01,2025-05-01,D03,Operations,A500,Professional services,1478.00,expense,,Professional services - Operations
+P25-00446,2025-05-01,2025-05-01,D04,Technology,A200,Travel,388.65,expense,,Travel - Technology
+P25-00447,2025-05-01,2025-05-01,D05,People,A300,Software subscriptions,207.05,expense,,Software subscriptions - People
+P25-00448,2025-05-01,2025-05-01,D05,People,A600,Training,1321.41,expense,,Training - People
+P25-00449,2025-05-02,2025-05-01,D05,People,A200,Travel,149.47,expense,,Travel - People
+P25-00450,2025-05-02,2025-05-01,D05,People,A300,Software subscriptions,676.56,expense,,Software subscriptions - People
+P25-00451,2025-05-02,2025-05-01,D06,Finance and Admin,A400,Facilities,422.04,expense,,Facilities - Finance and Admin
+P25-00452,2025-05-03,2025-05-01,D01,Sales,A500,Professional services,412.21,expense,,Professional services - Sales
+P25-00453,2025-05-03,2025-05-01,D03,Operations,A200,Travel,1227.21,expense,,Travel - Operations
+P25-00454,2025-05-03,2025-05-01,D05,People,A200,Travel,235.60,expense,,Travel - People
+P25-00455,2025-05-03,2025-05-01,D05,People,A400,Facilities,405.22,expense,,Facilities - People
+P25-00456,2025-05-03,2025-05-01,D05,People,A500,Professional services,2282.87,expense,,Professional services - People
+P25-00457,2025-05-04,2025-05-01,D03,Operations,A300,Software subscriptions,911.25,expense,,Software subscriptions - Operations
+P25-00458,2025-05-05,2025-05-01,D02,Marketing,A600,Training,157.29,expense,,Training - Marketing
+P25-00459,2025-05-05,2025-05-01,D03,Operations,A200,Travel,795.24,expense,,Travel - Operations
+P25-00460,2025-05-05,2025-05-01,D04,Technology,A600,Training,1665.85,expense,,Training - Technology
+P25-00461,2025-05-05,2025-05-01,D06,Finance and Admin,A300,Software subscriptions,159.15,expense,,Software subscriptions - Finance and Admin
+P25-00462,2025-05-05,2025-05-01,D06,Finance and Admin,A600,Training,286.14,expense,,Training - Finance and Admin
+P25-00463,2025-05-06,2025-05-01,D05,People,A200,Travel,226.83,expense,,Travel - People
+P25-00464,2025-05-07,2025-05-01,D01,Sales,A300,Software subscriptions,789.37,expense,,Software subscriptions - Sales
+P25-00465,2025-05-08,2025-05-01,D04,Technology,A200,Travel,490.22,expense,,Travel - Technology
+P25-00466,2025-05-08,2025-05-01,D04,Technology,A500,Professional services,6207.29,expense,,Professional services - Technology
+P25-00467,2025-05-08,2025-05-01,D05,People,A400,Facilities,341.68,expense,,Facilities - People
+P25-00468,2025-05-08,2025-05-01,D06,Finance and Admin,A600,Training,289.33,expense,,Training - Finance and Admin
+P25-00469,2025-05-09,2025-05-01,D01,Sales,A500,Professional services,598.49,expense,,Professional services - Sales
+P25-00470,2025-05-09,2025-05-01,D05,People,A200,Travel,256.84,expense,,Travel - People
+P25-00471,2025-05-09,2025-05-01,D06,Finance and Admin,A400,Facilities,875.94,expense,,Facilities - Finance and Admin
+P25-00472,2025-05-10,2025-05-01,D02,Marketing,A200,Travel,1681.42,expense,,Travel - Marketing
+P25-00473,2025-05-10,2025-05-01,D05,People,A400,Facilities,330.20,expense,,Facilities - People
+P25-00474,2025-05-10,2025-05-01,D05,People,A600,Training,797.29,expense,,Training - People
+P25-00475,2025-05-11,2025-05-01,D01,Sales,A600,Training,663.80,expense,,Training - Sales
+P25-00476,2025-05-11,2025-05-01,D02,Marketing,A400,Facilities,616.92,expense,,Facilities - Marketing
+P25-00477,2025-05-11,2025-05-01,D04,Technology,A400,Facilities,3530.73,expense,,Facilities - Technology
+P25-00478,2025-05-12,2025-05-01,D01,Sales,A500,Professional services,368.49,expense,,Professional services - Sales
+P25-00479,2025-05-12,2025-05-01,D01,Sales,A600,Training,154.91,expense,,Training - Sales
+P25-00480,2025-05-12,2025-05-01,D03,Operations,A500,Professional services,1016.57,expense,,Professional services - Operations
+P25-00481,2025-05-13,2025-05-01,D05,People,A300,Software subscriptions,1044.30,expense,,Software subscriptions - People
+P25-00482,2025-05-13,2025-05-01,D06,Finance and Admin,A500,Professional services,830.84,expense,,Professional services - Finance and Admin
+P25-00483,2025-05-13,2025-05-01,D06,Finance and Admin,A600,Training,346.96,expense,,Training - Finance and Admin
+P25-00484,2025-05-14,2025-05-01,D01,Sales,A200,Travel,2123.44,expense,,Travel - Sales
+P25-00485,2025-05-14,2025-05-01,D02,Marketing,A600,Training,368.53,expense,,Training - Marketing
+P25-00486,2025-05-15,2025-05-01,D01,Sales,A100,Salaries and wages,56790.97,expense,,Salaries and wages - Sales
+P25-00487,2025-05-15,2025-05-01,D01,Sales,A200,Travel,1492.03,expense,,Travel - Sales
+P25-00488,2025-05-15,2025-05-01,D01,Sales,A600,Training,372.70,expense,,Training - Sales
+P25-00489,2025-05-15,2025-05-01,D02,Marketing,A100,Salaries and wages,30746.83,expense,,Salaries and wages - Marketing
+P25-00490,2025-05-15,2025-05-01,D02,Marketing,A500,Professional services,983.07,expense,,Professional services - Marketing
+P25-00491,2025-05-15,2025-05-01,D02,Marketing,A600,Training,746.17,expense,,Training - Marketing
+P25-00492,2025-05-15,2025-05-01,D03,Operations,A100,Salaries and wages,50949.94,expense,,Salaries and wages - Operations
+P25-00493,2025-05-15,2025-05-01,D03,Operations,A500,Professional services,1209.01,expense,,Professional services - Operations
+P25-00494,2025-05-15,2025-05-01,D04,Technology,A100,Salaries and wages,37069.25,expense,,Salaries and wages - Technology
+P25-00495,2025-05-15,2025-05-01,D05,People,A100,Salaries and wages,11671.33,expense,,Salaries and wages - People
+P25-00496,2025-05-15,2025-05-01,D06,Finance and Admin,A100,Salaries and wages,27913.25,expense,,Salaries and wages - Finance and Admin
+P25-00497,2025-05-15,2025-05-01,D06,Finance and Admin,A500,Professional services,1157.58,expense,,Professional services - Finance and Admin
+P25-00498,2025-05-16,2025-05-01,D03,Operations,A500,Professional services,641.44,expense,,Professional services - Operations
+P25-00499,2025-05-16,2025-05-01,D05,People,A600,Training,1511.68,expense,,Training - People
+P25-00500,2025-05-16,2025-05-01,D06,Finance and Admin,A400,Facilities,715.54,expense,,Facilities - Finance and Admin
+P25-00501,2025-05-17,2025-05-01,D01,Sales,A200,Travel,6818.31,expense,,Travel - Sales
+P25-00502,2025-05-17,2025-05-01,D01,Sales,A300,Software subscriptions,761.46,expense,,Software subscriptions - Sales
+P25-00503,2025-05-17,2025-05-01,D01,Sales,A400,Facilities,361.28,expense,,Facilities - Sales
+P25-00504,2025-05-17,2025-05-01,D02,Marketing,A400,Facilities,185.16,expense,,Facilities - Marketing
+P25-00505,2025-05-17,2025-05-01,D03,Operations,A200,Travel,555.64,expense,,Travel - Operations
+P25-00506,2025-05-17,2025-05-01,D05,People,A400,Facilities,1001.23,expense,,Facilities - People
+P25-00507,2025-05-17,2025-05-01,D06,Finance and Admin,A300,Software subscriptions,590.98,expense,,Software subscriptions - Finance and Admin
+P25-00508,2025-05-17,2025-05-01,D06,Finance and Admin,A500,Professional services,1689.09,expense,,Professional services - Finance and Admin
+P25-00509,2025-05-18,2025-05-01,D01,Sales,A600,Training,270.47,expense,,Training - Sales
+P25-00510,2025-05-18,2025-05-01,D03,Operations,A200,Travel,749.07,expense,,Travel - Operations
+P25-00511,2025-05-18,2025-05-01,D03,Operations,A200,Travel,845.87,expense,,Travel - Operations
+P25-00512,2025-05-18,2025-05-01,D06,Finance and Admin,A500,Professional services,2568.93,expense,,Professional services - Finance and Admin
+P25-00513,2025-05-19,2025-05-01,D01,Sales,A500,Professional services,322.34,expense,,Professional services - Sales
+P25-00514,2025-05-19,2025-05-01,D02,Marketing,A300,Software subscriptions,1841.67,expense,,Software subscriptions - Marketing
+P25-00515,2025-05-19,2025-05-01,D03,Operations,A400,Facilities,712.76,expense,,Facilities - Operations
+P25-00516,2025-05-19,2025-05-01,D03,Operations,A600,Training,535.88,expense,,Training - Operations
+P25-00517,2025-05-19,2025-05-01,D06,Finance and Admin,A400,Facilities,246.13,expense,,Facilities - Finance and Admin
+P25-00518,2025-05-19,2025-05-01,D06,Finance and Admin,A400,Facilities,270.51,expense,,Facilities - Finance and Admin
+P25-00519,2025-05-20,2025-05-01,D01,Sales,A400,Facilities,374.29,expense,,Facilities - Sales
+P25-00520,2025-05-20,2025-05-01,D01,Sales,A400,Facilities,916.75,expense,,Facilities - Sales
+P25-00521,2025-05-20,2025-05-01,D01,Sales,A400,Facilities,1028.68,expense,,Facilities - Sales
+P25-00522,2025-05-20,2025-05-01,D02,Marketing,A200,Travel,2154.26,expense,,Travel - Marketing
+P25-00523,2025-05-20,2025-05-01,D02,Marketing,A500,Professional services,1089.37,expense,,Professional services - Marketing
+P25-00524,2025-05-20,2025-05-01,D03,Operations,A300,Software subscriptions,314.60,expense,,Software subscriptions - Operations
+P25-00525,2025-05-21,2025-05-01,D02,Marketing,A600,Training,98.13,expense,,Training - Marketing
+P25-00526,2025-05-21,2025-05-01,D03,Operations,A400,Facilities,12310.36,expense,,Facilities - Operations
+P25-00527,2025-05-21,2025-05-01,D04,Technology,A400,Facilities,2288.48,expense,,Facilities - Technology
+P25-00528,2025-05-22,2025-05-01,D02,Marketing,A500,Professional services,1126.90,expense,,Professional services - Marketing
+P25-00529,2025-05-22,2025-05-01,D02,Marketing,A500,Professional services,1411.73,expense,,Professional services - Marketing
+P25-00530,2025-05-22,2025-05-01,D04,Technology,A200,Travel,208.14,expense,,Travel - Technology
+P25-00531,2025-05-22,2025-05-01,D04,Technology,A600,Training,619.85,expense,,Training - Technology
+P25-00532,2025-05-22,2025-05-01,D05,People,A400,Facilities,458.74,expense,,Facilities - People
+P25-00533,2025-05-22,2025-05-01,D05,People,A600,Training,603.08,expense,,Training - People
+P25-00534,2025-05-23,2025-05-01,D06,Finance and Admin,A200,Travel,915.44,expense,,Travel - Finance and Admin
+P25-00535,2025-05-24,2025-05-01,D05,People,A200,Travel,87.63,expense,,Travel - People
+P25-00536,2025-05-24,2025-05-01,D05,People,A200,Travel,370.95,expense,,Travel - People
+P25-00537,2025-05-24,2025-05-01,D05,People,A500,Professional services,765.58,expense,,Professional services - People
+P25-00538,2025-05-25,2025-05-01,D01,Sales,A200,Travel,952.07,expense,,Travel - Sales
+P25-00539,2025-05-25,2025-05-01,D02,Marketing,A200,Travel,1393.99,expense,,Travel - Marketing
+P25-00540,2025-05-25,2025-05-01,D04,Technology,A200,Travel,707.17,expense,,Travel - Technology
+P25-00541,2025-05-25,2025-05-01,D06,Finance and Admin,A300,Software subscriptions,412.80,expense,,Software subscriptions - Finance and Admin
+P25-00542,2025-05-25,2025-05-01,D06,Finance and Admin,A300,Software subscriptions,495.57,expense,,Software subscriptions - Finance and Admin
+P25-00543,2025-05-26,2025-05-01,D01,Sales,A300,Software subscriptions,1065.07,expense,,Software subscriptions - Sales
+P25-00544,2025-05-26,2025-05-01,D04,Technology,A200,Travel,201.72,expense,,Travel - Technology
+P25-00545,2025-05-26,2025-05-01,D05,People,A400,Facilities,298.64,expense,,Facilities - People
+P25-00546,2025-05-26,2025-05-01,D06,Finance and Admin,A300,Software subscriptions,1430.14,expense,,Software subscriptions - Finance and Admin
+P25-00547,2025-05-27,2025-05-01,D01,Sales,A400,Facilities,1342.79,expense,,Facilities - Sales
+P25-00548,2025-05-27,2025-05-01,D01,Sales,A500,Professional services,218.42,expense,,Professional services - Sales
+P25-00549,2025-05-27,2025-05-01,D02,Marketing,A300,Software subscriptions,4428.73,expense,,Software subscriptions - Marketing
+P25-00550,2025-05-27,2025-05-01,D02,Marketing,A400,Facilities,1076.87,expense,,Facilities - Marketing
+P25-00551,2025-05-27,2025-05-01,D06,Finance and Admin,A500,Professional services,1321.24,expense,,Professional services - Finance and Admin
+P25-00552,2025-05-28,2025-05-01,D01,Sales,A200,Travel,6500.00,expense,,Conference travel invoice
+P25-00553,2025-05-28,2025-05-01,D01,Sales,A200,Travel,6500.00,expense,,Conference travel invoice
+P25-00554,2025-05-28,2025-05-01,D01,Sales,A500,Professional services,289.83,expense,,Professional services - Sales
+P25-00555,2025-05-28,2025-05-01,D02,Marketing,A400,Facilities,818.08,expense,,Facilities - Marketing
+P25-00556,2025-05-28,2025-05-01,D02,Marketing,A600,Training,53.44,expense,,Training - Marketing
+P25-00557,2025-05-28,2025-05-01,D03,Operations,A600,Training,1464.86,expense,,Training - Operations
+P25-00558,2025-05-28,2025-05-01,D06,Finance and Admin,A400,Facilities,482.83,expense,,Facilities - Finance and Admin
+P25-00559,2025-05-28,2025-05-01,D06,Finance and Admin,A500,Professional services,1039.28,expense,,Professional services - Finance and Admin
+P25-00560,2025-05-29,2025-05-01,D01,Sales,A300,Software subscriptions,703.90,expense,,Software subscriptions - Sales
+P25-00561,2025-05-29,2025-05-01,D04,Technology,A300,Software subscriptions,9359.06,expense,,Software subscriptions - Technology
+P25-00562,2025-05-30,2025-05-01,D01,Sales,A400,Facilities,1282.66,expense,,Facilities - Sales
+P25-00563,2025-05-30,2025-05-01,D02,Marketing,A400,Facilities,933.94,expense,,Facilities - Marketing
+P25-00564,2025-05-30,2025-05-01,D02,Marketing,A500,Professional services,706.86,expense,,Professional services - Marketing
+P25-00565,2025-05-30,2025-05-01,D03,Operations,A400,Facilities,2709.99,expense,,Facilities - Operations
+P25-00566,2025-05-30,2025-05-01,D03,Operations,A400,Facilities,3468.82,expense,,Facilities - Operations
+P25-00567,2025-05-30,2025-05-01,D04,Technology,A300,Software subscriptions,9967.52,expense,,Software subscriptions - Technology
+P25-00568,2025-05-31,2025-05-01,D01,Sales,A100,Salaries and wages,23856.45,expense,,Salaries and wages - Sales
+P25-00569,2025-05-31,2025-05-01,D02,Marketing,A100,Salaries and wages,12350.19,expense,,Salaries and wages - Marketing
+P25-00570,2025-05-31,2025-05-01,D03,Operations,A100,Salaries and wages,73958.10,expense,,Salaries and wages - Operations
+P25-00571,2025-05-31,2025-05-01,D03,Operations,A300,Software subscriptions,601.63,expense,,Software subscriptions - Operations
+P25-00572,2025-05-31,2025-05-01,D03,Operations,A300,Software subscriptions,1109.50,expense,,Software subscriptions - Operations
+P25-00573,2025-05-31,2025-05-01,D04,Technology,A100,Salaries and wages,30329.42,expense,,Salaries and wages - Technology
+P25-00574,2025-05-31,2025-05-01,D05,People,A100,Salaries and wages,14645.23,expense,,Salaries and wages - People
+P25-00575,2025-05-31,2025-05-01,D06,Finance and Admin,A100,Salaries and wages,2575.13,expense,,Salaries and wages - Finance and Admin
+P25-00576,2025-06-01,2025-06-01,D02,Marketing,A500,Professional services,576.44,expense,,Professional services - Marketing
+P25-00577,2025-06-01,2025-06-01,D02,Marketing,A500,Professional services,1484.48,expense,,Professional services - Marketing
+P25-00578,2025-06-01,2025-06-01,D03,Operations,A400,Facilities,3951.54,expense,,Facilities - Operations
+P25-00579,2025-06-01,2025-06-01,D03,Operations,A400,Facilities,8622.00,expense,,Facilities - Operations
+P25-00580,2025-06-01,2025-06-01,D05,People,A400,Facilities,823.51,expense,,Facilities - People
+P25-00581,2025-06-02,2025-06-01,D01,Sales,A300,Software subscriptions,422.93,expense,,Software subscriptions - Sales
+P25-00582,2025-06-02,2025-06-01,D01,Sales,A400,Facilities,2981.17,expense,,Facilities - Sales
+P25-00583,2025-06-02,2025-06-01,D01,Sales,A600,Training,563.86,expense,,Training - Sales
+P25-00584,2025-06-02,2025-06-01,D02,Marketing,A200,Travel,1514.55,expense,,Travel - Marketing
+P25-00585,2025-06-02,2025-06-01,D05,People,A200,Travel,228.24,expense,,Travel - People
+P25-00586,2025-06-02,2025-06-01,D06,Finance and Admin,A500,Professional services,2829.64,expense,,Professional services - Finance and Admin
+P25-00587,2025-06-03,2025-06-01,D01,Sales,A300,Software subscriptions,500.31,expense,,Software subscriptions - Sales
+P25-00588,2025-06-03,2025-06-01,D05,People,A300,Software subscriptions,536.75,expense,,Software subscriptions - People
+P25-00589,2025-06-04,2025-06-01,D02,Marketing,A600,Training,1163.31,expense,,Training - Marketing
+P25-00590,2025-06-04,2025-06-01,D04,Technology,A200,Travel,390.69,expense,,Travel - Technology
+P25-00591,2025-06-04,2025-06-01,D05,People,A500,Professional services,851.27,expense,,Professional services - People
+P25-00592,2025-06-05,2025-06-01,D02,Marketing,A300,Software subscriptions,1132.19,expense,,Software subscriptions - Marketing
+P25-00593,2025-06-05,2025-06-01,D03,Operations,A500,Professional services,1405.33,expense,,Professional services - Operations
+P25-00594,2025-06-05,2025-06-01,D05,People,A200,Travel,79.54,expense,,Travel - People
+P25-00595,2025-06-05,2025-06-01,D05,People,A200,Travel,228.57,expense,,Travel - People
+P25-00596,2025-06-05,2025-06-01,D06,Finance and Admin,A200,Travel,99.29,expense,,Travel - Finance and Admin
+P25-00597,2025-06-05,2025-06-01,D06,Finance and Admin,A400,Facilities,1603.21,expense,,Facilities - Finance and Admin
+P25-00598,2025-06-06,2025-06-01,D02,Marketing,A200,Travel,467.04,expense,,Travel - Marketing
+P25-00599,2025-06-06,2025-06-01,D03,Operations,A500,Professional services,1052.86,expense,,Professional services - Operations
+P25-00600,2025-06-06,2025-06-01,D04,Technology,A300,Software subscriptions,6958.10,expense,,Software subscriptions - Technology
+P25-00601,2025-06-07,2025-06-01,D01,Sales,A200,Travel,4965.34,expense,,Travel - Sales
+P25-00602,2025-06-07,2025-06-01,D02,Marketing,A300,Software subscriptions,2319.57,expense,,Software subscriptions - Marketing
+P25-00603,2025-06-07,2025-06-01,D03,Operations,A300,Software subscriptions,1128.98,expense,,Software subscriptions - Operations
+P25-00604,2025-06-07,2025-06-01,D04,Technology,A200,Travel,269.28,expense,,Travel - Technology
+P25-00605,2025-06-07,2025-06-01,D04,Technology,A500,Professional services,1834.98,expense,,Professional services - Technology
+P25-00606,2025-06-07,2025-06-01,D04,Technology,A600,Training,520.43,expense,,Training - Technology
+P25-00607,2025-06-08,2025-06-01,D02,Marketing,A400,Facilities,195.58,expense,,Facilities - Marketing
+P25-00608,2025-06-08,2025-06-01,D02,Marketing,A400,Facilities,536.05,expense,,Facilities - Marketing
+P25-00609,2025-06-08,2025-06-01,D02,Marketing,A500,Professional services,2545.66,expense,,Professional services - Marketing
+P25-00610,2025-06-08,2025-06-01,D03,Operations,A500,Professional services,1632.99,expense,,Professional services - Operations
+P25-00611,2025-06-09,2025-06-01,D01,Sales,A200,Travel,-6500.00,reversal,P25-00553,Reversal of duplicated May conference invoice
+P25-00612,2025-06-09,2025-06-01,D01,Sales,A300,Software subscriptions,856.62,expense,,Software subscriptions - Sales
+P25-00613,2025-06-09,2025-06-01,D03,Operations,A600,Training,1081.60,expense,,Training - Operations
+P25-00614,2025-06-09,2025-06-01,D06,Finance and Admin,A400,Facilities,600.46,expense,,Facilities - Finance and Admin
+P25-00615,2025-06-10,2025-06-01,D04,Technology,A300,Software subscriptions,4205.48,expense,,Software subscriptions - Technology
+P25-00616,2025-06-11,2025-06-01,D03,Operations,A200,Travel,1976.11,expense,,Travel - Operations
+P25-00617,2025-06-11,2025-06-01,D04,Technology,A300,Software subscriptions,4398.27,expense,,Software subscriptions - Technology
+P25-00618,2025-06-12,2025-06-01,D02,Marketing,A400,Facilities,496.43,expense,,Facilities - Marketing
+P25-00619,2025-06-12,2025-06-01,D03,Operations,A400,Facilities,3987.07,expense,,Facilities - Operations
+P25-00620,2025-06-12,2025-06-01,D03,Operations,A600,Training,756.27,expense,,Training - Operations
+P25-00621,2025-06-12,2025-06-01,D04,Technology,A500,Professional services,2003.81,expense,,Professional services - Technology
+P25-00622,2025-06-13,2025-06-01,D02,Marketing,A200,Travel,780.86,expense,,Travel - Marketing
+P25-00623,2025-06-13,2025-06-01,D04,Technology,A200,Travel,543.72,expense,,Travel - Technology
+P25-00624,2025-06-14,2025-06-01,D01,Sales,A500,Professional services,1410.22,expense,,Professional services - Sales
+P25-00625,2025-06-14,2025-06-01,D06,Finance and Admin,A300,Software subscriptions,1278.02,expense,,Software subscriptions - Finance and Admin
+P25-00626,2025-06-15,2025-06-01,D01,Sales,A100,Salaries and wages,52479.26,expense,,Salaries and wages - Sales
+P25-00627,2025-06-15,2025-06-01,D02,Marketing,A100,Salaries and wages,36034.03,expense,,Salaries and wages - Marketing
+P25-00628,2025-06-15,2025-06-01,D03,Operations,A100,Salaries and wages,62333.08,expense,,Salaries and wages - Operations
+P25-00629,2025-06-15,2025-06-01,D04,Technology,A100,Salaries and wages,43892.49,expense,,Salaries and wages - Technology
+P25-00630,2025-06-15,2025-06-01,D05,People,A100,Salaries and wages,9282.80,expense,,Salaries and wages - People
+P25-00631,2025-06-15,2025-06-01,D06,Finance and Admin,A100,Salaries and wages,7579.46,expense,,Salaries and wages - Finance and Admin
+P25-00632,2025-06-15,2025-06-01,D06,Finance and Admin,A300,Software subscriptions,2041.46,expense,,Software subscriptions - Finance and Admin
+P25-00633,2025-06-15,2025-06-01,D06,Finance and Admin,A400,Facilities,792.06,expense,,Facilities - Finance and Admin
+P25-00634,2025-06-15,2025-06-01,D06,Finance and Admin,A600,Training,138.00,expense,,Training - Finance and Admin
+P25-00635,2025-06-16,2025-06-01,D02,Marketing,A300,Software subscriptions,1705.69,expense,,Software subscriptions - Marketing
+P25-00636,2025-06-16,2025-06-01,D05,People,A300,Software subscriptions,1004.98,expense,,Software subscriptions - People
+P25-00637,2025-06-16,2025-06-01,D06,Finance and Admin,A200,Travel,165.24,expense,,Travel - Finance and Admin
+P25-00638,2025-06-17,2025-06-01,D01,Sales,A600,Training,227.30,expense,,Training - Sales
+P25-00639,2025-06-17,2025-06-01,D02,Marketing,A200,Travel,675.89,expense,,Travel - Marketing
+P25-00640,2025-06-17,2025-06-01,D03,Operations,A200,Travel,739.24,expense,,Travel - Operations
+P25-00641,2025-06-17,2025-06-01,D04,Technology,A200,Travel,371.07,expense,,Travel - Technology
+P25-00642,2025-06-17,2025-06-01,D04,Technology,A600,Training,1107.50,expense,,Training - Technology
+P25-00643,2025-06-17,2025-06-01,D05,People,A300,Software subscriptions,509.34,expense,,Software subscriptions - People
+P25-00644,2025-06-17,2025-06-01,D05,People,A500,Professional services,654.87,expense,,Professional services - People
+P25-00645,2025-06-17,2025-06-01,D06,Finance and Admin,A200,Travel,159.84,expense,,Travel - Finance and Admin
+P25-00646,2025-06-17,2025-06-01,D06,Finance and Admin,A600,Training,202.04,expense,,Training - Finance and Admin
+P25-00647,2025-06-18,2025-06-01,D01,Sales,A400,Facilities,1565.50,expense,,Facilities - Sales
+P25-00648,2025-06-18,2025-06-01,D02,Marketing,A500,Professional services,291.95,expense,,Professional services - Marketing
+P25-00649,2025-06-18,2025-06-01,D03,Operations,A300,Software subscriptions,834.98,expense,,Software subscriptions - Operations
+P25-00650,2025-06-18,2025-06-01,D03,Operations,A400,Facilities,828.17,expense,,Facilities - Operations
+P25-00651,2025-06-18,2025-06-01,D04,Technology,A400,Facilities,6273.72,expense,,Facilities - Technology
+P25-00652,2025-06-18,2025-06-01,D06,Finance and Admin,A200,Travel,39.80,expense,,Travel - Finance and Admin
+P25-00653,2025-06-19,2025-06-01,D06,Finance and Admin,A500,Professional services,1665.52,expense,,Professional services - Finance and Admin
+P25-00654,2025-06-20,2025-06-01,D01,Sales,A600,Training,339.60,expense,,Training - Sales
+P25-00655,2025-06-20,2025-06-01,D02,Marketing,A200,Travel,183.26,expense,,Travel - Marketing
+P25-00656,2025-06-20,2025-06-01,D03,Operations,A400,Facilities,3936.54,expense,,Facilities - Operations
+P25-00657,2025-06-20,2025-06-01,D04,Technology,A300,Software subscriptions,4190.51,expense,,Software subscriptions - Technology
+P25-00658,2025-06-21,2025-06-01,D05,People,A600,Training,3957.08,expense,,Training - People
+P25-00659,2025-06-21,2025-06-01,D06,Finance and Admin,A200,Travel,195.34,expense,,Travel - Finance and Admin
+P25-00660,2025-06-22,2025-06-01,D01,Sales,A300,Software subscriptions,720.95,expense,,Software subscriptions - Sales
+P25-00661,2025-06-22,2025-06-01,D01,Sales,A300,Software subscriptions,1444.02,expense,,Software subscriptions - Sales
+P25-00662,2025-06-22,2025-06-01,D02,Marketing,A200,Travel,488.33,expense,,Travel - Marketing
+P25-00663,2025-06-22,2025-06-01,D03,Operations,A200,Travel,404.75,expense,,Travel - Operations
+P25-00664,2025-06-22,2025-06-01,D04,Technology,A500,Professional services,2252.78,expense,,Professional services - Technology
+P25-00665,2025-06-23,2025-06-01,D02,Marketing,A300,Software subscriptions,766.39,expense,,Software subscriptions - Marketing
+P25-00666,2025-06-23,2025-06-01,D02,Marketing,A400,Facilities,566.36,expense,,Facilities - Marketing
+P25-00667,2025-06-23,2025-06-01,D05,People,A500,Professional services,895.60,expense,,Professional services - People
+P25-00668,2025-06-25,2025-06-01,D01,Sales,A200,Travel,2431.46,expense,,Travel - Sales
+P25-00669,2025-06-25,2025-06-01,D02,Marketing,A400,Facilities,1119.35,expense,,Facilities - Marketing
+P25-00670,2025-06-26,2025-06-01,D01,Sales,A200,Travel,1378.14,expense,,Travel - Sales
+P25-00671,2025-06-26,2025-06-01,D03,Operations,A300,Software subscriptions,680.28,expense,,Software subscriptions - Operations
+P25-00672,2025-06-26,2025-06-01,D05,People,A200,Travel,559.58,expense,,Travel - People
+P25-00673,2025-06-26,2025-06-01,D05,People,A500,Professional services,789.96,expense,,Professional services - People
+P25-00674,2025-06-26,2025-06-01,D06,Finance and Admin,A400,Facilities,532.97,expense,,Facilities - Finance and Admin
+P25-00675,2025-06-26,2025-06-01,D06,Finance and Admin,A600,Training,535.06,expense,,Training - Finance and Admin
+P25-00676,2025-06-27,2025-06-01,D04,Technology,A600,Training,593.53,expense,,Training - Technology
+P25-00677,2025-06-27,2025-06-01,D05,People,A400,Facilities,2171.84,expense,,Facilities - People
+P25-00678,2025-06-28,2025-06-01,D01,Sales,A500,Professional services,772.14,expense,,Professional services - Sales
+P25-00679,2025-06-28,2025-06-01,D02,Marketing,A400,Facilities,918.13,expense,,Facilities - Marketing
+P25-00680,2025-06-28,2025-06-01,D06,Finance and Admin,A500,Professional services,1548.87,expense,,Professional services - Finance and Admin
+P25-00681,2025-06-29,2025-06-01,D01,Sales,A600,Training,406.16,expense,,Training - Sales
+P25-00682,2025-06-29,2025-06-01,D06,Finance and Admin,A200,Travel,202.14,expense,,Travel - Finance and Admin
+P25-00683,2025-06-29,2025-06-01,D06,Finance and Admin,A500,Professional services,2452.52,expense,,Professional services - Finance and Admin
+P25-00684,2025-06-30,2025-06-01,D01,Sales,A100,Salaries and wages,32632.83,expense,,Salaries and wages - Sales
+P25-00685,2025-06-30,2025-06-01,D01,Sales,A400,Facilities,1140.80,expense,,Facilities - Sales
+P25-00686,2025-06-30,2025-06-01,D02,Marketing,A100,Salaries and wages,8330.57,expense,,Salaries and wages - Marketing
+P25-00687,2025-06-30,2025-06-01,D03,Operations,A100,Salaries and wages,59178.75,expense,,Salaries and wages - Operations
+P25-00688,2025-06-30,2025-06-01,D04,Technology,A100,Salaries and wages,27256.97,expense,,Salaries and wages - Technology
+P25-00689,2025-06-30,2025-06-01,D05,People,A100,Salaries and wages,18626.04,expense,,Salaries and wages - People
+P25-00690,2025-06-30,2025-06-01,D06,Finance and Admin,A100,Salaries and wages,21906.80,expense,,Salaries and wages - Finance and Admin
+P25-00691,2025-07-01,2025-07-01,D05,People,A200,Travel,109.86,expense,,Travel - People
+P25-00692,2025-07-02,2025-07-01,D01,Sales,A300,Software subscriptions,168.32,expense,,Software subscriptions - Sales
+P25-00693,2025-07-02,2025-07-01,D02,Marketing,A600,Training,149.35,expense,,Training - Marketing
+P25-00694,2025-07-02,2025-07-01,D04,Technology,A500,Professional services,116.48,expense,,Professional services - Technology
+P25-00695,2025-07-02,2025-07-01,D06,Finance and Admin,A200,Travel,49.00,expense,,Travel - Finance and Admin
+P25-00696,2025-07-03,2025-07-01,D06,Finance and Admin,A600,Training,893.67,expense,,Training - Finance and Admin
+P25-00697,2025-07-04,2025-07-01,D01,Sales,A400,Facilities,1150.86,expense,,Facilities - Sales
+P25-00698,2025-07-04,2025-07-01,D02,Marketing,A600,Training,86.49,expense,,Training - Marketing
+P25-00699,2025-07-04,2025-07-01,D05,People,A300,Software subscriptions,403.16,expense,,Software subscriptions - People
+P25-00700,2025-07-04,2025-07-01,D05,People,A300,Software subscriptions,593.17,expense,,Software subscriptions - People
+P25-00701,2025-07-05,2025-07-01,D02,Marketing,A600,Training,350.45,expense,,Training - Marketing
+P25-00702,2025-07-05,2025-07-01,D03,Operations,A500,Professional services,4183.31,expense,,Professional services - Operations
+P25-00703,2025-07-05,2025-07-01,D05,People,A300,Software subscriptions,639.55,expense,,Software subscriptions - People
+P25-00704,2025-07-06,2025-07-01,D04,Technology,A600,Training,350.60,expense,,Training - Technology
+P25-00705,2025-07-06,2025-07-01,D04,Technology,A700,Cloud hosting,885.78,expense,,Cloud hosting - Technology
+P25-00706,2025-07-07,2025-07-01,D03,Operations,A300,Software subscriptions,1278.65,expense,,Software subscriptions - Operations
+P25-00707,2025-07-07,2025-07-01,D05,People,A300,Software subscriptions,264.11,expense,,Software subscriptions - People
+P25-00708,2025-07-07,2025-07-01,D06,Finance and Admin,A300,Software subscriptions,690.38,expense,,Software subscriptions - Finance and Admin
+P25-00709,2025-07-08,2025-07-01,D02,Marketing,A300,Software subscriptions,2836.86,expense,,Software subscriptions - Marketing
+P25-00710,2025-07-08,2025-07-01,D02,Marketing,A400,Facilities,924.46,expense,,Facilities - Marketing
+P25-00711,2025-07-08,2025-07-01,D02,Marketing,A500,Professional services,779.87,expense,,Professional services - Marketing
+P25-00712,2025-07-08,2025-07-01,D04,Technology,A300,Software subscriptions,5631.66,expense,,Software subscriptions - Technology
+P25-00713,2025-07-08,2025-07-01,D04,Technology,A500,Professional services,1219.29,expense,,Professional services - Technology
+P25-00714,2025-07-09,2025-07-01,D01,Sales,A300,Software subscriptions,810.12,expense,,Software subscriptions - Sales
+P25-00715,2025-07-09,2025-07-01,D03,Operations,A600,Training,1835.32,expense,,Training - Operations
+P25-00716,2025-07-09,2025-07-01,D04,Technology,A200,Travel,297.28,expense,,Travel - Technology
+P25-00717,2025-07-09,2025-07-01,D04,Technology,A300,Software subscriptions,5818.63,expense,,Software subscriptions - Technology
+P25-00718,2025-07-09,2025-07-01,D04,Technology,A600,Training,907.61,expense,,Training - Technology
+P25-00719,2025-07-09,2025-07-01,D05,People,A600,Training,483.64,expense,,Training - People
+P25-00720,2025-07-10,2025-07-01,D01,Sales,A200,Travel,690.22,expense,,Travel - Sales
+P25-00721,2025-07-10,2025-07-01,D01,Sales,A500,Professional services,568.96,expense,,Professional services - Sales
+P25-00722,2025-07-10,2025-07-01,D01,Sales,A500,Professional services,656.83,expense,,Professional services - Sales
+P25-00723,2025-07-10,2025-07-01,D04,Technology,A200,Travel,577.70,expense,,Travel - Technology
+P25-00724,2025-07-10,2025-07-01,D04,Technology,A500,Professional services,541.91,expense,,Professional services - Technology
+P25-00725,2025-07-11,2025-07-01,D01,Sales,A400,Facilities,1584.95,expense,,Facilities - Sales
+P25-00726,2025-07-11,2025-07-01,D02,Marketing,A300,Software subscriptions,3195.92,expense,,Software subscriptions - Marketing
+P25-00727,2025-07-11,2025-07-01,D03,Operations,A400,Facilities,5179.02,expense,,Facilities - Operations
+P25-00728,2025-07-11,2025-07-01,D04,Technology,A500,Professional services,1995.69,expense,,Professional services - Technology
+P25-00729,2025-07-11,2025-07-01,D05,People,A500,Professional services,3234.83,expense,,Professional services - People
+P25-00730,2025-07-11,2025-07-01,D06,Finance and Admin,A300,Software subscriptions,2260.82,expense,,Software subscriptions - Finance and Admin
+P25-00731,2025-07-12,2025-07-01,D01,Sales,A300,Software subscriptions,515.51,expense,,Software subscriptions - Sales
+P25-00732,2025-07-12,2025-07-01,D01,Sales,A300,Software subscriptions,924.96,expense,,Software subscriptions - Sales
+P25-00733,2025-07-12,2025-07-01,D02,Marketing,A600,Training,242.55,expense,,Training - Marketing
+P25-00734,2025-07-12,2025-07-01,D05,People,A600,Training,201.68,expense,,Training - People
+P25-00735,2025-07-12,2025-07-01,D06,Finance and Admin,A200,Travel,54.34,expense,,Travel - Finance and Admin
+P25-00736,2025-07-13,2025-07-01,D01,Sales,A400,Facilities,401.94,expense,,Facilities - Sales
+P25-00737,2025-07-13,2025-07-01,D06,Finance and Admin,A400,Facilities,522.06,expense,,Facilities - Finance and Admin
+P25-00738,2025-07-13,2025-07-01,D06,Finance and Admin,A400,Facilities,647.18,expense,,Facilities - Finance and Admin
+P25-00739,2025-07-13,2025-07-01,D06,Finance and Admin,A500,Professional services,531.49,expense,,Professional services - Finance and Admin
+P25-00740,2025-07-14,2025-07-01,D06,Finance and Admin,A500,Professional services,1239.36,expense,,Professional services - Finance and Admin
+P25-00741,2025-07-15,2025-07-01,D01,Sales,A100,Salaries and wages,32180.88,expense,,Salaries and wages - Sales
+P25-00742,2025-07-15,2025-07-01,D02,Marketing,A100,Salaries and wages,26873.71,expense,,Salaries and wages - Marketing
+P25-00743,2025-07-15,2025-07-01,D02,Marketing,A600,Training,170.69,expense,,Training - Marketing
+P25-00744,2025-07-15,2025-07-01,D03,Operations,A100,Salaries and wages,70778.19,expense,,Salaries and wages - Operations
+P25-00745,2025-07-15,2025-07-01,D04,Technology,A100,Salaries and wages,42277.93,expense,,Salaries and wages - Technology
+P25-00746,2025-07-15,2025-07-01,D04,Technology,A300,Software subscriptions,4280.49,expense,,Software subscriptions - Technology
+P25-00747,2025-07-15,2025-07-01,D05,People,A100,Salaries and wages,16938.44,expense,,Salaries and wages - People
+P25-00748,2025-07-15,2025-07-01,D06,Finance and Admin,A100,Salaries and wages,15633.33,expense,,Salaries and wages - Finance and Admin
+P25-00749,2025-07-16,2025-07-01,D01,Sales,A300,Software subscriptions,322.40,expense,,Software subscriptions - Sales
+P25-00750,2025-07-16,2025-07-01,D02,Marketing,A600,Training,323.94,expense,,Training - Marketing
+P25-00751,2025-07-17,2025-07-01,D01,Sales,A200,Travel,1004.89,expense,,Travel - Sales
+P25-00752,2025-07-17,2025-07-01,D01,Sales,A600,Training,1087.09,expense,,Training - Sales
+P25-00753,2025-07-17,2025-07-01,D04,Technology,A600,Training,140.05,expense,,Training - Technology
+P25-00754,2025-07-17,2025-07-01,D04,Technology,A700,Cloud hosting,1497.79,expense,,Cloud hosting - Technology
+P25-00755,2025-07-18,2025-07-01,D01,Sales,A200,Travel,665.07,expense,,Travel - Sales
+P25-00756,2025-07-18,2025-07-01,D01,Sales,A400,Facilities,507.94,expense,,Facilities - Sales
+P25-00757,2025-07-18,2025-07-01,D03,Operations,A200,Travel,377.32,expense,,Travel - Operations
+P25-00758,2025-07-18,2025-07-01,D03,Operations,A400,Facilities,3428.46,expense,,Facilities - Operations
+P25-00759,2025-07-18,2025-07-01,D04,Technology,A500,Professional services,2495.95,expense,,Professional services - Technology
+P25-00760,2025-07-18,2025-07-01,D04,Technology,A600,Training,929.98,expense,,Training - Technology
+P25-00761,2025-07-18,2025-07-01,D05,People,A600,Training,2133.21,expense,,Training - People
+P25-00762,2025-07-19,2025-07-01,D02,Marketing,A500,Professional services,80.21,expense,,Professional services - Marketing
+P25-00763,2025-07-19,2025-07-01,D05,People,A600,Training,856.35,expense,,Training - People
+P25-00764,2025-07-19,2025-07-01,D06,Finance and Admin,A400,Facilities,412.75,expense,,Facilities - Finance and Admin
+P25-00765,2025-07-20,2025-07-01,D01,Sales,A300,Software subscriptions,601.87,expense,,Software subscriptions - Sales
+P25-00766,2025-07-21,2025-07-01,D03,Operations,A300,Software subscriptions,1715.26,expense,,Software subscriptions - Operations
+P25-00767,2025-07-21,2025-07-01,D05,People,A200,Travel,38.31,expense,,Travel - People
+P25-00768,2025-07-21,2025-07-01,D06,Finance and Admin,A200,Travel,140.10,expense,,Travel - Finance and Admin
+P25-00769,2025-07-21,2025-07-01,D06,Finance and Admin,A400,Facilities,752.59,expense,,Facilities - Finance and Admin
+P25-00770,2025-07-22,2025-07-01,D02,Marketing,A400,Facilities,1253.64,expense,,Facilities - Marketing
+P25-00771,2025-07-22,2025-07-01,D04,Technology,A400,Facilities,6497.89,expense,,Facilities - Technology
+P25-00772,2025-07-23,2025-07-01,D02,Marketing,A500,Professional services,1437.24,expense,,Professional services - Marketing
+P25-00773,2025-07-23,2025-07-01,D05,People,A400,Facilities,2951.24,expense,,Facilities - People
+P25-00774,2025-07-23,2025-07-01,D06,Finance and Admin,A200,Travel,77.51,expense,,Travel - Finance and Admin
+P25-00775,2025-07-23,2025-07-01,D06,Finance and Admin,A200,Travel,187.30,expense,,Travel - Finance and Admin
+P25-00776,2025-07-24,2025-07-01,D01,Sales,A200,Travel,2660.52,expense,,Travel - Sales
+P25-00777,2025-07-24,2025-07-01,D06,Finance and Admin,A500,Professional services,4536.84,expense,,Professional services - Finance and Admin
+P25-00778,2025-07-25,2025-07-01,D01,Sales,A500,Professional services,459.04,expense,,Professional services - Sales
+P25-00779,2025-07-25,2025-07-01,D02,Marketing,A200,Travel,419.25,expense,,Travel - Marketing
+P25-00780,2025-07-25,2025-07-01,D05,People,A600,Training,678.32,expense,,Training - People
+P25-00781,2025-07-26,2025-07-01,D01,Sales,A500,Professional services,261.38,expense,,Professional services - Sales
+P25-00782,2025-07-26,2025-07-01,D05,People,A300,Software subscriptions,348.89,expense,,Software subscriptions - People
+P25-00783,2025-07-27,2025-07-01,D01,Sales,A400,Facilities,1764.15,expense,,Facilities - Sales
+P25-00784,2025-07-27,2025-07-01,D02,Marketing,A200,Travel,2057.91,expense,,Travel - Marketing
+P25-00785,2025-07-27,2025-07-01,D02,Marketing,A500,Professional services,1097.85,expense,,Professional services - Marketing
+P25-00786,2025-07-27,2025-07-01,D03,Operations,A400,Facilities,4624.58,expense,,Facilities - Operations
+P25-00787,2025-07-28,2025-07-01,D04,Technology,A300,Software subscriptions,3409.79,expense,,Software subscriptions - Technology
+P25-00788,2025-07-28,2025-07-01,D05,People,A200,Travel,267.93,expense,,Travel - People
+P25-00789,2025-07-28,2025-07-01,D06,Finance and Admin,A400,Facilities,412.22,expense,,Facilities - Finance and Admin
+P25-00790,2025-07-28,2025-07-01,D06,Finance and Admin,A400,Facilities,666.93,expense,,Facilities - Finance and Admin
+P25-00791,2025-07-29,2025-07-01,D05,People,A200,Travel,211.70,expense,,Travel - People
+P25-00792,2025-07-30,2025-07-01,D01,Sales,A200,Travel,536.53,expense,,Travel - Sales
+P25-00793,2025-07-30,2025-07-01,D02,Marketing,A400,Facilities,1210.87,expense,,Facilities - Marketing
+P25-00794,2025-07-30,2025-07-01,D03,Operations,A200,Travel,1526.98,expense,,Travel - Operations
+P25-00795,2025-07-30,2025-07-01,D04,Technology,A500,Professional services,471.91,expense,,Professional services - Technology
+P25-00796,2025-07-31,2025-07-01,D01,Sales,A100,Salaries and wages,54290.32,expense,,Salaries and wages - Sales
+P25-00797,2025-07-31,2025-07-01,D01,Sales,A600,Training,591.76,expense,,Training - Sales
+P25-00798,2025-07-31,2025-07-01,D02,Marketing,A100,Salaries and wages,10824.64,expense,,Salaries and wages - Marketing
+P25-00799,2025-07-31,2025-07-01,D02,Marketing,A500,Professional services,1894.25,expense,,Professional services - Marketing
+P25-00800,2025-07-31,2025-07-01,D03,Operations,A100,Salaries and wages,56624.99,expense,,Salaries and wages - Operations
+P25-00801,2025-07-31,2025-07-01,D03,Operations,A400,Facilities,1243.94,expense,,Facilities - Operations
+P25-00802,2025-07-31,2025-07-01,D03,Operations,A400,Facilities,6599.42,expense,,Facilities - Operations
+P25-00803,2025-07-31,2025-07-01,D04,Technology,A100,Salaries and wages,29243.05,expense,,Salaries and wages - Technology
+P25-00804,2025-07-31,2025-07-01,D05,People,A100,Salaries and wages,9187.80,expense,,Salaries and wages - People
+P25-00805,2025-07-31,2025-07-01,D06,Finance and Admin,A100,Salaries and wages,16247.63,expense,,Salaries and wages - Finance and Admin
+P25-00806,2025-07-31,2025-07-01,D06,Finance and Admin,A500,Professional services,1661.10,expense,,Professional services - Finance and Admin
+P25-00807,2025-08-01,2025-08-01,D02,Marketing,A200,Travel,773.01,expense,,Travel - Marketing
+P25-00808,2025-08-01,2025-08-01,D03,Operations,A600,Training,1127.46,expense,,Training - Operations
+P25-00809,2025-08-01,2025-08-01,D04,Technology,A500,Professional services,898.55,expense,,Professional services - Technology
+P25-00810,2025-08-01,2025-08-01,D05,People,A200,Travel,135.72,expense,,Travel - People
+P25-00811,2025-08-01,2025-08-01,D05,People,A400,Facilities,597.09,expense,,Facilities - People
+P25-00812,2025-08-01,2025-08-01,D05,People,A500,Professional services,533.93,expense,,Professional services - People
+P25-00813,2025-08-02,2025-08-01,D01,Sales,A600,Training,568.69,expense,,Training - Sales
+P25-00814,2025-08-02,2025-08-01,D05,People,A200,Travel,166.40,expense,,Travel - People
+P25-00815,2025-08-02,2025-08-01,D05,People,A400,Facilities,239.69,expense,,Facilities - People
+P25-00816,2025-08-02,2025-08-01,D05,People,A500,Professional services,515.58,expense,,Professional services - People
+P25-00817,2025-08-02,2025-08-01,D05,People,A600,Training,4200.23,expense,,Training - People
+P25-00818,2025-08-03,2025-08-01,D01,Sales,A300,Software subscriptions,1902.05,expense,,Software subscriptions - Sales
+P25-00819,2025-08-03,2025-08-01,D02,Marketing,A200,Travel,507.98,expense,,Travel - Marketing
+P25-00820,2025-08-03,2025-08-01,D03,Operations,A200,Travel,185.03,expense,,Travel - Operations
+P25-00821,2025-08-03,2025-08-01,D05,People,A300,Software subscriptions,2008.87,expense,,Software subscriptions - People
+P25-00822,2025-08-04,2025-08-01,D01,Sales,A400,Facilities,4211.97,expense,,Facilities - Sales
+P25-00823,2025-08-04,2025-08-01,D01,Sales,A500,Professional services,495.16,expense,,Professional services - Sales
+P25-00824,2025-08-04,2025-08-01,D02,Marketing,A400,Facilities,520.56,expense,,Facilities - Marketing
+P25-00825,2025-08-04,2025-08-01,D03,Operations,A300,Software subscriptions,220.43,expense,,Software subscriptions - Operations
+P25-00826,2025-08-04,2025-08-01,D06,Finance and Admin,A600,Training,348.64,expense,,Training - Finance and Admin
+P25-00827,2025-08-05,2025-08-01,D02,Marketing,A400,Facilities,268.83,expense,,Facilities - Marketing
+P25-00828,2025-08-05,2025-08-01,D06,Finance and Admin,A500,Professional services,2223.90,expense,,Professional services - Finance and Admin
+P25-00829,2025-08-06,2025-08-01,D02,Marketing,A500,Professional services,1480.44,expense,,Professional services - Marketing
+P25-00830,2025-08-06,2025-08-01,D03,Operations,A400,Facilities,4827.86,expense,,Facilities - Operations
+P25-00831,2025-08-06,2025-08-01,D06,Finance and Admin,A200,Travel,527.99,expense,,Travel - Finance and Admin
+P25-00832,2025-08-06,2025-08-01,D06,Finance and Admin,A600,Training,54.43,expense,,Training - Finance and Admin
+P25-00833,2025-08-07,2025-08-01,D01,Sales,A500,Professional services,285.48,expense,,Professional services - Sales
+P25-00834,2025-08-07,2025-08-01,D03,Operations,A400,Facilities,6453.68,expense,,Facilities - Operations
+P25-00835,2025-08-07,2025-08-01,D03,Operations,A500,Professional services,635.83,expense,,Professional services - Operations
+P25-00836,2025-08-07,2025-08-01,D03,Operations,A500,Professional services,714.23,expense,,Professional services - Operations
+P25-00837,2025-08-07,2025-08-01,D04,Technology,A300,Software subscriptions,2354.49,expense,,Software subscriptions - Technology
+P25-00838,2025-08-07,2025-08-01,D04,Technology,A500,Professional services,403.38,expense,,Professional services - Technology
+P25-00839,2025-08-07,2025-08-01,D04,Technology,A500,Professional services,1899.63,expense,,Professional services - Technology
+P25-00840,2025-08-08,2025-08-01,D02,Marketing,A400,Facilities,187.01,expense,,Facilities - Marketing
+P25-00841,2025-08-08,2025-08-01,D04,Technology,A300,Software subscriptions,3744.94,expense,,Software subscriptions - Technology
+P25-00842,2025-08-08,2025-08-01,D06,Finance and Admin,A600,Training,189.25,expense,,Training - Finance and Admin
+P25-00843,2025-08-09,2025-08-01,D03,Operations,A200,Travel,662.18,expense,,Travel - Operations
+P25-00844,2025-08-09,2025-08-01,D04,Technology,A200,Travel,65.35,expense,,Travel - Technology
+P25-00845,2025-08-09,2025-08-01,D05,People,A400,Facilities,1303.28,expense,,Facilities - People
+P25-00846,2025-08-10,2025-08-01,D01,Sales,A400,Facilities,1154.86,expense,,Facilities - Sales
+P25-00847,2025-08-10,2025-08-01,D06,Finance and Admin,A500,Professional services,1656.61,expense,,Professional services - Finance and Admin
+P25-00848,2025-08-11,2025-08-01,D03,Operations,A300,Software subscriptions,558.36,expense,,Software subscriptions - Operations
+P25-00849,2025-08-11,2025-08-01,D06,Finance and Admin,A300,Software subscriptions,2896.65,expense,,Software subscriptions - Finance and Admin
+P25-00850,2025-08-12,2025-08-01,D01,Sales,A500,Professional services,184.22,expense,,Professional services - Sales
+P25-00851,2025-08-12,2025-08-01,D03,Operations,A600,Training,794.66,expense,,Training - Operations
+P25-00852,2025-08-12,2025-08-01,D04,Technology,A700,Cloud hosting,901.62,expense,,Cloud hosting - Technology
+P25-00853,2025-08-12,2025-08-01,D05,People,A500,Professional services,708.67,expense,,Professional services - People
+P25-00854,2025-08-13,2025-08-01,D01,Sales,A500,Professional services,445.80,expense,,Professional services - Sales
+P25-00855,2025-08-14,2025-08-01,D01,Sales,A200,Travel,971.73,expense,,Travel - Sales
+P25-00856,2025-08-14,2025-08-01,D01,Sales,A200,Travel,2492.76,expense,,Travel - Sales
+P25-00857,2025-08-14,2025-08-01,D01,Sales,A500,Professional services,366.65,expense,,Professional services - Sales
+P25-00858,2025-08-14,2025-08-01,D02,Marketing,A500,Professional services,713.92,expense,,Professional services - Marketing
+P25-00859,2025-08-14,2025-08-01,D03,Operations,A200,Travel,260.83,expense,,Travel - Operations
+P25-00860,2025-08-14,2025-08-01,D06,Finance and Admin,A500,Professional services,2979.91,expense,,Professional services - Finance and Admin
+P25-00861,2025-08-15,2025-08-01,D01,Sales,A100,Salaries and wages,60174.42,expense,,Salaries and wages - Sales
+P25-00862,2025-08-15,2025-08-01,D01,Sales,A300,Software subscriptions,786.69,expense,,Software subscriptions - Sales
+P25-00863,2025-08-15,2025-08-01,D02,Marketing,A100,Salaries and wages,27939.16,expense,,Salaries and wages - Marketing
+P25-00864,2025-08-15,2025-08-01,D03,Operations,A100,Salaries and wages,110814.44,expense,,Salaries and wages - Operations
+P25-00865,2025-08-15,2025-08-01,D04,Technology,A100,Salaries and wages,36456.56,expense,,Salaries and wages - Technology
+P25-00866,2025-08-15,2025-08-01,D04,Technology,A600,Training,268.79,expense,,Training - Technology
+P25-00867,2025-08-15,2025-08-01,D05,People,A100,Salaries and wages,11713.25,expense,,Salaries and wages - People
+P25-00868,2025-08-15,2025-08-01,D06,Finance and Admin,A100,Salaries and wages,19424.19,expense,,Salaries and wages - Finance and Admin
+P25-00869,2025-08-16,2025-08-01,D02,Marketing,A400,Facilities,334.61,expense,,Facilities - Marketing
+P25-00870,2025-08-16,2025-08-01,D03,Operations,A200,Travel,271.42,expense,,Travel - Operations
+P25-00871,2025-08-16,2025-08-01,D04,Technology,A300,Software subscriptions,3804.86,expense,,Software subscriptions - Technology
+P25-00872,2025-08-16,2025-08-01,D04,Technology,A500,Professional services,1400.21,expense,,Professional services - Technology
+P25-00873,2025-08-16,2025-08-01,D04,Technology,A600,Training,494.70,expense,,Training - Technology
+P25-00874,2025-08-16,2025-08-01,D04,Technology,A600,Training,675.81,expense,,Training - Technology
+P25-00875,2025-08-17,2025-08-01,D02,Marketing,A400,Facilities,859.54,expense,,Facilities - Marketing
+P25-00876,2025-08-17,2025-08-01,D02,Marketing,A400,Facilities,1462.89,expense,,Facilities - Marketing
+P25-00877,2025-08-18,2025-08-01,D02,Marketing,A200,Travel,1099.27,expense,,Travel - Marketing
+P25-00878,2025-08-18,2025-08-01,D03,Operations,A500,Professional services,1786.04,expense,,Professional services - Operations
+P25-00879,2025-08-18,2025-08-01,D05,People,A200,Travel,122.04,expense,,Travel - People
+P25-00880,2025-08-19,2025-08-01,D01,Sales,A500,Professional services,248.67,expense,,Professional services - Sales
+P25-00881,2025-08-19,2025-08-01,D02,Marketing,A300,Software subscriptions,6008.62,expense,,Software subscriptions - Marketing
+P25-00882,2025-08-19,2025-08-01,D04,Technology,A200,Travel,207.20,expense,,Travel - Technology
+P25-00883,2025-08-19,2025-08-01,D04,Technology,A300,Software subscriptions,9125.93,expense,,Software subscriptions - Technology
+P25-00884,2025-08-20,2025-08-01,D01,Sales,A600,Training,328.64,expense,,Training - Sales
+P25-00885,2025-08-20,2025-08-01,D04,Technology,A400,Facilities,5945.23,expense,,Facilities - Technology
+P25-00886,2025-08-20,2025-08-01,D04,Technology,A500,Professional services,2125.75,expense,,Professional services - Technology
+P25-00887,2025-08-21,2025-08-01,D02,Marketing,A500,Professional services,635.15,expense,,Professional services - Marketing
+P25-00888,2025-08-21,2025-08-01,D02,Marketing,A500,Professional services,770.74,expense,,Professional services - Marketing
+P25-00889,2025-08-21,2025-08-01,D05,People,A500,Professional services,569.60,expense,,Professional services - People
+P25-00890,2025-08-21,2025-08-01,D06,Finance and Admin,A600,Training,60.14,expense,,Training - Finance and Admin
+P25-00891,2025-08-21,2025-08-01,D06,Finance and Admin,A600,Training,213.30,expense,,Training - Finance and Admin
+P25-00892,2025-08-22,2025-08-01,D04,Technology,A200,Travel,144.20,expense,,Travel - Technology
+P25-00893,2025-08-23,2025-08-01,D02,Marketing,A500,Professional services,858.19,expense,,Professional services - Marketing
+P25-00894,2025-08-23,2025-08-01,D03,Operations,A400,Facilities,2117.73,expense,,Facilities - Operations
+P25-00895,2025-08-23,2025-08-01,D05,People,A200,Travel,254.22,expense,,Travel - People
+P25-00896,2025-08-24,2025-08-01,D01,Sales,A600,Training,150.20,expense,,Training - Sales
+P25-00897,2025-08-24,2025-08-01,D03,Operations,A300,Software subscriptions,395.33,expense,,Software subscriptions - Operations
+P25-00898,2025-08-24,2025-08-01,D03,Operations,A300,Software subscriptions,789.68,expense,,Software subscriptions - Operations
+P25-00899,2025-08-24,2025-08-01,D03,Operations,A400,Facilities,6195.46,expense,,Facilities - Operations
+P25-00900,2025-08-24,2025-08-01,D04,Technology,A200,Travel,241.43,expense,,Travel - Technology
+P25-00901,2025-08-25,2025-08-01,D01,Sales,A600,Training,358.86,expense,,Training - Sales
+P25-00902,2025-08-25,2025-08-01,D04,Technology,A600,Training,450.48,expense,,Training - Technology
+P25-00903,2025-08-26,2025-08-01,D01,Sales,A300,Software subscriptions,688.82,expense,,Software subscriptions - Sales
+P25-00904,2025-08-26,2025-08-01,D04,Technology,A200,Travel,236.57,expense,,Travel - Technology
+P25-00905,2025-08-26,2025-08-01,D04,Technology,A700,Cloud hosting,4010.04,expense,,Cloud hosting - Technology
+P25-00906,2025-08-26,2025-08-01,D05,People,A200,Travel,34.48,expense,,Travel - People
+P25-00907,2025-08-26,2025-08-01,D05,People,A500,Professional services,992.90,expense,,Professional services - People
+P25-00908,2025-08-28,2025-08-01,D01,Sales,A200,Travel,2204.06,expense,,Travel - Sales
+P25-00909,2025-08-28,2025-08-01,D02,Marketing,A500,Professional services,808.15,expense,,Professional services - Marketing
+P25-00910,2025-08-28,2025-08-01,D05,People,A400,Facilities,670.49,expense,,Facilities - People
+P25-00911,2025-08-29,2025-08-01,D01,Sales,A300,Software subscriptions,545.97,expense,,Software subscriptions - Sales
+P25-00912,2025-08-29,2025-08-01,D03,Operations,A300,Software subscriptions,322.46,expense,,Software subscriptions - Operations
+P25-00913,2025-08-29,2025-08-01,D06,Finance and Admin,A400,Facilities,3307.55,expense,,Facilities - Finance and Admin
+P25-00914,2025-08-30,2025-08-01,D03,Operations,A300,Software subscriptions,303.45,expense,,Software subscriptions - Operations
+P25-00915,2025-08-30,2025-08-01,D04,Technology,A600,Training,550.19,expense,,Training - Technology
+P25-00916,2025-08-30,2025-08-01,D06,Finance and Admin,A500,Professional services,894.08,expense,,Professional services - Finance and Admin
+P25-00917,2025-08-31,2025-08-01,D01,Sales,A100,Salaries and wages,25715.83,expense,,Salaries and wages - Sales
+P25-00918,2025-08-31,2025-08-01,D02,Marketing,A100,Salaries and wages,10880.14,expense,,Salaries and wages - Marketing
+P25-00919,2025-08-31,2025-08-01,D03,Operations,A100,Salaries and wages,16699.97,expense,,Salaries and wages - Operations
+P25-00920,2025-08-31,2025-08-01,D03,Operations,A200,Travel,547.37,expense,,Travel - Operations
+P25-00921,2025-08-31,2025-08-01,D03,Operations,A500,Professional services,1062.42,expense,,Professional services - Operations
+P25-00922,2025-08-31,2025-08-01,D04,Technology,A100,Salaries and wages,29178.30,expense,,Salaries and wages - Technology
+P25-00923,2025-08-31,2025-08-01,D05,People,A100,Salaries and wages,14788.37,expense,,Salaries and wages - People
+P25-00924,2025-08-31,2025-08-01,D06,Finance and Admin,A100,Salaries and wages,12120.21,expense,,Salaries and wages - Finance and Admin
+P25-00925,2025-09-01,2025-09-01,D01,Sales,A400,Facilities,811.43,expense,,Facilities - Sales
+P25-00926,2025-09-01,2025-09-01,D01,Sales,A400,Facilities,1292.58,expense,,Facilities - Sales
+P25-00927,2025-09-01,2025-09-01,D01,Sales,A500,Professional services,281.08,expense,,Professional services - Sales
+P25-00928,2025-09-01,2025-09-01,D01,Sales,A500,Professional services,666.13,expense,,Professional services - Sales
+P25-00929,2025-09-01,2025-09-01,D03,Operations,A200,Travel,655.61,expense,,Travel - Operations
+P25-00930,2025-09-01,2025-09-01,D03,Operations,A600,Training,273.54,expense,,Training - Operations
+P25-00931,2025-09-01,2025-09-01,D04,Technology,A500,Professional services,2832.69,expense,,Professional services - Technology
+P25-00932,2025-09-01,2025-09-01,D06,Finance and Admin,A300,Software subscriptions,1182.62,expense,,Software subscriptions - Finance and Admin
+P25-00933,2025-09-01,2025-09-01,D06,Finance and Admin,A600,Training,490.66,expense,,Training - Finance and Admin
+P25-00934,2025-09-02,2025-09-01,D02,Marketing,A300,Software subscriptions,2219.42,expense,,Software subscriptions - Marketing
+P25-00935,2025-09-02,2025-09-01,D06,Finance and Admin,A600,Training,157.23,expense,,Training - Finance and Admin
+P25-00936,2025-09-03,2025-09-01,D04,Technology,A200,Travel,297.48,expense,,Travel - Technology
+P25-00937,2025-09-03,2025-09-01,D04,Technology,A400,Facilities,978.89,expense,,Facilities - Technology
+P25-00938,2025-09-03,2025-09-01,D05,People,A500,Professional services,482.04,expense,,Professional services - People
+P25-00939,2025-09-04,2025-09-01,D01,Sales,A500,Professional services,444.68,expense,,Professional services - Sales
+P25-00940,2025-09-04,2025-09-01,D03,Operations,A300,Software subscriptions,754.36,expense,,Software subscriptions - Operations
+P25-00941,2025-09-05,2025-09-01,D01,Sales,A500,Professional services,388.77,expense,,Professional services - Sales
+P25-00942,2025-09-05,2025-09-01,D03,Operations,A300,Software subscriptions,581.75,expense,,Software subscriptions - Operations
+P25-00943,2025-09-05,2025-09-01,D04,Technology,A200,Travel,306.13,expense,,Travel - Technology
+P25-00944,2025-09-06,2025-09-01,D04,Technology,A200,Travel,138.86,expense,,Travel - Technology
+P25-00945,2025-09-06,2025-09-01,D04,Technology,A300,Software subscriptions,3178.10,expense,,Software subscriptions - Technology
+P25-00946,2025-09-06,2025-09-01,D05,People,A300,Software subscriptions,2174.99,expense,,Software subscriptions - People
+P25-00947,2025-09-06,2025-09-01,D06,Finance and Admin,A600,Training,83.33,expense,,Training - Finance and Admin
+P25-00948,2025-09-07,2025-09-01,D01,Sales,A300,Software subscriptions,494.29,expense,,Software subscriptions - Sales
+P25-00949,2025-09-07,2025-09-01,D02,Marketing,A500,Professional services,1144.94,expense,,Professional services - Marketing
+P25-00950,2025-09-07,2025-09-01,D03,Operations,A300,Software subscriptions,528.65,expense,,Software subscriptions - Operations
+P25-00951,2025-09-07,2025-09-01,D03,Operations,A500,Professional services,799.21,expense,,Professional services - Operations
+P25-00952,2025-09-07,2025-09-01,D04,Technology,A200,Travel,730.65,expense,,Travel - Technology
+P25-00953,2025-09-07,2025-09-01,D05,People,A500,Professional services,246.58,expense,,Professional services - People
+P25-00954,2025-09-07,2025-09-01,D05,People,A600,Training,1348.28,expense,,Training - People
+P25-00955,2025-09-08,2025-09-01,D01,Sales,A400,Facilities,1263.72,expense,,Facilities - Sales
+P25-00956,2025-09-08,2025-09-01,D03,Operations,A600,Training,79.99,expense,,Training - Operations
+P25-00957,2025-09-08,2025-09-01,D04,Technology,A700,Cloud hosting,980.55,expense,,Cloud hosting - Technology
+P25-00958,2025-09-09,2025-09-01,D01,Sales,A200,Travel,1413.91,expense,,Travel - Sales
+P25-00959,2025-09-09,2025-09-01,D03,Operations,A600,Training,783.09,expense,,Training - Operations
+P25-00960,2025-09-09,2025-09-01,D06,Finance and Admin,A200,Travel,966.97,expense,,Travel - Finance and Admin
+P25-00961,2025-09-10,2025-09-01,D01,Sales,A300,Software subscriptions,1117.22,expense,,Software subscriptions - Sales
+P25-00962,2025-09-10,2025-09-01,D01,Sales,A600,Training,1639.00,expense,,Training - Sales
+P25-00963,2025-09-10,2025-09-01,D02,Marketing,A500,Professional services,1200.63,expense,,Professional services - Marketing
+P25-00964,2025-09-10,2025-09-01,D03,Operations,A400,Facilities,4336.65,expense,,Facilities - Operations
+P25-00965,2025-09-10,2025-09-01,D03,Operations,A600,Training,107.12,expense,,Training - Operations
+P25-00966,2025-09-11,2025-09-01,D06,Finance and Admin,A400,Facilities,265.01,expense,,Facilities - Finance and Admin
+P25-00967,2025-09-12,2025-09-01,D04,Technology,A300,Software subscriptions,2881.15,expense,,Software subscriptions - Technology
+P25-00968,2025-09-12,2025-09-01,D05,People,A500,Professional services,347.89,expense,,Professional services - People
+P25-00969,2025-09-12,2025-09-01,D06,Finance and Admin,A600,Training,223.97,expense,,Training - Finance and Admin
+P25-00970,2025-09-13,2025-09-01,D01,Sales,A200,Travel,1846.58,expense,,Travel - Sales
+P25-00971,2025-09-13,2025-09-01,D01,Sales,A300,Software subscriptions,713.74,expense,,Software subscriptions - Sales
+P25-00972,2025-09-13,2025-09-01,D03,Operations,A200,Travel,1310.99,expense,,Travel - Operations
+P25-00973,2025-09-13,2025-09-01,D04,Technology,A600,Training,631.14,expense,,Training - Technology
+P25-00974,2025-09-14,2025-09-01,D01,Sales,A200,Travel,5122.05,expense,,Travel - Sales
+P25-00975,2025-09-14,2025-09-01,D03,Operations,A200,Travel,1633.85,expense,,Travel - Operations
+P25-00976,2025-09-14,2025-09-01,D04,Technology,A300,Software subscriptions,3994.27,expense,,Software subscriptions - Technology
+P25-00977,2025-09-14,2025-09-01,D06,Finance and Admin,A400,Facilities,949.46,expense,,Facilities - Finance and Admin
+P25-00978,2025-09-15,2025-09-01,D01,Sales,A100,Salaries and wages,54271.94,expense,,Salaries and wages - Sales
+P25-00979,2025-09-15,2025-09-01,D01,Sales,A400,Facilities,1079.11,expense,,Facilities - Sales
+P25-00980,2025-09-15,2025-09-01,D02,Marketing,A100,Salaries and wages,17322.90,expense,,Salaries and wages - Marketing
+P25-00981,2025-09-15,2025-09-01,D02,Marketing,A400,Facilities,2633.53,expense,,Facilities - Marketing
+P25-00982,2025-09-15,2025-09-01,D03,Operations,A100,Salaries and wages,106213.94,expense,,Salaries and wages - Operations
+P25-00983,2025-09-15,2025-09-01,D03,Operations,A500,Professional services,159.90,expense,,Professional services - Operations
+P25-00984,2025-09-15,2025-09-01,D03,Operations,A600,Training,318.77,expense,,Training - Operations
+P25-00985,2025-09-15,2025-09-01,D04,Technology,A100,Salaries and wages,22751.98,expense,,Salaries and wages - Technology
+P25-00986,2025-09-15,2025-09-01,D05,People,A100,Salaries and wages,15813.65,expense,,Salaries and wages - People
+P25-00987,2025-09-15,2025-09-01,D06,Finance and Admin,A100,Salaries and wages,13241.54,expense,,Salaries and wages - Finance and Admin
+P25-00988,2025-09-16,2025-09-01,D01,Sales,A200,Travel,1656.90,expense,,Travel - Sales
+P25-00989,2025-09-16,2025-09-01,D01,Sales,A200,Travel,1901.01,expense,,Travel - Sales
+P25-00990,2025-09-16,2025-09-01,D02,Marketing,A300,Software subscriptions,3884.37,expense,,Software subscriptions - Marketing
+P25-00991,2025-09-16,2025-09-01,D04,Technology,A300,Software subscriptions,1207.14,expense,,Software subscriptions - Technology
+P25-00992,2025-09-16,2025-09-01,D04,Technology,A400,Facilities,1483.51,expense,,Facilities - Technology
+P25-00993,2025-09-16,2025-09-01,D04,Technology,A500,Professional services,3309.99,expense,,Professional services - Technology
+P25-00994,2025-09-16,2025-09-01,D05,People,A500,Professional services,696.21,expense,,Professional services - People
+P25-00995,2025-09-16,2025-09-01,D06,Finance and Admin,A400,Facilities,814.93,expense,,Facilities - Finance and Admin
+P25-00996,2025-09-16,2025-09-01,D06,Finance and Admin,A500,Professional services,5625.91,expense,,Professional services - Finance and Admin
+P25-00997,2025-09-17,2025-09-01,D04,Technology,A300,Software subscriptions,2594.87,expense,,Software subscriptions - Technology
+P25-00998,2025-09-17,2025-09-01,D05,People,A500,Professional services,871.63,expense,,Professional services - People
+P25-00999,2025-09-18,2025-09-01,D03,Operations,A300,Software subscriptions,266.15,expense,,Software subscriptions - Operations
+P25-01000,2025-09-18,2025-09-01,D06,Finance and Admin,A300,Software subscriptions,597.13,expense,,Software subscriptions - Finance and Admin
+P25-01001,2025-09-18,2025-09-01,D06,Finance and Admin,A500,Professional services,2573.36,expense,,Professional services - Finance and Admin
+P25-01002,2025-09-19,2025-09-01,D01,Sales,A300,Software subscriptions,1379.86,expense,,Software subscriptions - Sales
+P25-01003,2025-09-19,2025-09-01,D05,People,A200,Travel,1332.43,expense,,Travel - People
+P25-01004,2025-09-19,2025-09-01,D06,Finance and Admin,A400,Facilities,828.92,expense,,Facilities - Finance and Admin
+P25-01005,2025-09-20,2025-09-01,D03,Operations,A600,Training,268.26,expense,,Training - Operations
+P25-01006,2025-09-20,2025-09-01,D05,People,A400,Facilities,724.16,expense,,Facilities - People
+P25-01007,2025-09-20,2025-09-01,D05,People,A400,Facilities,1994.93,expense,,Facilities - People
+P25-01008,2025-09-20,2025-09-01,D05,People,A600,Training,2887.55,expense,,Training - People
+P25-01009,2025-09-21,2025-09-01,D04,Technology,A400,Facilities,1087.37,expense,,Facilities - Technology
+P25-01010,2025-09-21,2025-09-01,D05,People,A600,Training,1441.00,expense,,Training - People
+P25-01011,2025-09-21,2025-09-01,D05,People,A600,Training,3793.74,expense,,Training - People
+P25-01012,2025-09-22,2025-09-01,D03,Operations,A400,Facilities,1744.03,expense,,Facilities - Operations
+P25-01013,2025-09-22,2025-09-01,D03,Operations,A400,Facilities,5153.08,expense,,Facilities - Operations
+P25-01014,2025-09-22,2025-09-01,D04,Technology,A400,Facilities,1275.46,expense,,Facilities - Technology
+P25-01015,2025-09-22,2025-09-01,D04,Technology,A600,Training,1524.61,expense,,Training - Technology
+P25-01016,2025-09-23,2025-09-01,D02,Marketing,A500,Professional services,568.26,expense,,Professional services - Marketing
+P25-01017,2025-09-23,2025-09-01,D03,Operations,A300,Software subscriptions,586.50,expense,,Software subscriptions - Operations
+P25-01018,2025-09-23,2025-09-01,D03,Operations,A400,Facilities,5396.36,expense,,Facilities - Operations
+P25-01019,2025-09-24,2025-09-01,D03,Operations,A500,Professional services,1582.76,expense,,Professional services - Operations
+P25-01020,2025-09-24,2025-09-01,D04,Technology,A200,Travel,171.55,expense,,Travel - Technology
+P25-01021,2025-09-24,2025-09-01,D04,Technology,A700,Cloud hosting,2550.61,expense,,Cloud hosting - Technology
+P25-01022,2025-09-25,2025-09-01,D01,Sales,A500,Professional services,494.98,expense,,Professional services - Sales
+P25-01023,2025-09-25,2025-09-01,D02,Marketing,A500,Professional services,615.02,expense,,Professional services - Marketing
+P25-01024,2025-09-25,2025-09-01,D03,Operations,A500,Professional services,708.13,expense,,Professional services - Operations
+P25-01025,2025-09-25,2025-09-01,D04,Technology,A300,Software subscriptions,5157.53,expense,,Software subscriptions - Technology
+P25-01026,2025-09-25,2025-09-01,D05,People,A600,Training,2829.43,expense,,Training - People
+P25-01027,2025-09-26,2025-09-01,D01,Sales,A400,Facilities,651.82,expense,,Facilities - Sales
+P25-01028,2025-09-26,2025-09-01,D03,Operations,A500,Professional services,779.59,expense,,Professional services - Operations
+P25-01029,2025-09-26,2025-09-01,D04,Technology,A200,Travel,203.72,expense,,Travel - Technology
+P25-01030,2025-09-26,2025-09-01,D04,Technology,A400,Facilities,1336.51,expense,,Facilities - Technology
+P25-01031,2025-09-26,2025-09-01,D05,People,A500,Professional services,488.02,expense,,Professional services - People
+P25-01032,2025-09-27,2025-09-01,D02,Marketing,A500,Professional services,1522.43,expense,,Professional services - Marketing
+P25-01033,2025-09-27,2025-09-01,D03,Operations,A400,Facilities,3112.77,expense,,Facilities - Operations
+P25-01034,2025-09-27,2025-09-01,D06,Finance and Admin,A400,Facilities,244.97,expense,,Facilities - Finance and Admin
+P25-01035,2025-09-28,2025-09-01,D02,Marketing,A200,Travel,4811.05,expense,,Travel - Marketing
+P25-01036,2025-09-29,2025-09-01,D06,Finance and Admin,A300,Software subscriptions,587.49,expense,,Software subscriptions - Finance and Admin
+P25-01037,2025-09-29,2025-09-01,D06,Finance and Admin,A300,Software subscriptions,598.71,expense,,Software subscriptions - Finance and Admin
+P25-01038,2025-09-30,2025-09-01,D01,Sales,A100,Salaries and wages,28485.18,expense,,Salaries and wages - Sales
+P25-01039,2025-09-30,2025-09-01,D02,Marketing,A100,Salaries and wages,21903.07,expense,,Salaries and wages - Marketing
+P25-01040,2025-09-30,2025-09-01,D02,Marketing,A400,Facilities,943.57,expense,,Facilities - Marketing
+P25-01041,2025-09-30,2025-09-01,D02,Marketing,A500,Professional services,268.18,expense,,Professional services - Marketing
+P25-01042,2025-09-30,2025-09-01,D03,Operations,A100,Salaries and wages,20737.09,expense,,Salaries and wages - Operations
+P25-01043,2025-09-30,2025-09-01,D03,Operations,A200,Travel,384.36,expense,,Travel - Operations
+P25-01044,2025-09-30,2025-09-01,D04,Technology,A100,Salaries and wages,45451.25,expense,,Salaries and wages - Technology
+P25-01045,2025-09-30,2025-09-01,D05,People,A100,Salaries and wages,8550.23,expense,,Salaries and wages - People
+P25-01046,2025-09-30,2025-09-01,D06,Finance and Admin,A100,Salaries and wages,18171.65,expense,,Salaries and wages - Finance and Admin
+P25-01047,2025-10-01,2025-10-01,D01,Sales,A300,Software subscriptions,1999.86,expense,,Software subscriptions - Sales
+P25-01048,2025-10-01,2025-10-01,D02,Marketing,A400,Facilities,1215.04,expense,,Facilities - Marketing
+P25-01049,2025-10-01,2025-10-01,D03,Operations,A300,Software subscriptions,733.87,expense,,Software subscriptions - Operations
+P25-01050,2025-10-01,2025-10-01,D05,People,A400,Facilities,1691.38,expense,,Facilities - People
+P25-01051,2025-10-01,2025-10-01,D06,Finance and Admin,A300,Software subscriptions,1872.16,expense,,Software subscriptions - Finance and Admin
+P25-01052,2025-10-02,2025-10-01,D01,Sales,A200,Travel,2400.68,expense,,Travel - Sales
+P25-01053,2025-10-02,2025-10-01,D06,Finance and Admin,A200,Travel,68.48,expense,,Travel - Finance and Admin
+P25-01054,2025-10-03,2025-10-01,D03,Operations,A300,Software subscriptions,205.89,expense,,Software subscriptions - Operations
+P25-01055,2025-10-03,2025-10-01,D04,Technology,A700,Cloud hosting,4128.99,expense,,Cloud hosting - Technology
+P25-01056,2025-10-03,2025-10-01,D04,Technology,A700,Cloud hosting,4782.92,expense,,Cloud hosting - Technology
+P25-01057,2025-10-03,2025-10-01,D06,Finance and Admin,A300,Software subscriptions,164.08,expense,,Software subscriptions - Finance and Admin
+P25-01058,2025-10-04,2025-10-01,D01,Sales,A200,Travel,1813.72,expense,,Travel - Sales
+P25-01059,2025-10-04,2025-10-01,D02,Marketing,A200,Travel,2264.29,expense,,Travel - Marketing
+P25-01060,2025-10-04,2025-10-01,D04,Technology,A300,Software subscriptions,19012.61,expense,,Software subscriptions - Technology
+P25-01061,2025-10-05,2025-10-01,D01,Sales,A600,Training,210.15,expense,,Training - Sales
+P25-01062,2025-10-05,2025-10-01,D02,Marketing,A200,Travel,1069.62,expense,,Travel - Marketing
+P25-01063,2025-10-05,2025-10-01,D03,Operations,A600,Training,250.86,expense,,Training - Operations
+P25-01064,2025-10-06,2025-10-01,D01,Sales,A400,Facilities,2093.31,expense,,Facilities - Sales
+P25-01065,2025-10-06,2025-10-01,D04,Technology,A400,Facilities,2313.10,expense,,Facilities - Technology
+P25-01066,2025-10-07,2025-10-01,D01,Sales,A500,Professional services,520.80,expense,,Professional services - Sales
+P25-01067,2025-10-07,2025-10-01,D03,Operations,A600,Training,109.80,expense,,Training - Operations
+P25-01068,2025-10-07,2025-10-01,D03,Operations,A600,Training,740.25,expense,,Training - Operations
+P25-01069,2025-10-07,2025-10-01,D04,Technology,A200,Travel,259.41,expense,,Travel - Technology
+P25-01070,2025-10-07,2025-10-01,D04,Technology,A500,Professional services,2919.18,expense,,Professional services - Technology
+P25-01071,2025-10-07,2025-10-01,D05,People,A400,Facilities,328.61,expense,,Facilities - People
+P25-01072,2025-10-08,2025-10-01,D01,Sales,A600,Training,894.26,expense,,Training - Sales
+P25-01073,2025-10-08,2025-10-01,D05,People,A600,Training,531.38,expense,,Training - People
+P25-01074,2025-10-08,2025-10-01,D06,Finance and Admin,A200,Travel,309.48,expense,,Travel - Finance and Admin
+P25-01075,2025-10-09,2025-10-01,D01,Sales,A300,Software subscriptions,403.35,expense,,Software subscriptions - Sales
+P25-01076,2025-10-09,2025-10-01,D06,Finance and Admin,A200,Travel,102.25,expense,,Travel - Finance and Admin
+P25-01077,2025-10-10,2025-10-01,D01,Sales,A200,Travel,625.40,expense,,Travel - Sales
+P25-01078,2025-10-10,2025-10-01,D05,People,A200,Travel,455.81,expense,,Travel - People
+P25-01079,2025-10-10,2025-10-01,D06,Finance and Admin,A200,Travel,188.19,expense,,Travel - Finance and Admin
+P25-01080,2025-10-11,2025-10-01,D02,Marketing,A400,Facilities,393.64,expense,,Facilities - Marketing
+P25-01081,2025-10-11,2025-10-01,D03,Operations,A400,Facilities,5973.42,expense,,Facilities - Operations
+P25-01082,2025-10-11,2025-10-01,D04,Technology,A600,Training,1166.51,expense,,Training - Technology
+P25-01083,2025-10-11,2025-10-01,D05,People,A400,Facilities,797.20,expense,,Facilities - People
+P25-01084,2025-10-13,2025-10-01,D04,Technology,A500,Professional services,784.81,expense,,Professional services - Technology
+P25-01085,2025-10-14,2025-10-01,D01,Sales,A600,Training,427.14,expense,,Training - Sales
+P25-01086,2025-10-14,2025-10-01,D02,Marketing,A300,Software subscriptions,4452.89,expense,,Software subscriptions - Marketing
+P25-01087,2025-10-14,2025-10-01,D03,Operations,A200,Travel,1788.51,expense,,Travel - Operations
+P25-01088,2025-10-14,2025-10-01,D03,Operations,A400,Facilities,3528.54,expense,,Facilities - Operations
+P25-01089,2025-10-14,2025-10-01,D04,Technology,A600,Training,1006.26,expense,,Training - Technology
+P25-01090,2025-10-15,2025-10-01,D01,Sales,A100,Salaries and wages,35472.26,expense,,Salaries and wages - Sales
+P25-01091,2025-10-15,2025-10-01,D02,Marketing,A100,Salaries and wages,21448.87,expense,,Salaries and wages - Marketing
+P25-01092,2025-10-15,2025-10-01,D03,Operations,A100,Salaries and wages,82145.10,expense,,Salaries and wages - Operations
+P25-01093,2025-10-15,2025-10-01,D04,Technology,A100,Salaries and wages,35759.06,expense,,Salaries and wages - Technology
+P25-01094,2025-10-15,2025-10-01,D04,Technology,A500,Professional services,2561.09,expense,,Professional services - Technology
+P25-01095,2025-10-15,2025-10-01,D05,People,A100,Salaries and wages,20137.98,expense,,Salaries and wages - People
+P25-01096,2025-10-15,2025-10-01,D05,People,A500,Professional services,622.54,expense,,Professional services - People
+P25-01097,2025-10-15,2025-10-01,D06,Finance and Admin,A100,Salaries and wages,8140.28,expense,,Salaries and wages - Finance and Admin
+P25-01098,2025-10-15,2025-10-01,D06,Finance and Admin,A600,Training,154.87,expense,,Training - Finance and Admin
+P25-01099,2025-10-16,2025-10-01,D01,Sales,A300,Software subscriptions,281.68,expense,,Software subscriptions - Sales
+P25-01100,2025-10-16,2025-10-01,D02,Marketing,A400,Facilities,600.42,expense,,Facilities - Marketing
+P25-01101,2025-10-17,2025-10-01,D03,Operations,A400,Facilities,5834.96,expense,,Facilities - Operations
+P25-01102,2025-10-17,2025-10-01,D05,People,A200,Travel,468.63,expense,,Travel - People
+P25-01103,2025-10-17,2025-10-01,D05,People,A400,Facilities,115.34,expense,,Facilities - People
+P25-01104,2025-10-18,2025-10-01,D03,Operations,A400,Facilities,3250.00,expense,,Facilities - Operations
+P25-01105,2025-10-18,2025-10-01,D04,Technology,A400,Facilities,678.42,expense,,Facilities - Technology
+P25-01106,2025-10-19,2025-10-01,D01,Sales,A200,Travel,1359.70,expense,,Travel - Sales
+P25-01107,2025-10-19,2025-10-01,D03,Operations,A200,Travel,1552.06,expense,,Travel - Operations
+P25-01108,2025-10-19,2025-10-01,D03,Operations,A300,Software subscriptions,597.59,expense,,Software subscriptions - Operations
+P25-01109,2025-10-19,2025-10-01,D03,Operations,A600,Training,503.88,expense,,Training - Operations
+P25-01110,2025-10-19,2025-10-01,D05,People,A200,Travel,529.46,expense,,Travel - People
+P25-01111,2025-10-19,2025-10-01,D05,People,A500,Professional services,175.67,expense,,Professional services - People
+P25-01112,2025-10-19,2025-10-01,D06,Finance and Admin,A200,Travel,198.58,expense,,Travel - Finance and Admin
+P25-01113,2025-10-20,2025-10-01,D01,Sales,A300,Software subscriptions,1618.08,expense,,Software subscriptions - Sales
+P25-01114,2025-10-20,2025-10-01,D01,Sales,A400,Facilities,3311.43,expense,,Facilities - Sales
+P25-01115,2025-10-20,2025-10-01,D02,Marketing,A300,Software subscriptions,608.44,expense,,Software subscriptions - Marketing
+P25-01116,2025-10-20,2025-10-01,D04,Technology,A200,Travel,1811.93,expense,,Travel - Technology
+P25-01117,2025-10-20,2025-10-01,D06,Finance and Admin,A400,Facilities,2129.66,expense,,Facilities - Finance and Admin
+P25-01118,2025-10-21,2025-10-01,D01,Sales,A200,Travel,1472.79,expense,,Travel - Sales
+P25-01119,2025-10-21,2025-10-01,D05,People,A500,Professional services,-2000.00,credit,,Supplier credit note for overcharge
+P25-01120,2025-10-21,2025-10-01,D05,People,A600,Training,708.42,expense,,Training - People
+P25-01121,2025-10-21,2025-10-01,D06,Finance and Admin,A300,Software subscriptions,466.82,expense,,Software subscriptions - Finance and Admin
+P25-01122,2025-10-21,2025-10-01,D06,Finance and Admin,A600,Training,186.31,expense,,Training - Finance and Admin
+P25-01123,2025-10-22,2025-10-01,D01,Sales,A500,Professional services,510.90,expense,,Professional services - Sales
+P25-01124,2025-10-22,2025-10-01,D03,Operations,A500,Professional services,1528.19,expense,,Professional services - Operations
+P25-01125,2025-10-22,2025-10-01,D05,People,A600,Training,1297.40,expense,,Training - People
+P25-01126,2025-10-22,2025-10-01,D06,Finance and Admin,A400,Facilities,1266.16,expense,,Facilities - Finance and Admin
+P25-01127,2025-10-23,2025-10-01,D03,Operations,A200,Travel,1096.29,expense,,Travel - Operations
+P25-01128,2025-10-23,2025-10-01,D04,Technology,A400,Facilities,1220.52,expense,,Facilities - Technology
+P25-01129,2025-10-23,2025-10-01,D05,People,A500,Professional services,98.08,expense,,Professional services - People
+P25-01130,2025-10-24,2025-10-01,D01,Sales,A500,Professional services,562.63,expense,,Professional services - Sales
+P25-01131,2025-10-24,2025-10-01,D02,Marketing,A200,Travel,1314.55,expense,,Travel - Marketing
+P25-01132,2025-10-24,2025-10-01,D05,People,A300,Software subscriptions,716.31,expense,,Software subscriptions - People
+P25-01133,2025-10-24,2025-10-01,D05,People,A500,Professional services,211.46,expense,,Professional services - People
+P25-01134,2025-10-24,2025-10-01,D05,People,A600,Training,1601.73,expense,,Training - People
+P25-01135,2025-10-25,2025-10-01,D06,Finance and Admin,A500,Professional services,6891.91,expense,,Professional services - Finance and Admin
+P25-01136,2025-10-26,2025-10-01,D03,Operations,A500,Professional services,2713.99,expense,,Professional services - Operations
+P25-01137,2025-10-26,2025-10-01,D05,People,A300,Software subscriptions,1411.05,expense,,Software subscriptions - People
+P25-01138,2025-10-26,2025-10-01,D06,Finance and Admin,A300,Software subscriptions,245.81,expense,,Software subscriptions - Finance and Admin
+P25-01139,2025-10-27,2025-10-01,D02,Marketing,A300,Software subscriptions,1264.06,expense,,Software subscriptions - Marketing
+P25-01140,2025-10-27,2025-10-01,D02,Marketing,A400,Facilities,137.45,expense,,Facilities - Marketing
+P25-01141,2025-10-27,2025-10-01,D05,People,A500,Professional services,629.16,expense,,Professional services - People
+P25-01142,2025-10-27,2025-10-01,D06,Finance and Admin,A200,Travel,79.05,expense,,Travel - Finance and Admin
+P25-01143,2025-10-27,2025-10-01,D06,Finance and Admin,A600,Training,340.62,expense,,Training - Finance and Admin
+P25-01144,2025-10-28,2025-10-01,D01,Sales,A500,Professional services,266.72,expense,,Professional services - Sales
+P25-01145,2025-10-28,2025-10-01,D03,Operations,A600,Training,305.97,expense,,Training - Operations
+P25-01146,2025-10-29,2025-10-01,D01,Sales,A200,Travel,3445.11,expense,,Travel - Sales
+P25-01147,2025-10-29,2025-10-01,D01,Sales,A500,Professional services,317.13,expense,,Professional services - Sales
+P25-01148,2025-10-29,2025-10-01,D02,Marketing,A400,Facilities,1051.74,expense,,Facilities - Marketing
+P25-01149,2025-10-29,2025-10-01,D05,People,A500,Professional services,1484.75,expense,,Professional services - People
+P25-01150,2025-10-30,2025-10-01,D03,Operations,A300,Software subscriptions,474.17,expense,,Software subscriptions - Operations
+P25-01151,2025-10-30,2025-10-01,D06,Finance and Admin,A300,Software subscriptions,269.61,expense,,Software subscriptions - Finance and Admin
+P25-01152,2025-10-30,2025-10-01,D06,Finance and Admin,A600,Training,222.20,expense,,Training - Finance and Admin
+P25-01153,2025-10-31,2025-10-01,D01,Sales,A100,Salaries and wages,51238.17,expense,,Salaries and wages - Sales
+P25-01154,2025-10-31,2025-10-01,D02,Marketing,A100,Salaries and wages,19443.59,expense,,Salaries and wages - Marketing
+P25-01155,2025-10-31,2025-10-01,D02,Marketing,A500,Professional services,5178.19,expense,,Professional services - Marketing
+P25-01156,2025-10-31,2025-10-01,D03,Operations,A100,Salaries and wages,45221.31,expense,,Salaries and wages - Operations
+P25-01157,2025-10-31,2025-10-01,D03,Operations,A300,Software subscriptions,775.34,expense,,Software subscriptions - Operations
+P25-01158,2025-10-31,2025-10-01,D03,Operations,A400,Facilities,3676.81,expense,,Facilities - Operations
+P25-01159,2025-10-31,2025-10-01,D04,Technology,A100,Salaries and wages,39966.13,expense,,Salaries and wages - Technology
+P25-01160,2025-10-31,2025-10-01,D04,Technology,A400,Facilities,1532.58,expense,,Facilities - Technology
+P25-01161,2025-10-31,2025-10-01,D05,People,A100,Salaries and wages,6273.30,expense,,Salaries and wages - People
+P25-01162,2025-10-31,2025-10-01,D06,Finance and Admin,A100,Salaries and wages,22132.22,expense,,Salaries and wages - Finance and Admin
+P25-01163,2025-11-01,2025-11-01,D01,Sales,A500,Professional services,536.85,expense,,Professional services - Sales
+P25-01164,2025-11-01,2025-11-01,D04,Technology,A600,Training,2117.72,expense,,Training - Technology
+P25-01165,2025-11-01,2025-11-01,D05,People,A500,Professional services,3296.71,expense,,Professional services - People
+P25-01166,2025-11-01,2025-11-01,D06,Finance and Admin,A600,Training,165.65,expense,,Training - Finance and Admin
+P25-01167,2025-11-02,2025-11-01,D01,Sales,A600,Training,336.49,expense,,Training - Sales
+P25-01168,2025-11-02,2025-11-01,D01,Sales,A600,Training,403.08,expense,,Training - Sales
+P25-01169,2025-11-02,2025-11-01,D03,Operations,A200,Travel,957.47,expense,,Travel - Operations
+P25-01170,2025-11-02,2025-11-01,D03,Operations,A200,Travel,1794.21,expense,,Travel - Operations
+P25-01171,2025-11-02,2025-11-01,D03,Operations,A300,Software subscriptions,742.46,expense,,Software subscriptions - Operations
+P25-01172,2025-11-02,2025-11-01,D03,Operations,A600,Training,473.00,expense,,Training - Operations
+P25-01173,2025-11-02,2025-11-01,D06,Finance and Admin,A600,Training,160.45,expense,,Training - Finance and Admin
+P25-01174,2025-11-03,2025-11-01,D01,Sales,A300,Software subscriptions,949.38,expense,,Software subscriptions - Sales
+P25-01175,2025-11-03,2025-11-01,D02,Marketing,A300,Software subscriptions,892.56,expense,,Software subscriptions - Marketing
+P25-01176,2025-11-04,2025-11-01,D01,Sales,A200,Travel,5564.77,expense,,Travel - Sales
+P25-01177,2025-11-04,2025-11-01,D02,Marketing,A500,Professional services,5123.23,expense,,Professional services - Marketing
+P25-01178,2025-11-06,2025-11-01,D01,Sales,A200,Travel,3182.79,expense,,Travel - Sales
+P25-01179,2025-11-06,2025-11-01,D01,Sales,A500,Professional services,606.14,expense,,Professional services - Sales
+P25-01180,2025-11-06,2025-11-01,D04,Technology,A300,Software subscriptions,11496.84,expense,,Software subscriptions - Technology
+P25-01181,2025-11-06,2025-11-01,D05,People,A400,Facilities,751.58,expense,,Facilities - People
+P25-01182,2025-11-06,2025-11-01,D06,Finance and Admin,A300,Software subscriptions,3235.67,expense,,Software subscriptions - Finance and Admin
+P25-01183,2025-11-07,2025-11-01,D02,Marketing,A400,Facilities,581.95,expense,,Facilities - Marketing
+P25-01184,2025-11-07,2025-11-01,D06,Finance and Admin,A200,Travel,112.18,expense,,Travel - Finance and Admin
+P25-01185,2025-11-07,2025-11-01,D06,Finance and Admin,A600,Training,249.30,expense,,Training - Finance and Admin
+P25-01186,2025-11-08,2025-11-01,D01,Sales,A400,Facilities,3212.27,expense,,Facilities - Sales
+P25-01187,2025-11-08,2025-11-01,D02,Marketing,A300,Software subscriptions,1141.30,expense,,Software subscriptions - Marketing
+P25-01188,2025-11-08,2025-11-01,D03,Operations,A400,Facilities,845.02,expense,,Facilities - Operations
+P25-01189,2025-11-08,2025-11-01,D04,Technology,A300,Software subscriptions,7358.65,expense,,Software subscriptions - Technology
+P25-01190,2025-11-08,2025-11-01,D04,Technology,A500,Professional services,1888.72,expense,,Professional services - Technology
+P25-01191,2025-11-08,2025-11-01,D05,People,A300,Software subscriptions,1265.67,expense,,Software subscriptions - People
+P25-01192,2025-11-09,2025-11-01,D01,Sales,A300,Software subscriptions,378.73,expense,,Software subscriptions - Sales
+P25-01193,2025-11-09,2025-11-01,D02,Marketing,A400,Facilities,407.85,expense,,Facilities - Marketing
+P25-01194,2025-11-09,2025-11-01,D02,Marketing,A400,Facilities,425.68,expense,,Facilities - Marketing
+P25-01195,2025-11-09,2025-11-01,D03,Operations,A300,Software subscriptions,1100.35,expense,,Software subscriptions - Operations
+P25-01196,2025-11-09,2025-11-01,D05,People,A600,Training,914.54,expense,,Training - People
+P25-01197,2025-11-09,2025-11-01,D05,People,A600,Training,2041.47,expense,,Training - People
+P25-01198,2025-11-10,2025-11-01,D01,Sales,A400,Facilities,1130.16,expense,,Facilities - Sales
+P25-01199,2025-11-10,2025-11-01,D06,Finance and Admin,A200,Travel,68.08,expense,,Travel - Finance and Admin
+P25-01200,2025-11-10,2025-11-01,D06,Finance and Admin,A200,Travel,221.56,expense,,Travel - Finance and Admin
+P25-01201,2025-11-11,2025-11-01,D01,Sales,A500,Professional services,384.87,expense,,Professional services - Sales
+P25-01202,2025-11-11,2025-11-01,D01,Sales,A500,Professional services,488.32,expense,,Professional services - Sales
+P25-01203,2025-11-11,2025-11-01,D02,Marketing,A200,Travel,1438.62,expense,,Travel - Marketing
+P25-01204,2025-11-11,2025-11-01,D06,Finance and Admin,A400,Facilities,3511.45,expense,,Facilities - Finance and Admin
+P25-01205,2025-11-12,2025-11-01,D03,Operations,A400,Facilities,7600.08,expense,,Facilities - Operations
+P25-01206,2025-11-12,2025-11-01,D03,Operations,A600,Training,230.24,expense,,Training - Operations
+P25-01207,2025-11-12,2025-11-01,D06,Finance and Admin,A500,Professional services,8373.57,expense,,Professional services - Finance and Admin
+P25-01208,2025-11-13,2025-11-01,D01,Sales,A400,Facilities,1069.94,expense,,Facilities - Sales
+P25-01209,2025-11-13,2025-11-01,D02,Marketing,A200,Travel,804.12,expense,,Travel - Marketing
+P25-01210,2025-11-13,2025-11-01,D03,Operations,A400,Facilities,2554.58,expense,,Facilities - Operations
+P25-01211,2025-11-13,2025-11-01,D03,Operations,A500,Professional services,1590.44,expense,,Professional services - Operations
+P25-01212,2025-11-13,2025-11-01,D04,Technology,A700,Cloud hosting,2173.69,expense,,Cloud hosting - Technology
+P25-01213,2025-11-14,2025-11-01,D01,Sales,A200,Travel,2184.01,expense,,Travel - Sales
+P25-01214,2025-11-14,2025-11-01,D04,Technology,A700,Cloud hosting,2093.19,expense,,Cloud hosting - Technology
+P25-01215,2025-11-15,2025-11-01,D01,Sales,A100,Salaries and wages,17217.77,expense,,Salaries and wages - Sales
+P25-01216,2025-11-15,2025-11-01,D02,Marketing,A100,Salaries and wages,26336.88,expense,,Salaries and wages - Marketing
+P25-01217,2025-11-15,2025-11-01,D02,Marketing,A300,Software subscriptions,897.71,expense,,Software subscriptions - Marketing
+P25-01218,2025-11-15,2025-11-01,D02,Marketing,A400,Facilities,1419.88,expense,,Facilities - Marketing
+P25-01219,2025-11-15,2025-11-01,D03,Operations,A100,Salaries and wages,41250.08,expense,,Salaries and wages - Operations
+P25-01220,2025-11-15,2025-11-01,D03,Operations,A500,Professional services,518.54,expense,,Professional services - Operations
+P25-01221,2025-11-15,2025-11-01,D04,Technology,A100,Salaries and wages,34236.87,expense,,Salaries and wages - Technology
+P25-01222,2025-11-15,2025-11-01,D04,Technology,A500,Professional services,1266.10,expense,,Professional services - Technology
+P25-01223,2025-11-15,2025-11-01,D05,People,A100,Salaries and wages,12747.19,expense,,Salaries and wages - People
+P25-01224,2025-11-15,2025-11-01,D06,Finance and Admin,A100,Salaries and wages,13751.21,expense,,Salaries and wages - Finance and Admin
+P25-01225,2025-11-16,2025-11-01,D03,Operations,A600,Training,115.85,expense,,Training - Operations
+P25-01226,2025-11-17,2025-11-01,D02,Marketing,A200,Travel,1058.05,expense,,Travel - Marketing
+P25-01227,2025-11-18,2025-11-01,D01,Sales,A300,Software subscriptions,790.26,expense,,Software subscriptions - Sales
+P25-01228,2025-11-18,2025-11-01,D01,Sales,A300,Software subscriptions,877.71,expense,,Software subscriptions - Sales
+P25-01229,2025-11-18,2025-11-01,D02,Marketing,A200,Travel,1336.30,expense,,Travel - Marketing
+P25-01230,2025-11-18,2025-11-01,D06,Finance and Admin,A600,Training,84.42,expense,,Training - Finance and Admin
+P25-01231,2025-11-19,2025-11-01,D01,Sales,A300,Software subscriptions,1121.52,expense,,Software subscriptions - Sales
+P25-01232,2025-11-19,2025-11-01,D02,Marketing,A400,Facilities,809.77,expense,,Facilities - Marketing
+P25-01233,2025-11-20,2025-11-01,D03,Operations,A400,Facilities,1751.33,expense,,Facilities - Operations
+P25-01234,2025-11-20,2025-11-01,D05,People,A400,Facilities,1117.22,expense,,Facilities - People
+P25-01235,2025-11-21,2025-11-01,D03,Operations,A500,Professional services,2002.91,expense,,Professional services - Operations
+P25-01236,2025-11-22,2025-11-01,D04,Technology,A200,Travel,1227.14,expense,,Travel - Technology
+P25-01237,2025-11-22,2025-11-01,D06,Finance and Admin,A600,Training,156.71,expense,,Training - Finance and Admin
+P25-01238,2025-11-24,2025-11-01,D01,Sales,A500,Professional services,263.78,expense,,Professional services - Sales
+P25-01239,2025-11-24,2025-11-01,D02,Marketing,A300,Software subscriptions,800.94,expense,,Software subscriptions - Marketing
+P25-01240,2025-11-24,2025-11-01,D04,Technology,A400,Facilities,5864.05,expense,,Facilities - Technology
+P25-01241,2025-11-24,2025-11-01,D05,People,A600,Training,472.85,expense,,Training - People
+P25-01242,2025-11-25,2025-11-01,D02,Marketing,A300,Software subscriptions,675.26,expense,,Software subscriptions - Marketing
+P25-01243,2025-11-25,2025-11-01,D03,Operations,A200,Travel,815.03,expense,,Travel - Operations
+P25-01244,2025-11-25,2025-11-01,D03,Operations,A400,Facilities,6081.31,expense,,Facilities - Operations
+P25-01245,2025-11-25,2025-11-01,D04,Technology,A500,Professional services,919.71,expense,,Professional services - Technology
+P25-01246,2025-11-25,2025-11-01,D06,Finance and Admin,A200,Travel,486.18,expense,,Travel - Finance and Admin
+P25-01247,2025-11-26,2025-11-01,D03,Operations,A600,Training,390.80,expense,,Training - Operations
+P25-01248,2025-11-27,2025-11-01,D01,Sales,A600,Training,345.04,expense,,Training - Sales
+P25-01249,2025-11-28,2025-11-01,D01,Sales,A600,Training,215.19,expense,,Training - Sales
+P25-01250,2025-11-28,2025-11-01,D03,Operations,A400,Facilities,1886.00,expense,,Facilities - Operations
+P25-01251,2025-11-28,2025-11-01,D04,Technology,A200,Travel,434.67,expense,,Travel - Technology
+P25-01252,2025-11-28,2025-11-01,D04,Technology,A500,Professional services,2408.67,expense,,Professional services - Technology
+P25-01253,2025-11-28,2025-11-01,D05,People,A200,Travel,1159.58,expense,,Travel - People
+P25-01254,2025-11-28,2025-11-01,D05,People,A300,Software subscriptions,689.00,expense,,Software subscriptions - People
+P25-01255,2025-11-29,2025-11-01,D03,Operations,A300,Software subscriptions,1032.45,expense,,Software subscriptions - Operations
+P25-01256,2025-11-29,2025-11-01,D03,Operations,A600,Training,726.72,expense,,Training - Operations
+P25-01257,2025-11-29,2025-11-01,D05,People,A400,Facilities,1166.07,expense,,Facilities - People
+P25-01258,2025-11-29,2025-11-01,D05,People,A600,Training,737.05,expense,,Training - People
+P25-01259,2025-11-30,2025-11-01,D01,Sales,A100,Salaries and wages,67682.12,expense,,Salaries and wages - Sales
+P25-01260,2025-11-30,2025-11-01,D01,Sales,A600,Training,312.74,expense,,Training - Sales
+P25-01261,2025-11-30,2025-11-01,D02,Marketing,A100,Salaries and wages,14324.25,expense,,Salaries and wages - Marketing
+P25-01262,2025-11-30,2025-11-01,D02,Marketing,A300,Software subscriptions,1680.76,expense,,Software subscriptions - Marketing
+P25-01263,2025-11-30,2025-11-01,D03,Operations,A100,Salaries and wages,87059.44,expense,,Salaries and wages - Operations
+P25-01264,2025-11-30,2025-11-01,D04,Technology,A100,Salaries and wages,35107.95,expense,,Salaries and wages - Technology
+P25-01265,2025-11-30,2025-11-01,D05,People,A100,Salaries and wages,13177.61,expense,,Salaries and wages - People
+P25-01266,2025-11-30,2025-11-01,D06,Finance and Admin,A100,Salaries and wages,14251.96,expense,,Salaries and wages - Finance and Admin
+P25-01267,2025-12-01,2025-12-01,D02,Marketing,A500,Professional services,979.56,expense,,Professional services - Marketing
+P25-01268,2025-12-01,2025-12-01,D03,Operations,A300,Software subscriptions,117.07,expense,,Software subscriptions - Operations
+P25-01269,2025-12-01,2025-12-01,D03,Operations,A300,Software subscriptions,1205.54,expense,,Software subscriptions - Operations
+P25-01270,2025-12-01,2025-12-01,D03,Operations,A500,Professional services,735.90,expense,,Professional services - Operations
+P25-01271,2025-12-02,2025-12-01,D02,Marketing,A500,Professional services,1222.97,expense,,Professional services - Marketing
+P25-01272,2025-12-03,2025-12-01,D01,Sales,A500,Professional services,254.91,expense,,Professional services - Sales
+P25-01273,2025-12-03,2025-12-01,D03,Operations,A300,Software subscriptions,289.87,expense,,Software subscriptions - Operations
+P25-01274,2025-12-03,2025-12-01,D04,Technology,A300,Software subscriptions,5570.63,expense,,Software subscriptions - Technology
+P25-01275,2025-12-03,2025-12-01,D04,Technology,A400,Facilities,4285.48,expense,,Facilities - Technology
+P25-01276,2025-12-03,2025-12-01,D05,People,A300,Software subscriptions,248.06,expense,,Software subscriptions - People
+P25-01277,2025-12-04,2025-12-01,D01,Sales,A600,Training,279.70,expense,,Training - Sales
+P25-01278,2025-12-04,2025-12-01,D06,Finance and Admin,A400,Facilities,2133.13,expense,,Facilities - Finance and Admin
+P25-01279,2025-12-05,2025-12-01,D02,Marketing,A300,Software subscriptions,836.84,expense,,Software subscriptions - Marketing
+P25-01280,2025-12-05,2025-12-01,D02,Marketing,A400,Facilities,2434.89,expense,,Facilities - Marketing
+P25-01281,2025-12-05,2025-12-01,D05,People,A400,Facilities,251.87,expense,,Facilities - People
+P25-01282,2025-12-05,2025-12-01,D05,People,A500,Professional services,347.99,expense,,Professional services - People
+P25-01283,2025-12-05,2025-12-01,D05,People,A500,Professional services,689.66,expense,,Professional services - People
+P25-01284,2025-12-06,2025-12-01,D03,Operations,A400,Facilities,5113.98,expense,,Facilities - Operations
+P25-01285,2025-12-06,2025-12-01,D04,Technology,A500,Professional services,1217.46,expense,,Professional services - Technology
+P25-01286,2025-12-06,2025-12-01,D05,People,A400,Facilities,407.19,expense,,Facilities - People
+P25-01287,2025-12-06,2025-12-01,D06,Finance and Admin,A500,Professional services,7902.82,expense,,Professional services - Finance and Admin
+P25-01288,2025-12-07,2025-12-01,D03,Operations,A200,Travel,1793.34,expense,,Travel - Operations
+P25-01289,2025-12-08,2025-12-01,D01,Sales,A600,Training,368.07,expense,,Training - Sales
+P25-01290,2025-12-08,2025-12-01,D02,Marketing,A500,Professional services,306.55,expense,,Professional services - Marketing
+P25-01291,2025-12-08,2025-12-01,D02,Marketing,A500,Professional services,509.30,expense,,Professional services - Marketing
+P25-01292,2025-12-09,2025-12-01,D01,Sales,A200,Travel,9909.63,expense,,Travel - Sales
+P25-01293,2025-12-09,2025-12-01,D01,Sales,A400,Facilities,1749.32,expense,,Facilities - Sales
+P25-01294,2025-12-09,2025-12-01,D03,Operations,A500,Professional services,1549.33,expense,,Professional services - Operations
+P25-01295,2025-12-09,2025-12-01,D05,People,A200,Travel,260.08,expense,,Travel - People
+P25-01296,2025-12-09,2025-12-01,D05,People,A600,Training,1759.51,expense,,Training - People
+P25-01297,2025-12-10,2025-12-01,D01,Sales,A500,Professional services,201.44,expense,,Professional services - Sales
+P25-01298,2025-12-10,2025-12-01,D02,Marketing,A300,Software subscriptions,393.40,expense,,Software subscriptions - Marketing
+P25-01299,2025-12-10,2025-12-01,D03,Operations,A500,Professional services,660.39,expense,,Professional services - Operations
+P25-01300,2025-12-11,2025-12-01,D04,Technology,A700,Cloud hosting,9372.99,expense,,Cloud hosting - Technology
+P25-01301,2025-12-12,2025-12-01,D03,Operations,A500,Professional services,305.96,expense,,Professional services - Operations
+P25-01302,2025-12-12,2025-12-01,D03,Operations,A600,Training,1774.00,expense,,Training - Operations
+P25-01303,2025-12-13,2025-12-01,D01,Sales,A300,Software subscriptions,243.75,expense,,Software subscriptions - Sales
+P25-01304,2025-12-13,2025-12-01,D02,Marketing,A500,Professional services,1025.61,expense,,Professional services - Marketing
+P25-01305,2025-12-13,2025-12-01,D04,Technology,A400,Facilities,1425.65,expense,,Facilities - Technology
+P25-01306,2025-12-13,2025-12-01,D05,People,A200,Travel,131.37,expense,,Travel - People
+P25-01307,2025-12-13,2025-12-01,D05,People,A200,Travel,403.92,expense,,Travel - People
+P25-01308,2025-12-14,2025-12-01,D02,Marketing,A300,Software subscriptions,1061.46,expense,,Software subscriptions - Marketing
+P25-01309,2025-12-14,2025-12-01,D05,People,A300,Software subscriptions,281.92,expense,,Software subscriptions - People
+P25-01310,2025-12-15,2025-12-01,D01,Sales,A100,Salaries and wages,13353.57,expense,,Salaries and wages - Sales
+P25-01311,2025-12-15,2025-12-01,D02,Marketing,A100,Salaries and wages,17378.86,expense,,Salaries and wages - Marketing
+P25-01312,2025-12-15,2025-12-01,D03,Operations,A100,Salaries and wages,54240.16,expense,,Salaries and wages - Operations
+P25-01313,2025-12-15,2025-12-01,D03,Operations,A300,Software subscriptions,317.23,expense,,Software subscriptions - Operations
+P25-01314,2025-12-15,2025-12-01,D04,Technology,A100,Salaries and wages,48665.72,expense,,Salaries and wages - Technology
+P25-01315,2025-12-15,2025-12-01,D04,Technology,A300,Software subscriptions,13796.83,expense,,Software subscriptions - Technology
+P25-01316,2025-12-15,2025-12-01,D05,People,A100,Salaries and wages,9765.46,expense,,Salaries and wages - People
+P25-01317,2025-12-15,2025-12-01,D06,Finance and Admin,A100,Salaries and wages,7314.77,expense,,Salaries and wages - Finance and Admin
+P25-01318,2025-12-16,2025-12-01,D02,Marketing,A200,Travel,4356.18,expense,,Travel - Marketing
+P25-01319,2025-12-16,2025-12-01,D04,Technology,A500,Professional services,1745.64,expense,,Professional services - Technology
+P25-01320,2025-12-16,2025-12-01,D05,People,A600,Training,1054.87,expense,,Training - People
+P25-01321,2025-12-16,2025-12-01,D06,Finance and Admin,A200,Travel,413.96,expense,,Travel - Finance and Admin
+P25-01322,2025-12-16,2025-12-01,D06,Finance and Admin,A300,Software subscriptions,822.56,expense,,Software subscriptions - Finance and Admin
+P25-01323,2025-12-17,2025-12-01,D03,Operations,A400,Facilities,7544.14,expense,,Facilities - Operations
+P25-01324,2025-12-17,2025-12-01,D04,Technology,A200,Travel,233.76,expense,,Travel - Technology
+P25-01325,2025-12-18,2025-12-01,D04,Technology,A200,Travel,664.26,expense,,Travel - Technology
+P25-01326,2025-12-19,2025-12-01,D01,Sales,A300,Software subscriptions,1841.98,expense,,Software subscriptions - Sales
+P25-01327,2025-12-19,2025-12-01,D01,Sales,A400,Facilities,3168.54,expense,,Facilities - Sales
+P25-01328,2025-12-19,2025-12-01,D02,Marketing,A300,Software subscriptions,1481.26,expense,,Software subscriptions - Marketing
+P25-01329,2025-12-19,2025-12-01,D04,Technology,A600,Training,2310.93,expense,,Training - Technology
+P25-01330,2025-12-19,2025-12-01,D05,People,A200,Travel,203.95,expense,,Travel - People
+P25-01331,2025-12-20,2025-12-01,D03,Operations,A200,Travel,1602.43,expense,,Travel - Operations
+P25-01332,2025-12-20,2025-12-01,D05,People,A300,Software subscriptions,177.62,expense,,Software subscriptions - People
+P25-01333,2025-12-20,2025-12-01,D05,People,A300,Software subscriptions,488.53,expense,,Software subscriptions - People
+P25-01334,2025-12-20,2025-12-01,D05,People,A400,Facilities,1347.38,expense,,Facilities - People
+P25-01335,2025-12-20,2025-12-01,D06,Finance and Admin,A300,Software subscriptions,2499.54,expense,,Software subscriptions - Finance and Admin
+P25-01336,2025-12-22,2025-12-01,D01,Sales,A500,Professional services,292.45,expense,,Professional services - Sales
+P25-01337,2025-12-22,2025-12-01,D01,Sales,A600,Training,288.17,expense,,Training - Sales
+P25-01338,2025-12-22,2025-12-01,D01,Sales,A600,Training,550.29,expense,,Training - Sales
+P25-01339,2025-12-22,2025-12-01,D03,Operations,A300,Software subscriptions,339.75,expense,,Software subscriptions - Operations
+P25-01340,2025-12-22,2025-12-01,D04,Technology,A200,Travel,113.13,expense,,Travel - Technology
+P25-01341,2025-12-22,2025-12-01,D04,Technology,A200,Travel,161.33,expense,,Travel - Technology
+P25-01342,2025-12-22,2025-12-01,D05,People,A200,Travel,46.62,expense,,Travel - People
+P25-01343,2025-12-22,2025-12-01,D05,People,A200,Travel,82.04,expense,,Travel - People
+P25-01344,2025-12-22,2025-12-01,D05,People,A500,Professional services,1270.31,expense,,Professional services - People
+P25-01345,2025-12-23,2025-12-01,D03,Operations,A400,Facilities,1517.09,expense,,Facilities - Operations
+P25-01346,2025-12-24,2025-12-01,D03,Operations,A500,Professional services,670.41,expense,,Professional services - Operations
+P25-01347,2025-12-24,2025-12-01,D06,Finance and Admin,A600,Training,450.40,expense,,Training - Finance and Admin
+P25-01348,2025-12-25,2025-12-01,D01,Sales,A300,Software subscriptions,1864.34,expense,,Software subscriptions - Sales
+P25-01349,2025-12-25,2025-12-01,D03,Operations,A300,Software subscriptions,589.98,expense,,Software subscriptions - Operations
+P25-01350,2025-12-25,2025-12-01,D03,Operations,A400,Facilities,2162.09,expense,,Facilities - Operations
+P25-01351,2025-12-25,2025-12-01,D04,Technology,A200,Travel,535.25,expense,,Travel - Technology
+P25-01352,2025-12-26,2025-12-01,D02,Marketing,A300,Software subscriptions,682.11,expense,,Software subscriptions - Marketing
+P25-01353,2025-12-26,2025-12-01,D02,Marketing,A300,Software subscriptions,1823.04,expense,,Software subscriptions - Marketing
+P25-01354,2025-12-26,2025-12-01,D05,People,A600,Training,501.17,expense,,Training - People
+P25-01355,2025-12-26,2025-12-01,D06,Finance and Admin,A200,Travel,216.08,expense,,Travel - Finance and Admin
+P25-01356,2025-12-26,2025-12-01,D06,Finance and Admin,A200,Travel,282.44,expense,,Travel - Finance and Admin
+P25-01357,2025-12-27,2025-12-01,D01,Sales,A400,Facilities,952.56,expense,,Facilities - Sales
+P25-01358,2025-12-27,2025-12-01,D05,People,A500,Professional services,735.49,expense,,Professional services - People
+P25-01359,2025-12-28,2025-12-01,D02,Marketing,A500,Professional services,1123.69,expense,,Professional services - Marketing
+P25-01360,2025-12-28,2025-12-01,D04,Technology,A500,Professional services,3403.03,expense,,Professional services - Technology
+P25-01361,2025-12-28,2025-12-01,D05,People,A300,Software subscriptions,161.47,expense,,Software subscriptions - People
+P25-01362,2025-12-28,2025-12-01,D05,People,A300,Software subscriptions,806.52,expense,,Software subscriptions - People
+P25-01363,2025-12-28,2025-12-01,D06,Finance and Admin,A400,Facilities,1348.82,expense,,Facilities - Finance and Admin
+P25-01364,2025-12-28,2025-12-01,D06,Finance and Admin,A600,Training,120.26,expense,,Training - Finance and Admin
+P25-01365,2025-12-28,2025-12-01,D06,Finance and Admin,A600,Training,369.43,expense,,Training - Finance and Admin
+P25-01366,2025-12-29,2025-12-01,D01,Sales,A500,Professional services,713.56,expense,,Professional services - Sales
+P25-01367,2025-12-29,2025-12-01,D02,Marketing,A400,Facilities,1148.57,expense,,Facilities - Marketing
+P25-01368,2025-12-29,2025-12-01,D04,Technology,A400,Facilities,753.30,expense,,Facilities - Technology
+P25-01369,2025-12-29,2025-12-01,D05,People,A400,Facilities,988.90,expense,,Facilities - People
+P25-01370,2025-12-30,2025-12-01,D05,People,A600,Training,708.43,expense,,Training - People
+P25-01371,2025-12-31,2025-12-01,D01,Sales,A100,Salaries and wages,69405.95,expense,,Salaries and wages - Sales
+P25-01372,2025-12-31,2025-12-01,D01,Sales,A500,Professional services,452.34,expense,,Professional services - Sales
+P25-01373,2025-12-31,2025-12-01,D02,Marketing,A100,Salaries and wages,22076.88,expense,,Salaries and wages - Marketing
+P25-01374,2025-12-31,2025-12-01,D03,Operations,A100,Salaries and wages,74131.40,expense,,Salaries and wages - Operations
+P25-01375,2025-12-31,2025-12-01,D03,Operations,A400,Facilities,4455.68,expense,,Facilities - Operations
+P25-01376,2025-12-31,2025-12-01,D04,Technology,A100,Salaries and wages,26861.36,expense,,Salaries and wages - Technology
+P25-01377,2025-12-31,2025-12-01,D05,People,A100,Salaries and wages,15733.31,expense,,Salaries and wages - People
+P25-01378,2025-12-31,2025-12-01,D06,Finance and Admin,A100,Salaries and wages,20124.68,expense,,Salaries and wages - Finance and Admin

@@ -20,6 +20,18 @@ Every session has a **lecture** notebook (theory, demonstrations, check-your-und
 | `06_visualisation_principles_lab.ipynb` | Session 6 lab: From default charts to decision charts |
 | `07_trends_and_growth_lecture.ipynb` | Session 7 lecture: Time series and trends |
 | `07_trends_and_growth_lab.ipynb` | Session 7 lab: Trends, returns and a decision dashboard |
+| `08_correlation_and_regression_lecture.ipynb` | Session 8 lecture: Correlation and regression |
+| `08_correlation_and_regression_lab.ipynb` | Session 8 lab: Discount, profit and advertising spend |
+| `09_sampling_and_experiments_lecture.ipynb` | Session 9 lecture: Sampling, uncertainty and experiments |
+| `09_sampling_and_experiments_lab.ipynb` | Session 9 lab: How sure are we? |
+| `10_finance_budget_lecture.ipynb` | Session 10 lecture: Finance: budget accountability |
+| `10_finance_budget_lab.ipynb` | Session 10 lab: Which spending needs review? |
+| `11_operations_service_lecture.ipynb` | Session 11 lecture: Operations: service performance |
+| `11_operations_service_lab.ipynb` | Session 11 lab: Are deliveries on time? |
+| `12_marketing_campaigns_lecture.ipynb` | Session 12 lecture: Marketing: campaign evaluation |
+| `12_marketing_campaigns_lab.ipynb` | Session 12 lab: Which campaigns deserve the budget? |
+| `13_hr_workforce_lecture.ipynb` | Session 13 lecture: HR: workforce analytics |
+| `13_hr_workforce_lab.ipynb` | Session 13 lab: Is workforce change creating a capacity problem? |
 
 ## Workflow
 
@@ -42,6 +54,7 @@ Use a Python 3.12 environment (matching Colab) built from `requirements.txt`. pa
 
 ## Conventions
 
+- Synthetic case data (marketing-v1, finance-v1, operations-v1, hr-v1) is loaded by a dataset-specific setup cell that downloads from this repo on GitHub, checks SHA-256 and honours a `COURSE_*_DIR` offline override (set automatically by `run_notebooks.py`). Keep each dataset's setup cell identical wherever it is used.
 - Every notebook that uses Superstore starts with the same **setup cell** as its first code cell. It downloads the Superstore sample from Tableau's site, checks its SHA-256 and defines `load_orders()`. Keep it identical in every notebook; `--check-data` enforces this and confirms it reproduces `data/prepared/superstore/retail-v1/order_lines.csv` exactly.
 - Callouts are Markdown blockquotes (`> **Title**`), so they render well both in Colab and on the site. Do not use MkDocs `!!!` admonitions inside notebooks.
 - Markdown cells must not hand-type result numbers; the executed outputs show them. "Your turn" exercise cells give working default code for learners to change; their answers go in `instructor/`, never in the notebooks.

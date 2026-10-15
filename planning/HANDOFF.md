@@ -8,7 +8,15 @@ The user requests Claude takeover next. Read [AGENTS.md](../AGENTS.md) → [PROJ
 
 Learner site keeps the Read the Docs theme (user preference after a brief Material trial, DEC-036) plus `docs/stylesheets/readability.css`; all six pages were restructured for readability (DEC-034, DOC01). Write every new learner page in that style: lead sentence, `---` breaks, short paragraphs, numbered steps, tables or `###` subsections, note/tip/hint/warning admonitions. No Material-only syntax. User approved the rendered result. Preview with `/tmp/kings-data-docs-venv/bin/python -m mkdocs serve` (reinstall from requirements.txt if the venv is gone). D03 Tableau checks remain open because this session had no desktop-app control (DEC-035).
 
-## Private answers are local only — 2026-10-14 (read this first)
+## Sessions 10–13 built — 2026-10-15 (read this first)
+
+All four business cases exist (Sessions 10–13) with synthetic data finance-v1, operations-v1, hr-v1 and marketing-v1. Sessions 1–13 are drafted. Next: push the new data so Colab downloads work, then Session 14 (dashboards and storytelling) and the capstone Sessions 15–16. Keep the venv outside `/tmp` if possible: a temp cleanup wiped it once.
+
+## Sessions 8–9 and finance data — 2026-10-14
+
+Sessions 1–9 now have lecture + lab notebooks and private answers. `finance-v1` (D04) is ready for Session 10. Next: Session 10 finance case, then D05 operations data and Session 11. Run `scripts/run_notebooks.py --check-data` (it now merges split output, so re-runs are byte-stable), then `make convert-all`.
+
+## Private answers are local only — 2026-10-14
 
 The GitHub repo is public, so `instructor/` (answer keys, quiz keys, reference values) is in `.gitignore` and was removed from the entire git history, which the user force-pushed. Every commit ID before `27f52e4` changed; other clones (including any Codex workspace) must re-clone or hard-reset to `origin/main`. Keep writing private answers to `instructor/sessions/NN/` on disk, never commit them, and never `git push --all`: local branches `backup/before-history-rewrite` and `backup/before-untrack` still contain the old answers.
 

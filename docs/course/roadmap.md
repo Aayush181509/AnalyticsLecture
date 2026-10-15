@@ -49,8 +49,8 @@ You keep the evidence from every lab in your portfolio.
 | Session | Lecture | Lab |
 |---|---|---|
 | **7. Time series and trends** | [Time series and trends](../lectures/07_trends_and_growth_lecture.md): trend and seasonality, month-on-month vs year-on-year, moving averages | [Trends, returns and a decision dashboard](../lectures/07_trends_and_growth_lab.md); construction spending |
-| **8. Correlation and regression** | Correlation, confounding, simple linear regression, residuals | Discount vs profit; advertising spend vs revenue |
-| **9. Sampling, uncertainty and experiments** | Samples and populations, confidence intervals, A/B tests, practical vs statistical significance | Simulate sampling; bootstrap a confidence interval; analyse an A/B test |
+| **8. Correlation and regression** | [Correlation and regression](../lectures/08_correlation_and_regression_lecture.md): correlation, confounding, simple linear regression, residuals | [Discount vs profit; advertising spend vs revenue](../lectures/08_correlation_and_regression_lab.md) |
+| **9. Sampling, uncertainty and experiments** | [Sampling, uncertainty and experiments](../lectures/09_sampling_and_experiments_lecture.md): samples and populations, confidence intervals, A/B tests, practical vs statistical significance | [Simulate sampling; bootstrap a confidence interval; analyse an A/B test](../lectures/09_sampling_and_experiments_lab.md) |
 
 ---
 
@@ -58,10 +58,10 @@ You keep the evidence from every lab in your portfolio.
 
 | Session | Lecture | Lab |
 |---|---|---|
-| **10. Finance** | Budget vs actual, variance, reconciliation | Find the spending that needs review |
-| **11. Operations** | Service levels, open shipments, delay distributions | Measure delivery reliability fairly |
-| **12. Marketing** | Funnels, weighted conversion, cost per acquisition, attribution limits | Compare campaigns and judge an experiment |
-| **13. HR** | Headcount, turnover, cohorts, fairness and privacy | Track workforce change correctly |
+| **10. Finance** | [Budget accountability](../lectures/10_finance_budget_lecture.md): budget vs actual, variance, reconciliation | [Which spending needs review?](../lectures/10_finance_budget_lab.md) |
+| **11. Operations** | [Service performance](../lectures/11_operations_service_lecture.md): service levels, open shipments, delay distributions | [Are deliveries on time?](../lectures/11_operations_service_lab.md) |
+| **12. Marketing** | [Campaign evaluation](../lectures/12_marketing_campaigns_lecture.md): funnels, weighted conversion, cost per acquisition, attribution limits | [Which campaigns deserve the budget?](../lectures/12_marketing_campaigns_lab.md) |
+| **13. HR** | [Workforce analytics](../lectures/13_hr_workforce_lecture.md): headcount, turnover, recruitment, fairness and privacy | [Is workforce change creating a capacity problem?](../lectures/13_hr_workforce_lab.md) |
 
 ---
 

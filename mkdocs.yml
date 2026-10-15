@@ -39,6 +39,24 @@ nav:
       - "Session 7: Time Series and Trends":
           - Lecture: lectures/07_trends_and_growth_lecture.md
           - Lab: lectures/07_trends_and_growth_lab.md
+      - "Session 8: Correlation and Regression":
+          - Lecture: lectures/08_correlation_and_regression_lecture.md
+          - Lab: lectures/08_correlation_and_regression_lab.md
+      - "Session 9: Sampling, Uncertainty and Experiments":
+          - Lecture: lectures/09_sampling_and_experiments_lecture.md
+          - Lab: lectures/09_sampling_and_experiments_lab.md
+      - "Session 10: Finance: Budget Accountability":
+          - Lecture: lectures/10_finance_budget_lecture.md
+          - Lab: lectures/10_finance_budget_lab.md
+      - "Session 11: Operations: Service Performance":
+          - Lecture: lectures/11_operations_service_lecture.md
+          - Lab: lectures/11_operations_service_lab.md
+      - "Session 12: Marketing: Campaign Evaluation":
+          - Lecture: lectures/12_marketing_campaigns_lecture.md
+          - Lab: lectures/12_marketing_campaigns_lab.md
+      - "Session 13: HR: Workforce Analytics":
+          - Lecture: lectures/13_hr_workforce_lecture.md
+          - Lab: lectures/13_hr_workforce_lab.md
   - Tableau (Coming Later):
       - "Tableau Lesson 1 (draft)": lessons/class-01.md
       - "Tableau Lesson 2 (draft)": lessons/class-02.md

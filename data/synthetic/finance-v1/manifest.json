@@ -1,0 +1,29 @@
+{
+  "currency": "neutral currency units (not fixed by the course)",
+  "dataset": "finance-v1",
+  "files": {
+    "README.md": {
+      "bytes": 3307,
+      "sha256": "c8f2206370246643184fad869fa02cbfa6bdbd7084b86cee57bb45a42d20bb91"
+    },
+    "finance_actuals.csv": {
+      "bytes": 151996,
+      "sha256": "3aeb2773990f86c21a1536b8854d7290794315e8bc872420c2e5df77151ac7fd"
+    },
+    "finance_budget.csv": {
+      "bytes": 23324,
+      "sha256": "238dbec8e7e80a61068c12c48280ff4f9de91198879ee295366774f530efad60"
+    }
+  },
+  "generator": "scripts/generate_finance.py",
+  "generator_sha256": "eba0dcf53f55b8d2983ae78c24b7e66096f46c721cd5fd5792f43638cb316f5e",
+  "label": "synthetic",
+  "numpy": "2.5.4",
+  "pandas": "2.2.3",
+  "rights": "unresolved; see planning/DATA_STRATEGY.md Rights status",
+  "rows": {
+    "finance_actuals.csv": 1378,
+    "finance_budget.csv": 432
+  },
+  "seed": 20251101
+}

@@ -8,11 +8,11 @@
 mkdocs>=1.6,<2
 pymdown-extensions>=10,<11
 
-# --- Data: source audit, preparation and validation (scripts/*retail*.py, scripts/*catalog*.py, scripts/*marketing*.py) ---
+# --- Data: source audit, preparation and validation (scripts/*retail*.py, scripts/*catalog*.py, scripts/*marketing*.py, scripts/*finance*.py, scripts/*operations*.py, scripts/*hr*.py) ---
 pandas==2.2.3
 openpyxl>=3.1,<4
 xlrd==2.0.2
-# numpy is pinned because scripts/generate_marketing.py must reproduce data/synthetic/marketing-v1 byte for byte.
+# numpy is pinned because the synthetic generators (marketing-v1, finance-v1, operations-v1, hr-v1) must reproduce their releases byte for byte.
 numpy==2.5.4
 
 # --- Figures for the Foundations pages (scripts/make_foundation_figures.py) ---

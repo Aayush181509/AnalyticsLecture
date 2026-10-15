@@ -1,0 +1,24 @@
+{
+  "cutoff": "2025-12-31",
+  "dataset": "operations-v1",
+  "files": {
+    "README.md": {
+      "bytes": 2921,
+      "sha256": "94b5e26e9aaf755cb08c0de55cc0db22c9a53734d2c55bf16cda5b1fcdfd4cd3"
+    },
+    "shipments.csv": {
+      "bytes": 589401,
+      "sha256": "7b5c0860beb2a16ba4f84a3dd0b5bdf9d88e968b720c6541f1dcb7d688c75687"
+    }
+  },
+  "generator": "scripts/generate_operations.py",
+  "generator_sha256": "7373c45ee5cedeafc7a9f2debfce62f71d4f81e7739a7484fb83aa6f096d4f7a",
+  "label": "synthetic",
+  "numpy": "2.5.4",
+  "pandas": "2.2.3",
+  "rights": "unresolved; see planning/DATA_STRATEGY.md Rights status",
+  "rows": {
+    "shipments.csv": 5893
+  },
+  "seed": 20251201
+}

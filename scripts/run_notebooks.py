@@ -27,7 +27,23 @@ from nbclient import NotebookClient
 ROOT = Path(__file__).resolve().parents[1]
 NB_DIR = ROOT / "notebooks"
 LOCAL_XLS = ROOT / "data/raw/eu-superstore/2026-10-12/sample_-_superstore.xls"
+LOCAL_MARKETING = ROOT / "data/synthetic/marketing-v1"
+LOCAL_FINANCE = ROOT / "data/synthetic/finance-v1"
+LOCAL_OPERATIONS = ROOT / "data/synthetic/operations-v1"
+LOCAL_HR = ROOT / "data/synthetic/hr-v1"
 PREPARED_CSV = ROOT / "data/prepared/superstore/retail-v1/order_lines.csv"
+
+
+def merge_streams(outputs):
+    """Join consecutive stdout/stderr chunks; the kernel splits them unpredictably."""
+    merged = []
+    for out in outputs:
+        if (out.output_type == "stream" and merged and merged[-1].output_type == "stream"
+                and merged[-1].name == out.name):
+            merged[-1].text += out.text
+        else:
+            merged.append(out)
+    return merged
 
 
 def execute(path):
@@ -36,6 +52,8 @@ def execute(path):
                    resources={"metadata": {"path": str(NB_DIR)}}).execute()
     for cell in nb.cells:
         cell.metadata.pop("execution", None)
+        if cell.cell_type == "code":
+            cell.outputs = merge_streams(cell.outputs)
     errors = [o for c in nb.cells if c.cell_type == "code" for o in c.outputs if o.output_type == "error"]
     if errors:
         raise SystemExit(f"{path.name}: {len(errors)} cell(s) raised errors")
@@ -74,6 +92,14 @@ def check_data(paths):
 def main(argv):
     if LOCAL_XLS.exists():
         os.environ.setdefault("COURSE_XLS_PATH", str(LOCAL_XLS))
+    if LOCAL_MARKETING.exists():
+        os.environ.setdefault("COURSE_MARKETING_DIR", str(LOCAL_MARKETING))
+    if LOCAL_FINANCE.exists():
+        os.environ.setdefault("COURSE_FINANCE_DIR", str(LOCAL_FINANCE))
+    if LOCAL_OPERATIONS.exists():
+        os.environ.setdefault("COURSE_OPERATIONS_DIR", str(LOCAL_OPERATIONS))
+    if LOCAL_HR.exists():
+        os.environ.setdefault("COURSE_HR_DIR", str(LOCAL_HR))
     paths = [Path(a).resolve() for a in argv if a.endswith(".ipynb")] or sorted(NB_DIR.glob("*.ipynb"))
     for path in paths:
         execute(path)

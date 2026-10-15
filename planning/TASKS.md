@@ -21,13 +21,13 @@ Updated 2026-10-12. Status definitions: DONE = acceptance met with stated eviden
 | L02 / P0 | Produce S3 retail pilot and private solutions | L01, D03 | DEFERRED (Tableau section, DEC-041) | All PILOT_LESSON sections become actual instructions; questions/hints/answers tested on same CSV version. 2026-10-12: draft learner page `docs/lessons/class-03.md` (segment KPIs, totals-first ratios, reconciliation, region/category independent work, mean-of-ratios debug, five-sentence recommendation) and private `instructor/sessions/class-03/teaching-notes.md` with reference values and rehearsal checklist (DEC-040). Remaining: Tableau rehearsal, D03 checks, novice trial. |
 | V01 / P0 | Trial pilot before extending production | L02 | PLANNED | Fresh Tableau run with version recorded; KPI cross-checks and timed novice trial; revise overloaded tasks and capture accessibility feedback. |
 | L03 / P1 | Produce S4 retail dashboard and portfolio checkpoint | V01, D02R | DEFERRED (Tableau section, DEC-041) | Monthly growth and qualified return-list interpretation; separate controlled refund/cohort example; dashboard, critique prompts, alternative acceptable recommendations, rubric feedback and exact-data solutions. 2026-10-12: draft learner page `docs/lessons/class-04.md` (monthly trend, MoM vs YoY growth with LOOKUP caveats, returns-list share, dashboard with shared Region filter, seasonal debugging case, test recommendation) and private `instructor/sessions/class-04/teaching-notes.md`. Synthetic refund/cost exercise (D02R) still to build. Remaining: rehearsal and D02R. |
-| D04 / P1 | Source/generate and validate finance data | D01, V01 | PLANNED | Monthly budget and ledger reconcile; intentional duplication trap reproducible; cost favorability and zero budgets tested. |
+| D04 / P1 | Source/generate and validate finance data | D01 | DONE (local) | `data/synthetic/finance-v1/` from `scripts/generate_finance.py` (seed 20251101), validated by `scripts/validate_finance.py`; private answers in `instructor/solutions/finance-v1/` (DEC-047). Feeds S-10. |
 | L04 / P1 | Produce S5 finance case | L03, D04 | PLANNED | Beginner prepared source and source-model extension; favorable/unfavorable variance task, debug, recommendation and separate verified answers. |
-| D05 / P1 | Source/generate and validate operations data | D01, V01 | PLANNED | Frozen due cohort includes overdue open shipments; future/missing dates flagged; hand-worked denominator and median checks. |
+| D05 / P1 | Source/generate and validate operations data | D01 | DONE (local) | `data/synthetic/operations-v1/` from `scripts/generate_operations.py` (seed 20251201), validated by `scripts/validate_operations.py`; private answers `instructor/solutions/operations-v1/` (DEC-048). |
 | L05 / P1 | Produce S6 operations case | L04, D05 | PLANNED | On-time service dashboard, pending shipment debug, completeness checks and feasible follow-up action. |
-| D06 / P1 | Source/generate and validate marketing data | D01, V01 | PLANNED | Additive funnel counts and spend, attribution contract, weighted-rate counterexample, zero denominators and unassigned orders tested. |
+| D06 / P1 | Source/generate and validate marketing data | D01, V01 | SUPERSEDED (DEC-048) | Additive funnel counts and spend, attribution contract, weighted-rate counterexample, zero denominators and unassigned orders tested. |
 | L06 / P1 | Produce S7 marketing case | L05, D06 | PLANNED | Weighted metrics, campaign comparison and attribution-limit challenge; verified solutions. |
-| D07 / P1 | Generate/validate synthetic HR data | D01, V01 | PLANNED | Employment spells, historical snapshots, exits and recruitment dates reconcile; synthetic-only, no real identifiers; small cohorts represented carefully. |
+| D07 / P1 | Generate/validate synthetic HR data | D01 | DONE (local) | `data/synthetic/hr-v1/` from `scripts/generate_hr.py` (seed 20251231), validated by `scripts/validate_hr.py` incl. company and department bridges; private answers `instructor/solutions/hr-v1/` (DEC-048). |
 | L07 / P1 | Produce S8 HR case | L06, D07 | PLANNED | Historical turnover/cohort task, current-headcount debug, fair-comparison challenge and private solutions. |
 | P01 / P1 | Write S9–S12 synthesis/capstone kit | L07, R01 | PLANNED | All-domain portfolio checklist; three-domain executive brief; no incompatible-grain grand join; peer review, briefing schedule and rubric exemplars. |
 | X01 / P2 | Produce reviewed transfer choices: sports, technology, government | S01, V01 | PLANNED | Source-specific question/dictionary/metrics; guided, independent, debug and recommendation task; exact-data checks/private answers; use existing practice or optional route, preserve five core outcomes and24h contact. |
@@ -82,12 +82,12 @@ Each session needs: lecture notebook, lab notebook (core / stretch / challenge),
 | S-05 | Metrics and KPIs | S-02 | REVIEW | `05_metrics_and_kpis_lecture.ipynb` new, lab restructured (Berkeley, metric contract, Simpson within West/Technology), answers in `instructor/sessions/05/` — 2026-10-14 |
 | S-06 | Visualisation principles | S-04 | REVIEW | `06_visualisation_principles_lecture/lab.ipynb` + answers built 2026-10-14; before/after demos for every principle |
 | S-07 | Time series and trends | S-05 | REVIEW | `07_trends_and_growth_lecture.ipynb` new, lab restructured with construction spending (XXXX/T/US, not adjusted, 2002-01–2016-09, downloaded with SHA-256), answers in `instructor/sessions/07/` — 2026-10-14 |
-| S-08 | Correlation and regression | S-04, D08 | PLANNED | Needs synthetic marketing spend/revenue data |
-| S-09 | Sampling, uncertainty and experiments | S-04, D08 | PLANNED | Needs synthetic A/B dataset (D08) |
-| S-10 | Finance case | D04 | PLANNED | |
-| S-11 | Operations case | D05 | PLANNED | |
-| S-12 | Marketing case | D06, D08 | PLANNED | |
-| S-13 | HR case | D07 | PLANNED | |
+| S-08 | Correlation and regression | S-04, D08 | DONE (draft; Colab trial pending) | Lecture + lab notebooks, quiz, private answers in `instructor/sessions/08/` (2026-10-14). Outputs match marketing-v1 references. |
+| S-09 | Sampling, uncertainty and experiments | S-04, D08 | DONE (draft; Colab trial pending) | Lecture + lab notebooks, quiz, private answers in `instructor/sessions/09/` (2026-10-14). A/B results match marketing-v1 references. |
+| S-10 | Finance case | D04 | DONE (draft; Colab trial pending) | Lecture + lab, quiz, private answers `instructor/sessions/10/` (2026-10-14). Matches finance-v1 references. |
+| S-11 | Operations case | D05 | DONE (draft; Colab trial pending) | Lecture + lab, quiz, private answers `instructor/sessions/11/` (2026-10-14). Matches operations-v1 references. |
+| S-12 | Marketing case | D08 | DONE (draft; Colab trial pending) | Lecture + lab, quiz, private answers `instructor/sessions/12/` (2026-10-15). Matches marketing-v1 references. |
+| S-13 | HR case | D07 | DONE (draft; Colab trial pending) | Lecture + lab, quiz, private answers `instructor/sessions/13/` (2026-10-15). Matches hr-v1 references. |
 | S-14 | Dashboards and storytelling | S-07 | PLANNED | |
 | S-15 | Capstone studio | S-10–S-13 | PLANNED | |
 | S-16 | Executive briefings | S-15, R01 | PLANNED | Presentation format depends on class size |
@@ -95,3 +95,7 @@ Each session needs: lecture notebook, lab notebook (core / stretch / challenge),
 | T-01–T-04 | Tableau section | S-14 | DEFERRED | From the Tableau drafts |
 
 Sessions 1 and 2 built 2026-10-14 (REVIEW). The superseded notebooks 00–02 and old generated pages 00–04 were deleted with user approval. Sessions 3, 4 and 6 built 2026-10-14 (REVIEW). Sessions 5 and 7 completed and D08 built 2026-10-14. Next: (1) independent review + Colab trial of Sessions 1–7; (2) Sessions 8 and 9 (use D08); (3) D04–D07 case data for Sessions 10–13.
+
+Next concrete task (2026-10-14): Session 10 (finance case) lecture + lab from finance-v1; then D05 operations data → S-11, D06/D07 → S-12/S-13.
+
+Next concrete tasks (2026-10-15): push the new synthetic releases (finance-v1, operations-v1, hr-v1) so Colab downloads work; Session 14 (dashboards and storytelling); Sessions 15–16 (capstone kit); a real Colab trial; D06 is not needed (marketing case uses D08 marketing-v1).

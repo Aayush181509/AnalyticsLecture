@@ -8,13 +8,13 @@ What you need before you start, how to run the lessons in Google Colab, how to s
 
 ## What you need
 
-- A computer with a modern web browser (Chrome, Edge, Firefox or Safari)
-- A Google account, to use Google Colab
-- A way to receive course files and submit your work
+- A **laptop** with a modern web browser (Chrome, Edge, Firefox or Safari), brought to every class: all sessions are in person
+- A **Google account**, to use Google Colab
+- Your login for the course **Moodle** page, where you submit your work
 
 !!! note "Before teaching starts"
 
-    We will confirm devices, accessibility needs and the submission channel with everyone. Nothing needs to be installed for the Python lessons.
+    Nothing needs to be installed for the Python lessons. Tell your facilitator before the first session if you need any accessibility support or cannot bring a laptop.
 
 ---
 
@@ -35,6 +35,21 @@ The first code cell in each lesson downloads the course data from Tableau's samp
     Choose **Runtime → Restart session and run all**. This runs everything again from the top and fixes most problems.
 
 New to Python? Start with the [Session 1 lab: Python, Colab and always plotting your data](../lectures/01_why_data_analytics_lab.md).
+
+---
+
+## Submit your work on Moodle
+
+Each session has a Moodle assignment for its lab, and there is one for the capstone.
+
+1. In Colab, finish the lab and run all cells so your outputs are visible.
+2. Choose **File → Download → Download .ipynb**.
+3. Open the matching assignment on the course Moodle page and upload the `.ipynb` file.
+4. If the lab asks for a written answer or an image (for example a dashboard), upload it to the same assignment.
+
+!!! tip "Name your files clearly"
+
+    Use `SessionNN_lab_YourName.ipynb`, for example `Session05_lab_AnitaShrestha.ipynb`.
 
 ---
 

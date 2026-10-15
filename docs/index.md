@@ -18,7 +18,7 @@ We will explore and explain data from five areas of a business: retail and e-com
 
 ## Course at a glance
 
-- **Live, hands-on classes.** Demonstrations, guided practice and independent work, plus practice between sessions.
+- **In-person, hands-on classes.** Each session has a lecture followed by a lab. Bring your laptop.
 - **Spreadsheet basics are enough.** No coding experience is assumed. Session 1 starts from the very beginning.
 - **Python in your browser.** You run every lesson in Google Colab: nothing to install, and every result on these pages comes from the same code you run.
 - **Synthetic and public data only.** Never private workplace data.

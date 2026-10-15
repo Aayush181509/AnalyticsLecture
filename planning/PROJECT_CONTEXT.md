@@ -4,6 +4,8 @@ Last updated: 2026-10-12 (Asia/Kathmandu). Phase: planning foundation, source au
 
 ## Confirmed by the user
 
+**Logistics (2026-10-15, DEC-050):** 21–40 learners; in person; Moodle submissions; individual executive briefings for feedback only, run in two parallel rooms with two assessors in Session 16.
+
 **Update 2026-10-13 (DEC-041):** the user switched the main teaching path to **Python** ("plan all these contents in python for now, later we can add a separate section and teach it for tableau"). Learners run notebooks in **Google Colab** using **read, run, then modify** code; the four Tableau lesson drafts are kept as a later "Tableau (coming later)" section. Learner pages focus on content, not session counts or hours (DEC-039). Items below that make Tableau the required first tool or Python optional are superseded in those respects; their data, metric and boundary rules still apply.
 
 

@@ -105,8 +105,9 @@ By the end of the course you should be able to:
 ## How you will be assessed
 
 - **Theory quizzes** at the start of each lecture help you check your understanding. They are for feedback.
-- Your **lab portfolio** collects your evidence from every session and covers all five business areas.
-- Your **capstone** combines findings from at least three areas into a dashboard and an executive briefing.
+- Your **lab portfolio** collects your evidence from every session and covers all five business areas. You submit each lab on **Moodle**.
+- Your **capstone** combines findings from at least three areas into a dashboard and an **individual** executive briefing, presented in Session 16.
+- Everything is assessed for **feedback**, using the rubric shown in Session 16. It is not a graded exam.
 
 Feedback rewards correct reasoning, careful checking and honest statements of uncertainty, not only attractive charts.
 

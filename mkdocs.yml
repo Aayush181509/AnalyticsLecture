@@ -88,6 +88,16 @@ nav:
           - "Lecture: Forecasting": china/D3_lecture_forecasting.md
           - "Lab 3: Text mining": china/D3_lab_lab3_text_mining.md
           - "Lab 4: Forecasting": china/D3_lab_lab4_forecasting.md
+      - "Day 4 · Mon 16 Nov":
+          - "Lecture: Predictive analytics and regression": china/D4_lecture_predictive_regression.md
+          - "Lecture: Data mining with text features": china/D4_lecture_data_mining_text_features.md
+          - "Assignment 2: Predictive data mining report": china/D4_assignment2_predictive_data_mining.md
+      - "Day 5 · Tue 17 Nov":
+          - "Lecture: Financial modelling and simulation": china/D5_lecture_financial_modelling_simulation.md
+          - "Lab 5: Linear regression": china/D5_lab_lab5_regression.md
+      - "Day 7 · Thu 19 Nov":
+          - "Lecture: Course review": china/D7_lecture_course_review.md
+          - "Assignment 4: Capstone": china/D7_assignment4_capstone.md
   - Tableau (Coming Later):
       - "Tableau Lesson 1 (draft)": lessons/class-01.md
       - "Tableau Lesson 2 (draft)": lessons/class-02.md

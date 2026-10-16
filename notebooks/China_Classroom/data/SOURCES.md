@@ -12,7 +12,17 @@ These files ship with the notebooks so the course runs without internet access (
 | `nltk_data/sentiment/vader_lexicon.zip` | Lab 3, Assignment 2, capstone | `nltk/nltk_data` (VADER lexicon, Hutto & Gilbert 2014) | VADER is MIT-licensed | `8adba429…45c4` |
 | `nltk_data/corpora/stopwords.zip` | Lab 3 | `nltk/nltk_data` | Per nltk_data package terms | `48c0e52d…946b` |
 | `nltk_data/tokenizers/punkt_tab.zip` | Lab 3 | `nltk/nltk_data` (Punkt tokenizer tables) | Per nltk_data package terms | `e57f6418…0106` |
+| `ecovate_focus_group.csv` | Assignment 4 (capstone) | The five fictional EcoVate focus-group comments printed in the DATA 300 syllabus, Assignment 4; typed into a CSV (columns `Review_ID`, `Review_Text`) on 2026-10-15 | Fictional case text from the course syllabus; course use only | `38f46e2e…a2ea` |
+| `ecovate_base_demand.csv` | Assignment 4 (capstone) | The five-year EcoVate base demand plan (years 1–5) given in the DATA 300 syllabus, Assignment 4; typed into a CSV (columns `Year`, `Base_Demand`) on 2026-10-15 | Fictional case figures from the course syllabus; course use only | `ed990952…efba4` |
 
 The CO₂ series for Lab 4 is not bundled: it ships inside `statsmodels` (`sm.datasets.co2`) and loads offline.
 
 Notebooks add `data/nltk_data` to NLTK's search path and unzip `punkt_tab.zip` on first use (NLTK reads the other two directly from their zip files). Full SHA-256 values: run `shasum -a 256 *.csv nltk_data/*/*.zip` in this folder.
+
+## Added for Days 4–5 (2026-10-16)
+
+| File | Used in | Origin | Terms | SHA-256 |
+|---|---|---|---|---|
+| `leafline_simulation_practice.xlsx` | Day 5 lecture (financial modelling and simulation) | Made for this course with openpyxl: a **synthetic** LeafLine Tea branch model (Read me, Model and Simulation sheets; 1,000 trials of `RAND()` / `NORM.INV()` formulas, no stored values; Excel calculates on opening). Built deterministically (fixed document dates and zip timestamps) by a private generator script | Course material; synthetic, no third-party data | `b9ab22c8…f6bc` |
+
+Generated in the notebooks, not bundled: the Assignment 2 home sales (500 rows, `np.random.seed(101)`, the syllabus's own generator) and the Day 4 bicycle listings (600 rows, `default_rng(2026)`), both synthetic. The Day 4 regression lecture reuses `diamonds.csv`.

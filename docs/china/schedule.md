@@ -86,6 +86,8 @@ Pages: [Text mining](D3_lecture_text_mining.md) · [Forecasting](D3_lecture_fore
 - Judging a model: R², error and testing on new data
 - Data mining with text features; Assignment 2 briefing
 
+Pages: [Predictive analytics and regression](D4_lecture_predictive_regression.md) · [Data mining with text features](D4_lecture_data_mining_text_features.md) · [Assignment 2](D4_assignment2_predictive_data_mining.md)
+
 ### Day 5 · Tuesday 17 November
 
 **Theory**
@@ -93,7 +95,9 @@ Pages: [Text mining](D3_lecture_text_mining.md) · [Forecasting](D3_lecture_fore
 - Financial modelling
 - Spreadsheet simulation in Excel: random inputs, distributions, Data Tables and scenarios
 
-**Lab:** Applied Lab 5, predictive linear regression modelling.
+Pages: [Financial modelling and simulation](D5_lecture_financial_modelling_simulation.md)
+
+**Lab:** [Applied Lab 5, predictive linear regression modelling](D5_lab_lab5_regression.md).
 
 ### Day 6 · Wednesday 18 November
 
@@ -112,7 +116,9 @@ Pages: [Text mining](D3_lecture_text_mining.md) · [Forecasting](D3_lecture_fore
 - Course review
 - **Final exam**
 
-**Lab:** Capstone (Assignment 4) launch and studio; support for Assignments 2 and 3.
+Pages: [Course review](D7_lecture_course_review.md)
+
+**Lab:** [Capstone (Assignment 4)](D7_assignment4_capstone.md) launch and studio; support for Assignments 2 and 3.
 
 ---
 

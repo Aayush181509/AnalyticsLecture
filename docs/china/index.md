@@ -6,7 +6,7 @@ DATA 300 for the China classroom: a pre-class online week, seven intensive teach
 
 !!! note "This section is being prepared"
 
-    The schedule, setup, pre-class and Module 1 (Days 1–3) pages are ready; the remaining days are added before the course starts on **Tuesday 10 November 2026**.
+    The schedule, setup, pre-class, Module 1 and Days 4, 5 and 7 pages are ready; Day 6 is added before the course starts on **Tuesday 10 November 2026**.
 
 ---
 

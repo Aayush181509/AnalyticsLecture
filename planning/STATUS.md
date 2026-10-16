@@ -16,6 +16,10 @@ Built lecture + lab notebooks and private answers for Session 3 (cleaning and pr
 
 Built Session 1 (`01_why_data_analytics_lecture/lab.ipynb`) and Session 2 (`02_data_and_grain_lecture/lab.ipynb`) with quizzes and private answers in `instructor/sessions/01/` and `02/` (DEC-045). Renamed draft labs to `05_metrics_and_kpis_lab.ipynb` and `07_trends_and_growth_lab.ipynb` and fixed their titles, badges and links. Updated nav, roadmap, index, setup, Tableau draft links and notebooks/README. Verification: `run_notebooks.py --check-data` on all six notebooks (no errors; data check PASS, 4 notebooks share one setup cell, 6,815 rows / 3,388 orders); nbconvert of the six; `check_docs.py` PASS (27 pages); strict MkDocs build passed (INFO lists the five orphaned old lesson pages). Then, with user approval, deleted superseded notebooks 00–02 and old pages 00–04 and committed. Not done: independent review, Colab trial, push.
 
+## Claude session: China classroom Days 4, 5 and 7 — 2026-10-16
+
+Agents built Day 4 (regression and text-features lectures, Assignment 2), Day 5 (financial modelling and Excel simulation lecture with a synthetic practice workbook, Lab 5) and Day 7 (course review, capstone Assignment 4, private final exam and key). The Day 6 agent was stopped before writing files. Verification: all seven notebooks re-executed with unchanged sha256; no local paths, internet loaders or exam text in public files; `check_docs.py` PASS (72 pages); strict build PASS.
+
 ## Claude session: China classroom Day 3 — 2026-10-15
 
 An agent built Day 3: text mining and forecasting lectures, Applied Labs 3 (VADER on bundled lexicon) and 4 (CO₂ seasonal ARIMA), and a private 100-mark, 90-minute midterm with key in `instructor/china_classroom/D3/`. User confirmed public own-words lab pages, same-day lab deadlines and offline PDF merging (DEC-053; guidance added to `docs/china/setup.md`). Verification: D3 notebooks re-executed with unchanged sha256, no local paths or internet loaders, strict build PASS.

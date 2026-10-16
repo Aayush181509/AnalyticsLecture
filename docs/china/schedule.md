@@ -107,7 +107,9 @@ Pages: [Financial modelling and simulation](D5_lecture_financial_modelling_simul
 - BI case studies, ethics and societal context
 - Assignment 3 briefing
 
-**Lab:** Applied Lab 6, spreadsheet simulation, and Applied Lab 7, BI case study.
+Pages: [BI strategy and ethics](D6_lecture_bi_strategy_ethics.md) · [Assignment 3](D6_assignment3_simulation_decision_model.md)
+
+**Lab:** [Applied Lab 6, spreadsheet simulation](D6_lab_lab6_spreadsheet_simulation.md), and [Applied Lab 7, BI case study](D6_lab_lab7_bi_case_study.md).
 
 ### Day 7 · Thursday 19 November
 

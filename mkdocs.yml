@@ -95,6 +95,11 @@ nav:
       - "Day 5 · Tue 17 Nov":
           - "Lecture: Financial modelling and simulation": china/D5_lecture_financial_modelling_simulation.md
           - "Lab 5: Linear regression": china/D5_lab_lab5_regression.md
+      - "Day 6 · Wed 18 Nov":
+          - "Lecture: BI strategy and ethics": china/D6_lecture_bi_strategy_ethics.md
+          - "Lab 6: Spreadsheet simulation": china/D6_lab_lab6_spreadsheet_simulation.md
+          - "Lab 7: BI case study": china/D6_lab_lab7_bi_case_study.md
+          - "Assignment 3: Simulation decision model": china/D6_assignment3_simulation_decision_model.md
       - "Day 7 · Thu 19 Nov":
           - "Lecture: Course review": china/D7_lecture_course_review.md
           - "Assignment 4: Capstone": china/D7_assignment4_capstone.md

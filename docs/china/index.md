@@ -4,9 +4,9 @@
 DATA 300 for the China classroom: a pre-class online week, seven intensive teaching days on campus, and a post-class online week, covering descriptive, predictive and prescriptive analytics for better business decisions.
 </p>
 
-!!! note "This section is being prepared"
+!!! note "Course materials"
 
-    The schedule, setup, pre-class, Module 1 and Days 4, 5 and 7 pages are ready; Day 6 is added before the course starts on **Tuesday 10 November 2026**.
+    All pre-class and teaching-day pages are ready. The course starts on **Tuesday 10 November 2026**.
 
 ---
 

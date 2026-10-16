@@ -10,7 +10,7 @@ Learner site keeps the Read the Docs theme (user preference after a brief Materi
 
 ## DATA 300 China classroom — 2026-10-15 (read this first)
 
-A second, separate course is being prepared: `planning/china_classroom/PLAN.md` and `docs/china/`. Offline-first (no Colab/GitHub); syllabus labs are graded work. Structure follows the WUT syllabus (DEC-052). Pre-class, Module 1, and Days 4, 5 and 7 (incl. private midterm and final exam) are done; Day 6 (BI lecture, Labs 6–7, Assignment 3) is not started, pending the user. Use `planning/agents/china-notebook-author.md`. Publishing own-words lab pages, lab deadlines and offline PDF merging are settled (DEC-053). Open: midterm rules (closed book assumed).
+A second, separate course is being prepared: `planning/china_classroom/PLAN.md` and `docs/china/`. Offline-first (no Colab/GitHub); syllabus labs are graded work. Structure follows the WUT syllabus (DEC-052). All pre-class and Days 1–7 materials are built (drafts), with private exams and answers in `instructor/china_classroom/`. Next: rehearse Excel labs (Day 5 workbook, Lab 6 Data Table, Lab 7 Forecast Sheet) and Tableau labs on a lab PC; instructor review of all drafts. Use `planning/agents/china-notebook-author.md`. Publishing own-words lab pages, lab deadlines and offline PDF merging are settled (DEC-053). Open: midterm rules (closed book assumed).
 
 ## All 16 Python sessions drafted — 2026-10-15
 

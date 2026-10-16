@@ -26,3 +26,11 @@ Notebooks add `data/nltk_data` to NLTK's search path and unzip `punkt_tab.zip` o
 | `leafline_simulation_practice.xlsx` | Day 5 lecture (financial modelling and simulation) | Made for this course with openpyxl: a **synthetic** LeafLine Tea branch model (Read me, Model and Simulation sheets; 1,000 trials of `RAND()` / `NORM.INV()` formulas, no stored values; Excel calculates on opening). Built deterministically (fixed document dates and zip timestamps) by a private generator script | Course material; synthetic, no third-party data | `b9ab22c8…f6bc` |
 
 Generated in the notebooks, not bundled: the Assignment 2 home sales (500 rows, `np.random.seed(101)`, the syllabus's own generator) and the Day 4 bicycle listings (600 rows, `default_rng(2026)`), both synthetic. The Day 4 regression lecture reuses `diamonds.csv`.
+
+## Added for Day 6 (2026-10-16)
+
+| File | Used in | Origin | Terms | SHA-256 |
+|---|---|---|---|---|
+| `ecodrive_battery_costs.xlsx` | Day 6 lecture; Lab 7 (BI case study) | The 11 quarterly battery costs per vehicle (Q1-2023 to Q3-2025) of the **fictional** EcoDrive Motors, as printed in the DATA 300 syllabus, Applied Lab 7. One sheet, *Historical Data*: `Period` (1–11, the numeric timeline Excel's Forecast Sheet needs), `Battery Cost per EV ($)`, `Quarter` (label). Built with openpyxl deterministically (fixed document dates and zip timestamps) by a private generator script | Fictional case figures from the course syllabus; course use only | `4f168461…3bbb` |
+
+Generated in the notebooks, not bundled: the Day 6 lecture's synthetic stores, job applicants and bank accounts (`default_rng` seeds 6, 11 and 3), the Lab 6 demand draws (seeds 2026 and 7) and the Assignment 3 reference simulation (seed 322). The Day 6 lecture also reuses `tips.csv`.

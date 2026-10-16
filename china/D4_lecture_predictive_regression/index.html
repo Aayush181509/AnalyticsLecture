@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>Day 4 lecture: Predictive analytics and regression - Data Analytics</title>
+    <title>Lecture: Predictive analytics and regression - Data Analytics</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
@@ -13,7 +13,7 @@
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Day 4 lecture: Predictive analytics and regression";
+        var mkdocs_page_name = "Lecture: Predictive analytics and regression";
         var mkdocs_page_input_path = "china/D4_lecture_predictive_regression.md";
         var mkdocs_page_url = null;
       </script>
@@ -1202,7 +1202,7 @@
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">DATA 300 (China Classroom)</span></p>
-              <ul>
+              <ul class="current">
                   <li class="toctree-l1"><a class="reference internal" href="../">Overview</a>
     <ul>
     <li class="toctree-l2"><a class="reference internal" href="../#what-the-course-covers">What the course covers</a>
@@ -1659,6 +1659,304 @@
                 </li>
     </ul>
                   </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >Day 4 · Mon 16 Nov</a>
+    <ul class="current">
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Lecture: Predictive analytics and regression</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#recap-quiz">Recap quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#part-1-predictive-analytics-and-its-vocabulary">Part 1: Predictive analytics and its vocabulary</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#part-2-the-data-diamond-prices">Part 2: The data: diamond prices</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#part-3-simple-linear-regression">Part 3: Simple linear regression</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#part-4-how-good-is-the-model-r2-rmse-and-mae">Part 4: How good is the model? R², RMSE and MAE</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#part-5-training-and-test-data">Part 5: Training and test data</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#part-6-multiple-linear-regression-and-adjusted-r2">Part 6: Multiple linear regression and adjusted R²</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#part-7-categorical-variables">Part 7: Categorical variables</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#part-8-overfitting">Part 8: Overfitting</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#part-9-residual-checks">Part 9: Residual checks</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#part-10-correlation-is-not-causation">Part 10: Correlation is not causation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#part-11-from-model-to-decision">Part 11: From model to decision</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#summary">Summary</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#quick-reference">Quick reference</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#closing-quiz">Closing quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#next">Next</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../D4_lecture_data_mining_text_features/">Lecture: Data mining with text features</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../D4_lecture_data_mining_text_features/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D4_lecture_data_mining_text_features/#part-1-what-data-mining-is">Part 1: What data mining is</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D4_lecture_data_mining_text_features/#part-2-structured-and-unstructured-data">Part 2: Structured and unstructured data</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D4_lecture_data_mining_text_features/#part-3-the-case-second-hand-bicycle-listings">Part 3: The case: second-hand bicycle listings</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D4_lecture_data_mining_text_features/#part-4-text-into-numbers">Part 4: Text into numbers</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D4_lecture_data_mining_text_features/#part-5-do-the-text-features-help">Part 5: Do the text features help?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D4_lecture_data_mining_text_features/#part-6-pitfalls">Part 6: Pitfalls</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D4_lecture_data_mining_text_features/#part-7-assignment-2-briefing">Part 7: Assignment 2 briefing</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D4_lecture_data_mining_text_features/#summary">Summary</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D4_lecture_data_mining_text_features/#quick-reference">Quick reference</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D4_lecture_data_mining_text_features/#closing-quiz">Closing quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D4_lecture_data_mining_text_features/#next">Next</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../D4_assignment2_predictive_data_mining/">Assignment 2: Predictive data mining report</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../D4_assignment2_predictive_data_mining/#the-scenario">The scenario</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D4_assignment2_predictive_data_mining/#what-you-must-do">What you must do</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D4_assignment2_predictive_data_mining/#part-1-the-analysis">Part 1: The analysis</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D4_assignment2_predictive_data_mining/#part-2-the-business-report">Part 2: The business report</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D4_assignment2_predictive_data_mining/#part-3-export-and-submit">Part 3: Export and submit</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D4_assignment2_predictive_data_mining/#how-it-is-marked">How it is marked</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D4_assignment2_predictive_data_mining/#final-checklist">Final checklist</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Day 5 · Tue 17 Nov</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../D5_lecture_financial_modelling_simulation/">Lecture: Financial modelling and simulation</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../D5_lecture_financial_modelling_simulation/#recap-quiz">Recap quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D5_lecture_financial_modelling_simulation/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D5_lecture_financial_modelling_simulation/#part-1-what-a-financial-model-is">Part 1: What a financial model is</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D5_lecture_financial_modelling_simulation/#part-2-the-case-a-new-leafline-tea-branch">Part 2: The case: a new LeafLine Tea branch</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D5_lecture_financial_modelling_simulation/#part-3-what-if-analysis-data-tables-and-goal-seek">Part 3: What-if analysis: Data Tables and Goal Seek</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D5_lecture_financial_modelling_simulation/#part-4-scenarios">Part 4: Scenarios</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D5_lecture_financial_modelling_simulation/#part-5-random-inputs-in-excel-and-python">Part 5: Random inputs in Excel and Python</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D5_lecture_financial_modelling_simulation/#part-6-monte-carlo-simulation">Part 6: Monte Carlo simulation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D5_lecture_financial_modelling_simulation/#part-7-risk-measures">Part 7: Risk measures</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D5_lecture_financial_modelling_simulation/#part-8-how-many-trials">Part 8: How many trials?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D5_lecture_financial_modelling_simulation/#part-9-the-flaw-of-averages">Part 9: The flaw of averages</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D5_lecture_financial_modelling_simulation/#part-10-comparing-two-decisions">Part 10: Comparing two decisions</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D5_lecture_financial_modelling_simulation/#part-11-reporting-a-simulation">Part 11: Reporting a simulation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D5_lecture_financial_modelling_simulation/#summary">Summary</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D5_lecture_financial_modelling_simulation/#excel-reference">Excel reference</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D5_lecture_financial_modelling_simulation/#closing-quiz">Closing quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D5_lecture_financial_modelling_simulation/#this-afternoon">This afternoon</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../D5_lab_lab5_regression/">Lab 5: Linear regression</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../D5_lab_lab5_regression/#the-business-scenario">The business scenario</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D5_lab_lab5_regression/#part-1-load-the-data-and-choose-features-and-target">Part 1: Load the data and choose features and target</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D5_lab_lab5_regression/#part-2-traintest-split-and-model-training">Part 2: Train/test split and model training</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D5_lab_lab5_regression/#part-3-out-of-sample-prediction-and-evaluation">Part 3: Out-of-sample prediction and evaluation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D5_lab_lab5_regression/#part-4-residual-diagnostics">Part 4: Residual diagnostics</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D5_lab_lab5_regression/#part-5-questions">Part 5: Questions</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D5_lab_lab5_regression/#going-further-not-graded">Going further (not graded)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D5_lab_lab5_regression/#part-6-export-and-submit">Part 6: Export and submit</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D5_lab_lab5_regression/#checklist-before-you-upload">Checklist before you upload</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D5_lab_lab5_regression/#how-it-is-marked">How it is marked</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Day 6 · Wed 18 Nov</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../D6_lecture_bi_strategy_ethics/">Lecture: BI strategy and ethics</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../D6_lecture_bi_strategy_ethics/#recap-quiz">Recap quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D6_lecture_bi_strategy_ethics/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D6_lecture_bi_strategy_ethics/#part-1-what-business-intelligence-is">Part 1: What business intelligence is</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D6_lecture_bi_strategy_ethics/#part-2-bi-strategy">Part 2: BI strategy</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D6_lecture_bi_strategy_ethics/#part-3-bi-tools-and-architecture">Part 3: BI tools and architecture</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D6_lecture_bi_strategy_ethics/#part-4-bi-case-studies-judging-impact">Part 4: BI case studies: judging impact</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D6_lecture_bi_strategy_ethics/#part-5-ethics-privacy-bias-transparency-misuse-of-metrics">Part 5: Ethics: privacy, bias, transparency, misuse of metrics</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D6_lecture_bi_strategy_ethics/#part-6-societal-context-putting-ethics-into-the-numbers">Part 6: Societal context: putting ethics into the numbers</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D6_lecture_bi_strategy_ethics/#part-7-assignment-3-briefing">Part 7: Assignment 3 briefing</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D6_lecture_bi_strategy_ethics/#summary">Summary</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D6_lecture_bi_strategy_ethics/#closing-quiz">Closing quiz</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D6_lecture_bi_strategy_ethics/#this-afternoon">This afternoon</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../D6_lab_lab6_spreadsheet_simulation/">Lab 6: Spreadsheet simulation</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../D6_lab_lab6_spreadsheet_simulation/#the-business-scenario">The business scenario</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D6_lab_lab6_spreadsheet_simulation/#part-1-the-base-deterministic-model">Part 1: The base (deterministic) model</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D6_lab_lab6_spreadsheet_simulation/#part-2-what-if-analysis-with-a-two-way-data-table">Part 2: What-if analysis with a two-way Data Table</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D6_lab_lab6_spreadsheet_simulation/#part-3-risk-simulation-monte-carlo">Part 3: Risk simulation (Monte Carlo)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D6_lab_lab6_spreadsheet_simulation/#part-4-questions">Part 4: Questions</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D6_lab_lab6_spreadsheet_simulation/#part-5-save-and-submit">Part 5: Save and submit</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D6_lab_lab6_spreadsheet_simulation/#checklist-before-you-upload">Checklist before you upload</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D6_lab_lab6_spreadsheet_simulation/#how-it-is-marked">How it is marked</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D6_lab_lab6_spreadsheet_simulation/#going-further-not-graded">Going further (not graded)</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../D6_lab_lab7_bi_case_study/">Lab 7: BI case study</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../D6_lab_lab7_bi_case_study/#the-business-scenario">The business scenario</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D6_lab_lab7_bi_case_study/#part-1-time-series-forecasting-in-excel-clo-4">Part 1: Time series forecasting in Excel (CLO 4)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D6_lab_lab7_bi_case_study/#part-2-the-case-study-dashboard">Part 2: The case-study dashboard</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D6_lab_lab7_bi_case_study/#part-3-managerial-report">Part 3: Managerial report</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D6_lab_lab7_bi_case_study/#part-4-save-and-submit">Part 4: Save and submit</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D6_lab_lab7_bi_case_study/#checklist-before-you-upload">Checklist before you upload</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D6_lab_lab7_bi_case_study/#how-it-is-marked">How it is marked</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D6_lab_lab7_bi_case_study/#going-further-not-graded">Going further (not graded)</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../D6_assignment3_simulation_decision_model/">Assignment 3: Simulation decision model</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../D6_assignment3_simulation_decision_model/#the-scenario">The scenario</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D6_assignment3_simulation_decision_model/#what-you-must-do">What you must do</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D6_assignment3_simulation_decision_model/#part-1-the-simulation-in-excel">Part 1: The simulation in Excel</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D6_assignment3_simulation_decision_model/#part-2-decision-chart-in-tableau">Part 2: Decision chart in Tableau</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D6_assignment3_simulation_decision_model/#part-3-the-executive-report">Part 3: The executive report</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D6_assignment3_simulation_decision_model/#part-4-submit">Part 4: Submit</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D6_assignment3_simulation_decision_model/#how-it-is-marked">How it is marked</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D6_assignment3_simulation_decision_model/#starter-checks-optional">Starter checks (optional)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D6_assignment3_simulation_decision_model/#final-checklist">Final checklist</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Day 7 · Thu 19 Nov</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../D7_lecture_course_review/">Lecture: Course review</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../D7_lecture_course_review/#what-you-will-be-able-to-do">What you will be able to do</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D7_lecture_course_review/#part-1-clo-1-kinds-of-analytics-describing-data-confounding">Part 1 (CLO 1): Kinds of analytics, describing data, confounding</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D7_lecture_course_review/#part-2-clo-2-charts-kpis-and-messages">Part 2 (CLO 2): Charts, KPIs and messages</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D7_lecture_course_review/#part-3-clo-3-data-mining-and-text-mining">Part 3 (CLO 3): Data mining and text mining</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D7_lecture_course_review/#part-4-clo-4-forecasting-regression-and-simulation">Part 4 (CLO 4): Forecasting, regression and simulation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D7_lecture_course_review/#part-5-clo-5-bi-strategy-case-evaluation-and-ethics">Part 5 (CLO 5): BI strategy, case evaluation and ethics</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D7_lecture_course_review/#part-6-practice-set">Part 6: Practice set</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D7_lecture_course_review/#part-7-the-final-exam-and-this-afternoon">Part 7: The final exam and this afternoon</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../D7_assignment4_capstone/">Assignment 4: Capstone</a>
+    <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../D7_assignment4_capstone/#the-scenario">The scenario</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D7_assignment4_capstone/#what-you-must-do">What you must do</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D7_assignment4_capstone/#part-1-text-mining-in-jupyterlab-from-sentiment-to-strategy">Part 1: Text mining in JupyterLab (from sentiment to strategy)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D7_assignment4_capstone/#part-2-five-year-financial-model-in-excel">Part 2: Five-year financial model in Excel</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D7_assignment4_capstone/#part-3-executive-chart-in-tableau">Part 3: Executive chart in Tableau</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D7_assignment4_capstone/#part-4-managerial-report">Part 4: Managerial report</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D7_assignment4_capstone/#part-5-export-and-submit">Part 5: Export and submit</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D7_assignment4_capstone/#how-it-is-marked">How it is marked</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D7_assignment4_capstone/#studio-plan-for-this-afternoon-13451720">Studio plan for this afternoon (13:45–17:20)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="../D7_assignment4_capstone/#final-checklist">Final checklist</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
               </ul>
               <p class="caption"><span class="caption-text">Tableau (Coming Later)</span></p>
               <ul>
@@ -1863,7 +2161,9 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
-      <li class="breadcrumb-item active">Day 4 lecture: Predictive analytics and regression</li>
+          <li class="breadcrumb-item">DATA 300 (China Classroom)</li>
+          <li class="breadcrumb-item">Day 4 · Mon 16 Nov</li>
+      <li class="breadcrumb-item active">Lecture: Predictive analytics and regression</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -2031,32 +2331,32 @@ A jeweller buying a diamond, a car maker designing a new model and an estate age
 <span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.metrics</span><span class="w"> </span><span class="kn">import</span> <span class="n">mean_absolute_error</span><span class="p">,</span> <span class="n">mean_squared_error</span><span class="p">,</span> <span class="n">r2_score</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.model_selection</span><span class="w"> </span><span class="kn">import</span> <span class="n">train_test_split</span>
 
-<span class="n">BLUE</span><span class="p">,</span> <span class="n">ORANGE</span><span class="p">,</span> <span class="n">AQUA</span> <span class="o">=</span> <span class="s2">&quot;#2a78d6&quot;</span><span class="p">,</span> <span class="s2">&quot;#eb6834&quot;</span><span class="p">,</span> <span class="s2">&quot;#1baf7a&quot;</span>
-<span class="n">GREY</span> <span class="o">=</span> <span class="s2">&quot;#c9c7c1&quot;</span>   <span class="c1"># context</span>
-<span class="n">INK</span> <span class="o">=</span> <span class="s2">&quot;#55534e&quot;</span>    <span class="c1"># notes and labels</span>
+<span class="n">BLUE</span><span class="p">,</span> <span class="n">ORANGE</span><span class="p">,</span> <span class="n">AQUA</span> <span class="o">=</span> <span class="s2">"#2a78d6"</span><span class="p">,</span> <span class="s2">"#eb6834"</span><span class="p">,</span> <span class="s2">"#1baf7a"</span>
+<span class="n">GREY</span> <span class="o">=</span> <span class="s2">"#c9c7c1"</span>   <span class="c1"># context</span>
+<span class="n">INK</span> <span class="o">=</span> <span class="s2">"#55534e"</span>    <span class="c1"># notes and labels</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="o">.</span><span class="n">update</span><span class="p">({</span>
-    <span class="s2">&quot;figure.figsize&quot;</span><span class="p">:</span> <span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mf">4.5</span><span class="p">),</span>
-    <span class="s2">&quot;axes.spines.top&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
-    <span class="s2">&quot;axes.spines.right&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
-    <span class="s2">&quot;axes.grid&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
-    <span class="s2">&quot;axes.axisbelow&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
-    <span class="s2">&quot;grid.color&quot;</span><span class="p">:</span> <span class="s2">&quot;#e6e5e1&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;axes.titleweight&quot;</span><span class="p">:</span> <span class="s2">&quot;bold&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;axes.titlelocation&quot;</span><span class="p">:</span> <span class="s2">&quot;left&quot;</span><span class="p">,</span>
+    <span class="s2">"figure.figsize"</span><span class="p">:</span> <span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mf">4.5</span><span class="p">),</span>
+    <span class="s2">"axes.spines.top"</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="s2">"axes.spines.right"</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="s2">"axes.grid"</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s2">"axes.axisbelow"</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s2">"grid.color"</span><span class="p">:</span> <span class="s2">"#e6e5e1"</span><span class="p">,</span>
+    <span class="s2">"axes.titleweight"</span><span class="p">:</span> <span class="s2">"bold"</span><span class="p">,</span>
+    <span class="s2">"axes.titlelocation"</span><span class="p">:</span> <span class="s2">"left"</span><span class="p">,</span>
 <span class="p">})</span>
-<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s2">&quot;display.width&quot;</span><span class="p">,</span> <span class="mi">120</span><span class="p">)</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s2">"display.width"</span><span class="p">,</span> <span class="mi">120</span><span class="p">)</span>
 
-<span class="n">diamonds</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;data/diamonds.csv&quot;</span><span class="p">)</span>
+<span class="n">diamonds</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">"data/diamonds.csv"</span><span class="p">)</span>
 
 <span class="c1"># Put the quality grades in order, from worst to best, so tables and models read naturally</span>
-<span class="n">diamonds</span><span class="p">[</span><span class="s2">&quot;cut&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Categorical</span><span class="p">(</span><span class="n">diamonds</span><span class="p">[</span><span class="s2">&quot;cut&quot;</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;Fair&quot;</span><span class="p">,</span> <span class="s2">&quot;Good&quot;</span><span class="p">,</span> <span class="s2">&quot;Very Good&quot;</span><span class="p">,</span> <span class="s2">&quot;Premium&quot;</span><span class="p">,</span> <span class="s2">&quot;Ideal&quot;</span><span class="p">],</span> <span class="n">ordered</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">diamonds</span><span class="p">[</span><span class="s2">&quot;color&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Categorical</span><span class="p">(</span><span class="n">diamonds</span><span class="p">[</span><span class="s2">&quot;color&quot;</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;J&quot;</span><span class="p">,</span> <span class="s2">&quot;I&quot;</span><span class="p">,</span> <span class="s2">&quot;H&quot;</span><span class="p">,</span> <span class="s2">&quot;G&quot;</span><span class="p">,</span> <span class="s2">&quot;F&quot;</span><span class="p">,</span> <span class="s2">&quot;E&quot;</span><span class="p">,</span> <span class="s2">&quot;D&quot;</span><span class="p">],</span> <span class="n">ordered</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">diamonds</span><span class="p">[</span><span class="s2">&quot;clarity&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Categorical</span><span class="p">(</span>
-    <span class="n">diamonds</span><span class="p">[</span><span class="s2">&quot;clarity&quot;</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;I1&quot;</span><span class="p">,</span> <span class="s2">&quot;SI2&quot;</span><span class="p">,</span> <span class="s2">&quot;SI1&quot;</span><span class="p">,</span> <span class="s2">&quot;VS2&quot;</span><span class="p">,</span> <span class="s2">&quot;VS1&quot;</span><span class="p">,</span> <span class="s2">&quot;VVS2&quot;</span><span class="p">,</span> <span class="s2">&quot;VVS1&quot;</span><span class="p">,</span> <span class="s2">&quot;IF&quot;</span><span class="p">],</span> <span class="n">ordered</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">diamonds</span><span class="p">[</span><span class="s2">"cut"</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Categorical</span><span class="p">(</span><span class="n">diamonds</span><span class="p">[</span><span class="s2">"cut"</span><span class="p">],</span> <span class="p">[</span><span class="s2">"Fair"</span><span class="p">,</span> <span class="s2">"Good"</span><span class="p">,</span> <span class="s2">"Very Good"</span><span class="p">,</span> <span class="s2">"Premium"</span><span class="p">,</span> <span class="s2">"Ideal"</span><span class="p">],</span> <span class="n">ordered</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">diamonds</span><span class="p">[</span><span class="s2">"color"</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Categorical</span><span class="p">(</span><span class="n">diamonds</span><span class="p">[</span><span class="s2">"color"</span><span class="p">],</span> <span class="p">[</span><span class="s2">"J"</span><span class="p">,</span> <span class="s2">"I"</span><span class="p">,</span> <span class="s2">"H"</span><span class="p">,</span> <span class="s2">"G"</span><span class="p">,</span> <span class="s2">"F"</span><span class="p">,</span> <span class="s2">"E"</span><span class="p">,</span> <span class="s2">"D"</span><span class="p">],</span> <span class="n">ordered</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">diamonds</span><span class="p">[</span><span class="s2">"clarity"</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Categorical</span><span class="p">(</span>
+    <span class="n">diamonds</span><span class="p">[</span><span class="s2">"clarity"</span><span class="p">],</span> <span class="p">[</span><span class="s2">"I1"</span><span class="p">,</span> <span class="s2">"SI2"</span><span class="p">,</span> <span class="s2">"SI1"</span><span class="p">,</span> <span class="s2">"VS2"</span><span class="p">,</span> <span class="s2">"VS1"</span><span class="p">,</span> <span class="s2">"VVS2"</span><span class="p">,</span> <span class="s2">"VVS1"</span><span class="p">,</span> <span class="s2">"IF"</span><span class="p">],</span> <span class="n">ordered</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Rows (diamonds), columns:&quot;</span><span class="p">,</span> <span class="n">diamonds</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Missing values:&quot;</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="n">diamonds</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()))</span>
-<span class="n">diamonds</span><span class="p">[[</span><span class="s2">&quot;carat&quot;</span><span class="p">,</span> <span class="s2">&quot;cut&quot;</span><span class="p">,</span> <span class="s2">&quot;color&quot;</span><span class="p">,</span> <span class="s2">&quot;clarity&quot;</span><span class="p">,</span> <span class="s2">&quot;depth&quot;</span><span class="p">,</span> <span class="s2">&quot;table&quot;</span><span class="p">,</span> <span class="s2">&quot;price&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Rows (diamonds), columns:"</span><span class="p">,</span> <span class="n">diamonds</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Missing values:"</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="n">diamonds</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()))</span>
+<span class="n">diamonds</span><span class="p">[[</span><span class="s2">"carat"</span><span class="p">,</span> <span class="s2">"cut"</span><span class="p">,</span> <span class="s2">"color"</span><span class="p">,</span> <span class="s2">"clarity"</span><span class="p">,</span> <span class="s2">"depth"</span><span class="p">,</span> <span class="s2">"table"</span><span class="p">,</span> <span class="s2">"price"</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </code></pre></div>
 <div class="highlight"><pre><span></span><code>Rows (diamonds), columns: (53940, 10)
 Missing values: 0
@@ -2202,25 +2502,25 @@ Missing values: 0
 <p><strong>Predict, then reveal</strong></p>
 <p>Before you run the next cell: roughly how many dollars do you think one extra carat adds to a diamond's price? Write down a number.</p>
 </blockquote>
-<div class="highlight"><pre><span></span><code><span class="n">X</span> <span class="o">=</span> <span class="n">diamonds</span><span class="p">[[</span><span class="s2">&quot;carat&quot;</span><span class="p">]]</span>   <span class="c1"># features: a table with one column</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">diamonds</span><span class="p">[</span><span class="s2">&quot;price&quot;</span><span class="p">]</span>      <span class="c1"># target: one column</span>
+<div class="highlight"><pre><span></span><code><span class="n">X</span> <span class="o">=</span> <span class="n">diamonds</span><span class="p">[[</span><span class="s2">"carat"</span><span class="p">]]</span>   <span class="c1"># features: a table with one column</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">diamonds</span><span class="p">[</span><span class="s2">"price"</span><span class="p">]</span>      <span class="c1"># target: one column</span>
 
 <span class="n">simple</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span>
 <span class="n">simple</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Slope:     </span><span class="si">{</span><span class="n">simple</span><span class="o">.</span><span class="n">coef_</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">:</span><span class="s2">,.0f</span><span class="si">}</span><span class="s2"> dollars per carat&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Intercept: </span><span class="si">{</span><span class="n">simple</span><span class="o">.</span><span class="n">intercept_</span><span class="si">:</span><span class="s2">,.0f</span><span class="si">}</span><span class="s2"> dollars&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Slope:     </span><span class="si">{</span><span class="n">simple</span><span class="o">.</span><span class="n">coef_</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">:</span><span class="s2">,.0f</span><span class="si">}</span><span class="s2"> dollars per carat"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Intercept: </span><span class="si">{</span><span class="n">simple</span><span class="o">.</span><span class="n">intercept_</span><span class="si">:</span><span class="s2">,.0f</span><span class="si">}</span><span class="s2"> dollars"</span><span class="p">)</span>
 
 <span class="c1"># Plot a random sample of 2,000 stones so the points stay readable</span>
 <span class="n">sample</span> <span class="o">=</span> <span class="n">diamonds</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">2000</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">line_x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">diamonds</span><span class="p">[</span><span class="s2">&quot;carat&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">(),</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">line_x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">diamonds</span><span class="p">[</span><span class="s2">"carat"</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">(),</span> <span class="mi">100</span><span class="p">)</span>
 <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">sample</span><span class="p">[</span><span class="s2">&quot;carat&quot;</span><span class="p">],</span> <span class="n">sample</span><span class="p">[</span><span class="s2">&quot;price&quot;</span><span class="p">],</span> <span class="n">s</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">BLUE</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Diamonds (sample of 2,000)&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">sample</span><span class="p">[</span><span class="s2">"carat"</span><span class="p">],</span> <span class="n">sample</span><span class="p">[</span><span class="s2">"price"</span><span class="p">],</span> <span class="n">s</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">BLUE</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">"Diamonds (sample of 2,000)"</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">line_x</span><span class="p">,</span> <span class="n">simple</span><span class="o">.</span><span class="n">intercept_</span> <span class="o">+</span> <span class="n">simple</span><span class="o">.</span><span class="n">coef_</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">line_x</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">ORANGE</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">2.5</span><span class="p">,</span>
-        <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Least-squares line&quot;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Heavier diamonds sell for more&quot;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Weight (carat)&quot;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Price (US dollars)&quot;</span><span class="p">)</span>
+        <span class="n">label</span><span class="o">=</span><span class="s2">"Least-squares line"</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">"Heavier diamonds sell for more"</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">"Weight (carat)"</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">"Price (US dollars)"</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">frameon</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </code></pre></div>
@@ -2254,8 +2554,8 @@ Intercept: -2,256 dollars
 <p>The chart also shows a problem: the points curve upwards, and the straight line is too high for small stones and too low for mid-size ones. Part 9 returns to this.</p>
 <h3 id="making-a-prediction">Making a prediction<a class="headerlink" href="#making-a-prediction" title="Permanent link">&para;</a></h3>
 <p><code>predict</code> takes a table with the same column names as the training features.</p>
-<div class="highlight"><pre><span></span><code><span class="n">new_stones</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">&quot;carat&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">]})</span>
-<span class="n">new_stones</span><span class="p">[</span><span class="s2">&quot;predicted price ($)&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">simple</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">new_stones</span><span class="p">[[</span><span class="s2">&quot;carat&quot;</span><span class="p">]])</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">new_stones</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">"carat"</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">]})</span>
+<span class="n">new_stones</span><span class="p">[</span><span class="s2">"predicted price ($)"</span><span class="p">]</span> <span class="o">=</span> <span class="n">simple</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">new_stones</span><span class="p">[[</span><span class="s2">"carat"</span><span class="p">]])</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 <span class="n">new_stones</span>
 </code></pre></div>
 <div>
@@ -2344,15 +2644,15 @@ Intercept: -2,256 dollars
 <span class="n">ss_res</span> <span class="o">=</span> <span class="p">(</span><span class="n">residuals</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
 <span class="n">ss_tot</span> <span class="o">=</span> <span class="p">((</span><span class="n">y</span> <span class="o">-</span> <span class="n">y</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;R² by hand:      </span><span class="si">{</span><span class="mi">1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">ss_res</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">ss_tot</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;R² by sklearn:   </span><span class="si">{</span><span class="n">r2_score</span><span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">predicted</span><span class="p">)</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;RMSE: </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">mean_squared_error</span><span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">predicted</span><span class="p">))</span><span class="si">:</span><span class="s2">,.0f</span><span class="si">}</span><span class="s2"> dollars&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;MAE:  </span><span class="si">{</span><span class="n">mean_absolute_error</span><span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">predicted</span><span class="p">)</span><span class="si">:</span><span class="s2">,.0f</span><span class="si">}</span><span class="s2"> dollars&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"R² by hand:      </span><span class="si">{</span><span class="mi">1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">ss_res</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">ss_tot</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"R² by sklearn:   </span><span class="si">{</span><span class="n">r2_score</span><span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">predicted</span><span class="p">)</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"RMSE: </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">mean_squared_error</span><span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">predicted</span><span class="p">))</span><span class="si">:</span><span class="s2">,.0f</span><span class="si">}</span><span class="s2"> dollars"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"MAE:  </span><span class="si">{</span><span class="n">mean_absolute_error</span><span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">predicted</span><span class="p">)</span><span class="si">:</span><span class="s2">,.0f</span><span class="si">}</span><span class="s2"> dollars"</span><span class="p">)</span>
 
 <span class="n">baseline</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">full</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">y</span><span class="p">),</span> <span class="n">y</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Baseline (always predict the mean price of </span><span class="si">{</span><span class="n">y</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="si">:</span><span class="s2">,.0f</span><span class="si">}</span><span class="s2"> dollars):&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;R² = </span><span class="si">{</span><span class="n">r2_score</span><span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">baseline</span><span class="p">)</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">, RMSE = </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">mean_squared_error</span><span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">baseline</span><span class="p">))</span><span class="si">:</span><span class="s2">,.0f</span><span class="si">}</span><span class="s2"> dollars, &quot;</span>
-      <span class="sa">f</span><span class="s2">&quot;MAE = </span><span class="si">{</span><span class="n">mean_absolute_error</span><span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">baseline</span><span class="p">)</span><span class="si">:</span><span class="s2">,.0f</span><span class="si">}</span><span class="s2"> dollars&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2">Baseline (always predict the mean price of </span><span class="si">{</span><span class="n">y</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="si">:</span><span class="s2">,.0f</span><span class="si">}</span><span class="s2"> dollars):"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"R² = </span><span class="si">{</span><span class="n">r2_score</span><span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">baseline</span><span class="p">)</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">, RMSE = </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">mean_squared_error</span><span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">baseline</span><span class="p">))</span><span class="si">:</span><span class="s2">,.0f</span><span class="si">}</span><span class="s2"> dollars, "</span>
+      <span class="sa">f</span><span class="s2">"MAE = </span><span class="si">{</span><span class="n">mean_absolute_error</span><span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">baseline</span><span class="p">)</span><span class="si">:</span><span class="s2">,.0f</span><span class="si">}</span><span class="s2"> dollars"</span><span class="p">)</span>
 </code></pre></div>
 <div class="highlight"><pre><span></span><code>R² by hand:      0.849
 R² by sklearn:   0.849
@@ -2382,21 +2682,21 @@ R² = 0.000, RMSE = 3,989 dollars, MAE = 3,032 dollars
 <p>Will the R² on the test set be higher, about the same, or lower than on the training set for this one-feature line? Why?</p>
 </blockquote>
 <div class="highlight"><pre><span></span><code><span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Training stones: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span><span class="s2"> | test stones: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Training stones: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span><span class="s2"> | test stones: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 
 <span class="n">simple</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
 
 
 <span class="k">def</span><span class="w"> </span><span class="nf">scores</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">X_part</span><span class="p">,</span> <span class="n">y_part</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;R², RMSE and MAE of a fitted model on one set of rows.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""R², RMSE and MAE of a fitted model on one set of rows."""</span>
     <span class="n">pred</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_part</span><span class="p">)</span>
-    <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;R²&quot;</span><span class="p">:</span> <span class="n">r2_score</span><span class="p">(</span><span class="n">y_part</span><span class="p">,</span> <span class="n">pred</span><span class="p">),</span>
-            <span class="s2">&quot;RMSE ($)&quot;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">mean_squared_error</span><span class="p">(</span><span class="n">y_part</span><span class="p">,</span> <span class="n">pred</span><span class="p">)),</span>
-            <span class="s2">&quot;MAE ($)&quot;</span><span class="p">:</span> <span class="n">mean_absolute_error</span><span class="p">(</span><span class="n">y_part</span><span class="p">,</span> <span class="n">pred</span><span class="p">)}</span>
+    <span class="k">return</span> <span class="p">{</span><span class="s2">"R²"</span><span class="p">:</span> <span class="n">r2_score</span><span class="p">(</span><span class="n">y_part</span><span class="p">,</span> <span class="n">pred</span><span class="p">),</span>
+            <span class="s2">"RMSE ($)"</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">mean_squared_error</span><span class="p">(</span><span class="n">y_part</span><span class="p">,</span> <span class="n">pred</span><span class="p">)),</span>
+            <span class="s2">"MAE ($)"</span><span class="p">:</span> <span class="n">mean_absolute_error</span><span class="p">(</span><span class="n">y_part</span><span class="p">,</span> <span class="n">pred</span><span class="p">)}</span>
 
 
-<span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">&quot;training set&quot;</span><span class="p">:</span> <span class="n">scores</span><span class="p">(</span><span class="n">simple</span><span class="p">,</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">),</span>
-              <span class="s2">&quot;test set&quot;</span><span class="p">:</span> <span class="n">scores</span><span class="p">(</span><span class="n">simple</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)})</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">"training set"</span><span class="p">:</span> <span class="n">scores</span><span class="p">(</span><span class="n">simple</span><span class="p">,</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">),</span>
+              <span class="s2">"test set"</span><span class="p">:</span> <span class="n">scores</span><span class="p">(</span><span class="n">simple</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)})</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
 </code></pre></div>
 <div class="highlight"><pre><span></span><code>Training stones: 43,152 | test stones: 10,788
 </code></pre></div>
@@ -2453,24 +2753,24 @@ R² = 0.000, RMSE = 3,989 dollars, MAE = 3,032 dollars
 <h3 id="adjusted-r2">Adjusted R²<a class="headerlink" href="#adjusted-r2" title="Permanent link">&para;</a></h3>
 <p>R² on the training data <strong>never goes down</strong> when you add a feature, even a useless one, because the model can always use it a little to fit noise. <strong>Adjusted R²</strong> charges a small penalty for every feature:</p>
 <p><em>adjusted R² = 1 − (1 − R²) × (n − 1) ÷ (n − p − 1)</em></p>
-<p>where <em>n</em> is the number of rows and <em>p</em> the number of features. It rises only if a new feature improves the fit by more than chance would. With tens of thousands of rows the penalty is tiny; with a few dozen rows it matters (Part 8).</p>
+<p>where <em>n</em> is the number of rows and <em>p</em> the number of features. It rises only if a new feature improves the fit by more than a useless feature would by chance. With tens of thousands of rows the penalty is tiny; with a few dozen rows it matters (Part 8).</p>
 <div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">adjusted_r2</span><span class="p">(</span><span class="n">r2</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">p</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Adjusted R² for n rows and p features.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""Adjusted R² for n rows and p features."""</span>
     <span class="k">return</span> <span class="mi">1</span> <span class="o">-</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">r2</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="n">p</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
 
 
-<span class="n">features</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;carat&quot;</span><span class="p">,</span> <span class="s2">&quot;depth&quot;</span><span class="p">,</span> <span class="s2">&quot;table&quot;</span><span class="p">]</span>
+<span class="n">features</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"carat"</span><span class="p">,</span> <span class="s2">"depth"</span><span class="p">,</span> <span class="s2">"table"</span><span class="p">]</span>
 <span class="n">train_X3</span> <span class="o">=</span> <span class="n">diamonds</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">X_train</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">features</span><span class="p">]</span>   <span class="c1"># the same training stones, three features</span>
 <span class="n">test_X3</span> <span class="o">=</span> <span class="n">diamonds</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">X_test</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">features</span><span class="p">]</span>
 <span class="n">multi</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">train_X3</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
 
-<span class="n">coefficients</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">&quot;feature&quot;</span><span class="p">:</span> <span class="n">features</span><span class="p">,</span> <span class="s2">&quot;coefficient ($ per unit)&quot;</span><span class="p">:</span> <span class="n">multi</span><span class="o">.</span><span class="n">coef_</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">1</span><span class="p">)})</span>
+<span class="n">coefficients</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">"feature"</span><span class="p">:</span> <span class="n">features</span><span class="p">,</span> <span class="s2">"coefficient ($ per unit)"</span><span class="p">:</span> <span class="n">multi</span><span class="o">.</span><span class="n">coef_</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">1</span><span class="p">)})</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">coefficients</span><span class="o">.</span><span class="n">to_string</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
 
 <span class="n">r2_train</span> <span class="o">=</span> <span class="n">r2_score</span><span class="p">(</span><span class="n">y_train</span><span class="p">,</span> <span class="n">multi</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">train_X3</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Training R²: </span><span class="si">{</span><span class="n">r2_train</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2"> | adjusted R²: </span><span class="si">{</span><span class="n">adjusted_r2</span><span class="p">(</span><span class="n">r2_train</span><span class="p">,</span><span class="w"> </span><span class="nb">len</span><span class="p">(</span><span class="n">train_X3</span><span class="p">),</span><span class="w"> </span><span class="nb">len</span><span class="p">(</span><span class="n">features</span><span class="p">))</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">&quot;carat only&quot;</span><span class="p">:</span> <span class="n">scores</span><span class="p">(</span><span class="n">simple</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">),</span>
-              <span class="s2">&quot;carat, depth, table&quot;</span><span class="p">:</span> <span class="n">scores</span><span class="p">(</span><span class="n">multi</span><span class="p">,</span> <span class="n">test_X3</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)})</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2">Training R²: </span><span class="si">{</span><span class="n">r2_train</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2"> | adjusted R²: </span><span class="si">{</span><span class="n">adjusted_r2</span><span class="p">(</span><span class="n">r2_train</span><span class="p">,</span><span class="w"> </span><span class="nb">len</span><span class="p">(</span><span class="n">train_X3</span><span class="p">),</span><span class="w"> </span><span class="nb">len</span><span class="p">(</span><span class="n">features</span><span class="p">))</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">"carat only"</span><span class="p">:</span> <span class="n">scores</span><span class="p">(</span><span class="n">simple</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">),</span>
+              <span class="s2">"carat, depth, table"</span><span class="p">:</span> <span class="n">scores</span><span class="p">(</span><span class="n">multi</span><span class="p">,</span> <span class="n">test_X3</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)})</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
 </code></pre></div>
 <div class="highlight"><pre><span></span><code>feature  coefficient ($ per unit)
   carat                    7873.1
@@ -2562,7 +2862,7 @@ Training R²: 0.8538 | adjusted R²: 0.8538
 <p><strong>Predict, then reveal</strong></p>
 <p>We fit price on <strong>cut alone</strong>. Ideal is the best cut. Will the coefficient of <code>cut_Ideal</code> be positive or negative?</p>
 </blockquote>
-<div class="highlight"><pre><span></span><code><span class="n">cut_dummies</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">get_dummies</span><span class="p">(</span><span class="n">diamonds</span><span class="p">[[</span><span class="s2">&quot;cut&quot;</span><span class="p">]],</span> <span class="n">drop_first</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">cut_dummies</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">get_dummies</span><span class="p">(</span><span class="n">diamonds</span><span class="p">[[</span><span class="s2">"cut"</span><span class="p">]],</span> <span class="n">drop_first</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">)</span>
 <span class="n">cut_dummies</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
 </code></pre></div>
 <div>
@@ -2616,18 +2916,18 @@ Training R²: 0.8538 | adjusted R²: 0.8538
 </div>
 
 <div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">fit_and_show</span><span class="p">(</span><span class="n">columns</span><span class="p">,</span> <span class="n">title</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Fit price on the given columns (dummies for categories) and print the cut coefficients.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""Fit price on the given columns (dummies for categories) and print the cut coefficients."""</span>
     <span class="n">X_all</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">get_dummies</span><span class="p">(</span><span class="n">diamonds</span><span class="p">[</span><span class="n">columns</span><span class="p">],</span> <span class="n">drop_first</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">)</span>
     <span class="n">model</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_all</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">X_train</span><span class="o">.</span><span class="n">index</span><span class="p">],</span> <span class="n">y_train</span><span class="p">)</span>
     <span class="n">coefs</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">coef_</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">X_all</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">title</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">coefs</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">like</span><span class="o">=</span><span class="s2">&quot;cut_&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">to_string</span><span class="p">())</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">coefs</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">like</span><span class="o">=</span><span class="s2">"cut_"</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">to_string</span><span class="p">())</span>
     <span class="k">return</span> <span class="n">model</span><span class="p">,</span> <span class="n">X_all</span>
 
 
-<span class="n">cut_only</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">fit_and_show</span><span class="p">([</span><span class="s2">&quot;cut&quot;</span><span class="p">],</span> <span class="s2">&quot;Price on cut alone: difference from a Fair-cut stone ($)&quot;</span><span class="p">)</span>
+<span class="n">cut_only</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">fit_and_show</span><span class="p">([</span><span class="s2">"cut"</span><span class="p">],</span> <span class="s2">"Price on cut alone: difference from a Fair-cut stone ($)"</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">()</span>
-<span class="n">cut_carat</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">fit_and_show</span><span class="p">([</span><span class="s2">&quot;carat&quot;</span><span class="p">,</span> <span class="s2">&quot;cut&quot;</span><span class="p">],</span> <span class="s2">&quot;Price on carat and cut: difference from a Fair-cut stone of the SAME weight ($)&quot;</span><span class="p">)</span>
+<span class="n">cut_carat</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">fit_and_show</span><span class="p">([</span><span class="s2">"carat"</span><span class="p">,</span> <span class="s2">"cut"</span><span class="p">],</span> <span class="s2">"Price on carat and cut: difference from a Fair-cut stone of the SAME weight ($)"</span><span class="p">)</span>
 </code></pre></div>
 <div class="highlight"><pre><span></span><code>Price on cut alone: difference from a Fair-cut stone ($)
 cut_Good        -450.0
@@ -2642,10 +2942,10 @@ cut_Premium      1433.0
 cut_Ideal        1808.0
 </code></pre></div>
 <p>Compare the two outputs. On its own, a better cut looks <strong>cheaper</strong> than Fair. Once carat is in the model, every better cut is <strong>more expensive</strong> than Fair, as a jeweller would expect. The table below explains the flip.</p>
-<div class="highlight"><pre><span></span><code><span class="n">diamonds</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;cut&quot;</span><span class="p">,</span> <span class="n">observed</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">(</span>
-    <span class="n">stones</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;price&quot;</span><span class="p">,</span> <span class="s2">&quot;size&quot;</span><span class="p">),</span>
-    <span class="n">average_carat</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;carat&quot;</span><span class="p">,</span> <span class="s2">&quot;mean&quot;</span><span class="p">),</span>
-    <span class="n">average_price</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;price&quot;</span><span class="p">,</span> <span class="s2">&quot;mean&quot;</span><span class="p">),</span>
+<div class="highlight"><pre><span></span><code><span class="n">diamonds</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">"cut"</span><span class="p">,</span> <span class="n">observed</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">(</span>
+    <span class="n">stones</span><span class="o">=</span><span class="p">(</span><span class="s2">"price"</span><span class="p">,</span> <span class="s2">"size"</span><span class="p">),</span>
+    <span class="n">average_carat</span><span class="o">=</span><span class="p">(</span><span class="s2">"carat"</span><span class="p">,</span> <span class="s2">"mean"</span><span class="p">),</span>
+    <span class="n">average_price</span><span class="o">=</span><span class="p">(</span><span class="s2">"price"</span><span class="p">,</span> <span class="s2">"mean"</span><span class="p">),</span>
 <span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 </code></pre></div>
 <div>
@@ -2714,15 +3014,15 @@ cut_Ideal        1808.0
 
 <p>Fair-cut stones are, on average, the <strong>heaviest</strong>; Ideal-cut stones are the lightest. Weight drives price far more than cut, so a comparison of cuts that ignores weight mixes the two. Carat is a <strong>confounder</strong> of the cut–price comparison. Holding carat fixed in a multiple regression compares stones of the same weight: like with like. This is the same idea as comparing car regions within weight bands on Day 1.</p>
 <p>Now the full model with all four Cs:</p>
-<div class="highlight"><pre><span></span><code><span class="n">four_cs</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;carat&quot;</span><span class="p">,</span> <span class="s2">&quot;cut&quot;</span><span class="p">,</span> <span class="s2">&quot;color&quot;</span><span class="p">,</span> <span class="s2">&quot;clarity&quot;</span><span class="p">]</span>
+<div class="highlight"><pre><span></span><code><span class="n">four_cs</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"carat"</span><span class="p">,</span> <span class="s2">"cut"</span><span class="p">,</span> <span class="s2">"color"</span><span class="p">,</span> <span class="s2">"clarity"</span><span class="p">]</span>
 <span class="n">X_full</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">get_dummies</span><span class="p">(</span><span class="n">diamonds</span><span class="p">[</span><span class="n">four_cs</span><span class="p">],</span> <span class="n">drop_first</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">)</span>
 <span class="n">full</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_full</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">X_train</span><span class="o">.</span><span class="n">index</span><span class="p">],</span> <span class="n">y_train</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Features after dummy coding: </span><span class="si">{</span><span class="n">X_full</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Features after dummy coding: </span><span class="si">{</span><span class="n">X_full</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 <span class="n">comparison</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
-    <span class="s2">&quot;carat only&quot;</span><span class="p">:</span> <span class="n">scores</span><span class="p">(</span><span class="n">simple</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">),</span>
-    <span class="s2">&quot;carat, depth, table&quot;</span><span class="p">:</span> <span class="n">scores</span><span class="p">(</span><span class="n">multi</span><span class="p">,</span> <span class="n">test_X3</span><span class="p">,</span> <span class="n">y_test</span><span class="p">),</span>
-    <span class="s2">&quot;four Cs&quot;</span><span class="p">:</span> <span class="n">scores</span><span class="p">(</span><span class="n">full</span><span class="p">,</span> <span class="n">X_full</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">X_test</span><span class="o">.</span><span class="n">index</span><span class="p">],</span> <span class="n">y_test</span><span class="p">),</span>
+    <span class="s2">"carat only"</span><span class="p">:</span> <span class="n">scores</span><span class="p">(</span><span class="n">simple</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">),</span>
+    <span class="s2">"carat, depth, table"</span><span class="p">:</span> <span class="n">scores</span><span class="p">(</span><span class="n">multi</span><span class="p">,</span> <span class="n">test_X3</span><span class="p">,</span> <span class="n">y_test</span><span class="p">),</span>
+    <span class="s2">"four Cs"</span><span class="p">:</span> <span class="n">scores</span><span class="p">(</span><span class="n">full</span><span class="p">,</span> <span class="n">X_full</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">X_test</span><span class="o">.</span><span class="n">index</span><span class="p">],</span> <span class="n">y_test</span><span class="p">),</span>
 <span class="p">})</span><span class="o">.</span><span class="n">T</span>
 <span class="n">comparison</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
 </code></pre></div>
@@ -2776,20 +3076,20 @@ cut_Ideal        1808.0
 
 <div class="highlight"><pre><span></span><code><span class="n">coefs</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">full</span><span class="o">.</span><span class="n">coef_</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">X_full</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
 <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mf">5.5</span><span class="p">))</span>
-<span class="n">grades</span> <span class="o">=</span> <span class="n">coefs</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s2">&quot;carat&quot;</span><span class="p">)</span>
+<span class="n">grades</span> <span class="o">=</span> <span class="n">coefs</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s2">"carat"</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">barh</span><span class="p">(</span><span class="n">grades</span><span class="o">.</span><span class="n">index</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">grades</span><span class="o">.</span><span class="n">values</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span>
         <span class="n">color</span><span class="o">=</span><span class="p">[</span><span class="n">BLUE</span> <span class="k">if</span> <span class="n">v</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="n">ORANGE</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">grades</span><span class="o">.</span><span class="n">values</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]])</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">INK</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.8</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Better grades add value, for stones of the same weight&quot;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Price difference from the reference grade (US dollars)</span><span class="se">\n</span><span class="s2">reference: Fair cut, colour J, clarity I1&quot;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s2">&quot;y&quot;</span><span class="p">,</span> <span class="n">visible</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">"Better grades add value, for stones of the same weight"</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">"Price difference from the reference grade (US dollars)</span><span class="se">\n</span><span class="s2">reference: Fair cut, colour J, clarity I1"</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s2">"y"</span><span class="p">,</span> <span class="n">visible</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Carat: </span><span class="si">{</span><span class="n">coefs</span><span class="p">[</span><span class="s1">&#39;carat&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">,.0f</span><span class="si">}</span><span class="s2"> dollars per carat, holding cut, colour and clarity fixed&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Carat: </span><span class="si">{</span><span class="n">coefs</span><span class="p">[</span><span class="s1">'carat'</span><span class="p">]</span><span class="si">:</span><span class="s2">,.0f</span><span class="si">}</span><span class="s2"> dollars per carat, holding cut, colour and clarity fixed"</span><span class="p">)</span>
 </code></pre></div>
 <p><img alt="png" src="../D4_lecture_predictive_regression_files/D4_lecture_predictive_regression_21_0.png" /></p>
 <div class="highlight"><pre><span></span><code>Carat: 8,899 dollars per carat, holding cut, colour and clarity fixed
 </code></pre></div>
-<p>Read the chart from the bottom of each group upwards: within cut, colour and clarity, each better grade adds more. Every bar is a difference from the <strong>reference</strong> grade, so always name the reference when you report a dummy coefficient: "An IF-clarity stone sells for about … dollars more than an I1 stone of the same weight, cut and colour."</p>
+<p>Read each group from top to bottom: within cut, colour and clarity, better grades broadly add more (Very Good and Premium cuts are almost level). Every bar is a difference from the <strong>reference</strong> grade, so always name the reference when you report a dummy coefficient: "An IF-clarity stone sells for about … dollars more than an I1 stone of the same weight, cut and colour."</p>
 <blockquote>
 <p><strong>Check your understanding</strong></p>
 <p>A regression of monthly store sales has a dummy <code>region_North</code> with coefficient −12,000, with South as the reference. Say what it means in one sentence. What would change if West were chosen as the reference instead?</p>
@@ -2804,36 +3104,36 @@ cut_Ideal        1808.0
 </blockquote>
 <div class="highlight"><pre><span></span><code><span class="n">small</span> <span class="o">=</span> <span class="n">diamonds</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">60</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">7</span><span class="p">)</span>
 <span class="n">small_train</span><span class="p">,</span> <span class="n">small_test</span> <span class="o">=</span> <span class="n">small</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:</span><span class="mi">30</span><span class="p">],</span> <span class="n">small</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">30</span><span class="p">:]</span>
-<span class="n">grid</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">small_train</span><span class="p">[</span><span class="s2">&quot;carat&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="n">small_train</span><span class="p">[</span><span class="s2">&quot;carat&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">(),</span> <span class="mi">200</span><span class="p">)</span>
+<span class="n">grid</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">small_train</span><span class="p">[</span><span class="s2">"carat"</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="n">small_train</span><span class="p">[</span><span class="s2">"carat"</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">(),</span> <span class="mi">200</span><span class="p">)</span>
 
 <span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mf">4.5</span><span class="p">))</span>
-<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">small_train</span><span class="p">[</span><span class="s2">&quot;carat&quot;</span><span class="p">],</span> <span class="n">small_train</span><span class="p">[</span><span class="s2">&quot;price&quot;</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="n">BLUE</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">25</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Training stones&quot;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
-<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">small_test</span><span class="p">[</span><span class="s2">&quot;carat&quot;</span><span class="p">],</span> <span class="n">small_test</span><span class="p">[</span><span class="s2">&quot;price&quot;</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="n">GREY</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">25</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Test stones&quot;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">small_train</span><span class="p">[</span><span class="s2">"carat"</span><span class="p">],</span> <span class="n">small_train</span><span class="p">[</span><span class="s2">"price"</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="n">BLUE</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">25</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">"Training stones"</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">small_test</span><span class="p">[</span><span class="s2">"carat"</span><span class="p">],</span> <span class="n">small_test</span><span class="p">[</span><span class="s2">"price"</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="n">GREY</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">25</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">"Test stones"</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 
 <span class="n">rows</span> <span class="o">=</span> <span class="p">{}</span>
 <span class="k">for</span> <span class="n">degree</span><span class="p">,</span> <span class="n">colour</span> <span class="ow">in</span> <span class="p">[(</span><span class="mi">1</span><span class="p">,</span> <span class="n">ORANGE</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">AQUA</span><span class="p">),</span> <span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">INK</span><span class="p">)]:</span>
-    <span class="n">poly</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">polynomial</span><span class="o">.</span><span class="n">Polynomial</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">small_train</span><span class="p">[</span><span class="s2">&quot;carat&quot;</span><span class="p">],</span> <span class="n">small_train</span><span class="p">[</span><span class="s2">&quot;price&quot;</span><span class="p">],</span> <span class="n">degree</span><span class="p">)</span>
+    <span class="n">poly</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">polynomial</span><span class="o">.</span><span class="n">Polynomial</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">small_train</span><span class="p">[</span><span class="s2">"carat"</span><span class="p">],</span> <span class="n">small_train</span><span class="p">[</span><span class="s2">"price"</span><span class="p">],</span> <span class="n">degree</span><span class="p">)</span>
     <span class="n">rows</span><span class="p">[</span><span class="n">degree</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="s2">&quot;training RMSE ($)&quot;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">((</span><span class="n">small_train</span><span class="p">[</span><span class="s2">&quot;price&quot;</span><span class="p">]</span> <span class="o">-</span> <span class="n">poly</span><span class="p">(</span><span class="n">small_train</span><span class="p">[</span><span class="s2">&quot;carat&quot;</span><span class="p">]))</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)),</span>
-        <span class="s2">&quot;test RMSE ($)&quot;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">((</span><span class="n">small_test</span><span class="p">[</span><span class="s2">&quot;price&quot;</span><span class="p">]</span> <span class="o">-</span> <span class="n">poly</span><span class="p">(</span><span class="n">small_test</span><span class="p">[</span><span class="s2">&quot;carat&quot;</span><span class="p">]))</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)),</span>
+        <span class="s2">"training RMSE ($)"</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">((</span><span class="n">small_train</span><span class="p">[</span><span class="s2">"price"</span><span class="p">]</span> <span class="o">-</span> <span class="n">poly</span><span class="p">(</span><span class="n">small_train</span><span class="p">[</span><span class="s2">"carat"</span><span class="p">]))</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)),</span>
+        <span class="s2">"test RMSE ($)"</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">((</span><span class="n">small_test</span><span class="p">[</span><span class="s2">"price"</span><span class="p">]</span> <span class="o">-</span> <span class="n">poly</span><span class="p">(</span><span class="n">small_test</span><span class="p">[</span><span class="s2">"carat"</span><span class="p">]))</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)),</span>
     <span class="p">}</span>
     <span class="k">if</span> <span class="n">colour</span><span class="p">:</span>
-        <span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">grid</span><span class="p">,</span> <span class="n">poly</span><span class="p">(</span><span class="n">grid</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="n">colour</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;Degree </span><span class="si">{</span><span class="n">degree</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">grid</span><span class="p">,</span> <span class="n">poly</span><span class="p">(</span><span class="n">grid</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="n">colour</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s2">"Degree </span><span class="si">{</span><span class="n">degree</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 
-<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="o">-</span><span class="mi">2000</span><span class="p">,</span> <span class="n">small</span><span class="p">[</span><span class="s2">&quot;price&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">*</span> <span class="mf">1.3</span><span class="p">)</span>
-<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;A flexible curve chases the training points&quot;</span><span class="p">)</span>
-<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Weight (carat)&quot;</span><span class="p">)</span>
-<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Price (US dollars)&quot;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="o">-</span><span class="mi">2000</span><span class="p">,</span> <span class="n">small</span><span class="p">[</span><span class="s2">"price"</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">*</span> <span class="mf">1.3</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">"A flexible curve chases the training points"</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">"Weight (carat)"</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">"Price (US dollars)"</span><span class="p">)</span>
 <span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">frameon</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
 
 <span class="n">errors</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">rows</span><span class="p">)</span><span class="o">.</span><span class="n">T</span>
-<span class="n">errors</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;degree&quot;</span>
-<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">errors</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">errors</span><span class="p">[</span><span class="s2">&quot;training RMSE ($)&quot;</span><span class="p">],</span> <span class="n">marker</span><span class="o">=</span><span class="s2">&quot;o&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">BLUE</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Training error&quot;</span><span class="p">)</span>
-<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">errors</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">errors</span><span class="p">[</span><span class="s2">&quot;test RMSE ($)&quot;</span><span class="p">],</span> <span class="n">marker</span><span class="o">=</span><span class="s2">&quot;o&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">ORANGE</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Test error&quot;</span><span class="p">)</span>
-<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_yscale</span><span class="p">(</span><span class="s2">&quot;log&quot;</span><span class="p">)</span>
-<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Training error falls; test error does not&quot;</span><span class="p">)</span>
-<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Polynomial degree (flexibility)&quot;</span><span class="p">)</span>
-<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;RMSE (US dollars, log scale)&quot;</span><span class="p">)</span>
+<span class="n">errors</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s2">"degree"</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">errors</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">errors</span><span class="p">[</span><span class="s2">"training RMSE ($)"</span><span class="p">],</span> <span class="n">marker</span><span class="o">=</span><span class="s2">"o"</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">BLUE</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">"Training error"</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">errors</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">errors</span><span class="p">[</span><span class="s2">"test RMSE ($)"</span><span class="p">],</span> <span class="n">marker</span><span class="o">=</span><span class="s2">"o"</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">ORANGE</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">"Test error"</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_yscale</span><span class="p">(</span><span class="s2">"log"</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">"Training error falls; test error does not"</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">"Polynomial degree (flexibility)"</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">"RMSE (US dollars, log scale)"</span><span class="p">)</span>
 <span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">(</span><span class="n">errors</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
 <span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">frameon</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 <span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
@@ -2903,14 +3203,14 @@ cut_Ideal        1808.0
 <span class="k">for</span> <span class="n">extra</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">]:</span>
     <span class="n">noise_train</span> <span class="o">=</span> <span class="n">all_noise_train</span><span class="p">[:,</span> <span class="p">:</span><span class="n">extra</span><span class="p">]</span>   <span class="c1"># use the first `extra` random columns</span>
     <span class="n">noise_test</span> <span class="o">=</span> <span class="n">all_noise_test</span><span class="p">[:,</span> <span class="p">:</span><span class="n">extra</span><span class="p">]</span>
-    <span class="n">Xtr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">column_stack</span><span class="p">([</span><span class="n">small_train</span><span class="p">[[</span><span class="s2">&quot;carat&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">(),</span> <span class="n">noise_train</span><span class="p">])</span>
-    <span class="n">Xte</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">column_stack</span><span class="p">([</span><span class="n">small_test</span><span class="p">[[</span><span class="s2">&quot;carat&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">(),</span> <span class="n">noise_test</span><span class="p">])</span>
-    <span class="n">model</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">Xtr</span><span class="p">,</span> <span class="n">small_train</span><span class="p">[</span><span class="s2">&quot;price&quot;</span><span class="p">])</span>
-    <span class="n">r2_tr</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">Xtr</span><span class="p">,</span> <span class="n">small_train</span><span class="p">[</span><span class="s2">&quot;price&quot;</span><span class="p">])</span>
-    <span class="n">rows</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;carat + </span><span class="si">{</span><span class="n">extra</span><span class="si">}</span><span class="s2"> random columns&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="s2">&quot;training R²&quot;</span><span class="p">:</span> <span class="n">r2_tr</span><span class="p">,</span>
-        <span class="s2">&quot;adjusted R²&quot;</span><span class="p">:</span> <span class="n">adjusted_r2</span><span class="p">(</span><span class="n">r2_tr</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">extra</span><span class="p">),</span>
-        <span class="s2">&quot;test RMSE ($)&quot;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">mean_squared_error</span><span class="p">(</span><span class="n">small_test</span><span class="p">[</span><span class="s2">&quot;price&quot;</span><span class="p">],</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">Xte</span><span class="p">))),</span>
+    <span class="n">Xtr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">column_stack</span><span class="p">([</span><span class="n">small_train</span><span class="p">[[</span><span class="s2">"carat"</span><span class="p">]]</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">(),</span> <span class="n">noise_train</span><span class="p">])</span>
+    <span class="n">Xte</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">column_stack</span><span class="p">([</span><span class="n">small_test</span><span class="p">[[</span><span class="s2">"carat"</span><span class="p">]]</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">(),</span> <span class="n">noise_test</span><span class="p">])</span>
+    <span class="n">model</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">Xtr</span><span class="p">,</span> <span class="n">small_train</span><span class="p">[</span><span class="s2">"price"</span><span class="p">])</span>
+    <span class="n">r2_tr</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">Xtr</span><span class="p">,</span> <span class="n">small_train</span><span class="p">[</span><span class="s2">"price"</span><span class="p">])</span>
+    <span class="n">rows</span><span class="p">[</span><span class="sa">f</span><span class="s2">"carat + </span><span class="si">{</span><span class="n">extra</span><span class="si">}</span><span class="s2"> random columns"</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">"training R²"</span><span class="p">:</span> <span class="n">r2_tr</span><span class="p">,</span>
+        <span class="s2">"adjusted R²"</span><span class="p">:</span> <span class="n">adjusted_r2</span><span class="p">(</span><span class="n">r2_tr</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">extra</span><span class="p">),</span>
+        <span class="s2">"test RMSE ($)"</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">mean_squared_error</span><span class="p">(</span><span class="n">small_test</span><span class="p">[</span><span class="s2">"price"</span><span class="p">],</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">Xte</span><span class="p">))),</span>
     <span class="p">}</span>
 <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">rows</span><span class="p">)</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
 </code></pre></div>
@@ -2966,7 +3266,7 @@ cut_Ideal        1808.0
 </table>
 </div>
 
-<p>Training R² climbs as random columns are added, although they cannot carry information about price. Adjusted R² falls, and the test error grows. Two defences against overfitting:</p>
+<p>Training R² climbs with every batch of random columns, although they cannot carry any information about price. Adjusted R² does not climb with it: it moves up and down by chance around its starting value, because its penalty is designed to cancel, on average, the gain a useless feature gets by luck. The test error grows. Three defences against overfitting:</p>
 <table>
 <thead>
 <tr>
@@ -2981,7 +3281,7 @@ cut_Ideal        1808.0
 </tr>
 <tr>
 <td><strong>Adjusted R²</strong></td>
-<td>Penalises extra features, so it only rises when a feature earns its place</td>
+<td>Penalises extra features, so useless ones do not raise it on average</td>
 </tr>
 <tr>
 <td><strong>Simplicity</strong></td>
@@ -3023,18 +3323,18 @@ cut_Ideal        1808.0
 
 <span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mf">4.5</span><span class="p">))</span>
 <span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">test_pred</span><span class="p">,</span> <span class="n">test_resid</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.25</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">BLUE</span><span class="p">)</span>
-<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">ORANGE</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">1.5</span><span class="p">)</span>
-<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Four-Cs model: a curve and a funnel&quot;</span><span class="p">)</span>
-<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Predicted price (US dollars)&quot;</span><span class="p">)</span>
-<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Residual: actual − predicted ($)&quot;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">ORANGE</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">"--"</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">1.5</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">"Four-Cs model: a curve and a funnel"</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">"Predicted price (US dollars)"</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">"Residual: actual − predicted ($)"</span><span class="p">)</span>
 
 <span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">test_resid</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">60</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">BLUE</span><span class="p">)</span>
-<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Residuals are not centred on a bell&quot;</span><span class="p">)</span>
-<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Residual (US dollars)&quot;</span><span class="p">)</span>
-<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Number of test stones&quot;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">"A long tail of large under-predictions"</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">"Residual (US dollars)"</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">"Number of test stones"</span><span class="p">)</span>
 <span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Test stones with a NEGATIVE predicted price: </span><span class="si">{</span><span class="p">(</span><span class="n">test_pred</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Test stones with a NEGATIVE predicted price: </span><span class="si">{</span><span class="p">(</span><span class="n">test_pred</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </code></pre></div>
 <p><img alt="png" src="../D4_lecture_predictive_regression_files/D4_lecture_predictive_regression_27_0.png" /></p>
 <div class="highlight"><pre><span></span><code>Test stones with a NEGATIVE predicted price: 1043
@@ -3043,8 +3343,8 @@ cut_Ideal        1808.0
 <h3 id="a-fix-model-the-logarithm">A fix: model the logarithm<a class="headerlink" href="#a-fix-model-the-logarithm" title="Permanent link">&para;</a></h3>
 <p>Prices and other money amounts often behave in <strong>percentages</strong>: a better grade adds a percentage, not a fixed number of dollars. Taking the <strong>natural logarithm</strong> of price and carat turns such percentage relationships into straight lines. We fit the same four-Cs model to <code>log(price)</code> with <code>log(carat)</code>, then convert the predictions back to dollars with <code>exp</code> so we can compare the error in dollars.</p>
 <div class="highlight"><pre><span></span><code><span class="n">X_log</span> <span class="o">=</span> <span class="n">X_full</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
-<span class="n">X_log</span><span class="p">[</span><span class="s2">&quot;carat&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">diamonds</span><span class="p">[</span><span class="s2">&quot;carat&quot;</span><span class="p">])</span>
-<span class="n">X_log</span> <span class="o">=</span> <span class="n">X_log</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;carat&quot;</span><span class="p">:</span> <span class="s2">&quot;log_carat&quot;</span><span class="p">})</span>
+<span class="n">X_log</span><span class="p">[</span><span class="s2">"carat"</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">diamonds</span><span class="p">[</span><span class="s2">"carat"</span><span class="p">])</span>
+<span class="n">X_log</span> <span class="o">=</span> <span class="n">X_log</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">"carat"</span><span class="p">:</span> <span class="s2">"log_carat"</span><span class="p">})</span>
 <span class="n">log_model</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_log</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">X_train</span><span class="o">.</span><span class="n">index</span><span class="p">],</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">y_train</span><span class="p">))</span>
 
 <span class="n">log_pred_test</span> <span class="o">=</span> <span class="n">log_model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_log</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">X_test</span><span class="o">.</span><span class="n">index</span><span class="p">])</span>
@@ -3053,17 +3353,17 @@ cut_Ideal        1808.0
 
 <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">log_pred_test</span><span class="p">,</span> <span class="n">log_resid</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.25</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">AQUA</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">ORANGE</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">1.5</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Log model: a much more even band around zero&quot;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Predicted log price&quot;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Residual (log scale)&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">ORANGE</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">"--"</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">1.5</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">"Log model: a much more even band around zero"</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">"Predicted log price"</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">"Residual (log scale)"</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 
 <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
-    <span class="s2">&quot;four Cs, straight line&quot;</span><span class="p">:</span> <span class="n">scores</span><span class="p">(</span><span class="n">full</span><span class="p">,</span> <span class="n">X_full</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">X_test</span><span class="o">.</span><span class="n">index</span><span class="p">],</span> <span class="n">y_test</span><span class="p">),</span>
-    <span class="s2">&quot;four Cs, log model&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;R²&quot;</span><span class="p">:</span> <span class="n">r2_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">dollar_pred</span><span class="p">),</span>
-                           <span class="s2">&quot;RMSE ($)&quot;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">mean_squared_error</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">dollar_pred</span><span class="p">)),</span>
-                           <span class="s2">&quot;MAE ($)&quot;</span><span class="p">:</span> <span class="n">mean_absolute_error</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">dollar_pred</span><span class="p">)},</span>
+    <span class="s2">"four Cs, straight line"</span><span class="p">:</span> <span class="n">scores</span><span class="p">(</span><span class="n">full</span><span class="p">,</span> <span class="n">X_full</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">X_test</span><span class="o">.</span><span class="n">index</span><span class="p">],</span> <span class="n">y_test</span><span class="p">),</span>
+    <span class="s2">"four Cs, log model"</span><span class="p">:</span> <span class="p">{</span><span class="s2">"R²"</span><span class="p">:</span> <span class="n">r2_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">dollar_pred</span><span class="p">),</span>
+                           <span class="s2">"RMSE ($)"</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">mean_squared_error</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">dollar_pred</span><span class="p">)),</span>
+                           <span class="s2">"MAE ($)"</span><span class="p">:</span> <span class="n">mean_absolute_error</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">dollar_pred</span><span class="p">)},</span>
 <span class="p">})</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
 </code></pre></div>
 <p><img alt="png" src="../D4_lecture_predictive_regression_files/D4_lecture_predictive_regression_29_0.png" /></p>
@@ -3107,7 +3407,7 @@ cut_Ideal        1808.0
 </table>
 </div>
 
-<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;log_carat coefficient: </span><span class="si">{</span><span class="n">log_model</span><span class="o">.</span><span class="n">coef_</span><span class="p">[</span><span class="nb">list</span><span class="p">(</span><span class="n">X_log</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s1">&#39;log_carat&#39;</span><span class="p">)]</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"log_carat coefficient: </span><span class="si">{</span><span class="n">log_model</span><span class="o">.</span><span class="n">coef_</span><span class="p">[</span><span class="nb">list</span><span class="p">(</span><span class="n">X_log</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s1">'log_carat'</span><span class="p">)]</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </code></pre></div>
 <div class="highlight"><pre><span></span><code>log_carat coefficient: 1.89
 </code></pre></div>
@@ -3222,7 +3522,7 @@ cut_Ideal        1808.0
 </tr>
 <tr>
 <td>Adjusted R²</td>
-<td>R² with a penalty per feature; falls when a feature does not earn its place</td>
+<td>R² with a penalty per feature; does not reward features that carry no information</td>
 </tr>
 <tr>
 <td>Overfitting</td>
@@ -3301,12 +3601,16 @@ cut_Ideal        1808.0
 <hr />
 <h2 id="next">Next<a class="headerlink" href="#next" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Next lecture:</strong> <a href="D4_lecture_data_mining_text_features.md">Data mining with text features</a>, then the <a href="D4_assignment2_predictive_data_mining.md">Assignment 2</a> briefing.</li>
-<li><strong>Tomorrow afternoon:</strong> <a href="D5_lab_lab5_regression.md">Applied Lab 5, predictive linear regression</a> (graded, 2%), in which you predict fuel efficiency from a car's engineering specifications and diagnose the model with a residual plot.</li>
+<li><strong>Next lecture:</strong> <a href="../D4_lecture_data_mining_text_features/">Data mining with text features</a>, then the <a href="../D4_assignment2_predictive_data_mining/">Assignment 2</a> briefing.</li>
+<li><strong>Tomorrow afternoon:</strong> <a href="../D5_lab_lab5_regression/">Applied Lab 5, predictive linear regression</a> (graded, 2%), in which you predict fuel efficiency from a car's engineering specifications and diagnose the model with a residual plot.</li>
 </ul>
               
             </div>
           </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../D3_lab_lab4_forecasting/" class="btn btn-neutral float-left" title="Lab 4: Forecasting"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../D4_lecture_data_mining_text_features/" class="btn btn-neutral float-right" title="Lecture: Data mining with text features">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
 
   <hr/>
 
@@ -3329,6 +3633,10 @@ cut_Ideal        1808.0
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
+      <span><a href="../D3_lab_lab4_forecasting/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../D4_lecture_data_mining_text_features/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

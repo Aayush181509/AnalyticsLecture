@@ -103,11 +103,11 @@ nav:
       - "Day 7 · Thu 19 Nov":
           - "Lecture: Course review": china/D7_lecture_course_review.md
           - "Assignment 4: Capstone": china/D7_assignment4_capstone.md
-  - Tableau (Coming Later):
-      - "Tableau Lesson 1 (draft)": lessons/class-01.md
-      - "Tableau Lesson 2 (draft)": lessons/class-02.md
-      - "Tableau Lesson 3 (draft)": lessons/class-03.md
-      - "Tableau Lesson 4 (draft)": lessons/class-04.md
+  - Tableau Sessions:
+      - Overview: tableau/index.md
+      - "T1: Tableau Fundamentals":
+          - Lecture: tableau/T1_fundamentals_lecture.md
+          - Lab: tableau/T1_fundamentals_lab.md
   - Lesson Template: lessons/lesson-template.md
 
 theme:

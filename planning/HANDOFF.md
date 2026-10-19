@@ -4,6 +4,10 @@ Updated 2026-10-12. **Foundation, four-source audit, first retail development co
 
 The user requests Claude takeover next. Read [AGENTS.md](../AGENTS.md) → [PROJECT_CONTEXT.md](PROJECT_CONTEXT.md) → [STATUS.md](STATUS.md) → [TASKS.md](TASKS.md), then the concrete [CLAUDE_TAKEOVER.md](CLAUDE_TAKEOVER.md). The takeover brief contains exact artifacts, hashes, commands, constraints and a suggested first prompt; shared authority stays in AGENTS.md.
 
+## Tableau sessions T1–T4 — 2026-10-19 (next step)
+
+T1–T4 are drafted in `docs/tableau/` and the old class-01 to class-04 pages are gone (DEC-055). Next: the Chrome rehearsal in Tableau Public web authoring (plan Task 7, `planning/tableau/2026-10-19-tableau-sessions-plan.md`). The user signs in and approves each upload; save and publish nothing. Never publish Superstore. Publishing synthetic data in T4 stays optional until the user confirms reuse terms.
+
 ## Claude session update — 2026-10-12
 
 Learner site keeps the Read the Docs theme (user preference after a brief Material trial, DEC-036) plus `docs/stylesheets/readability.css`; all six pages were restructured for readability (DEC-034, DOC01). Write every new learner page in that style: lead sentence, `---` breaks, short paragraphs, numbered steps, tables or `###` subsections, note/tip/hint/warning admonitions. No Material-only syntax. User approved the rendered result. Preview with `/tmp/kings-data-docs-venv/bin/python -m mkdocs serve` (reinstall from requirements.txt if the venv is gone). D03 Tableau checks remain open because this session had no desktop-app control (DEC-035).

@@ -63,7 +63,7 @@ Labs run at three levels so mixed experience works: **core** (everyone, enough f
 | 14 | Dashboards and storytelling | Audience and big idea; situation–complication–resolution; dashboard layout; annotation; Challenger case | Multi-panel dashboard in matplotlib; message titles; a three-slide story | All prior |
 | 15 | Capstone studio | Synthesis across domains; evidence registers; trade-offs; validation packs; peer review | Build capstone analysis and dashboard with coaching | Learner's chosen domains |
 | 16 | Executive briefings | Presenting to executives; handling questions; reflecting on limitations | Briefings, peer critique, revision plan | Capstone |
-| **Part F — Tableau (later)** |||||
+| **Part F — Tableau (built, draft 2026-10-19; see `docs/tableau/`)** |||||
 | T1 | Tableau fundamentals | Tableau's model: dimensions, measures, aggregation, marks | Rebuild Sessions 2 and 4 views | Superstore |
 | T2 | Calculations and KPIs in Tableau | Calculated fields, COUNTD, ratio of sums, table calcs | Rebuild Session 5 KPIs and Session 7 growth | Superstore |
 | T3 | Dashboards in Tableau | Layout, filters, actions, accessibility | Rebuild the Session 14 dashboard | Superstore + one case |

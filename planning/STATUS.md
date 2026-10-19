@@ -4,6 +4,10 @@ Updated: 2026-10-12 (Asia/Kathmandu). **Phase: foundation, source audit, D01 ret
 
 
 
+## Tableau sessions T1–T4 drafted — 2026-10-19
+
+Tableau sessions T1–T4 now exist as lecture and lab pages in `docs/tableau/`, written for Tableau Public (DEC-055). The old draft lessons class-01 to class-04 are retired, and the roadmap, index and setup pages link to the new sessions. The lesson template moved out of the learner nav to `planning/lesson-template.md`. Not done: the Chrome rehearsal in Tableau Public web authoring, and independent review.
+
 ## Claude session: Sessions 5 and 7 completed, D08 built — 2026-10-14
 
 New lecture notebooks for Sessions 5 and 7; their labs restructured into Guided/Independent/Challenge with new tasks (Berkeley admissions, metric contract, construction spending) and "draft" removed; answers in `instructor/sessions/05/` and `07/`. D08 synthetic marketing data (campaign-day funnel, 2,555 rows; A/B test, 60,000 visitors) with generator, independent validator, README contract, manifest and private reference answers (DEC-046). Fixed a numpy/pandas DeprecationWarning that printed a local temp path in Session 6 outputs. Verification: `run_notebooks.py --check-data` on all 14 notebooks (no errors; PASS, 11 share one setup cell); `validate_marketing.py` PASS; `make convert-all`; no warnings or local paths in outputs; `check_docs.py` PASS (30 pages); strict MkDocs build clean. Not done: independent review, Colab trial.

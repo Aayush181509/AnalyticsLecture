@@ -79,7 +79,7 @@ You keep the evidence from every lab in your portfolio.
 
 | Session | Lecture | Lab |
 |---|---|---|
-| **T1. Tableau fundamentals** | How Tableau thinks: dimensions, measures, aggregation | Rebuild earlier views ([draft](../lessons/class-01.md)) |
+| **T1. Tableau fundamentals** | How Tableau thinks: dimensions, measures, aggregation | Rebuild earlier views ([T1 lab](../tableau/T1_fundamentals_lab.md)) |
 | **T2. Calculations and KPIs** | Calculated fields, distinct counts, table calculations | Rebuild the segment KPIs and growth measures |
 | **T3. Dashboards in Tableau** | Layout, filters, actions, accessibility | Rebuild your decision dashboard |
 | **T4. Publishing and portfolio** | Tableau Public and privacy | Your Tableau portfolio piece |

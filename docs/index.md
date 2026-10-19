@@ -10,9 +10,9 @@ We will explore and explain data from five areas of a business: retail and e-com
 
 !!! note "This site is still being built"
 
-    Right now you will find the Foundations section, the course roadmap and the first Python lessons. More lessons, cases and a Tableau section are on their way.
+    Right now you will find the Foundations section, the course roadmap and the first Python lessons. More lessons and cases are on their way, and the Tableau section is ready to try.
 
-    The business cases and the lesson template are previews. They are not ready-to-run assignments yet.
+    The business cases are previews. They are not ready-to-run assignments yet.
 
 ---
 
@@ -23,7 +23,7 @@ We will explore and explain data from five areas of a business: retail and e-com
 - **Python in your browser.** You run every lesson in Google Colab: nothing to install, and every result on these pages comes from the same code you run.
 - **Synthetic and public data only.** Never private workplace data.
 - **Portfolio and briefing.** You finish with a practical portfolio and an executive briefing grounded in checked evidence.
-- **Tableau later.** A separate Tableau section will show how to build the same analyses as interactive dashboards.
+- **Tableau after Python.** A separate [Tableau section](tableau/index.md) shows how to build the same analyses as interactive dashboards.
 
 ---
 

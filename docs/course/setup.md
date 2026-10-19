@@ -73,7 +73,7 @@ Notebooks you save in Google Drive are private to you unless you choose to share
 
 ## Tableau (later)
 
-A separate Tableau section will come later in the course. You do not need Tableau for the Python lessons. When we reach that section, you will install **Tableau Desktop Public Edition** from the [official Tableau Public page](https://www.tableau.com/products/public).
+You do not need Tableau for the Python lessons. The [Tableau sessions](../tableau/index.md) come after the Python sessions. When you reach them, you will install **Tableau Desktop Public Edition** (or use the Tableau Public web editor) from the [official Tableau Public page](https://www.tableau.com/products/public); the sessions explain what to set up.
 
 !!! warning "Anything you publish to Tableau Public is public"
 

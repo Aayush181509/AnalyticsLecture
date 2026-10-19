@@ -227,7 +227,7 @@ For each case, write **publish**, **do not publish** or **publish only after a c
 
 #### Step 1: Complete the privacy checklist
 
-Write each line in your log with **yes** or **no**. If any line is **no**, stop: do not publish.
+Synthetic course data may be published only once the course confirms its reuse terms, so ask your facilitator first. Write each line in your log with **yes** or **no**. If any line is **no**, stop: do not publish.
 
 1. Every data source in the workbook is **synthetic course data** (marketing-v1, finance-v1, operations-v1 or hr-v1). Check the Data pane: every data source listed is published, even if no sheet uses it.
 2. No data source holds **workplace, customer or employee** data, or anything copied from them.
@@ -247,7 +247,7 @@ Save your workbook locally with **File → Save As** (a new version number). Pub
 
 #### Step 3: Publish
 
-1. Choose **Server → Tableau Public → Save to Tableau Public...**.
+1. Choose **File → Save to Tableau Public As…**.
 2. Sign in with your Tableau Public account.
 3. Enter a clear, descriptive title, for example *"Peak-season delivery reliability (synthetic data)"*, and click **Save**.
 4. Tableau creates an extract of your data and opens the viz on the Tableau Public website.

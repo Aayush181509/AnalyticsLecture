@@ -1,5 +1,9 @@
 # Tableau sessions
 
+!!! warning "Draft section"
+
+    These sessions are drafts. The click paths have not yet been tried end to end in Tableau, and menus may differ slightly, so your facilitator will confirm them.
+
 <p class="lead">
 Four sessions that rebuild the analysis you did in Python, this time in Tableau. You use the same Superstore file, the same date window and the same checks, so you can compare your Tableau numbers with your Python numbers.
 </p>
@@ -29,7 +33,7 @@ Each session has a **lecture** and a **lab**, like the Python sessions.
 
 !!! tip "If you cannot install software on your laptop"
 
-    Tell your facilitator before the first session. Tableau Public also has a **web editor** that runs in the browser. Its menus differ slightly from the desktop app, but you can follow every lab with it.
+    Tell your facilitator before the first session. The labs need **Tableau Desktop Public Edition**, because it saves `.twbx` files on your own computer, and Moodle needs those files. In the Tableau Public web editor, saving publishes the workbook and its data, so never use the web editor with Superstore.
 
 ### 2. Download the course data
 

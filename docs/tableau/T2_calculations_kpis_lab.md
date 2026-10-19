@@ -172,7 +172,7 @@ They say: *"I calculated the average profit ratio, so it is the profit ratio for
 
 !!! tip "Check the weights"
 
-    To see each segment's weight, right-click **SUM(Sales)** on the Measure Values card and choose **Quick Table Calculation → Percent of Total**. Each segment's share of Sales is its weight in the overall Profit Ratio. Right-click again and choose **Clear Table Calculation** when you are done.
+    To see each segment's weight, right-click **SUM(Sales)** on the Measure Values card and choose **Quick Table Calculation → Percent of Total**. Then right-click it again and choose **Edit Table Calculation**, and under **Compute Using** choose **Segment** (or **Table (down)**). Otherwise each row is calculated on its own and shows 100%. Each segment's share of Sales is its weight in the overall Profit Ratio. Right-click again and choose **Clear Table Calculation** when you are done.
 
 Finally, remove **Avg Line Ratio** from the table (drag it off the Measure Values card), so your submitted table shows only the correct measures. Keep the field in the Data pane so your facilitator can see it.
 
@@ -323,7 +323,7 @@ Before you submit, check that you have:
 
 !!! warning "Do not publish this lab"
 
-    You do not need to publish anything to Tableau Public for this lab. Anything published there is public. If you use the web editor, saving puts the workbook on your Tableau Public profile; Superstore is public sample data, so that is safe here, but never do it with any other data. Ask your facilitator how to download your workbook from the web editor for Moodle.
+    You do not need to publish anything to Tableau Public for this lab. Anything published there is public. If you use the web editor, saving puts the workbook and its data on your Tableau Public profile. Keep your Superstore work on your own computer: never save or publish Superstore to Tableau Public, because the course has not found a clear permission to republish the file ([T4 lecture, Part 2](T4_publishing_portfolio_lecture.md)). Ask your facilitator how to work on this lab without saving to Tableau Public, and how to get your workbook for Moodle.
 
 ---
 

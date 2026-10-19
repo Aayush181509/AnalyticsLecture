@@ -266,7 +266,7 @@ Then check, and write each answer in your log:
 
 1. Right-click the `Trend` sheet tab and choose **Duplicate as Crosstab**. Tableau creates a table of Sales by month and year.
 2. Choose **Analysis → Totals → Show Column Grand Totals** (if the totals appear across instead of down, try **Show Row Grand Totals**).
-3. The **2025** total must equal the **Sales 2025** tile with no region selected. The **2024** total, divided into the 2025 total, must give the **Sales Growth** on the tile.
+3. The **2025** total must equal the **Sales 2025** tile with no region selected. Divide the 2025 total by the 2024 total and subtract 1. The result must equal the **Sales Growth** on the tile.
 4. Count the months in which 2025 Sales are higher than in the same month of 2024. Write the count in your log; you use it in your headline.
 
 !!! note "Small rounding differences"

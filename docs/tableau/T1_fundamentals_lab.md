@@ -331,7 +331,7 @@ Before you submit, check that you have:
 
 !!! warning "Do not publish this lab"
 
-    You do not need to publish anything to Tableau Public for this lab. Anything published there is public. If you use the web editor, saving puts the workbook on your Tableau Public profile; Superstore is public sample data, so that is safe here, but never do it with any other data. Ask your facilitator how to download your workbook from the web editor for Moodle.
+    You do not need to publish anything to Tableau Public for this lab. Anything published there is public. If you use the web editor, saving puts the workbook and its data on your Tableau Public profile. Keep your Superstore work on your own computer: never save or publish Superstore to Tableau Public, because the course has not found a clear permission to republish the file ([T4 lecture, Part 2](T4_publishing_portfolio_lecture.md)). Ask your facilitator how to work on this lab without saving to Tableau Public, and how to get your workbook for Moodle.
 
 ---
 

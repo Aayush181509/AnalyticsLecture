@@ -108,6 +108,9 @@ nav:
       - "T1: Tableau Fundamentals":
           - Lecture: tableau/T1_fundamentals_lecture.md
           - Lab: tableau/T1_fundamentals_lab.md
+      - "T2: Calculations and KPIs":
+          - Lecture: tableau/T2_calculations_kpis_lecture.md
+          - Lab: tableau/T2_calculations_kpis_lab.md
   - Lesson Template: lessons/lesson-template.md
 
 theme:

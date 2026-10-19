@@ -10,7 +10,7 @@ We will explore and explain data from five areas of a business: retail and e-com
 
 !!! note "This site is still being built"
 
-    Right now you will find the Foundations section, the course roadmap and the first Python lessons. More lessons and cases are on their way, and the Tableau section is ready to try.
+    Right now you will find the Foundations section, the course roadmap and the first Python lessons. More lessons and cases are on their way, and the Tableau section is in draft; its steps have not yet been tried end to end.
 
     The business cases are previews. They are not ready-to-run assignments yet.
 

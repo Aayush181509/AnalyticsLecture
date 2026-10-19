@@ -138,14 +138,14 @@ Tableau can filter at several stages. Each stage happens **before** the next one
 
 | Order | Filter type | Where you set it | What it affects |
 |---|---|---|---|
-| 1 | **Data source filter** | The **Data Source** page, top right: **Filters → Add** | Every sheet in the workbook |
-| 2 | **Extract filter** | When you create an extract of the data | Which rows are copied into the extract |
+| 1 | **Extract filter** | When you create an extract of the data | Which rows are copied into the extract |
+| 2 | **Data source filter** | The **Data Source** page, top right: **Filters → Add** | Every sheet in the workbook |
 | 3 | **Dimension filter** | Drag a dimension (for example Region) to the **Filters** shelf | One sheet, unless you apply it to more |
 | 4 | **Measure filter** | Drag a measure (for example SUM(Sales)) to the **Filters** shelf | One sheet; keeps only marks whose total passes the test |
 
 !!! note "Two more stages you will meet later"
 
-    **Context filters** sit between extract and dimension filters, and **table calculation filters** come last. You meet them in T2.
+    **Context filters** sit between data source and dimension filters, and **table calculation filters** come last. You meet them in T2.
 
 ### Why the order matters
 

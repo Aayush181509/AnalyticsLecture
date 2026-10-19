@@ -295,7 +295,3 @@ Before you submit, check that you have:
 ## Next
 
 This is the last Tableau session. Keep your portfolio workbook and its version log with your capstone notebook and brief from [Session 15](../lectures/15_capstone_studio_lab.md) and [Session 16](../lectures/16_executive_briefings_lab.md): together they show the whole path from a business question to a checked recommendation.
-</content>
-</invoke>
-<invoke name="Bash">
-<parameter name="command">cd /Users/aayush/Documents/Kings/Data && git check-ignore -v instructor/tableau/T4/answers.md; mkdir -p instructor/tableau/T4

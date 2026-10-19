@@ -4,6 +4,14 @@ import re
 import sys
 
 ROOT = Path(__file__).resolve().parents[1]
+MARKUP = ("</invoke>", "<invoke", "<parameter", "</content>")
+markup_hits = [p.name for p in sorted((ROOT / "docs/tableau").glob("*.md"))
+               if any(m in p.read_text() for m in MARKUP)]
+for name in markup_hits:
+    print(f"MARKUP: {name}")
+if markup_hits:
+    print(f"FAIL: tool-call markup on {len(markup_hits)} page(s)")
+    sys.exit(1)
 answers = sorted((ROOT / "instructor/tableau").glob("T*/answers.md"))
 if not answers:
     print("SKIP: no private answers on this machine")

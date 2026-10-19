@@ -184,5 +184,3 @@ Answer these at the start of the T4 lab. Your facilitator will go through the an
 4. Why is a dashboard on the course's synthetic marketing data safe to publish, while one on Superstore is not, in this course? What must the published page say about the synthetic data?
 5. You have files named `final.twbx`, `final2.twbx` and `final_REAL.twbx`. Name two problems, and rename them following the lecture.
 6. Write the four parts of a portfolio piece for this finding: *"Display and Video campaigns returned less attributed revenue than they cost in 2025 (synthetic marketing-v1)."* One sentence per part.
-</content>
-</invoke>

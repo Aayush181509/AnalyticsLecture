@@ -111,6 +111,9 @@ nav:
       - "T2: Calculations and KPIs":
           - Lecture: tableau/T2_calculations_kpis_lecture.md
           - Lab: tableau/T2_calculations_kpis_lab.md
+      - "T3: Dashboards":
+          - Lecture: tableau/T3_dashboards_lecture.md
+          - Lab: tableau/T3_dashboards_lab.md
   - Lesson Template: lessons/lesson-template.md
 
 theme:

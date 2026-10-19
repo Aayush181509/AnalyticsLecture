@@ -114,6 +114,9 @@ nav:
       - "T3: Dashboards":
           - Lecture: tableau/T3_dashboards_lecture.md
           - Lab: tableau/T3_dashboards_lab.md
+      - "T4: Publishing and Portfolio":
+          - Lecture: tableau/T4_publishing_portfolio_lecture.md
+          - Lab: tableau/T4_publishing_portfolio_lab.md
   - Lesson Template: lessons/lesson-template.md
 
 theme:

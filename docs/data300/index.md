@@ -6,7 +6,7 @@ DATA 300 <em>Data Driven Decision Making</em> as it runs on GAP (Moodle), taught
 
 !!! note "Draft materials"
 
-    Every page of this section now exists: the overview, timetable and setup page, the pre-class refresher, the lectures for Days 1 to 7, and a guide for every graded item from Activity 1 to the capstone. All of them are **drafts** awaiting the facilitator's review. The Python code has been run offline, but the Excel and Tableau steps have **not yet been tried end to end in the real programs**, so menu names and click paths may differ slightly from what you see. Announcements in class and the wording on GAP take precedence.
+    Every page of this section now exists: the overview, timetable and setup page, the pre-class refresher, the lectures for Days 1 to 7, and a guide for every lab and assignment, from Activity 1 to the capstone (the midterm and final exam have no guide). All of them are **drafts** awaiting the facilitator's review. The Python code has been run offline (Route B); the Try JupyterLab route (Route A) has not been tested here, and the Excel and Tableau steps have **not yet been tried end to end in the real programs**, so menu names and click paths may differ slightly from what you see. Announcements in class and the wording on GAP take precedence.
 
 ---
 

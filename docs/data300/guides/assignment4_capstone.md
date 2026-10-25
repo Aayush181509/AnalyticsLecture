@@ -122,58 +122,7 @@ print(f"\nAverage sentiment score: {avg_sentiment:.3f}")
 print(f"Demand multiplier (type this, as printed, into Excel C2:C6): {demand_multiplier:.3f}")
 ```
 
-Optionally, after you have built your workbook **by hand in Excel**, the block below rebuilds Part 2 in pandas so that you can compare it with your workbook cell by cell, and previews the Tableau chart. It does not replace the Excel file: the workbook you submit must be your own, with formulas. Replace the multiplier with the one your notebook printed.
-
-```{.python .offline}
-# Route B mirror for the capstone, Part 2: check your Excel workbook, and preview the chart.
-from pathlib import Path
-
-import nltk
-import pandas as pd
-import matplotlib.pyplot as plt
-
-# Your multiplier, exactly as your notebook printed it (three decimals).
-# This line recomputes it with VADER; replace the right-hand side with the number you typed into Excel.
-nltk.data.path.insert(0, str(Path("data/nltk_data").resolve()))
-from nltk.sentiment.vader import SentimentIntensityAnalyzer
-_texts = pd.read_csv("data/ecovate_focus_group.csv")["Review_Text"]
-_sia = SentimentIntensityAnalyzer()
-multiplier = round(1.0 + 0.20 * _texts.apply(lambda t: _sia.polarity_scores(t)["compound"]).mean(), 3)
-
-# GAP's inputs (US dollars)
-base_demand = [10_000, 15_000, 22_000, 30_000, 45_000]
-price, fixed_cost = 200, 500_000
-unit_cost_standard, unit_cost_ethical = 120, 140
-
-model = pd.DataFrame({"Year": [1, 2, 3, 4, 5], "Base_Demand": base_demand})
-model["Colab_Multiplier"] = multiplier
-# Excel's ROUND rounds halves away from zero; Python's round() rounds halves to even.
-# Use the Excel rule so the mirror matches your workbook in every case.
-raw = model["Base_Demand"] * model["Colab_Multiplier"]
-model["Adjusted_Demand"] = (raw + 0.5).astype(int)
-model["Standard_Profit"] = model["Adjusted_Demand"] * (price - unit_cost_standard) - fixed_cost
-model["Ethical_Profit"] = model["Adjusted_Demand"] * (price - unit_cost_ethical) - fixed_cost
-print(model.to_string(index=False))
-
-# Rule checks: the same rules as section 4 of the guide
-assert (model["Adjusted_Demand"] == (model["Base_Demand"] * multiplier + 0.5).astype(int)).all()
-assert model[["Adjusted_Demand", "Standard_Profit", "Ethical_Profit"]].notna().all().all()
-print("\nRule checks passed. Compare each cell with your Excel workbook.")
-
-# Preview of the Tableau view: Year as a dimension, two measures, colour by measure, currency axis
-fig, ax = plt.subplots(figsize=(8, 4))
-for column, colour in [("Standard_Profit", "#0072B2"), ("Ethical_Profit", "#009E73")]:
-    ax.plot(model["Year"], model[column], marker="o", color=colour, label=column.replace("_", " "))
-ax.set_xticks(model["Year"])
-ax.set_xlabel("Year")
-ax.set_ylabel("Profit (US dollars)")
-ax.yaxis.set_major_formatter(lambda value, _: f"${value:,.0f}")
-ax.set_title("Preview: profit by year under each supplier")
-ax.legend(frameon=False)
-plt.show()
-```
-
-In JupyterLab you may replace the `print(... .to_string(index=False))` lines with `display(df)` for nicer tables. Export the first block's notebook with **Kernel → Restart Kernel and Run All Cells**, then **File → Print → Save as PDF**.
+In JupyterLab you may replace the `print(... .to_string(index=False))` line with `display(df)` for a nicer table. Build the Excel workbook by hand as in Route A, Part 2: Route B covers only the text-mining step. Export the notebook with **Kernel → Restart Kernel and Run All Cells**, then **File → Print → Save as PDF**.
 
 ---
 

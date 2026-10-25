@@ -228,7 +228,7 @@ plt.show()
     
 
 
-Read the chart from bottom left to top right: the course climbs. Days 1 and 2 describe; Day 3 starts to explain and to predict; Day 4 predicts; Days 5 and 6 prescribe. The dependency runs **one way**:
+Read the chart from bottom left to top right: the course climbs. Days 1 and 2 mostly describe, with the first diagnostic steps already there (Simpson's paradox on Day 1; funnels and an A/B test on Day 2); Day 3 adds more diagnosis and the first prediction; Day 4 predicts; Days 5 and 6 prescribe. The dependency runs **one way**:
 
 - A **diagnostic** claim needs a description to explain. Simpson's paradox (Day 1) only appears after you have the overall and the group-level summaries.
 - A **prediction** needs an honest description of the past. The ADF test (Day 3) is only meaningful once you have plotted the series and seen whether it drifts.

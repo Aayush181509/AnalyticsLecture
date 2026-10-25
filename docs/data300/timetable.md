@@ -119,14 +119,14 @@ Reading: Chapters 5 and 6.
 
 | Period | Time | Subject |
 |---|---|---|
-| P1 | 08:10–08:55 | Reading a regression for a manager |
-| P2 | 09:05–09:50 | Spreadsheet modelling: inputs, calculations and outputs |
-| P3 | 10:05–10:50 | What-If analysis with Data Tables |
-| P4 | 10:55–11:40 | Monte Carlo simulation in a spreadsheet |
-| P5 | 13:45–14:30 | Risk measures: ranges, percentiles and the chance of a loss |
-| P6 | 14:40–15:25 | Lab 5 briefing |
-| P7 | 15:40–16:25 | **Lab 5:** regression (mpg) |
-| P8 | 16:35–17:20 | **Lab 5** continued; submit on GAP |
+| P1 | 08:10–08:55 | Reading a regression for a manager ([Simulation under uncertainty](D5_lecture_simulation_uncertainty.md), Part 1) |
+| P2 | 09:05–09:50 | Spreadsheet modelling: inputs, calculations and outputs ([Simulation under uncertainty](D5_lecture_simulation_uncertainty.md), Parts 2–3) |
+| P3 | 10:05–10:50 | What-If analysis with Data Tables ([Simulation under uncertainty](D5_lecture_simulation_uncertainty.md), Parts 4–5) |
+| P4 | 10:55–11:40 | Monte Carlo simulation in a spreadsheet ([Simulation under uncertainty](D5_lecture_simulation_uncertainty.md), Parts 6–9) |
+| P5 | 13:45–14:30 | Risk measures: ranges, percentiles and the chance of a loss ([Simulation under uncertainty](D5_lecture_simulation_uncertainty.md), Parts 10–13) |
+| P6 | 14:40–15:25 | Lab 5 briefing ([Simulation under uncertainty](D5_lecture_simulation_uncertainty.md), Parts 14–15; [Lab 5 guide](guides/lab5_regression.md)) |
+| P7 | 15:40–16:25 | **Lab 5:** regression (mpg) ([Lab 5 guide](guides/lab5_regression.md)) |
+| P8 | 16:35–17:20 | **Lab 5** continued; submit on GAP ([Lab 5 guide](guides/lab5_regression.md)) |
 
 ### Day 6 · Wednesday 18 November
 

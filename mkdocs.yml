@@ -128,6 +128,9 @@ nav:
           - "Lecture: Predictive regression": data300/D4_lecture_predictive_regression.md
           - "Lecture: Text as a feature": data300/D4_lecture_text_features.md
           - "Assignment 2: Predictive data mining report": data300/guides/assignment2_predictive_report.md
+      - "Day 5 · Tue 17 Nov":
+          - "Lecture: Simulation under uncertainty": data300/D5_lecture_simulation_uncertainty.md
+          - "Lab 5: Regression": data300/guides/lab5_regression.md
   - Tableau Sessions:
       - Overview: tableau/index.md
       - "T1: Tableau Fundamentals":

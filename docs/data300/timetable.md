@@ -134,16 +134,16 @@ Reading: Chapters 6 and 7.
 
 | Period | Time | Subject |
 |---|---|---|
-| P1 | 08:10–08:55 | Business intelligence strategy and architecture |
-| P2 | 09:05–09:50 | Integrating a BI case: from data to a recommendation |
-| P3 | 10:05–10:50 | Excel Forecast Sheet |
-| P4 | 10:55–11:40 | Ethics and the societal context of analytics |
-| P5 | 13:45–14:30 | Lab 6 and Lab 7 briefing (EcoDrive) |
-| P6 | 14:40–15:25 | Assignment 3 briefing (SmartHome) |
-| P7 | 15:40–16:25 | **Lab 6:** spreadsheet simulation (EcoDrive) |
-| P8 | 16:35–17:20 | **Lab 6** continued; submit on GAP |
-| P9 | 18:30–19:15 | **Lab 7:** BI case (EcoDrive phase 2, 12 quarters) |
-| P10 | 19:25–20:10 | **Lab 7** continued; submit on GAP |
+| P1 | 08:10–08:55 | Business intelligence strategy and architecture ([BI strategy, forecasting and ethics](D6_lecture_bi_strategy_ethics.md), Parts 1–3) |
+| P2 | 09:05–09:50 | Integrating a BI case: from data to a recommendation ([BI strategy, forecasting and ethics](D6_lecture_bi_strategy_ethics.md), Parts 3–5) |
+| P3 | 10:05–10:50 | Excel Forecast Sheet ([BI strategy, forecasting and ethics](D6_lecture_bi_strategy_ethics.md), Parts 6–7) |
+| P4 | 10:55–11:40 | Ethics and the societal context of analytics ([BI strategy, forecasting and ethics](D6_lecture_bi_strategy_ethics.md), Parts 8–10) |
+| P5 | 13:45–14:30 | Lab 6 and Lab 7 briefing (EcoDrive) ([BI strategy, forecasting and ethics](D6_lecture_bi_strategy_ethics.md), Parts 11–15; [Lab 6 guide](guides/lab6_spreadsheet_simulation.md); [Lab 7 guide](guides/lab7_bi_case.md)) |
+| P6 | 14:40–15:25 | Assignment 3 briefing (SmartHome) ([BI strategy, forecasting and ethics](D6_lecture_bi_strategy_ethics.md), Parts 16–17; [Assignment 3 guide](guides/assignment3_simulation_decision.md)) |
+| P7 | 15:40–16:25 | **Lab 6:** spreadsheet simulation (EcoDrive) ([Lab 6 guide](guides/lab6_spreadsheet_simulation.md)) |
+| P8 | 16:35–17:20 | **Lab 6** continued; submit on GAP ([Lab 6 guide](guides/lab6_spreadsheet_simulation.md)) |
+| P9 | 18:30–19:15 | **Lab 7:** BI case (EcoDrive phase 2, 12 quarters) ([Lab 7 guide](guides/lab7_bi_case.md)) |
+| P10 | 19:25–20:10 | **Lab 7** continued; submit on GAP ([Lab 7 guide](guides/lab7_bi_case.md)) |
 
 ### Day 7 · Thursday 19 November
 

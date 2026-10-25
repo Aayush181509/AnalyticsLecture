@@ -131,6 +131,11 @@ nav:
       - "Day 5 · Tue 17 Nov":
           - "Lecture: Simulation under uncertainty": data300/D5_lecture_simulation_uncertainty.md
           - "Lab 5: Regression": data300/guides/lab5_regression.md
+      - "Day 6 · Wed 18 Nov":
+          - "Lecture: BI strategy, forecasting and ethics": data300/D6_lecture_bi_strategy_ethics.md
+          - "Lab 6: Spreadsheet simulation": data300/guides/lab6_spreadsheet_simulation.md
+          - "Lab 7: Business intelligence case": data300/guides/lab7_bi_case.md
+          - "Assignment 3: Simulation decision model": data300/guides/assignment3_simulation_decision.md
   - Tableau Sessions:
       - Overview: tableau/index.md
       - "T1: Tableau Fundamentals":

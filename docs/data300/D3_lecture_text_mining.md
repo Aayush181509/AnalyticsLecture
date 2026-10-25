@@ -92,7 +92,7 @@ REVIEWS = [
     (2, "Check-in took forty minutes. The receptionist was polite, but nobody could find our booking."),
     (5, "Best hotel we have stayed in this year. Amazing view of the lake and a really comfortable bed."),
     (1, "Great, the lift broke again. Loved carrying our bags up five flights of stairs."),
-    (3, "The room was fine. Nothing special, but the location is convenient for the station."),
+    (3, "The room was fine. No frills at all, but the location is convenient for the station."),
     (2, "The shower was lukewarm every morning and the air conditioning rattled all night."),
     (4, "Friendly staff and a quiet room. The breakfast could be better."),
     (1, "Never again. The bathroom had mould and the sheets smelled of smoke."),
@@ -307,14 +307,14 @@ reviews.groupby("mentions_breakfast")[["stars", "n_words"]].agg(["mean", "count"
       <th>False</th>
       <td>2.6</td>
       <td>30</td>
-      <td>13.13</td>
+      <td>13.2</td>
       <td>30</td>
     </tr>
     <tr>
       <th>True</th>
       <td>4.1</td>
       <td>10</td>
-      <td>11.80</td>
+      <td>11.8</td>
       <td>10</td>
     </tr>
   </tbody>
@@ -391,7 +391,7 @@ print("Variants of 'breakfast' in raw:  ", sorted({t for t in raw_tokens if t.lo
 print("Tokens dropped by isalpha():     ", sorted({t for t in lower_tokens if not t.isalpha()}))
 ```
 
-    Distinct tokens, raw:             242
+    Distinct tokens, raw:             241
     Distinct tokens, lower-cased:     224
     Distinct tokens, letters only:    216
     Variants of 'breakfast' in raw:   ['Breakfast', 'breakfast']
@@ -513,7 +513,7 @@ print("Total words after cleaning:", len(all_words), " distinct:", len(freq))
     
 
 
-    Total words after cleaning: 277  distinct: 169
+    Total words after cleaning: 276  distinct: 169
 
 
 Frequency answers **"what do people talk about?"**, not **"what do they think about it?"**. A word near the top may be praised in some reviews and criticised in others. Frequency also counts **mentions, not reviewers**: one long review that repeats a word five times counts five times. A safer count for a manager is often the **number of reviews that mention the word** (document frequency):
@@ -736,7 +736,7 @@ VADER then adjusts the word ratings with **rules**:
 | Negation | "not good" | A negation in the three words before a rated word flips and shrinks its rating |
 | Intensifiers (booster words) | "very good", "kind of good" | "very" increases, "kind of" decreases the rating |
 | Capitals | "GOOD" in otherwise lower-case text | Increases the rating |
-| Exclamation marks | "good!!!" | Increase the score (up to three count) |
+| Exclamation marks | "good!!!" | Increase the score (up to four count) |
 | "But" | "good, but terrible" | Words **after** "but" weigh more, words before it less |
 | Emoticons and slang | ":)", "lol" | Rated in the lexicon like words |
 
@@ -984,8 +984,8 @@ reviews[["review_id", "stars", "text", "compound", "vader_label"]].head(8)
       <th>6</th>
       <td>7</td>
       <td>3</td>
-      <td>The room was fine. Nothing special, but the location is convenient for the station.</td>
-      <td>-0.0590</td>
+      <td>The room was fine. No frills at all, but the location is convenient for the station.</td>
+      <td>-0.0516</td>
       <td>Negative</td>
     </tr>
     <tr>
@@ -1772,7 +1772,7 @@ for name, p in [("VADER (negative label)", vader_pred), ("Logistic regression, l
 ```
 
     VADER (negative label)               accuracy 65%   unhappy guests caught 5 of 17
-    Logistic regression, leave-one-out   accuracy 65%   unhappy guests caught 7 of 17
+    Logistic regression, leave-one-out   accuracy 60%   unhappy guests caught 5 of 17
 
 
 With only 40 examples, neither method is trustworthy, and the comparison could easily flip with another 40 reviews. The point is the workflow: a model is only as good as the **amount and quality of labelled data** behind it, and both methods are judged the **same way**, on data the model has not seen. You will meet train/test thinking again in the forecasting lecture and on Day 4.

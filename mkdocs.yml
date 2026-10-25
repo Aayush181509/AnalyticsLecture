@@ -114,6 +114,11 @@ nav:
           - "Lecture: Foundations of data-driven decisions": data300/D1_lecture_foundations_decisions.md
           - "Lecture: Exploring data": data300/D1_lecture_exploring_data.md
           - "Lab 1: Data exploration": data300/guides/lab1_data_exploration.md
+      - "Day 2 · Wed 11 Nov":
+          - "Lecture: Visualising and communicating data": data300/D2_lecture_visual_communication.md
+          - "Lecture: Tableau concepts and dashboards": data300/D2_lecture_tableau_dashboards.md
+          - "Lab 2: Dashboard": data300/guides/lab2_dashboard.md
+          - "Assignment 1: Descriptive analytics report": data300/guides/assignment1_descriptive_report.md
   - Tableau Sessions:
       - Overview: tableau/index.md
       - "T1: Tableau Fundamentals":

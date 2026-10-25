@@ -68,16 +68,16 @@ Reading: Chapter 2.
 
 | Period | Time | Subject |
 |---|---|---|
-| P1 | 08:10–08:55 | Choosing a chart for the question |
-| P2 | 09:05–09:50 | Perception and misleading charts |
-| P3 | 10:05–10:50 | Communicating results: storytelling, KPIs and dashboards |
-| P4 | 10:55–11:40 | Marketing analytics |
-| P5 | 13:45–14:30 | Tableau fundamentals: data source, dimensions and measures, marks |
-| P6 | 14:40–15:25 | Tableau dashboards; Lab 2 briefing |
-| P7 | 15:40–16:25 | **Lab 2:** dashboard (Tableau Superstore) |
+| P1 | 08:10–08:55 | Choosing a chart for the question ([Visualising and communicating data](D2_lecture_visual_communication.md)) |
+| P2 | 09:05–09:50 | Perception and misleading charts ([Visualising and communicating data](D2_lecture_visual_communication.md)) |
+| P3 | 10:05–10:50 | Communicating results: storytelling, KPIs and dashboards ([Visualising and communicating data](D2_lecture_visual_communication.md)) |
+| P4 | 10:55–11:40 | Marketing analytics ([Visualising and communicating data](D2_lecture_visual_communication.md)) |
+| P5 | 13:45–14:30 | Tableau fundamentals: data source, dimensions and measures, marks ([Tableau concepts and dashboards](D2_lecture_tableau_dashboards.md)) |
+| P6 | 14:40–15:25 | Tableau dashboards; Lab 2 briefing ([Tableau concepts and dashboards](D2_lecture_tableau_dashboards.md)) |
+| P7 | 15:40–16:25 | **Lab 2:** dashboard (Tableau Superstore) ([Lab 2 guide](guides/lab2_dashboard.md)) |
 | P8 | 16:35–17:20 | **Lab 2** continued; submit on GAP |
-| P9 | 18:30–19:15 | Assignment 1 briefing (tips report) |
-| P10 | 19:25–20:10 | Assignment 1 studio |
+| P9 | 18:30–19:15 | Assignment 1 briefing (tips report) ([Tableau concepts and dashboards](D2_lecture_tableau_dashboards.md), Part 10; [Assignment 1 guide](guides/assignment1_descriptive_report.md)) |
+| P10 | 19:25–20:10 | Assignment 1 studio ([Assignment 1 guide](guides/assignment1_descriptive_report.md)) |
 
 ### Day 3 · Thursday 12 November
 

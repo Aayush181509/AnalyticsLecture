@@ -25,6 +25,7 @@ DATA300_*.pdf
 
 # Extracted at runtime by the China classroom notebooks.
 notebooks/China_Classroom/data/nltk_data/tokenizers/punkt_tab/
+notebooks/DATA300_GAP/data/nltk_data/tokenizers/punkt_tab/
 DATA_300_*.pdf
 
 # Westcliff course references from GAP (Moodle) and the reading packet: private, not for the public repo

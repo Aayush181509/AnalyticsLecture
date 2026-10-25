@@ -28,6 +28,8 @@ Every organisation makes decisions. This course is about making them on evidence
 
 ## Course learning outcomes
 
+The official course learning outcomes are:
+
 1. **CLO 1:** Describe the principles of descriptive, predictive and prescriptive analytics to solve business data challenges.
 2. **CLO 2:** Design and use data visualisation and modelling tools to communicate user-centred analytics for strategic decisions.
 3. **CLO 3:** Apply computational problem-solving to perform data and text mining, discovering relationships in structured and unstructured data.

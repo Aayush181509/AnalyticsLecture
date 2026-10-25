@@ -143,8 +143,7 @@ markdown_extensions:
       toc_depth: 3
   - pymdownx.details
   - pymdownx.highlight
-  - pymdownx.superfences:
-      relaxed_headers: true
+  - pymdownx.superfences
   - pymdownx.tasklist
 
 extra:

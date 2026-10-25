@@ -65,40 +65,40 @@ Check that both tables and both charts are visible, then **File → Print → Sa
 
 Use this route if Try JupyterLab will not load the data, or if you prefer to work on your own laptop. It follows the same steps as GAP's script but loads the bundled copy of the data, so there is nothing to install or download. Create a notebook **inside the `DATA300_GAP` folder** (next to `data`), paste this into one cell and run it. The questions and the Tableau part are exactly the same as in Route A.
 
-```python offline
-# Activity 1, Route B: the same analysis, loading the bundled data offline.
-# No %pip line and no open_url: Anaconda already has these packages.
+```{.python .offline}
+# Route B for Activity 1: run offline in Anaconda JupyterLab.
+# The penguins file comes from the course folder, so nothing is installed or downloaded.
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 
 pd.set_option("display.max_columns", None)   # show every column when printing
 
-# Load the Palmer Penguins data from the course folder
+# Read the bundled penguins table
 df = pd.read_csv("data/penguins.csv")
 print("Rows and columns:", df.shape)
 
-# First five rows and summary statistics
-print("\n--- First 5 rows ---")
+# A first look: five rows, then the numeric summary
+print("\nFirst five rows:")
 print(df.head())
-print("\n--- Summary statistics ---")
+print("\nSummary of the numeric columns:")
 print(df.describe())
 
-# Chart 1: body mass against flipper length, one colour per species
+# Chart 1: scatter of flipper length (x) and body mass (y), coloured by species
 plt.figure(figsize=(8, 5))
 sns.scatterplot(data=df, x="flipper_length_mm", y="body_mass_g",
                 hue="species", palette="deep")
-plt.title("Penguin Body Mass vs. Flipper Length by Species")
-plt.xlabel("Flipper Length (mm)")
-plt.ylabel("Body Mass (g)")
+plt.title("Flipper length and body mass of each penguin, by species")
+plt.xlabel("Flipper length (mm)")
+plt.ylabel("Body mass (g)")
 plt.show()
 
-# Chart 2: body mass by island, split by sex
+# Chart 2: box plot of body mass on each island, one box per sex
 plt.figure(figsize=(8, 5))
 sns.boxplot(data=df, x="island", y="body_mass_g", hue="sex", palette="pastel")
-plt.title("Body Mass Distribution by Island and Sex")
+plt.title("Spread of body mass on each island, female and male")
 plt.xlabel("Island")
-plt.ylabel("Body Mass (g)")
+plt.ylabel("Body mass (g)")
 plt.show()
 ```
 

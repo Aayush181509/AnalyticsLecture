@@ -119,6 +119,11 @@ nav:
           - "Lecture: Tableau concepts and dashboards": data300/D2_lecture_tableau_dashboards.md
           - "Lab 2: Dashboard": data300/guides/lab2_dashboard.md
           - "Assignment 1: Descriptive analytics report": data300/guides/assignment1_descriptive_report.md
+      - "Day 3 · Thu 12 Nov":
+          - "Lecture: Text mining": data300/D3_lecture_text_mining.md
+          - "Lecture: Time series and forecasting": data300/D3_lecture_forecasting.md
+          - "Lab 3: Text mining": data300/guides/lab3_text_mining.md
+          - "Lab 4: Forecasting": data300/guides/lab4_forecasting.md
   - Tableau Sessions:
       - Overview: tableau/index.md
       - "T1: Tableau Fundamentals":

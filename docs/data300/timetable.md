@@ -87,12 +87,12 @@ Reading: Chapters 3 and 4.
 |---|---|---|
 | P1 | 08:10–08:55 | **Midterm exam** |
 | P2 | 09:05–09:50 | **Midterm exam** |
-| P3 | 10:05–10:50 | Text mining: tokens, stop words, word frequency and VADER sentiment |
-| P4 | 10:55–11:40 | Time series and forecasting: stationarity, train and test, SARIMA, RMSE and MAE |
-| P5 | 13:45–14:30 | **Lab 3:** text mining (OmniPad reviews) |
-| P6 | 14:40–15:25 | **Lab 3** continued; submit on GAP |
-| P7 | 15:40–16:25 | **Lab 4:** forecasting (CO₂) |
-| P8 | 16:35–17:20 | **Lab 4** continued; submit on GAP |
+| P3 | 10:05–10:50 | Text mining: tokens, stop words, word frequency and VADER sentiment ([Text mining](D3_lecture_text_mining.md)) |
+| P4 | 10:55–11:40 | Time series and forecasting: stationarity, train and test, SARIMA, RMSE and MAE ([Time series and forecasting](D3_lecture_forecasting.md)) |
+| P5 | 13:45–14:30 | **Lab 3:** text mining (OmniPad reviews) ([Lab 3 guide](guides/lab3_text_mining.md)) |
+| P6 | 14:40–15:25 | **Lab 3** continued; submit on GAP ([Lab 3 guide](guides/lab3_text_mining.md)) |
+| P7 | 15:40–16:25 | **Lab 4:** forecasting (CO₂) ([Lab 4 guide](guides/lab4_forecasting.md)) |
+| P8 | 16:35–17:20 | **Lab 4** continued; submit on GAP ([Lab 4 guide](guides/lab4_forecasting.md)) |
 
 ### Weekend · Friday 13 – Sunday 15 November
 

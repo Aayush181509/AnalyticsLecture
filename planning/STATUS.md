@@ -4,6 +4,10 @@ Updated: 2026-10-12 (Asia/Kathmandu). **Phase: foundation, source audit, D01 ret
 
 
 
+## DATA 300 GAP course section drafted — 2026-10-25
+
+The new DATA 300 (GAP course) section is complete as a draft (DEC-056). It has an overview, a timetable, a setup page, a pre-class refresher, lectures for Days 1 to 7, and a guide for every graded item from Activity 1 to the capstone, all on branch `data300-gap`. Every lecture notebook re-runs with an unchanged SHA-256, every offline Route B block passes the private tester, `check_docs.py` passes, and the strict build passes. Not done: the Excel and Tableau steps have not been tried end to end in the real programs, and the instructor has not reviewed the drafts. The branch is not pushed; the user pushes.
+
 ## Tableau sessions T1–T4 drafted — 2026-10-19
 
 Tableau sessions T1–T4 now exist as lecture and lab pages in `docs/tableau/`, written for Tableau Public (DEC-055). The old draft lessons class-01 to class-04 are retired, and the roadmap, index and setup pages link to the new sessions. The lesson template moved out of the learner nav to `planning/lesson-template.md`. Not done: the Chrome rehearsal in Tableau Public web authoring, and independent review.

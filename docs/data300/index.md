@@ -4,9 +4,9 @@
 DATA 300 <em>Data Driven Decision Making</em> as it runs on GAP (Moodle), taught in person in China from 10 to 19 November 2026. These pages follow the GAP course item by item and add lectures, worked examples and practice that go further than GAP does.
 </p>
 
-!!! note "Work in progress"
+!!! note "Draft materials"
 
-    The overview, timetable, setup page, pre-class refresher and the Activity 1 guide are ready. Day lectures and the other guides are added as they are finished.
+    Every page of this section now exists: the overview, timetable and setup page, the pre-class refresher, the lectures for Days 1 to 7, and a guide for every graded item from Activity 1 to the capstone. All of them are **drafts** awaiting the facilitator's review. The Python code has been run offline, but the Excel and Tableau steps have **not yet been tried end to end in the real programs**, so menu names and click paths may differ slightly from what you see. Announcements in class and the wording on GAP take precedence.
 
 ---
 

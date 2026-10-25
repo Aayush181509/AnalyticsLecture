@@ -151,14 +151,14 @@ Reading: Chapter 8.
 
 | Period | Time | Subject |
 |---|---|---|
-| P1 | 08:10–08:55 | Course review: descriptive and visual analytics |
-| P2 | 09:05–09:50 | Course review: predictive and prescriptive analytics |
+| P1 | 08:10–08:55 | Course review: descriptive and visual analytics ([Course review and integration](D7_lecture_course_review.md), Parts 1–3) |
+| P2 | 09:05–09:50 | Course review: predictive and prescriptive analytics ([Course review and integration](D7_lecture_course_review.md), Parts 3–9) |
 | P3 | 10:05–10:50 | **Final exam** |
 | P4 | 10:55–11:40 | **Final exam** |
-| P5 | 13:45–14:30 | Capstone launch (EcoVate) |
-| P6 | 14:40–15:25 | Capstone studio |
-| P7 | 15:40–16:25 | Capstone studio; support for Assignments 2 and 3 |
-| P8 | 16:35–17:20 | Capstone studio; support for Assignments 2 and 3 |
+| P5 | 13:45–14:30 | Capstone launch (EcoVate) ([Course review and integration](D7_lecture_course_review.md), Part 11; [Capstone guide](guides/assignment4_capstone.md)) |
+| P6 | 14:40–15:25 | Capstone studio ([Capstone guide](guides/assignment4_capstone.md)) |
+| P7 | 15:40–16:25 | Capstone studio; support for Assignments 2 and 3 ([Capstone guide](guides/assignment4_capstone.md)) |
+| P8 | 16:35–17:20 | Capstone studio; support for Assignments 2 and 3 ([Capstone guide](guides/assignment4_capstone.md)) |
 
 ---
 

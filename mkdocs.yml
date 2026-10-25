@@ -136,6 +136,9 @@ nav:
           - "Lab 6: Spreadsheet simulation": data300/guides/lab6_spreadsheet_simulation.md
           - "Lab 7: Business intelligence case": data300/guides/lab7_bi_case.md
           - "Assignment 3: Simulation decision model": data300/guides/assignment3_simulation_decision.md
+      - "Day 7 · Thu 19 Nov":
+          - "Lecture: Course review and integration": data300/D7_lecture_course_review.md
+          - "Assignment 4: Capstone": data300/guides/assignment4_capstone.md
   - Tableau Sessions:
       - Overview: tableau/index.md
       - "T1: Tableau Fundamentals":

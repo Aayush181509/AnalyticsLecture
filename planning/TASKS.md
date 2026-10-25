@@ -118,3 +118,19 @@ All 16 Python sessions drafted (2026-10-15). Next: real Colab trial with a novic
 | CN-D6 | Day 6: BI strategy and ethics lecture, Lab 6 (Excel simulation), Lab 7 (BI case), Assignment 3 (6%) | DONE (draft) | Lab 6 Data Table restructured onto one sheet (driver cells); Lab 7 range, timeline and horizon corrected from syllabus. Not tested in real Excel/Tableau: rehearse on a lab PC |
 | CN-D7 | Day 7: course review, final exam (private), capstone Assignment 4 (25%, due Sun 29 Nov) | DONE (draft) | Exam assumed 10:10–11:40, closed book with basic calculator |
 | CN-Q | Confirm deadlines, LMS, Tableau licence, Excel/WPS, midterm source | DONE (2026-10-15) | See PLAN.md "Risks and open questions" |
+
+## DATA 300 GAP course section (DEC-056) — 2026-10-25
+
+All pages exist as drafts on branch `data300-gap`, in commits cae779a to the Day 7 commit. The Python code in every lecture and every Route B block has been run offline. None of the Excel or Tableau steps has been rehearsed in the real programs, and no instructor review has happened yet.
+
+| ID | Task | Status | Notes |
+|---|---|---|---|
+| GAP-00 | Section rules, offline bundle, overview, timetable, setup, pre-class refresher, Activity 1 guide | DONE (draft) | Bundle and checksums in `notebooks/DATA300_GAP/data/SOURCES.md`; the private route tester is `instructor/data300_gap/test_routes.py` |
+| GAP-D1 | Day 1: foundations and exploring-data lectures, Lab 1 guide | DONE (draft) | |
+| GAP-D2 | Day 2: visual communication and Tableau lectures, Lab 2 and Assignment 1 guides | DONE (draft) | Tableau steps not yet rehearsed |
+| GAP-D3 | Day 3: text-mining and forecasting lectures, Lab 3 and Lab 4 guides | DONE (draft) | The midterm itself is outside this section |
+| GAP-D4 | Day 4: regression and text-features lectures, Assignment 2 guide | DONE (draft) | |
+| GAP-D5 | Day 5: simulation lecture, Lab 5 guide | DONE (draft) | The Excel Data Table and Monte Carlo steps are not yet rehearsed |
+| GAP-D6 | Day 6: BI strategy, forecasting and ethics lecture, Lab 6, Lab 7 and Assignment 3 guides | DONE (draft) | Forecast Sheet, Data Table and Tableau steps are not yet rehearsed |
+| GAP-D7 | Day 7: course review lecture, capstone (Assignment 4) guide, planning records | DONE (draft) | The capstone's Excel and Tableau steps are not yet rehearsed. GAP's silent fallback scorer can give Route A students a different multiplier from Route B; the facilitator should decide which is accepted |
+| GAP-R | Rehearse every Excel and Tableau step end to end on a lab PC, then instructor review of all drafts | PLANNED | Next step. The deferred minor review notes are in `.superpowers/sdd/2026-10-25-plan/progress.md` |

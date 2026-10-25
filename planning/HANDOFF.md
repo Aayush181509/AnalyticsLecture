@@ -4,6 +4,10 @@ Updated 2026-10-12. **Foundation, four-source audit, first retail development co
 
 The user requests Claude takeover next. Read [AGENTS.md](../AGENTS.md) → [PROJECT_CONTEXT.md](PROJECT_CONTEXT.md) → [STATUS.md](STATUS.md) → [TASKS.md](TASKS.md), then the concrete [CLAUDE_TAKEOVER.md](CLAUDE_TAKEOVER.md). The takeover brief contains exact artifacts, hashes, commands, constraints and a suggested first prompt; shared authority stays in AGENTS.md.
 
+## DATA 300 GAP course section — 2026-10-25 (next step)
+
+The DATA 300 (GAP course) section in `docs/data300/` and `notebooks/DATA300_GAP/` is drafted in full, from pre-class to Day 7 and the capstone (DEC-056, design in `planning/data300_gap/2026-10-25-design.md`). The next step is to rehearse the GAP Excel and Tableau steps end to end on a lab PC (the Lab 5 to 7 Data Tables and Forecast Sheet, the Lab 2, Lab 7, Assignment 3 and capstone Tableau views), and then for the instructor to review every draft. Fix any menu names or click paths that differ from what the guides say. Private outputs and answers stay in `instructor/data300_gap/`, and `references/` is never committed. The work is on branch `data300-gap`, and the user pushes it.
+
 ## Tableau sessions T1–T4 — 2026-10-19 (next step)
 
 T1–T4 are drafted in `docs/tableau/` and the old class-01 to class-04 pages are gone (DEC-055). Next: the Chrome rehearsal in Tableau Public web authoring (plan Task 7, `planning/tableau/2026-10-19-tableau-sessions-plan.md`). The user signs in and approves each upload; save and publish nothing. Never publish Superstore. Publishing synthetic data in T4 stays optional until the user confirms reuse terms.

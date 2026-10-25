@@ -2,7 +2,7 @@
 
 These files let every lecture notebook and every guide's offline route (Route B) run without internet access. GitHub and some other sites are slow or blocked in mainland China, so nothing here is downloaded at run time.
 
-All files were copied on 2026-10-25, byte for byte, from this repository's China classroom bundle (`notebooks/China_Classroom/data/`), which was downloaded on 2026-10-15 from the same public URLs the DATA 300 labs use. The Datasaurus Dozen comes from this repository's preserved copy. **Reuse terms are listed as reported by each upstream source and must be re-checked before any public redistribution outside this course.**
+All files were copied on 2026-10-25, byte for byte, from this repository's China classroom bundle (`notebooks/China_Classroom/data/`), which was downloaded on 2026-10-15 from the same public URLs the DATA 300 labs use. The Datasaurus Dozen comes from this repository's preserved copy. `ecovate_focus_group.csv` was not downloaded: it holds the capstone's five fictional comments, typed in by hand for the China bundle. **Reuse terms are listed as reported by each upstream source and must be re-checked before any public redistribution outside this course.**
 
 | File | Used for | Upstream source | Terms (verify) | SHA-256 |
 |---|---|---|---|---|
@@ -11,6 +11,7 @@ All files were copied on 2026-10-25, byte for byte, from this repository's China
 | `tips.csv` | Assignment 1 | seaborn-data, from Bryant & Smith (1995) *Practical Data Analysis* | Widely redistributed teaching dataset; no explicit licence found | `e54cc4d2ce1bff65d32ca60b3e4b802e06bde1d7e7caf6f796f6bf7370e863b0` |
 | `mpg.csv` | Lab 5 | seaborn-data, from the UCI Auto MPG dataset | UCI datasets: CC BY 4.0 | `c14b8b855ea7ee86cb9736bf8caaf281c4685ca08826f3eb2acaccaaf40f0d5a` |
 | `datasaurus_dozen.csv` | Day 1 lecture | `data/raw/datasaurus-dozen/` (datasauRus R package) | MIT licence | `472324f6c71b26a92ed4741054850558db829efbf993c7b5d3c4f70d21b69fba` |
+| `ecovate_focus_group.csv` | Assignment 4 (capstone), Route B | The five fictional EcoVate focus-group comments from the DATA 300 capstone (columns `Review_ID`, `Review_Text`), typed into a CSV for the China classroom bundle on 2026-10-15 | Fictional case text from the course; course use only | `38f46e2ef646486994846be59c16c5befd2f399f998d3deedd9def3aa824a2ea` |
 | `nltk_data/sentiment/vader_lexicon.zip` | Lab 3, Assignment 2, capstone | `nltk/nltk_data` (VADER lexicon, Hutto & Gilbert 2014) | VADER: MIT licence | `8adba4294eef3964d820bf655e37e61bdc3a341994356af59b74fb3b4a36ce5c` |
 | `nltk_data/corpora/stopwords.zip` | Lab 3 | `nltk/nltk_data` | Per nltk_data package terms | `48c0e52d8b52546e827f53761fb30300c0ab94f70660d28bd65ba0a86270946b` |
 | `nltk_data/tokenizers/punkt_tab.zip` | Lab 3 | `nltk/nltk_data` (Punkt tokenizer tables) | Per nltk_data package terms | `e57f64187974277726a3417ca6f181ec5403676c717672eef6a748a7b20e0106` |

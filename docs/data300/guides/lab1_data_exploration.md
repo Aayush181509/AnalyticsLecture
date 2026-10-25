@@ -166,7 +166,7 @@ Optional, not graded. Try these in the same notebook after you have answered GAP
 1. Count the problem rows yourself: `diamonds.duplicated().sum()` and `(diamonds[["x", "y", "z"]] == 0).any(axis=1).sum()`. Which data quality dimensions from the morning lecture do they break?
 2. Build a second pivot table with `aggfunc="count"` in place of `"mean"`. Which cells rest on few diamonds, and how should that change how much you trust their averages?
 3. Draw a histogram of `price` with `np.log10(diamonds["price"])` on the x-axis. How does the shape change compared with the violin plot?
-4. Create carat bands with `pd.cut(diamonds["carat"], bins=[0, 0.5, 1, 1.5, 2, 6])` and build a pivot table of mean price by band and cut. What does it add to your answer about the hidden variable?
+4. Take the variable you named as hidden in your answer, split it into a few bands of your choice with `pd.cut`, and build a pivot table of mean price by band and cut. Does the comparison between cuts look different within each band?
 5. Calculate a price per carat (`diamonds["price"] / diamonds["carat"]`) and compare its median across cuts. Write one sentence for the retailer's buyer.
 
 ---

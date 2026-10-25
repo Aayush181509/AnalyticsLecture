@@ -124,6 +124,10 @@ nav:
           - "Lecture: Time series and forecasting": data300/D3_lecture_forecasting.md
           - "Lab 3: Text mining": data300/guides/lab3_text_mining.md
           - "Lab 4: Forecasting": data300/guides/lab4_forecasting.md
+      - "Day 4 · Mon 16 Nov":
+          - "Lecture: Predictive regression": data300/D4_lecture_predictive_regression.md
+          - "Lecture: Text as a feature": data300/D4_lecture_text_features.md
+          - "Assignment 2: Predictive data mining report": data300/guides/assignment2_predictive_report.md
   - Tableau Sessions:
       - Overview: tableau/index.md
       - "T1: Tableau Fundamentals":

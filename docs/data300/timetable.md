@@ -108,10 +108,10 @@ Reading: Chapter 5.
 
 | Period | Time | Subject |
 |---|---|---|
-| P1 | 08:10–08:55 | Predictive regression: from a line of best fit to a business prediction |
-| P2 | 09:05–09:50 | Judging a model: train and test, R², error measures and residuals |
-| P3 | 10:05–10:50 | Multicollinearity, and text as a feature |
-| P4 | 10:55–11:40 | Assignment 2 briefing (UrbanTrend house prices with a text score) |
+| P1 | 08:10–08:55 | Predictive regression: from a line of best fit to a business prediction ([Predictive regression](D4_lecture_predictive_regression.md)) |
+| P2 | 09:05–09:50 | Judging a model: train and test, R², error measures and residuals ([Predictive regression](D4_lecture_predictive_regression.md)) |
+| P3 | 10:05–10:50 | Multicollinearity, and text as a feature ([Predictive regression](D4_lecture_predictive_regression.md); [Text as a feature](D4_lecture_text_features.md)) |
+| P4 | 10:55–11:40 | Assignment 2 briefing (UrbanTrend house prices with a text score) ([Text as a feature](D4_lecture_text_features.md), Part 10; [Assignment 2 guide](guides/assignment2_predictive_report.md)) |
 
 ### Day 5 · Tuesday 17 November
 

@@ -3590,7 +3590,12 @@ demand
 </tr>
 <tr>
 <td>Every result cell shows the same number</td>
-<td>Row and column input cells swapped, or the wrong cell chosen</td>
+<td>The corner formula does not depend on the input cells (it reads cells that do not change when <code>B4</code> and <code>B9</code> change), or calculation is set to <em>Automatic Except for Data Tables</em></td>
+<td>Link the model to <code>B4</code> and <code>B9</code> so the corner formula uses them; press <strong>F9</strong>, or choose <em>Automatic</em></td>
+</tr>
+<tr>
+<td>The values vary but look wrong, and the base-case cell is not $32,000</td>
+<td>Row and column input cells swapped</td>
 <td>Delete the results and rebuild; prices along the top → <strong>row</strong> input</td>
 </tr>
 <tr>

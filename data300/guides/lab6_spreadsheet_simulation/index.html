@@ -3038,9 +3038,9 @@ Your first graded Excel lab. For a car maker planning a new electric vehicle, yo
 <p>For question 3, read the change from <strong>your</strong> base model, then <strong>set the premium back to GAP's value</strong> before you save.</p>
 <hr />
 <h2 id="3-route-b-a-python-cross-check-offline">3. Route B: a Python cross-check (offline)<a class="headerlink" href="#3-route-b-a-python-cross-check-offline" title="Permanent link">&para;</a></h2>
-<p>The graded product is an Excel workbook, so there is no Python route that replaces it. The block below is a <strong>cross-check</strong>: it rebuilds the base model, the 25-cell Data Table and a 50-trial simulation in numpy, with GAP's figures, so you can confirm your spreadsheet. Run it in Anaconda JupyterLab from the <code>DATA300_GAP</code> folder (it reads no files).</p>
+<p>The graded product is an Excel workbook, so there is no Python route that replaces it. The block below is a <strong>cross-check</strong>: it rebuilds the base model and a 50-trial simulation in numpy, with GAP's figures, so you can confirm your spreadsheet. It does not print the Data Table, because that table is the graded work; section 4 lists checks you can make on your own table. Run it in Anaconda JupyterLab from the <code>DATA300_GAP</code> folder (it reads no files).</p>
 <ul>
-<li>The <strong>base model</strong> and the <strong>Data Table</strong> have no randomness: your Excel values must match these <strong>exactly</strong>.</li>
+<li>The <strong>base model</strong> has no randomness: your <em>Base Model</em> <strong>E4</strong> must match GAP's checkpoint <strong>exactly</strong>.</li>
 <li>The <strong>simulation</strong> uses a fixed seed, so it prints the same 50 trials every time. Excel's <code>RANDBETWEEN</code> has no seed, so your sheet's numbers will differ from these, and from your neighbour's. The extra lines at the end repeat the 50-trial simulation with 20 different seeds, so you can see how much the summary of a 50-trial run moves (Day 5, Part 9).</li>
 </ul>
 <div class="offline highlight"><pre><span></span><code><span class="c1"># Route B cross-check for Lab 6: rebuild GAP's model in numpy (no files needed).</span>
@@ -3063,15 +3063,9 @@ Your first graded Excel lab. For a car maker planning a new electric vehicle, yo
 
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Base model net profit (E4): $</span><span class="si">{</span><span class="n">net_profit</span><span class="p">(</span><span class="n">demand</span><span class="p">)</span><span class="si">:</span><span class="s2">,.0f</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 
-<span class="c1"># --- Part 2: the two-way Data Table (rows: demand, columns: base cost)</span>
-<span class="n">demands</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">5_000</span><span class="p">,</span> <span class="mi">10_000</span><span class="p">,</span> <span class="mi">15_000</span><span class="p">,</span> <span class="mi">20_000</span><span class="p">,</span> <span class="mi">25_000</span><span class="p">])</span>      <span class="c1"># B3:B7</span>
-<span class="n">costs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">24_000</span><span class="p">,</span> <span class="mi">26_000</span><span class="p">,</span> <span class="mi">28_000</span><span class="p">,</span> <span class="mi">30_000</span><span class="p">,</span> <span class="mi">32_000</span><span class="p">])</span>        <span class="c1"># C2:G2</span>
-<span class="n">grid</span> <span class="o">=</span> <span class="n">net_profit</span><span class="p">(</span><span class="n">demands</span><span class="p">[:,</span> <span class="kc">None</span><span class="p">],</span> <span class="n">costs</span><span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="p">:])</span>               <span class="c1"># every combination at once</span>
-<span class="n">table</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">grid</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">Index</span><span class="p">(</span><span class="n">demands</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">"demand"</span><span class="p">),</span> <span class="n">columns</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">Index</span><span class="p">(</span><span class="n">costs</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">"base cost"</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">Data Table (C3:G7):"</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">table</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">v</span><span class="p">:</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">v</span><span class="si">:</span><span class="s2">&gt;15,.0f</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span><span class="o">.</span><span class="n">to_string</span><span class="p">())</span>
+<span class="c1"># The Data Table is not rebuilt here: use the structural checks in section 4 instead.</span>
 
-<span class="c1"># --- Part 3: 50-trial Monte Carlo with RANDBETWEEN(8000, 22000)</span>
+<span class="c1"># --- Part 2: 50-trial Monte Carlo with RANDBETWEEN(8000, 22000)</span>
 <span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">default_rng</span><span class="p">(</span><span class="mi">618</span><span class="p">)</span>
 <span class="n">sim_demand</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">integers</span><span class="p">(</span><span class="mi">8_000</span><span class="p">,</span> <span class="mi">22_000</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>   <span class="c1"># integers() excludes its upper limit, so add 1</span>
 <span class="n">sim_profit</span> <span class="o">=</span> <span class="n">net_profit</span><span class="p">(</span><span class="n">sim_demand</span><span class="p">)</span>
@@ -3098,7 +3092,6 @@ Your first graded Excel lab. For a car maker planning a new electric vehicle, yo
 <li class="task-list-item"><input type="checkbox" disabled/> Clicking any cell in C3:G7 shows <code>{=TABLE(J3,J2)}</code> in the formula bar: the row input first, then the column input.</li>
 <li class="task-list-item"><input type="checkbox" disabled/> The cell for GAP's base demand and base cost (row 15,000, column 28,000) equals the checkpoint value.</li>
 <li class="task-list-item"><input type="checkbox" disabled/> Moving <strong>one column to the right</strong> lowers profit by the same amount in every cell of a row (demand × $2,000). Moving <strong>one row down</strong> changes profit by the same amount in every cell of a column. If not, the input cells are swapped or a driver is not used.</li>
-<li class="task-list-item"><input type="checkbox" disabled/> Every value in C3:G7 matches the Route B table to the dollar.</li>
 <li class="task-list-item"><input type="checkbox" disabled/> In <em>Risk Simulation</em>, every demand in B2:B51 is a <strong>whole number</strong> between GAP's two limits, and every profit in C2:C51 changes when you press F9.</li>
 <li class="task-list-item"><input type="checkbox" disabled/> The average lies between the minimum and the maximum, and the probability of a loss is a multiple of <strong>2%</strong> (it counts losses out of 50).</li>
 <li class="task-list-item"><input type="checkbox" disabled/> The ethical premium on <em>Base Model</em> is back at GAP's value in the file you submit.</li>
@@ -3131,7 +3124,7 @@ Your first graded Excel lab. For a car maker planning a new electric vehicle, yo
 <td>Link them (Part 2, step 3), or write the corner formula from J2 and J3</td>
 </tr>
 <tr>
-<td>The table's values look wrong, but the centre is right</td>
+<td>The table's values look wrong, and the centre cell (row 15,000, column 28,000) no longer equals GAP's checkpoint</td>
 <td>Row and column input cells swapped</td>
 <td>Costs run across the top, so <strong>Row input cell = J3</strong>; demands run down, so <strong>Column input cell = J2</strong>. Delete C3:G7 and rebuild</td>
 </tr>
@@ -3183,7 +3176,7 @@ Your first graded Excel lab. For a car maker planning a new electric vehicle, yo
 <tr>
 <td>Your Route B simulation numbers differ from your Excel</td>
 <td>Expected: Excel's random numbers are not seeded</td>
-<td>Only the base model and the Data Table must match exactly; compare the simulation's <strong>range</strong> of results</td>
+<td>Only the base model must match exactly; compare the simulation's <strong>range</strong> of results</td>
 </tr>
 <tr>
 <td>Your recommendation for question 3 is only about money</td>

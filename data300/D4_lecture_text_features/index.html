@@ -3613,13 +3613,10 @@ Bag of words on archived text (LEAKS)    0.994         19.617        15.759
 <td>Duplicates across the split</td>
 <td>The same listing posted twice, once in training and once in test</td>
 </tr>
-<tr>
-<td>Generated data</td>
-<td>When a feature and the target were <strong>created by the same step</strong> of a simulation, the model can recover the simulation rule almost exactly, and its accuracy says more about the generator than about the world</td>
-</tr>
 </tbody>
 </table>
 <p>The defence is a question asked of every feature: <strong>"At the moment we will use this model, would we know this value?"</strong> A test score that looks too good to be true usually is.</p>
+<p><strong>A note on simulated data.</strong> The listings in this lecture are simulated. That is not leakage, because every feature is still known at prediction time, but it does limit what a score can tell you: a model fitted to simulated data learns the rule that made the data.</p>
 <hr />
 <h2 id="part-8-a-checklist-for-text-features-core-summary">Part 8: A checklist for text features (core summary)<a class="headerlink" href="#part-8-a-checklist-for-text-features-core-summary" title="Permanent link">&para;</a></h2>
 <p>Before you trust, report or act on a text feature, check:</p>
@@ -3762,7 +3759,7 @@ Bag of words on archived text (LEAKS)    0.994         19.617        15.759
 <li>Define leakage and give one example involving text.</li>
 <li>"Listings with more positive descriptions sell for more, so sellers should write more positively." What is wrong with this advice?</li>
 <li>A sentiment score runs from −1 to +1. What does a coefficient of 50 on it mean, and what is a more realistic step to quote?</li>
-<li>Why can a model trained on generated data show an R² that would never be reached on real data?</li>
+<li>What question should you ask of every feature before you trust a high test score?</li>
 </ol>
 <h3 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h3>
 <table>

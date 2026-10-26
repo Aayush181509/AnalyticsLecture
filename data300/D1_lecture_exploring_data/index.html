@@ -4168,7 +4168,7 @@ Women         1835       557          30.4
 </table>
 </div>
 
-<p>In most departments women were admitted at a rate similar to or <strong>higher</strong> than men, yet overall they were admitted less often. Look at the applicant counts: most women applied to departments C–F, which admitted few applicants of either gender; most men applied to A and B, which admitted most applicants. The <strong>department</strong> is the confounder: it affects both who applied (gender mix) and the chance of admission.</p>
+<p>In most departments women were admitted at a rate similar to or <strong>higher</strong> than men, yet overall they were admitted less often. Look at the applicant counts: most women applied to departments C–F, which admitted few applicants of either gender; most men applied to A and B, which admitted most applicants. The <strong>department</strong> is the lurking variable: gender affected which department people applied to, and department affected the chance of admission.</p>
 <p><strong>Simpson's paradox</strong> is the name for a trend that appears in every group, or most groups, and reverses (or disappears) when the groups are combined. It happens when the groups differ in size <strong>and</strong> in their baseline rate.</p>
 <h3 id="a-business-version-and-a-fairer-comparison">A business version, and a fairer comparison<a class="headerlink" href="#a-business-version-and-a-fairer-comparison" title="Permanent link">&para;</a></h3>
 <p>Two support teams resolve customer tickets. Team North handles many <strong>hard</strong> tickets (technical faults); Team South mostly <strong>easy</strong> ones (password resets). Synthetic numbers:</p>
@@ -4456,7 +4456,7 @@ dtype: float64
 <li>In a right-skewed distribution, which is larger, the mean or the median? Name two business variables that are usually right-skewed.</li>
 <li>What does the "All" margin of a pivot table weight by, and why does an average of group averages differ from it?</li>
 <li><em>r</em> = 0.05 between temperature and complaints. Can you conclude there is no relationship? Why or why not?</li>
-<li>Define Simpson's paradox in one sentence and give the Berkeley confounder.</li>
+<li>Define Simpson's paradox in one sentence. In the Berkeley example, what is the lurking variable, and on what path does it sit?</li>
 <li>Name three fixes for over-plotting and one risk of each.</li>
 <li>On a hexbin plot, what does the darkest hexagon tell you?</li>
 </ol>
@@ -4617,7 +4617,7 @@ dtype: float64
 <td>P6</td>
 <td>20</td>
 <td>Part 6: Berkeley and the support teams</td>
-<td>Take the prediction vote; draw the Z → X, Z → Y arrows on the board</td>
+<td>Take the prediction vote; for Berkeley draw gender → department → admission (department is a lurking variable on the path, not a confounder); for the support teams draw the Z → X, Z → Y arrows, with ticket type as Z</td>
 </tr>
 <tr>
 <td>P6</td>

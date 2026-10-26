@@ -1536,7 +1536,7 @@ cars.groupby("origin").agg(car_models=("weight", "size"), mean_weight_lb=("weigh
 3. In a right-skewed distribution, which is larger, the mean or the median? Name two business variables that are usually right-skewed.
 4. What does the "All" margin of a pivot table weight by, and why does an average of group averages differ from it?
 5. *r* = 0.05 between temperature and complaints. Can you conclude there is no relationship? Why or why not?
-6. Define Simpson's paradox in one sentence and give the Berkeley confounder.
+6. Define Simpson's paradox in one sentence. In the Berkeley example, what is the lurking variable, and on what path does it sit?
 7. Name three fixes for over-plotting and one risk of each.
 8. On a hexbin plot, what does the darkest hexagon tell you?
 
@@ -1588,7 +1588,7 @@ This notebook fills periods P4–P6 of Day 1, before Lab 1 in P7–P8. No answer
 | P5 | 10 | Part 3 continued: bins, log scale, box plot, violins | Contrast "unusual" with "impossible" values |
 | P5 | 20 | Part 4: pivot tables, counts, margins, crosstab, order | Make students read the count table before the averages |
 | P5 | 15 | Part 5: heatmap and the five traps | Hide the panel titles and ask students to guess each *r* first |
-| P6 | 20 | Part 6: Berkeley and the support teams | Take the prediction vote; draw the Z → X, Z → Y arrows on the board |
+| P6 | 20 | Part 6: Berkeley and the support teams | Take the prediction vote; for Berkeley draw gender → department → admission (department is a lurking variable on the path, not a confounder); for the support teams draw the Z → X, Z → Y arrows, with ticket type as Z |
 | P6 | 15 | Part 7: over-plotting | Ask how large the airport group looks in each panel, and where most trips lie |
 | P6 | 10 | Part 8: Lab 1 briefing | Walk through the guide's pitfalls; check every student has a working route before P7 |
 

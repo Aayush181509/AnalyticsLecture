@@ -791,7 +791,7 @@ harbour_dashboard("East")   # like clicking East in the region view
     
 
 
-> **Discuss.** In the right-hand chart, bar **length** shows sales and **colour** shows profit. What can a manager see with both encodings that they could not see from length alone? Which encoding will a hurried reader look at first, and what might they miss? (This morning's lecture, Part 2, and the reading packet's section on dual encoding will help.)
+> **Discuss.** In the right-hand chart, bar **length** shows sales and **colour** shows profit. Which encoding will a hurried reader look at first, and what might they miss? (This morning's lecture, Part 2, and the reading packet's section on dual encoding will help.)
 
 Notice also: after filtering, the **colour scale was recomputed** from the filtered data, so the same shade can mean different amounts in the two pictures. Tableau behaves the same way unless you fix the colour range (**Edit Colors → Advanced → Start / End**). When comparing filtered views, read the values (tooltip or labels), not just the shade.
 

@@ -288,9 +288,9 @@ A chart **encodes** each number as a visual property: a position, a length, an a
 
 | Most accurate | | | | Least accurate |
 |---|---|---|---|---|
-| Position on a common scale | Position on separate, aligned scales | Length, direction, angle | Area | Volume, colour saturation, colour hue |
+| Position on a common scale | Position on separate, aligned scales | Length, direction, angle | Area | Volume, curvature, shading (colour saturation) |
 
-The practical rule: **put the most important comparison on position or length**; use colour and area for secondary information or rough groups. A second finding from perception research (Stevens' power law) explains why bubbles mislead: people tend to **underestimate** differences in area, so a circle with twice the area looks less than twice as big.
+Colour **hue** is not in their ranking; later work by Mackinlay (1986) ranks hue low for quantities but high for telling categories apart. The practical rule: **put the most important comparison on position or length**; use colour and area for secondary information or rough groups. A second finding from perception research (Stevens' power law) explains why bubbles mislead: people tend to **underestimate** differences in area, so a circle with twice the area looks less than twice as big.
 
 > **Predict, then run.** The next cell shows the same two numbers, A and B, four ways. In each panel, estimate how many times bigger A is than B. Write down your four estimates before reading the answer printed below the figure.
 

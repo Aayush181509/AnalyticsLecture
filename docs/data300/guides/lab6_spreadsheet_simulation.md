@@ -82,9 +82,9 @@ For question 3, read the change from **your** base model, then **set the premium
 
 ## 3. Route B: a Python cross-check (offline)
 
-The graded product is an Excel workbook, so there is no Python route that replaces it. The block below is a **cross-check**: it rebuilds the base model, the 25-cell Data Table and a 50-trial simulation in numpy, with GAP's figures, so you can confirm your spreadsheet. Run it in Anaconda JupyterLab from the `DATA300_GAP` folder (it reads no files).
+The graded product is an Excel workbook, so there is no Python route that replaces it. The block below is a **cross-check**: it rebuilds the base model and a 50-trial simulation in numpy, with GAP's figures, so you can confirm your spreadsheet. It does not print the Data Table, because that table is the graded work; section 4 lists checks you can make on your own table. Run it in Anaconda JupyterLab from the `DATA300_GAP` folder (it reads no files).
 
-- The **base model** and the **Data Table** have no randomness: your Excel values must match these **exactly**.
+- The **base model** has no randomness: your *Base Model* **E4** must match GAP's checkpoint **exactly**.
 - The **simulation** uses a fixed seed, so it prints the same 50 trials every time. Excel's `RANDBETWEEN` has no seed, so your sheet's numbers will differ from these, and from your neighbour's. The extra lines at the end repeat the 50-trial simulation with 20 different seeds, so you can see how much the summary of a 50-trial run moves (Day 5, Part 9).
 
 ```{.python .offline}
@@ -108,15 +108,9 @@ def net_profit(units, cost=base_cost, prem=premium):
 
 print(f"Base model net profit (E4): ${net_profit(demand):,.0f}")
 
-# --- Part 2: the two-way Data Table (rows: demand, columns: base cost)
-demands = np.array([5_000, 10_000, 15_000, 20_000, 25_000])      # B3:B7
-costs = np.array([24_000, 26_000, 28_000, 30_000, 32_000])        # C2:G2
-grid = net_profit(demands[:, None], costs[None, :])               # every combination at once
-table = pd.DataFrame(grid, index=pd.Index(demands, name="demand"), columns=pd.Index(costs, name="base cost"))
-print("\nData Table (C3:G7):")
-print(table.map(lambda v: f"{v:>15,.0f}").to_string())
+# The Data Table is not rebuilt here: use the structural checks in section 4 instead.
 
-# --- Part 3: 50-trial Monte Carlo with RANDBETWEEN(8000, 22000)
+# --- Part 2: 50-trial Monte Carlo with RANDBETWEEN(8000, 22000)
 rng = np.random.default_rng(618)
 sim_demand = rng.integers(8_000, 22_000 + 1, size=50)   # integers() excludes its upper limit, so add 1
 sim_profit = net_profit(sim_demand)
@@ -146,7 +140,6 @@ These tell you whether your workbook is right without giving any answers away.
 - [ ] Clicking any cell in C3:G7 shows `{=TABLE(J3,J2)}` in the formula bar: the row input first, then the column input.
 - [ ] The cell for GAP's base demand and base cost (row 15,000, column 28,000) equals the checkpoint value.
 - [ ] Moving **one column to the right** lowers profit by the same amount in every cell of a row (demand × $2,000). Moving **one row down** changes profit by the same amount in every cell of a column. If not, the input cells are swapped or a driver is not used.
-- [ ] Every value in C3:G7 matches the Route B table to the dollar.
 - [ ] In *Risk Simulation*, every demand in B2:B51 is a **whole number** between GAP's two limits, and every profit in C2:C51 changes when you press F9.
 - [ ] The average lies between the minimum and the maximum, and the probability of a loss is a multiple of **2%** (it counts losses out of 50).
 - [ ] The ethical premium on *Base Model* is back at GAP's value in the file you submit.
@@ -171,7 +164,7 @@ These tell you whether your workbook is right without giving any answers away.
 | Excel rejects the `COUNTIF` formula | The criterion is not in quotes | Write the criterion as `"<0"`, in double quotes |
 | F9 does nothing on a Mac | The function keys control the brightness or volume | Press **Fn + F9**, or **Cmd + =** |
 | Colour scale shows losses in green | The colour scale was chosen in reverse (*Red - Yellow - Green*) | **Conditional Formatting → Manage Rules → Edit**, and choose **Green - Yellow - Red** (highest value green) |
-| Your Route B simulation numbers differ from your Excel | Expected: Excel's random numbers are not seeded | Only the base model and the Data Table must match exactly; compare the simulation's **range** of results |
+| Your Route B simulation numbers differ from your Excel | Expected: Excel's random numbers are not seeded | Only the base model must match exactly; compare the simulation's **range** of results |
 | Your recommendation for question 3 is only about money | The question asks you to argue **for** the premium, using non-financial evidence | Use Day 6, Parts 12 and 14: brand and legal risk, human rights, what the company has said publicly, and the cost per vehicle in plain terms |
 
 ---

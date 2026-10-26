@@ -874,7 +874,7 @@ print(pd.DataFrame(rows).to_string(index=False))
 
 At the point forecast, the certified spot option B beats the contract C by about $20,000. At the upper bound the order **reverses**: the contract's fixed price protects it, while B carries the full market risk **plus** the premium. Option C also has **no spread** at all in bean cost: its profit is known in advance, which has value for a company with a bank budget to meet.
 
-That reversal is the reason to look at the bound. When options carry **different exposure** to the uncertain driver, the ranking can change between the middle and the tail of the forecast. When every option shifts by the same amount (a fixed premium on the same market price), the ranking cannot change, but the bound still tells you whether the chosen option stays profitable.
+That reversal is the reason to look at the bound. When options carry **different exposure** to the uncertain driver, the ranking can change between the middle and the tail of the forecast.
 
 Option A is the cheapest at both points. Whether that settles the decision is the subject of Parts 8 to 14: the board also cares about the people and the land that grow the coffee, and about what its customers and lenders expect.
 
@@ -1309,7 +1309,7 @@ Several frameworks turn the ideas of Parts 8 to 12 into checklists and rules. Yo
 | **OECD AI Principles** (2019, updated 2024) | OECD member countries and others | Inclusive growth and well-being; human rights and fairness; transparency and explainability; robustness and safety; accountability |
 | **UNESCO Recommendation on the Ethics of AI** (2021) | UNESCO member states | Human rights and dignity, fairness, sustainability, human oversight; impact assessments |
 | **NIST AI Risk Management Framework 1.0** (2023) | US National Institute of Standards and Technology (voluntary) | Four functions: **Govern** (culture, roles), **Map** (context and risks), **Measure** (test and track), **Manage** (prioritise and act) |
-| **EU AI Act** (Regulation 2024/1689, in force from August 2024, obligations phased in over several years) | European Union (law) | Risk tiers: **unacceptable** (banned, such as social scoring by public authorities), **high-risk** (such as credit scoring and recruitment: strict requirements), **limited** (transparency duties, such as telling people they are talking to a chatbot), **minimal** |
+| **EU AI Act** (Regulation 2024/1689, in force from August 2024, obligations phased in over several years) | European Union (law) | Risk tiers: **unacceptable** (banned, such as social scoring of people by public or private bodies), **high-risk** (such as credit scoring and recruitment: strict requirements), **limited** (transparency duties, such as telling people they are talking to a chatbot), **minimal** |
 | **China's AI rules** | Cyberspace Administration of China and other regulators (law) | Rules on algorithmic recommendation (2022: transparency, an option to turn off personalisation, no unreasonable price discrimination), deep synthesis (2023), generative AI services (2023) and labelling of AI-generated content (2025) |
 | **ISO/IEC 42001** (2023) | International standard | A certifiable management system for AI, in the style of ISO quality standards |
 

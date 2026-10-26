@@ -373,7 +373,7 @@ The floor-area coefficient barely moved because, in this chain, store size is **
 
 Why leave one out? With an intercept in the model, the three dummies would always add up to 1, so one is perfectly predictable from the other two. The model cannot separate them: this is the **dummy-variable trap**.
 
-> **Predict, then run.** Downtown stores have the highest **average** sales. Will the Downtown coefficient be positive in a model that also includes footfall and floor area?
+> **Predict, then run.** Downtown stores have the highest **average** sales. Will Downtown's coefficient, relative to Suburb, be positive in a model that also includes footfall and floor area?
 
 
 ```python
@@ -524,10 +524,13 @@ r2_hand = 1 - sse / sst
 rmse_hand = np.sqrt(np.mean(resid ** 2))
 mae_hand = np.mean(np.abs(resid))
 n_test, k = len(test), len(features)
-adj_r2 = 1 - (1 - r2_hand) * (n_test - 1) / (n_test - k - 1)
+# Adjusted R-squared is a training-data measure: the penalty is for fitting k coefficients to n_train rows
+n_train = len(train)
+r2_train = r2_score(train["sales"], pred_train)
+adj_r2 = 1 - (1 - r2_train) * (n_train - 1) / (n_train - k - 1)
 
 print(f"R-squared   by hand {r2_hand:.3f}   sklearn {r2_score(test['sales'], pred_test):.3f}")
-print(f"Adjusted R-squared  {adj_r2:.3f}")
+print(f"Adjusted R-squared on training data  {adj_r2:.3f}   (training R-squared {r2_train:.3f})")
 print(f"RMSE        by hand {rmse_hand:6.1f}   sklearn {np.sqrt(mean_squared_error(test['sales'], pred_test)):6.1f}  thousand US dollars")
 print(f"MAE         by hand {mae_hand:6.1f}   sklearn {mean_absolute_error(test['sales'], pred_test):6.1f}  thousand US dollars")
 
@@ -537,7 +540,7 @@ print(f"Typical test store sells about {test['sales'].median():,.0f} thousand US
 ```
 
     R-squared   by hand 0.798   sklearn 0.798
-    Adjusted R-squared  0.783
+    Adjusted R-squared on training data  0.841   (training R-squared 0.843)
     RMSE        by hand  262.4   sklearn  262.4  thousand US dollars
     MAE         by hand  203.0   sklearn  203.0  thousand US dollars
     
@@ -577,7 +580,7 @@ print(pd.DataFrame(rows).round(3).to_string(index=False))
     4 real + 30 noise     0.867         0.845    293.676
 
 
-Training R² went **up** noticeably, as it always does. Adjusted R² barely moved: its penalty roughly cancels the gain that pure noise gives, so it does not reward the junk (with useless predictors it is as likely to fall as to rise slightly). The test RMSE got **worse**: the noise columns fitted quirks of the training stores that do not repeat. This is overfitting in miniature (Part 10).
+Training R² went **up** noticeably, as it always does. Adjusted R² barely moved: its penalty roughly cancels the gain that pure noise gives, so it does not reward the junk (with useless predictors it falls more often than it rises: adding one raises it only if that column's t-statistic exceeds 1 in size). The test RMSE got **worse**: the noise columns fitted quirks of the training stores that do not repeat. This is overfitting in miniature (Part 10).
 
 > **Check your understanding.** Model A has training R² 0.90 and test R² 0.60. Model B has training R² 0.82 and test R² 0.80. Which would you deploy for predicting new stores, and why?
 

@@ -505,7 +505,8 @@ The **input cell must be on the same sheet as the Data Table.** If you build the
 | Data Table trouble | Cause | Fix |
 |---|---|---|
 | *Input cell reference is not valid* | The input cell is on a different sheet from the table | Build the table on the inputs' sheet |
-| Every result cell shows the same number | Row and column input cells swapped, or the wrong cell chosen | Delete the results and rebuild; prices along the top → **row** input |
+| Every result cell shows the same number | The corner formula does not depend on the input cells (it reads cells that do not change when `B4` and `B9` change), or calculation is set to *Automatic Except for Data Tables* | Link the model to `B4` and `B9` so the corner formula uses them; press **F9**, or choose *Automatic* |
+| The values vary but look wrong, and the base-case cell is not $32,000 | Row and column input cells swapped | Delete the results and rebuild; prices along the top → **row** input |
 | The table does not update when inputs change | **Formulas → Calculation Options** is set to *Automatic Except for Data Tables* | Press **F9**, or choose *Automatic* |
 | *Cannot change part of a data table* | You tried to edit one result cell | Select the whole result range and delete it |
 | Results ignore the corner formula | The corner cell holds a number, not a formula linked to the output | Type `=E8` in the corner |

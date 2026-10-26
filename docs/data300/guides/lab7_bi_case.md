@@ -65,56 +65,52 @@ Quote numbers from **your** workbook, with units, and say which sheet and cell e
 
 ## 3. Route B: a Python cross-check (offline)
 
-The graded product is an Excel workbook, so there is no Python route that replaces it. The block below **mirrors** Part 1 with statsmodels, so you can check that Excel's forecast is sensible, and recomputes the dashboard from a bound. Run it in Anaconda JupyterLab from the `DATA300_GAP` folder (it reads no files).
+The graded product is an Excel workbook, so there is no Python route that replaces it. The block below is a **checker** on your own numbers: you type in Excel's period-16 forecast and upper bound, and it tells you how far they are from a statsmodels fit of the same model, as a percentage only. It never prints its own forecast or bound. Once you have typed your bound, it also recomputes the dashboard from **your** number. Run it in Anaconda JupyterLab from the `DATA300_GAP` folder (it reads no files).
 
-Excel's Forecast Sheet fits the **AAA** version of exponential smoothing (additive error, trend and seasonality) and decides by itself whether there is a 4-quarter season. statsmodels fits the same family of models, but its starting values and optimiser differ from Excel's, so **expect close, not identical, numbers**. With only three years of data, the choice of season matters, so the block fits both versions. In Excel, `=FORECAST.ETS.SEASONALITY(C2:C13, B2:B13)` on the *Historical Data* sheet tells you which one Excel chose (4 means a quarterly season, 0 means none); compare with the matching Python version. **In your report, quote Excel's numbers.**
+Excel's Forecast Sheet fits the **AAA** version of exponential smoothing (additive error, trend and seasonality) and decides by itself whether there is a 4-quarter season. statsmodels fits the same family of models, but its starting values and optimiser differ from Excel's, so **expect close, not identical, numbers**. With only three years of data, the choice of season matters, so the block checks against both versions. In Excel, `=FORECAST.ETS.SEASONALITY(C2:C13, B2:B13)` on the *Historical Data* sheet tells you which one Excel chose (4 means a quarterly season, 0 means none); look at the matching line of the output. **In your report, quote Excel's numbers.**
 
 ```{.python .offline}
-# Route B cross-check for Lab 7: an exponential-smoothing mirror of Excel's Forecast Sheet.
-import numpy as np
+# Route B checker for Lab 7: compare YOUR Excel forecast with an exponential-smoothing fit.
 import pandas as pd
-from statsmodels.tsa.holtwinters import ExponentialSmoothing
 from statsmodels.tsa.exponential_smoothing.ets import ETSModel
 
-# --- Part 1: GAP's 12 quarters, with a numeric timeline (periods 1-12)
-quarters = [f"Q{q}-{y}" for y in (2023, 2024, 2025) for q in (1, 2, 3, 4)]
+# --- Type these from YOUR Excel Predictive Forecast sheet, period 16 (Q4-2026) row:
+excel_forecast = None       # the Forecast column, for example 12345.6
+excel_upper = None          # the Upper Confidence Bound column
+
+# --- GAP's 12 quarters, periods 1-12
 cost = [7500, 7650, 7900, 8100, 8000, 8350, 8600, 8900, 8800, 9200, 9550, 9800]
-history = pd.DataFrame({"quarter": quarters, "period": range(1, 13), "battery_cost": cost})
-y = pd.Series(history["battery_cost"].to_numpy(dtype=float))
+y = pd.Series(cost, dtype=float)
 horizon = 4                                   # periods 13-16 = Q1-2026 to Q4-2026
 
-for label, seasonal in [("No season (trend only)", None), ("Quarterly season (AAA)", "add")]:
-    periods = 4 if seasonal else None
-    # Point forecast with Holt-Winters exponential smoothing
-    hw = ExponentialSmoothing(y, trend="add", seasonal=seasonal, seasonal_periods=periods).fit()
-    # 95% interval from the equivalent state-space ETS model (additive errors, as in Excel)
-    ets = ETSModel(y, error="add", trend="add", seasonal=seasonal, seasonal_periods=periods).fit(disp=False)
-    bounds = ets.get_prediction(start=len(y), end=len(y) + horizon - 1).summary_frame(alpha=0.05)
-    out = pd.DataFrame({
-        "period": range(13, 13 + horizon),
-        "quarter": ["Q1-2026", "Q2-2026", "Q3-2026", "Q4-2026"],
-        "forecast (Holt-Winters)": hw.forecast(horizon).to_numpy(),
-        "forecast (ETS)": bounds["mean"].to_numpy(),
-        "lower 95%": bounds["pi_lower"].to_numpy(),
-        "upper 95%": bounds["pi_upper"].to_numpy(),
-    })
-    print(f"\n{label}")
-    print(out.round(0).to_string(index=False))
+if excel_forecast is None or excel_upper is None:
+    print("Type your Excel period-16 forecast and upper bound into excel_forecast and excel_upper, then run again.")
+else:
+    for label, seasonal in [("No season (Excel seasonality 0)", None), ("Quarterly season (Excel seasonality 4)", "add")]:
+        periods = 4 if seasonal else None
+        # State-space ETS with additive errors, as in Excel; 95% interval
+        ets = ETSModel(y, error="add", trend="add", seasonal=seasonal, seasonal_periods=periods).fit(disp=False)
+        last = ets.get_prediction(start=len(y), end=len(y) + horizon - 1).summary_frame(alpha=0.05).iloc[-1]
+        gaps = {"forecast": excel_forecast / last["mean"] - 1, "upper bound": excel_upper / last["pi_upper"] - 1}
+        print(f"\n{label}")
+        for name, gap in gaps.items():
+            verdict = "consistent" if abs(gap) <= 0.05 else "check the timeline, the Forecast End and the seasonality"
+            print(f"  your {name} is {gap:+.1%} from the Python fit: {verdict}")
 
-# --- Part 2: the dashboard, from a battery-cost bound
-# Type the Upper Confidence Bound for period 16 from YOUR Excel Predictive Forecast sheet here:
-projected_battery = float(out["upper 95%"].iloc[-1])      # placeholder: the last Python version's bound
-demand, price, non_battery, overhead = 15_000, 35_000, 18_000, 50_000_000
-premiums = {"1. Profit-maximised (no ethics)": 0, "2. Hybrid sourcing (50% ethical)": 250,
-            "3. Fully ethical (100% certified)": 500}
-dash = pd.DataFrame({"ethical premium": premiums})
-dash["total variable cost"] = non_battery + projected_battery + dash["ethical premium"]
-dash["projected net profit"] = demand * price - demand * dash["total variable cost"] - overhead
-print(f"\nProjected battery cost used: ${projected_battery:,.0f}")
-print(dash.round(0).to_string())
+# --- The dashboard, from YOUR bound
+projected_battery = excel_upper      # your period-16 Upper Confidence Bound, as typed above
+if projected_battery is not None:
+    demand, price, non_battery, overhead = 15_000, 35_000, 18_000, 50_000_000
+    premiums = {"1. Profit-maximised (no ethics)": 0, "2. Hybrid sourcing (50% ethical)": 250,
+                "3. Fully ethical (100% certified)": 500}
+    dash = pd.DataFrame({"ethical premium": premiums})
+    dash["total variable cost"] = non_battery + projected_battery + dash["ethical premium"]
+    dash["projected net profit"] = demand * price - demand * dash["total variable cost"] - overhead
+    print(f"\nProjected battery cost used (yours): ${projected_battery:,.0f}")
+    print(dash.round(0).to_string())
 ```
 
-Replace the `projected_battery` line with **your Excel bound** to check your dashboard's three profits to the dollar.
+Compare only the line that matches Excel's seasonality. The dashboard part runs only once you have typed **your Excel bound**; its three profits should then match your *Case Study Dashboard* to the dollar.
 
 ---
 
@@ -127,7 +123,7 @@ These tell you whether your work is right without giving any answers away.
 - [ ] On every forecast row, Lower < Forecast < Upper, and the gap between the bounds **widens** from period 13 to period 16.
 - [ ] Your forecast continues the direction of the history; if it looks flat or bends sharply, check the timeline and the seasonality setting.
 - [ ] `FORECAST.ETS.SEASONALITY` tells you whether Excel used a season, and your report says which.
-- [ ] Your forecast and bounds are **close** to the matching Route B version (within a few per cent), but not necessarily identical.
+- [ ] The Route B checker reports your forecast and upper bound **close** to the matching season version (within a few per cent), but not necessarily identical.
 - [ ] *Case Study Dashboard* **B6** is a **link** (its formula starts with `='Predictive Forecast'!`), not a typed number, and it shows the period-16 upper bound.
 - [ ] Rows 10 and 11 use `$` on the shared cells, so all three strategies use the same demand, price, costs and battery cost; only the premium differs.
 - [ ] The three net profits differ by exactly **demand × the difference in premium**. If not, a formula points at the wrong cell.
@@ -149,7 +145,7 @@ These tell you whether your work is right without giving any answers away.
 | **B6** shows 0 or `#REF!` | The link points at an empty cell, or the forecast sheet was deleted and re-created | Re-create the link by typing `=` and clicking the bound for period 16 |
 | All three strategies show the same profit | Row 10 adds the same premium cell to every strategy (missing column change) | Each column must add **its own** premium (B9, C9, D9); the other cells are absolute (`$B$3`, `$B$6`) |
 | Profits change when you copy the formula along the row | Missing `$` on the constants | Use `$B$1`, `$B$2`, `$B$4` and `$B$3`, `$B$6` as GAP shows |
-| Your numbers differ slightly from the Route B mirror | Excel and statsmodels fit ETS differently | Expected. Compare with the Route B version that matches Excel's seasonality, and quote Excel |
+| The Route B checker shows a gap of a few per cent | Excel and statsmodels fit ETS differently | Expected. Read the line that matches Excel's seasonality, and quote Excel |
 | A classmate's forecast differs from yours | Different seasonality setting, confidence level or a typing slip in the 12 costs | Compare the Options settings and the data cell by cell |
 | Your recommendation lists ethical points without numbers | Question 4 asks you to **balance** the data against societal impacts | State the profit difference between strategies in plain units (per year, per vehicle), then the ethical evidence; Day 6, Part 14 |
 

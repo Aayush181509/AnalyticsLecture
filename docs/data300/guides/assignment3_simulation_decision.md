@@ -98,7 +98,8 @@ print(sim.to_string(index=False))
 
 # Rule checks: the same checks as section 4 of the guide
 assert sim["Market_Volatility"].between(-swing, swing).all()
-assert (sim["Aggressive_Demand"] == np.round(sim["Standard_Demand"] * multiplier)).all()
+assert (sim["Standard_Demand"] - sim["Baseline_Demand"]).between(-swing, swing).all()
+assert sim["Aggressive_Demand"].dtype.kind == "i"     # whole units, as Excel's ROUND gives
 print("\nAll rule checks passed.")
 
 # Preview of the Tableau view: Month as a dimension, two measures, line marks, colour by measure

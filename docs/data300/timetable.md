@@ -53,14 +53,14 @@ Reading: Chapter 1.
 
 | Period | Time | Subject |
 |---|---|---|
-| P1 | 08:10–08:55 | Welcome: outcomes, graded work and the three environments |
-| P2 | 09:05–09:50 | The analytics hierarchy: descriptive, diagnostic, predictive, prescriptive |
-| P3 | 10:05–10:50 | Framing a decision: from a business question to a statistic to an insight |
-| P4 | 10:55–11:40 | Exploring data: data quality, missing values and summary statistics |
-| P5 | 13:45–14:30 | Pivot tables, grouped summaries and correlation |
-| P6 | 14:40–15:25 | Confounding and over-plotting; Lab 1 briefing |
-| P7 | 15:40–16:25 | **Lab 1:** data exploration (diamonds) |
-| P8 | 16:35–17:20 | **Lab 1** continued; submit on GAP |
+| P1 | 08:10–08:55 | Welcome: outcomes, graded work and the three environments ([Foundations of data-driven decisions](D1_lecture_foundations_decisions.md), Parts 1–2) |
+| P2 | 09:05–09:50 | The analytics hierarchy: descriptive, diagnostic, predictive, prescriptive ([Foundations of data-driven decisions](D1_lecture_foundations_decisions.md), Part 3) |
+| P3 | 10:05–10:50 | Framing a decision: from a business question to a statistic to an insight ([Foundations of data-driven decisions](D1_lecture_foundations_decisions.md), Parts 4–6) |
+| P4 | 10:55–11:40 | Exploring data: data quality, missing values and summary statistics ([Exploring data](D1_lecture_exploring_data.md), Parts 1–3) |
+| P5 | 13:45–14:30 | Pivot tables, grouped summaries and correlation ([Exploring data](D1_lecture_exploring_data.md), Parts 3–5) |
+| P6 | 14:40–15:25 | Confounding and over-plotting; Lab 1 briefing ([Exploring data](D1_lecture_exploring_data.md), Parts 6–8; [Lab 1 guide](guides/lab1_data_exploration.md)) |
+| P7 | 15:40–16:25 | **Lab 1:** data exploration (diamonds) ([Lab 1 guide](guides/lab1_data_exploration.md)) |
+| P8 | 16:35–17:20 | **Lab 1** continued; submit on GAP ([Lab 1 guide](guides/lab1_data_exploration.md)) |
 
 ### Day 2 · Wednesday 11 November
 

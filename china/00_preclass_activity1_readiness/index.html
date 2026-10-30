@@ -3022,23 +3022,23 @@ A short diagnostic that checks your tools and your starting point: run a small e
 <span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">seaborn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sns</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Libraries loaded: pandas"</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">__version__</span><span class="p">,</span> <span class="s2">"| seaborn"</span><span class="p">,</span> <span class="n">sns</span><span class="o">.</span><span class="n">__version__</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Libraries loaded: pandas&quot;</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">__version__</span><span class="p">,</span> <span class="s2">&quot;| seaborn&quot;</span><span class="p">,</span> <span class="n">sns</span><span class="o">.</span><span class="n">__version__</span><span class="p">)</span>
 </code></pre></div>
 <div class="highlight"><pre><span></span><code>Libraries loaded: pandas 2.2.3 | seaborn 0.13.2
 </code></pre></div>
 <h3 id="a2-load-the-data">A2. Load the data<a class="headerlink" href="#a2-load-the-data" title="Permanent link">&para;</a></h3>
 <p>The file is in the <code>data</code> folder, so it loads without internet.</p>
-<div class="highlight"><pre><span></span><code><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">"data/penguins.csv"</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Rows and columns:"</span><span class="p">,</span> <span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;data/penguins.csv&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Rows and columns:&quot;</span><span class="p">,</span> <span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
 </code></pre></div>
 <div class="highlight"><pre><span></span><code>Rows and columns: (344, 7)
 </code></pre></div>
 <h3 id="a3-first-rows-and-summary-statistics">A3. First rows and summary statistics<a class="headerlink" href="#a3-first-rows-and-summary-statistics" title="Permanent link">&para;</a></h3>
 <p><code>head()</code> shows the first five penguins. <code>describe()</code> summarises every numeric column. Read the <code>count</code> row: a count lower than the number of rows means some values are <strong>missing</strong> (not recorded).</p>
-<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">"--- First 5 rows of the dataset ---"</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;--- First 5 rows of the dataset ---&quot;</span><span class="p">)</span>
 <span class="n">display</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">--- Summary statistics ---"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">--- Summary statistics ---&quot;</span><span class="p">)</span>
 <span class="n">display</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">describe</span><span class="p">())</span>
 </code></pre></div>
 <div class="highlight"><pre><span></span><code>--- First 5 rows of the dataset ---
@@ -3214,37 +3214,37 @@ A short diagnostic that checks your tools and your starting point: run a small e
 
 <h3 id="a4-chart-1-flipper-length-against-body-mass-by-species">A4. Chart 1: flipper length against body mass, by species<a class="headerlink" href="#a4-chart-1-flipper-length-against-body-mass-by-species" title="Permanent link">&para;</a></h3>
 <p>A <strong>scatter plot</strong> with one dot per penguin. Colour shows the species.</p>
-<div class="highlight"><pre><span></span><code><span class="n">species_colours</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"Adelie"</span><span class="p">:</span> <span class="s2">"#2a78d6"</span><span class="p">,</span> <span class="s2">"Chinstrap"</span><span class="p">:</span> <span class="s2">"#eb6834"</span><span class="p">,</span> <span class="s2">"Gentoo"</span><span class="p">:</span> <span class="s2">"#1baf7a"</span><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><span class="n">species_colours</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Adelie&quot;</span><span class="p">:</span> <span class="s2">&quot;#2a78d6&quot;</span><span class="p">,</span> <span class="s2">&quot;Chinstrap&quot;</span><span class="p">:</span> <span class="s2">&quot;#eb6834&quot;</span><span class="p">,</span> <span class="s2">&quot;Gentoo&quot;</span><span class="p">:</span> <span class="s2">&quot;#1baf7a&quot;</span><span class="p">}</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
 <span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span>
     <span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span>
-    <span class="n">x</span><span class="o">=</span><span class="s2">"flipper_length_mm"</span><span class="p">,</span>
-    <span class="n">y</span><span class="o">=</span><span class="s2">"body_mass_g"</span><span class="p">,</span>
-    <span class="n">hue</span><span class="o">=</span><span class="s2">"species"</span><span class="p">,</span>
+    <span class="n">x</span><span class="o">=</span><span class="s2">&quot;flipper_length_mm&quot;</span><span class="p">,</span>
+    <span class="n">y</span><span class="o">=</span><span class="s2">&quot;body_mass_g&quot;</span><span class="p">,</span>
+    <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;species&quot;</span><span class="p">,</span>
     <span class="n">palette</span><span class="o">=</span><span class="n">species_colours</span><span class="p">,</span>
 <span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">"Penguin body mass vs. flipper length by species"</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">"Flipper length (mm)"</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">"Body mass (g)"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Penguin body mass vs. flipper length by species&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Flipper length (mm)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Body mass (g)&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </code></pre></div>
 <p><img alt="png" src="../00_preclass_activity1_readiness_files/00_preclass_activity1_readiness_8_0.png" /></p>
 <h3 id="a5-chart-2-body-mass-by-island-and-sex">A5. Chart 2: body mass by island and sex<a class="headerlink" href="#a5-chart-2-body-mass-by-island-and-sex" title="Permanent link">&para;</a></h3>
 <p>A <strong>box plot</strong> shows how values are spread within each group: the box covers the middle half of the penguins, the line inside it is the median, and the whiskers and dots show the rest.</p>
-<div class="highlight"><pre><span></span><code><span class="n">sex_colours</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"MALE"</span><span class="p">:</span> <span class="s2">"#2a78d6"</span><span class="p">,</span> <span class="s2">"FEMALE"</span><span class="p">:</span> <span class="s2">"#eb6834"</span><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><span class="n">sex_colours</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;MALE&quot;</span><span class="p">:</span> <span class="s2">&quot;#2a78d6&quot;</span><span class="p">,</span> <span class="s2">&quot;FEMALE&quot;</span><span class="p">:</span> <span class="s2">&quot;#eb6834&quot;</span><span class="p">}</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
 <span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span>
     <span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span>
-    <span class="n">x</span><span class="o">=</span><span class="s2">"island"</span><span class="p">,</span>
-    <span class="n">y</span><span class="o">=</span><span class="s2">"body_mass_g"</span><span class="p">,</span>
-    <span class="n">hue</span><span class="o">=</span><span class="s2">"sex"</span><span class="p">,</span>
+    <span class="n">x</span><span class="o">=</span><span class="s2">&quot;island&quot;</span><span class="p">,</span>
+    <span class="n">y</span><span class="o">=</span><span class="s2">&quot;body_mass_g&quot;</span><span class="p">,</span>
+    <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;sex&quot;</span><span class="p">,</span>
     <span class="n">palette</span><span class="o">=</span><span class="n">sex_colours</span><span class="p">,</span>
 <span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">"Body mass distribution by island and sex"</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">"Island"</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">"Body mass (g)"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Body mass distribution by island and sex&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Island&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Body mass (g)&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </code></pre></div>
 <p><img alt="png" src="../00_preclass_activity1_readiness_files/00_preclass_activity1_readiness_10_0.png" /></p>

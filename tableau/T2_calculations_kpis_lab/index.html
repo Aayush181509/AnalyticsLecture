@@ -3021,7 +3021,7 @@ Build a segment KPI table in Tableau that reconciles with its totals, find out w
 <h3 id="step-1-save-a-copy">Step 1: Save a copy<a class="headerlink" href="#step-1-save-a-copy" title="Permanent link">&para;</a></h3>
 <ol>
 <li>Open <strong>Tableau Desktop Public Edition</strong> and open <code>T1_lab_YourName.twbx</code>.</li>
-<li>Choose <strong>File → Save As</strong> and save it as a *<em>Tableau Packaged Workbook (<em>.twbx)</em></em> named <code>T2_lab_YourName</code>.</li>
+<li>Choose <strong>File → Save As</strong> and save it as a <strong>Tableau Packaged Workbook (*.twbx)</strong> named <code>T2_lab_YourName</code>.</li>
 </ol>
 <p>Now you work in the copy, and your T1 workbook stays as you submitted it.</p>
 <div class="admonition tip">
@@ -3204,7 +3204,7 @@ Build a segment KPI table in Tableau that reconciles with its totals, find out w
 <ol>
 <li>
 <p>Create a calculated field named <code>Focus Year</code>:</p>
-<div class="highlight"><pre><span></span><code>IF YEAR(MIN([Order Date])) = 2025 THEN "2025" ELSE "Earlier years" END
+<div class="highlight"><pre><span></span><code>IF YEAR(MIN([Order Date])) = 2025 THEN &quot;2025&quot; ELSE &quot;Earlier years&quot; END
 </code></pre></div>
 <p>In plain words: label each month's mark "2025" or "Earlier years".</p>
 </li>

@@ -3099,7 +3099,7 @@ Learn just enough Jupyter, Python and pandas to run every notebook in this cours
 <p><strong>Predict, then reveal: running cells out of order</strong></p>
 <p>The next cell uses <code>quantity</code>. Suppose you went back up, changed <code>quantity = 3</code> to <code>quantity = 10</code> and ran <strong>only that</strong> cell, then ran the next one. Which value would the next cell use? Write your guess, then try it.</p>
 </blockquote>
-<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">"Quantity Python remembers right now:"</span><span class="p">,</span> <span class="n">quantity</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Quantity Python remembers right now:&quot;</span><span class="p">,</span> <span class="n">quantity</span><span class="p">)</span>
 </code></pre></div>
 <div class="highlight"><pre><span></span><code>Quantity Python remembers right now: 3
 </code></pre></div>
@@ -3124,28 +3124,28 @@ Learn just enough Jupyter, Python and pandas to run every notebook in this cours
 <h2 id="part-2-python-essentials">Part 2: Python essentials<a class="headerlink" href="#part-2-python-essentials" title="Permanent link">&para;</a></h2>
 <h3 id="variables-and-types">Variables and types<a class="headerlink" href="#variables-and-types" title="Permanent link">&para;</a></h3>
 <p>A <strong>variable</strong> is a name for a value. <code>=</code> stores the value under the name. Every value has a <strong>type</strong>.</p>
-<div class="highlight"><pre><span></span><code><span class="n">store</span> <span class="o">=</span> <span class="s2">"Shanghai West"</span>   <span class="c1"># text: a string, inside quotes</span>
+<div class="highlight"><pre><span></span><code><span class="n">store</span> <span class="o">=</span> <span class="s2">&quot;Shanghai West&quot;</span>   <span class="c1"># text: a string, inside quotes</span>
 <span class="n">orders</span> <span class="o">=</span> <span class="mi">42</span>               <span class="c1"># whole number: an int</span>
 <span class="n">average_basket</span> <span class="o">=</span> <span class="mf">18.75</span>    <span class="c1"># decimal number: a float</span>
 <span class="n">is_open</span> <span class="o">=</span> <span class="kc">True</span>            <span class="c1"># True or False: a bool</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">store</span><span class="p">),</span> <span class="nb">type</span><span class="p">(</span><span class="n">orders</span><span class="p">),</span> <span class="nb">type</span><span class="p">(</span><span class="n">average_basket</span><span class="p">),</span> <span class="nb">type</span><span class="p">(</span><span class="n">is_open</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Revenue estimate:"</span><span class="p">,</span> <span class="n">orders</span> <span class="o">*</span> <span class="n">average_basket</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Revenue estimate:&quot;</span><span class="p">,</span> <span class="n">orders</span> <span class="o">*</span> <span class="n">average_basket</span><span class="p">)</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>&lt;class 'str'&gt; &lt;class 'int'&gt; &lt;class 'float'&gt; &lt;class 'bool'&gt;
+<div class="highlight"><pre><span></span><code>&lt;class &#39;str&#39;&gt; &lt;class &#39;int&#39;&gt; &lt;class &#39;float&#39;&gt; &lt;class &#39;bool&#39;&gt;
 Revenue estimate: 787.5
 </code></pre></div>
 <p><code>print</code> shows several things on one line. An <strong>f-string</strong> (a string starting with <code>f</code>) puts values inside text, and <code>:.2f</code> rounds to two decimals:</p>
-<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">store</span><span class="si">}</span><span class="s2"> had </span><span class="si">{</span><span class="n">orders</span><span class="si">}</span><span class="s2"> orders, about </span><span class="si">{</span><span class="n">orders</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">average_basket</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> dollars in total."</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">store</span><span class="si">}</span><span class="s2"> had </span><span class="si">{</span><span class="n">orders</span><span class="si">}</span><span class="s2"> orders, about </span><span class="si">{</span><span class="n">orders</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">average_basket</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> dollars in total.&quot;</span><span class="p">)</span>
 </code></pre></div>
 <div class="highlight"><pre><span></span><code>Shanghai West had 42 orders, about 787.50 dollars in total.
 </code></pre></div>
 <h3 id="lists-several-values-in-order">Lists: several values in order<a class="headerlink" href="#lists-several-values-in-order" title="Permanent link">&para;</a></h3>
 <p>A <strong>list</strong> holds values in square brackets. Python counts positions from <strong>0</strong>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">monthly_sales</span> <span class="o">=</span> <span class="p">[</span><span class="mi">120</span><span class="p">,</span> <span class="mi">95</span><span class="p">,</span> <span class="mi">140</span><span class="p">,</span> <span class="mi">180</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"First month:"</span><span class="p">,</span> <span class="n">monthly_sales</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Last month: "</span><span class="p">,</span> <span class="n">monthly_sales</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Total:"</span><span class="p">,</span> <span class="nb">sum</span><span class="p">(</span><span class="n">monthly_sales</span><span class="p">),</span> <span class="s2">"| months:"</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">monthly_sales</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;First month:&quot;</span><span class="p">,</span> <span class="n">monthly_sales</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Last month: &quot;</span><span class="p">,</span> <span class="n">monthly_sales</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Total:&quot;</span><span class="p">,</span> <span class="nb">sum</span><span class="p">(</span><span class="n">monthly_sales</span><span class="p">),</span> <span class="s2">&quot;| months:&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">monthly_sales</span><span class="p">))</span>
 </code></pre></div>
 <div class="highlight"><pre><span></span><code>First month: 120
 Last month:  180
@@ -3153,13 +3153,13 @@ Total: 535 | months: 4
 </code></pre></div>
 <h3 id="dictionaries-values-looked-up-by-name">Dictionaries: values looked up by name<a class="headerlink" href="#dictionaries-values-looked-up-by-name" title="Permanent link">&para;</a></h3>
 <p>A <strong>dictionary</strong> pairs <strong>keys</strong> with <strong>values</strong>, inside curly brackets. A table is like a dictionary of columns.</p>
-<div class="highlight"><pre><span></span><code><span class="n">prices</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"coffee"</span><span class="p">:</span> <span class="mf">3.5</span><span class="p">,</span> <span class="s2">"tea"</span><span class="p">:</span> <span class="mf">2.8</span><span class="p">,</span> <span class="s2">"cake"</span><span class="p">:</span> <span class="mf">4.2</span><span class="p">}</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Price of tea:"</span><span class="p">,</span> <span class="n">prices</span><span class="p">[</span><span class="s2">"tea"</span><span class="p">])</span>
-<span class="n">prices</span><span class="p">[</span><span class="s2">"juice"</span><span class="p">]</span> <span class="o">=</span> <span class="mf">3.9</span>   <span class="c1"># add a new key</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Items on the menu:"</span><span class="p">,</span> <span class="nb">list</span><span class="p">(</span><span class="n">prices</span><span class="o">.</span><span class="n">keys</span><span class="p">()))</span>
+<div class="highlight"><pre><span></span><code><span class="n">prices</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;coffee&quot;</span><span class="p">:</span> <span class="mf">3.5</span><span class="p">,</span> <span class="s2">&quot;tea&quot;</span><span class="p">:</span> <span class="mf">2.8</span><span class="p">,</span> <span class="s2">&quot;cake&quot;</span><span class="p">:</span> <span class="mf">4.2</span><span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Price of tea:&quot;</span><span class="p">,</span> <span class="n">prices</span><span class="p">[</span><span class="s2">&quot;tea&quot;</span><span class="p">])</span>
+<span class="n">prices</span><span class="p">[</span><span class="s2">&quot;juice&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">3.9</span>   <span class="c1"># add a new key</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Items on the menu:&quot;</span><span class="p">,</span> <span class="nb">list</span><span class="p">(</span><span class="n">prices</span><span class="o">.</span><span class="n">keys</span><span class="p">()))</span>
 </code></pre></div>
 <div class="highlight"><pre><span></span><code>Price of tea: 2.8
-Items on the menu: ['coffee', 'tea', 'cake', 'juice']
+Items on the menu: [&#39;coffee&#39;, &#39;tea&#39;, &#39;cake&#39;, &#39;juice&#39;]
 </code></pre></div>
 <h3 id="calling-functions-and-methods">Calling functions and methods<a class="headerlink" href="#calling-functions-and-methods" title="Permanent link">&para;</a></h3>
 <p>A <strong>function</strong> does a job when you <strong>call</strong> it with brackets: <code>len(monthly_sales)</code>, <code>round(3.14159, 2)</code>, <code>max(...)</code>. A <strong>method</strong> is a function that belongs to a value and is called with a dot: <code>store.upper()</code>.</p>
@@ -3171,7 +3171,7 @@ Items on the menu: ['coffee', 'tea', 'cake', 'juice']
 <div class="highlight"><pre><span></span><code>3.14
 180
 SHANGHAI WEST
-['tea', 'coffee', 'juice', 'cake']
+[&#39;tea&#39;, &#39;coffee&#39;, &#39;juice&#39;, &#39;cake&#39;]
 </code></pre></div>
 <h3 id="when-something-goes-wrong">When something goes wrong<a class="headerlink" href="#when-something-goes-wrong" title="Permanent link">&para;</a></h3>
 <p>Errors are normal. Read the <strong>last line</strong> of the red message first.</p>
@@ -3217,7 +3217,7 @@ SHANGHAI WEST
 <h3 id="load-and-look">Load and look<a class="headerlink" href="#load-and-look" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 
-<span class="n">tips</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">"data/tips.csv"</span><span class="p">)</span>
+<span class="n">tips</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;data/tips.csv&quot;</span><span class="p">)</span>
 <span class="n">tips</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </code></pre></div>
 <div>
@@ -3303,7 +3303,7 @@ SHANGHAI WEST
 </div>
 
 <p><code>head()</code> shows the first five rows. Next, the size of the table and the type of each column:</p>
-<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">"Rows and columns:"</span><span class="p">,</span> <span class="n">tips</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Rows and columns:&quot;</span><span class="p">,</span> <span class="n">tips</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">tips</span><span class="o">.</span><span class="n">dtypes</span><span class="p">)</span>
 </code></pre></div>
@@ -3399,7 +3399,7 @@ dtype: object
 </div>
 
 <p>For text columns, <code>describe(include="object")</code> counts values and shows the most common one:</p>
-<div class="highlight"><pre><span></span><code><span class="n">tips</span><span class="o">.</span><span class="n">describe</span><span class="p">(</span><span class="n">include</span><span class="o">=</span><span class="s2">"object"</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">tips</span><span class="o">.</span><span class="n">describe</span><span class="p">(</span><span class="n">include</span><span class="o">=</span><span class="s2">&quot;object&quot;</span><span class="p">)</span>
 </code></pre></div>
 <div>
 <style scoped>
@@ -3459,7 +3459,7 @@ dtype: object
 </div>
 
 <h3 id="select-columns">Select columns<a class="headerlink" href="#select-columns" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="n">tips</span><span class="p">[</span><span class="s2">"tip"</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>          <span class="c1"># one column, as a Series</span>
+<div class="highlight"><pre><span></span><code><span class="n">tips</span><span class="p">[</span><span class="s2">&quot;tip&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>          <span class="c1"># one column, as a Series</span>
 </code></pre></div>
 <div class="highlight"><pre><span></span><code>0    1.01
 1    1.66
@@ -3468,7 +3468,7 @@ dtype: object
 4    3.61
 Name: tip, dtype: float64
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="n">tips</span><span class="p">[[</span><span class="s2">"day"</span><span class="p">,</span> <span class="s2">"time"</span><span class="p">,</span> <span class="s2">"total_bill"</span><span class="p">,</span> <span class="s2">"tip"</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>   <span class="c1"># several columns: a list inside the brackets</span>
+<div class="highlight"><pre><span></span><code><span class="n">tips</span><span class="p">[[</span><span class="s2">&quot;day&quot;</span><span class="p">,</span> <span class="s2">&quot;time&quot;</span><span class="p">,</span> <span class="s2">&quot;total_bill&quot;</span><span class="p">,</span> <span class="s2">&quot;tip&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>   <span class="c1"># several columns: a list inside the brackets</span>
 </code></pre></div>
 <div>
 <style scoped>
@@ -3536,19 +3536,19 @@ Name: tip, dtype: float64
 
 <h3 id="filter-rows">Filter rows<a class="headerlink" href="#filter-rows" title="Permanent link">&para;</a></h3>
 <p>A condition inside the brackets keeps only the rows where it is true. Combine conditions with <code>&amp;</code> (and) or <code>|</code> (or), each in its own brackets.</p>
-<div class="highlight"><pre><span></span><code><span class="n">dinners</span> <span class="o">=</span> <span class="n">tips</span><span class="p">[</span><span class="n">tips</span><span class="p">[</span><span class="s2">"time"</span><span class="p">]</span> <span class="o">==</span> <span class="s2">"Dinner"</span><span class="p">]</span>
-<span class="n">big_weekend</span> <span class="o">=</span> <span class="n">tips</span><span class="p">[(</span><span class="n">tips</span><span class="p">[</span><span class="s2">"day"</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="s2">"Sat"</span><span class="p">,</span> <span class="s2">"Sun"</span><span class="p">]))</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">tips</span><span class="p">[</span><span class="s2">"size"</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">4</span><span class="p">)]</span>
+<div class="highlight"><pre><span></span><code><span class="n">dinners</span> <span class="o">=</span> <span class="n">tips</span><span class="p">[</span><span class="n">tips</span><span class="p">[</span><span class="s2">&quot;time&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Dinner&quot;</span><span class="p">]</span>
+<span class="n">big_weekend</span> <span class="o">=</span> <span class="n">tips</span><span class="p">[(</span><span class="n">tips</span><span class="p">[</span><span class="s2">&quot;day&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="s2">&quot;Sat&quot;</span><span class="p">,</span> <span class="s2">&quot;Sun&quot;</span><span class="p">]))</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">tips</span><span class="p">[</span><span class="s2">&quot;size&quot;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">4</span><span class="p">)]</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Dinner bills:"</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">dinners</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Weekend parties of four or more:"</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">big_weekend</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Dinner bills:&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">dinners</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Weekend parties of four or more:&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">big_weekend</span><span class="p">))</span>
 </code></pre></div>
 <div class="highlight"><pre><span></span><code>Dinner bills: 176
 Weekend parties of four or more: 36
 </code></pre></div>
 <h3 id="add-a-column">Add a column<a class="headerlink" href="#add-a-column" title="Permanent link">&para;</a></h3>
 <p>New columns are calculated from existing ones, row by row. The tip as a percentage of the bill:</p>
-<div class="highlight"><pre><span></span><code><span class="n">tips</span><span class="p">[</span><span class="s2">"tip_percent"</span><span class="p">]</span> <span class="o">=</span> <span class="mi">100</span> <span class="o">*</span> <span class="n">tips</span><span class="p">[</span><span class="s2">"tip"</span><span class="p">]</span> <span class="o">/</span> <span class="n">tips</span><span class="p">[</span><span class="s2">"total_bill"</span><span class="p">]</span>
-<span class="n">tips</span><span class="p">[[</span><span class="s2">"total_bill"</span><span class="p">,</span> <span class="s2">"tip"</span><span class="p">,</span> <span class="s2">"tip_percent"</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">tips</span><span class="p">[</span><span class="s2">&quot;tip_percent&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">100</span> <span class="o">*</span> <span class="n">tips</span><span class="p">[</span><span class="s2">&quot;tip&quot;</span><span class="p">]</span> <span class="o">/</span> <span class="n">tips</span><span class="p">[</span><span class="s2">&quot;total_bill&quot;</span><span class="p">]</span>
+<span class="n">tips</span><span class="p">[[</span><span class="s2">&quot;total_bill&quot;</span><span class="p">,</span> <span class="s2">&quot;tip&quot;</span><span class="p">,</span> <span class="s2">&quot;tip_percent&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 </code></pre></div>
 <div>
 <style scoped>
@@ -3610,7 +3610,7 @@ Weekend parties of four or more: 36
 
 <h3 id="group-and-count">Group and count<a class="headerlink" href="#group-and-count" title="Permanent link">&para;</a></h3>
 <p><code>value_counts()</code> counts how often each value appears. <code>groupby</code> splits the table into groups and summarises each one.</p>
-<div class="highlight"><pre><span></span><code><span class="n">tips</span><span class="p">[</span><span class="s2">"day"</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+<div class="highlight"><pre><span></span><code><span class="n">tips</span><span class="p">[</span><span class="s2">&quot;day&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
 </code></pre></div>
 <div class="highlight"><pre><span></span><code>day
 Sat     87
@@ -3619,10 +3619,10 @@ Thur    62
 Fri     19
 Name: count, dtype: int64
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="n">tips</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">"day"</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">(</span>
-    <span class="n">bills</span><span class="o">=</span><span class="p">(</span><span class="s2">"total_bill"</span><span class="p">,</span> <span class="s2">"count"</span><span class="p">),</span>
-    <span class="n">average_bill</span><span class="o">=</span><span class="p">(</span><span class="s2">"total_bill"</span><span class="p">,</span> <span class="s2">"mean"</span><span class="p">),</span>
-    <span class="n">average_tip_percent</span><span class="o">=</span><span class="p">(</span><span class="s2">"tip_percent"</span><span class="p">,</span> <span class="s2">"mean"</span><span class="p">),</span>
+<div class="highlight"><pre><span></span><code><span class="n">tips</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;day&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">(</span>
+    <span class="n">bills</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;total_bill&quot;</span><span class="p">,</span> <span class="s2">&quot;count&quot;</span><span class="p">),</span>
+    <span class="n">average_bill</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;total_bill&quot;</span><span class="p">,</span> <span class="s2">&quot;mean&quot;</span><span class="p">),</span>
+    <span class="n">average_tip_percent</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;tip_percent&quot;</span><span class="p">,</span> <span class="s2">&quot;mean&quot;</span><span class="p">),</span>
 <span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 </code></pre></div>
 <div>
@@ -3771,15 +3771,15 @@ Name: count, dtype: int64
 <p><strong>Predict, then reveal: numbers that are not quantities</strong></p>
 <p>pandas sorts text <strong>alphabetically</strong>. In what order will the days appear in the next cell? Is that the order you want in a report?</p>
 </blockquote>
-<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">"Alphabetical:"</span><span class="p">,</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">tips</span><span class="p">[</span><span class="s2">"day"</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()))</span>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Alphabetical:&quot;</span><span class="p">,</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">tips</span><span class="p">[</span><span class="s2">&quot;day&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()))</span>
 
-<span class="n">day_order</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"Thur"</span><span class="p">,</span> <span class="s2">"Fri"</span><span class="p">,</span> <span class="s2">"Sat"</span><span class="p">,</span> <span class="s2">"Sun"</span><span class="p">]</span>
-<span class="n">tips</span><span class="p">[</span><span class="s2">"day"</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Categorical</span><span class="p">(</span><span class="n">tips</span><span class="p">[</span><span class="s2">"day"</span><span class="p">],</span> <span class="n">categories</span><span class="o">=</span><span class="n">day_order</span><span class="p">,</span> <span class="n">ordered</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Real order:  "</span><span class="p">,</span> <span class="nb">list</span><span class="p">(</span><span class="n">tips</span><span class="p">[</span><span class="s2">"day"</span><span class="p">]</span><span class="o">.</span><span class="n">cat</span><span class="o">.</span><span class="n">categories</span><span class="p">))</span>
-<span class="n">tips</span><span class="p">[</span><span class="s2">"day"</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">(</span><span class="n">sort</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">day_order</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Thur&quot;</span><span class="p">,</span> <span class="s2">&quot;Fri&quot;</span><span class="p">,</span> <span class="s2">&quot;Sat&quot;</span><span class="p">,</span> <span class="s2">&quot;Sun&quot;</span><span class="p">]</span>
+<span class="n">tips</span><span class="p">[</span><span class="s2">&quot;day&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Categorical</span><span class="p">(</span><span class="n">tips</span><span class="p">[</span><span class="s2">&quot;day&quot;</span><span class="p">],</span> <span class="n">categories</span><span class="o">=</span><span class="n">day_order</span><span class="p">,</span> <span class="n">ordered</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Real order:  &quot;</span><span class="p">,</span> <span class="nb">list</span><span class="p">(</span><span class="n">tips</span><span class="p">[</span><span class="s2">&quot;day&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">cat</span><span class="o">.</span><span class="n">categories</span><span class="p">))</span>
+<span class="n">tips</span><span class="p">[</span><span class="s2">&quot;day&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">(</span><span class="n">sort</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>Alphabetical: ['Fri', 'Sat', 'Sun', 'Thur']
-Real order:   ['Thur', 'Fri', 'Sat', 'Sun']
+<div class="highlight"><pre><span></span><code>Alphabetical: [&#39;Fri&#39;, &#39;Sat&#39;, &#39;Sun&#39;, &#39;Thur&#39;]
+Real order:   [&#39;Thur&#39;, &#39;Fri&#39;, &#39;Sat&#39;, &#39;Sun&#39;]
 
 
 
@@ -3806,8 +3806,8 @@ Name: count, dtype: int64
 <li><code>len(tips)</code> counts <strong>bills (tables served)</strong>, not customers.</li>
 <li>The number of <strong>customers</strong> is the sum of <code>size</code>, because each row is a party.</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">"Bills (rows):            "</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">tips</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Customers (sum of size): "</span><span class="p">,</span> <span class="n">tips</span><span class="p">[</span><span class="s2">"size"</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Bills (rows):            &quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">tips</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Customers (sum of size): &quot;</span><span class="p">,</span> <span class="n">tips</span><span class="p">[</span><span class="s2">&quot;size&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
 </code></pre></div>
 <div class="highlight"><pre><span></span><code>Bills (rows):             244
 Customers (sum of size):  627
@@ -3817,7 +3817,7 @@ Customers (sum of size):  627
 <p><strong>Predict, then reveal</strong></p>
 <p>Do you expect any row to appear twice, with every value identical? If one does, is it a mistake?</p>
 </blockquote>
-<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">"Fully duplicated rows:"</span><span class="p">,</span> <span class="n">tips</span><span class="o">.</span><span class="n">duplicated</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Fully duplicated rows:&quot;</span><span class="p">,</span> <span class="n">tips</span><span class="o">.</span><span class="n">duplicated</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
 <span class="n">tips</span><span class="p">[</span><span class="n">tips</span><span class="o">.</span><span class="n">duplicated</span><span class="p">(</span><span class="n">keep</span><span class="o">=</span><span class="kc">False</span><span class="p">)]</span>
 </code></pre></div>
 <div class="highlight"><pre><span></span><code>Fully duplicated rows: 1
@@ -3891,10 +3891,10 @@ Customers (sum of size):  627
 <div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 
 <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">tips</span><span class="p">[</span><span class="s2">"total_bill"</span><span class="p">],</span> <span class="n">bins</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">"#2a78d6"</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s2">"white"</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">"How big are the bills? Total bill per table served"</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">"Total bill (US dollars)"</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">"Number of bills"</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">tips</span><span class="p">[</span><span class="s2">&quot;total_bill&quot;</span><span class="p">],</span> <span class="n">bins</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#2a78d6&quot;</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;How big are the bills? Total bill per table served&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Total bill (US dollars)&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Number of bills&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </code></pre></div>
 <p><img alt="png" src="../00_preclass_python_jupyter_basics_files/00_preclass_python_jupyter_basics_45_0.png" /></p>
@@ -3903,12 +3903,12 @@ Customers (sum of size):  627
 
 <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mf">4.5</span><span class="p">))</span>
 <span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span>
-    <span class="n">data</span><span class="o">=</span><span class="n">tips</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">"total_bill"</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">"tip"</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s2">"time"</span><span class="p">,</span>
-    <span class="n">palette</span><span class="o">=</span><span class="p">{</span><span class="s2">"Lunch"</span><span class="p">:</span> <span class="s2">"#eb6834"</span><span class="p">,</span> <span class="s2">"Dinner"</span><span class="p">:</span> <span class="s2">"#2a78d6"</span><span class="p">},</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span>
+    <span class="n">data</span><span class="o">=</span><span class="n">tips</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;total_bill&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;tip&quot;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;time&quot;</span><span class="p">,</span>
+    <span class="n">palette</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;Lunch&quot;</span><span class="p">:</span> <span class="s2">&quot;#eb6834&quot;</span><span class="p">,</span> <span class="s2">&quot;Dinner&quot;</span><span class="p">:</span> <span class="s2">&quot;#2a78d6&quot;</span><span class="p">},</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span>
 <span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">"Larger bills tend to come with larger tips"</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">"Total bill (US dollars)"</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">"Tip (US dollars)"</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Larger bills tend to come with larger tips&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Total bill (US dollars)&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Tip (US dollars)&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </code></pre></div>
 <p><img alt="png" src="../00_preclass_python_jupyter_basics_files/00_preclass_python_jupyter_basics_47_0.png" /></p>

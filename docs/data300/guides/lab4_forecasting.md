@@ -192,7 +192,7 @@ These tell you whether your output is right without giving any answers away.
 Optional, not graded. Try these in the same notebook after you have answered GAP's questions:
 
 1. Run the ADF test on `df["co2"].diff().dropna()` and on `df["co2"].diff().diff(12).dropna()`. How do the conclusions change, and which part of SARIMA's orders does each difference correspond to?
-2. Compute a **seasonal naive** baseline for the test period (each month's forecast is the value 12 months before; you will need the last 12 training months to start) and its MAE. Does SARIMA beat it, and by how much?
+2. Compute a **seasonal naive** baseline for the test period (each month's forecast is the value 12 months before; you will need the last 12 training months to start) and its MAE. Does SARIMA beat it, and by how much? Take care: applying `shift(12)` across the whole series pulls in test values, which are not available when forecasting. The fair baseline repeats the last training year's 12 values for every test month.
 3. Add the **MAPE** (`np.mean(np.abs((actual - forecast) / actual)) * 100`) to your error measures. Why is it easy to explain to a policymaker?
 4. Draw the forecast's 95% interval with `predictions.conf_int()` and `plt.fill_between`. Does it widen across the test period? How many actual months fall outside it?
 5. Fit a simpler SARIMA(0,1,1)(0,1,1,12) and compare its RMSE, MAE and fit time with GAP's model. Which would you recommend, and why?

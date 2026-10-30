@@ -419,7 +419,7 @@ print(f"\nAverage size of the error: {check['error (points)'].abs().mean():.1f} 
 
 > **Predict, then run**
 >
-> Which row of the table would you expect to have the **largest** error, and why? (Hint: compare with the counts table above. Small groups give unstable rates.)
+> Which row of the table would you expect to have the **largest** error, and why? (Hint: compare with the counts table above, and think about which conditions the model's past rates may not describe well.)
 
 #### Level 4, prescriptive: what should we do?
 

@@ -3003,10 +3003,10 @@ Turn ten free-text customer reviews of a tablet computer into numbers: split the
 
 <span class="kn">import</span><span class="w"> </span><span class="nn">nltk</span>
 
-<span class="n">NLTK_DIR</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">&quot;data/nltk_data&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">resolve</span><span class="p">()</span>
-<span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="n">NLTK_DIR</span> <span class="o">/</span> <span class="s2">&quot;tokenizers&quot;</span> <span class="o">/</span> <span class="s2">&quot;punkt_tab&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
-    <span class="k">with</span> <span class="n">zipfile</span><span class="o">.</span><span class="n">ZipFile</span><span class="p">(</span><span class="n">NLTK_DIR</span> <span class="o">/</span> <span class="s2">&quot;tokenizers&quot;</span> <span class="o">/</span> <span class="s2">&quot;punkt_tab.zip&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">z</span><span class="p">:</span>
-        <span class="n">z</span><span class="o">.</span><span class="n">extractall</span><span class="p">(</span><span class="n">NLTK_DIR</span> <span class="o">/</span> <span class="s2">&quot;tokenizers&quot;</span><span class="p">)</span>
+<span class="n">NLTK_DIR</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">"data/nltk_data"</span><span class="p">)</span><span class="o">.</span><span class="n">resolve</span><span class="p">()</span>
+<span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="n">NLTK_DIR</span> <span class="o">/</span> <span class="s2">"tokenizers"</span> <span class="o">/</span> <span class="s2">"punkt_tab"</span><span class="p">)</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
+    <span class="k">with</span> <span class="n">zipfile</span><span class="o">.</span><span class="n">ZipFile</span><span class="p">(</span><span class="n">NLTK_DIR</span> <span class="o">/</span> <span class="s2">"tokenizers"</span> <span class="o">/</span> <span class="s2">"punkt_tab.zip"</span><span class="p">)</span> <span class="k">as</span> <span class="n">z</span><span class="p">:</span>
+        <span class="n">z</span><span class="o">.</span><span class="n">extractall</span><span class="p">(</span><span class="n">NLTK_DIR</span> <span class="o">/</span> <span class="s2">"tokenizers"</span><span class="p">)</span>
 <span class="n">nltk</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">NLTK_DIR</span><span class="p">))</span>
 </code></pre></div>
 <p>The next cell loads the other libraries and the ten reviews. One row is one customer review.</p>
@@ -3018,26 +3018,26 @@ Turn ten free-text customer reviews of a tablet computer into numbers: split the
 <span class="kn">from</span><span class="w"> </span><span class="nn">nltk.tokenize</span><span class="w"> </span><span class="kn">import</span> <span class="n">word_tokenize</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">wordcloud</span><span class="w"> </span><span class="kn">import</span> <span class="n">WordCloud</span>
 
-<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s2">&quot;display.max_colwidth&quot;</span><span class="p">,</span> <span class="mi">110</span><span class="p">)</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s2">"display.max_colwidth"</span><span class="p">,</span> <span class="mi">110</span><span class="p">)</span>
 
 <span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s2">&quot;Review_ID&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span>
-    <span class="s2">&quot;Review_Text&quot;</span><span class="p">:</span> <span class="p">[</span>
-        <span class="s2">&quot;Absolutely love the new OmniPad! The battery life is amazing and the screen is beautiful.&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;Terrible experience. The screen cracked after one week and customer service was completely useless.&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;It is an okay tablet. Nothing special, but it gets the job done for basic web browsing.&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;The battery life is incredibly poor. I have to charge it twice a day. Very disappointed.&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;Fantastic device! Fast processor, great camera, and very lightweight. Highly recommend.&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;Overpriced garbage. The software is laggy and it crashes constantly.&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;A solid upgrade from the previous generation. The stylus integration is perfect for my artwork.&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;I hate the new update. It ruined the user interface and made everything slower.&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;Decent value for the price. The battery is fine, but the camera could be better.&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;Best purchase I&#39;ve made this year. Beautiful display and amazing battery life!&quot;</span><span class="p">,</span>
+    <span class="s2">"Review_ID"</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span>
+    <span class="s2">"Review_Text"</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">"Absolutely love the new OmniPad! The battery life is amazing and the screen is beautiful."</span><span class="p">,</span>
+        <span class="s2">"Terrible experience. The screen cracked after one week and customer service was completely useless."</span><span class="p">,</span>
+        <span class="s2">"It is an okay tablet. Nothing special, but it gets the job done for basic web browsing."</span><span class="p">,</span>
+        <span class="s2">"The battery life is incredibly poor. I have to charge it twice a day. Very disappointed."</span><span class="p">,</span>
+        <span class="s2">"Fantastic device! Fast processor, great camera, and very lightweight. Highly recommend."</span><span class="p">,</span>
+        <span class="s2">"Overpriced garbage. The software is laggy and it crashes constantly."</span><span class="p">,</span>
+        <span class="s2">"A solid upgrade from the previous generation. The stylus integration is perfect for my artwork."</span><span class="p">,</span>
+        <span class="s2">"I hate the new update. It ruined the user interface and made everything slower."</span><span class="p">,</span>
+        <span class="s2">"Decent value for the price. The battery is fine, but the camera could be better."</span><span class="p">,</span>
+        <span class="s2">"Best purchase I've made this year. Beautiful display and amazing battery life!"</span><span class="p">,</span>
     <span class="p">],</span>
 <span class="p">}</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;--- Raw customer reviews (first five) ---&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"--- Raw customer reviews (first five) ---"</span><span class="p">)</span>
 <span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </code></pre></div>
 <div class="highlight"><pre><span></span><code>--- Raw customer reviews (first five) ---
@@ -3104,43 +3104,43 @@ Turn ten free-text customer reviews of a tablet computer into numbers: split the
 </ol>
 <p>Then a <strong>word cloud</strong> draws each remaining word with a size that grows with its frequency, and a frequency count lists the five most common keywords. The fixed <code>random_state</code> keeps the word cloud layout the same each time you run it.</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># 1. Combine all reviews into one lowercase string</span>
-<span class="n">all_text</span> <span class="o">=</span> <span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">review</span> <span class="k">for</span> <span class="n">review</span> <span class="ow">in</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;Review_Text&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+<span class="n">all_text</span> <span class="o">=</span> <span class="s2">" "</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">review</span> <span class="k">for</span> <span class="n">review</span> <span class="ow">in</span> <span class="n">df</span><span class="p">[</span><span class="s2">"Review_Text"</span><span class="p">])</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
 
-<span class="c1"># 2. Stopword list: NLTK&#39;s English list plus three domain words with no distinguishing signal</span>
-<span class="n">stop_words</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">stopwords</span><span class="o">.</span><span class="n">words</span><span class="p">(</span><span class="s2">&quot;english&quot;</span><span class="p">))</span>
-<span class="n">stop_words</span><span class="o">.</span><span class="n">update</span><span class="p">([</span><span class="s2">&quot;omnipad&quot;</span><span class="p">,</span> <span class="s2">&quot;tablet&quot;</span><span class="p">,</span> <span class="s2">&quot;device&quot;</span><span class="p">])</span>
+<span class="c1"># 2. Stopword list: NLTK's English list plus three domain words with no distinguishing signal</span>
+<span class="n">stop_words</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">stopwords</span><span class="o">.</span><span class="n">words</span><span class="p">(</span><span class="s2">"english"</span><span class="p">))</span>
+<span class="n">stop_words</span><span class="o">.</span><span class="n">update</span><span class="p">([</span><span class="s2">"omnipad"</span><span class="p">,</span> <span class="s2">"tablet"</span><span class="p">,</span> <span class="s2">"device"</span><span class="p">])</span>
 
 <span class="c1"># 3. Tokenise, then keep alphabetic tokens that are not stopwords</span>
 <span class="n">words</span> <span class="o">=</span> <span class="n">word_tokenize</span><span class="p">(</span><span class="n">all_text</span><span class="p">)</span>
 <span class="n">cleaned_words</span> <span class="o">=</span> <span class="p">[</span><span class="n">word</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">words</span> <span class="k">if</span> <span class="n">word</span><span class="o">.</span><span class="n">isalpha</span><span class="p">()</span> <span class="ow">and</span> <span class="n">word</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">stop_words</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Tokens before cleaning:&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">words</span><span class="p">),</span> <span class="s2">&quot;| words kept:&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">cleaned_words</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Tokens before cleaning:"</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">words</span><span class="p">),</span> <span class="s2">"| words kept:"</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">cleaned_words</span><span class="p">))</span>
 
 <span class="c1"># 4. Word cloud of the cleaned words</span>
 <span class="n">wordcloud</span> <span class="o">=</span> <span class="n">WordCloud</span><span class="p">(</span>
-    <span class="n">width</span><span class="o">=</span><span class="mi">800</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span> <span class="n">background_color</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">,</span> <span class="n">colormap</span><span class="o">=</span><span class="s2">&quot;viridis&quot;</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span>
-<span class="p">)</span><span class="o">.</span><span class="n">generate</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">cleaned_words</span><span class="p">))</span>
+    <span class="n">width</span><span class="o">=</span><span class="mi">800</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span> <span class="n">background_color</span><span class="o">=</span><span class="s2">"white"</span><span class="p">,</span> <span class="n">colormap</span><span class="o">=</span><span class="s2">"viridis"</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span>
+<span class="p">)</span><span class="o">.</span><span class="n">generate</span><span class="p">(</span><span class="s2">" "</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">cleaned_words</span><span class="p">))</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">wordcloud</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span><span class="s2">&quot;bilinear&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s2">&quot;off&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Key terms in OmniPad Pro reviews (word size = frequency)&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">wordcloud</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span><span class="s2">"bilinear"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s2">"off"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">"Key terms in OmniPad Pro reviews (word size = frequency)"</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 
 <span class="c1"># 5. The five most frequent keywords</span>
 <span class="n">freq_dist</span> <span class="o">=</span> <span class="n">nltk</span><span class="o">.</span><span class="n">FreqDist</span><span class="p">(</span><span class="n">cleaned_words</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;--- Top 5 most frequent keywords ---&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"--- Top 5 most frequent keywords ---"</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">word</span><span class="p">,</span> <span class="n">frequency</span> <span class="ow">in</span> <span class="n">freq_dist</span><span class="o">.</span><span class="n">most_common</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Keyword: &#39;</span><span class="si">{</span><span class="n">word</span><span class="si">}</span><span class="s2">&#39; | Frequency count: </span><span class="si">{</span><span class="n">frequency</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Keyword: '</span><span class="si">{</span><span class="n">word</span><span class="si">}</span><span class="s2">' | Frequency count: </span><span class="si">{</span><span class="n">frequency</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </code></pre></div>
 <div class="highlight"><pre><span></span><code>Tokens before cleaning: 166 | words kept: 83
 </code></pre></div>
 <p><img alt="png" src="../D3_lab_lab3_text_mining_files/D3_lab_lab3_text_mining_5_1.png" /></p>
 <div class="highlight"><pre><span></span><code>--- Top 5 most frequent keywords ---
-Keyword: &#39;battery&#39; | Frequency count: 4
-Keyword: &#39;life&#39; | Frequency count: 3
-Keyword: &#39;new&#39; | Frequency count: 2
-Keyword: &#39;amazing&#39; | Frequency count: 2
-Keyword: &#39;screen&#39; | Frequency count: 2
+Keyword: 'battery' | Frequency count: 4
+Keyword: 'life' | Frequency count: 3
+Keyword: 'new' | Frequency count: 2
+Keyword: 'amazing' | Frequency count: 2
+Keyword: 'screen' | Frequency count: 2
 </code></pre></div>
 <p>Use the word cloud and the top-five list above for questions 1 and 2.</p>
 <hr />
@@ -3174,23 +3174,23 @@ Keyword: &#39;screen&#39; | Frequency count: 2
 <span class="n">analyzer</span> <span class="o">=</span> <span class="n">SentimentIntensityAnalyzer</span><span class="p">()</span>
 
 <span class="c1"># 2. Compound score for every review</span>
-<span class="n">df</span><span class="p">[</span><span class="s2">&quot;Compound_Score&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;Review_Text&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">text</span><span class="p">:</span> <span class="n">analyzer</span><span class="o">.</span><span class="n">polarity_scores</span><span class="p">(</span><span class="n">text</span><span class="p">)[</span><span class="s2">&quot;compound&quot;</span><span class="p">])</span>
+<span class="n">df</span><span class="p">[</span><span class="s2">"Compound_Score"</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">"Review_Text"</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">text</span><span class="p">:</span> <span class="n">analyzer</span><span class="o">.</span><span class="n">polarity_scores</span><span class="p">(</span><span class="n">text</span><span class="p">)[</span><span class="s2">"compound"</span><span class="p">])</span>
 
 
 <span class="c1"># 3. Turn the score into a label with the thresholds above</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">categorize_sentiment</span><span class="p">(</span><span class="n">score</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">score</span> <span class="o">&gt;=</span> <span class="mf">0.05</span><span class="p">:</span>
-        <span class="k">return</span> <span class="s2">&quot;Positive&quot;</span>
+        <span class="k">return</span> <span class="s2">"Positive"</span>
     <span class="k">elif</span> <span class="n">score</span> <span class="o">&lt;=</span> <span class="o">-</span><span class="mf">0.05</span><span class="p">:</span>
-        <span class="k">return</span> <span class="s2">&quot;Negative&quot;</span>
+        <span class="k">return</span> <span class="s2">"Negative"</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="k">return</span> <span class="s2">&quot;Neutral&quot;</span>
+        <span class="k">return</span> <span class="s2">"Neutral"</span>
 
 
-<span class="n">df</span><span class="p">[</span><span class="s2">&quot;Sentiment_Label&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;Compound_Score&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">categorize_sentiment</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s2">"Sentiment_Label"</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">"Compound_Score"</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">categorize_sentiment</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;--- Sentiment results for each review ---&quot;</span><span class="p">)</span>
-<span class="n">df</span><span class="p">[[</span><span class="s2">&quot;Review_ID&quot;</span><span class="p">,</span> <span class="s2">&quot;Review_Text&quot;</span><span class="p">,</span> <span class="s2">&quot;Compound_Score&quot;</span><span class="p">,</span> <span class="s2">&quot;Sentiment_Label&quot;</span><span class="p">]]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"--- Sentiment results for each review ---"</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[[</span><span class="s2">"Review_ID"</span><span class="p">,</span> <span class="s2">"Review_Text"</span><span class="p">,</span> <span class="s2">"Compound_Score"</span><span class="p">,</span> <span class="s2">"Sentiment_Label"</span><span class="p">]]</span>
 </code></pre></div>
 <div class="highlight"><pre><span></span><code>--- Sentiment results for each review ---
 </code></pre></div>
@@ -3294,21 +3294,21 @@ Keyword: &#39;screen&#39; | Frequency count: 2
 </div>
 
 <div class="highlight"><pre><span></span><code><span class="c1"># 4. How many reviews fall in each sentiment class?</span>
-<span class="n">label_order</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Positive&quot;</span><span class="p">,</span> <span class="s2">&quot;Neutral&quot;</span><span class="p">,</span> <span class="s2">&quot;Negative&quot;</span><span class="p">]</span>
-<span class="n">colours</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Positive&quot;</span><span class="p">:</span> <span class="s2">&quot;#2a78d6&quot;</span><span class="p">,</span> <span class="s2">&quot;Neutral&quot;</span><span class="p">:</span> <span class="s2">&quot;#9a9890&quot;</span><span class="p">,</span> <span class="s2">&quot;Negative&quot;</span><span class="p">:</span> <span class="s2">&quot;#eb6834&quot;</span><span class="p">}</span>   <span class="c1"># colour-blind-safe</span>
+<span class="n">label_order</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"Positive"</span><span class="p">,</span> <span class="s2">"Neutral"</span><span class="p">,</span> <span class="s2">"Negative"</span><span class="p">]</span>
+<span class="n">colours</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"Positive"</span><span class="p">:</span> <span class="s2">"#2a78d6"</span><span class="p">,</span> <span class="s2">"Neutral"</span><span class="p">:</span> <span class="s2">"#9a9890"</span><span class="p">,</span> <span class="s2">"Negative"</span><span class="p">:</span> <span class="s2">"#eb6834"</span><span class="p">}</span>   <span class="c1"># colour-blind-safe</span>
 
-<span class="n">sns</span><span class="o">.</span><span class="n">set_theme</span><span class="p">(</span><span class="n">style</span><span class="o">=</span><span class="s2">&quot;whitegrid&quot;</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">set_theme</span><span class="p">(</span><span class="n">style</span><span class="o">=</span><span class="s2">"whitegrid"</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
 <span class="n">sns</span><span class="o">.</span><span class="n">countplot</span><span class="p">(</span>
-    <span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;Sentiment_Label&quot;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;Sentiment_Label&quot;</span><span class="p">,</span>
+    <span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">"Sentiment_Label"</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s2">"Sentiment_Label"</span><span class="p">,</span>
     <span class="n">order</span><span class="o">=</span><span class="n">label_order</span><span class="p">,</span> <span class="n">hue_order</span><span class="o">=</span><span class="n">label_order</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="n">colours</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
 <span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Distribution of customer sentiment categories&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Sentiment class&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Number of reviews&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">"Distribution of customer sentiment categories"</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">"Sentiment class"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">"Number of reviews"</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Sentiment_Label&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">reindex</span><span class="p">(</span><span class="n">label_order</span><span class="p">,</span> <span class="n">fill_value</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">to_string</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">"Sentiment_Label"</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">reindex</span><span class="p">(</span><span class="n">label_order</span><span class="p">,</span> <span class="n">fill_value</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">to_string</span><span class="p">())</span>
 </code></pre></div>
 <p><img alt="png" src="../D3_lab_lab3_text_mining_files/D3_lab_lab3_text_mining_8_0.png" /></p>
 <div class="highlight"><pre><span></span><code>Sentiment_Label
@@ -3391,21 +3391,21 @@ Negative    3
 <div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">collections</span><span class="w"> </span><span class="kn">import</span> <span class="n">Counter</span>
 
 <span class="n">custom</span> <span class="o">=</span> <span class="n">SentimentIntensityAnalyzer</span><span class="p">()</span>
-<span class="n">custom</span><span class="o">.</span><span class="n">lexicon</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">&quot;garbage&quot;</span><span class="p">:</span> <span class="o">-</span><span class="mf">3.0</span><span class="p">,</span> <span class="s2">&quot;laggy&quot;</span><span class="p">:</span> <span class="o">-</span><span class="mf">2.0</span><span class="p">,</span> <span class="s2">&quot;crashes&quot;</span><span class="p">:</span> <span class="o">-</span><span class="mf">2.0</span><span class="p">,</span> <span class="s2">&quot;overpriced&quot;</span><span class="p">:</span> <span class="o">-</span><span class="mf">1.5</span><span class="p">})</span>
+<span class="n">custom</span><span class="o">.</span><span class="n">lexicon</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">"garbage"</span><span class="p">:</span> <span class="o">-</span><span class="mf">3.0</span><span class="p">,</span> <span class="s2">"laggy"</span><span class="p">:</span> <span class="o">-</span><span class="mf">2.0</span><span class="p">,</span> <span class="s2">"crashes"</span><span class="p">:</span> <span class="o">-</span><span class="mf">2.0</span><span class="p">,</span> <span class="s2">"overpriced"</span><span class="p">:</span> <span class="o">-</span><span class="mf">1.5</span><span class="p">})</span>
 
-<span class="n">comparison</span> <span class="o">=</span> <span class="n">df</span><span class="p">[[</span><span class="s2">&quot;Review_ID&quot;</span><span class="p">,</span> <span class="s2">&quot;Compound_Score&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
-<span class="n">comparison</span><span class="p">[</span><span class="s2">&quot;Custom_Score&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;Review_Text&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">text</span><span class="p">:</span> <span class="n">custom</span><span class="o">.</span><span class="n">polarity_scores</span><span class="p">(</span><span class="n">text</span><span class="p">)[</span><span class="s2">&quot;compound&quot;</span><span class="p">])</span>
-<span class="n">comparison</span><span class="p">[</span><span class="s2">&quot;Custom_Label&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">comparison</span><span class="p">[</span><span class="s2">&quot;Custom_Score&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">categorize_sentiment</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Original and custom-lexicon scores&quot;</span><span class="p">)</span>
+<span class="n">comparison</span> <span class="o">=</span> <span class="n">df</span><span class="p">[[</span><span class="s2">"Review_ID"</span><span class="p">,</span> <span class="s2">"Compound_Score"</span><span class="p">]]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">comparison</span><span class="p">[</span><span class="s2">"Custom_Score"</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">"Review_Text"</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">text</span><span class="p">:</span> <span class="n">custom</span><span class="o">.</span><span class="n">polarity_scores</span><span class="p">(</span><span class="n">text</span><span class="p">)[</span><span class="s2">"compound"</span><span class="p">])</span>
+<span class="n">comparison</span><span class="p">[</span><span class="s2">"Custom_Label"</span><span class="p">]</span> <span class="o">=</span> <span class="n">comparison</span><span class="p">[</span><span class="s2">"Custom_Score"</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">categorize_sentiment</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Original and custom-lexicon scores"</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">comparison</span><span class="o">.</span><span class="n">to_string</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
 
 <span class="n">pairs</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">()</span>
-<span class="k">for</span> <span class="n">review</span> <span class="ow">in</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;Review_Text&quot;</span><span class="p">]:</span>
+<span class="k">for</span> <span class="n">review</span> <span class="ow">in</span> <span class="n">df</span><span class="p">[</span><span class="s2">"Review_Text"</span><span class="p">]:</span>
     <span class="n">tokens</span> <span class="o">=</span> <span class="p">[</span><span class="n">w</span> <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">word_tokenize</span><span class="p">(</span><span class="n">review</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span> <span class="k">if</span> <span class="n">w</span><span class="o">.</span><span class="n">isalpha</span><span class="p">()</span> <span class="ow">and</span> <span class="n">w</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">stop_words</span><span class="p">]</span>
     <span class="n">pairs</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">nltk</span><span class="o">.</span><span class="n">bigrams</span><span class="p">(</span><span class="n">tokens</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Most common word pairs:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">Most common word pairs:"</span><span class="p">)</span>
 <span class="k">for</span> <span class="p">(</span><span class="n">first</span><span class="p">,</span> <span class="n">second</span><span class="p">),</span> <span class="n">count</span> <span class="ow">in</span> <span class="n">pairs</span><span class="o">.</span><span class="n">most_common</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  </span><span class="si">{</span><span class="n">first</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">second</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">count</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"  </span><span class="si">{</span><span class="n">first</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">second</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">count</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </code></pre></div>
 <div class="highlight"><pre><span></span><code>Original and custom-lexicon scores
  Review_ID  Compound_Score  Custom_Score Custom_Label
